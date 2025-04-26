@@ -1,6 +1,6 @@
 # XLeRobot
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
-This is the open-source repo for XLeRobot, including hardware desgins, bill of materials, modified LeRobot codes, etc. Currently actively working....
+This is the open-source repo for XLeRobot, including hardware desgins, bill of materials, modified LeRobot codes, etc. Currently actively working, planning on finish the first version XLeRbot 0.1.0 in a week, please be patient....
 
 # XLerobot 🤖
 **🚀 Bringing Embodied AI to Everyone, Cheaper Than Your iPhone! 📱**
