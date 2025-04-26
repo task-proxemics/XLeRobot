@@ -8,7 +8,7 @@ Inspired by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://
 
 
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
+[![Twitter/X](https://img.shields.io/twitter/follow/VectorWang2?style=social)](https://twitter.com/VectorWang2)
 ---
 
 ## 🌟 Why XLeRobot? 
