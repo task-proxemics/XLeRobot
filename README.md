@@ -1,8 +1,7 @@
-# XLeRobot
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 This is the open-source repo for XLeRobot, including hardware desgins, bill of materials, modified LeRobot codes, etc. Currently actively working, planning on finish the first version XLeRbot 0.1.0 in a week, please be patient....
 
-# XLerobot 🤖
+# XLeRobot 🤖
 **🚀 Bringing Embodied AI to Everyone Cheaper Than the iPhone! 📱**
 
 Inspired by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot),
@@ -40,3 +39,5 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 3. Install Anker Power Station 🔋
 4. Mount Robot Arms & Sensors 🦾
 5. Boot up and yell "IT'S ALIVE!" ⚡
+
+Not affiliated with IKEA (但我们爱瑞典肉丸! 🍝)
