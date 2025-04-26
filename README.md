@@ -18,7 +18,8 @@ Built upon [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://g
       <img src="图片路径.jpg" alt="描述" width="100%">
     </td>
     <td width="60%">
-      ## 🌟 Why XLeRobot? 
+
+## 🌟 Why XLeRobot? 
 **We're on a mission to build the world's most affordable general-purpose applicable household robot** 🏡✨  
 Imagine a modular, dual-arm mobile robot that costs less than your smartphone! By combining open-source magic 🧙♂️, IKEA hacks 🛠️, and modern AI algorithms 🤖, we're making robotics accessible to **EVERYONE**.
 
