@@ -4,7 +4,7 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
 # XLeRobot 🤖
 **🚀 Bringing Embodied AI to Everyone Cheaper Than the iPhone! 📱**
 
-Inspired by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot),
+Built upon [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). This project could not be possible without standing on the shoulder of giants!
 
 
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
