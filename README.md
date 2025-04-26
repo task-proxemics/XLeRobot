@@ -15,7 +15,7 @@ Built upon [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://g
 <table>
   <tr>
     <td width="40%">
-      <img src="图片路径.jpg" alt="描述" width="100%">
+      <img src="media/realpic.jpg" alt="RealPic" width="100%">
     </td>
     <td width="60%">
 
@@ -29,10 +29,6 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 - 🔋 **24/7 Power**: Supports Anker power stations & solar panels ☀️ (Bonus: Use the battery for camping! ⛺)
 - 🧩 **Lekiwi-Based Wiring**: "Just nail it!" - Perfect fit for modular components 🔨
 - 🧠 **AI That Actually Works**: Pre-trained models & datasets ready to deploy 🚀
-      <ul>
-        <li>项目一</li>
-        <li>项目二</li>
-      </ul>
     </td>
   </tr>
 </table>
