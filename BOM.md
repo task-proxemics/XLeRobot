@@ -3,10 +3,8 @@
 This page provides a complete list of parts needed to build the XLeRobot mobile manipulator. 
 
 > [!NOTE] 
-> Prices and items may vary depending on geographic location and time of purchase. If you find links for other countries or cheaper suppliers, please create an issue or PR so that we add them to the list!
+> Part of this list is copied and reogranized based on the bill of materials of [LeRobot](https://github.com/TheRobotStudio/SO-ARM100/blob/main/README.md) and [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md). Please also refer to these original sources for any updates to their respective parts lists.
 
-
-These parts are the same for both 5V and 12V versions:
 ### Mobile Base Structure:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | - | - | - | - | - | - | - | - |
