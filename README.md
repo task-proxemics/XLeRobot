@@ -50,9 +50,10 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 
 ---
 
-## 🛠️ Total Cost (without 3D printed parts)
+## 🛠️ Total Cost
 > [!NOTE] 
 > We want XLeRobot to be powerful, so there's only a 12V version.
+> Doesn't include cost of 3D printing
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
