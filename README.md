@@ -27,7 +27,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 - 🎯 **Cheapest DIY Robot Base**: Built on the IKEA RÅSKOG Cart ($39) - cheap but stable, available worldwide 🌍
 - 🤝 **Massive Open Community**: Collaborate with thousands robot researchers and enthusiasts via [LeRobot Community](https://github.com/huggingface/lerobot)
 - 🔋 **24/7 Power**: Utilize Anker power stations & solar panels ☀️ (Bonus: Use the battery for camping! ⛺)
-- 🧩 **Lekiwi-Based Wiring**: "Just nail it!" - Perfect fit for modular components 🔨
+- 🧩 **Lekiwi-Based Wiring**: For wiring it's the same as a single SO100 arm + Lekiwi, no need to rename your existed motors.
 - 🧠 **AI That Actually Works**: Pre-trained models & datasets ready to deploy 🚀
     </td>
   </tr>
