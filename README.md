@@ -33,13 +33,18 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 ---
 
 ## 🛠️ Billing Materials
-```bash
-1. Buy IKEA Råskog Cart 🛒
-2. Attach Lekiwi Base (nails included!) 🔨
-3. Install Anker Power Station 🔋
-4. Mount Robot Arms & Sensors 🦾
-5. Boot up and yell "IT'S ALIVE!" ⚡
-```
+#### Parts For Two Arms (Standard Teleoperation Setup):
+
+| Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                    | Unit Cost (EU) | Buy EU                                                                                            | Unit Cost (RMB) | Buy CN                                                                          |
+| ------------------------------------------- | ------ | -------------- | --------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
+| STS3215 Servo<sup>[1](#myfootnote1)</sup>   | 12     | $15            | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html)         | 13€            | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥97.72         | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438)  |
+| Motor Control Board                         | 2      | $11            | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/)             | 12€            | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)                                               | ￥27            | [TaoBao](https://detail.tmall.com/item.htm?id=738817173460&skuId=5096283384143) |
+| USB-C Cable 2 pcs                           | 1      | $7             | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1)          | 7€             | [Amazon](https://www.amazon.fr/dp/B07BNF842T/)                                                    | ￥23.9\*2       | [TaoBao](https://detail.tmall.com/item.htm?id=44425281296&skuId=5611379016222)  |
+| Power Supply<sup>[2](#myfootnote2)</sup>    | 2      | $10            | [Amazon](https://www.amazon.com/Facmogu-Switching-Transformer-Compatible-5-5x2-1mm/dp/B087LY41PV/)        | 13€            | [Amazon](https://www.amazon.fr/-/en/dp/B01HRR9GY4/)                                               | ￥22.31         | [TaoBao](https://item.taobao.com/item.htm?id=544824248494&skuId=4974994129990)  |
+| Table Clamp 4pcs                            | 1      | $9             | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | ￥9.2          | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649)                   |
+| Screwdriver Set<sup>[3](#myfootnote3)</sup> | 1      | $6             | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH)        | 10€            | [Amazon](https://www.amazon.fr/dp/B08ZXVMVYD/)                                                    | ￥14.9          | [TaoBao](https://detail.tmall.com/item.htm?id=675684600845&skuId=4856851392176) |
+| Total                                       | ---    | $232           | ---                                                                                                       | 244€           | ---                                                                                               | ￥1343.16       | ---                                                                             |
+
 Not affiliated with IKEA (但我们爱瑞典肉丸! 🍝)
 
 ---
