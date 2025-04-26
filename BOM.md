@@ -17,10 +17,11 @@ This page provides a complete list of parts needed to build the XLeRobot mobile 
 > You can definitely choose cheaper cart not from IKEA, in this case slight change to the 3D printed part might be needed.
 > You can also choose other kinds of batteries, just make sure the maximum watts is enough to power 2x arms, wheels, and RasberryPi.
 
-### Mobile Base Structure:
+### Lekiwi Mobile Base:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | - | - | - | - | - | - | - | - |
 | 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) |￥135 |[PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw "https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw")|
+| 12v ST3215 Feetech Servo | 3 | $13.89 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html?spm=a2700.details.you_may_like.3.5ab1478e45kY42) | €13.38 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html?spm=a2700.details.you_may_like.3.5ab1478e45kY42)  | ￥110 |[Taobao](https://e.tb.cn/h.64H9u3maGWzIp5Q?tk=T5liexkG6Yz "https://e.tb.cn/h.64H9u3maGWzIp5Q?tk=T5liexkG6Yz")|
 | M2 M3 M4 Assorted Screw Set | 1 | $14.99 | [Amazon](https://www.amazon.com/Button-Socket-Washers-Assortment-Machine/dp/B0BMQGJP3F) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) |￥25 |[Taobao（M2x5+M3套装+M3x10+M4x12）](https://e.tb.cn/h.64O1J2A9Is4pIJd "https://e.tb.cn/h.64O1J2A9Is4pIJd")              |
 | **Total** || **$44.96** || **€97** || **¥430** ||
 
@@ -42,17 +43,6 @@ This page provides a complete list of parts needed to build the XLeRobot mobile 
 | **Total** ||  **$31**  ||  **€38** || **¥80.20** ||
 
 ## 12V version :battery:
-
-### Mobile Base Electronics (12V):
-| Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
-|:---|:---:|:---:|:---|:---:|---:|:-:|-|
-| 12v 5a Battery | 1 | $32.99 | [Amazon](https://www.amazon.com/KBT-Rechargeable-Connector-Replacement-Security/dp/B0C242DYT1/ref=sr_1_2_sspa?) | €45.79 | [Amazon](https://www.amazon.fr/dp/B0D5QSMW21) | ￥70 |[Taobao](https://e.tb.cn/h.64IJNTnXwhn44BS?tk=PQQ8exkJEtR "https://e.tb.cn/h.64IJNTnXwhn44BS?tk=PQQ8exkJEtR")|
-| Lever Wire Connector | 1 | $6.70 | [Amazon](https://www.amazon.com/Wago-221-413-LEVER-NUTS-Conductor-Connectors/dp/B06XGYXVXR/ref=sr_1_4) | €7.18 | [Amazon](https://www.amazon.fr/221-413-fil-électrique-connecteur-220-240-Terminal/dp/B01AKF3I58) | ￥3.50 |[Taobao](https://e.tb.cn/h.64r0Z6Y5jZczq5q?tk=XEaSex908q0 "https://e.tb.cn/h.64r0Z6Y5jZczq5q?tk=XEaSex908q0")|
-| 12v 5a DC plug connector | 1 | $9.49 | [Amazon](https://www.amazon.com/43x2pcs-Connectors-Security-Lighting-MILAPEAK/dp/B072BXB2Y8/ref=sr_1_11) | €8.99 | [Amazon](https://www.amazon.fr/RUNCCI-YUN-Alimentation-dalimentation-Connecteur-Surveiller/dp/B0CX44HTKZ) | ￥3.10 |[Taobao](https://e.tb.cn/h.64IFOvrMdUVoQQX?tk=nahtexkvokE "https://e.tb.cn/h.64IFOvrMdUVoQQX?tk=nahtexkvokE")|
-| 12v to 5v 5a USB-C converter | 1 | $9.99 | [Amazon](https://www.amazon.com/Klnuoxj-Converter-Interface-Waterproof-Compatible/dp/B0CRVW7N2J?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A1QRG6NHEUKUZO&gQT=0&th=1) | €9.99 | [Amazon](https://www.amazon.fr/Greluma-convertisseur-Adaptateur-dalimentation-Compatible/dp/B0D7VDL2X6) | ￥20 |[1688](https://qr.1688.com/s/Eb6ykv4y "https://qr.1688.com/s/Eb6ykv4y")                                      |
-| 12v ST3215 Feetech Servo | 3 | $13.89 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html?spm=a2700.details.you_may_like.3.5ab1478e45kY42) | €13.38 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html?spm=a2700.details.you_may_like.3.5ab1478e45kY42)  | ￥110 |[Taobao](https://e.tb.cn/h.64H9u3maGWzIp5Q?tk=T5liexkG6Yz "https://e.tb.cn/h.64H9u3maGWzIp5Q?tk=T5liexkG6Yz")|
-| **Total** | | **$108.5** | | **€118.8** | | **￥426.60** | |
-
 
 ### SO-100 2 Robot Arm Teleoperation Set (12V):
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
