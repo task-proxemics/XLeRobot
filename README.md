@@ -17,10 +17,10 @@ Inspired by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://
 Imagine a modular, dual-arm mobile robot that costs less than your smartphone! By combining open-source magic 🧙♂️, IKEA hacks 🛠️, and modern AI algorithms 🤖, we're making robotics accessible to **EVERYONE**.
 
 ### Key Features:
-- 🎯 **Cheapest DIY Robot Base**: Built on the IKEA Råskog Cart ($99!) - available worldwide 🌍
-- 🤝 **Massive Open Community**: Collaborate with thousands via [LeRobot Platform](https://github.com/lerobot)
+- 🎯 **Cheapest DIY Robot Base**: Built on the IKEA Råskog Cart ($39!) - available worldwide 🌍
+- 🤝 **Massive Open Community**: Collaborate with thousands robot researchers and enthusiasts via [LeRobot Community](https://github.com/huggingface/lerobot)
 - 🔋 **24/7 Power**: Supports Anker power stations & solar panels ☀️ (Bonus: Use the battery for camping! ⛺)
-- 🧩 **Lekiwi-Ready Design**: "Just nail it!" - Perfect fit for modular components 🔨
+- 🧩 **Lekiwi-Based Wiring**: "Just nail it!" - Perfect fit for modular components 🔨
 - 🧠 **AI That Actually Works**: Pre-trained models & datasets ready to deploy 🚀
 
 ---
@@ -33,7 +33,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 
 ---
 
-## 🛠️ Hardware Setup (IKEA Edition)
+## 🛠️ Hardware Setup
 ```bash
 1. Buy IKEA Råskog Cart 🛒
 2. Attach Lekiwi Base (nails included!) 🔨
