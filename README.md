@@ -67,6 +67,16 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
 ---
 
+## 🎯 Hardware
+Please see hardware assembly details at
+- Why use IKEA and Anker ?
+- They are both selling world wide.
+- IKEA RASKOG cart is famous around the world as the 
+- Though anker may seem a little expensive, the technology is worth it. At least 10 hours of continuous action
+
+
+---
+
 ## 🎯 Demo Video 0.0.5
 
 This is currently just a single arm version of directly implementing Lekiwi, teleoped with another arm 
