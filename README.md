@@ -32,7 +32,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 
 ---
 
-## 🛠️ Hardware Setup
+## 🛠️ Billing Materials
 ```bash
 1. Buy IKEA Råskog Cart 🛒
 2. Attach Lekiwi Base (nails included!) 🔨
