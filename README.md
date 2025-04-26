@@ -39,5 +39,12 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 3. Install Anker Power Station 🔋
 4. Mount Robot Arms & Sensors 🦾
 5. Boot up and yell "IT'S ALIVE!" ⚡
-
+```
 Not affiliated with IKEA (但我们爱瑞典肉丸! 🍝)
+
+---
+
+## 🎯 Demo Video 0.0.5
+
+This is currently just a single arm version of directly implementing Lekiwi, teleoped with another arm 
+(FYI: The follow arm hardware can be also used as the leader arm, the only difference is that it's geared so there will be some resistance)
