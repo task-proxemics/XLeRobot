@@ -3,7 +3,7 @@
 This is the open-source repo for XLeRobot, including hardware desgins, bill of materials, modified LeRobot codes, etc. Currently actively working, planning on finish the first version XLeRbot 0.1.0 in a week, please be patient....
 
 # XLerobot 🤖
-**🚀 Bringing Embodied AI to Everyone, Cheaper Than Your iPhone! 📱**
+**🚀 Bringing Embodied AI to Everyone Cheaper Than the iPhone! 📱**
 
 Inspired by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot),
 
