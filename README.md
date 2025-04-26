@@ -33,7 +33,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 ---
 
 ## 🛠️ Billing Materials
-#### Parts For Two Arms (Standard Teleoperation Setup):
+#### Parts For Two Arms (Both follower arms, need two more arms if you want to have leader-follower arm teleop):
 
 | Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                    | Unit Cost (EU) | Buy EU                                                                                            | Unit Cost (RMB) | Buy CN                                                                          |
 | ------------------------------------------- | ------ | -------------- | --------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
