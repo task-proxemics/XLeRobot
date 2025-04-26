@@ -53,3 +53,7 @@ Not affiliated with IKEA (但我们爱瑞典肉丸! 🍝)
 
 This is currently just a single arm version of directly implementing Lekiwi, teleoped with another arm 
 (FYI: The follow arm hardware can be also used as the leader arm, the only difference is that it's geared so there will be some resistance)
+
+
+https://github.com/user-attachments/assets/d2bf1d42-7018-453e-84e7-0965660d357e
+
