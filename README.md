@@ -12,7 +12,13 @@ Built upon [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://g
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
 
-## 🌟 Why XLeRobot? 
+<table>
+  <tr>
+    <td width="40%">
+      <img src="图片路径.jpg" alt="描述" width="100%">
+    </td>
+    <td width="60%">
+      ## 🌟 Why XLeRobot? 
 **We're on a mission to build the world's most affordable general-purpose applicable household robot** 🏡✨  
 Imagine a modular, dual-arm mobile robot that costs less than your smartphone! By combining open-source magic 🧙♂️, IKEA hacks 🛠️, and modern AI algorithms 🤖, we're making robotics accessible to **EVERYONE**.
 
@@ -22,6 +28,16 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 - 🔋 **24/7 Power**: Supports Anker power stations & solar panels ☀️ (Bonus: Use the battery for camping! ⛺)
 - 🧩 **Lekiwi-Based Wiring**: "Just nail it!" - Perfect fit for modular components 🔨
 - 🧠 **AI That Actually Works**: Pre-trained models & datasets ready to deploy 🚀
+      <ul>
+        <li>项目一</li>
+        <li>项目二</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+
 
 ---
 
