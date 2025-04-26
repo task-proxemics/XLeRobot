@@ -45,7 +45,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 | Screwdriver Set<sup>[3](#myfootnote3)</sup> | 1      | $6             | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH)        | 10€            | [Amazon](https://www.amazon.fr/dp/B08ZXVMVYD/)                                                    | ￥14.9          | [TaoBao](https://detail.tmall.com/item.htm?id=675684600845&skuId=4856851392176) |
 | Total                                       | ---    | $232           | ---                                                                                                       | 244€           | ---                                                                                               | ￥1343.16       | ---                                                                             |
 
-Not affiliated with IKEA (但我们爱瑞典肉丸! 🍝)
+Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
 ---
 
