@@ -12,7 +12,7 @@ Inspired by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://
 
 ---
 
-## 🌟 Why XLerobot? 
+## 🌟 Why XLeRobot? 
 **We're on a mission to build the world's most affordable autonomous household robot** 🏡✨  
 Imagine a modular, dual-arm mobile robot that costs less than your smartphone! By combining open-source magic 🧙♂️, IKEA hacks 🛠️, and modern AI algorithms 🤖, we're making robotics accessible to **EVERYONE**.
 
@@ -25,7 +25,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 
 ---
 
-## 🎯 Who is XLerobot For?
+## 🎯 Who is XLeRobot For?
 - 👩💻 **Robot Hackers**: Want to test algorithms on real hardware?
 - 👨🏫 **Teachers/Students**: Perfect for STEM labs & AI courses 🎓
 - 🏠 **Indoor Innovators**: From kitchen helpers to plant-watering bots 🌱
