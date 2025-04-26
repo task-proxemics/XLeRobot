@@ -33,7 +33,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 ---
 
 ## 🛠️ Billing Materials
-#### Parts For Two Arms (Both follower arms, need two more arms if you want to have leader-follower arm teleop):
+#### Parts For Two SO100 Arms (12V version， both follower arms):
 
 | Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                    | Unit Cost (EU) | Buy EU                                                                                            | Unit Cost (RMB) | Buy CN                                                                          |
 | ------------------------------------------- | ------ | -------------- | --------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
