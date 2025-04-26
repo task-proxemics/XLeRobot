@@ -3,7 +3,7 @@
 This page provides a complete list of parts needed to build the XLeRobot mobile manipulator. 
 
 > [!NOTE] 
-> Part of this list is copied and reogranized based on the bill of materials of [LeRobot](https://github.com/TheRobotStudio/SO-ARM100/blob/main/README.md) and [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md). Please also refer to these original sources for any updates to their respective parts lists.
+> Part of this list is copied and reogranized based on the bill of materials of [SO100 arm](https://github.com/TheRobotStudio/SO-ARM100/blob/main/README.md) and [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md). Please also refer to these original sources for any updates to their respective parts lists.
 
 ### Mobile Base Structure:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
