@@ -52,7 +52,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 
 ## 🛠️ Total Cost (without 3D printed parts)
 > [!NOTE] 
-> We want XLeRobot to be powerful, so there's only 12V version, which also requires a powerful battery (detailed in [BOM](BOM.md)).
+> We want XLeRobot to be powerful, so there's only a 12V version.
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
