@@ -51,7 +51,8 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 ---
 
 ## 🛠️ Total Cost (without 3D printed parts)
-#### Parts For Two SO100 Arms (12V version, both follower arms):
+> [!NOTE] 
+> We want XLeRobot to be powerful so there's only 12V version. 
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
@@ -59,6 +60,8 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 | **Build from 2 SO100 arms**  |  **$499**  |  **€526**  |  **¥2829**  |
 | **Build from 1 Lekiwi** |  **$248**  |  **€295**  |  **¥1571**  |
 
+
+#### Parts For Two SO100 Arms (12V version, both follower arms):
 | Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                    | Unit Cost (EU) | Buy EU                                                                                            | Unit Cost (RMB) | Buy CN                                                                          |
 | ------------------------------------------- | ------ | -------------- | --------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
 | STS3215 Servo<sup>[1](#myfootnote1)</sup>   | 12     | $15            | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html)         | 13€            | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥97.72         | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438)  |
