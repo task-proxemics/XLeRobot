@@ -9,9 +9,11 @@ This page provides a complete list of parts needed to build the XLeRobot mobile 
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | - | - | - | - | - | - | - | - |
-| IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) |￥135 |[PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw "https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw")|
+| IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) |￥249 |IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
 | M2 M3 M4 Assorted Screw Set | 1 | $14.99 | [Amazon](https://www.amazon.com/Button-Socket-Washers-Assortment-Machine/dp/B0BMQGJP3F) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) |￥25 |[Taobao（M2x5+M3套装+M3x10+M4x12）](https://e.tb.cn/h.64O1J2A9Is4pIJd "https://e.tb.cn/h.64O1J2A9Is4pIJd")              |
 | **Total** || **$44.96** || **€97** || **¥430** ||
+
+You can choose cheaper cart, it doesn't have to be from IKEA, in this case slight change to the 3D printed part might be needed (detailed modification instruction here)
 
 ### Mobile Base Structure:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
