@@ -5,9 +5,6 @@ This page provides a complete list of parts needed to build the XLeRobot mobile 
 > [!NOTE] 
 > Prices and items may vary depending on geographic location and time of purchase. If you find links for other countries or cheaper suppliers, please create an issue or PR so that we add them to the list!
 
-> [!IMPORTANT]  
-> There are three options regarding motors and electronics (as also the case with the SO100 arms), either **5V** or **12V** or a **wired** version. If this is the first time you build robots please choose the 5V version as it’s a little bit easier to assemble. If you are more experienced and want to lift heavier objects choose the 12V version. If you want the cheapest options, go for the wired LeKiwi robot (at the end of the Bill of Materials list).
-
 
 These parts are the same for both 5V and 12V versions:
 ### Mobile Base Structure:
@@ -55,48 +52,12 @@ These parts are the same for both 5V and 12V versions:
 | Power Supply | 1 | $12 | [Amazon](https://www.amazon.com/ALITOVE-Adapter-Converter-100-240V-5-5x2-1mm/dp/B01GEA8PQA) | €15 | [Amazon](https://www.amazon.fr/LEDMO-Alimentation-Adaptateur-Transformateurs-Chargeur/dp/B07PGLXK4X) | ￥22  |[Taobao](https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr "https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr")|
 | **Total** | | **$199.78** | | **€199.56** | | **￥1,390** | |
 
-## 5V version :battery:
 
-### Mobile Base Electronics (5V):
-| Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy EU |  Unit Cost (CN) | Buy (CN) |
-|:---|:---:|:---:|:---:|:---:|:---|:-:|-|
-| 20000maH 85W Power Bank | 1 | $42 | [Amazon](https://www.amazon.com/CUKTECH-20000mAh-Portable-Charging-External/dp/B0D3PMWN46/) | €50 | [Amazon](https://www.amazon.fr/CUKTECH-Batterie-Affichage-Numérique-Compatible/dp/B0D3PMWN46/) | ￥178 |[Taobao](https://e.tb.cn/h.6RhPvaQ2zjEEjQ1?tk=WDDkV1XzVBM) 
-| STS3215 Servo | 3 | $15 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | 13€ | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥99  |[Taobao](https://e.tb.cn/h.6RhJCXsXFrqIabq?tk=ve0EV12Wg26)|
-| USB-C Cable 2pcs (1feet/0.5 m) | 1 | $8 | [Amazon](https://www.amazon.com/INIU-2-Pack-iPhone-Samsung-MacBook/dp/B0D8QBHZSW/) | €7.6 | [Amazon](https://www.amazon.fr/SUNGUY-charge-rapide-MacBook-Samsung/dp/B0DNM89Q5P) | ¥9.4\*2 |[Taobao](https://e.tb.cn/h.6R5fJaBv1I46QUx?tk=2b5IV1XKMq7)                                                   |
-| USB-C To DC Cable | 1 | $10 | [Amazon](https://www.amazon.com/DSD-TECH-MagicConn-Power-Cable/dp/B0B9G1KFL3) | €10 | [Amazon](https://www.amazon.fr/dp/B0B9G1KFL3) |￥3 |[Taobao](https://e.tb.cn/h.6R21AdjEPDkfw2R?tk=qmTmV1Xx2Pg)   |
-| **Total** | | **$105** | | **€106.6** | | **￥496.80** | |
-
-
-### SO-100 2 Robot Arm Teleoperation Set (5V):
-| Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU |  Unit Cost (CN) | Buy (CN) |
-|---|---|---|---|---|---|---|---|
-| STS3215 Servo | 12 | $15 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥99  |[Taobao](https://e.tb.cn/h.6RhJCXsXFrqIabq?tk=ve0EV12Wg26)|
-| Motor Control Board | 2 | $11 | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/) | €12 | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)|  ￥24 |[Taobao](https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj "https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj")|
-| Power Supply | 1 | $10 | [Amazon](https://www.amazon.com/Facmogu-Switching-Transformer-Compatible-5-5x2-1mm/dp/B087LY41PV/) | €13 | [Amazon](https://www.amazon.fr/-/en/dp/B01HRR9GY4/) | ￥22  |[Taobao](https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr "https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr")|
-| **Total** | | **$212** | | **€193** | | **¥1258** | |
-
-## Wired version :electric_plug:
-Everything needed for the wired version:
-
-| Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
-| - | - | - | - | - | - |- | - |
-| 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) |￥135 |[PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw "https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw")|
-| M2 M3 M4 Assorted Screw Set | 1 | $14.99 | [Amazon](https://www.amazon.com/Button-Socket-Washers-Assortment-Machine/dp/B0BMQGJP3F) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) |￥25 |[Taobao（M2x5+M3套装+M3x10+M4x12）](https://e.tb.cn/h.64O1J2A9Is4pIJd "https://e.tb.cn/h.64O1J2A9Is4pIJd")              |
-| USB camera<sup>[2](#footnote2)</sup> | 2 | $12.98 | [Amazon](https://a.co/d/236G8Wn) | €12.00 | [Amazon](https://www.amazon.fr/Vinmooog-equipement-Microphone-Enregistrement-conf%C3%A9rences/dp/B0BG1YJWFN/) |￥48|[Taobao](https://e.tb.cn/h.64ILq3suMKATfUx?tk=IPSEexQAvxu "https://e.tb.cn/h.64ILq3suMKATfUx?tk=IPSEexQAvxu")|
-| USB-C to USB-A Cable 2 pcs | 1 | $7 | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1) | €7 | [Amazon](https://www.amazon.fr/dp/B07BNF842T/) |￥17  |[Taobao](https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4 "https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4")|
-| USB-C To DC Cable | 1 | $10 | [Amazon](https://www.amazon.com/DSD-TECH-MagicConn-Power-Cable/dp/B0B9G1KFL3) | €10 | [Amazon](https://www.amazon.fr/dp/B0B9G1KFL3) |￥3 |[Taobao](https://e.tb.cn/h.6R21AdjEPDkfw2R?tk=qmTmV1Xx2Pg)   |
-| STS3215 Servo | 3 | $15 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥99  |[Taobao](https://e.tb.cn/h.6RhJCXsXFrqIabq?tk=ve0EV12Wg26)|
-| Motor Control Board | 1 | $11 | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/) | €12 | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)|  ￥24 |[Taobao](https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj "https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj")|
-| Power Supply | 1 | $10 | [Amazon](https://www.amazon.com/Facmogu-Switching-Transformer-Compatible-5-5x2-1mm/dp/B087LY41PV/) | €13 | [Amazon](https://www.amazon.fr/-/en/dp/B01HRR9GY4/) | ￥22  |[Taobao](https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr "https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr")|
-| USB Hub | 1 | $16 | [Amazon](https://www.amazon.com/UGREEN-Delivery-Multiport-Adapter-Thinkpad/dp/B0BR3M8XHK) | €14 | [Amazon](https://www.amazon.fr/UGREEN-Revodok-Alimenté-Adaptateur-Compatible/dp/B0BR3M8XHK) | ¥49.9 | [Taobao](https://e.tb.cn/h.6R2AeZgsSjchx0Z?tk=VTQMV12rt11) |
-| USB-C extension cable | 1 | $13.99 | [Amazon](https://www.amazon.com/Extension-Extender-Transfer-AINOPE-Compatible/dp/B0BHHK1W95/) | €19 | [Amazon](https://www.amazon.fr/EUDOBEL-Rallonge-Extension-Thunderbolt-iPhone16/dp/B0DLP16V7J/) | ¥25 | [Taobao](https://e.tb.cn/h.6RdbxakOTokPM0X?tk=nMrBV12F4uI ) |
-| **Total** || **$184** || **€235** || **¥963.9** ||
 
 > Head to [3D Printing](3DPrinting.md) for the next step!
 
 <br></br>
 
 ## Footnotes
-<a name="footnote1">1</a>: Doesn't include cost of 3D printing
 
 <a name="footnote2">2</a>: Another supported camera option is the Arducam 5MP Wide Angle found [here](https://www.amazon.com/Arducam-Camera-Computer-Without-Microphone/dp/B0972KK7BC)
