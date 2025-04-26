@@ -32,7 +32,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 - 🎓 **Education Heroes**:
   - High School Teachers: Bring cutting-edge robotics to STEM classes 🧪
   - University Professors: Affordable platform for robotics/AI courses 📚
-  - Students: From Arduino beginners to PhD researchers 🎒→🎓
+  - Students: From beginners to researchers 🎒→🎓
 - 🤖 **DIY Enthusiasts**: Perfect for indoor projects - plant care, delivery bots, home automation 🌱📦
 
 ---
