@@ -52,7 +52,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 
 ## 🛠️ Total Cost (without 3D printed parts)
 > [!NOTE] 
-> We want XLeRobot to be powerful, so there's only 12V version, which also requires a powerful battery (detailed in BOM).
+> We want XLeRobot to be powerful, so there's only 12V version, which also requires a powerful battery (detailed in [BOM](BOM.md)).
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
@@ -60,6 +60,7 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 | **Build from 2 SO100 arms**  |  **$499**  |  **€526**  |  **¥2829**  |
 | **Build from 1 Lekiwi** |  **$248**  |  **€295**  |  **¥1571**  |
 
+For details please see [Bill of Materials](BOM.md).
 
 #### Parts For Two SO100 Arms (12V version, both follower arms):
 | Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                    | Unit Cost (EU) | Buy EU                                                                                            | Unit Cost (RMB) | Buy CN                                                                          |
