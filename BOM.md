@@ -15,6 +15,7 @@ This page provides a complete list of parts needed to build the XLeRobot mobile 
 
 > [!NOTE] 
 > You can definitely choose cheaper cart not from IKEA, in this case slight change to the 3D printed part might be needed.
+> You can also choose other kinds of batteries, just make sure the maximum watts is enough to power 2x arms, wheels, and RasberryPi.
 
 ### Mobile Base Structure:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
