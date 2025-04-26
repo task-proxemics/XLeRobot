@@ -1,14 +1,6 @@
 # Bill of Materials
 
-This page provides a complete list of parts needed to build the LeKiwi mobile manipulator. Our total cost is displayed in the table <sup>[1](#footnote1)</sup>.
-
-| Price| US  | EU  | CN |
-|---------|----:|----:|----:|
-| **12V** |  **$482**  |  **€545.8**  |  **¥2891**  |
-| **5V**  |  **$499**  |  **€526**  |  **¥2829**  |
-| **Base only (5V)** |  **$248**  |  **€295**  |  **¥1571**  |
-| **Base only (12V)** |  **$251.5**  |  **€307.8**  |  **¥1501**  |
-| **Base only  wired** |  **$184**  |  **€235**  | **¥963.9**  |
+This page provides a complete list of parts needed to build the XLeRobot mobile manipulator. 
 
 > [!NOTE] 
 > Prices and items may vary depending on geographic location and time of purchase. If you find links for other countries or cheaper suppliers, please create an issue or PR so that we add them to the list!
