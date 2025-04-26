@@ -25,11 +25,15 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 
 ---
 
-## 🎯 Who is XLeRobot For?
-- 👩💻 **Robot Hackers**: Want to test algorithms on real hardware?
-- 👨🏫 **Teachers/Students**: Perfect for STEM labs & AI courses 🎓
-- 🏠 **Indoor Innovators**: From kitchen helpers to plant-watering bots 🌱
-- 🌍 **Global Makers**: IKEA availability = worldwide accessibility 🌐
+## 🎯 Who is XLerobot For?
+
+- 🚀 **Startups & Labs**: Build prototypes faster with the world's cheapest modular platform
+- 👩🔬 **Self Researchers**: Experiment with embodied AI without breaking the bank 💸
+- 🎓 **Education Heroes**:
+  - High School Teachers: Bring cutting-edge robotics to STEM classes 🧪
+  - University Professors: Affordable platform for robotics/AI courses 📚
+  - Students: From Arduino beginners to PhD researchers 🎒→🎓
+- 🤖 **DIY Enthusiasts**: Perfect for indoor projects - plant care, delivery bots, home automation 🌱📦
 
 ---
 
