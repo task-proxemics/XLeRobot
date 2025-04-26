@@ -34,7 +34,13 @@ Imagine a modular, dual-arm mobile robot that costs less than your smartphone! B
 ---
 
 ## 🛠️ Billing Materials
-#### Parts For Two SO100 Arms (12V version， both follower arms):
+#### Parts For Two SO100 Arms (12V version, both follower arms):
+
+| Price| US  | EU  | CN |
+|---------|----:|----:|----:|
+| **Build from Scratch** |  **$482**  |  **€545.8**  |  **¥2891**  |
+| **Build from 2 SO100 arms**  |  **$499**  |  **€526**  |  **¥2829**  |
+| **Build from 1 Lekiwi** |  **$248**  |  **€295**  |  **¥1571**  |
 
 | Part                                        | Amount | Unit Cost (US) | Buy US                                                                                                    | Unit Cost (EU) | Buy EU                                                                                            | Unit Cost (RMB) | Buy CN                                                                          |
 | ------------------------------------------- | ------ | -------------- | --------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
