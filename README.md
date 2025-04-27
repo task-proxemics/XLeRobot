@@ -18,14 +18,31 @@
 
 ## 🌟 Why XLeRobot?  
 We answer this separately since    **XLeRobot = XL + LeRobot**
-
+<table>
+  <tr>
+    <td width="35%">
+      
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
 - **Easy Assembly** 🔨: Just screw and connect for 2hrs and here it is.
 - **Plug-&-Play** 🧩: See robots perform with only running a few lines.
 - **Thriving Community** 🌍: World's largest low-cost robotics community with
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
-  - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.
+  - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
+    </td>
+    <td width="65%">
+    
+### Why "LeRobot" Core?
+- **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
+- **Easy Assembly** 🔨: Just screw and connect for 2hrs and here it is.
+- **Plug-&-Play** 🧩: See robots perform with only running a few lines.
+- **Thriving Community** 🌍: World's largest low-cost robotics community with
+  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
+  - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.      
+    </td>
+  </tr>
+</table>
+
 
 ### Why "XL" Enhancement? 
 - 🏠 Currently, there is a lack of affordable, stable, general-purpose home mobile robots with dual arms that are as easy to build as LeRobot.
