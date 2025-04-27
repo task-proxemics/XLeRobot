@@ -61,7 +61,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
     - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - **Rich open-source resources** 📕
-    - Lerobot's plug-and-play code🧩 and numerous AI models🧠
+    - LeRobot's plug-and-play code🧩 and numerous AI models🧠
     - Supported by an active, growing community of contributors🧑‍🤝‍🧑
 
     </td>
