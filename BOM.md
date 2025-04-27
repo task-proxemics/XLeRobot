@@ -16,8 +16,7 @@
 
 Skip this section if you already have these tools:
 
-- M3 hex screw kit (includes L-shaped Allen wrench)
-- Needle-nose pliers
+| M3 Screws and Nuts Set | 1 | $14.99 | [Amazon](https://a.co/d/4NfBpNS) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) | ¥20 | [taobao](https://e.tb.cn/h.6gUXgJbEk9Z5mbb?tk=MKOuezal6rB) |
 
 # Additional Components for Xelerobot
 
