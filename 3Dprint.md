@@ -1,3 +1,5 @@
+# 3D Printing Instructions
+
 Note: I currently use the Tuzhu A1 for all 3D printing work, with PLA matte black material. Other printers can be used as reference.
 
 ## Extra parts
