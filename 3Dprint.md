@@ -22,21 +22,27 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 
 ### [Arm base](3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl)
 
-- The base is designed to rotate 15 degrees outward, expanding the workspace area on the sides while ensuring normal collaboration between the two arms.
+- The base is designed to rotate 15 degrees outward, expanding the workspace area on both sides while ensuring normal collaboration between the two arms.
 - <img src="https://github.com/user-attachments/assets/f612c9d8-fca2-406e-ab25-d015ea5e62c4" width="500" />
 - To reduce filament waste, the current design is hollow in the middle, and you can put a used Bambulab filament Cardboard Spool inside to provide stable structural support.
 - <img src="https://github.com/user-attachments/assets/384c5cb1-849c-43e5-a5e5-8f31d39712f8" width="300" />
 
 
-### [Lekiwi base supporter]
+### [Lekiwi base supporter](3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl)
 
-- Modified from the Lekiwi base motor mount, with redesigned structure to enhance stability.
+- Connect the top plate of Lekiwi base to the bottom of the IKEA cart.
+- Modified from the Lekiwi [base motor mount](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/drive_motor_mount_v2.stl), with redesigned structure to enhance stability.
+- ![image](https://github.com/user-attachments/assets/2702b0b2-18ce-471b-bc65-015d9d8b456e)
+
 
 - If your cart is **not an authentic IKEA cart**, you can slightly adjust the z-axis scale directly in the slicer software (keeping the xy-axis scale unchanged), so that both the Lekiwi base and the wheels of the cart can have a balanced pressure distribution.
 
-### A thinner Lekiwi base top plate
+### [Thinner Lekiwi base top plate](3D_Models/3D_models_for_printing/XLeRobot_special/base_plate_layer2_thinner.stl)
 
-used to secure the supporter to the bottom of the IKEA cart
+- Same as the Lekiwi base top plate, only thinner.
+- ![image](https://github.com/user-attachments/assets/17d63ccf-469c-4811-860f-e55ffdee396b)
+
+- Secure the connector to the bottom of the IKEA cart.
 
 (A second version will be iterated soon to make installation on the mesh more convenient, although the lekiwi base and cart can currently achieve a stable connection)
 
