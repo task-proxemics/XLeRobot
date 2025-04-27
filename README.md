@@ -125,14 +125,29 @@ XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 ---
 
-## 🧠 Software: Two Paths to Robot IQ  
+## 🧠 Software Intro
+
+### Basic Control
+
+Joint control → leader-follower arm control
+
+End Effector control → VR remote control
+<table>
+  <tr>
+    <td width="50%">
+      
 ### **Option 1: End-to-End Visual-Motor Policy (VLA)**  
 - 🎮 **No calibration needed** - perfect for beginners  
 - 👁️ Uses RGB cameras + LeRobot's pretrained models  
-
+    </td>
+    <td width="50%">
+    
 ### **Option 2: Hierarchical Sim2Real**  
 - 🌐 **Maniskill Simulation** (GPU-accelerated)  
 - 📐 Physics-based planning for precision  
+    </td>
+  </tr>
+</table>
 
 ```bash
 # Current Demo Setup (Works out-of-box!)
