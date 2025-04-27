@@ -258,9 +258,9 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 (Hey, for this price, what more could you ask for?)
 
 - 🔒 Fixed height—adding a stable lifting platform would significantly increase costs and assembly difficulty
-- 📏 Smaller workspace compared to Aloha—objects must be placed within reach, though it still handles the majority of its tasks
-- ⚖️ Limited payload capacity for a single arm: that's why the cart is here
-- 🛒 Base movement precision may be affected by the wheels of IKEA cart (can be addressed through closed-loop feedback control)
+- 📏 Smaller workspace compared to Aloha—though we try to fully utilize the workspace of SO100, the arm size does have limits—though XLeRobot can still handles the majority of its tasks
+- ⚖️ Limited payload capacity for a single arm—that's why the IKEA cart is here
+- 🛒 Base movement precision may be affected by the wheels of IKEA cart—can be addressed through closed-loop feedback control
 
 All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as the most compelling low-cost robot for indoor applications
 
