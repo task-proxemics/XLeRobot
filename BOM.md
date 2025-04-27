@@ -8,7 +8,7 @@
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
 | **Build from Scratch** |  **~$660**  |  **~€650**  |  **~¥3900**  |
-| **Upgrade from 2 SO100 arms**  |  **~$400**  |  **€XX**  |  **¥XX**  |
+| **Upgrade from 2 SO100 arms**  |  **~$400**  |  **~€440**  |  **¥XX**  |
 | **Upgrade from 1 Lekiwi** |  **~$380**  |  **€XX**  |  **¥XX**  |
 | **Upgrade from 1 Lekiwi and 1 SO100 arm** |  **~$250**  |  **~€240**  |  **~¥1200**  |
 
