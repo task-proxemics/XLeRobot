@@ -1,4 +1,57 @@
 # Bill of Materials
+# Required Tools
+
+Skip this section if you already have these tools:
+
+- M3 hex screw kit (includes L-shaped Allen wrench)
+- Needle-nose pliers
+
+# Additional Components for Xelerobot
+
+If you have already built SO100 Arms and Lekiwi, you'll need these additional parts:
+
+- Anker power bank
+    - Note: While this battery may seem expensive, its functionality and reliability far exceed standard power banks. Like in electric vehicles, the battery is one of the most crucial components.
+- IKEA utility cart
+- Extended cable kit (Important: When wiring, maintain the same wire sequence as the original to avoid errors)
+- USB Type-C to DC cable
+
+# Complete Build Guide
+
+For those starting from scratch (without SO100 or Lekiwi arms), follow these steps:
+
+## Required Components
+
+- 2x SO100 arms
+- 1x Lekiwi base
+
+These components will allow you to replicate Demo 0.0.5, enabling master-slave arm control and direct PC control of both arms.
+
+Note: There's no need to remove the leader motor gear. This is not recommended if you're only planning to use two arms.
+
+# Optional Enhancements
+
+- Arm cameras (reference specifications to be added)
+- Additional two SO100 sets for dual-arm master-slave control
+- 3M gripper tape (based on UMI gripper specifications) for improved grip stability
+- VR headset for virtual reality control
+- For additional add-ons and accessories, please refer to the Lerobot repository and Discord group discussions
+
+## SO100 arm x2
+
+## Lekiwi base
+
+以上的零件已经能复现Demo 0.0.5，通过主从臂遥控，以及直接通过pc控制双臂。如果需要更完整的控制与自动化功能，需要添置
+
+（Note：无需拆除leader电机的gear，我也不建议在只打算买两条臂的人这样做）
+
+# other optional parts
+
+- arm cameras，此处引用xxx
+- 如果想实现双臂的主从臂遥控，需要额外的两套so100
+- 我目前用的这个3M的gripper tape基于之前UMI gripper提供的款式，能大大增加抓取的稳定性
+- 如果想实现vr遥控，of course you need a vr
+- 其他各种相关add on 可以参考lerobot repo，以及lerobot discord group的讨论
 
 This page provides a complete list of parts needed to build the XLeRobot mobile manipulator. 
 
