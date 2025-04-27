@@ -37,7 +37,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     <td width="30%">
       <img src="media/realpic_2.jpg" alt="Alt text" width="1200" />
     </td>
-    <td width="60%">
+    <td width="70%">
       
 ### Overall advantages/goals of XLeRobot
 
