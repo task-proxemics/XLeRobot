@@ -57,7 +57,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 ## 2x SO100 Arms
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
-| STS3215 Servo (12V) | 12 | $16 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html) | 13€ | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
+| STS3215 Servo (12V) | 12 | $16 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
 | Table Clamp 4pcs | 1 | $8.99 | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | ~€8 | [TODO]() | ￥9.2          | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649)                   |
 
 > [!NOTE] 
@@ -67,7 +67,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
-| STS3215 Servo (12V) | 3 | $16 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html) | 13€ | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
+| STS3215 Servo (12V) | 3 | $16 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
 | 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) |￥135 |[PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw "https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw")|
 
 ## Electronics and Sensors
