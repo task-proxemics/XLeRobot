@@ -16,7 +16,7 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
 ---
 
 ## 🌟 Why XLeRobot?  
-XLeRobot = XL + LeRobot
+We answer this separately since **XLeRobot = XL + LeRobot**
 
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
