@@ -14,6 +14,35 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
+<table>
+  <tr>
+    <td width="40%">
+      <img src="media/realpic.jpg" alt="RealPic" width="100%">
+    </td>
+    <td width="60%">
+
+## 🌟 Why XLeRobot?  
+### **Why "LeRobot"?**  
+🖨️ **Simplest Hardware Assembly**:  
+- Fully 3D-printable (consumer-grade printers + PLA) except electronics  
+- Largest open-source community for low-cost robotics 🤝  
+- Pre-trained AI models & datasets ready to deploy 🧠  
+- Direct code testing on dual-arm manipulators  
+
+### **Why "XL" Over Lekiwi/Bambot?**  
+🔧 **Practicality Meets Affordability**:  
+- Solves common DIY pitfalls:  
+  - ❌ 3D-printed frames: Weak, unstable, complex assembly  
+  - ❌ Power management chaos  
+- **80% of ALOHA's daily tasks** at 1/10th the cost:  
+  - Open doors 🚪 | Serve drinks ☕ | Tidy clothes 👕 | Fetch fridge snacks 🥤  
+- **Plug-and-Play Upgrade**:  
+  - Add mobility to SO-100/Lekiwi arms for **<$250**  
+- **Global IKEA Compatibility** 🌍 + **24hr Solar-Powered** ☀️  
+
+    </td>
+  </tr>
+</table>
 
 ## 🌟 Why XLeRobot?  
 ### **Why "LeRobot"?**  
@@ -66,26 +95,7 @@ python lekiwi_remote.py \
 ```
 Full XLeRobot control code coming soon! 🚧
 
-<table>
-  <tr>
-    <td width="40%">
-      <img src="media/realpic.jpg" alt="RealPic" width="100%">
-    </td>
-    <td width="60%">
 
-## 🌟 Why XLeRobot? 
-**We're on a mission to build the world's most affordable general-purpose applicable household robot** 🏡✨  
-Imagine a modular, dual-arm mobile robot that costs less than your smartphone! By combining open-source magic 🧙♂️, IKEA hacks 🛠️, and modern AI algorithms 🤖, we're making robotics accessible to **EVERYONE**.
-
-### Key Features:
-- 🎯 **Cheapest DIY Robot Base**: Built on the IKEA RÅSKOG Cart ($39) - cheap but stable, available worldwide 🌍
-- 🤝 **Massive Open Community**: Collaborate with thousands robot researchers and enthusiasts via [LeRobot Community](https://github.com/huggingface/lerobot)
-- 🔋 **24/7 Power**: Utilize Anker power stations & solar panels ☀️ (Bonus: Use the battery for camping! ⛺)
-- 🧩 **Lekiwi-Based Wiring**: For wiring it's the same as a single SO100 arm + Lekiwi, no need to rename your existed motors.
-- 🧠 **AI That Actually Works**: Pre-trained models & datasets ready to deploy 🚀
-    </td>
-  </tr>
-</table>
 
 
 
