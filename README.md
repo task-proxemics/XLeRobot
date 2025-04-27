@@ -104,10 +104,12 @@ For details please see [Bill of Materials](BOM.md).
 4. **Software**: Get your robot moving!
 ---
 ---
+> [!NOTE] 
+> The content above provides efficient instructions for building the **XLeRobot**. The content below explains the project's purpose and vision in greater detail.
 
 ## 🛠️ Hardware Intro 🛠️
 
-XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
+**XLeRobot** = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 = 2x SO100 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
