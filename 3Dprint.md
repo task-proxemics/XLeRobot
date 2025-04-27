@@ -7,8 +7,8 @@
 
 - You can also check out the 3D priting instructions for [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md) and [SO100 Arm](https://github.com/TheRobotStudio/SO-ARM100#printing-the-parts) first if you like.
 
-- All the 3D printed part in the demo videos and pictures are printed with BambuLab A1 with BambuLab PLA Matte Black.
-- You can also use filaments that has better mechanical properties such as PETG HF, PLA CF, etc, to enhance the arm strength.
+- All the 3D printed part in the demo videos and pictures of XLeRobot are printed with **BambuLab A1 with BambuLab PLA Matte Black**.
+- You can also use filaments that has better mechanical properties such as ## ⏫ Extra Parts for XLeRobot ⏫, etc, to enhance the arm strength.
   - An example comparison: ![image](https://github.com/user-attachments/assets/3d0eeb80-1fc6-47cb-bd15-bc2f023030f4)
 
 
