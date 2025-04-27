@@ -139,9 +139,7 @@ End Effector control → VR remote control
 
 ### Paths towards General Embodied Machine Intelligence
 
-**Two main approaches exist for making robots intelligent, reflecting the primary methods in current academic robotics manipulation research** 
-
-(This is a simplified comparison, as many works combine benefits from both approaches)
+**Two main approaches exist for making robots intelligent, reflecting the primary methods in current academic robotics manipulation research** (This is a simplified comparison, as many works combine benefits from both approaches)
 <table>
   <tr>
     <td width="50%">
