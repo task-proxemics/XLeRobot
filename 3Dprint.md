@@ -1,6 +1,15 @@
 # 3D Printing Instructions
 
-Note: I currently use the Tuzhu A1 for all 3D printing work, with PLA matte black material. Other printers can be used as reference.
+> [!NOTE] 
+> We assume you have basic experience with consumer-level 3D printers (BambuLab, Prusa, etc.). This means you already know how to properly 3D print STL files with basic PLA filaments, and you're familiar with adding supports, adjusting infill, and modifying print speed to achieve your desired balance of material strength, efficiency, and model detail quality.
+
+All the 3D printed part in the demo videos and pictures are printed with BambuLab A1 with PLA matte black material. 
+## ⏫ Extra Parts for XLeRobot ⏫
+
+If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
+
+(but also check the _Build From Scratch_ section below since the list is not 100% the same)
+
 
 ## Extra parts
 
