@@ -7,7 +7,7 @@
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
-| **Build from Scratch** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from Scratch** |  **~$650**  |  **€XX**  |  **¥XX**  |
 | **Build from 2 SO100 arms**  |  **$XX**  |  **€XX**  |  **¥XX**  |
 | **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
 | **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
