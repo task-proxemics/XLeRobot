@@ -78,7 +78,15 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ---
 
-## 🛠️ Hardware: IKEA Hacks Meet Modern Tech  
+## 🛠️ Hardware Intro
+
+<aside>
+
+XLeRobot = Lekiwi + SO100 arm + IKEA RASKOG + Anker Battery
+
+= 2*SO100 Arms + omni wheels + RasberryPi5 + IKEA RASKOG + Anker Battery
+
+</aside>
 
 > [!NOTE]
 > *All compute handled by your PC - Raspberry Pi only manages data/wifi 📶*
