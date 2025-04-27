@@ -78,7 +78,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ---
 ---
-## 🚀 Get Started（Detailed Tutorial）
+## 🚀 Get Started（Detailed Tutorial）TODO
 1. **Buy your parts**: Bill of Materials
 2. **Print your stuff**: 3D printing instructions
 3. Avengers: **Assemble**!
