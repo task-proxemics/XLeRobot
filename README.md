@@ -19,8 +19,8 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
 XLeRobot = XL + LeRobot
 
 ### Why "LeRobot" Core?
-- **Cheap** 💴: 90% 3D printed, with cheap motors and electronics.
-- **Easy** 🔨: Just screw and connect for 2hrs and here it is.
+- **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
+- **Easy Assembly** 🔨: Just screw and connect for 2hrs and here it is.
 - **Plug-&-Play** 🧩: see robots work with running a few lines.
 - **Thriving Community** 🌍: World's largest low-cost robotics community with
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨. 
