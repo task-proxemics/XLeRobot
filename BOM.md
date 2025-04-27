@@ -28,7 +28,7 @@ Skip this section if you already have these tools:
 
 # 2. Extra Parts for XeLeRobot
 
-If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
+If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
 
 (but also check the _Build From Scratch_ section below since the list is not 100% the same)
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
