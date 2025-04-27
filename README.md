@@ -80,26 +80,39 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ## 🛠️ Hardware Intro
 
-<aside>
-
-XLeRobot = Lekiwi + SO100 arm + IKEA RASKOG + Anker Battery
-
-= 2*SO100 Arms + omni wheels + RasberryPi5 + IKEA RASKOG + Anker Battery
-
-</aside>
-
-> [!NOTE]
-> *All compute handled by your PC - Raspberry Pi only manages data/wifi 📶*
-
 XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 = 2x SO100 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
-| Component           | Superpowers 🔋                          |
-|---------------------|----------------------------------------|
-| **IKEA RÅSKOG Cart** | 🛒 Universal mobile base <br> 🌐 Global availability <br> 🧱 Modular mesh platform |
-| **Anker SOLIX C300** | ⚡ 24hr runtime <br> 🔌 Single cable for arms/base/RPi <br> 🏕️ Dual-use for camping/emergencies |
-| **SO-100 Arms**     | 🤖 Direct code transfer from LeRobot <br> 🔧 No hardware modifications needed |
+> [!NOTE]
+> *All compute handled by your PC - Raspberry Pi only manages data/wifi 📶*
+
+<table>
+  <tr>
+    <td width="50%">
+      
+### Why IKEA RÅSKOG Cart?
+- 🌎 Global availability with standardized design
+- 💰 Cost-effective
+- 🏗️ Simple structure yet sturdy construction
+- 🔧 Mesh design enables easy mounting of components
+- 📦 Perfect for storage and transportation of items
+- 📏 Ideal height for common household surfaces—from stovetop to coffee table
+    </td>
+    <td width="50%">
+    
+### Why Anker SOLIX C300 Power Station? 
+- 🌍 Global availability
+- ⚡ 288Wh capacity, 300W maximum output power, 280W maximum charging power
+- 🔌 Powers both 12V arms, base, and Raspberry Pi at full capacity through three Type-C charging cables—eliminating complex wiring system
+- 🔋 Exceptional battery life: 10 hours with normal use, 6 hours under intensive operation, and only 1 hour to fully charge
+- 💡 Integrated lighting for nighttime operation
+- ☀️ Optional solar panel mounting for continuous power supply
+- 🎒 Versatile and detachable—serves beyond robotics in daily life as emergency backup power or camping power source
+    </td>
+  </tr>
+</table>
+
 
 *All compute handled by your PC - Raspberry Pi 5 only manages data/wifi 📶*
 
