@@ -1,16 +1,70 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 This is the open-source repo for XLeRobot, including hardware desgins, bill of materials, modified LeRobot codes, etc. Currently actively working, planning on finish the first version XLeRbot 0.1.0 in a week, please be patient....
 
-# XLeRobot 🤖
-**🚀 Bringing Embodied AI to Everyone Cheaper Than the iPhone! 📱**
 
-Built upon [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). This project could not be possible without standing on the shoulder of giants!
 
 
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
+# XLeRobot 🤖
+
+**🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
+*Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
+
+---
+
+## 🌟 Why XLeRobot?  
+### **Why "LeRobot"?**  
+🖨️ **Simplest Hardware Assembly**:  
+- Fully 3D-printable (consumer-grade printers + PLA) except electronics  
+- Largest open-source community for low-cost robotics 🤝  
+- Pre-trained AI models & datasets ready to deploy 🧠  
+- Direct code testing on dual-arm manipulators  
+
+### **Why "XL" Over Lekiwi/Bambot?**  
+🔧 **Practicality Meets Affordability**:  
+- Solves common DIY pitfalls:  
+  - ❌ 3D-printed frames: Weak, unstable, complex assembly  
+  - ❌ Power management chaos  
+- **80% of ALOHA's daily tasks** at 1/10th the cost:  
+  - Open doors 🚪 | Serve drinks ☕ | Tidy clothes 👕 | Fetch fridge snacks 🥤  
+- **Plug-and-Play Upgrade**:  
+  - Add mobility to SO-100/Lekiwi arms for **<$250**  
+- **Global IKEA Compatibility** 🌍 + **24hr Solar-Powered** ☀️  
+
+---
+
+## 🛠️ Hardware: IKEA Hacks Meet Modern Tech  
+**XLeRobot = Lekiwi + 2×SO100 Arms + IKEA RÅSKOG Cart + Anker SOLIX C300**  
+
+| Component           | Superpowers 🔋                          |
+|---------------------|----------------------------------------|
+| **IKEA RÅSKOG Cart** | 🛒 Universal mobile base <br> 🌐 Global availability <br> 🧱 Modular mesh platform |
+| **Anker SOLIX C300** | ⚡ 24hr runtime <br> 🔌 Single cable for arms/base/RPi <br> 🏕️ Dual-use for camping/emergencies |
+| **SO-100 Arms**     | 🤖 Direct code transfer from LeRobot <br> 🔧 No hardware modifications needed |
+
+*All compute handled by your PC - Raspberry Pi 5 only manages data/wifi 📶*
+
+---
+
+## 🧠 Software: Two Paths to Robot IQ  
+### **Option 1: End-to-End Visual-Motor Policy (VLA)**  
+- 🎮 **No calibration needed** - perfect for beginners  
+- 👁️ Uses RGB cameras + LeRobot's pretrained models  
+
+### **Option 2: Hierarchical Sim2Real**  
+- 🌐 **Maniskill Simulation** (GPU-accelerated)  
+- 📐 Physics-based planning for precision  
+
+```bash
+# Current Demo Setup (Works out-of-box!)
+python lekiwi_remote.py \ 
+    --arm1 raspberry_pi_ip \ 
+    --arm2 desktop_ip
+```
+Full XLeRobot control code coming soon! 🚧
 
 <table>
   <tr>
