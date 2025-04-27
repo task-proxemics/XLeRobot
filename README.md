@@ -260,6 +260,8 @@ All things considered—cost, community support, ease of assembly, and practical
 
 ---
 
+### Main Contributors
 
+Currently only me alone. But definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional works done by their talented contributors.
 
 
