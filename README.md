@@ -186,9 +186,10 @@ Here's a general idea of how you can control the robot and make it smart:
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
-| **Build from Scratch** |  **$482**  |  **€545.8**  |  **¥2891**  |
-| **Build from 2 SO100 arms**  |  **$499**  |  **€526**  |  **¥2829**  |
-| **Build from 1 Lekiwi** |  **$248**  |  **€295**  |  **¥1571**  |
+| **Build from Scratch** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 2 SO100 arms**  |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
 
 For details please see [Bill of Materials](BOM.md).
 
@@ -223,8 +224,11 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
 ### Software
 
-(software updates will depend on LeRobot community development)
-
+(software updates will also depend on the development of LeRobot community)
+<table>
+  <tr>
+    <td width="50%">
+      
 **Urgent**
 
 - ⚙️ Basic control algorithms
@@ -232,7 +236,9 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 - 🎲 Maniskill simulation environment
 - 🕶️ Quest3 VR control and teleop
 - 🤖 Simple tasks using existing VLA models from Lerobot codebase
-
+    </td>
+    <td width="50%">
+    
 **In the near future**
 
 - 🎯 AprilTag-based precise calibration
@@ -240,6 +246,9 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 - 🌐 Digital twin alignment for sim2real applications
 - 🧠 World model and physics-based robust manipulation
 - 💬 Connect with MCP to directly utilize LLMs
+    </td>
+  </tr>
+</table>
 
 
 ---
