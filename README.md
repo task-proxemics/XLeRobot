@@ -78,6 +78,21 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ---
+
+## 🛠️ Total Cost TODO
+> [!NOTE] 
+> We want XLeRobot to be powerful, so there's only a 12V version.
+> Doesn't include cost of 3D printing
+
+| Price| US  | EU  | CN |
+|---------|----:|----:|----:|
+| **Build from Scratch** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 2 SO100 arms**  |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
+
+For details please see [Bill of Materials](BOM.md).
+---
 ---
 ## 🚀 Get Started（Detailed Tutorial）TODO
 1. **Buy your parts**: Bill of Materials
@@ -207,26 +222,6 @@ Here's a general idea of how you can control the robot and make it smart:
     - 🤖Support for [multiple robots](https://maniskill.readthedocs.io/en/latest/robots/index.html) (including [SO100 arm](https://x.com/Stone_Tao/status/1910101218241978537))
 
 
-
-
----
-
-## 🛠️ Total Cost
-> [!NOTE] 
-> We want XLeRobot to be powerful, so there's only a 12V version.
-> Doesn't include cost of 3D printing
-
-| Price| US  | EU  | CN |
-|---------|----:|----:|----:|
-| **Build from Scratch** |  **$XX**  |  **€XX**  |  **¥XX**  |
-| **Build from 2 SO100 arms**  |  **$XX**  |  **€XX**  |  **¥XX**  |
-| **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
-| **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
-
-For details please see [Bill of Materials](BOM.md).
-
-Not affiliated with IKEA (but we love swedish meatball! 🍝)
-
 ---
 ## Future Plans
 
@@ -312,5 +307,7 @@ All things considered—cost, community support, ease of assembly, and practical
 ### Main Contributors
 
 Currently only [me](https://vector-wangel.github.io/) alone. But this is just a very small brick on the pyramids, definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional works done by their talented contributors.
+
+Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
 
