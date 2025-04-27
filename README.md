@@ -195,7 +195,7 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
 ---
 
-## XLeRobot Hardware Limitations
+## Limitations
 
 (Hey, for this price point, what more could you ask for?)
 
