@@ -28,17 +28,19 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 - <img src="https://github.com/user-attachments/assets/384c5cb1-849c-43e5-a5e5-8f31d39712f8" width="300" />
 
 
-1. lekiwi base supporter
+### [Lekiwi base supporter]
 
-Modified from the lekiwi base motor mount, with redesigned structure to enhance stability.
+- Modified from the Lekiwi base motor mount, with redesigned structure to enhance stability.
 
-If your cart is not an authentic IKEA cart, you can slightly adjust the z-axis scale directly in the slicer software (keeping the xy-axis scale unchanged), so that: ...
+- If your cart is **not an authentic IKEA cart**, you can slightly adjust the z-axis scale directly in the slicer software (keeping the xy-axis scale unchanged), so that both the Lekiwi base and the wheels of the cart can have a balanced pressure distribution.
 
-1. A thin lekiwi base top plate, used to secure the supporter to the bottom of the IKEA cart
+### A thinner Lekiwi base top plate
+
+used to secure the supporter to the bottom of the IKEA cart
 
 (A second version will be iterated soon to make installation on the mesh more convenient, although the lekiwi base and cart can currently achieve a stable connection)
 
-# Print from scratch
+## 🌿 Print from scratch 🌿
 
 If you don't have any SO100 arm or Lekiwi base
 
