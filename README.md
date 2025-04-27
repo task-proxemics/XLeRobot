@@ -20,7 +20,7 @@
 We answer this separately since    **XLeRobot = XL + LeRobot**
 <table>
   <tr>
-    <td width="60%">
+    <td width="50%">
       
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
@@ -30,7 +30,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
   - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
     </td>
-    <td width="40%">
+    <td width="50%">
     
 ### Why "XL" Enhancement? 
 - 🏠 Currently, there is a lack of affordable, stable, general-purpose home mobile robots with dual arms that are as easy to build as LeRobot.
