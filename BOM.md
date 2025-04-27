@@ -20,6 +20,7 @@ Skip this section if you already have these tools:
 | M3 Screws and Nuts Set (come with the L-shape screw driver) | 1 | $14.99 | [Amazon](https://a.co/d/4NfBpNS) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) | ¥40 | [taobao](https://item.taobao.com/item.htm?abbucket=14&detail_redpacket_pop=true&id=614760389801&ltk2=1745773029845cww4kdo78gamgx9c4hl35&ns=1&priceTId=2100c82517457730113487286e0bc2&query=m3%E5%86%85%E5%85%AD%E8%A7%92%E8%9E%BA%E4%B8%9D%E5%A5%97%E8%A3%85&skuId=4501144438660&spm=a21n57.1.hoverItem.20&utparam=%7B%22aplus_abtest%22%3A%2256d17236f81617358b208d1cf05155cf%22%7D&xxc=taobaoSearch) |
 | Flush cutter | 1 | $6.99 | [Amazon](https://a.co/d/61KlrZp) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) | ¥5.8 | [taobao](https://item.taobao.com/item.htm?abbucket=14&detail_redpacket_pop=true&id=706039364576&ltk2=1745773187187erh7ued4gqcyyk5573rir&ns=1&priceTId=2100c82517457731790992641e0bc2&query=%E5%89%AA%E7%BA%BF%E9%92%B3&skuId=4964064736437&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%22474017eea48950332239eaf78d326730%22%7D&xxc=taobaoSearch) |
 | Screwdriver Set | 1 | $6 | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH) | €10 | [Amazon](https://www.amazon.fr/dp/B08ZXVMVYD/) | ￥20 |[Taobao](https://e.tb.cn/h.6ReL0wwgtPuSmNV?tk=3rLDV10AVtr)  |
+
 This tool list is just for reference, you can use/buy any tools that do the trick.
 
 
