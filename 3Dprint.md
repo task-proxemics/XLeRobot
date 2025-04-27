@@ -1,6 +1,6 @@
 # 3D Printing Instructions
 
-## Before Printing
+## 🤔 Before Printing 🤔
 
 > [!NOTE] 
 > We assume you have basic experience with consumer-level 3D printers (BambuLab, Prusa, etc.). This means you already know how to properly 3D print STL files with basic PLA filaments, and you're familiar with reorienting parts, adding supports, adjusting infill, and modifying print speed etc., to achieve your desired balance of material strength, efficiency, and model detail quality.
@@ -45,14 +45,14 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 ## 🌿 Print from scratch 🌿
 
 If you haven't printed any SO100 arm or Lekiwi base, Just follow their instructions ([Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md) and [SO100 Arm](https://github.com/TheRobotStudio/SO-ARM100#printing-the-parts)) along with the suggestions below.
-### 🦾 2x SO100 Arms 🦾
+### 🦾 2x SO100 Arms 
 - In the current hardware version, you only need to print two [follower arms](3D_Models/3D_models_for_printing/SO100). You only need to print the [leader arm](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting/Leader) when you need to teleope the dual arms with leader-follower joint control.
 - <img src="https://github.com/user-attachments/assets/d1a5870e-ab96-4c57-a949-1e5daf84bbb3" width="800" />
 
 - This is the [Wrist Camera (MF) Mount] and its [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module) for SO100, which can optimize data collection efficiency.
 - <img src="https://github.com/user-attachments/assets/8f74f9f4-321c-4689-acbe-6d7280922bfe" width="400" />
 
-### 🧑‍🦼‍➡️ Lekiwi Base 🧑‍🦼‍➡️
+### 🧑‍🦼‍➡️ Lekiwi Base 
 - For the Lekiwi base, you only need to print the [top](3D_Models/3D_models_for_printing/Lekiwi/base_plate_layer1.stl) and [bottom plates](3D_Models/3D_models_for_printing/Lekiwi/base_plate_layer2.stl), 3x [motor mounts](3D_Models/3D_models_for_printing/Lekiwi/drive_motor_mount_v2.stl), and 3x [wheel-servo hubs](3D_Models/3D_models_for_printing/Lekiwi/servo_wheel_hub.stl). XLeRobot won't use other parts.
 - <img src="https://github.com/user-attachments/assets/7c35c7cc-ab69-4cf6-bfa9-0e4b3b983e22" width="800" />
 
