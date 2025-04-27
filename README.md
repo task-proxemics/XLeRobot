@@ -1,6 +1,7 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
-This is the open-source repo for XLeRobot, including hardware desgins, bill of materials, modified LeRobot codes, etc. Currently actively working, planning on finish the first version XLeRbot 0.1.0 in a week, please be patient....
-
+Currently actively working, planning on finish the first version XLeRbot 0.1.0 in a week, please be patient....
+> [!NOTE] 
+> Currently actively working. There could be incorrect information. Planning on finish the first version **XLeRbot 0.1.0** in a week, will delete this note when the first version is finished. Please be patient....
 
 
 
