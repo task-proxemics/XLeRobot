@@ -11,7 +11,7 @@
 ---
 
 
-**🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
+**🚀 Bringing Embodied AI to Everyone - Cheaper Than Half of an iPhone! 📱**  
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
