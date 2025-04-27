@@ -19,19 +19,21 @@ Skip this section if you already have these tools:
 | - | - | - | - | - | - | - | - |
 | M3 Screws and Nuts Set | 1 | $14.99 | [Amazon](https://a.co/d/4NfBpNS) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) | ¥40 | [taobao](https://item.taobao.com/item.htm?abbucket=14&detail_redpacket_pop=true&id=614760389801&ltk2=1745773029845cww4kdo78gamgx9c4hl35&ns=1&priceTId=2100c82517457730113487286e0bc2&query=m3%E5%86%85%E5%85%AD%E8%A7%92%E8%9E%BA%E4%B8%9D%E5%A5%97%E8%A3%85&skuId=4501144438660&spm=a21n57.1.hoverItem.20&utparam=%7B%22aplus_abtest%22%3A%2256d17236f81617358b208d1cf05155cf%22%7D&xxc=taobaoSearch) |
 | Flush cutter | 1 | $6.99 | [Amazon](https://a.co/d/61KlrZp) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) | ¥5.8 | [taobao](https://item.taobao.com/item.htm?abbucket=14&detail_redpacket_pop=true&id=706039364576&ltk2=1745773187187erh7ued4gqcyyk5573rir&ns=1&priceTId=2100c82517457731790992641e0bc2&query=%E5%89%AA%E7%BA%BF%E9%92%B3&skuId=4964064736437&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%22474017eea48950332239eaf78d326730%22%7D&xxc=taobaoSearch) |
-| **Total** || **$219.98** || **€209.98** || **¥1013.15** ||
+
 
 
 # 2. Extra Parts for XeLeRobot
 
-If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts (but also check the **Build From Scratch** below):
+If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
+
+(but also check the **Build From Scratch** below):
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | - | - | - | - | - | - | - | - |
 | IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
 | Anker SOLIX C300 Power Station | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) |￥764.15 |[Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp )              |
 | Long 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) Connector Kit | €0 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
 | Type C to DC wire(12V/5V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | €0 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
-| **Total** || **$219.98** || **€209.98** || **¥1013.15** ||
+
 
 - I couldn't find any ready-made long 5264 wires for purchase in US—**only connector kits** that require manual assembly to extend the length (easy to do though).
 - You can definitely choose **similar cheaper cart not from IKEA**, in this case [slight change]() to the 3D printed part might be needed.
@@ -42,21 +44,22 @@ If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these 
 
 # 3. Build From Scratch
 
-For those starting from scratch (without SO100 or Lekiwi arms), follow these steps:
+For those starting from scratch (without SO100 arms or Lekiwi), follow these steps:
 
-## Required Components
+## 2x SO100 arms
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
 | STS3215 Servo<sup>[1](#myfootnote1)</sup> (12V version) | 15 | $15 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | 13€ | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥99/115 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
 | Motor Control Board | 1 | $11 | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/) | 12€ | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)| ￥27 | [TaoBao](https://detail.tmall.com/item.htm?id=738817173460&skuId=5096283384143) |
 | 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) | ¥28 | [TaoBao 1](https://e.tb.cn/h.6ZOL1twp9HlvEue?tk=nxvYeJUknqq) (80mm, 6mm version) |
-| M2 M3 M4 Assorted Screw Set | 1 | $14.99 | [Amazon](https://www.amazon.com/Button-Socket-Washers-Assortment-Machine/dp/B0BMQGJP3F) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) | ¥20 | [taobao](https://e.tb.cn/h.6gUXgJbEk9Z5mbb?tk=MKOuezal6rB) |
-| Long 5264 wires | 2 | $0 | [TODO]() | €0 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm +  3P-400mm, and 5264 connector [Taobao](https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
-| Type C to DC wire(12V/5V) | 1 | $0 | [TODO]() | €0 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) [Taobao 5V](https://item.taobao.com/item.htm?abbucket=6&id=888084290249&ns=1&pisk=gB8xEC1DsbFvFG8AZIouSMMlGNll10AqnKRQSOX0fLpJ1T4igZmNWdBJQtjclt4OWCpwIddZg166CdBMm00HgI7N5vXt-2AVJRwa1KU1CTG1TsCjZiwvGZPf5vDnWuV50xb6n4SE30Z5TT1f11sjwa1COS_1fsOSw11ghlaXCbhRs1W_f116NQ1FsNw_5PO7N65gGOs1C4GR_T615N91VbCZ_jrlQA63WHNrAOpbYmzgSUCADOaG3PQkzyj5dKX75o9fMJWBGTU_WtWVu_A6CAUGRHJJWM9ZWz7D93_5M3h_VtspcKfyB2UfhUdXltYjErXXuQtHSLG_5OKWAM5pPjiCcHJDAgLoHzWBVQdG23lamOxF1dSeSvzVhCOe8HbKW5CJvQ_R448HJOnaK9Cgcbh8blSfaJ9E-A5UpsO5w9ckMlrN2J5RKbnzblSfa_BnZyEabgeF.&priceTId=2147830217424594519713165e10c0&skuId=5899301834220&spm=a21n57.1.hoverItem.10&utparam=%7B%22aplus_abtest%22%3A%2248e69b593c0ac8c632a2c33b5bc716c2%22%7D&xxc=taobaoSearch) |
-| Total |---| ~$300 |---| ~€300 |---| ~￥2000 |---|
 
-- 2x SO100 arms
-- 1x Lekiwi base
+## 1x Lekiwi base
+
+| Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
+|---|---|---|---|---|---|---|---|
+| STS3215 Servo<sup>[1](#myfootnote1)</sup> (12V version) | 15 | $15 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | 13€ | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥99/115 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
+| Motor Control Board | 1 | $11 | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/) | 12€ | [Amazon](https://www.amazon.fr/-/en/dp/B0CJ6TP3TP/)| ￥27 | [TaoBao](https://detail.tmall.com/item.htm?id=738817173460&skuId=5096283384143) |
+| 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) | ¥28 | [TaoBao 1](https://e.tb.cn/h.6ZOL1twp9HlvEue?tk=nxvYeJUknqq) (80mm, 6mm version) |
 
 These components will allow you to replicate Demo 0.0.5, enabling master-slave arm control and direct PC control of both arms.
 
