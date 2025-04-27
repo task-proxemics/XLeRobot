@@ -195,12 +195,16 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
 ---
 
-## 🎯 Hardware
-Please see hardware assembly details at
-- Why use IKEA and Anker ?
-- They are both selling world wide.
-- IKEA RASKOG cart is famous around the world as the 
-- Though anker may seem a little expensive, the technology is worth it. At least 10 hours of continuous action
+## XLeRobot Hardware Limitations
+
+(Hey, for this price point, what more could you ask for?)
+
+- 🔒 Fixed height—adding a stable lifting platform would significantly increase costs and assembly difficulty
+- 📏 Smaller workspace compared to Aloha—objects must be placed within reach, though it still handles the majority of its tasks
+- ⚖️ Limited payload capacity for a single arm: that's why the cart is here
+- 🛒 Base movement precision may be affected by the wheels of IKEA cart (can be addressed through closed-loop feedback control)
+
+All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as the most compelling low-cost robot for indoor applications
 
 
 ---
