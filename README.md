@@ -25,11 +25,12 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
 XLeRobot = XL + LeRobot
 
 ### Why "LeRobot" Core?
-- **Easy Made and Assembly** 🔨: 90% 3D printed except for motors and electronics
-- **Plug-&-Play direct deployment** 🧩: make robots work with running a few lines
+- **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
+- **Easy Assembly** 🔨: Just screw and connect for 2hrs and here it is.
+- **Plug-&-Play direct deployment** 🧩: see robots work with running a few lines.
 - **Thriving Community** 🌍: World's largest low-cost robotics community with
-  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 
-  - Thousands of brilliant minds 🧑‍🤝‍🧑
+  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨. 
+  - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.
 
 ### Why "XL" Enhancement? 
 - 🏠 Currently, there is a lack of affordable, stable, general-purpose home robots with dual arms that are as easy to build as LeRobot
