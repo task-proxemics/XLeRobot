@@ -25,10 +25,10 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 
 
 - The base is designed to rotate 15 degrees outward, expanding the workspace area on the sides while ensuring normal collaboration between the two arms.
-  - ![image](https://github.com/user-attachments/assets/f612c9d8-fca2-406e-ab25-d015ea5e62c4)
+  <img src="https://github.com/user-attachments/assets/f612c9d8-fca2-406e-ab25-d015ea5e62c4" width="500" />
 
 - To reduce filament waste, the current design is hollow in the middle, and you can put a used Bambulab filament Cardboard Spool inside to provide stable structural support.
-  - <img src="https://github.com/user-attachments/assets/384c5cb1-849c-43e5-a5e5-8f31d39712f8" width="300" />
+  <img src="https://github.com/user-attachments/assets/384c5cb1-849c-43e5-a5e5-8f31d39712f8" width="300" />
 
 
 1. lekiwi base supporter
