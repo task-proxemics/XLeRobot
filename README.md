@@ -133,9 +133,9 @@ Here's a general idea of how you can control the robot and make it smart:
 
 ### 🕹️ Basic Control
 
-Joint control → leader-follower arm control
+- **Joint** (motor angle) control → leader-follower arm control
 
-End Effector control → VR remote control
+- **End effector pose** control → VR remote control
 
 ### 🧠 Paths towards General Embodied Machine Intelligence
 
