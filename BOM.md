@@ -73,6 +73,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 | Motor Control Board | 2 | $10.55 | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/) | €12.00 | [Amazon](https://www.amazon.fr/Waveshare-Integrates-Control-Applicable-Integrate/dp/B0CJ6TP3TP) | ￥24 |[Taobao](https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj "https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj")|
 | Wrist camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | €0 | [TODO]() |￥0|[TODO]()|
 | microSD card | 1 | $11.23 | [Amazon](https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7C7LL1/) | €10.00 | [Amazon](https://www.amazon.fr/Lexar-Carte-Micro-adaptateur-Smartphone/dp/B08XZ2KS1F)|￥58|[Taobao](https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ "https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ")|
+| USB-C to USB-A Cable 2 pcs | 1 | $8.99 | [Amazon](https://a.co/d/0mWsmhG) Anker | €7 | [Amazon](https://www.amazon.fr/dp/B07BNF842T/) |￥17  |[Taobao](https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4 "https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4")|
 
 These components will allow you to replicate Demo 0.0.5, enabling master-slave arm control and direct PC control of both arms.
 
@@ -94,15 +95,6 @@ These components will allow you to replicate Demo 0.0.5, enabling master-slave a
 | USB-C to USB-A Cable 2 pcs | 1 | $7 | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1) | €7 | [Amazon](https://www.amazon.fr/dp/B07BNF842T/) |￥17  |[Taobao](https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4 "https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4")|
 | **Total** ||  **$31**  ||  **€38** || **¥80.20** ||
 
-## 12V version :battery:
-
-### SO-100 2 Robot Arm Teleoperation Set (12V):
-| Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
-|:---|:---:|:---:|:---|:---:|---:|:-:|-|
-| 12v ST3215 Servo | 12 | $13.89 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html?spm=a2700.details.you_may_like.3.5ab1478e45kY42) | €13.38 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html?spm=a2700.details.you_may_like.3.5ab1478e45kY42) | ￥110  |[Taobao](https://e.tb.cn/h.64H9u3maGWzIp5Q?tk=T5liexkG6Yz "https://e.tb.cn/h.64H9u3maGWzIp5Q?tk=T5liexkG6Yz")|
-| Motor Control Board | 2 | $10.55 | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/) | €12.00 | [Amazon](https://www.amazon.fr/Waveshare-Integrates-Control-Applicable-Integrate/dp/B0CJ6TP3TP) | ￥24 |[Taobao](https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj "https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj")|
-| Power Supply | 1 | $12 | [Amazon](https://www.amazon.com/ALITOVE-Adapter-Converter-100-240V-5-5x2-1mm/dp/B01GEA8PQA) | €15 | [Amazon](https://www.amazon.fr/LEDMO-Alimentation-Adaptateur-Transformateurs-Chargeur/dp/B07PGLXK4X) | ￥22  |[Taobao](https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr "https://e.tb.cn/h.64D9xUuAdpkswUx?tk=JRRwex94phr")|
-| **Total** | | **$199.78** | | **€199.56** | | **￥1,390** | |
 
 
 
