@@ -1,3 +1,5 @@
+#  ⚒️ Assemble! ⚒️
+
 ## Before Assembly
 
 First, set up the motor index according to the LeRobot and LeKiwi tutorials. You'll need two motor driver boards: one for the SO100 arm (motors 1-6) and another for motors 1-9.
