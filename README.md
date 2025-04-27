@@ -17,7 +17,7 @@
 ---
 
 ## 🌟 Why XLeRobot?  
-We answer this separately since **XLeRobot = XL + LeRobot**
+We answer this separately since    **XLeRobot = XL + LeRobot**
 
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
@@ -35,14 +35,15 @@ We answer this separately since **XLeRobot = XL + LeRobot**
 
 ### Overall advantages/goals of XLeRobot
 
-- Cost-effective: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
-- Practical and reliable, capable of completing over 75% of daily tasks performed by $20,000 dual-arm mobile robots on the market
-    - Such as: opening doors 🚪, serving beverages ☕, cleaning tables (within its workspace) 🧹, moving clothes to laundry baskets 👕, and retrieving food from refrigerator (middle shelves) 🍱. More tasks are demonstrated in the Lerobot hackathon.
+- **Cost-effective** 💴: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
+- **Practical and reliable** 💪: capable of completing over 75% of daily tasks performed by $20,000 dual-arm mobile robots on the market.
+    - Such as: opening doors 🚪, serving beverages ☕, cleaning tables (within its workspace) 🧹, moving clothes to laundry baskets 👕, and retrieving food from refrigerator (middle shelves) 🍱.
+    - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
     - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
-- Rich open-source resources
+- **Rich open-source resources**
     - Lerobot's plug-and-play code and numerous AI models
     - Supported by an active, growing community of contributors
-- Easy assembly and setup of both physical and electrical components
+- **Easy upgrade** of both physical and electrical components for Lekiwi and SO100
     - Compatible with existing SO100Arm or Lekiwi systems—no motor number changes or hardware modifications needed
 
 
