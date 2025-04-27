@@ -14,18 +14,12 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
-<table>
-  <tr>
-    <td width="40%">
-      <img src="media/realpic.jpg" alt="RealPic" width="100%">
-    </td>
-    <td width="60%">
 
 ## 🌟 Why XLeRobot?  
 XLeRobot = XL + LeRobot
 
 ### Why "LeRobot" Core?
-- **Cheap** 💴: 90% 3D printed, with cheap parts.
+- **Cheap** 💴: 90% 3D printed, with cheap motors and electronics.
 - **Easy** 🔨: Just screw and connect for 2hrs and here it is.
 - **Plug-&-Play** 🧩: see robots work with running a few lines.
 - **Thriving Community** 🌍: World's largest low-cost robotics community with
@@ -38,9 +32,7 @@ XLeRobot = XL + LeRobot
 - ⚡ Power supply remains a challenge for mobile robots, resulting in complicated wiring configurations
 - 🤖 XLerobot uses the same setup configuration as most dual-arm tabletop manipulation systems in the LeRobot community, enabling straightforward code and policy transfer
 
-    </td>
-  </tr>
-</table>
+
 
 ## 🌟 Why XLeRobot?  
 ### **Why "LeRobot"?**  
