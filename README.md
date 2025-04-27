@@ -25,20 +25,17 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
 XLeRobot = XL + LeRobot
 
 ### Why "LeRobot" Core?
-- **Plug-&-Play Assembly** 🧩: 90% 3D printed except for motors and electronics
+- **Easy Made and Assembly** 🔨: 90% 3D printed except for motors and electronics
+- **Plug-&-Play direct deployment** 🧩: make robots work with running a few lines
 - **Thriving Community** 🌍: World's largest low-cost robotics community with
-  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨
-  - Direct code deployment
-  - Thousands of brilliant minds
+  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 
+  - Thousands of brilliant minds 🧑‍🤝‍🧑
 
 ### Why "XL" Enhancement? 
-🚨 Solving critical gaps in current platforms:
-- **Structural Stability** 🔧  
-  Replaces fragile 3D-printed frames (PLA material limitations) with durable IKEA-based design
-- **Power Revolution** ⚡  
-  Simplified wiring + Anker power station = 24h runtime & 1hr fast-charging
-- **Code Compatibility** 🤝  
-  Mirror configuration to LeRobot dual-arm setups for seamless policy migration
+- 🏠 Currently, there is a lack of affordable, stable, general-purpose home robots with dual arms that are as easy to build as LeRobot
+- 🖨️ 3D printed frames using consumer printers and PLA have limited durability, stability, and load capacity, while being complex to assemble and impractical for daily use
+- ⚡ Power supply remains a challenge for mobile robots, resulting in complicated wiring configurations
+- 🤖 XLerobot uses the same setup configuration as most dual-arm tabletop manipulation systems in the LeRobot community, enabling straightforward code and policy transfer
 
     </td>
   </tr>
