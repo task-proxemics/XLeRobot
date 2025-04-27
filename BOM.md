@@ -1,6 +1,6 @@
 # Bill of Materials
 
-# 🛠️ Total Cost 
+## 💵 Total Cost 💵
 > [!NOTE] 
 > Doesn't include cost of 3D printing, tools, shippings and taxes.
 
@@ -14,7 +14,7 @@
 > [!IMPORTANT]
 > We want **XLeRobot** to be **powerful**, so there's only a single 12V version. If you are using your pre-assembled SO100 and Lekiwi, their motors also need to be the 12V version. While the 7.4V version might work, it is not recommended as it has not been tested and cannot achieve optimal performance.
 
-# 1. Assembly Tools
+## 🔨 Assembly Tools 🔨
 
 Skip this section if you already have these tools:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
@@ -28,7 +28,7 @@ Skip this section if you already have these tools:
 
 
 
-# 2. Extra Parts for XeLeRobot
+## ⏫ Extra Parts for XeLeRobot ⏫
 
 If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
 
@@ -49,14 +49,14 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 
 
 
-# 3. Build From Scratch
+## 🌿 Build From Scratch 🌿
 
 For those starting from scratch (without SO100 arms or Lekiwi), besides the parts from _Extra Parts for XeLeRobot_, you also need to build the arms and Lekiwi base first.
 
 > [!NOTE]
 > The parts list for 2x SO100 arms and 1 Lekiwi base in this repo contains fewer components than the original bills (mainly cable and battery-related items). If you're building **XLeRobot** from scratch, you can use this repo's bill directly. However, it's recommended to check the other two repos ([SO100](https://github.com/TheRobotStudio/SO-ARM100/tree/main), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md)) as well, in case there are updated options at better prices.
 
-## 2x SO100 Arms
+### 🦾 2x SO100 Arms 🦾
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
 | STS3215 Servo (12V) | 12 | $16 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
@@ -65,7 +65,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 > [!NOTE] 
 > Both of the 2 SO100 Arms are follower arms in hardware setup, you can use one of them as the leader arm for testing teleop without the need to remove the gears of the motors (instructed in the original SO100 tutorial) if you want to save money with only 2 arms.
 > 
-## 1x Lekiwi Base
+### 1x Lekiwi Base
 
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
