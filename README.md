@@ -33,26 +33,18 @@ We answer this separately since **XLeRobot = XL + LeRobot**
 - ⚡ Power supply remains a challenge for DIY mobile robots, resulting in complicated wiring configurations.
 - 🤖 XLerobot uses the same setup configuration as most dual-arm tabletop manipulation systems in the LeRobot community, enabling straightforward code and policy transfer.
 
+### Overall advantages/goals of XLeRobot
 
+- Practical and reliable, capable of completing over 80% of Aloha's daily tasks
+    - Such as: opening doors 🚪, serving beverages ☕, cleaning tables (within workspace) 🧹, moving clothes to laundry baskets 👕, and retrieving food from refrigerator (middle shelves) 🍱. More tasks are demonstrated in the Lerobot hackathon.
+    - Note: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
+- Rich open-source resources
+    - Lerobot's plug-and-play code and numerous AI models
+    - Supported by an active, growing community of contributors
+- Cost-effective: complete system under $600, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250
+- Easy assembly and setup of both physical and electrical components
+    - Compatible with existing SO100Arm or Lekiwi systems—no motor number changes or hardware modifications needed
 
-## 🌟 Why XLeRobot?  
-### **Why "LeRobot"?**  
-🖨️ **Simplest Hardware Assembly**:  
-- Fully 3D-printable (consumer-grade printers + PLA) except electronics  
-- Largest open-source community for low-cost robotics 🤝  
-- Pre-trained AI models & datasets ready to deploy 🧠  
-- Direct code testing on dual-arm manipulators  
-
-### **Why "XL" Over Lekiwi/Bambot?**  
-🔧 **Practicality Meets Affordability**:  
-- Solves common DIY pitfalls:  
-  - ❌ 3D-printed frames: Weak, unstable, complex assembly  
-  - ❌ Power management chaos  
-- **80% of ALOHA's daily tasks** at 1/10th the cost:  
-  - Open doors 🚪 | Serve drinks ☕ | Tidy clothes 👕 | Fetch fridge snacks 🥤  
-- **Plug-and-Play Upgrade**:  
-  - Add mobility to SO-100/Lekiwi arms for **<$250**  
-- **Global IKEA Compatibility** 🌍 + **24hr Solar-Powered** ☀️  
 
 ---
 
