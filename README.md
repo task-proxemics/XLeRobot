@@ -101,9 +101,9 @@ XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
       
 ### Why IKEA RÅSKOG Cart?
 - 🌎 Global availability with standardized design
-- 💰 Cost-effective
+- 💰 Cheap
 - 🏗️ Simple structure yet sturdy construction
-- 🔧 Mesh design enables easy mounting of components
+- 🔧 Metal Mesh bottom enables easy mounting of components
 - 📦 Perfect for storage and transportation of items
 - 📏 Ideal height for common household surfaces—from stovetop to coffee table
 <img src="media/realpic_back.jpg" alt="Alt text" width="250" />
@@ -262,6 +262,6 @@ All things considered—cost, community support, ease of assembly, and practical
 
 ### Main Contributors
 
-Currently only me alone. But definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional works done by their talented contributors.
+Currently only [me](https://vector-wangel.github.io/) alone. But definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional works done by their talented contributors.
 
 
