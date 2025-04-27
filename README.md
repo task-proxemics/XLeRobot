@@ -138,23 +138,55 @@ Here's a general idea of how you can control the robot and make it smart:
 
 ### 🧠 Paths towards General Embodied Machine Intelligence
 
-**Two main approaches exist for making robots intelligent, reflecting the primary methods in current academic robotics manipulation research** (This is a simplified comparison, as many works combine benefits from both approaches)
-<table>
-  <tr>
-    <td width="50%">
-      
-### **End-to-End Visual-Motor Policy (VLA)**  
-- 🎮 **No calibration needed** - perfect for beginners  
-- 👁️ Uses RGB cameras + LeRobot's pretrained models  
-    </td>
-    <td width="50%">
-    
-### **Hierarchical Sim2Real**  
-- 🌐 **Maniskill Simulation** (GPU-accelerated)  
-- 📐 Physics-based planning for precision  
-    </td>
-  </tr>
-</table>
+**Two main approaches for making robots intelligent, reflecting the primary methods in current academic robotics manipulation research** (This is a simplified comparison, as many works combine benefits from both approaches. And all the statements below are my personal opinions, they might not be correct. Just for your reference, open to discussions.)
+
+### 🕸️End to End Visual-motor Policy (VLA)🕸️
+
+(Please don’t judge me for this since i am not an expert in VLMs and VLAs)
+
+- Most used recently on Lerobot
+- E.g. Pi-0, GR0OT, RT-1, RT-2, RDT, etc.
+- 👍 **Pros**:
+  - Doesn't need accurate calibration when it comes to direct joint control (perfect for current lerobot
+  - Enables direct learning from visual input to motor actions
+  - Can learn complex behaviors from demonstration data
+- 👎 **Cons**:
+  - Often requires large amounts of training data
+  - Can be computationally expensive during training phase
+  - Less interpretable
+  - Challenge in generalization to novel tasks without additional training
+  - May struggle with long-horizon planning compared to explicit planning methods
+  - Performance highly dependent on data quality and diversity
+
+### 🌎Hierarchical Sim2real/World Model that Understand and Predict Physics🌎
+
+- **General idea**: Requires a (world) model to "understand" the physics and dynamics of the task/world and predict the next states. 
+  - E.g. Explicit physics models, latent models (JEPA), video generation (Cosmos)
+  - Policy approaches: RL-based or Optimization-based (MPC), or hybrid
+  - Key techniques: Diffusion models, real2sim2real, object segmentation
+  - Applications: Contact-rich tasks, non-prehensile manipulation, dynamic tasks
+- 👍**Pros**:
+  - Physics understanding enables action interpretation and modification
+  - Can learn without human demonstrations
+  - Offers interpretability and explainability
+  - Supports counterfactual reasoning
+  - More sample-efficient than end-to-end approaches
+  - Better at long-horizon planning
+- 👎**Cons**:
+  - Normally require an accurate robot model (current LeRobot calibration method doesn't really fulfill this) 
+  - Hierarchical failure points (perception, segmentation, model mismatch)
+  - Sim2real gap remains challenging
+  - Task-specific action strategies limit transfer
+  - Difficulty modeling complex contacts and friction
+  - Integration challenges between components
+- 🇦🇩 Ads time: 🇦🇩
+  - Our lab: [Rice RobotPI Lab]()
+      - One of our vision: use Caging in Time and Funnel-based Manipulation methodology to realize robust object manipulation under imperfect real world situations perception noise, network lag, contact rich, etc.
+  - Simulation platform (my choice): Maniskill
+      - GPU accelerated for parallel simulations
+      - Nice photorealistic visual by ray-tracing
+      - light-weight, consistent, easy to use (compared with Isaac Lab)
+      - Support for multiple robots (including so100 arm)
 
 > [!NOTE]
 > For the first version we mainly focus on the hardware. The LeRobot code hasn't been modified yet. You can run the original Lekiwi demo by connecting one arm to the Raspberry Pi and another arm to the desktop to recreate the Demo 0.0.5 by remote control. The Lerobot code for XLeRobot will be soon updated with highest priority.
@@ -190,7 +222,7 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 **Urgent**
 
 - 🔧 Add two arm base options: clamp-held (current) or screw-mounted
-- 🛠️ Add a connector plate that is compatible with the metal mesh of IKEA cart
+- 🛠️ Add a connector plate that is fully compatible with the metal mesh of IKEA cart
     </td>
     <td width="50%">
     
@@ -263,6 +295,6 @@ All things considered—cost, community support, ease of assembly, and practical
 
 ### Main Contributors
 
-Currently only [me](https://vector-wangel.github.io/) alone. But definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional works done by their talented contributors.
+Currently only [me](https://vector-wangel.github.io/) alone. But this is just a very small brick on the pyramids, definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional works done by their talented contributors.
 
 
