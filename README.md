@@ -50,7 +50,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     </td>
     <td width="65%">
       
-### Overall advantages/goals of XLeRobot
+### Overall Advantages/Goals of XLeRobot
 
 - **Cost-effective** 💴: complete make for ~\$660 , with upgrades from existing SO100Arm and Lekiwi for ~\$250 .
 - **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO100**
