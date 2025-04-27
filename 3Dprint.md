@@ -40,9 +40,7 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 
 - Same as the Lekiwi base top plate, only thinner. Secure the connector to the bottom of the IKEA cart.
 - <img src="https://github.com/user-attachments/assets/17d63ccf-469c-4811-860f-e55ffdee396b" width="400" />
-
-
-(A second version will be iterated soon to make installation on the mesh more convenient, although the lekiwi base and cart can currently achieve a stable connection)
+- A second version will be iterated soon to make installation on the metal mesh of the cart bottom more convenient, though currently Lekiwi base and the cart can achieve a stable connection)
 
 ## 🌿 Print from scratch 🌿
 
