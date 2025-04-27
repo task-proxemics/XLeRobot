@@ -35,13 +35,13 @@ We answer this separately since **XLeRobot = XL + LeRobot**
 
 ### Overall advantages/goals of XLeRobot
 
-- Practical and reliable, capable of completing over 75% of Aloha's daily tasks
-    - Such as: opening doors 🚪, serving beverages ☕, cleaning tables (within workspace) 🧹, moving clothes to laundry baskets 👕, and retrieving food from refrigerator (middle shelves) 🍱. More tasks are demonstrated in the Lerobot hackathon.
-    - Note: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
+- Cost-effective: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
+- Practical and reliable, capable of completing over 75% of daily tasks performed by $20,000 dual-arm mobile robots on the market
+    - Such as: opening doors 🚪, serving beverages ☕, cleaning tables (within its workspace) 🧹, moving clothes to laundry baskets 👕, and retrieving food from refrigerator (middle shelves) 🍱. More tasks are demonstrated in the Lerobot hackathon.
+    - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - Rich open-source resources
     - Lerobot's plug-and-play code and numerous AI models
     - Supported by an active, growing community of contributors
-- Cost-effective: complete system under $600, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250
 - Easy assembly and setup of both physical and electrical components
     - Compatible with existing SO100Arm or Lekiwi systems—no motor number changes or hardware modifications needed
 
