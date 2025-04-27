@@ -99,7 +99,7 @@ For details please see [Bill of Materials](BOM.md).
 > [!NOTE] 
 > I am a hardware rookie myself, so I want to make sure this tutorial is friendly to every fellow rookie.
 1. **Buy your parts**: [Bill of Materials](BOM.md)
-2. **Print your stuff**: 3D printing instructions
+2. **Print your stuff**: [3D printing instructions](3Dprint.md)
 3. Avengers: **Assemble**!
 4. **Software**: Get your robot moving!
 ---
