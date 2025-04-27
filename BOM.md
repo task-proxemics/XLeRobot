@@ -9,6 +9,16 @@ Skip this section if you already have these tools:
 # Additional Components for Xelerobot
 
 If you have already built SO100 Arms and Lekiwi, you'll need these additional parts:
+| Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
+| - | - | - | - | - | - | - | - |
+| IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
+| Anker SOLIX C300 Power Station | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) |￥764.15 |[Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp )              |
+| **Total** || **$219.98** || **€209.98** || **¥1013.15** ||
+
+> [!NOTE] 
+> You can definitely choose cheaper cart not from IKEA, in this case slight change to the 3D printed part might be needed.
+> You can also choose other kinds of batteries, just make sure the maximum watts is enough to power 2x arms, wheels, and RasberryPi.
+
 
 - Anker power bank
     - Note: While this battery may seem expensive, its functionality and reliability far exceed standard power banks. Like in electric vehicles, the battery is one of the most crucial components.
