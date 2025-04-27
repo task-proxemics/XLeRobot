@@ -110,7 +110,7 @@ XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 - 💡 Integrated lighting for nighttime operation
 - ☀️ Optional solar panel mounting for continuous power supply
 - 🎒 Versatile and detachable—serves beyond robotics in daily life as emergency backup power or camping power source
-<img src="media/realpic_battery.jpg" alt="Alt text" width="300" />
+<img src="media/realpic_battery.jpg" alt="Alt text" width="250" />
     </td>
   </tr>
 </table>
