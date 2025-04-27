@@ -157,7 +157,7 @@ Here's a general idea of how you can control the robot and make it smart:
 - **End effector pose** control → VR remote control
   
 > [!NOTE]
-> For the first version we mainly focus on the hardware. The LeRobot code hasn't been modified yet. You can run the original Lekiwi demo by connecting one arm to the Raspberry Pi and another arm to the desktop to recreate the Demo 0.0.5 by remote control. The Lerobot code for XLeRobot will be soon updated with highest priority.
+> For the first version we mainly focus on the hardware. The LeRobot code hasn't been modified yet. You can run the original Lekiwi demo by connecting one arm to the RaspberryPi and another arm to the desktop to recreate the Demo 0.0.5 by remote control. The Lerobot code for XLeRobot will be soon updated with highest priority.
 
 
 ### 🧠 Paths towards General Embodied Machine Intelligence
@@ -223,7 +223,7 @@ Here's a general idea of how you can control the robot and make it smart:
 - **Simulation platform** (my personal preference): [Maniskill](https://www.maniskill.ai/)
     - 🚀Fast GPU acceleration for parallel simulations
     - 🎨Nice photorealistic visual by ray-tracing
-    - 🪶Light-weight, consistent, easy to use (compared with Isaac Lab)
+    - 🪶Light-weight, consistent, easy to use (compared with Isaac Lab, in my opinion)
     - 🤖Support for [multiple robots](https://maniskill.readthedocs.io/en/latest/robots/index.html) (including [SO100 arm](https://x.com/Stone_Tao/status/1910101218241978537))
 
 
