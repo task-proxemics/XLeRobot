@@ -9,7 +9,8 @@
 
 - All the 3D printed part in the demo videos and pictures of XLeRobot are printed with **BambuLab A1 with BambuLab PLA Matte Black**.
 - You can also use filaments that has better mechanical properties such as **PETG HF, PLA CF,** etc, to enhance the arm strength.
-  - An example comparison: ![image](https://github.com/user-attachments/assets/3d0eeb80-1fc6-47cb-bd15-bc2f023030f4)
+
+An example comparison: ![image](https://github.com/user-attachments/assets/3d0eeb80-1fc6-47cb-bd15-bc2f023030f4)
 
 
 ## ⏫ Extra Parts for XLeRobot ⏫
