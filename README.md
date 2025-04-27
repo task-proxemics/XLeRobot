@@ -200,11 +200,11 @@ Here's a general idea of how you can control the robot and make it smart:
 - 🔈🇦🇩 Ads time:
   - **Our lab**: [Rice RobotPI Lab](https://robotpilab.github.io/)
       - One of our visions: use [Caging in Time](https://robotpilab.github.io/publication/caging/) and Funnel-based Manipulation methodology to realize robust object manipulation under imperfect real world situations perception noise, network lag, [contact rich](https://robotpilab.github.io/publication/collision-inclusive-manipulation/), etc.
-  - **Simulation platform** (my personal choice): [Maniskill](https://www.maniskill.ai/)
-      - GPU accelerated for parallel simulations
-      - Nice photorealistic visual by ray-tracing
-      - light-weight, consistent, easy to use (compared with Isaac Lab)
-      - Support for multiple robots (including SO100 arm)
+  - **Simulation platform** (my personal preference): [Maniskill](https://www.maniskill.ai/)
+      - 🚀Fast GPU acceleration for parallel simulations
+      - 🎨Nice photorealistic visual by ray-tracing
+      - 🪶Light-weight, consistent, easy to use (compared with Isaac Lab)
+      - 🤖Support for [multiple robots](https://maniskill.readthedocs.io/en/latest/robots/index.html) (including [SO100 arm](https://x.com/Stone_Tao/status/1910101218241978537))
 
 
 
