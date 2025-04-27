@@ -28,7 +28,7 @@ Skip this section if you already have these tools:
 
 
 
-## ⏫ Extra Parts for XeLeRobot ⏫
+## ⏫ Extra Parts for XLeRobot ⏫
 
 If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
 
