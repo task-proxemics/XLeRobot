@@ -255,7 +255,7 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
 ## Limitations
 
-(Hey, for this price point, what more could you ask for?)
+(Hey, for this price, what more could you ask for?)
 
 - 🔒 Fixed height—adding a stable lifting platform would significantly increase costs and assembly difficulty
 - 📏 Smaller workspace compared to Aloha—objects must be placed within reach, though it still handles the majority of its tasks
