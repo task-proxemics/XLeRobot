@@ -32,7 +32,12 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 - 🖨️ 3D printed frames have limited durability, stability, and load capacity, while being complex to assemble and impractical for daily use.
 - ⚡ Power supply remains a challenge for DIY mobile robots, resulting in complicated wiring configurations.
 - 🤖 XLerobot uses the same setup configuration as most dual-arm tabletop manipulation systems in the LeRobot community, enabling straightforward code and policy transfer.
-
+<table>
+  <tr>
+    <td width="30%">
+      <img src="media/realpic2.png" alt="Alt text" width="1200" />
+    </td>
+    <td width="60%">
 ### Overall advantages/goals of XLeRobot
 
 - **Cost-effective** 💴: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
@@ -45,6 +50,10 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     - Supported by an active, growing community of contributors
 - **Easy upgrade** of both physical and electrical components for Lekiwi and SO100
     - Compatible with existing SO100Arm or Lekiwi systems—no motor number changes or hardware modifications needed
+    </td>
+  </tr>
+</table>
+
 
 
 ---
