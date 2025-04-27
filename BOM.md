@@ -12,7 +12,7 @@
 | **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
 | **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
 
-# Assembly Tools
+# 1. Assembly Tools
 
 Skip this section if you already have these tools:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
@@ -22,9 +22,9 @@ Skip this section if you already have these tools:
 | **Total** || **$219.98** || **€209.98** || **¥1013.15** ||
 
 
-# Additional Components for Xelerobot
+# 2. Extra Parts for XeLeRobot
 
-If you have already built SO100 Arms and Lekiwi, you'll need these additional parts:
+If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | - | - | - | - | - | - | - | - |
 | IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
@@ -39,9 +39,6 @@ If you have already built SO100 Arms and Lekiwi, you'll need these additional pa
 - You can also choose **other batteries**, just make sure the maximum watts is large enough to power 2x arms, wheels, and RasberryPi at the same time.
 
 
-
-- Extended cable kit (Important: When wiring, maintain the same wire sequence as the original to avoid errors)
-- USB Type-C to DC cable
 
 # Complete Build Guide
 
