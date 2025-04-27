@@ -98,7 +98,7 @@ XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 - 🔧 Mesh design enables easy mounting of components
 - 📦 Perfect for storage and transportation of items
 - 📏 Ideal height for common household surfaces—from stovetop to coffee table
-<img src="media/realpic_back.jpg" alt="Alt text" width="240" />
+<img src="media/realpic_back.jpg" alt="Alt text" width="250" />
     </td>
     <td width="50%">
     
