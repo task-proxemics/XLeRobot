@@ -92,6 +92,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 | **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
 
 For details please see [Bill of Materials](BOM.md).
+
 ---
 ---
 ## 🚀 Get Started（Detailed Tutorial）TODO
