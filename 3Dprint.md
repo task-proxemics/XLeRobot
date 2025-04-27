@@ -1,5 +1,7 @@
 # 3D Printing Instructions
 
+## Before Printing
+
 > [!NOTE] 
 > We assume you have basic experience with consumer-level 3D printers (BambuLab, Prusa, etc.). This means you already know how to properly 3D print STL files with basic PLA filaments, and you're familiar with adding supports, adjusting infill, and modifying print speed to achieve your desired balance of material strength, efficiency, and model detail quality.
 
