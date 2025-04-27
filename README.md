@@ -135,11 +135,18 @@ Here's a general idea of how you can control the robot and make it smart:
 - **Joint** (motor angle) control → leader-follower arm control
 
 - **End effector pose** control → VR remote control
+  
+> [!NOTE]
+> For the first version we mainly focus on the hardware. The LeRobot code hasn't been modified yet. You can run the original Lekiwi demo by connecting one arm to the Raspberry Pi and another arm to the desktop to recreate the Demo 0.0.5 by remote control. The Lerobot code for XLeRobot will be soon updated with highest priority.
+
 
 ### 🧠 Paths towards General Embodied Machine Intelligence
 
 **Two main approaches for making robots intelligent, reflecting the primary methods in current academic robotics manipulation research** (This is a simplified comparison, as many works combine benefits from both approaches. And all the statements below are my personal opinions, they might not be correct. Just for your reference, open to discussions.)
 
+<table>
+  <tr>
+    <td width="50%">
 ### 🕸️End to End Visual-motor Policy (VLA)🕸️
 
 (Please don’t judge me for this since i am not an expert in VLMs and VLAs)
@@ -157,7 +164,8 @@ Here's a general idea of how you can control the robot and make it smart:
   - Challenge in generalization to novel tasks without additional training
   - May struggle with long-horizon planning compared to explicit planning methods
   - Performance highly dependent on data quality and diversity
-
+    </td>
+    <td width="50%">
 ### 🌎Hierarchical Sim2real/World Model that Understand and Predict Physics🌎
 
 - **General idea**: Requires a (world) model to "understand" the physics and dynamics of the task/world and predict the next states. 
@@ -179,17 +187,25 @@ Here's a general idea of how you can control the robot and make it smart:
   - Task-specific action strategies limit transfer
   - Difficulty modeling complex contacts and friction
   - Integration challenges between components
+- 🇦🇩 Ads time: 🇦🇩    
+
+    </td>
+  </tr>
+</table>
+
+
+
+
+
 - 🇦🇩 Ads time: 🇦🇩
-  - Our lab: [Rice RobotPI Lab]()
-      - One of our vision: use Caging in Time and Funnel-based Manipulation methodology to realize robust object manipulation under imperfect real world situations perception noise, network lag, contact rich, etc.
-  - Simulation platform (my choice): Maniskill
+  - **Our lab**: [Rice RobotPI Lab](https://robotpilab.github.io/)
+      - One of our visions: use [Caging in Time](https://robotpilab.github.io/publication/caging/) and Funnel-based Manipulation methodology to realize robust object manipulation under imperfect real world situations perception noise, network lag, [contact rich](https://robotpilab.github.io/publication/collision-inclusive-manipulation/), etc.
+  - **Simulation platform** (my choice): [Maniskill](https://www.maniskill.ai/)
       - GPU accelerated for parallel simulations
       - Nice photorealistic visual by ray-tracing
       - light-weight, consistent, easy to use (compared with Isaac Lab)
       - Support for multiple robots (including so100 arm)
 
-> [!NOTE]
-> For the first version we mainly focus on the hardware. The LeRobot code hasn't been modified yet. You can run the original Lekiwi demo by connecting one arm to the Raspberry Pi and another arm to the desktop to recreate the Demo 0.0.5 by remote control. The Lerobot code for XLeRobot will be soon updated with highest priority.
 
 
 
