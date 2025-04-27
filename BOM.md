@@ -9,8 +9,8 @@
 |---------|----:|----:|----:|
 | **Build from Scratch** |  **~$650**  |  **€XX**  |  **¥XX**  |
 | **Build from 2 SO100 arms**  |  **~$400**  |  **€XX**  |  **¥XX**  |
-| **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
-| **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi** |  **~$380**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi and 1 SO100 arm** |  **~$250**  |  **€XX**  |  **¥XX**  |
 
 # 1. Assembly Tools
 
