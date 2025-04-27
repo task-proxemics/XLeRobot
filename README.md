@@ -16,7 +16,7 @@
 
 ---
 
-## 🌟 Why XLeRobot?  
+## 🌟 Why XLeRobot? 🌟
 We answer this separately since    **XLeRobot = XL + LeRobot**
 <table>
   <tr>
@@ -71,7 +71,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 
 
 ---
-## 🎯 Demo 0.0.5
+## 🎯 Demo 0.0.5 🎯
 > [!NOTE]
 > Currently just a single arm version by directly implementing Lekiwi, teleoped by the other follower arm. 3x speed.
 
@@ -79,23 +79,23 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ---
 
-## 🛠️ Total Cost TODO
+## 💵 Total Cost 💵
+
 > [!NOTE] 
-> We want XLeRobot to be powerful, so there's only a 12V version.
-> Doesn't include cost of 3D printing
+> Doesn't include cost of 3D printing, tools, shippings and taxes.
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
-| **Build from Scratch** |  **$XX**  |  **€XX**  |  **¥XX**  |
-| **Build from 2 SO100 arms**  |  **$XX**  |  **€XX**  |  **¥XX**  |
-| **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
-| **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from Scratch** |  **~$660**  |  **~€650**  |  **~¥3900**  |
+| **Upgrade from 2 SO100 arms**  |  **~$400**  |  **~€440**  |  **~¥2400**  |
+| **Upgrade from 1 Lekiwi** |  **~$370**  |  **~€350**  |  **~¥1900**  |
+| **Upgrade from 1 Lekiwi and 1 SO100 arm** |  **~$250**  |  **~€240**  |  **~¥1200**  |
 
 For details please see [Bill of Materials](BOM.md).
 
 ---
 ---
-## 🚀 Get Started（Detailed Tutorial）TODO
+## 🚀 Get Started（Detailed Tutorial）🚀TODO
 > [!NOTE] 
 > I am a hardware rookie myself, so I want to make sure this tutorial is friendly to every fellow rookie.
 1. **Buy your parts**: [Bill of Materials](BOM.md)
