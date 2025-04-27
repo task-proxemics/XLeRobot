@@ -42,6 +42,8 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 ### Overall advantages/goals of XLeRobot
 
 - **Cost-effective** 💴: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
+- **Easy upgrade** ⏫ of both physical and electrical for **Lekiwi** and **SO100**
+    - No motor id changes or hardware modifications needed
 - **Practical and reliable** 💪: capable of completing many daily tasks performed by $20,000 dual-arm mobile robots on the market.
     - Such as: open doors🚪, serve drinks☕, clean tables🧹, moving clothes to laundry baskets👕, and find food from frige🍱.
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
@@ -49,8 +51,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 - **Rich open-source resources** 📕
     - Lerobot's plug-and-play code🧩 and numerous AI models🧠
     - Supported by an active, growing community of contributors🧑‍🤝‍🧑
-- **Easy upgrade** ⏫ of both physical and electrical for **Lekiwi** and **SO100**
-    - No motor id changes or hardware modifications needed
+
     </td>
   </tr>
 </table>
