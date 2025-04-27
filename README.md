@@ -38,6 +38,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
       <img src="media/realpic_2.jpg" alt="Alt text" width="1200" />
     </td>
     <td width="60%">
+      
 ### Overall advantages/goals of XLeRobot
 
 - **Cost-effective** 💴: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
