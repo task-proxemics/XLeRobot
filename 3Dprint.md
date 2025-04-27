@@ -14,22 +14,16 @@
 
 ## ⏫ Extra Parts for XLeRobot ⏫
 
-If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
+If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts for the 0.0.1 version of hardware
 
 (but also check the _Build From Scratch_ section below since the list is not 100% the same)
 
 
-## Extra parts
+### Arm base
 
-If you already have Lekiwi and SO100 arm
+- The base is designed to rotate 15 degrees outward, expanding the workspace area on the sides while ensuring normal collaboration between the two arms.
 
-The additional parts needed for the first version hardware are only:
-
-1. arm base
-
-The base is designed to rotate 15 degrees outward, expanding the workspace area on the sides while ensuring normal collaboration between the two arms.
-
-To reduce material waste, the current design is hollow in the middle, and you can place an unused Tuzhu filament spool inside to provide stable structural support.
+- To reduce filament waste, the current design is hollow in the middle, and you can reused a Bambulab filament Cardboard Spool and put it inside to provide stable structural support.
 
 1. lekiwi base supporter
 
