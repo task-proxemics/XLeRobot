@@ -3,7 +3,7 @@
 ## 🤔 Before Printing 🤔
 
 > [!NOTE] 
-> We assume you have basic experience with consumer-level 3D printers (BambuLab, Prusa, etc.). This means you already know how to properly 3D print STL files with basic PLA filaments, and you're familiar with reorienting parts, adding supports, adjusting infill, and modifying print speed etc., to achieve your desired balance of material strength, efficiency, and model detail quality.
+> We assume you have basic experience with consumer-level 3D printers (BambuLab, Prusa, etc.). This means you already know how to properly 3D print STL files with PLA filaments, and you're familiar with reorienting parts, adding supports, adjusting infill, and modifying print speed etc., to achieve your desired balance of material strength, efficiency, and model detail quality.
 
 - You can also check out the 3D priting instructions for [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md) and [SO100 Arm](https://github.com/TheRobotStudio/SO-ARM100#printing-the-parts) for more detailed information first if you like.
 
