@@ -42,11 +42,6 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 </table>
 
 
-### Why "XL" Enhancement? 
-- 🏠 Currently, there is a lack of affordable, stable, general-purpose home mobile robots with dual arms that are as easy to build as LeRobot.
-- 🖨️ 3D printed frames have limited durability, stability, and load capacity, while being complex to assemble and impractical for daily use.
-- ⚡ Power supply remains a challenge for DIY mobile robots, resulting in complicated wiring configurations.
-- 🤖 XLerobot uses the same setup configuration as most dual-arm tabletop manipulation systems in the LeRobot community, enabling straightforward code and policy transfer.
 <table>
   <tr>
     <td width="35%">
