@@ -2,7 +2,7 @@
 
 # 🛠️ Total Cost 
 > [!NOTE] 
-> We want XLeRobot to be powerful, so there's only a 12V version.
+> We want **XLeRobot** to be **powerful**, so there's only a single 12V version.
 > Doesn't include cost of 3D printing and tools.
 
 | Price| US  | EU  | CN |
@@ -64,7 +64,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 | Raspberry Pi 5 (4GB)| 1 |$60.00| [Adafruit](https://www.adafruit.com/product/5812)| €57.00| [Mouser](https://eu.mouser.com/ProductDetail/Raspberry-Pi/SC1111?qs=HoCaDK9Nz5fnLhlMNnKTiQ%3D%3D)|￥410|[Taobao](https://e.tb.cn/h.64IIvlisvAL15g8?tk=fdOVexkHECW "https://e.tb.cn/h.64IIvlisvAL15g8?tk=fdOVexkHECW")|
 | USB camera<sup>[2](#footnote2)</sup> | 2 | $12.98 | [Amazon](https://a.co/d/236G8Wn) | €12.00 | [Amazon](https://www.amazon.fr/Vinmooog-equipement-Microphone-Enregistrement-conf%C3%A9rences/dp/B0BG1YJWFN/) |￥48|[Taobao](https://e.tb.cn/h.64ILq3suMKATfUx?tk=IPSEexQAvxu "https://e.tb.cn/h.64ILq3suMKATfUx?tk=IPSEexQAvxu")|
 | microSD card | 1 | $11.23 | [Amazon](https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7C7LL1/) | €10.00 | [Amazon](https://www.amazon.fr/Lexar-Carte-Micro-adaptateur-Smartphone/dp/B08XZ2KS1F)|￥58|[Taobao](https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ "https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ")|
-| **Total** ||  **$98**  ||  **€91** ||  **¥564** ||
+
 These components will allow you to replicate Demo 0.0.5, enabling master-slave arm control and direct PC control of both arms.
 
 > [!NOTE] 
