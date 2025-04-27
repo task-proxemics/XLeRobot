@@ -26,7 +26,7 @@ If you have already built SO100 Arms and Lekiwi, you'll need these additional pa
 | - | - | - | - | - | - | - | - |
 | IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
 | Anker SOLIX C300 Power Station | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) |￥764.15 |[Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp )              |
-| Long 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) Connector Kit | €0 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm +  3P-400mm, and 5264 connector [Taobao]|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
+| Long 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) Connector Kit | €0 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
 | Type C to DC wire(12V/5V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | €0 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
 | **Total** || **$219.98** || **€209.98** || **¥1013.15** ||
 
