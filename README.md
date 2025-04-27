@@ -29,7 +29,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 - **Thriving Community** 🌍:
   World's largest low-cost robotics community with
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
-  - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
+  - 5000+ of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
     </td>
     <td width="50%">
     
