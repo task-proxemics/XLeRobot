@@ -46,11 +46,11 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     - Such as: open doors🚪, serve drinks☕, clean tables🧹, moving clothes to laundry baskets👕, and find food from frige🍱.
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
     - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
-- **Rich open-source resources**
-    - Lerobot's plug-and-play code and numerous AI models
-    - Supported by an active, growing community of contributors
-- **Easy upgrade** of both physical and electrical components for Lekiwi and SO100
-    - Compatible with existing SO100Arm or Lekiwi systems—no motor number changes or hardware modifications needed
+- **Rich open-source resources** 📕
+    - Lerobot's plug-and-play code🧩 and numerous AI models🧠
+    - Supported by an active, growing community of contributors🧑‍🤝‍🧑
+- **Easy upgrade** ⏫ of both physical and electrical for **Lekiwi** and **SO100**
+    - No motor id changes or hardware modifications needed
     </td>
   </tr>
 </table>
