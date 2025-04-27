@@ -147,6 +147,7 @@ Here's a general idea of how you can control the robot and make it smart:
 <table>
   <tr>
     <td width="50%">
+      
 ### 🕸️End to End Visual-motor Policy (VLA)🕸️
 
 (Please don’t judge me for this since i am not an expert in VLMs and VLAs)
@@ -186,8 +187,7 @@ Here's a general idea of how you can control the robot and make it smart:
   - Sim2real gap remains challenging
   - Task-specific action strategies limit transfer
   - Difficulty modeling complex contacts and friction
-  - Integration challenges between components
-- 🇦🇩 Ads time: 🇦🇩    
+  - Integration challenges between components 
 
     </td>
   </tr>
@@ -197,14 +197,14 @@ Here's a general idea of how you can control the robot and make it smart:
 
 
 
-- 🇦🇩 Ads time: 🇦🇩
+- 🔈🇦🇩 Ads time:
   - **Our lab**: [Rice RobotPI Lab](https://robotpilab.github.io/)
       - One of our visions: use [Caging in Time](https://robotpilab.github.io/publication/caging/) and Funnel-based Manipulation methodology to realize robust object manipulation under imperfect real world situations perception noise, network lag, [contact rich](https://robotpilab.github.io/publication/collision-inclusive-manipulation/), etc.
-  - **Simulation platform** (my choice): [Maniskill](https://www.maniskill.ai/)
+  - **Simulation platform** (my personal choice): [Maniskill](https://www.maniskill.ai/)
       - GPU accelerated for parallel simulations
       - Nice photorealistic visual by ray-tracing
       - light-weight, consistent, easy to use (compared with Isaac Lab)
-      - Support for multiple robots (including so100 arm)
+      - Support for multiple robots (including SO100 arm)
 
 
 
