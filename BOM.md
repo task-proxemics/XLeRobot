@@ -3,7 +3,7 @@
 # 🛠️ Total Cost 
 > [!NOTE] 
 > We want **XLeRobot** to be **powerful**, so there's only a single 12V version.
-> Doesn't include cost of 3D printing and tools.
+> Doesn't include cost of 3D printing, tools, shippings and taxes.
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
