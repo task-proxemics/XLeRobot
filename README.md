@@ -43,7 +43,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 
 - **Cost-effective** 💴: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
 - **Practical and reliable** 💪: capable of completing over 75% of daily tasks performed by $20,000 dual-arm mobile robots on the market.
-    - Such as: open doors 🚪, serve drinks ☕, clean tables 🧹, moving clothes to laundry baskets 👕, and find food from refrigerator 🍱.
+    - Such as: open doors🚪, serve drinks☕, clean tables🧹, moving clothes to laundry baskets👕, and find food from frige🍱.
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
     - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - **Rich open-source resources**
