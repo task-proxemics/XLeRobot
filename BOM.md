@@ -90,13 +90,11 @@ These components will allow you to replicate Demo 0.0.5, enabling master-slave a
 
 
 
-# Optional Enhancements
+## 🧩Optional Add-on Features🧩
 
-- Arm cameras (reference specifications to be added)
-- Additional two SO100 sets for dual-arm master-slave control
-- 3M gripper tape (based on UMI gripper specifications) for improved grip stability
-- VR headset for virtual reality control
-- For additional add-ons and accessories, please refer to the Lerobot repository and Discord group discussions
+- 🙌Dual-arm leader-follower joint control: Additional two [SO100 arm sets](https://github.com/TheRobotStudio/SO-ARM100/tree/main) for dual-arm leader-follower joint control
+- ✊Better grip stability: [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (got it from [UMI gripper specifications](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit?tab=t.0#heading=h.5k5vwx2iqjqg))
+- For more add-ons and accessories, please refer to the [SO100 arm repository](https://github.com/TheRobotStudio/SO-ARM100/tree/main?tab=readme-ov-file#optional-hardware) and Discord group discussions
 
 
 
