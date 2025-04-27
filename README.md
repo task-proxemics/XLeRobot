@@ -306,7 +306,7 @@ All things considered—cost, community support, ease of assembly, and practical
 
 ### Main Contributors
 
-Currently only [me](https://vector-wangel.github.io/) alone. But this is just a very small brick on the pyramids, definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional works done by their talented contributors.
+Currently only [me](https://vector-wangel.github.io/) alone. This is just a very small brick on the pyramids, definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional projects done by their talented contributors.
 
 Not affiliated with IKEA (but we love swedish meatball! 🍝)
 
