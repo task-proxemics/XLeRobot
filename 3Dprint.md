@@ -30,8 +30,7 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 
 ### [Lekiwi base supporter](3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl)
 
-- Connect the top plate of Lekiwi base to the bottom of the IKEA cart.
-- Modified from the Lekiwi [base motor mount](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/drive_motor_mount_v2.stl), with redesigned structure to enhance stability.
+- Connect the top plate of Lekiwi base to the bottom of the IKEA cart. Modified from the Lekiwi [base motor mount](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/drive_motor_mount_v2.stl), with redesigned structure to enhance stability.
 - <img src="https://github.com/user-attachments/assets/2702b0b2-18ce-471b-bc65-015d9d8b456e" width="300" />
 
 
@@ -39,10 +38,9 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 
 ### [Thinner Lekiwi base top plate](3D_Models/3D_models_for_printing/XLeRobot_special/base_plate_layer2_thinner.stl)
 
-- Same as the Lekiwi base top plate, only thinner.
+- Same as the Lekiwi base top plate, only thinner. Secure the connector to the bottom of the IKEA cart.
 - <img src="https://github.com/user-attachments/assets/17d63ccf-469c-4811-860f-e55ffdee396b" width="400" />
 
-- Secure the connector to the bottom of the IKEA cart.
 
 (A second version will be iterated soon to make installation on the mesh more convenient, although the lekiwi base and cart can currently achieve a stable connection)
 
