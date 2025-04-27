@@ -95,7 +95,8 @@ For details please see [Bill of Materials](BOM.md).
 ---
 ---
 ## 🚀 Get Started（Detailed Tutorial）TODO
-1. **Buy your parts**: Bill of Materials
+I am a hardware rookie myself, so I want to make sure this tutorial is friendly to every fellow rookie.
+1. **Buy your parts**: [Bill of Materials](BOM.md)
 2. **Print your stuff**: 3D printing instructions
 3. Avengers: **Assemble**!
 4. **Software**: Get your robot moving!
