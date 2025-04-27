@@ -44,7 +44,7 @@ If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these 
 
 # 3. Build From Scratch
 
-For those starting from scratch (without SO100 arms or Lekiwi), besides the parts from _Extra Parts for XeLeRobot_, you will also need to buy these:
+For those starting from scratch (without SO100 arms or Lekiwi), besides the parts from _Extra Parts for XeLeRobot_, you also need:
 
 ## 2x SO100 Arms
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
