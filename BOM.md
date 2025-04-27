@@ -29,8 +29,8 @@ If you have already built SO100 Arms and Lekiwi, you'll need these additional pa
 | Long 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) | €0 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm +  3P-400mm, and 5264 connector [Taobao]|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
 | **Total** || **$219.98** || **€209.98** || **¥1013.15** ||
 
-- You can definitely choose similar cheaper cart not from IKEA, in this case [slight change]() to the 3D printed part might be needed.
-- While this battery may seem expensive, its functionality and reliability far exceed standard power banks. Like in electric vehicles, the battery is one of the most crucial components.
+- You can definitely choose **similar cheaper cart not from IKEA**, in this case [slight change]() to the 3D printed part might be needed.
+- While this battery may seem expensive, its functionality and reliability far exceed regular power banks. (Like in electric vehicles, the battery is also one of the most expensive components.)
 - You can also choose other batteries, just make sure the maximum watts is large enough to power 2x arms, wheels, and RasberryPi at the same time.
 
 
