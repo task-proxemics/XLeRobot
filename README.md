@@ -79,7 +79,8 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 ---
 
 ## 🛠️ Hardware: IKEA Hacks Meet Modern Tech  
-**XLeRobot = Lekiwi + 2×SO100 Arms + IKEA RÅSKOG Cart + Anker SOLIX C300**  
+XLeRobot = Lekiwi + 1x SO100 arm + IKEA RÅSKOG Cart + Anker Battery
+        = 2x SO100 Arms + 3x omni wheels + RasberryPi + IKEA RÅSKOG Cart + Anker Battery
 
 | Component           | Superpowers 🔋                          |
 |---------------------|----------------------------------------|
