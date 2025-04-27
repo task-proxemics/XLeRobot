@@ -35,8 +35,8 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 | - | - | - | - | - | - | - | - |
 | IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
 | Anker SOLIX C300 Power Station | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) |￥764.15 |[Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp )              |
-| 4ft 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) Connector Kit | €0 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
-| Type C to DC wire(12V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | €0 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
+| 4ft 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) Connector Kit | ~€20 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
+| Type C to DC wire(12V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | ~€8 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
 
 
 - I couldn't find any ready-made long 5264 wires for purchase in US—**only connector kits** that require manual assembly to extend the length (easy to do though).
@@ -58,7 +58,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
 | STS3215 Servo (12V) | 12 | $16 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html) | 13€ | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
-| Table Clamp 4pcs | 1 | $8.99 | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | €0 | [TODO]() | ￥9.2          | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649)                   |
+| Table Clamp 4pcs | 1 | $8.99 | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | ~€8 | [TODO]() | ￥9.2          | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649)                   |
 
 > [!NOTE] 
 > Both of the 2 SO100 Arms are follower arms in hardware setup, you can use one of them as the leader arm for testing teleop without the need to remove the gears of the motors (instructed in the original SO100 tutorial) if you want to save money with only 2 arms.
@@ -75,7 +75,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 |--|:-:|:-:|-|:-:|-|:-:|-|
 | Raspberry Pi 5 (4GB)| 1 |$60.00| [Adafruit](https://www.adafruit.com/product/5812)| €57.00| [Mouser](https://eu.mouser.com/ProductDetail/Raspberry-Pi/SC1111?qs=HoCaDK9Nz5fnLhlMNnKTiQ%3D%3D)|￥410|[Taobao](https://e.tb.cn/h.64IIvlisvAL15g8?tk=fdOVexkHECW "https://e.tb.cn/h.64IIvlisvAL15g8?tk=fdOVexkHECW")|
 | Motor Control Board | 2 | $10.55 | [Amazon](https://www.amazon.com/Waveshare-Integrates-Control-Circuit-Supports/dp/B0CTMM4LWK/) | €12.00 | [Amazon](https://www.amazon.fr/Waveshare-Integrates-Control-Applicable-Integrate/dp/B0CJ6TP3TP) | ￥24 |[Taobao](https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj "https://e.tb.cn/h.64DOUpLpB5crVdH?tk=BSaTex9UHWj")|
-| Wrist camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | €0 | [TODO]() |￥0|[TODO]()|
+| Wrist camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | ~€10 | [TODO]() | ~￥70|[TODO]()|
 | microSD card | 1 | $11.23 | [Amazon](https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7C7LL1/) | €10.00 | [Amazon](https://www.amazon.fr/Lexar-Carte-Micro-adaptateur-Smartphone/dp/B08XZ2KS1F)|￥58|[Taobao](https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ "https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ")|
 | USB-C to USB-A Cable 2 pcs | 1 | $8.99 | [Amazon](https://a.co/d/0mWsmhG) Anker | €7 | [Amazon](https://www.amazon.fr/dp/B07BNF842T/) |￥17  |[Taobao](https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4 "https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4")|
 | USB-C Cable 2 pcs | 1 | $8.99 | [Amazon](https://a.co/d/f8hm4E2) | ~€7 | [TODO]() |￥17  |[Taobao](https://detail.tmall.com/item.htm?abbucket=14&detail_redpacket_pop=true&id=562374737204&ltk2=1745778907089uemkvoxey50xt270pvkfcq&ns=1&priceTId=2100c80417457788995147926e0bd5&query=usbc%E6%95%B0%E6%8D%AE%E7%BA%BF&skuId=5239339491575&spm=a21n57.1.hoverItem.4&utparam=%7B%22aplus_abtest%22%3A%2250461336def889c0b534e9603672d7f7%22%7D&xxc=taobaoSearch)|
