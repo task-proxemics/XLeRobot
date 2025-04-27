@@ -22,6 +22,7 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
     <td width="60%">
 
 ## 🌟 Why XLeRobot?  
+<span style="color:red">XL</span>
 ### **Why "LeRobot"?**  
 🖨️ **Simplest Hardware Assembly**:  
 - Fully 3D-printable (consumer-grade printers + PLA) except electronics  
