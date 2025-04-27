@@ -143,13 +143,13 @@ End Effector control → VR remote control
   <tr>
     <td width="50%">
       
-### **Option 1: End-to-End Visual-Motor Policy (VLA)**  
+### **End-to-End Visual-Motor Policy (VLA)**  
 - 🎮 **No calibration needed** - perfect for beginners  
 - 👁️ Uses RGB cameras + LeRobot's pretrained models  
     </td>
     <td width="50%">
     
-### **Option 2: Hierarchical Sim2Real**  
+### **Hierarchical Sim2Real**  
 - 🌐 **Maniskill Simulation** (GPU-accelerated)  
 - 📐 Physics-based planning for precision  
     </td>
