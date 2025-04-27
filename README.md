@@ -58,6 +58,13 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 
 
 ---
+## 🎯 Demo Video 0.0.5
+> [!NOTE]
+> This is currently just a single arm version of directly implementing Lekiwi, teleoped by the other follower arm. 3x speed.
+
+https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
+
+---
 
 ## 🛠️ Hardware: IKEA Hacks Meet Modern Tech  
 **XLeRobot = Lekiwi + 2×SO100 Arms + IKEA RÅSKOG Cart + Anker SOLIX C300**  
@@ -135,11 +142,6 @@ Please see hardware assembly details at
 
 ---
 
-## 🎯 Demo Video 0.0.5
 
-This is currently just a single arm version of directly implementing Lekiwi, teleoped with another arm 
-(FYI: The follow arm hardware can be also used as the leader arm, the only difference is that it's geared so there will be some resistance)
-
-https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 
