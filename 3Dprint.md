@@ -19,7 +19,10 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 (but also check the _Build From Scratch_ section below since the list is not 100% the same)
 
 
-### Arm base
+### [Arm base](3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl)
+
+![image](https://github.com/user-attachments/assets/f612c9d8-fca2-406e-ab25-d015ea5e62c4)
+
 
 - The base is designed to rotate 15 degrees outward, expanding the workspace area on the sides while ensuring normal collaboration between the two arms.
 
