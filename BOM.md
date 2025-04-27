@@ -52,7 +52,7 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 For those starting from scratch (without SO100 arms or Lekiwi), besides the parts from _Extra Parts for XeLeRobot_, you also need to build the arms and Lekiwi base first.
 
 > [!NOTE]
-> The parts list for 2x SO100 arms and 1 Lekiwi base in this repo contains fewer components than the original bills (mainly cable and battery-related items). If you're building XLeRObot from scratch, you can use this repo's bill directly. However, it's recommended to check the other two repos ([SO100](https://github.com/TheRobotStudio/SO-ARM100/tree/main), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md)) as well, in case there are updated options at better prices.
+> The parts list for 2x SO100 arms and 1 Lekiwi base in this repo contains fewer components than the original bills (mainly cable and battery-related items). If you're building **XLeRobot** from scratch, you can use this repo's bill directly. However, it's recommended to check the other two repos ([SO100](https://github.com/TheRobotStudio/SO-ARM100/tree/main), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md)) as well, in case there are updated options at better prices.
 
 ## 2x SO100 Arms
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
