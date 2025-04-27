@@ -13,7 +13,7 @@
 | **Build from 1 Lekiwi and 1 SO100 arm** |  **~$250**  |  **€XX**  |  **¥XX**  |
 
 > [!IMPORTANT]
-> The SO100 and Lekiwi need to be the 12V version. While the 7.4V version might work, it hasn't been tested and isn't recommended as it won't deliver optimal performance.
+> If you are using your pre-assembled SO100 and Lekiwi, they need to be the 12V version. While the 7.4V version might work, it is not recommended as it has not been tested and cannot achieve optimal performance.
 
 # 1. Assembly Tools
 
