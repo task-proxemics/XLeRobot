@@ -52,7 +52,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
       
 ### Overall advantages/goals of XLeRobot
 
-- **Cost-effective** 💴: complete system under $700, with upgrades from existing SO100Arm and Lekiwi platforms available for less than $250.
+- **Cost-effective** 💴: complete make under $700, with upgrades from existing SO100Arm and Lekiwi for less than $250.
 - **Easy upgrade** ⏫ of both physical and electrical for **Lekiwi** and **SO100**
     - No motor id changes or hardware modifications needed
 - **Practical and reliable** 💪: capable of completing many daily tasks performed by $20,000 dual-arm mobile robots on the market.
