@@ -34,10 +34,10 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 - 🤖 XLerobot uses the same setup configuration as most dual-arm tabletop manipulation systems in the LeRobot community, enabling straightforward code and policy transfer.
 <table>
   <tr>
-    <td width="30%">
+    <td width="35%">
       <img src="media/realpic_2.jpg" alt="Alt text" width="1200" />
     </td>
-    <td width="70%">
+    <td width="65%">
       
 ### Overall advantages/goals of XLeRobot
 
