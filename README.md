@@ -93,7 +93,7 @@ XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 = 2x SO100 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 > [!NOTE]
-> *All compute handled by your PC - Raspberry Pi only manages data/wifi 📶*
+> *All compute handled by your PC - Raspberry Pi only manages data communication via wifi 📶*
 
 <table>
   <tr>
@@ -123,8 +123,6 @@ XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
   </tr>
 </table>
 
-
-*All compute handled by your PC - Raspberry Pi 5 only manages data/wifi 📶*
 
 ---
 
