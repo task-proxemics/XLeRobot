@@ -162,21 +162,6 @@ Here's a general idea of how you can control the robot and make it smart:
 
 
 
-
-
-
----
-
-## 🎯 Who is XLerobot For?
-
-- 🚀 **Startups & Labs**: Build prototypes faster with the world's cheapest modular platform
-- 👩🔬 **Self Researchers**: Experiment with embodied AI without breaking the bank 💸
-- 🎓 **Education Heroes**:
-  - High School Teachers: Bring cutting-edge robotics to STEM classes 🧪
-  - University Professors: Affordable platform for robotics/AI courses 📚
-  - Students: From beginners to researchers 🎒→🎓
-- 🤖 **DIY Enthusiasts**: Perfect for indoor projects - plant care, delivery bots, home automation 🌱📦
-
 ---
 
 ## 🛠️ Total Cost
@@ -250,7 +235,17 @@ Not affiliated with IKEA (but we love swedish meatball! 🍝)
   </tr>
 </table>
 
+---
 
+## 🎯 Who is XLerobot For?
+
+- 🚀 **Startups & Labs**: Build prototypes faster with the world's cheapest modular platform
+- 👩🔬 **Self Researchers**: Experiment with embodied AI without breaking the bank 💸
+- 🎓 **Education Heroes**:
+  - High School Teachers: Bring cutting-edge robotics to STEM classes 🧪
+  - University Professors: Affordable platform for robotics/AI courses 📚
+  - Students: From beginners to researchers 🎒→🎓
+- 🤖 **DIY Enthusiasts**: Perfect for indoor projects - plant care, delivery bots, home automation 🌱📦
 ---
 
 ## Limitations
