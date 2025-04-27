@@ -1,5 +1,18 @@
 # Bill of Materials
-# Required Tools
+
+# 🛠️ Total Cost 
+> [!NOTE] 
+> We want XLeRobot to be powerful, so there's only a 12V version.
+> Doesn't include cost of 3D printing
+
+| Price| US  | EU  | CN |
+|---------|----:|----:|----:|
+| **Build from Scratch** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 2 SO100 arms**  |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi** |  **$XX**  |  **€XX**  |  **¥XX**  |
+| **Build from 1 Lekiwi and 1 SO100 arm** |  **$XX**  |  **€XX**  |  **¥XX**  |
+
+# Assembly Tools
 
 Skip this section if you already have these tools:
 
