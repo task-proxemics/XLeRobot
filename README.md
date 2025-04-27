@@ -20,7 +20,7 @@
 We answer this separately since    **XLeRobot = XL + LeRobot**
 <table>
   <tr>
-    <td width="35%">
+    <td width="60%">
       
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
@@ -30,15 +30,13 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
   - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
     </td>
-    <td width="65%">
+    <td width="40%">
     
-### Why "LeRobot" Core?
-- **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
-- **Easy Assembly** 🔨: Just screw and connect for 2hrs and here it is.
-- **Plug-&-Play** 🧩: See robots perform with only running a few lines.
-- **Thriving Community** 🌍: World's largest low-cost robotics community with
-  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
-  - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.      
+### Why "XL" Enhancement? 
+- 🏠 Currently, there is a lack of affordable, stable, general-purpose home mobile robots with dual arms that are as easy to build as LeRobot.
+- 🖨️ 3D printed frames have limited durability, stability, and load capacity, while being complex to assemble and impractical for daily use.
+- ⚡ Power supply remains a challenge for DIY mobile robots, resulting in complicated wiring configurations.
+- 🤖 XLerobot uses the same setup configuration as most dual-arm tabletop manipulation systems in the LeRobot community, enabling straightforward code and policy transfer.   
     </td>
   </tr>
 </table>
