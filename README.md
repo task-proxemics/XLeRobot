@@ -22,24 +22,25 @@ This is the open-source repo for XLeRobot, including hardware desgins, bill of m
     <td width="60%">
 
 ## 🌟 Why XLeRobot?  
-<span style="color:red">XL</span>
-### **Why "LeRobot"?**  
-🖨️ **Simplest Hardware Assembly**:  
-- Fully 3D-printable (consumer-grade printers + PLA) except electronics  
-- Largest open-source community for low-cost robotics 🤝  
-- Pre-trained AI models & datasets ready to deploy 🧠  
-- Direct code testing on dual-arm manipulators  
+XLeRobot = XL + LeRobot
 
-### **Why "XL" Over Lekiwi/Bambot?**  
-🔧 **Practicality Meets Affordability**:  
-- Solves common DIY pitfalls:  
-  - ❌ 3D-printed frames: Weak, unstable, complex assembly  
-  - ❌ Power management chaos  
-- **80% of ALOHA's daily tasks** at 1/10th the cost:  
-  - Open doors 🚪 | Serve drinks ☕ | Tidy clothes 👕 | Fetch fridge snacks 🥤  
-- **Plug-and-Play Upgrade**:  
-  - Add mobility to SO-100/Lekiwi arms for **<$250**  
-- **Global IKEA Compatibility** 🌍 + **24hr Solar-Powered** ☀️  
+### Why "LeRobot" Core?
+- **Plug-&-Play Assembly** 🧩  
+  90% components printable with consumer-grade 3D printers (no special hardware!)
+- **Thriving Community** 🌍  
+  World's largest low-cost robotics community with:
+  - 1000+ pretrained AI models 🧠
+  - Direct code deployment on dual-arm robots
+  - Shared massive datasets 📊
+
+### Why "XL" Enhancement? 
+🚨 Solving critical gaps in current platforms:
+- **Structural Stability** 🔧  
+  Replaces fragile 3D-printed frames (PLA material limitations) with durable IKEA-based design
+- **Power Revolution** ⚡  
+  Simplified wiring + Anker power station = 24h runtime & 1hr fast-charging
+- **Code Compatibility** 🤝  
+  Mirror configuration to LeRobot dual-arm setups for seamless policy migration
 
     </td>
   </tr>
