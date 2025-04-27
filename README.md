@@ -54,8 +54,8 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 
 - **Cost-effective** 💴: complete make for ~\$660 , with upgrades from existing SO100Arm and Lekiwi for ~\$250 .
 - **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO100**
-    - No motor id changes or hardware modifications needed
-    - Directly transfer your trained policy from tabletop SO100 arm to here
+    - Hardware: No motor id changes or hardware modifications required
+    - Software: Same tabletop single-arm/dual-arm setup, directly transfer your trained policy from tabletop SO100 arm to here
 - **Practical and reliable** 💪: capable of completing many daily tasks performed by $20,000 dual-arm mobile robots on the market.
     - Such as: open doors🚪, serve drinks☕, clean tables🧹, moving clothes to baskets👕, grab from the fridge🍱, etc.
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
