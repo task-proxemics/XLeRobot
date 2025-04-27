@@ -15,8 +15,11 @@
 # Assembly Tools
 
 Skip this section if you already have these tools:
-
+| Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
+| - | - | - | - | - | - | - | - |
 | M3 Screws and Nuts Set | 1 | $14.99 | [Amazon](https://a.co/d/4NfBpNS) | €23.5 | [Amazon](https://www.amazon.fr/Cylindrique-Inoxydable-M2-Socket-Assortiment/dp/B09Y8WYFWD/) | ¥20 | [taobao](https://e.tb.cn/h.6gUXgJbEk9Z5mbb?tk=MKOuezal6rB) |
+| **Total** || **$219.98** || **€209.98** || **¥1013.15** ||
+
 
 # Additional Components for Xelerobot
 
