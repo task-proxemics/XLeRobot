@@ -36,19 +36,23 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 | IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
 | Anker SOLIX C300 Power Station | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) |￥764.15 |[Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp )              |
 | 4ft 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) Connector Kit | €0 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
-| Type C to DC wire(12V/5V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | €0 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
+| Type C to DC wire(12V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | €0 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
 
 
 - I couldn't find any ready-made long 5264 wires for purchase in US—**only connector kits** that require manual assembly to extend the length (easy to do though).
 - You can definitely choose **similar cheaper cart not from IKEA**, in this case [slight change]() to the 3D printed part might be needed.
 - While this battery🔋 may seem expensive💵, its functionality and reliability far exceed regular power banks. (Like in electric vehicles🚗, its battery is also one of the most expensive components.)
 - You can also choose **other batteries**, just make sure the maximum output is large enough to power 2 arms, 3 wheels, and a RasberryPi.
+- 2 Type C to DC wires(12V) connect motor control board to the power supply.
 
 
 
 # 3. Build From Scratch
 
-For those starting from scratch (without SO100 arms or Lekiwi), besides the parts from _Extra Parts for XeLeRobot_, you also need:
+For those starting from scratch (without SO100 arms or Lekiwi), besides the parts from _Extra Parts for XeLeRobot_, you also need to build the arms and Lekiwi base first.
+
+> [!NOTE]
+> The parts list for 2x SO100 arms and 1 Lekiwi base in this repo contains fewer components than the original bills (mainly cable and battery-related items). If you're building XLeRObot from scratch, you can use this repo's bill directly. However, it's recommended to check the other two repos ([SO100](https://github.com/TheRobotStudio/SO-ARM100/tree/main), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md)) as well, in case there are updated options at better prices.
 
 ## 2x SO100 Arms
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
@@ -74,6 +78,11 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 | Wrist camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | €0 | [TODO]() |￥0|[TODO]()|
 | microSD card | 1 | $11.23 | [Amazon](https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7C7LL1/) | €10.00 | [Amazon](https://www.amazon.fr/Lexar-Carte-Micro-adaptateur-Smartphone/dp/B08XZ2KS1F)|￥58|[Taobao](https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ "https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ")|
 | USB-C to USB-A Cable 2 pcs | 1 | $8.99 | [Amazon](https://a.co/d/0mWsmhG) Anker | €7 | [Amazon](https://www.amazon.fr/dp/B07BNF842T/) |￥17  |[Taobao](https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4 "https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4")|
+| USB-C Cable 2 pcs | 1 | $8.99 | [Amazon](https://a.co/d/f8hm4E2) | ~€7 | [TODO]() |￥17  |[Taobao](https://detail.tmall.com/item.htm?abbucket=14&detail_redpacket_pop=true&id=562374737204&ltk2=1745778907089uemkvoxey50xt270pvkfcq&ns=1&priceTId=2100c80417457788995147926e0bd5&query=usbc%E6%95%B0%E6%8D%AE%E7%BA%BF&skuId=5239339491575&spm=a21n57.1.hoverItem.4&utparam=%7B%22aplus_abtest%22%3A%2250461336def889c0b534e9603672d7f7%22%7D&xxc=taobaoSearch)|
+
+- You can use/buy whatever brand of cables (USB-C cable should be fast-charging type), microSD card, Raspberry Pi 5
+- 2 USB-C to USB-A Cables connect the Motor Control Board to Rasberry Pi/PC
+- USB-C Cable connects Rasberry Pi to the battery
 
 These components will allow you to replicate Demo 0.0.5, enabling master-slave arm control and direct PC control of both arms.
 
@@ -88,12 +97,6 @@ These components will allow you to replicate Demo 0.0.5, enabling master-slave a
 - For additional add-ons and accessories, please refer to the Lerobot repository and Discord group discussions
 
 
-### Other
-| Part| Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
-|--|:-:|:-:|-|:-:|-|:-:|-|
-| Table Clamp 4pcs | 1 | $18 | [Amazon](https://www.amazon.com/WORKPRO-Clamps-Woodworking-One-Handed-Spreader/dp/B0CQYDJWS8/) | € 21 | [Amazon](https://www.amazon.fr/dp/B08HW9VFM8/)| ¥10.8\*4  |[Taobao](https://e.tb.cn/h.64r5eomI6L59tBE?tk=gZWeex9fnlB "https://e.tb.cn/h.64r5eomI6L59tBE?tk=gZWeex9fnlB")|
-| USB-C to USB-A Cable 2 pcs | 1 | $7 | [Amazon](https://www.amazon.com/Charging-etguuds-Charger-Braided-Compatible/dp/B0B8NWLLW2/?th=1) | €7 | [Amazon](https://www.amazon.fr/dp/B07BNF842T/) |￥17  |[Taobao](https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4 "https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4")|
-| **Total** ||  **$31**  ||  **€38** || **¥80.20** ||
 
 
 
