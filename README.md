@@ -26,9 +26,10 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
 - **Easy Assembly** 🔨: Screw for 2hrs and here it is.
 - **Plug-&-Play** 🧩: 
+
 See robots perform by running a few lines.
 - **Thriving Community** 🌍:
-World's largest low-cost robotics community with
+  World's largest low-cost robotics community with
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
   - Thousands of brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
     </td>
