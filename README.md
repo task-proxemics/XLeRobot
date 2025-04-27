@@ -70,7 +70,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 
 
 ---
-## 🎯 Demo Video 0.0.5
+## 🎯 Demo 0.0.5
 > [!NOTE]
 > Currently just a single arm version by directly implementing Lekiwi, teleoped by the other follower arm. 3x speed.
 
@@ -86,7 +86,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 ---
 ---
 
-## 🛠️ Hardware Intro
+## 🛠️ Hardware Intro 🛠️
 
 XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
@@ -128,16 +128,16 @@ XLeRobot = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 ---
 
-## 🧠 Software Intro
+## 💻 Software Intro 💻
 Here's a general idea of how you can control the robot and make it smart:
 
-### Basic Control
+### 🕹️ Basic Control
 
 Joint control → leader-follower arm control
 
 End Effector control → VR remote control
 
-### Paths towards General Embodied Machine Intelligence
+### 🧠 Paths towards General Embodied Machine Intelligence
 
 **Two main approaches exist for making robots intelligent, reflecting the primary methods in current academic robotics manipulation research** (This is a simplified comparison, as many works combine benefits from both approaches)
 <table>
