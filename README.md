@@ -1,7 +1,7 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
 > [!NOTE] 
-> Currently actively working. There could be incorrect information. Planning on finish the first version **XLeRbot 0.1.0** in a week, will delete this note when the first version is finished. Please be patient....
+> Currently actively working. There could be incorrect information. Planning on finish the first version **XLeRbot 0.1.0** in a few days, will delete this note when the first version is finished. Please be patient....
 
 # XLeRobot 🤖
 
