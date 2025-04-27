@@ -1,15 +1,15 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
-Currently actively working, planning on finish the first version XLeRbot 0.1.0 in a week, please be patient....
+
 > [!NOTE] 
 > Currently actively working. There could be incorrect information. Planning on finish the first version **XLeRbot 0.1.0** in a week, will delete this note when the first version is finished. Please be patient....
 
-
+# XLeRobot 🤖
 
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
-# XLeRobot 🤖
+
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
