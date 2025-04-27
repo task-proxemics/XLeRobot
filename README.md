@@ -56,7 +56,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 - **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO100**
     - No motor id changes or hardware modifications needed
 - **Practical and reliable** 💪: capable of completing many daily tasks performed by $20,000 dual-arm mobile robots on the market.
-    - Such as: open doors🚪, serve drinks☕, clean tables🧹, moving clothes to laundry baskets👕, and find food from frige🍱.
+    - Such as: open doors🚪, serve drinks☕, clean tables🧹, moving clothes to laundry baskets👕, and grab from frige🍱.
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
     - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - **Rich open-source resources** 📕
