@@ -26,11 +26,10 @@ XLeRobot = XL + LeRobot
 
 ### Why "LeRobot" Core?
 - **Plug-&-Play Assembly** 🧩: 90% 3D printed except for motors and electronics
-- **Thriving Community** 🌍  
-  World's largest low-cost robotics community with:
-  - 1000+ pretrained AI models 🧠
-  - Direct code deployment on dual-arm robots
-  - Shared massive datasets 📊
+- **Thriving Community** 🌍: World's largest low-cost robotics community with
+  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨
+  - Direct code deployment
+  - Thousands of brilliant minds
 
 ### Why "XL" Enhancement? 
 🚨 Solving critical gaps in current platforms:
