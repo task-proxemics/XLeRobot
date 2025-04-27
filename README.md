@@ -35,7 +35,7 @@ We answer this separately since **XLeRobot = XL + LeRobot**
 
 ### Overall advantages/goals of XLeRobot
 
-- Practical and reliable, capable of completing over 80% of Aloha's daily tasks
+- Practical and reliable, capable of completing over 75% of Aloha's daily tasks
     - Such as: opening doors 🚪, serving beverages ☕, cleaning tables (within workspace) 🧹, moving clothes to laundry baskets 👕, and retrieving food from refrigerator (middle shelves) 🍱. More tasks are demonstrated in the Lerobot hackathon.
     - Note: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - Rich open-source resources
