@@ -144,6 +144,7 @@ For details please see [Bill of Materials](BOM.md).
   </tr>
 </table>
 
+Even if you don't play with robots (hopefully that won't happen) anymore, these two products can still play a role in your daily life.
 
 ---
 
