@@ -1,4 +1,4 @@
-# Bill of Materials
+# 📃 Bill of Materials
 
 ## 💵 Total Cost 💵
 > [!NOTE] 
@@ -65,14 +65,14 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 > [!NOTE] 
 > Both of the 2 SO100 Arms are follower arms in hardware setup, you can use one of them as the leader arm for testing teleop without the need to remove the gears of the motors (instructed in the original SO100 tutorial) if you want to save money with only 2 arms.
 > 
-### 1x Lekiwi Base
+### 🧑‍🦼‍➡️ 1x Lekiwi Base 👨‍🦼
 
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
 | STS3215 Servo (12V) | 3 | $16 | [Alibaba](https://www.alibaba.com/product-detail/Feetech-STS3215-SO-ARM100-Servo-12V_1601292634404.html) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
 | 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) |￥135 |[PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw "https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw")|
 
-## Electronics and Sensors
+## 💻 Electronics and Sensors 📷
 | Part| Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) |  Unit Cost (CN) | Buy (CN) |
 |--|:-:|:-:|-|:-:|-|:-:|-|
 | Raspberry Pi 5 (4GB)| 1 |$60.00| [Adafruit](https://www.adafruit.com/product/5812)| €57.00| [Mouser](https://eu.mouser.com/ProductDetail/Raspberry-Pi/SC1111?qs=HoCaDK9Nz5fnLhlMNnKTiQ%3D%3D)|￥410|[Taobao](https://e.tb.cn/h.64IIvlisvAL15g8?tk=fdOVexkHECW "https://e.tb.cn/h.64IIvlisvAL15g8?tk=fdOVexkHECW")|
@@ -90,7 +90,7 @@ These components will allow you to replicate Demo 0.0.5, enabling master-slave a
 
 
 
-## 🧩Optional Add-on Features🧩
+## 🧩 Optional Add-on Features 🧩
 
 - 🙌Dual-arm leader-follower joint control: Additional two [SO100 arm sets](https://github.com/TheRobotStudio/SO-ARM100/tree/main) for dual-arm leader-follower joint control
 - ✊Better grip stability: [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (got it from [UMI gripper specifications](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit?tab=t.0#heading=h.5k5vwx2iqjqg))
