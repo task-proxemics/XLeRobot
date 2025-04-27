@@ -60,7 +60,8 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 
 These components will allow you to replicate Demo 0.0.5, enabling master-slave arm control and direct PC control of both arms.
 
-Note: There's no need to remove the leader motor gear. This is not recommended if you're only planning to use two arms.
+> [!NOTE] 
+> Both of the 2 SO100 Arms are follower arms in hardware setup, you can use one of them as the leader arm for testing teleop without the need to remove the gears of the motors (instructed in the original SO100 tutorial) if you want to save money with only 2 arms.
 
 # Optional Enhancements
 
