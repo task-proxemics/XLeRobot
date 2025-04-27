@@ -26,7 +26,7 @@ Skip this section if you already have these tools:
 
 If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these additional parts 
 
-(but also check the **Build From Scratch** section below since the list is not 100% the same)
+(but also check the _Build From Scratch_ section below since the list is not 100% the same)
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | - | - | - | - | - | - | - | - |
 | IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/)|
@@ -44,7 +44,7 @@ If you have already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these 
 
 # 3. Build From Scratch
 
-For those starting from scratch (without SO100 arms or Lekiwi), follow these steps:
+For those starting from scratch (without SO100 arms or Lekiwi), besides the parts from _Extra Parts for XeLeRobot_, you will also need to buy these:
 
 ## 2x SO100 Arms
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
