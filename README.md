@@ -208,7 +208,7 @@ Here's a general idea of how you can control the robot and make it smart:
 (software updates will also depend on the development of LeRobot community)
 <table>
   <tr>
-    <td width="50%">
+    <td>
       
 **Urgent**
 
@@ -218,7 +218,9 @@ Here's a general idea of how you can control the robot and make it smart:
 - 🕶️ Quest3 VR control and teleop
 - 🤖 Simple tasks using existing VLA models from Lerobot codebase
     </td>
-    <td width="50%">
+    </tr>
+    <tr>
+    <td>
     
 **In the near future**
 
