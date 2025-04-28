@@ -24,8 +24,9 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 - If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels. it so that there's
     - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also base plate will only have 3 mounted motors with wheels.
-- First, verify that the LeKiwi base motor wiring matches the diagram.
-![abc271c2cccc2d68aff2c251ba58727](https://github.com/user-attachments/assets/349e7770-5b01-4dc6-bc94-6257b5b5cfe5)
+- Wiring the motors according to 
+![image](https://github.com/user-attachments/assets/6b71c525-18ca-46dd-b1c6-02646d3f399f)
+
 
 1. Place the base on the bottom of the cart
     1. In this initial hardware version, it may be challenging to align all six screws perfectly.
@@ -43,7 +44,7 @@ A second version will be released soon, featuring a bolted connection between th
 
 Place the battery on the middle or lower level to maintain a low center of gravity. I keep it on the middle level for shorter cable runs and easy access (useful for hiking and camping).
 
-## Wiring:
+## Last Wiring
 
 See iPad wiring diagram
 
