@@ -9,6 +9,8 @@
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
+[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
+[![cn](https://img.shields.io/badge/lang-cn-green.svg)](README_CN.md)
 
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
