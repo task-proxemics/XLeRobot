@@ -49,8 +49,8 @@
  
 ### XLeRobot的整体优势/目标
 
-- **成本效益** 💴：完整制作约需 ~\$660，从现有SO100Arm和Lekiwi升级约需 ~\$250。
-- **轻松升级** ⏫（物理和电气）适用于 **Lekiwi** 和 **SO100**
+- **成本效益** 💴：完整制作约需 ~¥3900，从现有SO100Arm和Lekiwi升级约需 ~¥1200。
+- **轻松升级** ⏫（结构和电路）适用于 **Lekiwi** 和 **SO100**
     - 硬件：无需更改电机ID或硬件修改
     - 软件：相同的桌面单臂/双臂设置，直接将您从桌面SO100手臂训练的策略转移到这里
 - **实用且可靠** 💪：能够完成市场上2万美元双臂移动机器人执行的许多日常任务。
@@ -171,11 +171,11 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ### 🔈🇦🇩 广告时间：
 - **我们的实验室**：[Rice RobotPI Lab](https://robotpilab.github.io/)
-    - 我们的愿景之一：使用[时间笼罩](https://robotpilab.github.io/publication/caging/)和基于漏斗的操作方法，在不完美的现实世界情况下实现稳健的物体操作，如感知噪声、网络延迟、[丰富接触](https://robotpilab.github.io/publication/collision-inclusive-manipulation/)等。
-- **模拟平台**（我个人偏好）：[Maniskill](https://www.maniskill.ai/)
+    - 我们的愿景之一：使用[时之笼](https://robotpilab.github.io/publication/caging/)和基于漏斗的操作方法，在不完美的现实世界情况下实现稳健的物体操作，如感知噪声、网络延迟、[丰富接触](https://robotpilab.github.io/publication/collision-inclusive-manipulation/)等。
+- **模拟平台**（个人偏好）：[Maniskill](https://www.maniskill.ai/)
     - 🚀GPU加速并行模拟
     - 🎨通过光线追踪实现逼真的视觉效果
-    - 🪶轻量级、一致、易于使用（相比Isaac Lab，我个人认为）
+    - 🪶轻量级、一致、易于使用（相比Isaac Lab，个人认为）
     - 🤖支持[多种机器人](https://maniskill.readthedocs.io/en/latest/robots/index.html)（包括[SO100手臂](https://x.com/Stone_Tao/status/1910101218241978537)）
 
 
@@ -273,4 +273,4 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 期待与任何对为该项目做出贡献感兴趣的人合作！
 
-与宜家没有关联（但我们喜欢瑞典肉丸！🍝）
+与宜家没有利益关联（但瑞典肉丸香！🍝）
