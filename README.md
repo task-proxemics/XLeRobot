@@ -13,7 +13,7 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
 [![中文](https://img.shields.io/badge/lang-中文-green.svg)](README_CN.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-yellow.svg)](README_DE.md)
+[![de](https://img.shields.io/badge/lang-de-blue.svg)](README_DE.md)
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
