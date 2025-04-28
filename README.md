@@ -73,7 +73,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 
 
 ---
-## 🎯 Demo 0.0.5 🎯
+## 🎯 Demo 0.1.0 🎯
 > [!NOTE]
 > Currently just a single arm version by directly implementing Lekiwi, teleoped by the other follower arm. 3x speed.
 
