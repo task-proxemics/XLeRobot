@@ -11,7 +11,7 @@
 ---
 
 
-**🚀 让具身AI走进每个人 - 比iPhone还便宜！📱**  
+**🚀 让具身智能走进每个人 - 比iPhone还便宜！📱**  
 *基于巨人的肩膀：[LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
@@ -25,7 +25,7 @@
       
 ### 为什么选择"LeRobot"核心？
 - **廉价材料** 💴：90%是3D打印的，使用便宜的电机和电子元件。
-- **易于组装** 🔨：拧螺丝2小时就完成了。
+- **易于组装** 🔨：拧2小时螺丝就完成了。
 - **即插即用** 🧩：通过简单的pip安装和运行几行代码让机器人工作。
 - **蓬勃发展的社区** 🌍：
   世界上最大的低成本机器人社区，拥有
@@ -244,7 +244,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 - 🚀 **初创公司和实验室**：使用世界上最便宜的模块化平台更快地构建原型
 - 👩🔬 **自研人员**：在不破费的情况下实验具身AI 💸
-- 🎓 **教育工作者**：
+- 🎓 **机器人教育**：
   - 高中教师：将前沿机器人技术引入STEM课堂 🧪
   - 大学教授：为机器人/AI课程提供经济实惠的平台 📚
   - 学生：从初学者到研究人员 🎒→🎓
@@ -253,7 +253,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ## 局限性
 
-（嘿，这个价格，你还能要求什么？）
+（嘿，这个价格，还要啥自行车？）
 
 - 🔒 固定高度—添加稳定的升降平台将显著增加成本和组装难度
 - 📏 与Aloha相比工作空间较小—虽然我们尝试充分利用SO100的工作空间，但手臂尺寸确实有限—不过XLeRobot仍然可以处理大多数任务
