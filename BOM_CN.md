@@ -108,8 +108,3 @@
 
 > 前往[3D打印](3DPrinting.md)进行下一步！
 
-<br></br>
-
-## 脚注
-
-<a name="footnote2">2</a>：另一个支持的摄像头选项是Arducam 5MP广角，可在[这里](https://www.amazon.com/Arducam-Camera-Computer-Without-Microphone/dp/B0972KK7BC)找到
