@@ -267,7 +267,7 @@ Here's a general idea of how you can control the robot and make it smart:
 - ⚖️ Limited payload capacity for a single arm—that's why the IKEA cart is here
 - 🛒 Base movement precision may be affected by the wheels of IKEA cart—can be addressed through closed-loop feedback control
 
-All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as the most compelling low-cost robot for indoor applications
+All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as the most compelling low-cost robot for indoor application (personal opinion)
 
 
 ---
