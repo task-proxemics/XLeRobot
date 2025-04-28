@@ -1,21 +1,33 @@
 #  ⚒️ Assemble! ⚒️
 
 ## 🤔 Before Assembly 🤔
+- If you don't have assembled 2x SO100 arms or Lekiwi:
+    - Please follow the instruction in [SO100 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md) to
+        - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#b-install-lerobot)
+        - [Configure Motor](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#c-configure-the-motors): both 
 
-### Motor 
+
 First, set up the motor index according to the LeRobot and LeKiwi tutorials. You'll need two motor driver boards: one for the SO100 arm (motors 1-6) and another for motors 1-9.
 
 If you haven't used LeKiwi before, follow their tutorial to set up the Raspberry Pi and establish SSH connection with your PC before beginning assembly.
 
 If you already have a configured SO100 arm and LeKiwi, you can skip the above steps.
 
-## Extra Steps
+## SO100 Arms
+If you already have 2x SO100 arm, proceed here.
+If not, please see xxx.
 
-If you already have LeKiwi and SO100 arm, proceed here. If not, please see xxx.
+>Estimated Assembly time 
+
+If you already have 2x SO100 arm, proceed here. If not, please see xxx.
 
 If building from scratch, complete the "Assemble from Scratch" section below before continuing.
 
+## SO100 Arms
+
 Installing the Base
+
+https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#1-assemble-wheel-modules-3-per-robot
 
 First, verify that the LeKiwi base wiring matches the diagram.
 
