@@ -175,7 +175,7 @@ Here's a general idea of how you can control the robot and make it smart:
 
 
 
-### 🔈🇦🇩 Ads time:
+### 🔈🇦🇩 Advertisment:
 - **Our lab**: [Rice RobotPI Lab](https://robotpilab.github.io/)
     - One of our visions: use [Caging in Time](https://robotpilab.github.io/publication/caging/) and Funnel-based Manipulation methodology to realize robust object manipulation under imperfect real world situations perception noise, network lag, [contact rich](https://robotpilab.github.io/publication/collision-inclusive-manipulation/), etc.
 - **Simulation platform** (my personal preference): [Maniskill](https://www.maniskill.ai/)
