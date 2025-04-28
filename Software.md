@@ -1,6 +1,6 @@
 # Software
 > [!NOTE] 
-> The first preview verison of XLeRobot doesn't have codes yet (will rollout within a month), so currently it 100% rely on the Lekiwi codebase. When the new code comes out ,it will take less than 5 minutes to migrate over.
+> The first preview verison of XLeRobot doesn't have codes yet (will rollout within a month), so currently it 100% rely on the Lekiwi codebase. When the new code comes out, it will take less than 5 minutes to migrate over.
 
 ## Finish everything required on Lekiwi
 
