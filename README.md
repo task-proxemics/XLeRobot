@@ -10,10 +10,10 @@
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
+[![EN](https://img.shields.io/badge/lang-EN-red.svg)](README.md)
 [![中文](https://img.shields.io/badge/lang-中文-green.svg)](README_CN.md)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
-
+[![ES](https://img.shields.io/badge/lang-ES-yellow.svg)](README_ES.md)
+[![DE](https://img.shields.io/badge/lang-DE-yellow.svg)](README_ES.md)
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
