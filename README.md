@@ -141,7 +141,7 @@ For details please see [Bill of Materials](BOM.md).
 - 🌍 Global availability
 - ⚡ 288Wh capacity, 300W maximum output power, 280W maximum charging power
 - 🔌 Powers both 12V arms, base, and Raspberry Pi at full capacity through three Type-C charging cables—eliminating complex wiring system
-- 🔋 Exceptional battery life: 10 hours with normal use, 6 hours under intensive operation, and only 1 hour to fully charge
+- 🔋 Exceptional battery life: 12+ hours with normal use, 8 hours under intensive operation, and only 1 hour to fully charge
 - 💡 Integrated lighting for nighttime operation
 - ☀️ Optional solar panel mounting for continuous power supply
 - 🎒 Versatile and detachable—serves beyond robotics in daily life as emergency backup power or camping power source
