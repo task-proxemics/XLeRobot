@@ -20,4 +20,4 @@ If you already have a leader arm, you can also use it. But still suggest to take
 > [!IMPORTANT]
 > Directly use follow arm hardware as leader arm may not be very smooth. Be careful not to enforce too large torque of dynamic motion to it since the motor gear is not removed and we still need this arm to be our follower arm later
 
-After these steps you should be able to run a basic single-arm version of teleoperating XLeRobot [the same way Lekiwi does]([https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#e-calibration](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#f-teleoperate)), to replicate the first demo video.
+After these steps you should be able to run a basic single-arm version of teleoperating XLeRobot [the same way Lekiwi does](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#f-teleoperate), to replicate the first demo video.
