@@ -80,7 +80,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 ## 💵 Total Cost 💵
 
 > [!NOTE] 
-> Doesn't include cost of 3D printing, tools, shippings and taxes.
+> Doesn't include the cost of 3D printing, tools, shippings and taxes.
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
