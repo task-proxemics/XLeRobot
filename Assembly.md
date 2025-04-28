@@ -14,17 +14,16 @@
 
 If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
 
-## 2x SO100 Arms
+## Assemble 2x SO100 Arms
 - If you already have 2x SO100 arm, skip.
 - If not, please see this [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#d-step-by-step-assembly-instructions), follow the instructions to build 2 identical follower arms with 2 sets of motor 1-6 for 2 control boards.
 
-## 1x Lekiwi Base
+## Assemble 1x Lekiwi Base
 
-Installing the Base
-
-https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#1-assemble-wheel-modules-3-per-robot
-
+- If you already have a Lekiwi base, disassemble it to be the
+- If not, follow 
 First, verify that the LeKiwi base wiring matches the diagram.
+![abc271c2cccc2d68aff2c251ba58727](https://github.com/user-attachments/assets/349e7770-5b01-4dc6-bc94-6257b5b5cfe5)
 
 1. Place the base on the bottom of the cart
     1. In this initial hardware version, it may be challenging to align all six screws perfectly.
