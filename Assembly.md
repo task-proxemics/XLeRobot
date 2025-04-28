@@ -1,7 +1,8 @@
 #  ⚒️ Assemble! ⚒️
 
-## Before Assembly
+## 🤔 Before Assembly 🤔
 
+### Motor 
 First, set up the motor index according to the LeRobot and LeKiwi tutorials. You'll need two motor driver boards: one for the SO100 arm (motors 1-6) and another for motors 1-9.
 
 If you haven't used LeKiwi before, follow their tutorial to set up the Raspberry Pi and establish SSH connection with your PC before beginning assembly.
