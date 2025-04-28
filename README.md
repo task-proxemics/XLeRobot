@@ -116,7 +116,7 @@ For details please see [Bill of Materials](BOM.md).
 
 <table>
   <tr>
-    <td width="50%">
+    <td>
       
 ### Why IKEA RÅSKOG Cart?
 - 🌎 Global availability with standardized design
@@ -125,9 +125,11 @@ For details please see [Bill of Materials](BOM.md).
 - 🔧 Metal Mesh bottom enables easy mounting of components
 - 📦 Perfect for storage and transportation of items
 - 📏 Ideal height for common household surfaces—from stovetop to coffee table
-<img src="media/realpic_back.jpg" alt="Alt text" width="250" />
+
     </td>
-    <td width="50%">
+    </tr>
+    <tr>
+    <td>
     
 ### Why Anker SOLIX C300 Power Station? 
 - 🌍 Global availability
@@ -137,10 +139,11 @@ For details please see [Bill of Materials](BOM.md).
 - 💡 Integrated lighting for nighttime operation
 - ☀️ Optional solar panel mounting for continuous power supply
 - 🎒 Versatile and detachable—serves beyond robotics in daily life as emergency backup power or camping power source
-<img src="media/realpic_battery.jpg" alt="Alt text" width="250" />
+
     </td>
   </tr>
 </table>
+<img width="843" alt="1745819677076" src="https://github.com/user-attachments/assets/ad081621-1e69-4bc6-a50f-d89cf92f35c3" />
 
 Even if you don't play with robots (hopefully that won't happen) anymore, these two products can still play a role in your daily life.
 
