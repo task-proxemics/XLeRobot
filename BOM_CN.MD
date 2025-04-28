@@ -1,5 +1,6 @@
 # 📃 物料清单
-
+[![en](https://img.shields.io/badge/lang-en-red.svg)](BOM.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](BOM_CN.md)
 ## 💵 总成本 💵
 > [!NOTE] 
 > 不包括3D打印、工具、运费和税费的成本。
