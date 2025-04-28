@@ -15,7 +15,7 @@
 > We want **XLeRobot** to be **powerful**, so there's only a single 12V version. If you are using your pre-assembled SO100 and Lekiwi, their motors also need to be the 12V version. While the 7.4V version might also work normally, it is not recommended as it has not been tested and cannot achieve optimal performance.
 
 > [!TIP]  
-> If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100 arms at a higher price.
+> If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100 arms at a higher price. The SO100 arm assembly does take the most time, 4~6 hrs for 2 arms. After the arms are assembled the remaining assembly time only takes 1~2 hrs.
 
 ## 🔨 Assembly Tools 🔨
 
