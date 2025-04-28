@@ -162,7 +162,7 @@ Here's a general idea of how you can control the robot and make it smart:
 > For the first version we mainly focus on the hardware. The LeRobot code hasn't been modified yet. You can run the original Lekiwi demo by connecting one arm to the RaspberryPi and another arm to the desktop to recreate the Demo 0.0.5 by remote control. The Lerobot code for XLeRobot will be soon updated with highest priority.
 
 
-### 🧠 Paths towards General Embodied Machine Intelligence TODO
+### 🧠 Paths towards General Embodied Machine Intelligence (TODO)
 
 
 
