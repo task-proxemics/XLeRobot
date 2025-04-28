@@ -108,8 +108,3 @@ These components will allow you to replicate Demo 0.0.5, enabling master-slave a
 
 > Head to [3D Printing](3DPrinting.md) for the next step!
 
-<br></br>
-
-## Footnotes
-
-<a name="footnote2">2</a>: Another supported camera option is the Arducam 5MP Wide Angle found [here](https://www.amazon.com/Arducam-Camera-Computer-Without-Microphone/dp/B0972KK7BC)
