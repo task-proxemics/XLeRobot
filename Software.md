@@ -1,4 +1,4 @@
-# Software
+# 🦾 Get Your Robot Moving! 🦿
 > [!NOTE] 
 > The first preview verison of XLeRobot doesn't have codes yet (will rollout within a month), so currently it 100% rely on the Lekiwi codebase. When the new code comes out, it will take less than 5 minutes to migrate over.
 
@@ -15,7 +15,9 @@ Follow all of their [software instructions](https://github.com/huggingface/lerob
 > [!NOTE] 
 > To test the basic single-arm version of XLeRobot, you should detach the SO100 arm that doesn't share the same motor control board with the Lekiwi base, clamp it on your table and connect it to your PC to act as the leader arm.
 
+If you already have a leader arm, you can also use it. But still suggest to take off the non-lekiwi SO100 arm.
+
 > [!IMPORTANT]
-> Be careful not to enforce too large torque of dynamic motion to it since the motor gear is not removed and we still need this arm to be our follower arm later
+> Directly use follow arm hardware as leader arm may not be very smooth. Be careful not to enforce too large torque of dynamic motion to it since the motor gear is not removed and we still need this arm to be our follower arm later
 
 After these steps you should be able to run a basic single-arm version of teleoperating XLeRobot [the same way Lekiwi does]([https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#e-calibration](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#f-teleoperate)), to replicate the first demo video.
