@@ -55,13 +55,14 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     - Software: Same tabletop single-arm/dual-arm setup, directly transfer your trained policy from tabletop SO100 arm to here
 - **Practical and reliable** 💪: capable of completing many daily tasks performed by $20,000 dual-arm mobile robots on the market.
     - Such as: open doors🚪, serve drinks☕, clean tables🧹, moving clothes to baskets👕, grab from the fridge🍱, etc.
+<img width="600" alt="frontpic" src="https://github.com/user-attachments/assets/ae455e67-fe24-42dd-a40e-0b87be1a7260" />
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
     - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - **Rich open-source resources** 📕
     - LeRobot's plug-and-play code🧩 and numerous AI models🧠
     - Supported by an active, growing community of contributors🧑‍🤝‍🧑
 
-<img width="600" alt="frontpic" src="https://github.com/user-attachments/assets/ae455e67-fe24-42dd-a40e-0b87be1a7260" />
+
 
 
 
