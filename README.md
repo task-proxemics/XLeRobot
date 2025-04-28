@@ -36,7 +36,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     </tr>
     <tr>
     <td>
-    
+ 
 ### Why "XL" Enhancement? 
 - 🏠 Currently, there is a lack of affordable, stable, general-purpose home mobile robots with dual arms that are as easy to build as LeRobot.
 - 🖨️ 3D printed frames have limited durability, stability, and load capacity, while being complex to assemble and impractical for daily use.
@@ -45,7 +45,8 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
   
     </td>
   </tr>
-      
+ </table>       
+ 
 ### Overall Advantages/Goals of XLeRobot
 
 - **Cost-effective** 💴: complete make for ~\$660 , with upgrades from existing SO100Arm and Lekiwi for ~\$250 .
