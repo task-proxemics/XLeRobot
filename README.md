@@ -185,14 +185,16 @@ Here's a general idea of how you can control the robot and make it smart:
 ### Hardware
 <table>
   <tr>
-    <td width="50%">
+    <td>
       
 **Urgent**
 
 - 🔧 Add two arm base options: clamp-held (current) or screw-mounted
 - 🛠️ Add a connector plate that is fully compatible with the metal mesh of IKEA cart
     </td>
-    <td width="50%">
+    </tr>
+    <tr>
+    <td>
     
 **In the near future**
 
