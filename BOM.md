@@ -60,6 +60,9 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 > [!NOTE]
 > The parts list for 2x SO100 arms and 1 Lekiwi base in this repo contains fewer components than the original bills (mainly cable and battery-related items). If you're building **XLeRobot** from scratch, you can use this repo's bill directly. However, it's recommended to check the other two repos ([SO100](https://github.com/TheRobotStudio/SO-ARM100/tree/main), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md)) as well, in case there are updated options at better prices.
 
+> [!NOTE]
+> Just found out that today (2025.4.28) [SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) is released for improved wiring and easier to assembly, which doesn't affect the billing list below if you are only making follower arms.
+
 ### 🦾 2x SO100 Arms 🦾
 | Part | Amount | Unit Cost (US) | Buy US | Unit Cost (EU) | Buy EU | Unit Cost (RMB) | Buy CN |
 |---|---|---|---|---|---|---|---|
@@ -95,6 +98,9 @@ These components will allow you to replicate Demo 0.0.5, enabling master-slave a
 
 
 ## 🧩 Optional Add-on Features 🧩
+
+> [!NOTE]
+> Just found out that today (2025.4.28) [SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) is released for improved wiring and easier to assembly, which did some changes to the leader arms.
 
 - 🙌Dual-arm leader-follower joint control: Additional two [SO100 arm sets](https://github.com/TheRobotStudio/SO-ARM100/tree/main) for dual-arm leader-follower joint control
 - ✊Better grip stability: [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (got it from [UMI gripper specifications](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit?tab=t.0#heading=h.5k5vwx2iqjqg))
