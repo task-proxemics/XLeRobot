@@ -31,24 +31,16 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
   World's largest low-cost robotics community with
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
   - 5000+ brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
-
     </td>
-  </tr>
-  <tr>
     <td>
     
-### Why "LeRobot" Core?
-- **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
-- **Easy Assembly** 🔨: Screw for 2hrs and here it is.
-- **Plug-&-Play** 🧩: Make robots perform by simple pip install and running a few lines.
-- **Thriving Community** 🌍:
-  World's largest low-cost robotics community with
-  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
-  - 5000+ brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.
-
+### Why "XL" Enhancement? 
+- 🏠 Currently, there is a lack of affordable, stable, general-purpose home mobile robots with dual arms that are as easy to build as LeRobot.
+- 🖨️ 3D printed frames have limited durability, stability, and load capacity, while being complex to assemble and impractical for daily use.
+- ⚡ Power supply remains a challenge for DIY mobile robots, resulting in complicated wiring configurations.
+- 🤖 **XLerobot** uses the same setup configuration as most tabletop dual-arm SO100 in the LeRobot community, making code and policy transfer straightforward. 
     </td>
   </tr>
-</table>
 
 
 
