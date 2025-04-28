@@ -129,7 +129,7 @@ For details please see [Bill of Materials](BOM.md).
 - 🔧 Metal Mesh bottom enables easy mounting of components
 - 📦 Perfect for storage and transportation of items
 - 📏 Ideal height for common household surfaces—from stovetop to coffee table
-- 📏 Also the plane size is compact to directly to put in any rooms.
+- 📏 Also the plane size is compact and can fit in 99% rooms (Thanks to the designers in IKEA).
 
 
     </td>
