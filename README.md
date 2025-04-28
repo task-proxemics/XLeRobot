@@ -61,9 +61,10 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     - LeRobot's plug-and-play code🧩 and numerous AI models🧠
     - Supported by an active, growing community of contributors🧑‍🤝‍🧑
 
+<img width="600" alt="frontpic" src="https://github.com/user-attachments/assets/ae455e67-fe24-42dd-a40e-0b87be1a7260" />
 
 
-<img src="media/realpic_2.jpg" alt="Alt text" width="1200" />
+
 
 ---
 ## 🎯 Demo 0.0.5 🎯
