@@ -43,11 +43,11 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 In the current version, for easier debugging, the SO100 arm clamps directly onto the cart. Position the arm base at the two corners of the cart's top layer, then secure with clamps.
 
-A second version will be released soon, featuring a bolted connection between the arm and cart, with standardized spacing between the two arms based on xxx's design.
+A second version will be released soon, featuring a bolted connection between the arm and cart, with standardized spacing between the two arms.
 
 ## Install/Put the Battery:
 
-Place the battery on the middle or lower level to maintain a low center of gravity. I keep it on the middle level for shorter cable runs and easy access (useful for hiking and camping).
+Place the battery on the middle or lower level to maintain a low center of gravity. I keep it on the middle level for shorter cable runs and easy access (for hiking and camping).
 
 ## Last Wiring
 
