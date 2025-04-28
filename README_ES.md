@@ -9,7 +9,8 @@
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
-
+Language/语言：
+[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
 
 **🚀 Llevando la IA Incorporada a Todos - ¡Más Barato que un iPhone! 📱**  
 *Construido sobre los gigantes: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
