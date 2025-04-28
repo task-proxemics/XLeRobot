@@ -14,6 +14,9 @@
 > [!IMPORTANT]
 > We want **XLeRobot** to be **powerful**, so there's only a single 12V version. If you are using your pre-assembled SO100 and Lekiwi, their motors also need to be the 12V version. While the 7.4V version might also work normally, it is not recommended as it has not been tested and cannot achieve optimal performance.
 
+> [!TIP]  
+> If you don't even want to bother yourself to tightening some screws (which is fun, every robot enthusiast should try it). Currently there are also some companies selling [the assembled kit](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100 arms at a higher price.
+
 ## 🔨 Assembly Tools 🔨
 
 Skip this section if you already have these tools:
