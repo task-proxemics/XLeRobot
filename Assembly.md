@@ -17,6 +17,8 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 ## Assemble 2x SO100 Arms
 - If you already have 2x SO100 arm, skip.
 - If not, please see this [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#d-step-by-step-assembly-instructions), follow the instructions to build 2 identical follower arms with 2 sets of motor 1-6 for 2 control boards.
+> [!TIP]  
+> Replace the motor's stock cross-head screws with M3 hex screws—they're more durable, easier to install, and the black screws blend better with the black arm.
 
 ## Assemble 1x Lekiwi Base
 
@@ -31,17 +33,17 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 3. Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing.
     1. Repeat this process for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
 
-Installing the Arms
+## Installing the Arms
 
 In the current version, for easier debugging, the SO100 arm clamps directly onto the cart. Position the arm base at the two corners of the cart's top layer, then secure with clamps.
 
 A second version will be released soon, featuring a bolted connection between the arm and cart, with standardized spacing between the two arms based on xxx's design.
 
-Installing the Battery:
+## Installing the Battery:
 
 Place the battery on the middle or lower level to maintain a low center of gravity. I keep it on the middle level for shorter cable runs and easy access (useful for hiking and camping).
 
-Wiring:
+## Wiring:
 
 See iPad wiring diagram
 
@@ -49,14 +51,4 @@ When extending the signal cable yourself, be careful with the polarity—reverse
 
 Connect all three Type-C power cables to the high-power charging section at the bottom of the power supply. Each cable provides up to 100W when charging simultaneously, which testing confirms is sufficient for 12V motor operation.
 
-Important: Connect the power last
 
-## Assemble from Scratch
-
-## Arms
-
-Refer to the SO100 repo
-
-### Personal Tips
-
-- Replace the motor's stock cross-head screws with M3 hex screws—they're more durable, easier to install, and the black screws blend better with the black arm.
