@@ -12,7 +12,7 @@
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
 
-**🚀 让具身智能走进每个人 - 比iPhone还便宜！📱**  
+**🚀 让具身智能服务每个人 - 比小米还便宜！📱**  
 *基于巨人的肩膀：[LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
