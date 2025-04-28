@@ -32,6 +32,8 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
   - 5000+ brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.     
     </td>
+    </tr>
+    <tr>
     <td>
     
 ### Why "XL" Enhancement? 
