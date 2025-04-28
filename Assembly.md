@@ -1,5 +1,5 @@
 #  ⚒️ Assemble! ⚒️
-
+>Estimated Assembly time: with assembled arms: 1~2h, without assembled arms: 4~5h
 ## 🤔 Before Assembly 🤔
 > [!TIP]  
 > If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100 arms at a higher price. The SO100 arm assembly does take the most time, 4-6 hrs for 2 arms. After the arms are assembled the remaining assembly time only takes 1-2 hrs.
@@ -9,20 +9,14 @@
 - Configure the motors according to the [SO100](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#c-configure-the-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
     - You need two sets of motors for 2 motor control boards: one for the SO100 arm (motors 1-6) and another for Lekiwi (motors 1-9).
     - Tips: write the numbers on motors with marker.
+
 ![3a0621eb78b778edd62af9a0fc4348a](https://github.com/user-attachments/assets/036bdc8d-018f-45f9-a5b4-b1c31b2dc288)
 
 If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
-![image](https://github.com/user-attachments/assets/33e01f8b-5d2c-4af6-80f0-1071f2608672)
 
 ## 2x SO100 Arms
-If you already have 2x SO100 arm, skip.
-If not, please see xxx.
-
->Estimated Assembly time 
-
-If you already have 2x SO100 arm, proceed here. If not, please see xxx.
-
-
+- If you already have 2x SO100 arm, skip.
+- If not, please see this [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#d-step-by-step-assembly-instructions), follow the instructions to build 2 identical follower arms with 2 sets of motor 1-6 for 2 control boards.
 
 ## 1x Lekiwi Base
 
