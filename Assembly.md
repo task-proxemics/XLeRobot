@@ -27,17 +27,20 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 ## Assemble 1x Lekiwi Base
 
 - If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels. it so that there's
-    - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also base plate will only have 3 mounted motors with wheels.
-- Wiring the motors according to 
-![image](https://github.com/user-attachments/assets/6b71c525-18ca-46dd-b1c6-02646d3f399f)
+    - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also stop after mounting motors on the base plate with wheels.
+- Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), afetr that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and assemble the top plate, and pull it out. 
+
 
 ## Install the Lekiwi Base
+> [!TIP]  
+> You might want to filp the cart over to do this.
 
 1. Place the base on the bottom of the cart
     1. In this initial hardware version, it may be challenging to align all six screws perfectly.
 2. Connect the extended cables or self-made cable extensions.
 3. Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing.
     1. Repeat this process for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
+![image](https://github.com/user-attachments/assets/6b71c525-18ca-46dd-b1c6-02646d3f399f)
 
 ## Install the Arms
 
