@@ -45,15 +45,6 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
   
     </td>
   </tr>
-
-
-
-<table>
-  <tr>
-    <td width="35%">
-      <img src="media/realpic_2.jpg" alt="Alt text" width="1200" />
-    </td>
-    <td width="65%">
       
 ### Overall Advantages/Goals of XLeRobot
 
@@ -69,11 +60,9 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     - LeRobot's plug-and-play code🧩 and numerous AI models🧠
     - Supported by an active, growing community of contributors🧑‍🤝‍🧑
 
-    </td>
-  </tr>
-</table>
 
 
+<img src="media/realpic_2.jpg" alt="Alt text" width="1200" />
 
 ---
 ## 🎯 Demo 0.0.5 🎯
