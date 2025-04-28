@@ -9,10 +9,12 @@
 - Configure the motors according to the [SO100](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#c-configure-the-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
     - You need two sets of motors for 2 motor control boards: one for the SO100 arm (motors 1-6) and another for Lekiwi (motors 1-9).
     - Tips: write the numbers on motors with marker.
+![3a0621eb78b778edd62af9a0fc4348a](https://github.com/user-attachments/assets/036bdc8d-018f-45f9-a5b4-b1c31b2dc288)
 
 If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
+![image](https://github.com/user-attachments/assets/33e01f8b-5d2c-4af6-80f0-1071f2608672)
 
-## SO100 Arms
+## 2x SO100 Arms
 If you already have 2x SO100 arm, skip.
 If not, please see xxx.
 
@@ -20,9 +22,9 @@ If not, please see xxx.
 
 If you already have 2x SO100 arm, proceed here. If not, please see xxx.
 
-If building from scratch, complete the "Assemble from Scratch" section below before continuing.
 
-## SO100 Arms
+
+## 1x Lekiwi Base
 
 Installing the Base
 
