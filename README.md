@@ -90,7 +90,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 |---------|----:|----:|----:|
 | **Build from Scratch** |  **~$660**  |  **~€650**  |  **~¥3900**  |
 | **Upgrade from 2 SO100 arms**  |  **~$400**  |  **~€440**  |  **~¥2400**  |
-| **Upgrade from 1 Lekiwi** |  **~$370**  |  **~€350**  |  **~¥1900**  |
+| **Upgrade from 1 Lekiwi (base + arm)** |  **~$370**  |  **~€350**  |  **~¥1900**  |
 | **Upgrade from 1 Lekiwi and 1 SO100 arm** |  **~$250**  |  **~€240**  |  **~¥1200**  |
 
 For details please see [Bill of Materials](BOM.md).
