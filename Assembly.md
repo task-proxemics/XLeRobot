@@ -4,20 +4,16 @@
 > [!TIP]  
 > If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100 arms at a higher price. The SO100 arm assembly does take the most time, 4-6 hrs for 2 arms. After the arms are assembled the remaining assembly time only takes 1-2 hrs.
 
-- If you don't have assembled 2x SO100 arms or Lekiwi:
-    - Please follow the instruction in [SO100 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md) to
-        - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#b-install-lerobot)
-        - [Configure Motor](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#c-configure-the-motors): both 
+- If you don't have assembled SO100 arms or Lekiwi: Please follow the instruction in [SO100 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md) to
+    - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#b-install-lerobot)
+- Configure the motors according to the [SO100](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#c-configure-the-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
+    - You need two sets of motors for 2 motor control boards: one for the SO100 arm (motors 1-6) and another for Lekiwi (motors 1-9).
+    - Tips: write the numbers on motors with marker.
 
-
-First, set up the motor index according to the LeRobot and LeKiwi tutorials. You'll need two motor driver boards: one for the SO100 arm (motors 1-6) and another for motors 1-9.
-
-If you haven't used LeKiwi before, follow their tutorial to set up the Raspberry Pi and establish SSH connection with your PC before beginning assembly.
-
-If you already have a configured SO100 arm and LeKiwi, you can skip the above steps.
+If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
 
 ## SO100 Arms
-If you already have 2x SO100 arm, proceed here.
+If you already have 2x SO100 arm, skip.
 If not, please see xxx.
 
 >Estimated Assembly time 
