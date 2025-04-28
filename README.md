@@ -22,6 +22,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 <table>
   <tr>
     <td>
+      
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
 - **Easy Assembly** 🔨: Screw for 2hrs and here it is.
@@ -35,6 +36,7 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
   </tr>
   <tr>
     <td>
+    
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
 - **Easy Assembly** 🔨: Screw for 2hrs and here it is.
@@ -42,7 +44,8 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
 - **Thriving Community** 🌍:
   World's largest low-cost robotics community with
   - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
-  - 5000+ brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.   
+  - 5000+ brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.
+
     </td>
   </tr>
 </table>
