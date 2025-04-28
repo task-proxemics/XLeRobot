@@ -11,7 +11,7 @@
 ---
 Language/语言：
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![cn](https://img.shields.io/badge/lang-cn-green.svg)](README_CN.md)
+[![中文](https://img.shields.io/badge/lang-cn-green.svg)](README_CN.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
 
 
