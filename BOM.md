@@ -1,5 +1,6 @@
 # 📃 Bill of Materials
-
+[![en](https://img.shields.io/badge/lang-en-red.svg)](BOM.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](BOM_CN.md)
 ## 💵 Total Cost 💵
 > [!NOTE] 
 > Doesn't include cost of 3D printing, tools, shippings and taxes.
