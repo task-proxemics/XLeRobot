@@ -129,6 +129,8 @@ For details please see [Bill of Materials](BOM.md).
 - 🔧 Metal Mesh bottom enables easy mounting of components
 - 📦 Perfect for storage and transportation of items
 - 📏 Ideal height for common household surfaces—from stovetop to coffee table
+- 📏 Also the plane size is compact to directly to put in any rooms.
+
 
     </td>
     </tr>
@@ -203,6 +205,7 @@ Here's a general idea of how you can control the robot and make it smart:
 **In the near future**
 
 - 📸 Add a RealSense depth camera to the head complement the hand RGB cameras for precise environmental perception
+- 🔦 Add a Lidar and some SLAM to make it navigate freely at home just like a Roomba
 - 👆 Basic tactile sensing
     </td>
   </tr>
