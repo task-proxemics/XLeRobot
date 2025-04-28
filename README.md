@@ -9,7 +9,7 @@
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
-Choose
+Language/语言：
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
 [![cn](https://img.shields.io/badge/lang-cn-green.svg)](README_CN.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
