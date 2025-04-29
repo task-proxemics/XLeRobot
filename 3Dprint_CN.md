@@ -1,5 +1,8 @@
 # 🖨️ 3D打印你的东西! 🖨️
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](BOM.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](BOM_CN.md)
+
 ## 🤔 打印前准备 🤔
 
 > [!NOTE] 
