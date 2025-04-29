@@ -1,7 +1,7 @@
 #  ⚒️ Assemble! ⚒️ 
 
 
->Estimated Assembly time: with assembled SO100 arms: 1-2 hrs; from scratch: 4-6 hrs
+>Estimated Assembly time: with assembled SO100 arms: 1-2 hrs; from scratch: 5-8 hrs
 ## 🤔 Before Assembly 🤔
 > [!TIP]  
 > If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100 arms at a higher price. The SO100 arm assembly does take the most time, 4-6 hrs for 2 arms. After the arms are assembled the remaining assembly time only takes 1-2 hrs.
