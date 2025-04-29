@@ -65,7 +65,8 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 ## Install the Arms
 
-- In the current version, for easier testing, the SO100 arm clamps directly onto the cart. Position the arm base at the two corners of the cart's top layer, then secure with clamps.
+- In the current version, for easier testing, the SO100 arm clamps directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
+- Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support.
 - ![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
 - ![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
 
