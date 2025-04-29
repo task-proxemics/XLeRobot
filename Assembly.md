@@ -51,11 +51,13 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 > [!TIP]  
 > You might want to filp the cart over to do the assembly below.
 
-In the first version of hardware, it may be challenging to align all six screws perfectly.
-2. Connect the extended cables or self-made cable extensions.
-3. Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing.
-    1. Repeat this process for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
-![image](https://github.com/user-attachments/assets/61721cce-3744-4afc-9280-06712c769050)
+
+- In the first version of hardware, it may be challenging to align all six screws perfectly.
+- ![image](https://github.com/user-attachments/assets/fe28320e-1851-495b-afc3-4e9302f92626)
+
+- Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing.
+Repeat this process for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
+
 
 
 ## Install the Arms
@@ -70,7 +72,7 @@ Place the battery on the middle or lower level to maintain a low center of gravi
 
 ## Last Wiring
 
-See iPad wiring diagram
+Also use needle-nose pliers to cut out the metal mesh at for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
 
 When extending the signal cable yourself, be careful with the polarity—reversed connections will cause errors.
 
