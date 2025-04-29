@@ -1,4 +1,8 @@
 # 🦾 让您的机器人动起来！ 🦿
+
+[![en](https://img.shields.io/badge/lang-en-red.svg)](Software.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](Software_CN.md)
+
 > [!NOTE] 
 > XLeRobot 的第一个预览版本还没有代码（将在一个月内推出），所以目前它 100% 依赖于 Lekiwi 的代码库。当新代码发布后，迁移过程将不超过 5 分钟。
 
