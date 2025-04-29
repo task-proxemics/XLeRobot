@@ -99,7 +99,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 
 ##  🧵 Last, Wiring 🧵
-- Up til now, this is what XLeRbot should look like:
+- Up til now, this is what XLeRobot should look like:
 
 ![image](https://github.com/user-attachments/assets/395e00c7-b8cf-4c4e-ac41-4b80c93c81a4)
 
