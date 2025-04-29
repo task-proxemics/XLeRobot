@@ -88,6 +88,8 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 
 ##  🧵 Last, Wiring 🧵
+- Up til now, this is what XLeRbot should look like:
+- ![image](https://github.com/user-attachments/assets/395e00c7-b8cf-4c4e-ac41-4b80c93c81a4)
 
 - Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing the same way as the bottom layer previously. Choose the location as needed
     - I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
