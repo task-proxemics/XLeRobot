@@ -44,8 +44,15 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 > [!TIP]  
 > You might want to filp the cart over to do this.
 
-1. Place the base on the bottom of the cart
-    1. In this initial hardware version, it may be challenging to align all six screws perfectly.
+- Mount the 3 supporting connectors on the top plate, anywhere you think could give a stable support
+
+> [!TIP]  
+> Put the Lekiwi base with the connects under the cart to see whether it can give enough pressure to the cart, with four wheels of the cart can still touch the ground. If not, try to modify the connectors' 3D model by slightly adjust the z-axis scale directly in the slicer software (keeping the xy-axis scale unchanged) and print them again.
+
+> [!TIP]  
+> You might want to filp the cart over to do this.
+
+In the first version of hardware, it may be challenging to align all six screws perfectly.
 2. Connect the extended cables or self-made cable extensions.
 3. Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing.
     1. Repeat this process for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
