@@ -99,7 +99,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 - Follow the wiring diagram below and:
     - Connect the extended 5264 motor cable from **the Lekiwi base** to **one of the SO100 arms** (this makes the base and the arm as Lekiwi).
-    - Connect the 2 USB-C to USB-A Cable from each **motor control board** to **RasberryPi** (the Rasberry Pi still has 2 USB-A slots open for the cameras later).
+    - Connect the 2 USB-C to USB-A Cable from each **motor control board** to **RasberryPi** (2 USB-A slots left for the cameras).
     - Connect all three Type-C power cables from to the high-power charging section at the bottom of the power supply. Each cable provides up to 100W when charging simultaneously, which is tested sufficient for 12V version operation.
 > [!IMPORTANT]
 > 
