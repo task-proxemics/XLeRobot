@@ -22,6 +22,9 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 ## Assemble 2x SO100 Arms
 - If you already have 2x SO100 arm, skip.
 - If not, please see this [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#d-step-by-step-assembly-instructions), follow the instructions to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
+- If you are building SO101 arm, follow [its new tutorial](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md).
+![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
+
 > [!TIP]  
 > Replace the motor's default cross-head screws with M3 hex screws—they're more durable, easier to install, and the black screws blend better with the black arm.
 
