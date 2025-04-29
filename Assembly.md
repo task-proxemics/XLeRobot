@@ -34,8 +34,9 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
     - No matter what, the simplified Lekiwi base should look like this:
     - ![image](https://github.com/user-attachments/assets/1b0b0600-e666-4825-9233-807ed63e9020)
 
-- Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and assemble the top plate, and pull it out.
-- ![image](https://github.com/user-attachments/assets/58bbb04b-c7ae-4f7b-94f2-2a187ac50c7b)
+- Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and leave it hanging (don't pull it out from the top plate just yet).
+- ![image](https://github.com/user-attachments/assets/8d81267b-4b58-4af5-8bb3-e77b01d3df7f)
+
 
 
 
@@ -48,7 +49,8 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 2. Connect the extended cables or self-made cable extensions.
 3. Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing.
     1. Repeat this process for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
-![image](https://github.com/user-attachments/assets/6b71c525-18ca-46dd-b1c6-02646d3f399f)
+![image](https://github.com/user-attachments/assets/61721cce-3744-4afc-9280-06712c769050)
+
 
 ## Install the Arms
 
