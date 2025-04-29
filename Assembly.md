@@ -1,7 +1,5 @@
-#  ⚒️ Assemble! ⚒️ TODO
+#  ⚒️ Assemble! ⚒️ 
 
-> [!NOTE] 
-> Currently actively working. There could be incorrect information. Planning on finish the first version **XLeRbot 0.1.0** in a few days, will delete this note when the first version is finished. The assembly is actually pretty simple so you can also try to do it yourself with the incomplete guides below😂.
 
 >Estimated Assembly time: with assembled SO100 arms: 1-2 hrs; from scratch: 4-6 hrs
 ## 🤔 Before Assembly 🤔
