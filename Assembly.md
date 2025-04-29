@@ -37,7 +37,9 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 ## 🛒 Install the IKEA RÅSKOG Cart 🛒
 
-- Just in case you accidentally throw your manual away, [here it is].
+- Just in case you accidentally throw your manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf).
+- <img width="925" alt="1745897734515" src="https://github.com/user-attachments/assets/f9f95840-5080-4084-bebb-ea456a097d55" />
+
 
 
 ## 🧑‍🦼‍➡️ Install the Lekiwi Base 🛒
