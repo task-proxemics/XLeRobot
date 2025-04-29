@@ -46,7 +46,7 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need these addit
 
 
 - I couldn't find any ready-made long 5264 wires for purchase in US—**only connector kits** that require manual assembly to extend the length (easy to do though).
-- You can definitely choose **similar cheaper cart not from IKEA**, in this case [slight change]() to the 3D printed part might be needed.
+- You can choose **similar cart not from IKEA**, in this case slight changes to the [3D printed part](3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl) may be needed.
 - While this battery🔋 may seem expensive💵, its functionality and reliability far exceed regular power banks. (Like in electric vehicles🚗, its battery is also one of the most expensive components.)
 - You can also choose **other batteries**, just make sure the maximum output is large enough to power 2 arms, 3 wheels, and a RasberryPi.
 - 2 Type C to DC wires(12V) connect motor control board to the power supply.
