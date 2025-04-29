@@ -37,7 +37,9 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and leave it hanging (don't pull it out from the top plate just yet).
 - ![image](https://github.com/user-attachments/assets/8d81267b-4b58-4af5-8bb3-e77b01d3df7f)
 
+## Install the IKEA RÅSKOG Cart
 
+- Just in case you accidentally throw your manual away, [here it is].
 
 
 ## Install the Lekiwi Base
