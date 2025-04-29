@@ -75,17 +75,22 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 - A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
 
+> [!NOTE] 
+> To test the basic single-arm version of XLeRobot directly with the original Lekiwi code before the code for XLeRobot is released, only clamp the SO100 arm that share the same motor control board with the Lekiwi base. And clamp the other one on your table to act as the leader arm.
+
+
 ## 🔋 Place the Battery 🛒
 
 - You can put it anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily silde during normal operations.
-- I keep it on the middle level for shorter cable runs and easy access (for hiking and camping).
+    - I keep it on the middle level for shorter cable runs and easy access (for hiking and camping).
 - Just in case you also accidentally throw this manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manual_Anker_SOLIX_C300_DC_Portable_Power_Station.pdf).
 - ![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
 
 
-## Last Wiring
+##  🧵 Last, Wiring 🧵
 
-Also use needle-nose pliers to cut out the metal mesh at for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
+- Also use needle-nose pliers to cut out the metal mesh at for the upper two layers. Choose the location as needed
+    - I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
 
 When extending the signal cable yourself, be careful with the polarity—reversed connections will cause errors.
 
