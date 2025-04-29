@@ -1,11 +1,11 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
-[![中文](https://img.shields.io/badge/lang-中文-red.svg)](README_CN.md)
+[![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
 [![es](https://img.shields.io/badge/lang-es-green.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-yellow.svg)](README_DE.md)
+[![de](https://img.shields.io/badge/lang-de-orange.svg)](README_DE.md)
 [![fr](https://img.shields.io/badge/lang-fr-white.svg)](README_FR.md)
-[![日本語](https://img.shields.io/badge/lang-日本語-brown.svg)](README_JP.md)
+[![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md)
 
 > [!NOTE] 
 > **XLeRobot 0.1.0** が正式にリリースされました！現在のバージョンには詳細な**部品リスト**、**3Dプリントモデルと説明書**、そして**段階的な組み立てガイド**が含まれています。コードはまだ利用できませんが、シングルアーム版（もう一方のフォロワーアームで制御）で**遠隔操作テスト**を元のLekiwiコードベースを使って直接実行できます。
