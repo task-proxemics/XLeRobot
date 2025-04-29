@@ -1,5 +1,7 @@
 #  ⚒️ 组装！ ⚒️ 
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](BOM.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](BOM_CN.md)
 
 >预计组装时间：使用已组装的SO100机械臂：1-2小时；从零开始：5-8小时
 ## 🤔 组装前 🤔
