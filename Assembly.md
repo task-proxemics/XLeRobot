@@ -65,9 +65,9 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 ## Install the Arms
 
-In the current version, for easier debugging, the SO100 arm clamps directly onto the cart. Position the arm base at the two corners of the cart's top layer, then secure with clamps.
+- In the current version, for easier testing, the SO100 arm clamps directly onto the cart. Position the arm base at the two corners of the cart's top layer, then secure with clamps.
 
-A second version will be released soon, featuring a bolted connection between the arm and cart, with standardized spacing between the two arms.
+- A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
 
 ## Install/Put the Battery:
 
