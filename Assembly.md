@@ -14,7 +14,8 @@
     - You need two sets of motors for 2 motor control boards: one for the SO100 arm (motors 1-6) and another for Lekiwi (motors 1-9).
     - Tips: write the numbers on motors with marker and distinguish motors for different boards (you can name it L1-L6 and R1-R6).
 
-![3a0621eb78b778edd62af9a0fc4348a](https://github.com/user-attachments/assets/036bdc8d-018f-45f9-a5b4-b1c31b2dc288)
+![image](https://github.com/user-attachments/assets/f3be78fe-0faa-454c-926d-ab1843b31d1f)
+
 
 If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
 
