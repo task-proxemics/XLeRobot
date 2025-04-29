@@ -63,10 +63,12 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - Now install the Lekiwi base with the connectors onto the bottom of the IKEA cart, with [the duplicated thinner top plate](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/base_plate_layer2_thinner.stl) on the other side.
 > [!NOTE] 
 > In the first version of hardware, it may be challenging to align all 3x4=12 screws perfectly. You can try to adjust the position and wiggle a little bit to find a place that can install the most screws distributed evenly. Currently the best I can do is 2 screws for each connector, which can give a very stable support. We will also update a new hardware version compatible with the IKEA cart metal mesh shortly.
-- ![image](https://github.com/user-attachments/assets/fe28320e-1851-495b-afc3-4e9302f92626)
+
+![image](https://github.com/user-attachments/assets/fe28320e-1851-495b-afc3-4e9302f92626)
 
 - Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base, removing only the central "x" to maintain structural integrity. This creates openings for cable routing. Then, run the previously extended wire up through the cart from below.
-- ![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
+
+![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
 
 
 
@@ -75,8 +77,10 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 - In the current version, for easier testing, the SO100 arm clamps directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support.
-- ![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
-- ![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
+
+![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
+
+![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
 
 
 - A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
@@ -90,12 +94,14 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - You can put it anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily silde during normal operations.
     - I keep it on the middle level for shorter cable runs and easy access (for hiking and camping).
 - Just in case you also accidentally throw this manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manual_Anker_SOLIX_C300_DC_Portable_Power_Station.pdf).
-- ![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
+
+![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
 
 
 ##  🧵 Last, Wiring 🧵
 - Up til now, this is what XLeRbot should look like:
-- ![image](https://github.com/user-attachments/assets/395e00c7-b8cf-4c4e-ac41-4b80c93c81a4)
+
+![image](https://github.com/user-attachments/assets/395e00c7-b8cf-4c4e-ac41-4b80c93c81a4)
 
 - Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing the same way as the bottom layer previously. Choose the location as needed
     - I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
@@ -114,7 +120,8 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 > [!NOTE] 
 > You need to [install software on **Rasberry Pi** and setup SSH](https://github.com/Vector-Wangel/XLeRobot/blob/main/Software.md) first before this final step.
 
-- ![image](https://github.com/user-attachments/assets/5367eb11-377e-4243-a9ff-746266012901)
-- <img width="725" alt="1745906421978" src="https://github.com/user-attachments/assets/cfaf47d6-b112-4c89-93ce-cb2e21515ee0" />
+![image](https://github.com/user-attachments/assets/5367eb11-377e-4243-a9ff-746266012901)
+
+<img width="725" alt="1745906421978" src="https://github.com/user-attachments/assets/cfaf47d6-b112-4c89-93ce-cb2e21515ee0" />
 
 ### Finally, let's [🦾 Get Your Robot Moving! 🦿](Software.md)
