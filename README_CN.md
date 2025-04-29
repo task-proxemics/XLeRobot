@@ -102,7 +102,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 > 我自己也是硬件新手，所以我想让这个教程对所有初学者都友好。
 1. 💵 **购买零件**：[材料清单](BOM.md)
 2. 🖨️ **打印部件**：[3D打印](3Dprint.md)
-3. 🔨 ~~复仇者~~：[**组装**！](Assembly.md)
+3. 🔨 复仇者（bushi）：[**集合**！](Assembly.md)
 4. 💻 **软件**：[让你的机器人动起来！](Software.md)
 ---
 ---
