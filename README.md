@@ -1,8 +1,7 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
 > [!NOTE] 
-> The first verison of **XLeRobot 0.1.0** officially out!
-> Current version has: detailed bill of materials, 3D printing models and instructions, step-by-step assembly guide. No codes yet but you can run the teleopertion test on a single arm version (controlled with another follower arm) directly with the original Lekiwi codebase.
+> The first version of **XLeRobot 0.1.0** is officially out! The current version includes a detailed bill of materials, 3D printing models and instructions, and a step-by-step assembly guide. While the code is not yet available, you can run the teleoperation test on a single arm version (controlled with another follower arm) directly using the original Lekiwi codebase.
 
 # XLeRobot 🤖
 
@@ -22,20 +21,20 @@
 ---
 
 ## 🌟 Why XLeRobot? 🌟
-We answer this separately since    **XLeRobot = XL + LeRobot**
+Let's break this down since **XLeRobot = XL + LeRobot**
 
 <table>
   <tr>
     <td>
       
 ### Why "LeRobot" Core?
-- **Cheap Materials** 💴: 90% 3D printed, with cheap motors and electronics.
-- **Easy Assembly** 🔨: Screw for 2hrs and here it is.
-- **Plug-&-Play** 🧩: Make robots perform by simple pip install and running a few lines.
-- **Thriving Community** 🌍:
-  World's largest low-cost robotics community with
-  - Multiple SOTA pretrained AI models🧠, datasets📊, and tools🔨 for direct deploy. 
-  - 5000+ brilliant minds for brainstrom and discussions🧑‍🤝‍🧑.
+- **Cheap Materials** 💴: 90% 3D printed components with affordable motors and electronics.
+- **Easy Assembly** 🔨: Just 2 hours of assembly time required.
+- **Plug-&-Play** 🧩: Get robots running with simple pip install and a few lines of code.
+- **Thriving LeRobot Community** 🌍:
+  World's largest low-cost robotics community featuring
+  - Multiple state-of-the-art pretrained AI models🧠, datasets📊, and tools🔨 ready for deployment. 
+  - 5,000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
     
     </td>
     </tr>
@@ -43,10 +42,10 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     <td>
  
 ### Why "XL" Enhancement? 
-- 🏠 Currently, there is a lack of affordable, stable, general-purpose home mobile robots with dual arms that are as easy to build as LeRobot.
-- 🖨️ 3D printed frames have limited durability, stability, and load capacity, while being complex to assemble and impractical for daily use.
-- ⚡ Power supply remains a challenge for DIY mobile robots, resulting in complicated wiring configurations.
-- 🤖 **XLerobot** uses the same setup configuration as most tabletop dual-arm SO100 in the LeRobot community, making code and policy transfer straightforward.
+- 🏠 The field/market lacks affordable, stable, dual-arm home robots that match LeRobot's ease of assembly.
+- 🖨️ Traditional 3D printed chassis suffer from limited durability, stability, and load capacity—making them impractical for daily use.
+- ⚡ DIY mobile robots face power supply challenges, leading to complex wiring setups.
+- 🤖 **XLerobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO100 configuration, enabling seamless code and policy transfer.
   
     </td>
   </tr>
@@ -54,17 +53,17 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
  
 ### Overall Advantages/Goals of XLeRobot
 
-- **Cost-effective** 💴: complete make for ~\$660 , with upgrades from existing SO100Arm and Lekiwi for ~\$250 .
+- **Cost-effective** 💴: Complete build costs ~$660, or upgrade from existing SO100Arm and Lekiwi for ~$250.
 - **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO100**
-    - Hardware: No motor id changes or hardware modifications required
-    - Software: Same tabletop single-arm/dual-arm setup, directly transfer your trained policy from tabletop SO100 arm to here
-- **Practical and reliable** 💪: capable of completing many daily tasks performed by $20,000 dual-arm mobile robots on the market.
+    - Hardware: No motor ID changes or hardware modifications needed
+    - Software: Identical tabletop single-arm/dual-arm setup—transfer your trained policies directly from SO100 arm
+- **Practical and reliable** 💪: Performs many daily tasks comparable to $20,000 market alternatives.
  
-    - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
-    - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
+    - More tasks demonstrated in the LeRobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
+    - **Note**: Not currently designed for in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - **Rich open-source resources** 📕
-    - LeRobot's plug-and-play code🧩 and numerous AI models🧠
-    - Supported by an active, growing community of contributors🧑‍🤝‍🧑
+    - LeRobot's plug-and-play code🧩 and extensive AI model library🧠
+    - Backed by an active, growing community of contributors🧑‍🤝‍🧑
 
 <img width="598" alt="Examples" src="https://github.com/user-attachments/assets/ca418604-13fc-43bf-811a-6036a4455a69" />
 
