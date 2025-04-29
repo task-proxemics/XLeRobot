@@ -38,16 +38,16 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 
 ### [Thinner Lekiwi base top plate](3D_Models/3D_models_for_printing/XLeRobot_special/base_plate_layer2_thinner.stl)
 
-- Same as the Lekiwi base top plate, only thinner. Secure the connector to the bottom of the IKEA cart.
+- Same as the Lekiwi base top plate, only thinner. Secure the connectors to the bottom of the IKEA cart.
 - <img src="https://github.com/user-attachments/assets/17d63ccf-469c-4811-860f-e55ffdee396b" width="400" />
-- A second version will be iterated soon to make installation on the metal mesh of the cart bottom more convenient, though currently Lekiwi base and the cart can achieve a stable connection)
+- A second version will be iterated soon to make installation on the metal mesh of the cart bottom more convenient, though currently Lekiwi base and the cart can achieve a stable connection
 
 ## 🌿 Print from scratch 🌿
 
 If you haven't printed any SO100 arm or Lekiwi base, Just follow their instructions ([Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md) and [SO100 Arm](https://github.com/TheRobotStudio/SO-ARM100#printing-the-parts)) along with the suggestions below.
 ### 🦾 2x SO100 Arms 
 > [!NOTE]
-> Just found out that today (2025.4.28) [SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) is released for improved wiring and easier to assembly, there might be slight change to the  follower arms model (though I have noticed yet).
+> Just found out that today (2025.4.28) [SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) is released for improved wiring and easier to assembly, there some slight changes to the  follower arms model for simplified parts and better wire management.
 
 - In the current hardware version, you only need to print two [follower arms](3D_Models/3D_models_for_printing/SO100). You only need to print the [leader arm](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting/Leader) when you need to teleope the dual arms with leader-follower joint control.
 - <img src="https://github.com/user-attachments/assets/d1a5870e-ab96-4c57-a949-1e5daf84bbb3" width="800" />
