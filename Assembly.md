@@ -1,5 +1,7 @@
 #  ⚒️ Assemble! ⚒️ 
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](BOM.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](BOM_CN.md)
 
 >Estimated Assembly time: with assembled SO100 arms: 1-2 hrs; from scratch: 5-8 hrs
 ## 🤔 Before Assembly 🤔
