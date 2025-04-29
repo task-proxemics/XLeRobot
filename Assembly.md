@@ -111,4 +111,4 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - ![image](https://github.com/user-attachments/assets/5367eb11-377e-4243-a9ff-746266012901)
 - <img width="725" alt="1745906421978" src="https://github.com/user-attachments/assets/cfaf47d6-b112-4c89-93ce-cb2e21515ee0" />
 
-** Finally, let's [🦾 Get Your Robot Moving! 🦿](https://github.com/Vector-Wangel/XLeRobot/blob/main/Software.md)
+### Finally, let's [🦾 Get Your Robot Moving! 🦿](https://github.com/Vector-Wangel/XLeRobot/blob/main/Software.md)
