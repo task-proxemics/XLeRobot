@@ -73,7 +73,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 - A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
 
-## 🔋 Install/Put the Battery 🛒
+## 🔋 Place the Battery 🛒
 
 Place the battery on the middle or lower level to maintain a low center of gravity. I keep it on the middle level for shorter cable runs and easy access (for hiking and camping).
 
