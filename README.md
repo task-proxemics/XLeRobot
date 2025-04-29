@@ -67,7 +67,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
 
 <img width="598" alt="Examples" src="https://github.com/user-attachments/assets/ca418604-13fc-43bf-811a-6036a4455a69" />
 
-Though these👆 are only staged photos, but this shows what **XLeRobot** platform is capable of under its hardware limits. (Sorry the scenes are a little messy, but hey, that's life.)
+These👆 are staged photos, but they demonstrate what the XLeRobot platform can achieve within its hardware limitations. (The scenes are a bit messy, but hey, that's life!)
 
 
 
@@ -75,7 +75,7 @@ Though these👆 are only staged photos, but this shows what **XLeRobot** platfo
 ---
 ## 🎯 Demo 0.1.0 🎯
 > [!NOTE]
-> Currently just a single arm version by directly implementing Lekiwi, teleoped by the other follower arm. 3x speed.
+> Currently a **single-arm version** implementing Lekiwi, teleoperated by the other follower arm at **3x speed**.
 
 https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
@@ -84,7 +84,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 ## 💵 Total Cost 💵
 
 > [!NOTE] 
-> Doesn't include the cost of 3D printing, tools, shippings and taxes.
+> Cost excludes 3D printing, tools, shipping, and taxes.
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
@@ -99,7 +99,7 @@ For details please see [Bill of Materials](BOM.md).
 ---
 ## 🚀 Get Started 🚀
 > [!NOTE] 
-> I am a hardware rookie myself, so I want to make sure this tutorial is friendly to every fellow rookie.
+> I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
 1. 💵 **Buy your parts**: [Bill of Materials](BOM.md)
 2. 🖨️ **Print your stuff**: [3D printing](3Dprint.md)
 3. 🔨 ~~Avengers~~: [**Assemble**!](Assembly.md)
@@ -116,7 +116,7 @@ For details please see [Bill of Materials](BOM.md).
 = 2x SO100 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 > [!NOTE]
-> *All compute handled by your PC - Raspberry Pi only manages data communication via wifi 📶*
+> *All computing is handled by your PC—Raspberry Pi only manages data communication via WiFi  📶*
 
 <table>
   <tr>
@@ -124,12 +124,12 @@ For details please see [Bill of Materials](BOM.md).
       
 ### Why IKEA RÅSKOG Cart?
 - 🌎 Global availability with standardized design
-- 💰 Cheap
-- 🏗️ Simple structure yet sturdy construction
-- 🔧 Metal Mesh bottom enables easy mounting of components
-- 📦 Perfect for storage and transportation of items
+- 💰 Cost-effective
+- 🏗️ Simple yet sturdy construction
+- 🔧 Metal mesh bottom enables easy component mounting
+- 📦 Perfect for storage and transportation
 - 📏 Ideal height for common household surfaces—from stovetop to coffee table
-- 📏 Also the plane size is compact and can fit in 99% rooms (Thanks to the designers in IKEA).
+- 📏 Compact footprint fits in nearly any room (thanks to IKEA's thoughtful design)
 
 
     </td>
@@ -140,23 +140,22 @@ For details please see [Bill of Materials](BOM.md).
 ### Why Anker SOLIX C300 Power Station? 
 - 🌍 Global availability
 - ⚡ 288Wh capacity, 300W maximum output power, 280W maximum charging power
-- 🔌 Powers both 12V arms, base, and Raspberry Pi at full capacity through three Type-C charging cables—eliminating complex wiring system
-- 🔋 Exceptional battery life: 12+ hours with normal use, 8 hours under intensive operation, and only 1 hour to fully charge
+- 🔌 Powers both 12V arms, base, and Raspberry Pi at full capacity through three USB-C charging cables—eliminating complex wiring
+- 🔋 Exceptional battery life: 12+ hours normal use, 8 hours intensive operation, 1-hour full charge
 - 💡 Integrated lighting for nighttime operation
 - ☀️ Optional solar panel mounting for continuous power supply
-- 🎒 Versatile and detachable—serves beyond robotics in daily life as emergency backup power or camping power source
+- 🎒 Versatile and detachable—doubles as emergency backup power or camping power source
 
     </td>
   </tr>
 </table>
 <img width="843" alt="1745819677076" src="https://github.com/user-attachments/assets/ad081621-1e69-4bc6-a50f-d89cf92f35c3" />
 
-Even if you don't play with robots (hopefully that won't happen) anymore, these two products can still play a role in your daily life.
-
+Even when you're not actively using the robot, these two products remain valuable for everyday use.
 ---
 
 ## 💻 Software Intro 💻
-Here's a general idea of how you can control the robot and make it smart:
+Here's how you can control the robot and make it intelligent:
 
 ### 🕹️ Basic Control
 
@@ -165,7 +164,7 @@ Here's a general idea of how you can control the robot and make it smart:
 - **End effector pose** control → VR remote control
   
 > [!NOTE]
-> For the first version we mainly focus on the hardware. The LeRobot code hasn't been modified yet. You can run the original Lekiwi demo by connecting one arm to the RaspberryPi and another arm to the desktop to recreate the Demo 0.0.5 by remote control. The Lerobot code for XLeRobot will be soon updated with highest priority.
+> For the first version, we focus primarily on the hardware. The LeRobot code remains unmodified. You can recreate Demo 0.1.0 by connecting one arm to the RaspberryPi and the other to the desktop for remote control. **The LeRobot code for XLeRobot** will be updated soon as our top priority.
 
 
 ### 🧠 Paths towards General Embodied Machine Intelligence (TODO)
@@ -175,13 +174,13 @@ Here's a general idea of how you can control the robot and make it smart:
 
 
 
-### 🔈🇦🇩 Advertisment:
+### 🔈Advertisment:
 - **Our lab**: [Rice RobotPI Lab](https://robotpilab.github.io/)
-    - One of our visions: use [Caging in Time](https://robotpilab.github.io/publication/caging/) and Funnel-based Manipulation methodology to realize robust object manipulation under imperfect real world situations perception noise, network lag, [contact rich](https://robotpilab.github.io/publication/collision-inclusive-manipulation/), etc.
+    - Our vision includes using [**Caging in Time**](https://robotpilab.github.io/publication/caging/) and **Funnel-based Manipulation** methods to achieve robust object manipulation in imperfect real-world conditions — including perception noise, network lag, and [contact rich](https://robotpilab.github.io/publication/collision-inclusive-manipulation/) environments.
 - **Simulation platform** (my personal preference): [Maniskill](https://www.maniskill.ai/)
     - 🚀Fast GPU acceleration for parallel simulations
-    - 🎨Nice photorealistic visual by ray-tracing
-    - 🪶Light-weight, consistent, easy to use (compared with Isaac Lab, in my opinion)
+    - 🎨Beautiful photorealistic visuals through ray-tracing
+    - 🪶Lightweight, consistent, and user-friendly (compared to Isaac Lab, in my opinion)
     - 🤖Support for [multiple robots](https://maniskill.readthedocs.io/en/latest/robots/index.html) (including [SO100 arm](https://x.com/Stone_Tao/status/1910101218241978537))
 
 
@@ -196,7 +195,7 @@ Here's a general idea of how you can control the robot and make it smart:
 **Urgent**
 
 - 🔧 Add two arm base options: clamp-held (current) or screw-mounted
-- 🛠️ Add a connector plate that is fully compatible with the metal mesh of IKEA cart
+- 🛠️ Add a connector plate fully compatible with IKEA cart's metal mesh
     </td>
     </tr>
     <tr>
@@ -204,8 +203,8 @@ Here's a general idea of how you can control the robot and make it smart:
     
 **In the near future**
 
-- 📸 Add a RealSense depth camera to the head complement the hand RGB cameras for precise environmental perception
-- 🔦 Add a Lidar and some SLAM to make it navigate freely at home just like a Roomba
+- 📸 Add a RealSense depth camera to the head to complement the hand RGB cameras for precise environmental perception
+- 🔦 Add a Lidar and SLAM capabilities for Roomba-like home navigation
 - 👆 Basic tactile sensing
     </td>
   </tr>
@@ -237,7 +236,7 @@ Here's a general idea of how you can control the robot and make it smart:
 **In the near future**
 
 - 🎯 AprilTag-based precise calibration
-- 🗺️ Single RGBD camera autonomous navigation
+- 🗺️ Autonomous navigation
 - 🌐 Digital twin alignment for sim2real applications
 - 🧠 World model and physics-based robust manipulation
 - 💬 Connect with MCP to directly utilize LLMs
@@ -247,7 +246,7 @@ Here's a general idea of how you can control the robot and make it smart:
 
 ---
 
-## 🎯 Who is XLerobot For?
+## 🎯 Who is XLeRobot For?
 
 - 🚀 **Startups & Labs**: Build prototypes faster with the world's cheapest modular platform
 - 👩🔬 **Self Researchers**: Experiment with embodied AI without breaking the bank 💸
@@ -263,11 +262,11 @@ Here's a general idea of how you can control the robot and make it smart:
 (Hey, for this price, what more could you ask for?)
 
 - 🔒 Fixed height—adding a stable lifting platform would significantly increase costs and assembly difficulty
-- 📏 Smaller workspace compared to Aloha—though we try to fully utilize the workspace of SO100, the arm size does have limits—though XLeRobot can still handles the majority of its tasks
-- ⚖️ Limited payload capacity for a single arm—that's why the IKEA cart is here
-- 🛒 Base movement precision may be affected by the wheels of IKEA cart—can be addressed through closed-loop feedback control
-
-All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as the most compelling low-cost robot for indoor application (personal opinion)
+- 📏 Smaller workspace compared to Aloha—while we maximize the SO100 workspace, the arm has size limitations, though XLeRobot still handles most tasks effectively
+- ⚖️ Limited payload capacity for a single arm—that's why we use the IKEA cart
+- 🛒 Base movement precision may be affected by the IKEA cart wheels—this can be addressed through closed-loop feedback control
+  
+All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as one of the most compelling low-cost robot for indoor application!
 
 
 ---
@@ -276,10 +275,10 @@ All things considered—cost, community support, ease of assembly, and practical
 
 Currently just [me](https://vector-wangel.github.io/). 
 
-This is just a very small brick on the pyramids, definitely not possible with [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks again for these detailed and professional projects done by their talented contributors.
+This is just a small brick in the pyramid, made possible by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks to all the talented contributors behind these detailed and professional projects.
 
-Looking forward to collaborate with anyone interested in making contribuions for this project!
+Looking forward to collaborating with anyone interested in contributing to this project!
 
-Not affiliated with IKEA (but we love swedish meatball! 🍝)
+Not affiliated with Anker or IKEA (but we love Swedish meatballs! 🍝)
 
 
