@@ -57,8 +57,9 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 > In the first version of hardware, it may be challenging to align all 3x4=12 screws perfectly. You can try to adjust the position and wiggle a little bit to find a place that can install the most screws distributed evenly. Currently the best I can do is 2 screws for each connector, which can give a very stable support. We will also update a new hardware version compatible with the IKEA cart metal mesh shortly.
 - ![image](https://github.com/user-attachments/assets/fe28320e-1851-495b-afc3-4e9302f92626)
 
-- Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing.
-Repeat this process for the upper two layers. Choose the location as needed—I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
+- Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base (only remove the central "x" to maintain structural integrity) for cable routing. You can do this before or after mounting the Lekiwi base.
+- ![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
+
 
 
 
