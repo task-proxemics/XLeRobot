@@ -1,5 +1,8 @@
 # 🖨️ 3D Printing Your Stuff! 🖨️
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](3Dprint.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](3Dprint_CN.md)
+
 ## 🤔 Before Printing 🤔
 
 > [!NOTE] 
