@@ -1,4 +1,8 @@
 # 🦾 Get Your Robot Moving! 🦿
+
+[![en](https://img.shields.io/badge/lang-en-red.svg)](Software.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](Software_CN.md)
+
 > [!NOTE] 
 > The first preview verison of XLeRobot doesn't have codes yet (will rollout within a month), so currently it 100% rely on the Lekiwi codebase. When the new code comes out, it will take less than 5 minutes to migrate over.
 
