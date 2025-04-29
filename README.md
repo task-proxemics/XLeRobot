@@ -58,8 +58,8 @@ We answer this separately since    **XLeRobot = XL + LeRobot**
     - Hardware: No motor id changes or hardware modifications required
     - Software: Same tabletop single-arm/dual-arm setup, directly transfer your trained policy from tabletop SO100 arm to here
 - **Practical and reliable** 💪: capable of completing many daily tasks performed by $20,000 dual-arm mobile robots on the market.
-    - For example👇 
-    - <img width="598" alt="Examples" src="https://github.com/user-attachments/assets/ca418604-13fc-43bf-811a-6036a4455a69" />
+ 
+<img width="598" alt="Examples" src="https://github.com/user-attachments/assets/ca418604-13fc-43bf-811a-6036a4455a69" />
     - Though these👆 are only staged photos, but this shows what **XLeRobot** platform is capable of under its hardware limits. (Sorry the scenes are a little messy, but hey, that's life.)
     - More tasks demonstrated in the Lerobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
     - **Note**: Currently not designed for tasks requiring in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
