@@ -117,6 +117,12 @@ For details please see [Bill of Materials](BOM.md).
 
 = 2x SO100 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
+### 📜Basic Specs
+
+- **Weight**: ~12kg. Easily lifted by an adult.
+- **Workspace**: H: ~0.5-1.25m, W: ~0.36m from the cart edge. Capable of many household tasks.
+- **Battery**: 288Wh capacity, 300W max out, 280W max in. Operate for 10hrs and 1hr to get fully charged. Optional solar panels.
+
 > [!NOTE]
 > *All computing is handled by your PC—Raspberry Pi only manages data communication via WiFi  📶*
 
@@ -154,6 +160,7 @@ For details please see [Bill of Materials](BOM.md).
 <img width="843" alt="1745819677076" src="https://github.com/user-attachments/assets/ad081621-1e69-4bc6-a50f-d89cf92f35c3" />
 
 Even when you're not actively using the robot, these two products remain valuable for everyday use.
+
 ---
 
 ## 💻 Software Intro 💻
