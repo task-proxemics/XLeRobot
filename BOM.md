@@ -110,7 +110,6 @@ These components will allow you to replicate Demo 0.0.5, enabling master-slave a
 
 
 
+### While waiting for the shipping, go [🖨️ 3D Print your stuff 🖨️](3DPrinting.md)
 
-
-> Head to [3D Printing](3DPrinting.md) for the next step!
 
