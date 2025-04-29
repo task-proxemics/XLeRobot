@@ -79,6 +79,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 - You can put it anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily silde during normal operations.
 - I keep it on the middle level for shorter cable runs and easy access (for hiking and camping).
+- Just in case you also accidentally throw this manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manual_Anker_SOLIX_C300_DC_Portable_Power_Station.pdf).
 ![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
 
 
