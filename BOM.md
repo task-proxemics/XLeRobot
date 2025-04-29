@@ -70,7 +70,7 @@ For those starting from scratch (without SO100 arms or Lekiwi), besides the part
 | Table Clamp 4pcs | 1 | $8.99 | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | ~€8 | [TODO]() | ￥9.2          | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649)                   |
 
 > [!NOTE] 
-> Both of the 2 SO100 Arms are follower arms in hardware setup, you can use one of them as the leader arm for testing teleop without the need to remove the gears of the motors (instructed in the original SO100 tutorial) if you want to save money with only 2 arms.
+> Both of the 2 SO100 Arms are follower arms in hardware setup, you can use one of them as the leader arm for testing teleop without the need to remove the gears of the motors if you want to save money with building only 2 arms.
 > 
 ### 🧑‍🦼‍➡️ 1x Lekiwi Base 👨‍🦼
 
