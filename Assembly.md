@@ -16,7 +16,7 @@
 
 If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
 
-## Assemble 2x SO100 Arms
+## 🦾🦾 Assemble 2x SO100 Arms 🦾🦾
 - If you already have 2x SO100 arm, skip.
 - If not, please see this [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#d-step-by-step-assembly-instructions), follow the instructions to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
 - If you are building SO101 arm, follow [its new tutorial](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md).
@@ -25,7 +25,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 > [!TIP]  
 > Replace the motor's default cross-head screws with M3 hex screws—they're more durable, easier to install, and the black screws blend better with the black arm.
 
-## Assemble 1x Lekiwi Base
+## 🧑‍🦼‍➡️ Assemble 1x Lekiwi Base 🧑‍🦼‍➡️
 
 - If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
     - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also stop after mounting motors on the base plate with wheels.
@@ -35,12 +35,12 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and leave it hanging (don't pull it out from the top plate just yet).
 - ![image](https://github.com/user-attachments/assets/8d81267b-4b58-4af5-8bb3-e77b01d3df7f)
 
-## Install the IKEA RÅSKOG Cart
+## 🛒 Install the IKEA RÅSKOG Cart 🛒
 
 - Just in case you accidentally throw your manual away, [here it is].
 
 
-## Install the Lekiwi Base
+## 🧑‍🦼‍➡️ Install the Lekiwi Base 🛒
 
 - Mount the 3 [connectors](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl) on the top plate, anywhere you think could give a stable support
 ![image](https://github.com/user-attachments/assets/c8233b2d-c58a-4ce5-8b25-b0e7832a60f3)
@@ -63,7 +63,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 
 
-## Install the Arms
+## 🦾🦾 Install the Arms 🛒
 
 - In the current version, for easier testing, the SO100 arm clamps directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support.
@@ -73,7 +73,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 - A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
 
-## Install/Put the Battery:
+## 🔋 Install/Put the Battery 🛒
 
 Place the battery on the middle or lower level to maintain a low center of gravity. I keep it on the middle level for shorter cable runs and easy access (for hiking and camping).
 
