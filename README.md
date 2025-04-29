@@ -1,5 +1,10 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](README_CN.md)
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
+[![de](https://img.shields.io/badge/lang-de-blue.svg)](README_DE.md)
+
 > [!NOTE] 
 > **XLeRobot 0.1.0** is officially out! The current version includes a detailed **bill of materials**, **3D printing models and instructions**, and a **step-by-step assembly guide**. While the code is not yet available, you can **run the teleoperation test** on a single arm version (controlled with another follower arm) directly using the original Lekiwi codebase.
 
@@ -9,11 +14,6 @@
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
-
-[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![中文](https://img.shields.io/badge/lang-中文-green.svg)](README_CN.md)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-blue.svg)](README_DE.md)
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
