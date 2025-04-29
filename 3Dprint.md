@@ -27,7 +27,7 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 
 - The bases are designed to rotate 15 degrees outward, expanding the workspace area on both sides while enabling smooth collaboration between the two arms.
 - <img src="https://github.com/user-attachments/assets/f612c9d8-fca2-406e-ab25-d015ea5e62c4" width="500" />
-- The original forward facing base is also available.
+- The [original forward facing base](3D_Models/3D_models_for_printing/XLeRobot_special/XLe_arm_bases_0degrees_rotated.stl) is also available if you want to keep things simple.
 - ![image](https://github.com/user-attachments/assets/eb77aad3-4df3-45c1-93c2-1c2e278512b5)
 
 - The design features a hollow center to save filament. You can insert a used Bambulab filament cardboard spool for added structural support.
