@@ -115,7 +115,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
     - Connect all three Type-C **power cables** from 2 **motor control board** and **Rasberry Pi** to the fast charging section of the power supply. Each cable provides up to 100W when charging simultaneously, which is tested sufficient for 12V version operation.
 
 > [!IMPORTANT]
-> In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/plugging other cables.
+> In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
 
 > [!NOTE] 
 > You need to [install software on **Rasberry Pi** and setup SSH](https://github.com/Vector-Wangel/XLeRobot/blob/main/Software.md) first before this final step.
