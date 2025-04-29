@@ -1,10 +1,10 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![中文](https://img.shields.io/badge/lang-中文-green.svg)](README_CN.md)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-blue.svg)](README_DE.md)
-[![日本語](https://img.shields.io/badge/lang-日本語-blue.svg)](README_JP.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-red.svg)](README_CN.md)
+[![es](https://img.shields.io/badge/lang-es-green.svg)](README_ES.md)
+[![de](https://img.shields.io/badge/lang-de-yellow.svg)](README_DE.md)
+[![日本語](https://img.shields.io/badge/lang-日本語-white.svg)](README_JP.md)
 
 > [!NOTE] 
 > **XLeRobot 0.1.0** is officially out! The current version includes a detailed **bill of materials**, **3D printing models and instructions**, and a **step-by-step assembly guide**. While the code is not yet available, you can **run the teleoperation test** on a single arm version (controlled with another follower arm) directly using the original Lekiwi codebase.
