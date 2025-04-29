@@ -1,9 +1,10 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![中文](https://img.shields.io/badge/lang-中文-green.svg)](README_CN.md)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-blue.svg)](README_DE.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-red.svg)](README_CN.md)
+[![es](https://img.shields.io/badge/lang-es-green.svg)](README_ES.md)
+[![de](https://img.shields.io/badge/lang-de-yellow.svg)](README_DE.md)
+[![日本語](https://img.shields.io/badge/lang-日本語-white.svg)](README_JP.md)
 
 > [!NOTE] 
 > **XLeRobot 0.1.0** 正式发布！当前版本包括详细的**材料清单**、**3D打印模型和说明**，以及**逐步组装指南**。虽然代码尚未提供，但您可以使用原始Lekiwi代码库在单臂版本上**运行远程操作测试**（由另一个跟随臂控制）。
