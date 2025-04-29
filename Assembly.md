@@ -29,7 +29,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 ## Assemble 1x Lekiwi Base
 
-- If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels. 
+- If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
     - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also stop after mounting motors on the base plate with wheels.
     - No matter what, the simplified Lekiwi base should look like this:
     - ![image](https://github.com/user-attachments/assets/1b0b0600-e666-4825-9233-807ed63e9020)
