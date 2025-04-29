@@ -1,10 +1,11 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
-[![中文](https://img.shields.io/badge/lang-中文-red.svg)](README_CN.md)
+[![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
 [![es](https://img.shields.io/badge/lang-es-green.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-yellow.svg)](README_DE.md)
-[![日本語](https://img.shields.io/badge/lang-日本語-white.svg)](README_JP.md)
+[![de](https://img.shields.io/badge/lang-de-orange.svg)](README_DE.md)
+[![fr](https://img.shields.io/badge/lang-fr-white.svg)](README_FR.md)
+[![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md)
 
 > [!NOTE] 
 > Die erste Version von **XLeRobot 0.1.0** ist offiziell verfügbar! Die aktuelle Version enthält eine detaillierte **Stückliste**, **3D-Druckmodelle und Anleitungen** sowie eine **schrittweise Montageanleitung**. Obwohl der Code noch nicht verfügbar ist, können Sie den **Teleoperationstest** an einer einarmigen Version (gesteuert mit einem anderen Folgearm) direkt mit dem ursprünglichen Lekiwi-Code durchführen.
