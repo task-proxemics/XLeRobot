@@ -1,7 +1,7 @@
 <img src="media/XLeRobot.png" alt="Alt text" width="1200" />
 
 > [!NOTE] 
-> The first version of **XLeRobot 0.1.0** is officially out! The current version includes a detailed bill of materials, 3D printing models and instructions, and a step-by-step assembly guide. While the code is not yet available, you can run the teleoperation test on a single arm version (controlled with another follower arm) directly using the original Lekiwi codebase.
+> The first version of **XLeRobot 0.1.0** is officially out! The current version includes a detailed **bill of materials**, **3D printing models and instructions**, and a **step-by-step assembly guide**. While the code is not yet available, you can **run the teleoperation test** on a single arm version (controlled with another follower arm) directly using the original Lekiwi codebase.
 
 # XLeRobot 🤖
 
