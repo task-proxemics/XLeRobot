@@ -76,7 +76,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
 
 > [!NOTE] 
-> To test the basic single-arm version of XLeRobot directly with the original Lekiwi code before the code for XLeRobot is released, only clamp the SO100 arm that share the same motor control board with the Lekiwi base. And clamp the other one on your table to act as the leader arm.
+> To test the basic single-arm version of XLeRobot directly with the original Lekiwi code before the code for XLeRobot is released, only clamp the SO100 arm that shares the same motor control board with the Lekiwi base. And clamp the other one on your table to act as the leader arm.
 
 
 ## 🔋 Place the Battery 🛒
