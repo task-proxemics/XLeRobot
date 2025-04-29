@@ -21,6 +21,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - If you already have 2x SO100 arm, skip.
 - If not, please see this [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#d-step-by-step-assembly-instructions), follow the instructions to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
 - If you are building SO101 arm, follow [its new tutorial](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md).
+
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
 
 > [!TIP]  
@@ -31,7 +32,8 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
     - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also stop after mounting motors on the base plate with wheels.
     - No matter what, the simplified Lekiwi base should look like this:
-    - ![image](https://github.com/user-attachments/assets/1b0b0600-e666-4825-9233-807ed63e9020)
+
+![image](https://github.com/user-attachments/assets/1b0b0600-e666-4825-9233-807ed63e9020)
 
 - Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and leave it hanging (don't pull it out from the top plate just yet).
 - ![image](https://github.com/user-attachments/assets/8d81267b-4b58-4af5-8bb3-e77b01d3df7f)
