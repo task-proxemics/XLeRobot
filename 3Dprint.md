@@ -59,4 +59,4 @@ If you haven't printed any SO100 arm or Lekiwi base, Just follow their instructi
 - For the Lekiwi base, you only need to print the [top](3D_Models/3D_models_for_printing/Lekiwi/base_plate_layer1.stl) and [bottom plates](3D_Models/3D_models_for_printing/Lekiwi/base_plate_layer2.stl), 3x [motor mounts](3D_Models/3D_models_for_printing/Lekiwi/drive_motor_mount_v2.stl), and 3x [wheel-servo hubs](3D_Models/3D_models_for_printing/Lekiwi/servo_wheel_hub.stl). XLeRobot won't use other parts.
 - <img src="https://github.com/user-attachments/assets/7c35c7cc-ab69-4cf6-bfa9-0e4b3b983e22" width="800" />
 
-### Now let's [⚒️ Assemble! ⚒️](https://github.com/Vector-Wangel/XLeRobot/blob/main/Assembly.md)
+### Now let's [⚒️ Assemble! ⚒️](Assembly.md)
