@@ -17,7 +17,7 @@
 [![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 ---
 
-**🚀 让人人都能接触实体AI - 比小米还便宜！📱**  
+**🚀 让每个家庭都能用上具身智能 - 比小米还便宜！📱**  
 *站在巨人的肩膀上：[LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
