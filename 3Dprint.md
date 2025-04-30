@@ -34,10 +34,12 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 - <img src="https://github.com/user-attachments/assets/384c5cb1-849c-43e5-a5e5-8f31d39712f8" width="300" />
 
 
-### [Lekiwi base supporter](3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl)
+### [Lekiwi base connectors](3D_Models/3D_models_for_printing/XLeRobot_special/BaseConnector.stl)
 
 - This component connects the Lekiwi base's top plate to the IKEA cart bottom. It's an enhanced version of the Lekiwi base motor mount, redesigned for better stability.
-- <img src="https://github.com/user-attachments/assets/2702b0b2-18ce-471b-bc65-015d9d8b456e" width="300" />
+- <img src="https://github.com/user-attachments/assets/07752338-1c1b-49ca-81b2-ccac9699b498" width="300" />
+
+
 
 
 > [!NOTE] 
