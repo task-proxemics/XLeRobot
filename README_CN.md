@@ -53,7 +53,10 @@
     </td>
   </tr>
  </table>       
- 
+
+![image](https://github.com/user-attachments/assets/b95f52cc-6824-4018-a75c-068b21e2d4b6)
+
+
 ### XLeRobot的整体优势/目标
 
 - **经济实惠** 💴：完整构建成本约$660，或从现有SO100Arm和Lekiwi升级约$250。
