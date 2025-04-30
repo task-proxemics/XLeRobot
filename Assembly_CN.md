@@ -67,7 +67,7 @@
 > 在硬件的第一个版本中，可能很难完美对齐所有3x4=12个螺丝。您可以尝试调整位置并稍微摇晃，找到能安装最多螺丝且分布均匀的位置。目前我能做到的最好情况是每个连接器2个螺丝，这能提供非常稳定的支撑。我们也将很快更新一个与宜家推车金属网兼容的新硬件版本。
 
 > [!NOTE] 
-> 您还应参考此图（重制自 [Lekiwi 教程](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors)) 根据电机编号找到所需的组装方向。由于是下视图，左右方向是相反的。
+> 您还应参考此图（重制自 [Lekiwi 教程](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors)) 根据电机编号找到所需的组装方向。由于是底视图，左右方向是相反的。
 >
 > ![image](https://github.com/user-attachments/assets/35d4e60a-cf5a-46f1-8367-00e7990c27d3)
 
