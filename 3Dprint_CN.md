@@ -33,11 +33,10 @@
 - <img src="https://github.com/user-attachments/assets/384c5cb1-849c-43e5-a5e5-8f31d39712f8" width="300" />
 
 
-### [Lekiwi底座支撑件](3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl)
+### [Lekiwi底座连接件](3D_Models/3D_models_for_printing/XLeRobot_special/BaseConnector.stl)
 
 - 这个组件将Lekiwi底座的顶板连接到IKEA推车底部。它是Lekiwi底座电机支架的增强版，重新设计以提供更好的稳定性。
-- <img src="https://github.com/user-attachments/assets/2702b0b2-18ce-471b-bc65-015d9d8b456e" width="300" />
-
+- <img src="https://github.com/user-attachments/assets/07752338-1c1b-49ca-81b2-ccac9699b498" width="300" />
 
 > [!NOTE] 
 > 如果您使用的**不是正品IKEA推车**，您可以在切片软件中调整z轴比例（同时保持xy轴比例不变），以确保Lekiwi底座和推车轮子之间的压力分布均匀。
