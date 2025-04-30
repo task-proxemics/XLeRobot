@@ -35,7 +35,7 @@
 
 ### [Lekiwi底座连接件](3D_Models/3D_models_for_printing/XLeRobot_special/BaseConnector.stl)
 
-- 这个组件将Lekiwi底座的顶板连接到IKEA推车底部。它是Lekiwi底座电机支架的增强版，重新设计以提供更好的稳定性。
+- 这个组件将Lekiwi底座的顶板连接到IKEA推车底部。它是Lekiwi底座电机支架的增强版，重新设计以提升结构强度。
 - <img src="https://github.com/user-attachments/assets/07752338-1c1b-49ca-81b2-ccac9699b498" width="300" />
 
 > [!NOTE] 
