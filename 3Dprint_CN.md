@@ -27,7 +27,7 @@
 
 - 底座设计为向外旋转15度，扩大两侧的工作空间区域，同时使两个机械臂能够顺畅协作。
 - <img src="https://github.com/user-attachments/assets/f612c9d8-fca2-406e-ab25-d015ea5e62c4" width="500" />
-- 如果你不想初始化麻烦的话，也有[正面向前的底座](3D_Models/3D_models_for_printing/XLeRobot_special/XLe_arm_bases_0degrees_rotated.stl)
+- 如果您不想初始化麻烦的话，也有[正面向前的底座](3D_Models/3D_models_for_printing/XLeRobot_special/XLe_arm_bases_0degrees_rotated.stl)
 - ![image](https://github.com/user-attachments/assets/eb77aad3-4df3-45c1-93c2-1c2e278512b5)
 - 设计具有空心结构以节省耗材。您可以插入用过的Bambulab耗材纸板卷轴以增加结构支撑。
 - <img src="https://github.com/user-attachments/assets/384c5cb1-849c-43e5-a5e5-8f31d39712f8" width="300" />
