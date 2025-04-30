@@ -67,7 +67,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 > In the first version of hardware, it may be challenging to align all 3x4=12 screws perfectly. You can try to adjust the position and wiggle a little bit to find a place that can install the most screws distributed evenly. Currently the best I can do is 2 screws for each connector, which can give a very stable support. We will also update a new hardware version compatible with the IKEA cart metal mesh shortly.
 
 > [!NOTE] 
-> You should also refer to this figure (remade fromf [Lekiwi tutorial](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors)) to find your desired assembly direction based on the motor index.
+> You should also refer to this figure (remade from [Lekiwi tutorial](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors)) to find your desired assembly direction based on the motor index.
 >
 > ![image](https://github.com/user-attachments/assets/35d4e60a-cf5a-46f1-8367-00e7990c27d3)
 
