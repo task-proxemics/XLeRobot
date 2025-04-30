@@ -278,19 +278,7 @@ Here's how you can control the robot and make it intelligent:
 All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as one of the most compelling low-cost robot for indoor application!
 
 
----
 
-## Citation
-
-If you want, you can cite this work with:
-```bibtex
-@misc{wang2025xlerobot,
-    author = {Wang, Gaotian},
-    title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
-    howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
-    year = {2025}
-}
-```
 
 ---
 
@@ -304,4 +292,16 @@ Looking forward to collaborating with anyone interested in contributing to this 
 
 Not affiliated with Anker or IKEA (but we love Swedish meatballs! 🍝)
 
+---
 
+## Citation
+
+If you want, you can cite this work with:
+```bibtex
+@misc{wang2025xlerobot,
+    author = {Wang, Gaotian},
+    title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
+    howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
+    year = {2025}
+}
+```
