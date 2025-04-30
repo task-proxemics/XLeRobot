@@ -68,6 +68,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 > [!NOTE] 
 > You should also refer to this figure (remade fromf [Lekiwi tutorial](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors)) to find your desired assembly direction based on the motor index.
+>
 > ![image](https://github.com/user-attachments/assets/35d4e60a-cf5a-46f1-8367-00e7990c27d3)
 
 
