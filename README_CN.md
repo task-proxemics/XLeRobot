@@ -282,3 +282,18 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 期待与任何有兴趣为该项目做出贡献的人合作！
 
 隔空喊话：Anker，宜家，打钱！（但我们喜欢瑞典肉丸！🍝）
+
+---
+
+## 引用
+
+如果您喜欢的话，您可以这样引用这个工作:
+
+```bibtex
+@misc{wang2025xlerobot,
+    author = {Wang, Gaotian},
+    title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
+    howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
+    year = {2025}
+}
+```
