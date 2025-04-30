@@ -126,4 +126,7 @@
 
 <img width="725" alt="1745906421978" src="https://github.com/user-attachments/assets/cfaf47d6-b112-4c89-93ce-cb2e21515ee0" />
 
+> [!IMPORTANT]
+> XLeRobot完全组装后，请勿像推宜家小车一样推动它，这样可能会损坏电机齿轮。需要手动移动XLeRobot时，请抬起整个机器人（约12公斤）。
+
 ### 最后，让我们[🦾 让您的机器人动起来！ 🦿](Software.md)
