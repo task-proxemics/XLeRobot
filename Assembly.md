@@ -126,4 +126,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 <img width="725" alt="1745906421978" src="https://github.com/user-attachments/assets/cfaf47d6-b112-4c89-93ce-cb2e21515ee0" />
 
+> [!IMPORTANT]
+> Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
+
 ### Finally, let's [🦾 Get Your Robot Moving! 🦿](Software.md)
