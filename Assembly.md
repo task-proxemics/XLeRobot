@@ -20,9 +20,12 @@
 If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
 
 ## 🦾🦾 Assemble 2x SO100 Arms 🦾🦾
-- If you already have 2x SO100 arm, skip.
-- If not, please see this [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#d-step-by-step-assembly-instructions), follow the instructions to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
-- If you are building SO101 arm, follow [its new tutorial](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md).
+> [!NOTE]
+> As of April 28, 2025, [the SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) has been released with modifications to the follower arms model. These changes include simplified parts and improved wire management, while maintaining compatibility with XLeRobot. I highly suggest everyone build SO101 instead of SO100 since the assembly is much faster!
+
+
+- If you already have 2x SO100/SO101 arms, skip.
+- Build 2x SO101 arms by following [SO100 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md) to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
 
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
 
