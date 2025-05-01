@@ -6,7 +6,7 @@
 >预计组装时间：使用已组装好的SO100/SO101机械臂：1-2小时；从零开始：2-4小时
 ## 🤔 组装前准备 🤔
 > [!TIP]  
-> 如果你想跳过拧螺丝的乐趣（尽管每个人都应该尝试一次,比宜家安装简单），一些公司以较高价格销售[预组装套件](https://github.com/TheRobotStudio/SO-ARM100#kits)用于SO100/SO101机械臂。
+> 如果你想跳过拧螺丝的乐趣（尽管每个人都应该尝试一次,比宜家简单），一些公司以较高价格销售[预组装套件](https://github.com/TheRobotStudio/SO-ARM100#kits)用于SO100/SO101机械臂。
 - 如果你没有组装好的SO100/SO101机械臂或Lekiwi：请按照[SO101机械臂仓库](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md)中的说明
     - [在你的PC上安装Lerobot](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#install-lerobot)
 - 根据[SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors)和[LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors)教程配置电机。
