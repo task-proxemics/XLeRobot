@@ -52,9 +52,9 @@
 如果您尚未打印任何SO100机械臂或Lekiwi底座，请按照它们的说明（[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md)和[SO100机械臂](https://github.com/TheRobotStudio/SO-ARM100#printing-the-parts)）以及下面的建议进行操作。
 ### 🦾 2个SO100机械臂 
 > [!NOTE]
-> 截至2025年4月28日，SO101机械臂已发布，对跟随者机械臂模型进行了修改。这些变更包括简化的零件和改进的线缆管理，同时保持与XLeRobot的兼容性。
+> 截至2025年4月28日，SO101机械臂已发布，对跟随者机械臂模型进行了修改。这些变更包括简化的零件和改进的线缆管理，同时保持与XLeRobot的兼容性。十分推荐大家搭SO101而不是SO100因为组装过程会快很多。
 
-- 在当前硬件版本中，您只需要打印两个[跟随者机械臂](3D_Models/3D_models_for_printing/SO100)。只有当您计划使用领导者-跟随者关节控制操作双臂时，才需要[领导者机械臂](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting/Leader)。
+- 在当前硬件版本中，您只需要打印两个[跟随者机械臂](3D_Models/3D_models_for_printing/SO100/Prusa_Follower_SO101.stl)。只有当您计划使用领导者-跟随者关节控制同时操作双臂时，才需要[领导者机械臂](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting/Leader)。打印前在切片软件里面自行调整目前stl文件的布局和打印顺序，来实现你认为最好的打印体验。
 - <img src="https://github.com/user-attachments/assets/d1a5870e-ab96-4c57-a949-1e5daf84bbb3" width="800" />
 
 - SO100的腕部摄像头(MF)支架及其[安装指南](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module)可以帮助优化数据收集效率。
