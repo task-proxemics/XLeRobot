@@ -313,6 +313,6 @@ If you want, you can cite this work with:
 
 ---
 
-## My Visions
+## 👁️ My Visions 🦾💻🧑‍🤝‍🧑🌍🌎🌏☀️
 
 Just in case you haven't get bored by all of these, here's [**My Visions**](My_visions.md) for the future of XLeRobot, embodied AI, open source projects, even humanity and beyond.
