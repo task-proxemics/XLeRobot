@@ -24,7 +24,7 @@
 
 
 - 如果你已经有2个SO100/SO101机械臂，请跳过。
-- 按照[SO101逐步组装说明](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md)构建2个相同的从动机械臂，使用2组电机（都预先编号为1-6）用于2个控制板。
+- 按照[SO101逐步组装说明](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#step-by-step-assembly-instructions)构建2个相同的从动机械臂，使用2组电机（都预先编号为1-6）用于2个控制板。
 
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
 
