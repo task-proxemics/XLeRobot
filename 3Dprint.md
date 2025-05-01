@@ -56,7 +56,7 @@ If you already have 2 SO100 Arms and 1 Lekiwi base, you'll only need 3 additiona
 If you haven't printed any SO100 arm or Lekiwi base, follow their instructions ([Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md) and [SO100 Arm](https://github.com/TheRobotStudio/SO-ARM100#printing-the-parts)) along with the suggestions below.
 ### 🦾 2x SO100 Arms 
 > [!NOTE]
-> As of April 28, 2025, the SO101 arm has been released with modifications to the follower arms model. These changes include simplified parts and improved wire management, while maintaining compatibility with XLeRobot.
+> As of April 28, 2025, [the SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) has been released with modifications to the follower arms model. These changes include simplified parts and improved wire management, while maintaining compatibility with XLeRobot. I highly suggest everyone build SO101 instead of SO100 since the assembly is much faster!
 
 - In the current hardware version, you only need to print two [follower arms](3D_Models/3D_models_for_printing/SO100). The [leader arm](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting/Leader) is only necessary if you plan to operate the dual arms with leader-follower joint control.
 - <img src="https://github.com/user-attachments/assets/d1a5870e-ab96-4c57-a949-1e5daf84bbb3" width="800" />
