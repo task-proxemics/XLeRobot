@@ -41,4 +41,4 @@ This will not only be a plan of this project, but also a plan of the career path
 ## Plans for beyond
 
 - How to bulid an entire open-source household robot product tree based on XLeRobot
-- How should this project be carried out by investors/large companies
+- How should this project be carried out by investors/large companies/universities in an open source and non-profit way.
