@@ -26,6 +26,7 @@ If you already have assembled and motor-configured SO100/SO101 arm and LeKiwi, y
 - If you already have 2x SO100/SO101 arms, skip.
 - Build 2x SO101 arms by following [SO101 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#step-by-step-assembly-instructions) to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
 - If you also want to have the **Wrist Camera**, follow this [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module).
+
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
 
 > [!TIP]  
