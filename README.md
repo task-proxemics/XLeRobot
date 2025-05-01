@@ -287,9 +287,9 @@ All things considered—cost, community support, ease of assembly, and practical
 
 ---
 
-### Main Contributors
+## Main Contributors
 
-Currently just [me](https://vector-wangel.github.io/). 
+Currently just [me](https://vector-wangel.github.io/). Will definitely update this list when more people join this open source project in the future. They will also be added to the citation list as one of the authors.
 
 This is just a small brick in the pyramid, made possible by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks to all the talented contributors behind these detailed and professional projects.
 
