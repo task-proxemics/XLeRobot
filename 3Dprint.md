@@ -59,7 +59,7 @@ If you haven't printed any SO100 arm or Lekiwi base, follow their instructions (
 > As of April 28, 2025, [the SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) has been released with modifications to the follower arms model. These changes include simplified parts and improved wire management, while maintaining compatibility with XLeRobot. I highly suggest everyone build SO101 instead of SO100 since the assembly is much faster!
 
 - In the current hardware version, you only need to print two [follower arms](3D_Models/3D_models_for_printing/SO100/Prusa_Follower_SO101.stl). The [leader arm](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting/Leader) is only necessary if you plan to operate the dual arms simultaneously with leader-follower joint control. Before printing, rearrange the layout of this stl file in the slicer software for your best printing experience.
-- <img src="https://github.com/user-attachments/assets/a5a49a95-e75e-4ea1-879c-0a0ec22f07a7" width="600" />
+- <img src="https://github.com/user-attachments/assets/a5a49a95-e75e-4ea1-879c-0a0ec22f07a7" width="800" />
 
 
 - The Wrist Camera (MF) Mount and its [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module) for SO100 can help optimize data collection efficiency.
