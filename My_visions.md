@@ -6,7 +6,7 @@
 > [!NOTE] 
 > Below are all my **original personal thoughts**. I haven't shared it with anyone except my family and some close friends (not strutured or detailed even to them). I will start to pubilcly seek possible collaborations after a month.
 
-This will not only be a plan for this project, but also a plan for the career path for myself, also a plan for how all of you (individuals, universities, companies, organizations, etc) can participate in this project to push for the greater good of humanity.
+This will not only be a plan of this project, but also a plan of the career path for myself, also a plan of how all of you (individuals, universities, companies, organizations, etc) can possibly participate in this project to push for the greater good of humanity.
 
 
 ## Urgent TODOs
