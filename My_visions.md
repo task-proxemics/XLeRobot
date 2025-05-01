@@ -11,10 +11,33 @@ This will not only be a plan of this project, but also a plan of the career path
 
 ## Urgent TODOs
 
+- Rice's legal team is helping me to have a patent to better protect this idea/project from commercial misuse.
+- Basic control integration by official Huggingface/Lerobot team to make it one of the official hardware platforms in Lerobot, similar to Lekiwi right now.
+  - In contact, haven't confirmed this though. I can also do it myself quickly.
+- Integration to Maniskill GPU accelerated simulation platform
+  - They already have support for SO100 arm.
+  - In contact, haven't confirmed this though. I can also do it myself quickly.
+
 ## What we could expect in 2 months
+
+- People around the world start to play with it and we will start see some interesting demos.
+- LeRobot Hackathon on 6.14~6.15. This will officially be the time we can see how XLeRobot can unleash its potentials
+  - or that it still has many limits that we need to work on in the future
 
 ## Plans for 6 months (maybe before ICRA submission deadline on 9.15?)
 
+- Officially integrate and finalize basic control approaches such as GPU simulation, VR control, etc
+- Officially integrate VLA deployment algorithms (such as pi0 fast, maybe pi0.5)
+- I/Rice RobotPI lab will also try to integrate our research on Caging in Time and Funnel-based manipulation approaches.
+
 ## Plans for a year
 
+- Two ways towards intelligence: both of them have potentials and limits, we can carry them out in parallel to see which way is better.
+ - VLAs, end2end
+ - physics-aware world models
+
+- Fast applications approach:
+
 ## Plans for beyond
+
+- How to bulid an open-source robot product tree based on XLeRobot
