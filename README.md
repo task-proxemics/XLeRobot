@@ -295,6 +295,9 @@ This is just a small brick in the pyramid, made possible by [LeRobot](https://g
 
 Looking forward to collaborating with anyone interested in contributing to this project!
 
+> [!NOTE]
+> Currently too busy with my paper deadline, will pubilcly seek collaborations and investments starting from July.2025.
+
 Not affiliated with Anker or IKEA (but we love Swedish meatballs! 🍝)
 
 ---
