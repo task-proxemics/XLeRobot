@@ -310,3 +310,9 @@ If you want, you can cite this work with:
     year = {2025}
 }
 ```
+
+---
+
+## My Visions
+
+Just in case you haven't get bored by all of these, here's [my visions for the future of XLeRobot, embodied AI, open source projects, even humanity and beyond](My_visions.md).
