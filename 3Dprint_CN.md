@@ -50,7 +50,7 @@
 ## 🌿 从零开始打印 🌿
 
 如果您尚未打印任何SO100机械臂或Lekiwi底座，请按照它们的说明（[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md)和[SO100机械臂](https://github.com/TheRobotStudio/SO-ARM100#printing-the-parts)）以及下面的建议进行操作。
-### 🦾 2个SO100机械臂 
+### 🦾 2个SO101机械臂 
 > [!NOTE]
 > 截至2025年4月28日，SO101机械臂已发布，对跟随者机械臂模型进行了修改。这些变更包括简化的零件和改进的线缆管理，同时保持与XLeRobot的兼容性。十分推荐大家搭SO101而不是SO100因为组装过程会快很多。
 
