@@ -3,23 +3,22 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](Assembly.md)
 [![中文](https://img.shields.io/badge/lang-中文-green.svg)](Assembly_CN.md)
 
->Estimated Assembly time: with assembled SO100 arms: 1-2 hrs; from scratch: 5-8 hrs
+>Estimated Assembly time: with assembled SO100/SO101 arms: 1-2 hrs; from scratch: 2-4 hrs
 ## 🤔 Before Assembly 🤔
 > [!TIP]  
-> If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100 arms at a higher price. The SO100 arm assembly does take the most time, 4-6 hrs for 2 arms. After the arms are assembled the remaining assembly time only takes 1-2 hrs.
-
-- If you don't have assembled SO100 arms or Lekiwi: Please follow the instruction in [SO100 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md) to
-    - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#b-install-lerobot)
-- Configure the motors according to the [SO100](https://github.com/huggingface/lerobot/blob/main/examples/10_use_so100.md#c-configure-the-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
-    - You need two sets of motors for 2 motor control boards: one for the SO100 arm (motors 1-6) and another for Lekiwi (motors 1-9).
+> If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100/SO101 arms at a higher price. 
+- If you don't have assembled SO100/SO101 arms or Lekiwi: Please follow the instruction in [SO101 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md) to
+    - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#install-lerobot)
+- Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
+    - You need two sets of motors for 2 motor control boards: one for the SO101 arm (motors 1-6) and another for Lekiwi (motors 1-9).
     - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L6 and R1-R6).
 
 ![image](https://github.com/user-attachments/assets/f3be78fe-0faa-454c-926d-ab1843b31d1f)
 
 
-If you already have assembled and motor-configured SO100 arm and LeKiwi, you can skip the above steps.
+If you already have assembled and motor-configured SO100/SO101 arm and LeKiwi, you can skip the above steps.
 
-## 🦾🦾 Assemble 2x SO100 Arms 🦾🦾
+## 🦾🦾 Assemble 2x SO101 Arms 🦾🦾
 > [!NOTE]
 > As of April 28, 2025, [the SO101 arm](https://github.com/TheRobotStudio/SO-ARM100) has been released with modifications to the follower arms model. These changes include simplified parts and improved wire management, while maintaining compatibility with XLeRobot. I highly suggest everyone build SO101 instead of SO100 since the assembly is much faster!
 
@@ -87,7 +86,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 
 ## 🦾🦾 Install the Arms 🛒
 
-- In the current version, for easier testing, the SO100 arm clamps directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
+- In the current version, for easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support.
 
 ![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
@@ -98,7 +97,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 - A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
 
 > [!NOTE] 
-> To test the basic single-arm version of XLeRobot directly with the original Lekiwi code before the code for XLeRobot is released, only clamp the SO100 arm that shares the same motor control board with the Lekiwi base. And clamp the other one on your table to act as the leader arm.
+> To test the basic single-arm version of XLeRobot directly with the original Lekiwi code before the code for XLeRobot is released, only clamp the SO101 arm that shares the same motor control board with the Lekiwi base. And clamp the other one on your table to act as the leader arm.
 
 
 ## 🔋 Place the Battery 🛒
@@ -122,7 +121,7 @@ If you already have assembled and motor-configured SO100 arm and LeKiwi, you can
 > When extending the 5264 wire yourself, be careful with the polarity—reversed connections will cause errors.
 
 - Follow the wiring diagram below and:
-    - Connect the extended 5264 **motor cable** from **the Lekiwi base** to **one of the SO100 arms** (this makes the base and the arm as Lekiwi).
+    - Connect the extended 5264 **motor cable** from **the Lekiwi base** to **one of the SO101 arms** (this makes the base and the arm as Lekiwi).
     - Connect the 2 **USB-C to USB-A** **data cables** from 2 **motor control board** to **Rasberry Pi** (2 USB-A slots left for the cameras).
     - Connect all 3 **power cables**: 2 **USB-C to DC(12V)** from 2 **motor control board** and 1 **USB-C to USB-C** from **Rasberry Pi**, to the fast charging section of the power supply. Each slot provides up to 100W power when charging simultaneously, which is tested sufficient for 12V version operation.
 
