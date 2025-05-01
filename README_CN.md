@@ -19,7 +19,9 @@
 ---
 
 **🚀 让每个家庭都能用上具身智能 - 比小米还便宜！📱**  
+
 **💵 <￥4000 成本，⏰ <4小时 从0组装!!**
+
 *站在巨人的肩膀上：[LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
