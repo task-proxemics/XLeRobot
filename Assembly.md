@@ -3,7 +3,7 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](Assembly.md)
 [![中文](https://img.shields.io/badge/lang-中文-green.svg)](Assembly_CN.md)
 
->Estimated Assembly time: with assembled SO100/SO101 arms: 1-2 hrs; from scratch: 2-4 hrs
+>Estimated Assembly time: From scratch: 2-4 hrs; with assembled SO100/SO101 arms: 1-2 hrs
 ## 🤔 Before Assembly 🤔
 > [!TIP]  
 > If you'd rather skip the fun of tightening screws (though every robot enthusiast should try it at least once), some companies sell [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO100/SO101 arms at a higher price. 
