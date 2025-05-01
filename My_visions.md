@@ -5,3 +5,16 @@
 
 > [!NOTE] 
 > Below are all my **original personal thoughts**. I haven't shared it with anyone except my family and some close friends. I will start to pubilcly seek possible collaborations after a month.
+
+This will not only be a plan for this project, but also a plan for the career path for myself, also a plan for how all of you (individuals, universities, companies, organizations, etc) can participate in this project to push for the greater good of humanity.
+
+
+## Urgent TODOs
+
+## What we could expect in 2 months
+
+## Plans for 6 months (maybe before ICRA submission deadline on 9.15?)
+
+## Plans for a year
+
+## Plans for beyond
