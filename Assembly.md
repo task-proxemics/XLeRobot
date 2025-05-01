@@ -118,6 +118,9 @@ If you already have assembled and motor-configured SO100/SO101 arm and LeKiwi, y
 
 - Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing the same way as the bottom layer previously. Choose the location as needed
     - I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
+
+<img width="843" alt="1745819677076" src="https://github.com/user-attachments/assets/ad081621-1e69-4bc6-a50f-d89cf92f35c3" />
+    
 - Prepare the extended 5264 wire with the connector kit if you don't have one already.
 > [!NOTE] 
 > When extending the 5264 wire yourself, be careful with the polarity—reversed connections will cause errors.
