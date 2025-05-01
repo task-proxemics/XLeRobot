@@ -55,7 +55,7 @@
 > 截至2025年4月28日，SO101机械臂已发布，对跟随者机械臂模型进行了修改。这些变更包括简化的零件和改进的线缆管理，同时保持与XLeRobot的兼容性。十分推荐大家搭SO101而不是SO100因为组装过程会快很多。
 
 - 在当前硬件版本中，您只需要打印两个[跟随者机械臂](3D_Models/3D_models_for_printing/SO100/Prusa_Follower_SO101.stl)。只有当您计划使用领导者-跟随者关节控制同时操作双臂时，才需要[领导者机械臂](https://github.com/TheRobotStudio/SO-ARM100/tree/main/stl_files_for_3dprinting/Leader)。打印前在切片软件里面自行调整目前stl文件的布局和打印顺序，来实现你认为最好的打印体验。
-- - <img src="https://github.com/user-attachments/assets/a5a49a95-e75e-4ea1-879c-0a0ec22f07a7" width="800" />
+- <img src="https://github.com/user-attachments/assets/a5a49a95-e75e-4ea1-879c-0a0ec22f07a7" width="800" />
 
 - SO100的腕部摄像头(MF)支架及其[安装指南](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module)可以帮助优化数据收集效率。
 - <img src="https://github.com/user-attachments/assets/8f74f9f4-321c-4689-acbe-6d7280922bfe" width="400" />
