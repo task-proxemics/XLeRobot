@@ -89,7 +89,7 @@
 ## 🦾🦾 安装机械臂 🛒
 
 - 在当前版本中，为了更容易测试，SO101机械臂直接夹在推车上。将[机械臂底座](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl)放置在推车顶层的两个角落，然后用夹子固定。
-- 别忘了把竹间实验室的耗材纸板线轴放在里面，提供稳定的结构支撑。
+- 别忘了把拓竹的耗材纸板线轴放在里面，提供稳定的结构支撑。
 
 ![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
 
