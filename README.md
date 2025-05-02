@@ -318,6 +318,7 @@ Not affiliated with Anker or IKEA (but we love Swedish meatballs! 🍝)
 ## Citation
 
 If you want, you can cite this work with:
+
 ```bibtex
 @misc{wang2025xlerobot,
     author = {Wang, Gaotian},
@@ -326,4 +327,4 @@ If you want, you can cite this work with:
     year = {2025}
 }
 ```
-
+Will definitely add more authors (such as developers from LeRobot and Lekiwi after I personally confirming with them) in the future.
