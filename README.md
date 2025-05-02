@@ -72,10 +72,10 @@ Let's break this down since **XLeRobot = XL + LeRobot**
     - LeRobot's plug-and-play code🧩 and extensive AI model library🧠
     - Backed by an active, growing community of contributors🧑‍🤝‍🧑
 - **Safety** ☠:
+  -   ![8](https://github.com/user-attachments/assets/e3ef361d-1bc1-404f-8522-94a709c38b88)
+  -   This👆 will never happen if you have an **XLeRobot**.
   -   Lower torque motors (compare to larger commercial dual-arm robots) will never really harm a human.
-  -   Even if its malfunctioning (even holding a knife), you can take care with it easily by just kicking the cart over.
-  -   So this will never happen to XLeRobot:![8](https://github.com/user-attachments/assets/e3ef361d-1bc1-404f-8522-94a709c38b88)
-
+  -   If its malfunctioning (even holding a knife), you can take care with it easily by just kicking the cart over.
 
 <img width="598" alt="Examples" src="https://github.com/user-attachments/assets/ca418604-13fc-43bf-811a-6036a4455a69" />
 
