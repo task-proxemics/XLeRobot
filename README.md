@@ -322,3 +322,10 @@ If you want, you can cite this work with:
 }
 ```
 Will definitely add more authors (such as developers from LeRobot and Lekiwi after I personally confirming with them) in the future.
+
+---
+
+## 🪧 Disclaimer 🪧
+
+> [!NOTE]
+> If you build a XLeRobot based on this repo, you will be fully responsible for all the physical and mental damages it does to you or others.
