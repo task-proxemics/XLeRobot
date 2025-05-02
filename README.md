@@ -66,7 +66,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
     - Software: Identical tabletop single-arm/dual-arm setup—transfer your trained policies directly from SO100 arm
 - **Practical and reliable** 💪: Performs many daily tasks comparable to $20,000 market alternatives.
  
-    - More tasks demonstrated in the LeRobot hackathon in [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [Mountain View](https://x.com/asierarranz/status/1905306686648132061).
+    - More tasks demonstrated in the LeRobot hackathon in [Shenzhen](https://www.youtube.com/watch?v=_r9v04Rc3xA&ab_channel=SeeedStudio), [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [San Jose](https://www.youtube.com/watch?v=QvzhsDliGII&ab_channel=SeeedStudio)([Winners](https://www.hackster.io/contests/embodiedAI#winners)), and the [first one](https://www.youtube.com/watch?v=i3D94400vq0&ab_channel=HuggingFace).
     - **Note**: Not currently designed for in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
 - **Rich open-source resources** 📕
     - LeRobot's plug-and-play code🧩 and extensive AI model library🧠
