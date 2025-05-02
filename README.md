@@ -130,7 +130,10 @@ For details please see [Bill of Materials](BOM.md).
 ### 📜Basic Specs
 
 - **Weight**📏: ~12kg. Easily lifted by an adult.
-- **Workspace**🦾: H: ~0.5-1.25m, W: ~0.36m from the cart edge. Capable of many household tasks.
+- **Workspace**🦾:
+  - Height range: ~0.5m-1.25m from the ground
+  - Width range: ~0.36m from the cart edge.
+  - Capable of many household tasks.
 - **Battery**🔋:
   - 300W max out: sufficient for powering 12V version dual arm + lekiwi base + RasberryPi (~180W max)
   - 288Wh capacity: can normally operate for 10hrs+
