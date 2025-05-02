@@ -129,9 +129,13 @@ For details please see [Bill of Materials](BOM.md).
 
 ### 📜Basic Specs
 
-- **Weight**: ~12kg. Easily lifted by an adult.
-- **Workspace**: H: ~0.5-1.25m, W: ~0.36m from the cart edge. Capable of many household tasks.
-- **Battery**: 288Wh capacity, 300W max out, 280W max in. Operate for 10hrs and 1hr to get fully charged. Optional solar panels.
+- **Weight**📏: ~12kg. Easily lifted by an adult.
+- **Workspace**🦾: H: ~0.5-1.25m, W: ~0.36m from the cart edge. Capable of many household tasks.
+- **Battery**🔋:
+  - 300W max out: sufficient for powering 12V version dual arm + lekiwi base + RasberryPi (~180W max)
+  - 288Wh capacity: can normally operate for 10hrs+
+  - 280W max in: 1hr to get fully charged
+  - Optional solar panels☀: for endless recharging
 
 > [!NOTE]
 > *All computing is handled by your PC—Raspberry Pi only manages data communication via WiFi  📶*
