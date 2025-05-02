@@ -76,6 +76,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
   -   This👆 will never happen if you have an **XLeRobot**.
   -   Lower torque motors (compare to larger commercial dual-arm robots) will never really harm a human, while still capable of most household tasks.
   -   If it's malfunctioning (even holding a knife), you can take care with it easily by just kicking🦵 the cart over.
+  -   Rather than harming humans, it will more likely break itself, which you can fix very quickly with nearly zero cost as long as the motors aren't broken.
 
 <img width="598" alt="Examples" src="https://github.com/user-attachments/assets/ca418604-13fc-43bf-811a-6036a4455a69" />
 
