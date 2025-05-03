@@ -37,7 +37,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
 - **Plug-&-Play** 🧩: Get robots running with simple pip install and a few lines of code.
 - **Thriving LeRobot Community** 🌍:
   World's largest low-cost robotics community featuring
-  - Multiple state-of-the-art pretrained AI models🧠, datasets📊, and tools🔨 ready for deployment.
+  - Multiple [state-of-the-art pretrained AI models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
   - ![image](https://github.com/user-attachments/assets/c685bf62-7c66-4382-a404-002142bb4690)
 
   - 5,000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
