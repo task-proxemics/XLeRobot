@@ -1,8 +1,8 @@
 ## Ongoing Updates for XLeRobot 0.2.0
 
-- Hardware minor change
-- Standard dual-arm base
-- Head camera with depth camera
-- URDF and basic Simulation
-- More demos
+- Minor upgrades on 3D models for better assembly and cable management
+- Standard dual-arm base with a RasberryPi Holder and safety stop button
+- Head camera with Realsense depth camera
+- URDF and basic Simulation in Maniskill
+- More teleoperation demos
 - A small surprise
