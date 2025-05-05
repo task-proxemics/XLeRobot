@@ -213,6 +213,9 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
     - 🎨通过光线追踪实现美丽的逼真视觉效果
     - 🪶轻量级、一致且用户友好(相比Isaac Lab，我个人观点)
     - 🤖支持[多种机器人](https://maniskill.readthedocs.io/en/latest/robots/index.html)(包括[SO100臂](https://x.com/Stone_Tao/status/1910101218241978537))
+    - 我自己玩出来的一个截屏：
+    - ![6dc9d8459f6809dc04d178e68e63c6a](https://github.com/user-attachments/assets/ce45f108-7551-43dd-8317-0dead3e2f406)
+
 
 
 ---
