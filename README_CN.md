@@ -40,7 +40,7 @@
   - 多个[最先进的预训练AI模型🧠](https://huggingface.co/lerobot)、数据集📊和工具🔨，随时可以部署。
   - ![image](https://github.com/user-attachments/assets/c685bf62-7c66-4382-a404-002142bb4690)
 
-  - 5,000+聪明才智的头脑进行头脑风暴和讨论🧑‍🤝‍🧑。
+  - 6,000+聪明才智的头脑进行头脑风暴和讨论🧑‍🤝‍🧑。
     
     </td>
     </tr>
