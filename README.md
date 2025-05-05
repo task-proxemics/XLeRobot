@@ -20,7 +20,7 @@
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
 **💵 ~$660 cost and ⏰ <4hrs total assembly time!!**
 
-*Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
+*Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
 
@@ -63,9 +63,9 @@ Let's break this down since **XLeRobot = XL + LeRobot**
 ### Overall Advantages/Goals of XLeRobot
 
 - **Cost-effective** 💴: Complete build costs $660, or upgrade from existing SO100Arm and Lekiwi for $250.
-- **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO100**
+- **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO-100/SO-101**
     - Hardware: No motor ID changes or hardware modifications needed
-    - Software: Identical tabletop single-arm/dual-arm setup—transfer your trained policies directly from SO100 arm
+    - Software: Identical tabletop single-arm/dual-arm setup—transfer your trained policies directly from SO-100/SO-101 arm
 - **Practical and reliable** 💪: Performs many daily tasks comparable to $20,000 market alternatives.
  
     - More tasks demonstrated in the LeRobot hackathon in [Shenzhen](https://www.youtube.com/watch?v=_r9v04Rc3xA&ab_channel=SeeedStudio), [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [San Jose](https://www.youtube.com/watch?v=QvzhsDliGII&ab_channel=SeeedStudio)([Winners](https://www.hackster.io/contests/embodiedAI#winners)), and the [first one](https://www.youtube.com/watch?v=i3D94400vq0&ab_channel=HuggingFace).
@@ -128,7 +128,7 @@ For details please see [Bill of Materials](BOM.md).
 
 ## 🛠️ Hardware Intro 🛠️
 
-**XLeRobot** = Lekiwi + 1x SO100 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
+**XLeRobot** = Lekiwi + 1x SO-100/SO-101 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 = 2x SO100 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
