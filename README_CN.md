@@ -18,7 +18,7 @@
 ---
 
 **🚀 让具身AI走向每个人 - 比小米手机还便宜！ 📱**  
-**💵 ~$660成本 和 ⏰ <4小时总组装时间!!**
+**💵 <4000￥ 和 ⏰ <4小时总组装时间!!**
 
 *站在巨人的肩膀上: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
