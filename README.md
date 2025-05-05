@@ -130,7 +130,7 @@ For details please see [Bill of Materials](BOM.md).
 
 **XLeRobot** = Lekiwi + 1x SO-100/SO-101 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
-= 2x SO100 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
+= 2x SO-100/SO-101 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 ### 📜Basic Specs
 
