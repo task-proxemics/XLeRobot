@@ -115,7 +115,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 > 我自己也是硬件新手，所以我想让这个教程对所有同为初学者的朋友友好。
 
 > [!NOTE] 
-> 如果你完全不懂编程，请至少花一天时间熟悉基本的Python、Ubuntu和Github(借助B站和AI的帮助)。至少你应该知道如何设置ubuntu系统、git克隆、pip安装、使用解释器(VS Code、Cursor、Pycharm等)以及直接在终端中运行命令。
+> 如果你完全不懂编程，请至少花一天时间熟悉基本的Python、Ubuntu和Github(借助B站和AI的帮助)。至少你应该知道如何设置ubuntu系统、git克隆、pip安装、使用解释器(VS Code、Cursor、Pycharm等)，Conda环境，以及直接在终端中运行命令。
 
 1. 💵 **购买零件**: [材料清单](BOM.md)
 2. 🖨️ **打印你的部件**: [3D打印](3Dprint.md)
