@@ -339,7 +339,7 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 ---
 
 ## 🪧 免责声明 🪧
-
+尽管我个人认为XLeRobot应该是目前物理意义上的安全系数最高的机器人之一了，但是：
 > [!NOTE]
 > 如果您基于此仓库构建XLeRobot，您将对其对您或他人造成的所有财产，身体和精神损害负全部责任。
 
