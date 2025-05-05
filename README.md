@@ -115,7 +115,7 @@ For details please see [Bill of Materials](BOM.md).
 > I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
 
 > [!NOTE] 
-> If you are totally new to programming, please spend at least a day to get yourself familiar with basic Python, Ubuntu and Github (with the help of Google and AI).
+> If you are totally new to programming, please spend at least a day to get yourself familiar with basic Python, Ubuntu and Github (with the help of Google and AI). At least you should know how to set up ubuntu system, git clone, pip install, use intepreters (VS Code, Cursor, Pycharm, etc.) and directly run commands in the terminals.
 
 1. 💵 **Buy your parts**: [Bill of Materials](BOM.md)
 2. 🖨️ **Print your stuff**: [3D printing](3Dprint.md)
