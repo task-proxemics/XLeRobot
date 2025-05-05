@@ -51,7 +51,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
 - 🏠 The field/market lacks affordable, stable, dual-arm home robots that match LeRobot's ease of assembly.
 - 🖨️ Traditional 3D printed chassis suffer from limited durability, stability, and load capacity—making them impractical for daily use.
 - ⚡ DIY mobile robots face power supply challenges, leading to complex wiring setups.
-- 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO100 configuration, enabling seamless code and policy transfer.
+- 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO-100/SO-101 configuration, enabling seamless code and policy transfer.
   
     </td>
   </tr>
