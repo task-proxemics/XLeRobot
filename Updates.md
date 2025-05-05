@@ -1,4 +1,4 @@
-## Ongoing Updates for XLeRobot 0.2.0
+## Upcoming Updates for XLeRobot 0.2.0
 
 - Minor upgrades on 3D models for better assembly and cable management
 - Standard dual-arm base with a RasberryPi Holder and safety stop button
