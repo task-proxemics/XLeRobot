@@ -33,7 +33,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
       
 ### Why "LeRobot" Core?
 - **Cheap Materials** 💴: 90% 3D printed components with affordable motors and electronics.
-- **Easy Assembly** 🔨: Just 2 hours of assembly time required.
+- **Easy Assembly** 🔨: 67 minutes to assemble 2 SO101 arms and configure motors.
 - **Plug-&-Play** 🧩: Get robots running with simple pip install and a few lines of code.
 - **Thriving LeRobot Community** 🌍:
   World's largest low-cost robotics community featuring
