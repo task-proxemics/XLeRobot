@@ -6,3 +6,7 @@
 - URDF and basic Simulation in Maniskill
 - More teleoperation demos
 - A small surprise
+
+
+https://github.com/user-attachments/assets/2de454db-217c-4c1d-a49e-939a5a01c0d1
+
