@@ -40,7 +40,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
   - Multiple [state-of-the-art pretrained AI models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
   - ![image](https://github.com/user-attachments/assets/c685bf62-7c66-4382-a404-002142bb4690)
 
-  - 5,000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
+  - 7000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
     
     </td>
     </tr>
