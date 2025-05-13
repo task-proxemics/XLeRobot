@@ -18,3 +18,5 @@ From XLeRobot 0.1.0 to 0.2.0, the same existing lekiwi code will be used, and ha
 
 https://github.com/user-attachments/assets/1b2b9a95-e808-4fd9-8eec-58733714bb81
 
+https://github.com/user-attachments/assets/c645235f-c826-4b4d-8b57-d9f9d7aa23ac
+
