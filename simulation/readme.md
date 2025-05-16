@@ -1,3 +1,5 @@
+(Still a draft, may have false information, will delete this after I finish)
+
 Here I will put my code in [Maniskill Simulator](https://www.maniskill.ai/).
 
 Follow the [install instructions](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html) in Maniskill first. It's best to pip install Maniskill in the same environment as lerobot so that you can do sim2real later.
