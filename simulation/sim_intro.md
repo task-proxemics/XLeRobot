@@ -32,7 +32,7 @@ XLeRobot provides 4 versions of hardware setup:
 
 - All demos are implemented in `demo_ee_control.py` using 3 different scenes in ManiSkill, utilizing my newly developed hybrid joint-ee controller specifically designed for the SO100 arm
 - All tasks were completed in one take - I only removed periods with no operation (completely still screen) and manual camera angle adjustments
-- All robot actions are controlled by keyboard
+- All robot actions are controlled by keyboard unless stated otherwise.
 - Currently no camera integration yet. The only input used for control is the interactive interface exactly shown in the demo video. Camera integration will be updated in the URDF and corresponding code in XLeRobot 0.2.0
 - For convenience of running directly in ManiSkill, I directly replaced the Fetch robot's corresponding URDF model and robot settings, naming XLeRobot as "fetch". In the future, when ManiSkill officially supports XLeRobot, it can be called directly as an independent robot in simulation
   - The current Fetch base only has forward/backward and steering (2 degrees of freedom), and is relatively difficult to modify, so we temporarily use it as is. However, in reality, XLeRobot's omnidirectional wheel base has 3 degrees of freedom (forward/backward, left/right, rotation), making movement more convenient and flexible
