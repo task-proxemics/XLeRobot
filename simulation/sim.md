@@ -2,7 +2,7 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](sim.md)
 [![中文](https://img.shields.io/badge/lang-中文-green.svg)](sim_CN.md)
 > [!NOTE] 
-> Built upon ManiSkill and RoboCasa. Special thanks to Stone Tao, the main leader on ManiSkill3, for his detailed discussions that helped me get familiar with ManiSkill so quickly.
+> Built upon [ManiSkill](https://maniskill.readthedocs.io/en/latest/index.html), [RoboCasa](https://github.com/robocasa/robocasa), [ReplicaCAD](https://aihabitat.org/datasets/replica_cad/), and [AI2Thor](https://github.com/allenai/ai2thor). Special thanks to Stone Tao, the main leader on ManiSkill3, for his detailed discussions that helped me get familiar with ManiSkill so quickly.
 
 
 https://github.com/user-attachments/assets/c9d664e0-4bba-4eec-bfe2-14fd4755e677
