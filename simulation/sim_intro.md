@@ -1,15 +1,11 @@
 # XLeRobot Playground (0.1.5)
 
 > [!NOTE] 
-> Special thanks to Stone Tao, the main leader on ManiSkill3, for his patient guidance and detailed discussions that helped accelerate XLeRobot integration with ManiSkill.
-
-# XLeRobot
-
-Built upon ManiSkill and RoboCasa. Special thanks to Stone Tao, the main leader on ManiSkill3, for his patient guidance and detailed discussions that helped me get familiar with ManiSkill so quickly.
+> Built upon ManiSkill and RoboCasa. Special thanks to Stone Tao, the main leader on ManiSkill3, for his detailed discussions that helped me get familiar with ManiSkill so quickly.
 
 ## What We Have / What You Can Do in Simulation
 
-- **Keyboard base movement and joint control** ([demo video](#))
+- **Keyboard base movement and joint control** 
 - **Keyboard base movement and end effector control** with built-in analytical IK function (this is what we used for the main demos)
 - **Keyboard base movement and VR-based end effector control** (Oculus Quest required):
   - Choose between VR joystick or pure hand tracking
