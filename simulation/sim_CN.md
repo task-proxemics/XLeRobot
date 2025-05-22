@@ -4,9 +4,6 @@
 [![中文](https://img.shields.io/badge/lang-中文-green.svg)](sim_CN.md)
 
 > [!NOTE] 
-> 基于ManiSkill和RoboCasa构建。特别感谢ManiSkill3的主要负责人Stone Tao，他的详细讨论帮助我快速熟悉了ManiSkill。
-
-> [!NOTE] 
 > 基于 [ManiSkill](https://maniskill.readthedocs.io/en/latest/index.html), [RoboCasa](https://github.com/robocasa/robocasa), [ReplicaCAD](https://aihabitat.org/datasets/replica_cad/), 和 [AI2Thor](https://github.com/allenai/ai2thor) 构建. 特别感谢ManiSkill3的主要负责人Stone Tao，与他的详细讨论帮助我快速熟悉了ManiSkill。
 
 > [!NOTE] 
