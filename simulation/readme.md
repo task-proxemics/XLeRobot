@@ -104,7 +104,7 @@ You can use various environments with XLeRobot following [this](https://maniskil
 
 - `ReplicaCAD_SceneManipulation-v1` (default)
 - AI2THOR scenes
-- Kitchen counter scenes
+- Robocasa Kitchen counter scenes
 - `OpenCabinetDrawer-v1`
 
 
