@@ -5,10 +5,10 @@
 
 ## Capabilities
 
-XLeRobot offers multiple control modes and features:
+**XLeRobot Playground** offers multiple control modes and features:
 
 - **Keyboard base movement and joint control** ([demo video](#))
-- **Keyboard base movement and end effector control** with built-in analytical IK function (used in main demos)
+- **Keyboard base movement and end effector control** with built-in analytical IK function
 - **VR-based end effector control** using Oculus Quest:
   - Choose between VR joystick or purely hand tracking
   - Currently offers position control only
