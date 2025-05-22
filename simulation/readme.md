@@ -1,5 +1,3 @@
-(Still a draft, may have false information, will delete this after I finish)
-
 # Step-by-step Guide for XLeRobot Playground
 
 Here's the full video for keyboard EE control
