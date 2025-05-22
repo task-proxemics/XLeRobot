@@ -26,6 +26,10 @@
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
+## ⚽ XLeRobot Playground （0.1.5）
+
+https://github.com/user-attachments/assets/e66d8cb5-7a02-4445-b6d9-793057996f87
+
 
 ---
 
