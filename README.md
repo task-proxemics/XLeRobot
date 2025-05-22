@@ -8,7 +8,10 @@
 [![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md)
 
 > [!NOTE] 
-> **XLeRobot 0.1.0** is officially out! The current version includes a detailed **bill of materials**, **3D printing models and instructions**, and a **step-by-step assembly guide**. While the code is not yet available, you can **run the teleoperation test** on a single arm version (controlled with the other follower arm) directly using the original Lekiwi codebase. Here are some [upcoming upgrades I am currently working on this month for XLeRobot 0.1.5](Updates.md), but I will only fully update the whole repo after all the plans and new demos are fully finished.
+> **XLeRobot 0.1.0** is officially out! The current version includes a detailed **bill of materials**, **3D printing models and instructions**, and a **step-by-step assembly guide**. While the code is not yet available, you can **run the teleoperation test** on a single arm version (controlled with the other follower arm) directly using the original Lekiwi codebase.
+
+> [!NOTE] 
+> **XLeRobot 0.1.5** is officially out! The current version includes a short technical blog and a detailed **Step-by-step Installation Instruction**, along with all the urdf files, control scripts that can get you started in 10 min. 
 
 # XLeRobot 🤖
 
@@ -21,6 +24,8 @@
 **💵 ~$660 cost and ⏰ <4hrs total assembly time!!**
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
+
+---
 
 ---
 
