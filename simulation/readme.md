@@ -38,7 +38,11 @@ if the dataset downloading goes wrong, use:
 ```bash
 git clone https://huggingface.co/datasets/haosulab/ReplicaCAD
 ```
-to directly download the dataset from huggingface. And then folder contents should go to to ~/.maniskill/data/scene_datasets/replica_cad_dataset
+to directly download the dataset from huggingface. And then folder contents should go to
+
+```bash
+~/.maniskill/data/scene_datasets/replica_cad_dataset
+```
 
 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html).
 
