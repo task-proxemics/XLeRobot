@@ -2,7 +2,7 @@
 
 # Step-by-step Guide for XLeRobot Playground
 
-
+Here's the full video for keyboard EE control
 
 https://github.com/user-attachments/assets/b8e630bd-1133-4941-acd1-d974f60098ff
 
