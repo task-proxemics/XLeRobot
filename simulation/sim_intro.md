@@ -63,7 +63,7 @@ The controller decouples traditional IK into different components that can be ei
 
 ## Limitations
 
-You can see that for the basic fixed base version, there are still many places it cannot reach. But do you really want a robot that could potentially be hacked or misbehave to physically access every drawer you have?
+You can see that for the basic fixed base version, there are still many places it cannot reach. 
 
 ## Dig Deeper
 
