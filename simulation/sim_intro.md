@@ -1,6 +1,7 @@
 # XLeRobot
 
-XLeRobot is a versatile robotic control system built upon ManiSkill and RoboCasa. Special thanks to Stone Tao, the main leader on ManiSkill3, for his patient guidance and detailed discussions that helped accelerate our integration with ManiSkill.
+> [!NOTE] 
+> Special thanks to Stone Tao, the main leader on ManiSkill3, for his patient guidance and detailed discussions that helped accelerate XLeRobot integration with ManiSkill.
 
 ## Capabilities
 
