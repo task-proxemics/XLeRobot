@@ -98,7 +98,7 @@ Run the end effector control demo with:
 python -m mani_skill.examples.XLeRobot_demo_ee_ctrl -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
 ```
 
-### Available Environments
+### 5. Available Environments
 
 You can use various environments with XLeRobot following [this](https://maniskill.readthedocs.io/en/latest/user_guide/datasets/scenes.html):
 
@@ -108,7 +108,7 @@ You can use various environments with XLeRobot following [this](https://maniskil
 - `OpenCabinetDrawer-v1`
 
 
-## VR Integration
+### 6. VR Integration
 
 To enable VR with Oculus:
 
@@ -119,7 +119,7 @@ To enable VR with Oculus:
    ```
 3. Update the path of the Oculus reader folder in your configuration
 
-## Custom Hardware Integration
+### 7. Custom Hardware Integration
 
 To use different hardware versions:
 
