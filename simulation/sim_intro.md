@@ -15,17 +15,6 @@
 
 All of these demos can be run in multiple different scenes as you wish.
 
-## Hardware Setup Versions
-
-XLeRobot provides 4 versions of hardware setup:
-
-1. **Basic fixed arm bases (back)** - Arms mounted on the back of the cart to fully utilize storage space
-2. **Fixed arm bases (front)** - Arms mounted on the front of the cart for better dual-arm manipulation ability, but cannot utilize cart storage
-3. **Moving arm bases on the z-axis (front)** - For potential applications
-4. **Moving arm bases on the z-axis (back)** - For potential applications
-
-> **Note:** The 2 fixed base versions will be completed in the next month's release of XLeRobot 0.2.0. Moving base versions are for potential applications with no specific plans yet.
-
 ## About Teleop Demos in Simulation
 
 💡 **Key Points:**
@@ -60,6 +49,19 @@ The controller decouples traditional IK into different components that can be ei
 - Since it's 5DOF, yaw cannot be changed
 - SO100's 5th joint directly corresponds to roll
 - SO100's 4th joint directly corresponds to pitch (note: when calculating pitch, need to compensate for the previous vertical plane height, but still has a unique analytical solution)
+
+## Hardware Setup Versions
+
+XLeRobot provides 4 versions of hardware setup:
+
+1. **Basic fixed arm bases (back)** - Arms mounted on the back of the cart to fully utilize storage space
+2. **Fixed arm bases (front)** - Arms mounted on the front of the cart for better dual-arm manipulation ability, but cannot utilize cart storage
+3. **Moving arm bases on the z-axis (front)** - For potential applications
+4. **Moving arm bases on the z-axis (back)** - For potential applications
+
+> **Note:** The 2 fixed base versions will be completed in the next month's release of XLeRobot 0.2.0. Moving base versions are for potential applications with no specific plans yet.
+
+
 
 ## Limitations
 
