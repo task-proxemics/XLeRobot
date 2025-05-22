@@ -3,7 +3,7 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](sim_guide.md)
 [![中文](https://img.shields.io/badge/lang-中文-green.svg)](sim_guide_CN.md)
 
-这是键盘EE控制的完整视频
+这是实现键盘EE控制的完整教程视频
 
 https://github.com/user-attachments/assets/b8e630bd-1133-4941-acd1-d974f60098ff
 
