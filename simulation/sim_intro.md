@@ -1,5 +1,6 @@
 # XLeRobot Playground (0.1.5)
-
+[![en](https://img.shields.io/badge/lang-en-red.svg)](simulation/sim_intro.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](simulation/sim_CN.md)
 > [!NOTE] 
 > Built upon ManiSkill and RoboCasa. Special thanks to Stone Tao, the main leader on ManiSkill3, for his detailed discussions that helped me get familiar with ManiSkill so quickly.
 
