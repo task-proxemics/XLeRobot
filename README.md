@@ -11,7 +11,7 @@
 > **XLeRobot 0.1.0** is officially out! The current version includes a detailed **bill of materials**, **3D printing models and instructions**, and a **step-by-step assembly guide**. While the code is not yet available, you can **run the teleoperation test** on a single arm version (controlled with the other follower arm) directly using the original Lekiwi codebase.
 
 > [!NOTE] 
-> **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed **Step-by-step Installation Instruction**, along with all the urdf files, control scripts that can get you started in 10 min. 
+> **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started in 10 min. 
 
 # XLeRobot 🤖
 
@@ -27,6 +27,8 @@
 
 ---
 ## ⚽ XLeRobot Playground （0.1.5）
+
+**XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started to replicate this demo in 10 min. 
 
 https://github.com/user-attachments/assets/e66d8cb5-7a02-4445-b6d9-793057996f87
 
