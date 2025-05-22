@@ -4,6 +4,10 @@
 
 XLeRobot is a robot control system built on the ManiSkill simulator, providing joint control and end-effector control capabilities.
 
+[![项目演示](https://img.youtube.com/vi/YYN5ux6mibA/maxresdefault.jpg)](https://www.youtube.com/watch?v=YYN5ux6mibA)
+
+> 📺 [直接链接到YouTube视频](https://www.youtube.com/watch?v=YYN5ux6mibA)
+
 ## Prerequisites
 
 - Ubuntu operating system
