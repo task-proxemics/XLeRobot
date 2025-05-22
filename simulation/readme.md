@@ -30,9 +30,15 @@ Follow the [official installation instructions](https://maniskill.readthedocs.io
 pip install mani-skill
 
 # Download scene dataset
-python -m mani_skill.utils.download_asset
+python -m mani_skill.utils.download_asset "ReplicaCAD"
 ```
 
+if the dataset downloading goes wrong, use:
+
+```bash
+git clone https://huggingface.co/datasets/haosulab/ReplicaCAD
+```
+to directly download the dataset from huggingface. And then folder contents should go to to ~/.maniskill/data/scene_datasets/replica_cad_dataset
 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html).
 
 ### 3. Additional Dependencies
