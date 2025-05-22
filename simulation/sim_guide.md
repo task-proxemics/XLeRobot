@@ -1,4 +1,6 @@
 # Step-by-step Guide for XLeRobot Playground
+[![en](https://img.shields.io/badge/lang-en-red.svg)](sim_guide.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](sim_guide_CN.md)
 
 Here's the full video for keyboard EE control
 
