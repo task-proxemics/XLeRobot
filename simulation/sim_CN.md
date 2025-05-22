@@ -1,5 +1,8 @@
 # XLeRobot Playground (0.1.5)
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](sim.md)
+[![中文](https://img.shields.io/badge/lang-中文-green.svg)](sim_CN.md)
+
 > [!NOTE] 
 > 基于ManiSkill和RoboCasa构建。特别感谢ManiSkill3的主要负责人Stone Tao，他的详细讨论帮助我快速熟悉了ManiSkill。
 
