@@ -33,7 +33,7 @@ pip install mani-skill
 python -m mani_skill.utils.download_asset "ReplicaCAD"
 ```
 
-if the dataset downloading goes wrong, use:
+#### 2.1 If the dataset downloading goes wrong, use:
 
 ```bash
 git clone https://huggingface.co/datasets/haosulab/ReplicaCAD
@@ -44,7 +44,7 @@ to directly download the dataset from huggingface. And then folder contents shou
 ~/.maniskill/data/scene_datasets/replica_cad_dataset
 ```
 
-Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html). And try this to test whether you have successfully installed Maniskill:
+#### 2.2 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html). Try this command to test whether you have successfully installed Maniskill:
 ```bash
 python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
   --render-mode="human" --shader="rt-fast"
