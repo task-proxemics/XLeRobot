@@ -3,6 +3,10 @@
 > [!NOTE] 
 > Built upon ManiSkill and RoboCasa. Special thanks to Stone Tao, the main leader on ManiSkill3, for his detailed discussions that helped me get familiar with ManiSkill so quickly.
 
+
+https://github.com/user-attachments/assets/c9d664e0-4bba-4eec-bfe2-14fd4755e677
+
+
 ## What We Have / What You Can Do in Simulation
 
 - **Keyboard base movement and joint control** 
