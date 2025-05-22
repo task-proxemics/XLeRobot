@@ -31,6 +31,8 @@
 **XLeRobot 0.1.5** 正式发布！当前版本包含 [一篇简短的技术博客](simulation/sim_CN.md) and 和详细的 [**分步安装指南**](simulation/sim_guide_CN.md), 并附带所有urdf文件和控制代码，让您可以在10分钟内开始使用并复现下面展示的demo。 
 
 https://github.com/user-attachments/assets/e66d8cb5-7a02-4445-b6d9-793057996f87
+
+
 ---
 
 
