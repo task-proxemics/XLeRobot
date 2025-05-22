@@ -2,10 +2,6 @@
 
 # Step-by-step Guide for XLeRobot Playground
 
-XLeRobot is a robot control system built on the ManiSkill simulator, providing joint control and end-effector control capabilities.
-
-
-
 ## Prerequisites
 
 - Ubuntu operating system
