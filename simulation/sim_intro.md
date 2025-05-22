@@ -3,168 +3,95 @@
 > [!NOTE] 
 > Special thanks to Stone Tao, the main leader on ManiSkill3, for his patient guidance and detailed discussions that helped accelerate XLeRobot integration with ManiSkill.
 
-## Capabilities
+# XLeRobot
 
-**XLeRobot Playground** offers multiple control modes and features:
+Built upon ManiSkill and RoboCasa. Special thanks to Stone Tao, the main leader on ManiSkill3, for his patient guidance and detailed discussions that helped me get familiar with ManiSkill so quickly.
+
+## What We Have / What You Can Do in Simulation
 
 - **Keyboard base movement and joint control** ([demo video](#))
-- **Keyboard base movement and end effector control** with built-in analytical IK function
-- **VR-based end effector control** using Oculus Quest:
-  - Choose between VR joystick or purely hand tracking
-  - Currently offers position control only
-  - Pose control and gripper control based on hand gestures coming soon
+- **Keyboard base movement and end effector control** with built-in analytical IK function (this is what we used for the main demos)
+- **Keyboard base movement and VR-based end effector control** (Oculus Quest required):
+  - Choose between VR joystick or pure hand tracking
+  - Currently supports position control only
+  - Pose control and gripper control based on hand gestures will be updated soon
+- **Many research opportunities** to explore: MPC, imitation learning, data collection, RL, VLA, etc.
 
-All demos can be run in multiple different scenes according to your needs.
+All of these demos can be run in multiple different scenes as you wish.
 
-**Research Opportunities:**
-- MPC (Model Predictive Control)
-- Imitation learning
-- Data collection
-- Reinforcement learning
-- Vision-language-action (VLA)
-- And much more...
-
-## Hardware Setup Options
+## Hardware Setup Versions
 
 XLeRobot provides 4 versions of hardware setup:
 
-1. **Basic fixed arm bases (back)** - Arms mounted on the back of the cart to fully utilize storage space *(Available in XLeRobot 0.2.0)*
-2. **Fixed arm bases (front)** - Arms mounted on the front for better dual-arm manipulation but reduced cart storage *(Available in XLeRobot 0.2.0)*
-3. **Moving arm bases on the z-axis (front)** - For potential future applications
-4. **Moving arm bases on the z-axis (back)** - For potential future applications
+1. **Basic fixed arm bases (back)** - Arms mounted on the back of the cart to fully utilize storage space
+2. **Fixed arm bases (front)** - Arms mounted on the front of the cart for better dual-arm manipulation ability, but cannot utilize cart storage
+3. **Moving arm bases on the z-axis (front)** - For potential applications
+4. **Moving arm bases on the z-axis (back)** - For potential applications
 
-> **Note:** The two fixed base versions will be completed in the upcoming XLeRobot 0.2.0 release next month.
+> **Note:** The 2 fixed base versions will be completed in the next month's release of XLeRobot 0.2.0. Moving base versions are for potential applications with no specific plans yet.
 
-## Installation
+## About Teleop Demos in Simulation
 
-### 1. Create a Conda Environment
+💡 **Key Points:**
 
-```bash
-conda create -y -n lerobot python=3.10
-conda activate lerobot
-```
+- All demos are implemented in `demo_ee_control.py` using 3 different scenes in ManiSkill, utilizing my newly developed hybrid joint-ee controller specifically designed for the SO100 arm
+- All tasks were completed in one take - I only removed periods with no operation (completely still screen) and manual camera angle adjustments
+- All robot actions are controlled by keyboard
+- Currently no camera integration yet. The only input used for control is the interactive interface exactly shown in the demo video. Camera integration will be updated in the URDF and corresponding code in XLeRobot 0.2.0
+- For convenience of running directly in ManiSkill, I directly replaced the Fetch robot's corresponding URDF model and robot settings, naming XLeRobot as "fetch". In the future, when ManiSkill officially supports XLeRobot, it can be called directly as an independent robot in simulation
+  - The current Fetch base only has forward/backward and steering (2 degrees of freedom), and is relatively difficult to modify, so we temporarily use it as is. However, in reality, XLeRobot's omnidirectional wheel base has 3 degrees of freedom (forward/backward, left/right, rotation), making movement more convenient and flexible
+- In simulation, unstable grasping and high-frequency vibrations when grasping objects may occur due to collision model parameter settings, which may cause sudden object displacement in videos. This does not occur in reality (though reality currently doesn't have the precise and stable angle control available in simulation)
 
-### 2. Install ManiSkill
+## About the Hybrid Joint-EE Controller
 
-Follow the [official installation instructions](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html) for ManiSkill.
-
-```bash
-# Basic installation
-pip install mani-skill
-
-# Download scene dataset
-python -m mani_skill.utils.download_asset
-```
-
-### 3. Install Additional Dependencies
-
-```bash
-pip install pygame
-```
-
-### 4. Replace Robot Files
-
-Navigate to the ManiSkill package folder in your conda environment:
-
-```bash
-cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
-```
-
-Replace the fetch robot code and assets with the XLeRobot files:
-
-```bash
-# Replace with your provided files
-cp -r /path/to/your/xlerobot/agents/robots/fetch ./agents/robots/
-cp -r /path/to/your/xlerobot/assets/robots/fetch ./assets/robots/
-cp -r /path/to/your/xlerobot/examples/* ./examples/
-```
-
-## Usage
-
-### Joint Control
-
-```bash
-python -m mani_skill.examples.demo_xlerobot_joint_control -e "ReplicaCAD_SceneManipulation-v1" --render-mode="human" --shader="rt-fast"
-```
-
-### End Effector Control
-
-```bash
-python -m mani_skill.examples.demo_xlerobot_ee_control -e "ReplicaCAD_SceneManipulation-v1" --render-mode="human" --shader="rt-fast"
-```
-
-## Teleop Demos in Simulation
-
-- All demos are implemented in `demo_ee_control.py` using 3 different scenes in ManiSkill
-- A custom hybrid joint-ee controller has been developed specifically for the SO100 arm
-- All tasks in the demos were completed in a single take (only removing periods with no operation and manual camera adjustments)
-- Robot actions are controlled entirely via keyboard
-- Camera integration coming in XLeRobot 0.2.0
-
-**Current Implementation Notes:**
-- For convenience, XLeRobot currently replaces the Fetch robot's URDF model and settings in ManiSkill
-- Future ManiSkill releases will support XLeRobot as an independent robot
-- The current base in simulation only has forward/backward movement and steering (2 DoF)
-- The real XLeRobot uses omnidirectional wheels with 3 DoF (forward/backward, left/right, rotation)
-- Some simulation instability may occur due to collision model parameters, resulting in unstable grasping or high-frequency vibrations
-
-## The Hybrid Joint-EE Controller
-
-XLeRobot uses a hybrid controller that decouples traditional IK into different components that can be either directly controlled or solved via simple analytical solutions:
+The controller decouples traditional IK into different components that can be either directly controlled or solved via simple analytical solutions (law of cosines, which we learned in high school).
 
 ### Horizontal Plane Control
-- Uses polar coordinates rather than Cartesian coordinates
-- Can be directly controlled by joint1
-- Advantages of polar coordinates:
-  - More intuitive for human control, simplifying keyboard/VR interaction
-  - Beneficial for task planning by leveraging rotational symmetry (reducing search/state space from 3D to 2D)
-  - Provides symmetry benefits for AI model training (focusing on the vertical plane)
-  - SO2 rotational symmetry has been proven superior in papers by researchers like Dian Wang (Equivariant Models for RL, VLA, grasp optimization)
+- Uses **polar coordinates** instead of Cartesian coordinates, allowing direct control by joint1
+- **Advantages of polar coordinates over Cartesian coordinates:**
+  - More intuitive for human control, simplifying keyboard control and future VR control difficulty
+  - Beneficial for task planning due to rotational symmetry - can reduce search space and state space from 3D to 2D in many cases
+  - Provides symmetry for AI large model training, only needing to focus on the vertical plane. Building training datasets in polar coordinate form can greatly improve VLA model training efficiency and policy generalization ability
+    - SO2 rotational symmetry has been proven superior to traditional methods in many papers, such as Dian Wang's series of work during his PhD on using Equivariant Models to improve RL, VLA ([Equivariant Diffusion Policy](https://equidiff.github.io/)), and grasp optimization algorithms to improve the efficiency and generalization of robot learning
+
+- If you still want to use Cartesian coordinates rather than polar coordinates, just add 1-2 lines of code based on this transformation formula:
+  - `ee_pose[0] = sqrt(x^2 + y^2)`, `ee_pose[1] = z`, `target_joint1 = arctan2(x,y)`
 
 ### Vertical Plane Control
-- Without considering robot orientation, the vertical plane becomes a 2-joint linkage
-- With SO100's angle>0 constraint, there's a unique analytical solution based on the law of cosines
+- Without considering robot orientation control, the vertical plane becomes a 2-joint linkage, which has a unique analytical solution under SO100's angle>0 constraint. Can be solved in one step using the simple law of cosines from high school
 
 ### Tip Orientation
-- With 5 DoF, yaw cannot be changed
+- Since it's 5DOF, yaw cannot be changed
 - SO100's 5th joint directly corresponds to roll
-- SO100's 4th joint directly corresponds to pitch (compensating for vertical plane height)
+- SO100's 4th joint directly corresponds to pitch (note: when calculating pitch, need to compensate for the previous vertical plane height, but still has a unique analytical solution)
 
 ## Limitations
 
-The basic fixed base version has areas it can't reach. This is a design consideration: do you want a robot that could potentially be hacked or misbehave to have physical access to every drawer you own?
+You can see that for the basic fixed base version, there are still many places it cannot reach. But do you really want a robot that could potentially be hacked or misbehave to physically access every drawer you have?
 
-## Advanced Strategies
+## Dig Deeper
 
-### Mobile Base Integration
-- The mobile base provides additional degrees of freedom and driving force to compensate for the SO100 arm's limitations (5 DoF, small range, low payload)
-- Example: When opening a refrigerator door, despite the arm's 1.2kg payload limit, using the cart's backward motion with an extended arm creates pulling force limited by wheel motor torque, gripper friction, and tire-ground friction (generally higher than arm payload)
+### Advanced Manipulation Strategies
 
-### Non-Prehensile Manipulation
-- Utilizing non-grasping manipulation greatly improves efficiency, robustness, and extends physical limits
-- Understanding the physical world: The robot needs to comprehend the physical environment and predict interactions through intuitive physics
-- Before developing complete intelligence, cost function/energy function-based optimization/MPC/model-based RL can assist with complex planning
+Exploring the manipulation strategies used in teleoperation and how we can utilize these high-level strategies to fully unleash XLeRobot's potential:
 
-### Advanced Techniques
-- Collision-based grasping for cluttered environments
-- Strategy-level error correction (e.g., switching targets when a bottle tips over)
-- Reference: "Caging in Time" (accepted by IJRR) provides methods for robust object manipulation, especially non-prehensile manipulation
-- Rice RobotPI Lab's main track is funnel-based manipulation
+#### Mobile Base Integration
+- **Compensating arm limitations**: The mobile base's additional degrees of freedom and driving force can compensate for the SO100 arm's limitations (5DOF, small range, low payload ~1.2kg)
+- **Example - Opening refrigerator doors**: Although the arm payload is only about 1.2kg, when the arm is extended and gripping tightly while moving the cart backward, the pulling force limitation becomes the wheel motor torque limit, gripper friction limit, and tire-ground friction limit - all of which are generally higher than the arm's payload limit
 
-## Troubleshooting
+#### Non-Prehensile Manipulation
+- **Beyond pick and place**: Utilizing non-grasping manipulation can greatly improve efficiency, robustness, and physical limits of XLeRobot. In household manipulation tasks, there's definitely more than just pick and place
+- **Understanding the physical world**: The robot needs to fully understand the physical world and predict/reason about possible physical interactions through intuitive physics (world model, which aligns with Yann LeCun's ideas)
+- **Optimization assistance**: Before robots develop complete intelligence, we can use cost function/energy function-based optimization/MPC/model-based RL to assist with complex planning. Later, robots can design relevant functions based on their understanding of the physical world
 
-If you encounter errors, try these solutions:
+#### Advanced Techniques
+- **Collision-based grasping**: In cluttered or jammed environments (tightly packed bottles, densely arranged books on shelves), robots need to use collisions to change the environment to achieve more convenient object distributions for grasping, sometimes also using compliance to guide themselves to target positions
+- **Strategy-level error correction**: For example, immediately switching to a different grasping direction when a bottle tips over, or switching to another bottle when the current one is temporarily unreachable
 
-- If you see "link name" errors, navigate to the script and change the link name
-- If you experience collision-related errors, try commenting out the avoid collision list
+### Research Contributions
+- **"Caging in Time"** (accepted by IJRR): Provides methods for robust object manipulation, especially for non-prehensile manipulation
+- **Rice RobotPI Lab**: Our lab's main research track is funnel-based manipulation
 
-## VR Integration
-
-To enable VR with Oculus:
-
-1. Install Oculus reader according to the official documentation
-2. Replace the reader.py file with our provided version:
-   ```bash
-   cp /path/to/your/reader.py /path/to/oculus/reader/
-   ```
-3. Update the path of the Oculus reader folder in your configuration
+## Links
+- [Dian Wang's Homepage](https://www.dianwang.io/)
+- [Equivariant Diffusion Policy](https://equidiff.github.io/)
