@@ -1,4 +1,4 @@
-# XLeRobot
+# XLeRobot Playground (0.1.5)
 
 > [!NOTE] 
 > Special thanks to Stone Tao, the main leader on ManiSkill3, for his patient guidance and detailed discussions that helped accelerate XLeRobot integration with ManiSkill.
