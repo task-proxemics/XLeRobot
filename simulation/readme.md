@@ -70,23 +70,15 @@ cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 
 Replace the fetch robot code and assets with the XLeRobot files:
 
-1. Make a backup of the original files (optional but recommended):
-   ```bash
-   cp -r ./agents/robots/fetch ./agents/robots/fetch_backup
-   cp -r ./assets/robots/fetch ./assets/robots/fetch_backup
-   ```
 
-2. Replace the files:
-   ```bash
-   # Replace with your provided files
-   cp -r /path/to/your/xlerobot/agents/robots/fetch ./agents/robots/
-   cp -r /path/to/your/xlerobot/assets/robots/fetch ./assets/robots/
-   ```
+1. Replace the files in /agents and /assets:
+![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
+![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
 
-3. Add control code examples:
-   ```bash
-   cp -r /path/to/your/xlerobot/examples/* ./examples/
-   ```
+
+2. Add control code to /examples:
+![image](https://github.com/user-attachments/assets/654556ab-473f-44d2-8ff7-107c346882c6)
+
 
 ## Usage
 
