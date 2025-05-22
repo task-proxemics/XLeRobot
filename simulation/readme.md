@@ -76,7 +76,7 @@ Replace the fetch robot code and assets with the XLeRobot files:
 Run the joint control demo with:
 
 ```bash
-python -m mani_skill.examples.demo_xlerobot_joint_control -e "ReplicaCAD_SceneManipulation-v1" --render-mode="human" --shader="rt-fast"
+python -m mani_skill.examples.XLeRobot_demo_joint_ctrl -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
 ```
 
 ### End Effector Control
@@ -84,10 +84,8 @@ python -m mani_skill.examples.demo_xlerobot_joint_control -e "ReplicaCAD_SceneMa
 Run the end effector control demo with:
 
 ```bash
-python -m mani_skill.examples.demo_xlerobot_ee_control -e "ReplicaCAD_SceneManipulation-v1" --render-mode="human" --shader="rt-fast"
+python -m mani_skill.examples.XLeRobot_demo_ee_ctrl -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
 ```
-
-> **Note**: `--shader="rt-fast"` provides faster ray-tracing but lower quality.
 
 ### Available Environments
 
