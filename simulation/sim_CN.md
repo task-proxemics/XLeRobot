@@ -6,7 +6,8 @@
 > [!NOTE] 
 > 基于ManiSkill和RoboCasa构建。特别感谢ManiSkill3的主要负责人Stone Tao，他的详细讨论帮助我快速熟悉了ManiSkill。
 
-
+> [!NOTE] 
+> 在这里看 [详细安装使用教程](sim_guide_CN.md)
 https://github.com/user-attachments/assets/c9d664e0-4bba-4eec-bfe2-14fd4755e677
 
 
