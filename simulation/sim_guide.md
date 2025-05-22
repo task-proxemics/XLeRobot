@@ -83,6 +83,8 @@ Replace the fetch robot code and assets with the XLeRobot files:
 
 ## Usage
 
+> [!NOTE] 
+> The name of the files may be slightly different, check and change if you need.
 ### Joint Control
 
 Run the joint control demo with:
@@ -99,7 +101,16 @@ Run the end effector control demo with:
 python -m mani_skill.examples.XLeRobot_demo_ee_ctrl -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
 ```
 
-### 5. Available Environments
+### 5. Rename the links
+
+If you encounter this error:
+![image](https://github.com/user-attachments/assets/c81569a3-5c4f-4ba6-99d9-65d84937e767)
+Navigate to the corresponding script
+![image](https://github.com/user-attachments/assets/afda5567-3dfa-4e04-997f-4b5eff0dd1bc)
+and change "torso_lift_link" to "head_camera_link"
+![image](https://github.com/user-attachments/assets/05b52683-5e50-47fc-9cf7-9c021927db18)
+
+### 6. More Scenes
 
 You can use various environments with XLeRobot following [this](https://maniskill.readthedocs.io/en/latest/user_guide/datasets/scenes.html):
 
@@ -110,7 +121,7 @@ You can use various environments with XLeRobot following [this](https://maniskil
 ![image](https://github.com/user-attachments/assets/767683be-c090-4fd7-9cfe-05fd2b4559c6)
 
 
-### 6. VR Integration
+### 7. VR Integration
 
 To enable VR with Oculus:
 
@@ -124,7 +135,7 @@ To enable VR with Oculus:
 python -m mani_skill.examples.XLeRobot_demo_VR_ee_ctrl -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
 ```
 
-### 7. Custom Hardware Integration
+### 8. Custom Hardware Integration
 
 To use different hardware versions:
 
