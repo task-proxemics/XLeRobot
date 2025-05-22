@@ -54,6 +54,10 @@ to directly download the dataset from huggingface. And then folder contents shou
 python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
   --render-mode="human" --shader="rt-fast"
 ```
+And you should be looking at something like this:
+![image](https://github.com/user-attachments/assets/c7509843-f037-4f37-9b1c-e7cad939037c)
+
+
 ### 3. Additional Dependencies
 
 ```bash
