@@ -1,6 +1,6 @@
 (Still a draft, may have false information, will delete this after I finish)
 
-# XLeRobot
+# Step-by-step Guide for XLeRobot Playground
 
 XLeRobot is a robot control system built on the ManiSkill simulator, providing joint control and end-effector control capabilities.
 
