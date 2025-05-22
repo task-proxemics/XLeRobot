@@ -70,13 +70,14 @@ cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 
 Replace the fetch robot code and assets with the XLeRobot files:
 
+1. Download simulation/Maniskill.zip
 
-1. Replace the files in /agents and /assets:
+2. Replace the files in /agents and /assets:
 ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
 ![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
 
 
-2. Add control code to /examples:
+3. Add control code to /examples:
 ![image](https://github.com/user-attachments/assets/654556ab-473f-44d2-8ff7-107c346882c6)
 
 
