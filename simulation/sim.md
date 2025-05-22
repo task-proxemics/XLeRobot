@@ -4,6 +4,8 @@
 > [!NOTE] 
 > Built upon [ManiSkill](https://maniskill.readthedocs.io/en/latest/index.html), [RoboCasa](https://github.com/robocasa/robocasa), [ReplicaCAD](https://aihabitat.org/datasets/replica_cad/), and [AI2Thor](https://github.com/allenai/ai2thor). Special thanks to Stone Tao, the main leader on ManiSkill3, for his detailed discussions that helped me get familiar with ManiSkill so quickly.
 
+> [!NOTE] 
+> See here for the [Step-by-Step Guide](sim_guide.md)
 
 https://github.com/user-attachments/assets/c9d664e0-4bba-4eec-bfe2-14fd4755e677
 
