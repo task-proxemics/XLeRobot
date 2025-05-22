@@ -4,9 +4,7 @@
 
 XLeRobot is a robot control system built on the ManiSkill simulator, providing joint control and end-effector control capabilities.
 
-[![项目演示](https://img.youtube.com/vi/YYN5ux6mibA/maxresdefault.jpg)](https://www.youtube.com/watch?v=YYN5ux6mibA)
 
-> 📺 [直接链接到YouTube视频](https://www.youtube.com/watch?v=YYN5ux6mibA)
 
 ## Prerequisites
 
@@ -41,7 +39,7 @@ python -m mani_skill.utils.download_asset
 
 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html).
 
-### 3. Install Additional Dependencies
+### 3. Additional Dependencies
 
 ```bash
 pip install pygame
