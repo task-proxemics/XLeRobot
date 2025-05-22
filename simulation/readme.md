@@ -2,6 +2,11 @@
 
 # Step-by-step Guide for XLeRobot Playground
 
+
+
+https://github.com/user-attachments/assets/b8e630bd-1133-4941-acd1-d974f60098ff
+
+
 ## Prerequisites
 
 - Ubuntu operating system
