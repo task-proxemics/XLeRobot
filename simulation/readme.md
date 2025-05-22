@@ -108,7 +108,7 @@ python -m mani_skill.examples.XLeRobot_demo_ee_ctrl -e "ReplicaCAD_SceneManipula
 
 ### Available Environments
 
-You can use various environments with XLeRobot:
+You can use various environments with XLeRobot following [this](https://maniskill.readthedocs.io/en/latest/user_guide/datasets/scenes.html):
 
 - `ReplicaCAD_SceneManipulation-v1` (default)
 - AI2THOR scenes
