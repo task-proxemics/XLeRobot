@@ -8,10 +8,10 @@
 [![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md)
 
 > [!NOTE] 
-> **XLeRobot 0.1.0** 正式发布！当前版本包括详细的**材料清单**、**3D打印模型和说明**，以及**逐步组装指南**。虽然代码尚未提供，但您可以使用原始Lekiwi代码库在单臂版本上**运行远程操作测试**（由另一个跟随臂控制）。
+> **XLeRobot 0.1.5** 正式发布！当前版本包含 [一篇简短的技术博客](simulation/sim_CN.md) and 和详细的 [**分步安装指南**](simulation/sim_guide_CN.md), 并附带所有urdf文件和控制脚本，让您可以在10分钟内开始使用复现demo。 
 
 > [!NOTE] 
-> **XLeRobot 0.1.5** 正式发布！当前版本包含 [一篇简短的技术博客](simulation/sim_CN.md) and 和详细的 [**分步安装指南**](simulation/sim_guide_CN.md), 并附带所有urdf文件和控制脚本，让您可以在10分钟内开始使用复现demo。 
+> **XLeRobot 0.1.0** 正式发布！当前版本包括详细的**材料清单**、**3D打印模型和说明**，以及**逐步组装指南**。虽然代码尚未提供，但您可以使用原始Lekiwi代码库在单臂版本上**运行远程操作测试**（由另一个跟随臂控制）。
 
 # XLeRobot 🤖
 
@@ -26,6 +26,14 @@
 *站在巨人的肩膀上: [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
+## ⚽ XLeRobot Playground （0.1.5）
+
+**XLeRobot 0.1.5** 正式发布！当前版本包含 [一篇简短的技术博客](simulation/sim_CN.md) and 和详细的 [**分步安装指南**](simulation/sim_guide_CN.md), 并附带所有urdf文件和控制代码，让您可以在10分钟内开始使用并复现下面展示的demo。 
+
+https://github.com/user-attachments/assets/e66d8cb5-7a02-4445-b6d9-793057996f87
+---
+
+
 
 ## 🌟 为什么选择XLeRobot？ 🌟
 让我们来分解一下，因为**XLeRobot = XL + LeRobot**
