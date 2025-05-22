@@ -135,18 +135,8 @@ To use different hardware versions:
 
 ### Common Errors
 
-If you encounter an error like `xxxxxx`:
 - Navigate to the script and change the link name
-
-If you encounter an error like `yyyyyy`:
 - Navigate to the script and comment out the avoid collision list
-
-## Additional Resources
-
-For more robotic environments, consider:
-- [RoboCasa](https://github.com/StanfordVL/robocasa)
-- [AI2-THOR](https://ai2thor.allenai.org/)
-
 
 
   
