@@ -73,7 +73,7 @@ Let's break this down since **XLeRobot = XL + LeRobot**
 
 ### Overall Advantages/Goals of XLeRobot
 
-- **Cost-effective** 💴: Complete build costs \$660, or upgrade from existing SO100Arm and Lekiwi for $250.
+- **Cost-effective** 💴: Complete build costs \$660, or upgrade from existing SO100Arm and Lekiwi for \$250.
 - **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO-100/SO-101**
     - Hardware: No motor ID changes or hardware modifications needed
     - Software: Identical tabletop single-arm/dual-arm setup—transfer your trained policies directly from SO-100/SO-101 arm
