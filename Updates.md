@@ -5,18 +5,17 @@ Hardware
 - Standard dual-arm base with a RasberryPi Holder and safety stop button
 - Head camera with Realsense depth camera
 
-Software
+Software (already in 0.1.5)
 - URDF and basic Simulation in Maniskill
 
 Others
 - More teleoperation demos
 - A small surprise
 
-From XLeRobot 0.1.0 to 0.2.0, the same existing lekiwi code will be used, and hardware upgrade modifications will take less than half an hour, so interested users can go ahead and get familiar with 0.1.0 first. After version 0.2.0 is released, the hardware will be improved to truly become an open-source platform with its full capability, shared by both hobbyists and professional robotics researchers - stay tuned!
+From XLeRobot 0.1.0 to 0.2.0, the hardware upgrade modifications will take less than half an hour, so interested users can go ahead and get familiar with 0.1.0 first. 
 
-![Visual and Collision Model](https://github.com/user-attachments/assets/6abf3c4c-16e9-4c25-b198-e7cd65e7f95a)
+After version 0.2.0 is released, the hardware will be improved to truly become an open-source platform with its full capability, shared by both hobbyists and professional robotics researchers - stay tuned!
 
-https://github.com/user-attachments/assets/1b2b9a95-e808-4fd9-8eec-58733714bb81
+<img width="620" alt="e78178e8749ef7186320f1932016e30" src="https://github.com/user-attachments/assets/04519cd4-18cc-4dce-8a9f-5ea6bed4034d" />
 
-https://github.com/user-attachments/assets/c645235f-c826-4b4d-8b57-d9f9d7aa23ac
 
