@@ -64,8 +64,8 @@ Follow the assembly sequence shown in the diagram below (easier when filpped ove
 Then it should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
 
 
-
-**Important**: Complete all wiring and install the Raspberry Pi in its case before clamping the top base to the IKEA cart.
+> [!NOTE] 
+> Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart.
 
 ![97716d359d26b2e24cdf0db03f6628a](https://github.com/user-attachments/assets/b0ee286e-bec0-4a70-95ee-2cf108ae4ab6)
 
