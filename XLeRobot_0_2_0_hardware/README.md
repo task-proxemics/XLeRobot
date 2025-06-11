@@ -1,0 +1,66 @@
+# XLeRobot Changelog
+
+## Version 0.2.0 - Hardware Update Release
+
+### 🎮 Control System
+The control system remains the same as Lekiwi for now. We will release the full control algorithms later this month.
+
+![image](https://github.com/user-attachments/assets/d9e6cf59-dabd-44c3-9430-bb6466dab745)
+
+### 📋 Updated Bill of Materials (BOM)
+The BOM is essentially the same as XLeRobot 0.1.0, with the following additional components:
+- RealSense depth camera
+- USB hub
+- Hand cameras
+- 2 additional motors (same specifications as arm motors)
+
+### 🔧 Hardware Updates
+
+#### Bottom Base
+- **Improved base plate layout**: All screws can now be installed smoothly without interference
+- **Added branding**: XLeRobot (Zima) watermark and designer name have been added to the base plate
+
+![image](https://github.com/user-attachments/assets/78417d4e-a087-4c61-a1b8-65ba53b8ebad)
+
+#### Top Base
+- **Standardized arm spacing**: Two arm bases are now connected to ensure consistent spacing
+- **Clamp mounting system**: Retained clamp-based attachment for easier installation and modular design
+- **Integrated cable management**: Added protective shell for Raspberry Pi with organized cable routing
+
+![image](https://github.com/user-attachments/assets/df9e1adf-73e7-4822-9224-9934acb8680f)
+
+- **Hollow neck design**: Space-efficient design that saves filament while accommodating USB hub
+
+![image](https://github.com/user-attachments/assets/4f423711-e0b5-47d9-ab6d-3250581bbf31)
+
+- **2-DOF head rotation**: Direct modification based on SO101 base design
+- **Modular architecture**: Even if head functionality isn't immediately needed, you can print and assemble everything below the neck first
+
+### 🔨 Assembly Instructions
+
+#### Hardware Requirements
+- Continue using M3 hex screws as in previous versions
+- Bottom base assembly process remains the same as version 0.1.0
+
+#### Top Base Assembly
+Follow the assembly sequence shown in the diagram below:
+
+![image](https://github.com/user-attachments/assets/0b7c76b7-6931-4aa7-8caf-454c33990edc)
+
+**Important**: Complete all wiring and install the Raspberry Pi in its case before clamping the top base to the IKEA cart.
+
+![97716d359d26b2e24cdf0db03f6628a](https://github.com/user-attachments/assets/b0ee286e-bec0-4a70-95ee-2cf108ae4ab6)
+
+### 📸 Final Assembly
+![30b2e8b205a4ec5edf37260483050b0](https://github.com/user-attachments/assets/0672fb18-7999-45c1-bd90-b437b5dd2cde)
+
+### ⚠️ Current Limitations
+Due to ongoing LeRobot system updates, we are currently working on control integration with the new system version. Complete end-effector control code and corresponding simulation will be released this month.
+
+**Temporary Workaround**: You can continue using Lekiwi's code base. For now, implement head control and base movement control separately (either disable base motors or disable head motors during operation).
+
+### 🚀 Coming Soon
+- Full control algorithm release
+- End-effector control code
+- Simulation environment
+- Integration with updated LeRobot system
