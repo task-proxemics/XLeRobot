@@ -71,6 +71,10 @@ Then it should be the same as the first two steps of [SO101 arm assembly](https:
 
 ![image](https://github.com/user-attachments/assets/0fc95a4e-d4aa-48a5-944a-cc1a984c20b2)
 
+### ⚡️ Wiring
+
+The head motors wiring are the same as Lekiwi, only with 2 motors instead of three, connected to the other available arm motor control board. But be careful with the joint limits.
+
 
 ### 📸 Final Assembly
 
