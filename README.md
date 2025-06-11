@@ -8,7 +8,8 @@
 [![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md)
 
 > [!NOTE] 
-> Hardware: **XLeRobot 0.1.0** is officially out! The current version includes a detailed **bill of materials**, **3D printing models and instructions**, and a **step-by-step assembly guide**. While the code is not yet available, you can **run the teleoperation test** on a single arm version (controlled with the other follower arm) directly using the original Lekiwi codebase.
+> Hardware: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <1000$ cost. 
+
 
 > [!NOTE] 
 > Simulation: **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started in 10 min. 
