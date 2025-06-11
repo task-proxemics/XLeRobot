@@ -67,7 +67,8 @@ Then it should be the same as the first two steps of [SO101 arm assembly](https:
 > [!NOTE] 
 > Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart.
 
-![97716d359d26b2e24cdf0db03f6628a](https://github.com/user-attachments/assets/b0ee286e-bec0-4a70-95ee-2cf108ae4ab6)
+![image](https://github.com/user-attachments/assets/0fc95a4e-d4aa-48a5-944a-cc1a984c20b2)
+
 
 ### 📸 Final Assembly
 
