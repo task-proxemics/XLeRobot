@@ -7,8 +7,8 @@
 
 ### 📋 Updated Bill of Materials (BOM)
 The BOM is essentially the same as XLeRobot 0.1.0, with the following additional components:
-- (RealSense D415 depth camera)[https://a.co/d/hzuPDe6]
-- (Anker USB hub)[https://a.co/d/6tJW8lN]
+- [RealSense D415 depth camera](https://a.co/d/hzuPDe6)
+- [Anker USB hub](https://a.co/d/6tJW8lN)
 - Hand cameras
 - 2 additional motors (same specifications as arm motors)
 
