@@ -3,6 +3,7 @@
 ## Version 0.2.0 - Hardware Update Release
 
 <img width="522" alt="95f4276408c903c8755f2c198c01202" src="https://github.com/user-attachments/assets/d270ee9e-a5cb-4dba-8a71-160fcaab983e" />
+
 ![image](https://github.com/user-attachments/assets/d17127c8-9025-4fab-bf48-c53a1c36e826)
 
 
