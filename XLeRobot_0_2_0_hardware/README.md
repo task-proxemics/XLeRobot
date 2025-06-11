@@ -2,7 +2,7 @@
 
 ## Version 0.2.0 - Hardware Update Release
 
-### [Here's the 3D print file](XLeRobot_0_2_0_hardware/XLeRobot_0_2_0.3mf)
+### [Here's the 3D print file](XLeRobot_0_2_0.3mf)
 
 <img width="522" alt="95f4276408c903c8755f2c198c01202" src="https://github.com/user-attachments/assets/d270ee9e-a5cb-4dba-8a71-160fcaab983e" />
 
