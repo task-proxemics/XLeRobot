@@ -2,10 +2,8 @@
 
 ## Version 0.2.0 - Hardware Update Release
 
-### 🎮 Control System
-The control system remains the same as Lekiwi for now. We will release the full control algorithms later this month.
+<img width="522" alt="95f4276408c903c8755f2c198c01202" src="https://github.com/user-attachments/assets/d270ee9e-a5cb-4dba-8a71-160fcaab983e" />
 
-![image](https://github.com/user-attachments/assets/d9e6cf59-dabd-44c3-9430-bb6466dab745)
 
 ### 📋 Updated Bill of Materials (BOM)
 The BOM is essentially the same as XLeRobot 0.1.0, with the following additional components:
