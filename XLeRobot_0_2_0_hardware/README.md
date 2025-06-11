@@ -53,6 +53,7 @@ With all of these additional sensors and motors, the total cost of XLeRobot 0.2.
 #### Hardware Requirements
 - Continue using M3 hex screws as in previous versions
 - Bottom base assembly process remains the same as [version 0.1.0](https://github.com/Vector-Wangel/XLeRobot/blob/main/Assembly.md#%EF%B8%8F-install-the-lekiwi-base-)
+    - The connectors have been redesigned. You may also need to adjust its height (by changing z axis scale in the 3D slicer software) to find the best size.
 
 #### Top Base Assembly
 Follow the assembly sequence shown in the diagram below (easier when filpped over):
