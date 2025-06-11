@@ -55,8 +55,13 @@ The BOM is essentially the same as [XLeRobot 0.1.0](https://github.com/Vector-Wa
 
 #### Top Base Assembly
 Follow the assembly sequence shown in the diagram below (easier when filpped over):
+
 ![image](https://github.com/user-attachments/assets/1640d830-b7e9-474b-810d-070097fec59e)
 ![image](https://github.com/user-attachments/assets/885034a4-61f8-4d61-ab43-b88788b6058b)
+![image](https://github.com/user-attachments/assets/e8a3c68f-9fe6-47da-9428-920e9658d58f)
+![image](https://github.com/user-attachments/assets/14d305cb-c222-4641-81a4-682850ddbf37)
+
+Then it should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
 
 
 
