@@ -54,9 +54,11 @@ The BOM is essentially the same as [XLeRobot 0.1.0](https://github.com/Vector-Wa
 - Bottom base assembly process remains the same as [version 0.1.0](https://github.com/Vector-Wangel/XLeRobot/blob/main/Assembly.md#%EF%B8%8F-install-the-lekiwi-base-)
 
 #### Top Base Assembly
-Follow the assembly sequence shown in the diagram below:
+Follow the assembly sequence shown in the diagram below (easier when filpped over):
+![image](https://github.com/user-attachments/assets/1640d830-b7e9-474b-810d-070097fec59e)
+![image](https://github.com/user-attachments/assets/885034a4-61f8-4d61-ab43-b88788b6058b)
 
-![image](https://github.com/user-attachments/assets/0b7c76b7-6931-4aa7-8caf-454c33990edc)
+
 
 **Important**: Complete all wiring and install the Raspberry Pi in its case before clamping the top base to the IKEA cart.
 
