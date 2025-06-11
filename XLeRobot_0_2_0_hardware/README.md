@@ -19,8 +19,10 @@ The BOM is essentially the same as XLeRobot 0.1.0, with the following additional
 #### Bottom Base
 - **Improved base plate layout**: All screws can now be installed smoothly without interference
 - **Added branding**: XLeRobot (Zima) watermark and designer name have been added to the base plate
+![image](https://github.com/user-attachments/assets/d3dc8614-ee42-4856-bd88-b1e6b3aacb76)
 
-![image](https://github.com/user-attachments/assets/78417d4e-a087-4c61-a1b8-65ba53b8ebad)
+
+
 
 #### Top Base
 - **Standardized arm spacing**: Two arm bases are now connected to ensure consistent spacing
