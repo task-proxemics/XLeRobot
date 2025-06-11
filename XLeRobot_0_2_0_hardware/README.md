@@ -48,7 +48,7 @@ The BOM is essentially the same as [XLeRobot 0.1.0](https://github.com/Vector-Wa
 
 #### Hardware Requirements
 - Continue using M3 hex screws as in previous versions
-- Bottom base assembly process remains the same as version 0.1.0
+- Bottom base assembly process remains the same as [version 0.1.0](https://github.com/Vector-Wangel/XLeRobot/blob/main/Assembly.md#%EF%B8%8F-install-the-lekiwi-base-)
 
 #### Top Base Assembly
 Follow the assembly sequence shown in the diagram below:
