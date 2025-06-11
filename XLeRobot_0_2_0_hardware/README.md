@@ -10,11 +10,14 @@
 
 
 ### 📋 Updated Bill of Materials (BOM)
+The total cost of XLeRobot 0.2.0 is less than 1000$
+
 The BOM is essentially the same as XLeRobot 0.1.0, with the following additional components:
 - [RealSense D415 depth camera](https://a.co/d/hzuPDe6)
 - [Anker USB hub](https://a.co/d/6tJW8lN)
 - [Hand cameras](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module)
 - 2 additional motors (same specifications as arm motors)
+
 
 ### 🔧 Hardware Updates
 
