@@ -67,7 +67,7 @@ Then it should be the same as the first two steps of [SO101 arm assembly](https:
 
 
 > [!NOTE] 
-> Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart.
+> Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart. (Also use 3D printing filament spools if you have one for enhanced structural support)
 
 ![image](https://github.com/user-attachments/assets/0fc95a4e-d4aa-48a5-944a-cc1a984c20b2)
 
