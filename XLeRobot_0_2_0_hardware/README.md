@@ -39,11 +39,13 @@ The BOM is essentially the same as [XLeRobot 0.1.0](https://github.com/Vector-Wa
 ![image](https://github.com/user-attachments/assets/fff88e18-08ef-4165-bb0b-32affb557a99)
 
 - **Hollow neck design**: Space-efficient design that saves filament while accommodating USB hub
-
-![image](https://github.com/user-attachments/assets/4f423711-e0b5-47d9-ab6d-3250581bbf31)
+![image](https://github.com/user-attachments/assets/95a7e585-e625-440e-90f9-5199c092aff7)
 
 - **2-DOF head rotation**: Direct modification based on SO101 base design
+![image](https://github.com/user-attachments/assets/6de3d78d-392d-4d82-b19d-0e11d1f6bb0f)
+
 - **Modular architecture**: Even if head functionality isn't immediately needed, you can print and assemble everything below the neck first
+<img width="868" alt="1749615226961" src="https://github.com/user-attachments/assets/d5685698-5f49-407e-a12a-5adc6dbc658a" />
 
 ### 🔨 Assembly Instructions
 
