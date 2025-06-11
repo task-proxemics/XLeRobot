@@ -60,7 +60,9 @@ Follow the assembly sequence shown in the diagram below:
 ![97716d359d26b2e24cdf0db03f6628a](https://github.com/user-attachments/assets/b0ee286e-bec0-4a70-95ee-2cf108ae4ab6)
 
 ### 📸 Final Assembly
-![30b2e8b205a4ec5edf37260483050b0](https://github.com/user-attachments/assets/0672fb18-7999-45c1-bd90-b437b5dd2cde)
+
+![image](https://github.com/user-attachments/assets/8703d472-0ab5-4e17-a9c8-eac8d3a001c1)
+
 
 ### ⚠️ Current Limitations
 Due to ongoing LeRobot system updates, we are currently working on control integration with the new system version. Complete end-effector control code and corresponding simulation will be released this month.
