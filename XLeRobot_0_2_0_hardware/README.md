@@ -36,6 +36,8 @@ With all of these additional sensors and motors, the total cost of XLeRobot 0.2.
 ![image](https://github.com/user-attachments/assets/4aed916e-5930-451c-ac72-795d2cb22601)
 
 - **Clamp mounting system**: Retained clamp-based attachment for easier installation and modular design
+![image](https://github.com/user-attachments/assets/03560435-1c14-42ac-8186-931a43eee0b5)
+
 - **Integrated cable management**: Added protective shell for Raspberry Pi with organized cable routing
 ![image](https://github.com/user-attachments/assets/fff88e18-08ef-4165-bb0b-32affb557a99)
 
