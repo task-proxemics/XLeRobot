@@ -73,7 +73,8 @@ Then it should be the same as the first two steps of [SO101 arm assembly](https:
 
 ### 📸 Final Assembly
 
-![image](https://github.com/user-attachments/assets/8703d472-0ab5-4e17-a9c8-eac8d3a001c1)
+![image](https://github.com/user-attachments/assets/83ab9bf4-2f4f-4efa-881c-b15d303dd0f2)
+
 
 
 ### ⚠️ Current Limitations
