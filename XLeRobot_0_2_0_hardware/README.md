@@ -32,10 +32,11 @@ The BOM is essentially the same as [XLeRobot 0.1.0](https://github.com/Vector-Wa
 
 #### Top Base
 - **Standardized arm spacing**: Two arm bases are now connected to ensure consistent spacing
+![image](https://github.com/user-attachments/assets/4aed916e-5930-451c-ac72-795d2cb22601)
+
 - **Clamp mounting system**: Retained clamp-based attachment for easier installation and modular design
 - **Integrated cable management**: Added protective shell for Raspberry Pi with organized cable routing
-
-![image](https://github.com/user-attachments/assets/df9e1adf-73e7-4822-9224-9934acb8680f)
+![image](https://github.com/user-attachments/assets/fff88e18-08ef-4165-bb0b-32affb557a99)
 
 - **Hollow neck design**: Space-efficient design that saves filament while accommodating USB hub
 
