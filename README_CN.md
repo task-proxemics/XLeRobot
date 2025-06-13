@@ -8,6 +8,9 @@
 [![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md)
 
 > [!NOTE] 
+> 硬件：[XLeRobot 0.2.0的硬件配置](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md)正式发布！这是第一个官方硬件版本，完全能够执行自主家务任务，成本低于1000美元。
+
+> [!NOTE] 
 > 仿真：**XLeRobot 0.1.5** 正式发布！当前版本包含 [一篇简短的技术博客](simulation/sim_CN.md) and 和详细的 [**分步安装指南**](simulation/sim_guide_CN.md), 并附带所有urdf文件和控制脚本，让您可以在10分钟内开始使用复现demo。 
 
 > [!NOTE] 
