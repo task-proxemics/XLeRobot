@@ -320,17 +320,15 @@ All things considered—cost, community support, ease of assembly, and practical
 
 ## Main Contributors
 
-Currently just [me](https://vector-wangel.github.io/). Will definitely update this list when more people join this open source project in the future. They will also be added to the citation list as one of the authors.
+- [Me](https://vector-wangel.github.io/). 
+- Yuesong Wang: Mujoco simulation
 
 This is just a small brick in the pyramid, made possible by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks to all the talented contributors behind these detailed and professional projects.
 
 Looking forward to collaborating with anyone interested in contributing to this project!
 
-> [!NOTE]
-> Currently too busy with my paper deadline, will pubilcly seek collaborations and investments starting from July.2025.
 
-Not affiliated with Anker or IKEA (but we love Swedish meatballs! 🍝)
-
+[![Star History Chart](https://api.star-history.com/svg?repos=Vector-Wangel/XLeRobot&type=Timeline)](https://star-history.com/#Vector-Wangel/XLeRobot&Timeline)
 ---
 
 ## Citation
@@ -345,8 +343,6 @@ If you want, you can cite this work with:
     year = {2025}
 }
 ```
-Will definitely add more authors (such as developers from LeRobot and Lekiwi after I personally confirming with them) in the future.
-
 ---
 
 ## 🪧 Disclaimer 🪧
