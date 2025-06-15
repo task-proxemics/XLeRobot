@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>GPU Simulation &#8212; XLeRobot 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/concepts/gpu_simulation';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '_static/version_switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'None';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_black.svg" class="logo__image only-light" alt="XLeRobot 0.1 documentation - Home"/>
+    <img src="../../_static/logo_white.svg" class="logo__image only-dark pst-js-only" alt="XLeRobot 0.1 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tasks/index.html">
+    Tasks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../robots/index.html">
+    Robots
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../roadmap/index.html">
+    Roadmap
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://github.com/haosulab/ManiSkill/releases">
+    Changelog
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/haosulab/ManiSkill" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://maniskill.ai" title="Website" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Website</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tasks/index.html">
+    Tasks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../robots/index.html">
+    Robots
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../roadmap/index.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/haosulab/ManiSkill/releases">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/haosulab/ManiSkill" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://maniskill.ai" title="Website" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Website</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">GPU Simulation</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="gpu-simulation">
+<h1>GPU Simulation<a class="headerlink" href="#gpu-simulation" title="Permalink to this heading">#</a></h1>
+<p>ManiSkill leverages <a class="reference external" href="https://github.com/NVIDIA-Omniverse/PhysX">PhysX</a> to perform physics simulation parallelized on the GPU. This comes with a number of changes to how typical simulations work on the CPU and they are detailed here. It is recommended to read through this documentation as it covers some basics of GPU simulation and design principles of ManiSkill, which can massively help you write more efficient code/build optimized GPU parallelized tasks.</p>
+<section id="scenes-and-sub-scenes">
+<h2>Scenes and Sub-scenes<a class="headerlink" href="#scenes-and-sub-scenes" title="Permalink to this heading">#</a></h2>
+<p>With GPU parallelization, the concept is that one can simulate a task thousands of times at once per GPU. In ManiSkill/SAPIEN this is realized by effectively putting all actors and articulations</p>
+<p>The idea of sub-scenes is that reading data of e.g. actor poses is automatically pre-processed to be relative to the center of the sub-scene and not the physx scene. The diagram below shows how 64 sub-scenes may be organized. Note that each sub-scene’s distance to each other is defined by the simulation configuration <code class="docutils literal notranslate"><span class="pre">sim_config.spacing</span></code> value which can be set when building your own task.</p>
+<figure class="align-default">
+<img alt="user_guide/concepts/images/physx_scene_subscene_relationship.png" src="user_guide/concepts/images/physx_scene_subscene_relationship.png" />
+</figure>
+<p>SAPIEN permits sub-scenes to be located at any location you want, ManiSkill just picks the most square setup with a fixed spacing parameter. Notice that if objects in one sub-scene go beyond its workspace, it can actually affect the other sub-scenes. This is a common bug users may face when simulating larger scenes of e.g. houses or out-door settings where the spacing parameter is set too low so objects from e.g. sub-scene-0 will contact with objects in sub-scene-1.</p>
+</section>
+<section id="gpu-simulation-lifecycle">
+<h2>GPU Simulation Lifecycle<a class="headerlink" href="#gpu-simulation-lifecycle" title="Permalink to this heading">#</a></h2>
+<p>In ManiSkill, the gym API is adopted to create, reset, and step through environments.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">env.reset</span></code> part consists of one time reconfiguration followed by initialization:</p>
+<ol class="arabic simple">
+<li><p>Reconfiguration: Loading objects (comprised of actors/articulations/lights) into the scene (basically spawning them in with an initial pose and not doing anything else)</p></li>
+<li><p>A call to <code class="docutils literal notranslate"><span class="pre">physx_system.gpu_init()</span></code> to initialize all GPU memory buffers and setting up all the rendering groups for parallelized rendering</p></li>
+<li><p>Initializing all actors and articulations (set poses, qpos values etc.).</p></li>
+<li><p>Running <code class="docutils literal notranslate"><span class="pre">physx_system.gpu_apply_*</span></code> to then save all the initialized data in step 3 to the GPU buffers to prepare for simulation</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">physx_system.gpu_update_articulation_kinematics()</span></code> to update any articulation data (e.g., link poses) to prepare for fetching</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">physx_system.gpu_fetch_*</span></code> to update relevant GPU buffers and generate observation data out of that</p></li>
+</ol>
+<p>In code we save the <code class="docutils literal notranslate"><span class="pre">physx_system</span></code> variable to <code class="docutils literal notranslate"><span class="pre">env.scene.px</span></code></p>
+<figure class="align-default">
+<img alt="user_guide/tutorials/images/env_create_env_reset_flow.png" src="user_guide/tutorials/images/env_create_env_reset_flow.png" />
+</figure>
+<p>The <code class="docutils literal notranslate"><span class="pre">env.step</span></code> part consists of a repeated flow of taking in actions and generating output for env.step</p>
+<ol class="arabic simple">
+<li><p>Get user’s action (and potentially clip it)</p></li>
+<li><p>Process the action and turn it into target joint position/velocity control signals to control agents</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">physx_system.gpu_apply_articulation_target_position</span></code> and <code class="docutils literal notranslate"><span class="pre">physx_syste.gpu_apply_articulation_target_velocity</span></code> to apply the targets from step 2.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">physx_system.step()</span></code> multiple times to step through the simulation</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">physx_system.gpu_fetch_*</span></code> to update relevant GPU buffers and generate observation data</p></li>
+<li><p>Return step data: observation, reward, terminated, truncated, and info.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="user_guide/tutorials/images/env_step_flow.png" src="user_guide/tutorials/images/env_step_flow.png" />
+</figure>
+<section id="data-organization-on-the-gpu">
+<h3>Data Organization on the GPU<a class="headerlink" href="#data-organization-on-the-gpu" title="Permalink to this heading">#</a></h3>
+<p>Rigid body data (which includes pose (7D), linear velocity (3D), and angular velocity (3D)) for every rigid body actor and articulation link in every sub-scene is all packed tightly in <code class="docutils literal notranslate"><span class="pre">physx_system.cuda_rigid_body_data</span></code> as one giant matrix and shaped as follows:</p>
+<figure class="align-default">
+<img alt="user_guide/concepts/images/gpu_buffer_pose_data_organization.png" src="user_guide/concepts/images/gpu_buffer_pose_data_organization.png" />
+</figure>
+<p>Users who plan to work with the GPU buffers directly may find this useful to understand, otherwise if you just use the exposed APIs given by ManiSkill shown in the tutorials this is all handled for you.</p>
+<p>Notably this GPU buffer is not guaranteed to follow any intuitive sense of organization (e.g. every k rows holds data for one sub-scene) which is the tradeoff for getting better performance. But in any case this example shows the organization of data when the physx scene has 3 rigid body actors in <span style="color:red">red</span> and 3 articulations with varying number of links / degrees of freedom (DOF) in <span style="color:green">green</span>. SAPIEN will pad the number of rows allocated per articulation to be the highest DOF in the entire physx scene.</p>
+</section>
+</section>
+<section id="maniskill-design-principles">
+<h2>ManiSkill Design Principles<a class="headerlink" href="#maniskill-design-principles" title="Permalink to this heading">#</a></h2>
+<section id="batched-everything">
+<h3>Batched Everything<a class="headerlink" href="#batched-everything" title="Permalink to this heading">#</a></h3>
+<p>ManiSkill aims to support both CPU and GPU parallelization schemes for parallelizing simulation. The reason is some tasks inherently are too difficult to simulate on a GPU any faster than you could get more CPUs on even non-industrial setups. With that in mind, nearly all of ManiSkill code exposes data to users as batched data (batch dimension = number of parallel environments) and treats a batch size of 1 in CPU simulation as a special case.</p>
+</section>
+<section id="managed-objects-and-views">
+<h3>Managed Objects and Views<a class="headerlink" href="#managed-objects-and-views" title="Permalink to this heading">#</a></h3>
+<p>ManiSkill can be seen as a pythonic interface over SAPIEN, the underlying system.</p>
+<p>The <a class="reference external" href="https://github.com/haosulab/ManiSkill/blob/main/mani_skill/utils/structs/actor.py"><code class="docutils literal notranslate"><span class="pre">Actor</span></code></a> class for example wraps that correspond to actual objects spawned in the simulator in each sub-scene, and allows easy access to otherwise highly compact/optimized GPU buffers that SAPIEN exposes to then fetch batched data like pose, velocities, pairwise contact forces etc.</p>
+<p>Similarly, the <a class="reference external" href="https://github.com/haosulab/ManiSkill/blob/main/mani_skill/utils/structs/pose.py"><code class="docutils literal notranslate"><span class="pre">Pose</span></code></a> class itself is a wrapper around the common
+object and is effectively a batched version of that.</p>
+<p>Another way to view these wrappers is to see that these wrappers are alternative <strong>views</strong> of otherwise the same data the raw GPU buffers expose. By understanding this perspective, it becomes easier to think about building tasks where you are simulating very different sub-scenes with different articulations that have different degrees of freedoms and different numbers of objects.</p>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">Actor.merge</span></code>, <code class="docutils literal notranslate"><span class="pre">Articulation.merge</span></code>, and <code class="docutils literal notranslate"><span class="pre">Link.merge</span></code> enable reshaping the view you have over the GPU buffers so that you can e.g. get the poses of a different objects in different parallel sub-scenes. You are no longer restricted to fetching data of just the same geometries and being forced to write complicated for loops / indexing code to figure out what indices on the GPU buffer correspond with what you want.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scenes-and-sub-scenes">Scenes and Sub-scenes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-simulation-lifecycle">GPU Simulation Lifecycle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-organization-on-the-gpu">Data Organization on the GPU</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maniskill-design-principles">ManiSkill Design Principles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batched-everything">Batched Everything</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managed-objects-and-views">Managed Objects and Views</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/haosulab/ManiSkill/edit/main/docs/source/user_guide/concepts/gpu_simulation.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/user_guide/concepts/gpu_simulation.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, XLeRobot Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

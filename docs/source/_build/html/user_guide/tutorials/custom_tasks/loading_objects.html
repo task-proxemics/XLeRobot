@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Loading Actors and Articulations &#8212; XLeRobot 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/tutorials/custom_tasks/loading_objects';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '_static/version_switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'None';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black.svg" class="logo__image only-light" alt="XLeRobot 0.1 documentation - Home"/>
+    <img src="../../../_static/logo_white.svg" class="logo__image only-dark pst-js-only" alt="XLeRobot 0.1 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../contributing/index.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../roadmap/index.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/haosulab/ManiSkill/releases">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/haosulab/ManiSkill" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://maniskill.ai" title="Website" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Website</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../contributing/index.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../roadmap/index.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/haosulab/ManiSkill/releases">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/haosulab/ManiSkill" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://maniskill.ai" title="Website" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Website</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Loading Actors and Articulations</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="loading-actors-and-articulations">
+<h1>Loading Actors and Articulations<a class="headerlink" href="#loading-actors-and-articulations" title="Permalink to this heading">#</a></h1>
+<p>The <a class="reference internal" href="intro.html"><span class="std std-doc">introductory tutorial</span></a> covered the overall process of building a custom task. This tutorial covers how to load a wider variety of objects, whether they are objects from asset datasets like <a class="reference external" href="https://www.ycbbenchmarks.com/">YCB</a>, or articulated datasets like <a class="reference external" href="https://sapien.ucsd.edu/browse">Partnet Mobility</a>. Loading these more complicated geometries enables you to build more complex and interesting robotics tasks.</p>
+<section id="loading-actors">
+<h2>Loading Actors<a class="headerlink" href="#loading-actors" title="Permalink to this heading">#</a></h2>
+<p>ManiSkill provides two ways to load actors, loading directly from existing simulation-ready asset datasets, or via the lower-level ActorBuilder API.</p>
+<section id="loading-from-existing-datasets">
+<h3>Loading from Existing Datasets<a class="headerlink" href="#loading-from-existing-datasets" title="Permalink to this heading">#</a></h3>
+<p>ManiSkill supports easily loading assets from existing datasets such as the YCB dataset. In the beta release this is the only asset database available, more will be provided once we finish integrating a 3D asset database system.</p>
+</section>
+<section id="using-the-actorbuilder-api">
+<h3>Using the ActorBuilder API<a class="headerlink" href="#using-the-actorbuilder-api" title="Permalink to this heading">#</a></h3>
+<p>To build custom actors in python code, you first create the ActorBuilder as so in your task:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_load_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+    <span class="n">builder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">create_actor_builder</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Then you can use the standard SAPIEN API for creating actors, a tutorial of which can be found on the <a class="reference external" href="https://sapien-sim.github.io/docs/user_guide/getting_started/create_actors.html#create-an-actor-with-actorbuilder">SAPIEN actors tutorial documentation</a></p>
+</section>
+</section>
+<section id="loading-articulations">
+<h2>Loading Articulations<a class="headerlink" href="#loading-articulations" title="Permalink to this heading">#</a></h2>
+<p>There are several ways to load articulations as detailed below as well as some limitations to be aware of</p>
+<section id="id1">
+<h3>Loading from Existing Datasets<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Like actors, ManiSkill supports easily loading articulated assets from existing datasets such as the Partnet Mobility dataset. In the beta release this is the only asset database available, more will be provided once we finish integrating a 3D asset database system.</p>
+</section>
+<section id="using-the-articulationbuilder-api">
+<h3>Using the ArticulationBuilder API<a class="headerlink" href="#using-the-articulationbuilder-api" title="Permalink to this heading">#</a></h3>
+<p>To build custom articulations in python code, you first create the ArticulationBuilder as so in your task:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_load_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+    <span class="n">builder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">create_articulation_builder</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Then you can use the standard SAPIEN API for creating articulations, a tutorial of which can be found on the <a class="reference external" href="https://sapien-sim.github.io/docs/user_guide/getting_started/create_articulations.html">SAPIEN articulation tutorial documentation</a>. You essentially just need to define what the links and joints are and how they connect. Links are created like Actors and can have visual and collision shapes added via the python API.</p>
+</section>
+<section id="using-the-urdf-loader">
+<h3>Using the URDF Loader<a class="headerlink" href="#using-the-urdf-loader" title="Permalink to this heading">#</a></h3>
+<p>If your articulation is defined with a URDF file, you can use a URDF loader to load that articulation and make modifications as needed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_load_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">create_urdf_loader</span><span class="p">()</span>
+    <span class="c1"># the .parse function can also parse multiple articulations</span>
+    <span class="c1"># actors and cameras but we only use the articulations</span>
+    <span class="n">articulation_builders</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">urdf_path</span><span class="p">))[</span><span class="s2">&quot;articulation_builders&quot;</span><span class="p">]</span>
+    <span class="n">builder</span> <span class="o">=</span> <span class="n">articulation_builders</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># choose a reasonable initial pose that doesn&#39;t intersect other objects</span>
+    <span class="c1"># this matters a lot for articulations in GPU sim or else simulation bugs can occur</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">initial_pose</span> <span class="o">=</span> <span class="n">sapien</span><span class="o">.</span><span class="n">Pose</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_articulation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also programmatically change various properties of articulations and their links prior to building it, see below for examples which range from fixing root links, collision mesh loading logic, and modifying physical properties. These can be useful for e.g. domain randomization</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_load_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">create_urdf_loader</span><span class="p">()</span>
+    
+    <span class="c1"># change friction values of all links</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">set_material</span><span class="p">(</span><span class="n">static_friction</span><span class="p">,</span> <span class="n">dynamic_friction</span><span class="p">,</span> <span class="n">restitution</span><span class="p">)</span>
+    <span class="c1"># change friction values of specific links</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">set_link_material</span><span class="p">(</span><span class="n">link_name</span><span class="p">,</span> <span class="n">static_friction</span><span class="p">,</span> <span class="n">dynamic_friction</span><span class="p">,</span> <span class="n">restitution</span><span class="p">)</span>
+    <span class="c1"># change patch radius values of specific links</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">set_link_min_patch_radius</span><span class="p">(</span><span class="n">link_name</span><span class="p">,</span> <span class="n">min_patch_radius</span><span class="p">)</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">set_link_patch_radius</span><span class="p">(</span><span class="n">link_name</span><span class="p">,</span> <span class="n">patch_radius</span><span class="p">)</span>
+    <span class="c1"># set density of all links</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">set_density</span><span class="p">(</span><span class="n">density</span><span class="p">)</span>
+    <span class="c1"># set density of specific links</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">set_link_density</span><span class="p">(</span><span class="n">link_name</span><span class="p">,</span> <span class="n">density</span><span class="p">)</span>
+    <span class="c1"># fix/unfix root link in place</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">fix_root_link</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># or False</span>
+    <span class="c1"># change the scale of the loaded articulation geometries (visual+collision)</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># default is 1.0</span>
+    <span class="c1"># if collision meshes contain multiple convex meshes</span>
+    <span class="c1"># you can set this to True to try and load them</span>
+    <span class="n">loader</span><span class="o">.</span><span class="n">load_multiple_collisions_from_file</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">articulation_builders</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">urdf_path</span><span class="p">))[</span><span class="s2">&quot;articulation_builders&quot;</span><span class="p">]</span>
+    <span class="n">builder</span> <span class="o">=</span> <span class="n">articulation_builders</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_articulation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="articulation-limitations">
+<h3>Articulation Limitations<a class="headerlink" href="#articulation-limitations" title="Permalink to this heading">#</a></h3>
+<p>For the physx simulation backend, any single articulation can have a maximum of 64 links. More complex articulated objects will either need to be simplified by merging links together. Most of the time this is readily possible by inspecting the URDF and fusing together links held together by fixed joints. The less fixed joints and links there are, the better the simulation will run in terms of accuracy and speed.</p>
+</section>
+</section>
+<section id="using-the-mjcf-loader">
+<h2>Using the MJCF Loader<a class="headerlink" href="#using-the-mjcf-loader" title="Permalink to this heading">#</a></h2>
+<p>If your actor/articulation is defined with a MJCF file, you can use a MJCF loader to load that articulation and make modifications as needed. It works the exact same as the <a class="reference internal" href="#using-the-urdf-loader"><span class="std std-ref">URDF loader</span></a>. Note that however not all properties in MJCF/Mujoco are supported in SAPIEN/ManiSkill at this moment, so you should always verify your articulation/actors are loaded correctly from the MJCF.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_load_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">create_mjcf_loader</span><span class="p">()</span>
+    <span class="n">builders</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">mjcf_path</span><span class="p">))</span>
+    <span class="n">articulation_builders</span> <span class="o">=</span> <span class="n">builders</span><span class="p">[</span><span class="s2">&quot;articulation_builders&quot;</span><span class="p">]</span>
+    <span class="n">actor_builders</span> <span class="o">=</span> <span class="n">builders</span><span class="p">[</span><span class="s2">&quot;actor_builders&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="reconfiguring-and-optimization">
+<h2>Reconfiguring and Optimization<a class="headerlink" href="#reconfiguring-and-optimization" title="Permalink to this heading">#</a></h2>
+<p>In general loading is always quite slow, especially on the GPU so by default, ManiSkill reconfigures just once. Any call to <code class="docutils literal notranslate"><span class="pre">env.reset()</span></code> will not trigger a reconfiguration unless you call <code class="docutils literal notranslate"><span class="pre">env.reset(seed=seed,</span> <span class="pre">options=dict(reconfigure=True))</span></code> (seed is not needed but recommended if you are reconfiguring for reproducibility).</p>
+<p>However, during CPU simulation with just a single environment (or GPU simulation with very few environments) the loaded object geometries never get to change as reconfiguration doesn’t happen more than once. This behavior can be changed by setting the <code class="docutils literal notranslate"><span class="pre">reconfiguration_freq</span></code> value of your task.</p>
+<p>The recommended way to do this is as follows (taken from the PickSingleYCB task):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PickSingleYCBEnv</span><span class="p">(</span><span class="n">BaseEnv</span><span class="p">):</span>
+
+    <span class="n">SUPPORTED_ROBOTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;panda&quot;</span><span class="p">,</span> <span class="s2">&quot;fetch&quot;</span><span class="p">]</span>
+    <span class="n">agent</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Panda</span><span class="p">,</span> <span class="n">Fetch</span><span class="p">]</span>
+    <span class="n">goal_thresh</span> <span class="o">=</span> <span class="mf">0.025</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">robot_uids</span><span class="o">=</span><span class="s2">&quot;panda&quot;</span><span class="p">,</span> <span class="n">robot_init_qpos_noise</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span>
+        <span class="n">num_envs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">reconfiguration_freq</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="c1"># ...</span>
+        <span class="k">if</span> <span class="n">reconfiguration_freq</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">num_envs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">reconfiguration_freq</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">reconfiguration_freq</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+            <span class="n">robot_uids</span><span class="o">=</span><span class="n">robot_uids</span><span class="p">,</span>
+            <span class="n">reconfiguration_freq</span><span class="o">=</span><span class="n">reconfiguration_freq</span><span class="p">,</span>
+            <span class="n">num_envs</span><span class="o">=</span><span class="n">num_envs</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>A <code class="docutils literal notranslate"><span class="pre">reconfiguration_freq</span></code> value of 1 means during every reset we reconfigure. A <code class="docutils literal notranslate"><span class="pre">reconfiguration_freq</span></code> of <code class="docutils literal notranslate"><span class="pre">k</span></code> means every <code class="docutils literal notranslate"><span class="pre">k</span></code> resets we reconfigure. A <code class="docutils literal notranslate"><span class="pre">reconfiguration_freq</span></code> of 0 (the default) means we never reconfigure again.</p>
+<p>In general one use case of setting a positive <code class="docutils literal notranslate"><span class="pre">reconfiguration_freq</span></code> value is for when you want to simulate a task in parallel where each parallel environment is working with a different object/articulation and there are way more object variants than number of parallel environments. For machine learning / RL workflows, setting <code class="docutils literal notranslate"><span class="pre">reconfiguration_freq</span></code> to e.g. 10 ensures every 10 resets the objects being simulated on are randomized which can diversify the data collected for online training while keeping simulation fast by reconfiguring infrequently.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-actors">Loading Actors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-from-existing-datasets">Loading from Existing Datasets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-actorbuilder-api">Using the ActorBuilder API</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-articulations">Loading Articulations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Loading from Existing Datasets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-articulationbuilder-api">Using the ArticulationBuilder API</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-urdf-loader">Using the URDF Loader</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#articulation-limitations">Articulation Limitations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-mjcf-loader">Using the MJCF Loader</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reconfiguring-and-optimization">Reconfiguring and Optimization</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/haosulab/ManiSkill/edit/main/docs/source/user_guide/tutorials/custom_tasks/loading_objects.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/user_guide/tutorials/custom_tasks/loading_objects.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, XLeRobot Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

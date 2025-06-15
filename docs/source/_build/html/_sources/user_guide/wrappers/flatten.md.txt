@@ -1,0 +1,17 @@
+# Flattening Data
+
+A suite of common wrappers useful for flattening/transforming data like observations/actions into more useful formats for e.g. Reinforcement Learning or Imitation Learning.
+
+## Flatten Observations
+
+A simple wrapper to flatten a dictionary observation space into a flat array observation space.
+
+
+## Flatten Actions
+
+A simple wrapper to flatten a dictionary action space into a flat array action space. Commonly used for multi-agent like environments when you want to control multiple agents/robots together with one action space.
+
+## Flatten RGBD Observations
+
+This wrapper concatenates all the RGB and Depth images into a single image with combined channels, and concatenates all state data into a single array so that the observation space becomes a simple dictionary composed of a `state`, `rgb`, and `depth` key.
+

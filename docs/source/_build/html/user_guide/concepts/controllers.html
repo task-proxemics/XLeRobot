@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Controllers / Action Spaces &#8212; XLeRobot 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/concepts/controllers';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '_static/version_switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'None';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_black.svg" class="logo__image only-light" alt="XLeRobot 0.1 documentation - Home"/>
+    <img src="../../_static/logo_white.svg" class="logo__image only-dark pst-js-only" alt="XLeRobot 0.1 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tasks/index.html">
+    Tasks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../robots/index.html">
+    Robots
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../roadmap/index.html">
+    Roadmap
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://github.com/haosulab/ManiSkill/releases">
+    Changelog
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/haosulab/ManiSkill" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://maniskill.ai" title="Website" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Website</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tasks/index.html">
+    Tasks
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../robots/index.html">
+    Robots
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing/index.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../roadmap/index.html">
+    Roadmap
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://github.com/haosulab/ManiSkill/releases">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/haosulab/ManiSkill" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://maniskill.ai" title="Website" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Website</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Controllers / Action Spaces</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="controllers-action-spaces">
+<h1>Controllers / Action Spaces<a class="headerlink" href="#controllers-action-spaces" title="Permalink to this heading">#</a></h1>
+<p>Controllers are interfaces between users/policies and robots. Whenever you take a step in an environment and provide an action, that action is sent to a chosen controller that converts actions to control signals to the robot. At the lowest level, all robots in simulation are controlled via joint position or joint velocity controls, effectively specifying where / how fast each joint should go.</p>
+<p>For example, the <code class="docutils literal notranslate"><span class="pre">arm_pd_ee_delta_pose</span></code> controller takes the relative movement of the end-effector as input, and uses <a class="reference external" href="https://en.wikipedia.org/wiki/Inverse_kinematics">inverse kinematics</a> to convert input actions to target positions of robot joints. The robot uses a <a class="reference external" href="https://en.wikipedia.org/wiki/PID_controller">PD controller</a> to drive motors to achieve target joint positions.</p>
+<p>There are a few key elements to remember about controllers in ManiSkill</p>
+<ul class="simple">
+<li><p>The controller defines the action space of a task</p></li>
+<li><p>The robot can have separate controllers for different groups of joints. The action space is a concatenation of the action spaces of all controllers</p></li>
+<li><p>A single robot may have several sets of controllers that can be used</p></li>
+</ul>
+<!-- Note that while `pd_ee_delta_pose` type controllers that use IK may be more sample efficient to train / learn from for RL workflows, in GPU simulation running these controllers is not that fast and may slow down RL training. -->
+<p>The next section will detail each of the pre-built controllers and what they do</p>
+<section id="passive">
+<h2>Passive<a class="headerlink" href="#passive" title="Permalink to this heading">#</a></h2>
+<p>This controller lets you enforce given joints to be not controlled by actions. An example of this is used for the <a class="reference external" href="https://github.com/haosulab/ManiSkill/blob/main/mani_skill/envs/tasks/control/cartpole.py">CartPole environment</a> which defines the CartPole robot as having passive control over the hinge joint of the CartPole (the CartPole task only allows control of the sliding box).</p>
+</section>
+<section id="pd-joint-position">
+<h2>PD Joint Position<a class="headerlink" href="#pd-joint-position" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mani_skill.agents.controllers</span><span class="w"> </span><span class="kn">import</span> <span class="n">PDJointPosControllerConfig</span>
+</pre></div>
+</div>
+<p>With a PD controller, controls the joint positions of the given joints via actions.</p>
+</section>
+<section id="pd-ee-end-effector-pose">
+<h2>PD EE (End-Effector) Pose<a class="headerlink" href="#pd-ee-end-effector-pose" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mani_skill.agents.controllers</span><span class="w"> </span><span class="kn">import</span> <span class="n">PDEEPoseControllerConfig</span>
+</pre></div>
+</div>
+<p>This controller has both a pose and a position variant allowing for more intuitive control of just the end-effector (or any link) of a robot. The default options of this controller are set to be the more intuitive option, but there are multiple possible choices.</p>
+<p>To understand how this works, it is important to first understand that there are 3 relevant transformation frames:</p>
+<ol class="arabic simple">
+<li><p>World Frame</p></li>
+<li><p>Root Link Frame</p></li>
+<li><p>End Effector / Body Frame (Our PD EE controllers in fact support controlling any link, not just the end-effector)</p></li>
+</ol>
+<p>These are highlighted below and shown with RGB axes where Red = X-axis, Green = Y-axis, and Blue = Z-axis. The desired body to control shown below is a dummy link representing the tool control point (TCP) which is a simple offset from the actual end effector link (hence the origin of the body frame is in the space between the grippers). Note that in ManiSkill/SAPIEN, Z is canonically the natural “up/down direction” which is different to some other simulators.</p>
+<figure class="align-default">
+<img alt="user_guide/concepts/images/robot-with-frames.png" src="user_guide/concepts/images/robot-with-frames.png" />
+</figure>
+<p>In this controller the implemented variant is a decoupled control of translation and rotation of the end effector. This means actions taken to translate do not affect the action taken to rotate the end effector around. This results in 6 dimensions of control, 3 for 3D translation, and another 3 for rotation detailed below.</p>
+<p>This controller like others offers delta based and absolute control. Internally at each environment timestep given an action, ManiSkill computes the appropriate new target pose of the end-effector and leverages inverse kinematics to compute the joint actions that can best achieve that target pose. Configurations of this controller effectively change how this new target pose is computed.</p>
+<section id="delta-control">
+<h3>Delta Control<a class="headerlink" href="#delta-control" title="Permalink to this heading">#</a></h3>
+<p>This is enabled by default and configured with the <code class="docutils literal notranslate"><span class="pre">use_delta</span></code> property. It allows the user to submit actions that define deltas in the end-effector pose to move towards. There are 4 frames of control that are permitted, arising from 2 choices for translation multiplied by 2 choices for rotation. The frame is defined by the <code class="docutils literal notranslate"><span class="pre">frame</span></code> property and follows the naming scheme below</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Naming Scheme is &lt;frame&gt;_translation:&lt;frame&gt;_rotation</span>
+<span class="c1"># The following 4 frame combos are possible</span>
+<span class="s2">&quot;body_translation:root_aligned_body_rotation&quot;</span><span class="p">,</span>
+<span class="s2">&quot;root_translation:root_aligned_body_rotation&quot;</span><span class="p">,</span>
+<span class="s2">&quot;body_translation:body_aligned_body_rotation&quot;</span><span class="p">,</span>
+<span class="s2">&quot;root_translation:body_aligned_body_rotation&quot;</span><span class="p">,</span>
+<span class="c1"># This is the default frame combo</span>
+<span class="s2">&quot;root_translation:root_aligned_body_rotation&quot;</span>
+</pre></div>
+</div>
+<section id="translation">
+<h4>Translation<a class="headerlink" href="#translation" title="Permalink to this heading">#</a></h4>
+<p>For translation in this controller, the user specifies a delta X, Y, and Z action (in meters if not normalized) indicating how far to move in all those dimensions. Inverse kinematics is then used to determine the required joint actions to achieve the desired translation.</p>
+<p>There are two frames for position translation defined in ManiSkill, root frame and body frame translation shown below by setting the corresponding dimension in the action to &gt; 0 and the rest to 0.</p>
+<video preload="auto" autoplay="True" loop="True" controls="True" width="100%">
+<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/controllers/root_translation.mp4" type="video/mp4">
+</video>
+<video preload="auto" autoplay="True" loop="True" controls="True" width="100%">
+<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/controllers/body_translation.mp4" type="video/mp4">
+</video>
+</section>
+<section id="rotation">
+<h4>Rotation<a class="headerlink" href="#rotation" title="Permalink to this heading">#</a></h4>
+<!-- Notes on how these videos/gifs were generated. stao hacked the control_window.py code in SAPIEN to fix where the coordinate frame position was placed. 
+The video render pose is sapien.Pose([0.384141, -0.700805, 0.569922], [0.587463, -0.163646, 0.122785, 0.782963])
+
+keyframe qpos of rest panda modified to kf.qpos[-4] += 0.5
+robot pose modified to 
+.Pose([-0.302144, -3.72529e-09, -5.96046e-08], [0.984722, 9.31323e-10, -1.50322e-08, -0.174137])
+-->
+<p>For rotation in this controller, the user specifies a delta X, Y, and Z axis rotation (in radians if not normalized) indicating how far to rotate in all those dimensions. They are processed as XYZ Euler angles and converted to a quaternion internally. Inverse kinematics is then used to determine the required joint actions to achieve the desired rotation.</p>
+<p>ManiSkill implements two types of rotation based control that are generally the most intuitive to understand and commonly used in real-world robots, which is rotation under one orientation aligned/positioned at another frame. In particular there are two rotation frames supported: root aligned body and body aligned body. A aligned B means rotation in the frame with the same orientation as frame A and same position as frame B. Both frames are shown below by setting the corresponding dimension in the action to &gt; 0 and the rest to 0.</p>
+<video preload="auto" autoplay="True" loop="True" controls="True" width="100%">
+<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/controllers/root_aligned_body_rotation.mp4" type="video/mp4">
+</video>
+<video preload="auto" autoplay="True" loop="True" controls="True" width="100%">
+<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/controllers/body_aligned_body_rotation.mp4" type="video/mp4">
+</video>
+</section>
+</section>
+<section id="non-delta-control">
+<h3>Non Delta Control<a class="headerlink" href="#non-delta-control" title="Permalink to this heading">#</a></h3>
+<p>When <code class="docutils literal notranslate"><span class="pre">use_delta=False</span></code> this is enabled. Actions must then define a 3D position and rotation (via XYZ euler angles) and use the frame <code class="docutils literal notranslate"><span class="pre">root_translation:root_aligned_body_rotation</span></code> (which is also the default). This kind of control works more similarly to motion planning where you pick a target pose and ManiSkill picks joint actions that try to reach that target pose.</p>
+</section>
+</section>
+<section id="pd-ee-pos">
+<h2>PD EE Pos<a class="headerlink" href="#pd-ee-pos" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">mani_skill.agents.controllers</span><span class="w"> </span><span class="kn">import</span> <span class="n">PDEEPosControllerConfig</span>
+</pre></div>
+</div>
+<p>The same as PD EE Pose controller but there is no rotation control and actions are 3 dimensional as a result. There are only two frames defining the frame for translation: <code class="docutils literal notranslate"><span class="pre">&quot;root_translation&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;body_translation&quot;</span></code></p>
+</section>
+<section id="deep-dive-example-of-the-franka-emika-panda-robot-controllers">
+<h2>Deep Dive Example of the Franka Emika Panda Robot Controllers:<a class="headerlink" href="#deep-dive-example-of-the-franka-emika-panda-robot-controllers" title="Permalink to this heading">#</a></h2>
+<p>To help detail how controllers work in detail, below we explain with formulae how the controllers are controlling the robot in simulation.</p>
+<section id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>fixed joint: a joint that cannot be controlled. The degree of freedom (DoF) is 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qpos</span></code> ( <span class="math notranslate nohighlight">\(q\)</span> ): controllable joint positions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qvel</span></code> ( <span class="math notranslate nohighlight">\(\dot{q}\)</span> ): controllable joint velocities</p></li>
+<li><p>target joint position ( <span class="math notranslate nohighlight">\(\bar{q}\)</span> ): target position of the motor which drives the joint</p></li>
+<li><p>target joint velocity ( <span class="math notranslate nohighlight">\(\bar{\dot{q}}\)</span> ): target velocity of the motor which drives the joint</p></li>
+<li><p>PD controller: control loop based on <span class="math notranslate nohighlight">\(F(t) = K_p (\bar{q}(t) - q(t)) + K_d (\bar{\dot{q}}(t) - \dot{q}(t))\)</span>. <span class="math notranslate nohighlight">\(K_p\)</span> (stiffness) and <span class="math notranslate nohighlight">\(K_d\)</span> (damping) are hyperparameters. <span class="math notranslate nohighlight">\(F(t)\)</span> is the force of the motor.</p></li>
+<li><p>Augmented PD controller: Passive forces (like gravity) can be compensated by disabling gravity (they can be computed but this is slow and not necessary).</p></li>
+<li><p>action ( <span class="math notranslate nohighlight">\(a\)</span> ): the input of the controller, also the output of the policy</p></li>
+</ul>
+</section>
+<section id="supported-controllers">
+<h3>Supported Controllers<a class="headerlink" href="#supported-controllers" title="Permalink to this heading">#</a></h3>
+<p>The robot is <a class="reference external" href="https://github.com/frankaemika/franka_ros">Franka Emika</a>, a.k.a Panda. The DoF of the arm is 7. <strong>We use the tool center point (TCP), which is the center between two fingers, as the end-effector.</strong></p>
+<p>All “pd” controllers translate input actions to target joint positions <span class="math notranslate nohighlight">\(\bar{q}\)</span> (and velocities) for the internal built-in PD controller. <strong>All the controllers have a normalized action space ([-1, 1]), except <code class="docutils literal notranslate"><span class="pre">arm_pd_joint_pos</span></code> and <code class="docutils literal notranslate"><span class="pre">arm_pd_joint_pos_vel</span></code>.</strong></p>
+<p>For simplicity, we use the name of the arm controller to represent each combination of the arm and gripper controllers, since there is only one gripper controller currently. For example, <code class="docutils literal notranslate"><span class="pre">pd_joint_delta_pos</span></code> is short for <code class="docutils literal notranslate"><span class="pre">arm_pd_joint_delta_pos</span></code> + <code class="docutils literal notranslate"><span class="pre">gripper_pd_joint_pos</span></code>.</p>
+</section>
+<section id="arm-controllers">
+<h3>Arm controllers<a class="headerlink" href="#arm-controllers" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>arm_pd_joint_pos (7-dim): The input is <span class="math notranslate nohighlight">\(\bar{q}\)</span>. It can be used for motion planning, but note that the target velocity is always 0.</p></li>
+<li><p>arm_pd_joint_delta_pos (7-dim):  <span class="math notranslate nohighlight">\(\bar{q}(t)=q(t) + a\)</span></p></li>
+<li><p>arm_pd_joint_target_delta_pos (7-dim): <span class="math notranslate nohighlight">\(\bar{q}(t)=\bar{q}(t-1) + a\)</span></p></li>
+<li><p>arm_pd_ee_delta_pos (3-dim): only control position ( <span class="math notranslate nohighlight">\(p\)</span> ) without rotation ( <span class="math notranslate nohighlight">\(R\)</span> ).</p>
+<p><span class="math notranslate nohighlight">\(\bar{p}(t)=p(t)+a\)</span>, <span class="math notranslate nohighlight">\(\bar{R}(t)=R(t)\)</span>, <span class="math notranslate nohighlight">\(\bar{q}(t)=IK(\bar{p}(t), \bar{R}(t))\)</span></p>
+</li>
+<li><p>arm_pd_ee_delta_pose (6-dim): both position ( <span class="math notranslate nohighlight">\(p\)</span> ) and rotation ( <span class="math notranslate nohighlight">\(R\)</span> ) are controlled. Rotation is represented as axis-angle in the end-effector frame.</p>
+<p><span class="math notranslate nohighlight">\(\bar{p}(t)=p(t)+a_{p}\)</span>, <span class="math notranslate nohighlight">\(\bar{R}(t)=R(t) \cdot e^{[a_{R}]_{\times}}\)</span>, <span class="math notranslate nohighlight">\(\bar{q}(t)=IK(\bar{p}(t), \bar{R}(t))\)</span></p>
+</li>
+<li><p>arm_pd_ee_target_delta_pos (3-dim): <span class="math notranslate nohighlight">\(\bar{p}(t)=\bar{p}(t-1)+a\)</span>, <span class="math notranslate nohighlight">\(\bar{R}(t)=R(t)\)</span></p></li>
+<li><p>arm_pd_ee_target_delta_pose (6-dim): <span class="math notranslate nohighlight">\(\bar{T}(t)= T_{a} \cdot \bar{T}(t-1)\)</span>. <span class="math notranslate nohighlight">\(T\)</span> is the transformation of the end-effector. <span class="math notranslate nohighlight">\(T_a\)</span> is the delta pose induced by the action.</p></li>
+<li><p>arm_pd_joint_vel (7-dim): only control target joint velocities. Note that the stiffness <span class="math notranslate nohighlight">\(K_p\)</span> is set to 0.</p></li>
+<li><p>arm_pd_joint_pos_vel (14-dim): the extension of <code class="docutils literal notranslate"><span class="pre">arm_pd_joint_pos</span></code> to support target velocities</p></li>
+<li><p>arm_pd_joint_delta_pos_vel (14-dim): the extension of <code class="docutils literal notranslate"><span class="pre">arm_pd_joint_delta_pos</span></code> to support target velocities</p></li>
+</ul>
+</section>
+<section id="gripper-controllers-optional">
+<h3>Gripper controllers (optional)<a class="headerlink" href="#gripper-controllers-optional" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>gripper_pd_joint_pos (1-dim): Note that we force two gripper fingers to have the same target position. Thus, it is like a “mimic” joint.</p></li>
+</ul>
+<!-- ## Mobile Manipulator
+
+The mobile manipulator is a combination of sciurus17 connector and one or two Panda arms. The controller is named `base_{}_arm_{}`. Except for the base controller, the arm and gripper controllers are the same as in the stationary manipulator.
+
+### Base controllers
+
+- base_pd_joint_vel (4-dim): only control target velocities. The first 2 dimensions stand for egocentric xy-plane linear velocity and the 3rd dimension stands for egocentric z-axis angular velocity. The 4th dimension stands for velocity to adjust torso. -->
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#passive">Passive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pd-joint-position">PD Joint Position</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pd-ee-end-effector-pose">PD EE (End-Effector) Pose</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delta-control">Delta Control</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#translation">Translation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation">Rotation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-delta-control">Non Delta Control</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pd-ee-pos">PD EE Pos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-example-of-the-franka-emika-panda-robot-controllers">Deep Dive Example of the Franka Emika Panda Robot Controllers:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-controllers">Supported Controllers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arm-controllers">Arm controllers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gripper-controllers-optional">Gripper controllers (optional)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/haosulab/ManiSkill/edit/main/docs/source/user_guide/concepts/controllers.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/user_guide/concepts/controllers.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, XLeRobot Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

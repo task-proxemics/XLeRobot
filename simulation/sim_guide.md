@@ -30,13 +30,11 @@ conda activate lerobot
 
 Follow the [official installation instructions](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html) for ManiSkill.
 
-```bash
-# Basic installation
-pip install mani-skill
 
-# Download scene dataset
-python -m mani_skill.utils.download_asset "ReplicaCAD"
-```
+
+
+
+
 
 #### 2.1 If the dataset downloading goes wrong, use:
 

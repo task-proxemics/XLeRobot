@@ -1,60 +1,42 @@
-# User Guide
+# Tasks
 
-![teaser](./teaser.jpg)
-<p style="text-align: center; font-size: 0.8rem; color: #999;margin-top: -1rem;">Sample of environments/robots rendered with ray-tracing. Scene datasets sourced from AI2THOR and ReplicaCAD</p>
+[asset-badge]: https://img.shields.io/badge/download%20asset-yes-blue.svg
+[dense-reward-badge]: https://img.shields.io/badge/dense%20reward-yes-green.svg
+[no-dense-reward-badge]: https://img.shields.io/badge/dense%20reward-no-red.svg
+[sparse-reward-badge]: https://img.shields.io/badge/sparse%20reward-yes-green.svg
+[no-sparse-reward-badge]: https://img.shields.io/badge/sparse%20reward-no-red.svg
+[demos-badge]: https://img.shields.io/badge/demos-yes-green.svg
+ManiSkill features a number of built-in rigid-body tasks, all GPU parallelized and demonstrating a range of features. They are generally categorized into a few categories.
 
-[![Downloads](https://static.pepy.tech/badge/mani_skill)](https://pepy.tech/project/mani_skill)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/haosulab/ManiSkill/blob/main/examples/tutorials/1_quickstart.ipynb)
-[![PyPI version](https://badge.fury.io/py/mani-skill.svg)](https://badge.fury.io/py/mani-skill)
-[![Docs status](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://maniskill.readthedocs.io/en/latest/)
-[![Discord](https://img.shields.io/discord/996566046414753822?logo=discord)](https://discord.gg/x8yUZe5AdN)
+Soft-body tasks will be added back in as they are still in development as part of a new soft-body simulator we are working on. For some categories there are very few tasks and/or no dense rewards as this is the beta release. We are in the process of still adding some examples in (and welcome outside contributions on these efforts!)
 
-ManiSkill is a powerful unified framework for robot simulation and training powered by [SAPIEN](https://sapien.ucsd.edu/), with a strong focus on manipulation skills. The entire tech stack is as open-source as possible and ManiSkill v3 is in beta release now. Among its features include:
-- GPU parallelized visual data collection system. On the high end you can collect RGBD + Segmentation data at 30,000+ FPS with a 4090 GPU!
-- GPU parallelized simulation, enabling high throughput state-based synthetic data collection in simulation
-- GPU parallelized heterogeneous simulation, where every parallel environment has a completely different scene/set of objects
-- Example tasks cover a wide range of different robot embodiments (humanoids, mobile manipulators, single-arm robots) as well as a wide range of different tasks (table-top, drawing/cleaning, dextrous manipulation)
-- Flexible and simple task building API that abstracts away much of the complex GPU memory management code via an object oriented design
-- Real2sim environments for scalably evaluating real-world policies 100x faster via GPU simulation.
-- Many tuned robot learning baselines in Reinforcement Learning (e.g. PPO, SAC, [TD-MPC2](https://github.com/nicklashansen/tdmpc2)), Imitation Learning (e.g. Behavior Cloning, [Diffusion Policy](https://github.com/real-stanford/diffusion_policy)), and large Vision Language Action (VLA) models (e.g. [Octo](https://github.com/octo-models/octo), [RDT-1B](https://github.com/thu-ml/RoboticsDiffusionTransformer), [RT-x](https://robotics-transformer-x.github.io/))
+For each task documented in these sections we provide a "Task Card" which briefly describes all the important aspects of the task, including task description, supported robots, randomizations, success/fail conditions, and how goals are specified in observations (if they are non-visual). We further show tags describing whether there are dense rewards provided, sparse rewards (same as success/fail conditions), demonstrations available, and if assets need to be downloaded to run the environment.
 
-For more details we encourage you to take a look at our [paper](https://arxiv.org/abs/2410.00425), published at [RSS 2025](https://roboticsconference.org/).
+![dense-reward][dense-reward-badge]
+![sparse-reward][sparse-reward-badge]
+![demos][demos-badge]
+![download-asset][asset-badge]
 
-There are more features to be added to ManiSkill 3, see [our roadmap](https://maniskill.readthedocs.io/en/latest/roadmap/index.html) for planned features that will be added over time before the official v3 is released.
+If assets do need to be downloaded you can just run
 
-Please refer to our [documentation](https://maniskill.readthedocs.io/en/latest/user_guide) to learn more information from tutorials on building tasks to data collection.
+```python -m mani_skill.utils.download_asset <env_id>```
 
-**NOTE:**
-This project currently is in a **beta release**, so not all features have been added in yet and there may be some bugs. If you find any bugs or have any feature requests please post them to our [GitHub issues](https://github.com/haosulab/ManiSkill/issues/) or discuss about them on [GitHub discussions](https://github.com/haosulab/ManiSkill/discussions/). We also have a [Discord Server](https://discord.gg/x8yUZe5AdN) through which we make announcements and discuss about ManiSkill.
+To download demonstrations for a task you can run
 
-```{toctree}
-:caption: Get started
+```python -m mani_skill.utils.download_demo <env_id>```
 
-getting_started/installation
-getting_started/quickstart
-getting_started/docker
-```
+Note that some tasks have different state observation data provided depending on the observation mode. In general when the observation mode is "state" or "state_dict" then all ground truth data necessary to solve the task is given. If the observation mode is any of the visual ones, we remove any ground truth observation data (like an object's pose) that would normally be unattainable in the real world.
 
 ```{toctree}
-:maxdepth: 3
-:caption: Resources
+:maxdepth: 1
 
-demos/index
-tutorials/index
-concepts/index
-datasets/index
-data_collection/index
-reinforcement_learning/index
-learning_from_demos/index
-vision_language_action_models/index
-wrappers/index
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: Additional Resources
-
-additional_resources/performance_benchmarking
-additional_resources/citation
-reference/index.rst
+control/index
+table_top_gripper/index
+quadruped/index
+humanoid/index
+mobile_manipulation/index
+dextrous/index
+digital_twins/index
+drawing/index
+external/index
 ```

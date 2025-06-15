@@ -30,13 +30,7 @@ conda activate lerobot
 
 按照[官方安装指南](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html)安装ManiSkill。
 
-```bash
-# 基本安装
-pip install mani-skill
 
-# 下载场景数据集
-python -m mani_skill.utils.download_asset "ReplicaCAD"
-```
 
 #### 2.1 如果数据集下载出错，请使用：
 

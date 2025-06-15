@@ -16,3 +16,27 @@ For each task documented in these sections we provide a "Task Card" which briefl
 ![sparse-reward][sparse-reward-badge]
 ![demos][demos-badge]
 ![download-asset][asset-badge]
+
+If assets do need to be downloaded you can just run
+
+```python -m mani_skill.utils.download_asset <env_id>```
+
+To download demonstrations for a task you can run
+
+```python -m mani_skill.utils.download_demo <env_id>```
+
+Note that some tasks have different state observation data provided depending on the observation mode. In general when the observation mode is "state" or "state_dict" then all ground truth data necessary to solve the task is given. If the observation mode is any of the visual ones, we remove any ground truth observation data (like an object's pose) that would normally be unattainable in the real world.
+
+```{toctree}
+:maxdepth: 1
+
+control/index
+table_top_gripper/index
+quadruped/index
+humanoid/index
+mobile_manipulation/index
+dextrous/index
+digital_twins/index
+drawing/index
+external/index
+```
