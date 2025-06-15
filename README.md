@@ -347,4 +347,4 @@ If you want, you can cite this work with:
 ## 🪧 Disclaimer 🪧
 
 > [!NOTE]
-> If you build a XLeRobot based on this repo, you will be fully responsible for all the physical and mental damages it does to you or others.
+> If you build, buy, or develop a XLeRobot based on this repo, you will be fully responsible for all the physical and mental damages it does to you or others.
