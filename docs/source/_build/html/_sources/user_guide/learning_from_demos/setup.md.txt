@@ -11,7 +11,9 @@ This page documents key things to know when setting up ManiSkill environments fo
 
 By default for fast downloads and smaller file sizes, ManiSkill demonstrations are stored in a highly reduced/compressed format which includes not keeping any observation data. Run the command to download the raw minimized demonstration data.
 
-
+```bash
+python -m mani_skill.utils.download_demo "PickCube-v1"
+```
 
 To ensure everyone has the same preprocessed/replayed dataset, make sure to run this script: [https://github.com/haosulab/ManiSkill/blob/main/scripts/data_generation/replay_for_il_baselines.sh](https://github.com/haosulab/ManiSkill/blob/main/scripts/data_generation/replay_for_il_baselines.sh). Note that some scripts use the GPU simulation (marked by `-b physx_cuda`) for replay, which may potentially require more GPU memory than you have available. You can always lower the number of parallel environments used to be replayed by setting `--num-procs` to a lower number.
 
@@ -63,8 +65,7 @@ And for CPU vectorized environments the following is recommended for evaluation:
 import gymnasium as gym
 import numpy as np
 from collections import defaultdict
-
-
+from mani_skill.utils.wrappers import CPUGymWrapper
 env_id = "PickCube-v1"
 num_eval_envs = 8
 env_kwargs = dict(obs_mode="state") # modify your env_kwargs here

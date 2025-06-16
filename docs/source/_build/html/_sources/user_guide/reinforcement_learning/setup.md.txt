@@ -27,6 +27,7 @@ If you want to use the CPU simulator / a single environment, you can apply the `
 ```python
 import mani_skill.envs
 import gymnasium as gym
+from mani_skill.utils.wrappers.gymnasium import CPUGymWrapper
 N = 1
 env = gym.make("PickCube-v1", num_envs=N)
 env = CPUGymWrapper(env)
@@ -103,7 +104,7 @@ And for CPU vectorized environments the following is recommended for evaluation:
 import gymnasium as gym
 import numpy as np
 from collections import defaultdict
-
+from mani_skill.utils.wrappers import CPUGymWrapper
 env_id = "PickCube-v1"
 num_eval_envs = 8
 env_kwargs = dict(obs_mode="state") # modify your env_kwargs here

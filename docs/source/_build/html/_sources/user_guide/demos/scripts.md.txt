@@ -13,7 +13,13 @@ for a full list of available commands.
 Some recommended examples that cover a number of features of ManiSkill
 
 Tasks in Realistic Scenes (ReplicaCAD dataset example)
-
+```bash
+python -m mani_skill.utils.download_asset "ReplicaCAD"
+python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
+  --render-mode="rgb_array" --record-dir="videos" # run headless and save video
+python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
+  --render-mode="human" # run with GUI
+```
 
 To turn ray-tracing on for more photo-realistic rendering, you can add `--shader="rt"` or `--shader="rt-fast"`
 
@@ -66,8 +72,13 @@ alt: SAPIEN GUI showing the rotate single object in hand task
 
 To quickly demo tasks that support simulating different objects and articulations (with different dofs) across parallel environments see the [GPU Simulation section](#gpu-simulation)
 
-
-
+<!-- 
+AI2THOR related scenes
+```bash
+python -m mani_skill.utils.download_asset "AI2THOR"
+python -m mani_skill.examples.demo_random_action -e "ArchitecTHOR_SceneManipulation-v1" --render-mode="rgb_array" --record-dir="videos" # run headless and save video
+python -m mani_skill.examples.demo_random_action -e "ArchitecTHOR_SceneManipulation-v1" --render-mode="human" # run with GUI
+``` -->
 
 ## GPU Simulation
 

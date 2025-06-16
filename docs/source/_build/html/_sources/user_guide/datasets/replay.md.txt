@@ -78,10 +78,7 @@ By default raw demonstration files contain all the necessary information (e.g. i
 :::
 <!-- 
 :::{note}
-For soft-body tasks, please compile and generate caches (`python -m 
-
-
-.precompile_mpm`) before running the script with multiple processes (with `--num-procs`).
+For soft-body tasks, please compile and generate caches (`python -m mani_skill.utils.precompile_mpm`) before running the script with multiple processes (with `--num-procs`).
 ::: -->
 <!-- 
 :::{caution}

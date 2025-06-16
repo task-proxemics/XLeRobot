@@ -17,7 +17,16 @@ This tutorial will guide you through on how to implement the Panda robot in Mani
 
 To create your own robot (also known as an Agent) you need to inherit the `BaseAgent` class, give it name, and optionally register the agent. We will create a new file called `my_panda.py` and add the following
 
-
+```python
+import sapien
+import numpy as np
+from mani_skill.agents.base_agent import BaseAgent, Keyframe
+from mani_skill.agents.controllers import *
+from mani_skill.agents.registration import register_agent
+@register_agent()
+class MyPanda(BaseAgent):
+    uid = "my_panda"
+```
 
 Registering the agent allows you to create environments that instantiate your robot for you via a string uid in the future with the code below:
 
@@ -288,6 +297,26 @@ Note that when taking a robot implemented in another simulator like Mujoco, you 
 ManiSkill supports defining sensors mounted onto the robot and sensors positioned relative to the robot by defining the `_sensor_configs` property.
 
 An example of this done in the Panda robot with a real sense camera attached:
+
+```python
+from mani_skill.sensors.camera import CameraConfig
+class MyPanda(Panda):
+    # ...
+    @property
+    def _sensor_configs(self):
+        return [
+            CameraConfig(
+                uid="hand_camera",
+                pose=sapien.Pose(p=[0, 0, 0], q=[1, 0, 0, 0]),
+                width=128,
+                height=128,
+                fov=np.pi / 2,
+                near=0.01,
+                far=100,
+                mount=self.robot.links_map["camera_link"],
+            )
+        ]
+```
 
 You simply return a sensor config (here we use a CameraConfig) to define the sensor to add, and specify where to mount the sensor. For most sensors, you must define a pose, which is now used as a pose relative to the mount pose. In the example above we add a camera to the camera link / wrist mount of the panda robot (which is already oriented facing the correct direction so the pose defined is just the identity).
 

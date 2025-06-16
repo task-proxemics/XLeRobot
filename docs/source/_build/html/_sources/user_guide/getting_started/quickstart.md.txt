@@ -59,7 +59,7 @@ alt: SAPIEN GUI showing the PickCube task
 We also have demos for simulations of more interesting scenes like ReplicaCAD, which can be run by doing
 
 ```bash
-python -m .download_asset "ReplicaCAD"
+python -m mani_skill.utils.download_asset "ReplicaCAD"
 python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" --render-mode="rgb_array" --record-dir="videos" # run headless and save video
 python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" --render-mode="human" # run with GUI (recommended!)
 ```
@@ -81,6 +81,9 @@ You will also notice that all data returned is a batched torch tensor. To reduce
 To have the exact same API defined by [gym/gymnasium](https://gymnasium.farama.org/) for single/vectorized environments, see the section on [reinforcement learning setups](../reinforcement_learning/setup.md).
 
 For a compilation of demos you can run without having to write any extra code check out the [demos page](../demos/index)
+
+See {py:class}`mani_skill.envs.sapien_env` for the full list of environment instantiation options.
+
 
 
 
@@ -170,6 +173,9 @@ Finally on servers with multiple GPUs you can directly pick which devices/backen
 We currently do not properly support exposing multiple visible CUDA devices to a single process as it has some rendering bugs at the moment.
 
 ## Task Instantiation Options
+
+For the full list of environment instantiation options see {py:class}`mani_skill.envs.sapien_env`. Here we list some common options:
+
 
 Each ManiSkill task supports different **observation modes** and **control modes**, which determine its **observation space** and **action space**. They can be specified by `gym.make(env_id, obs_mode=..., control_mode=...)`.
 

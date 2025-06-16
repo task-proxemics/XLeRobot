@@ -69,7 +69,7 @@ templates_path = ["_templates"]
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/logo_black.svg"
+html_logo = "_static/logo_black.png"
 html_favicon = "_static/favicon.svg"
 
 
@@ -83,20 +83,35 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/haosulab/ManiSkill",
+            "url": "https://github.com/Vector-Wangel/XLeRobot",
             "icon": "fa-brands fa-github",
         },
         {
-            "name": "Website",
-            "url": "https://maniskill.ai",
+            "name": "Website", 
+            "url": "https://twitter.com/VectorWang2",
             "icon": "fa-solid fa-globe",
+        },
+        {
+            "name": "Language",
+            "icon": "fa-solid fa-language",
+            "type": "dropdown",  # Changed from "custom" to "dropdown"
+            "items": [
+                {
+                    "name": "English",
+                    "url": "index.html",  # Changed from "#"
+                },
+                {
+                    "name": "中文",
+                    "url": "README_CN.html",  # Changed from "#"
+                }
+            ]
         }
     ],
     "external_links": [
-        {"name": "Changelog", "url": "https://github.com/haosulab/ManiSkill/releases"},
+        {"name": "Latest Updates", "url": "https://twitter.com/VectorWang2"},
     ],
     "logo": {
-        "image_dark": "_static/logo_white.svg",
+        "image_dark": "_static/logo_white.png",
     },
     "navbar_center": ["version-switcher", "navbar-nav"],
     "show_version_warning_banner": False,
@@ -117,6 +132,7 @@ html_css_files = [
     'css/custom.css',
 ]
 html_static_path = ['_static']
+html_js_files = ['js/lang-switch.js']
 
 ### Autodoc configurations ###
 autodoc_typehints = "signature"

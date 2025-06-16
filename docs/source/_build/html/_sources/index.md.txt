@@ -1,14 +1,26 @@
 # XLeRobot 🤖
 
-<img src="media/XLeRobot.png" alt="Alt text" width="1200" />
+<img src="_static/XLeRobot.png" alt="Alt text" width="1200" />
 
-[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+[![en](https://img.shields.io/badge/lang-en-blue.svg)](..)
 [![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
-<!-- [![es](https://img.shields.io/badge/lang-es-green.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-orange.svg)](README_DE.md)
-[![fr](https://img.shields.io/badge/lang-fr-white.svg)](README_FR.md)
-[![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md) -->
 
+<div class="lang-switch">
+  <a onclick="switchLang('en')" class="active">
+    <img src="https://img.shields.io/badge/lang-en-blue.svg" alt="English" />
+  </a>
+  <a onclick="switchLang('zh')">
+    <img src="https://img.shields.io/badge/lang-中文-brown.svg" alt="中文" />
+  </a>
+</div>
+
+<div class="lang-en">
+[English content...]
+</div>
+
+<div class="lang-zh">
+[Chinese content...]
+</div>
 > [!NOTE] 
 > Hardware: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <1000$ cost. 
 
@@ -16,9 +28,8 @@
 > Simulation: **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started in 10 min. 
 
 
-[![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
-[![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
+[![GitHub](https://img.shields.io/badge/GitHub-XLeRobot-181717?logo=github&style=flat)](https://github.com/Vector-Wangel/XLeRobot) [![Stars](https://img.shields.io/github/stars/Vector-Wangel/XLeRobot?style=social)](https://github.com/Vector-Wangel/XLeRobot) [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2) [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Discord](https://img.shields.io/badge/Discord-Join%20Chat-7289da.svg?logo=discord&logoColor=white)](https://discord.gg/s3KuuzsPFb)
+
 ---
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
@@ -31,8 +42,10 @@
 
 **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started to replicate this demo in 10 min. 
 
-https://github.com/user-attachments/assets/e66d8cb5-7a02-4445-b6d9-793057996f87
-
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/e66d8cb5-7a02-4445-b6d9-793057996f87" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
