@@ -41,7 +41,7 @@
 | - | - | - | - | - | - | - | - |
 | 宜家RÅSKOG推车 | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) |￥249 |[Taobao](https://e.tb.cn/h.6y60SKA3VVzfLCl?tk=7n1PVo94MiR)|
 | Anker SOLIX C300电源站 | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) |￥899 |[Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp )              |
-| 4英尺5264线缆 | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) 连接器套件 | ~€20 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm和5264连接器同向|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
+| 4英尺5264线缆 | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) 连接器套件 | ~€20 | [TODO]() | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm和5264连接器反向|(https://e.tb.cn/h.6dM2Zgsj77fyegN?tk=SH29eF6flAb)|
 | Type C转DC线缆(12V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | ~€8 | [TODO]() | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
 
 
