@@ -28,7 +28,7 @@ conda activate lerobot
 
 ### 2. 安装ManiSkill
 
-按照[官方安装指南](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html)安装ManiSkill。
+按照[官方安装指南](https://maniskill.readthedocs.io/en/latest/hardware/getting_started/installation.html)安装ManiSkill。
 
 
 
@@ -43,7 +43,7 @@ git clone https://huggingface.co/datasets/haosulab/ReplicaCAD
 ~/.maniskill/data/scene_datasets/replica_cad_dataset
 ```
 
-#### 2.2 使用[快速入门指南](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)和[示例脚本](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)熟悉ManiSkill。使用以下命令测试是否成功安装了Maniskill：
+#### 2.2 使用[快速入门指南](https://maniskill.readthedocs.io/en/latest/hardware/getting_started/quickstart.html)和[示例脚本](https://maniskill.readthedocs.io/en/latest/hardware/getting_started/quickstart.html)熟悉ManiSkill。使用以下命令测试是否成功安装了Maniskill：
 ```bash
 python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
   --render-mode="human" --shader="rt-fast"
@@ -110,7 +110,7 @@ python -m mani_skill.examples.XLeRobot_demo_ee_ctrl -e "ReplicaCAD_SceneManipula
 
 ### 6. 更多场景
 
-你可以按照[这个指南](https://maniskill.readthedocs.io/en/latest/user_guide/datasets/scenes.html)在XLeRobot中使用各种环境：
+你可以按照[这个指南](https://maniskill.readthedocs.io/en/latest/hardware/datasets/scenes.html)在XLeRobot中使用各种环境：
 
 - `ReplicaCAD_SceneManipulation-v1`（默认）
 - AI2THOR场景
@@ -137,7 +137,7 @@ python -m mani_skill.examples.XLeRobot_demo_VR_ee_ctrl -e "ReplicaCAD_SceneManip
 
 要使用不同的硬件版本：
 
-1. 修改`agents/robots/fetch.py`中的URDF路径，以匹配`assets/`中的文件
+1. 修改`agents/software/fetch.py`中的URDF路径，以匹配`assets/`中的文件
 2. 根据硬件配置，可能需要调整`qpos`的大小
 ![image](https://github.com/user-attachments/assets/01c5568a-46ac-4d74-95e1-c66994a72d19)
 

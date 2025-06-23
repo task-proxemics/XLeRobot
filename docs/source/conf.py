@@ -62,7 +62,7 @@ myst_enable_extensions = ["colon_fence", "dollarmath"]
 myst_heading_anchors = 4
 
 templates_path = ["_templates"]
-# exclude_patterns = ["user_guide/reference/_autosummary/*"]
+# exclude_patterns = ["Hardware/reference/_autosummary/*"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -78,8 +78,11 @@ json_url = "_static/version_switcher.json"
 version_match = os.environ.get("READTHEDOCS_VERSION")
 # if version_match is None:
 #     version_match = "v" + __version__
+# html_sidebars = {
+#   "**": []
+# }
 html_theme_options = {
-    "use_edit_page_button": True,
+    # "use_edit_page_button": True,
     "icon_links": [
         {
             "name": "GitHub",
@@ -107,18 +110,19 @@ html_theme_options = {
             ]
         }
     ],
-    "external_links": [
-        {"name": "Latest Updates", "url": "https://twitter.com/VectorWang2"},
-    ],
+    # "external_links": [
+    #     {"name": "Latest Updates", "url": "https://twitter.com/VectorWang2"},
+    # ],
     "logo": {
         "image_dark": "_static/logo_white.png",
     },
-    "navbar_center": ["version-switcher", "navbar-nav"],
+    # "navbar_center": ["version-switcher", "navbar-nav"],
+    "show_version_switcher": False,
     "show_version_warning_banner": False,
-    "switcher": {
-        "json_url": json_url,
-        "version_match": version_match,
-    },
+    # "switcher": {
+    #     "json_url": json_url,
+    #     "version_match": version_match,
+    # },
 }
 html_context = {
     "display_github": True,

@@ -146,7 +146,7 @@
 #         ) as f:
 #             f.write("\n## Task Table\n")
 #             f.write(
-#                 "Table of all tasks/environments in this category. Task column is the environment ID, Preview is a thumbnail pair of the first and last frames of an example success demonstration. Max steps is the task's default max episode steps, generally tuned for RL workflows."
+#                 "Table of all simulationenvironments in this category. Task column is the environment ID, Preview is a thumbnail pair of the first and last frames of an example success demonstration. Max steps is the task's default max episode steps, generally tuned for RL workflows."
 #             )
 #             f.write('\n<table class="table">')
 #             f.write("\n<thead>")
