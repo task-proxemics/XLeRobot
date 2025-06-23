@@ -34,9 +34,9 @@ def skip_unresolvable(app):
     except ImportError:
         logging.warning("sapien not installed — skipping API imports.")
 
-def setup(app):
-    app.connect("builder-inited", skip_mani_skill)
-    app.connect("builder-inited", skip_unresolvable)
+# def setup(app):
+#     app.connect("builder-inited", skip_mani_skill)
+#     app.connect("builder-inited", skip_unresolvable)
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
