@@ -18,11 +18,11 @@ import importlib.util
 import logging
 logger = logging.getLogger(__name__)
 
+
 def skip_mani_skill(app):
     if importlib.util.find_spec("mani_skill") is None:
-        app.warn("mani_skill not installed, skipping related docs")
+        app.logger.warning("mani_skill not installed, skipping related docs")
         # You could use logic to dynamically skip files here
-
 
 def skip_unresolvable(app):
     try:
