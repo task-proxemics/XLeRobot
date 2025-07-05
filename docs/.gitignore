@@ -1,0 +1,4 @@
+build
+source/hardware/reference/_autosummary/
+source/tasks_generated/*
+!source/tasks_generated/index.md

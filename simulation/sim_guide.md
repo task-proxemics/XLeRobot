@@ -28,15 +28,13 @@ conda activate lerobot
 
 ### 2. Install ManiSkill
 
-Follow the [official installation instructions](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html) for ManiSkill.
+Follow the [official installation instructions](https://maniskill.readthedocs.io/en/latest/hardware/getting_started/installation.html) for ManiSkill.
 
-```bash
-# Basic installation
-pip install mani-skill
 
-# Download scene dataset
-python -m mani_skill.utils.download_asset "ReplicaCAD"
-```
+
+
+
+
 
 #### 2.1 If the dataset downloading goes wrong, use:
 
@@ -49,7 +47,7 @@ to directly download the dataset from huggingface. And then folder contents shou
 ~/.maniskill/data/scene_datasets/replica_cad_dataset
 ```
 
-#### 2.2 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html). Try this command to test whether you have successfully installed Maniskill:
+#### 2.2 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/hardware/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/hardware/getting_started/quickstart.html). Try this command to test whether you have successfully installed Maniskill:
 ```bash
 python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
   --render-mode="human" --shader="rt-fast"
@@ -116,7 +114,7 @@ and change "torso_lift_link" to "head_camera_link"
 
 ### 6. More Scenes
 
-You can use various environments with XLeRobot following [this](https://maniskill.readthedocs.io/en/latest/user_guide/datasets/scenes.html):
+You can use various environments with XLeRobot following [this](https://maniskill.readthedocs.io/en/latest/hardware/datasets/scenes.html):
 
 - `ReplicaCAD_SceneManipulation-v1` (default)
 - AI2THOR scenes
@@ -143,7 +141,7 @@ python -m mani_skill.examples.XLeRobot_demo_VR_ee_ctrl -e "ReplicaCAD_SceneManip
 
 To use different hardware versions:
 
-1. Modify the URDF path in `agents/robots/fetch.py` to follow the files in `assets/`
+1. Modify the URDF path in `agents/software/fetch.py` to follow the files in `assets/`
 2. You may need to adjust the size of `qpos` depending on your hardware configuration
 ![image](https://github.com/user-attachments/assets/01c5568a-46ac-4d74-95e1-c66994a72d19)
 

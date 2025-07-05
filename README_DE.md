@@ -183,7 +183,7 @@ So können Sie den Roboter steuern und intelligent machen:
     - 🚀Schnelle GPU-Beschleunigung für parallele Simulationen
     - 🎨Wunderschöne fotorealistische Visualisierungen durch Ray-Tracing
     - 🪶Leichtgewichtig, konsistent und benutzerfreundlich (im Vergleich zu Isaac Lab, meiner Meinung nach)
-    - 🤖Unterstützung für [mehrere Roboter](https://maniskill.readthedocs.io/en/latest/robots/index.html) (einschließlich [SO100-Arm](https://x.com/Stone_Tao/status/1910101218241978537))
+    - 🤖Unterstützung für [mehrere Roboter](https://maniskill.readthedocs.io/en/latest/software/index.html) (einschließlich [SO100-Arm](https://x.com/Stone_Tao/status/1910101218241978537))
 
 
 ---

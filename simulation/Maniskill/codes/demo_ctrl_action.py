@@ -4,9 +4,9 @@ import sapien
 import pygame
 import time
 
-from mani_skill.envs.sapien_env import BaseEnv
-from mani_skill.utils import gym_utils
-from mani_skill.utils.wrappers import RecordEpisode
+#from mani_skill.envs.sapien_env import BaseEnv
+#from mani_skill.utils import gym_utils
+#from mani_skill.utils.wrappers import RecordEpisode
 
 
 import tyro

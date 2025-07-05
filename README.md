@@ -223,7 +223,7 @@ Here's how you can control the robot and make it intelligent:
     - 🚀Fast GPU acceleration for parallel simulations
     - 🎨Beautiful photorealistic visuals through ray-tracing
     - 🪶Lightweight, consistent, and user-friendly (compared to Isaac Lab, in my opinion)
-    - 🤖Support for [multiple robots](https://maniskill.readthedocs.io/en/latest/robots/index.html) (including [SO100 arm](https://x.com/Stone_Tao/status/1910101218241978537))
+    - 🤖Support for [multiple robots](https://maniskill.readthedocs.io/en/latest/software/index.html) (including [SO100 arm](https://x.com/Stone_Tao/status/1910101218241978537))
     - ![6dc9d8459f6809dc04d178e68e63c6a](https://github.com/user-attachments/assets/03008e8c-edbc-43c9-bbe7-13866c436a73)
 
 
