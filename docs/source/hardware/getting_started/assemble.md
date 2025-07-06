@@ -10,9 +10,10 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ## 🦾 SO101 Arms
 
-- If you already have 2x SO101 arms, skip.
-- Build 2x SO101 arms by following [SO101 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#step-by-step-assembly-instructions) to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
-- If you also want to have the **Wrist Camera**, follow this [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module).
+- If you already have 2x SO101 arms assembled with motors configured, skip.
+- Build 2x SO101 arms by following [SO101 Step-by-Step Assembly Instructions](https://huggingface.co/docs/lerobot/so101) to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
+- Then continue to [configure the motors](https://huggingface.co/docs/lerobot/so101#configure-the-motors) for the SO101 arms. 
+- Follow this [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module) to add wrist cameras.
 - If you have [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), now it's time to wrap it on the fingers.
 
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
