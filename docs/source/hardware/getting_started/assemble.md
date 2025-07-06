@@ -31,6 +31,8 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 - Connect the motor you want to configure (one-by-one) to a control board, and directly connect tohe board to your computer. 
 - Navigate to [the motor configuration page of Bambot](https://bambot.org/feetech.js), establish the connection and scan for your servo motor.
+  ![image](https://github.com/user-attachments/assets/89eb4674-e26e-4edc-9943-ad5c0d4516ec)
+
 - Rename the motor id following the instruction below.
   ![image](https://github.com/user-attachments/assets/49d3a1a4-71eb-4d32-9f0a-e8b6026c0b66)
 
