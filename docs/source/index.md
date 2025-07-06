@@ -31,7 +31,7 @@
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**
 
-**💵 ~$660 cost and ⏰ <4hrs total assembly time!!**
+**💵 ~$998 cost and ⏰ <4hrs total assembly time!!**
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
@@ -62,7 +62,9 @@ Let's break this down since **XLeRobot = XL + LeRobot**
 World's largest low-cost robotics community featuring
     - Multiple [state-of-the-art pretrained AI models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
     - 7000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
-    ![Description](https://github.com/user-attachments/assets/c685bf62-7c66-4382-a404-002142bb4690)
+
+![image](https://github.com/user-attachments/assets/b48a0a41-7422-4f10-8dc6-a66a2fd746ad)
+
 
 ### Why "XL" Enhancement?
 
@@ -70,8 +72,6 @@ World's largest low-cost robotics community featuring
 - 🖨️ Traditional 3D printed chassis suffer from limited durability, stability, and load capacity—making them impractical for daily use.
 - ⚡ DIY mobile robots face power supply challenges, leading to complex wiring setups.
 - 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO-100/SO-101 configuration, enabling seamless code and policy transfer.
-
-![Description](https://github.com/user-attachments/assets/38dfbefb-5d1d-41f5-ba3b-ccb5088ff6fc)
 
 ### Overall Advantages/Goals of XLeRobot
 
