@@ -10,18 +10,24 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ## 🦾 SO101 Arms
 
-- If you already have 2x SO101 arms assembled with motors configured, skip.
+![IMG_0264](https://github.com/user-attachments/assets/072d1e5b-f0c3-4bc6-a7cc-5ff38d42565c)
+
+
+> If you already have 2x SO101 arms assembled with motors configured, skip.
+>
+
 - Build 2x SO101 arms by following [SO101 Step-by-Step Assembly Instructions](https://huggingface.co/docs/lerobot/so101) to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
 - Then continue to [configure the motors](https://huggingface.co/docs/lerobot/so101#configure-the-motors) for the SO101 arms. 
 - Follow this [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module) to add wrist cameras.
 - If you have [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), now it's time to wrap it on the fingers.
 
-![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
 
 ## 🤔 Conigure Motors
 
 ![image](https://github.com/user-attachments/assets/6f740ee9-5be8-4fdf-8937-b245dd7023cb)
 
+> Since the official lerobot codebase currently doesn't support motor configuring besides the arm, we use Bambot instead.
+>
 
 - Please follow the instruction in [LeRobot](https://huggingface.co/docs/lerobot/so101) to Install Lerobot on your PC
 - Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
