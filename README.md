@@ -41,7 +41,6 @@
 For details please see [Bill of Materials](BOM.md).
 
 ---
----
 ## 🚀 Get Started 🚀
 > [!NOTE] 
 > I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
@@ -53,16 +52,6 @@ For details please see [Bill of Materials](BOM.md).
 2. 🖨️ **Print your stuff**: [3D printing](3Dprint.md)
 3. 🔨 ~~Avengers~~: [**Assemble**!](Assembly.md)
 4. 💻 **Software**: [Get your robot moving!](Software.md)
----
----
-> [!NOTE] 
-> The content above provides efficient instructions for building the **XLeRobot**. The content below explains the project's purpose and vision in greater detail.
-
-## 🛠️ Hardware Intro 🛠️
-
----
-
-## 💻 Software Intro 💻
 
 ---
 
