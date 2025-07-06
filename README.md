@@ -93,12 +93,6 @@ These👆 are staged photos, but they demonstrate what the XLeRobot platform can
 
 
 
----
-## 🎯 Demo 0.1.0 🎯
-> [!NOTE]
-> Currently a **single-arm version** implementing Lekiwi, teleoperated by the other follower arm at **3x speed**.
-
-https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 ---
 
@@ -109,10 +103,10 @@ https://github.com/user-attachments/assets/2e9eb3c9-af16-4af2-8748-8f936278c8eb
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
-| **Build from Scratch** |  **~$660**  |  **~€650**  |  **~¥3900**  |
-| **Upgrade from 2 SO100 arms**  |  **~$400**  |  **~€440**  |  **~¥2400**  |
-| **Upgrade from 1 Lekiwi (base + arm)** |  **~$370**  |  **~€350**  |  **~¥1900**  |
-| **Upgrade from 1 Lekiwi and 1 SO100 arm** |  **~$250**  |  **~€240**  |  **~¥1200**  |
+| **Build from Scratch** |  **~$1000**  |  **~€650**  |  **~¥7000**  |
+| **Upgrade from 2 SO100 arms**  |  **~$740**  |  **~€440**  |  **~¥5200**  |
+| **Upgrade from 1 Lekiwi (base + arm)** |  **~$710**  |  **~€350**  |  **~¥5000**  |
+| **Upgrade from 1 Lekiwi and 1 SO100 arm** |  **~$590**  |  **~€240**  |  **~¥4000**  |
 
 For details please see [Bill of Materials](BOM.md).
 
@@ -136,181 +130,9 @@ For details please see [Bill of Materials](BOM.md).
 
 ## 🛠️ Hardware Intro 🛠️
 
-**XLeRobot** = Lekiwi + 1x SO-100/SO-101 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
-
-= 2x SO-100/SO-101 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
-
-### 📜Basic Specs
-
-- **Weight**📏: ~12kg. Easily lifted by an adult.
-- **Workspace**🦾:
-  - Height range: ~0.5m-1.25m from the ground
-  - Width range: ~0.36m from the cart edge.
-  - Capable of many household tasks.
-- **Battery**🔋:
-  - 300W max out: sufficient for powering 12V version dual arm + lekiwi base + RasberryPi (~180W max)
-  - 288Wh capacity: can normally operate for 10hrs+
-  - 280W max in: 1hr to get fully charged
-  - Optional solar panels☀: for endless recharging
-
-> [!NOTE]
-> *All computing is handled by your PC—Raspberry Pi only manages data communication via WiFi  📶*
-
-<table>
-  <tr>
-    <td>
-      
-### Why IKEA RÅSKOG Cart?
-- 🌎 Global availability with standardized design
-- 💰 Cost-effective
-- 🏗️ Simple yet sturdy construction
-- 🔧 Metal mesh bottom enables easy component mounting
-- 📦 Perfect for storage and transportation
-- 📏 Ideal height for common household surfaces—from stovetop to coffee table
-- 📏 Compact footprint fits in nearly any room (thanks to IKEA's thoughtful design)
-
-
-    </td>
-    </tr>
-    <tr>
-    <td>
-    
-### Why Anker SOLIX C300 Power Station? 
-- 🌍 Global availability
-- ⚡ 288Wh capacity, 300W maximum output power, 280W maximum charging power
-- 🔌 Powers both 12V arms, base, and Raspberry Pi at full capacity through three USB-C charging cables—eliminating complex wiring
-- 🔋 Exceptional battery life: 12+ hours normal use, 8 hours intensive operation, 1-hour full charge
-- 💡 Integrated lighting for nighttime operation
-- ☀️ Optional solar panel mounting for continuous power supply
-- 🎒 Versatile and detachable—doubles as emergency backup power or camping power source
-
-    </td>
-  </tr>
-</table>
-<img width="843" alt="1745819677076" src="https://github.com/user-attachments/assets/ad081621-1e69-4bc6-a50f-d89cf92f35c3" />
-
-Even when you're not actively using the robot, these two products remain valuable for everyday use.
-
 ---
 
 ## 💻 Software Intro 💻
-Here's how you can control the robot and make it intelligent:
-
-### 🕹️ Basic Control
-
-- **Joint** (motor angle) control → leader-follower arm control
-
-- **End effector pose** control → VR remote control
-  
-> [!NOTE]
-> For the first version, we focus primarily on the hardware. The LeRobot code remains unmodified. You can recreate Demo 0.1.0 by connecting one arm to the RaspberryPi and the other to the desktop for remote control. **The LeRobot code for XLeRobot** will be updated soon as our top priority.
-
-
-### 🧠 Paths towards General Embodied Machine Intelligence (TODO)
-
-
-
-
-
-
-### 🔈Advertisment:
-- **Our lab**: [Rice RobotPI Lab](https://robotpilab.github.io/)
-    - Our vision includes using [**Caging in Time**](https://robotpilab.github.io/publication/caging/) and **Funnel-based Manipulation** methods to achieve robust object manipulation in imperfect real-world conditions — including perception noise, network lag, and [contact rich](https://robotpilab.github.io/publication/collision-inclusive-manipulation/) environments.
-- **Simulation platform** (my personal preference): [Maniskill](https://www.maniskill.ai/)
-    - 🚀Fast GPU acceleration for parallel simulations
-    - 🎨Beautiful photorealistic visuals through ray-tracing
-    - 🪶Lightweight, consistent, and user-friendly (compared to Isaac Lab, in my opinion)
-    - 🤖Support for [multiple robots](https://maniskill.readthedocs.io/en/latest/software/index.html) (including [SO100 arm](https://x.com/Stone_Tao/status/1910101218241978537))
-    - ![6dc9d8459f6809dc04d178e68e63c6a](https://github.com/user-attachments/assets/03008e8c-edbc-43c9-bbe7-13866c436a73)
-
-
-
----
-## Future Plans
-
-### Hardware
-<table>
-  <tr>
-    <td>
-      
-**Urgent**
-
-- 🔧 Add two arm base options: clamp-held (current) or screw-mounted
-- 🛠️ Add a connector plate fully compatible with IKEA cart's metal mesh
-    </td>
-    </tr>
-    <tr>
-    <td>
-    
-**In the near future**
-
-- 📸 Add a RealSense depth camera to the head to complement the hand RGB cameras for precise environmental perception
-- 🔦 Add a Lidar and SLAM capabilities for Roomba-like home navigation
-- 👆 Basic tactile sensing
-    </td>
-  </tr>
-</table>
-
-
-> [!NOTE]
-> While fancier upgrades are totally possible (like switching to a Jetson processor, upgrading the chassis, or using better motors), these would contradict this project's core mission: **creating the world's most affordable, easy-to-install, plug-and-play universal robot opensource platform**. But these upgrades can be listed as optional add-ons in the future instead of the main track.
-
-### Software
-
-(software updates will also depend on the development of LeRobot community)
-<table>
-  <tr>
-    <td>
-      
-**Urgent**
-
-- ⚙️ Basic control algorithms
-- 🎮 Optimized end effector control
-- 🎲 Maniskill simulation environment
-- 🕶️ Quest3 VR control and teleop
-- 🤖 Simple tasks using existing VLA models from Lerobot codebase
-    </td>
-    </tr>
-    <tr>
-    <td>
-    
-**In the near future**
-
-- 🎯 AprilTag-based precise calibration
-- 🗺️ Autonomous navigation
-- 🌐 Digital twin alignment for sim2real applications
-- 🧠 World model and physics-based robust manipulation
-- 💬 Connect with MCP to directly utilize LLMs
-    </td>
-  </tr>
-</table>
-
----
-
-## 🎯 Who is XLeRobot For?
-
-- 🚀 **Startups & Labs**: Build prototypes faster with the world's cheapest modular platform
-- 👩🔬 **Self Researchers**: Experiment with embodied AI without breaking the bank 💸
-- 🎓 **Education Heroes**:
-  - High School Teachers: Bring cutting-edge robotics to STEM classes 🧪
-  - University Professors: Affordable platform for robotics/AI courses 📚
-  - Students: From beginners to researchers 🎒→🎓
-- 🤖 **DIY Enthusiasts**: Perfect for indoor projects - plant care, delivery bots, home automation 🌱📦
----
-
-## Limitations
-
-(Hey, for this price, what more could you ask for?)
-
-- 🔒 Fixed height—adding a stable lifting platform would significantly increase costs and assembly difficulty
-- 📏 Smaller workspace compared to Aloha—while we maximize the SO100 workspace, the arm has size limitations, though XLeRobot still handles most tasks effectively
-- ⚖️ Limited payload capacity for a single arm—that's why we use the IKEA cart
-- 🛒 Base movement precision may be affected by the IKEA cart wheels—this can be addressed through closed-loop feedback control
-  
-All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as one of the most compelling low-cost robot for indoor application!
-
-
-
 
 ---
 
