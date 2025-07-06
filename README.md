@@ -3,15 +3,6 @@
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
 
-> [!NOTE] 
-> Docs: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for a more orgainized turotial and related demos and resources. Still under construction.
-
-> [!NOTE] 
-> Hardware: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <960$ cost. 
-
-> [!NOTE] 
-> Simulation: **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started in 10 min. 
-
 # XLeRobot 🤖
 
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -27,6 +18,18 @@
 <img width="890" alt="1751777563236" src="https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9" />
 
 ---
+
+# 📰 News 
+
+> [!NOTE] 
+> **Documentation**: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for a more orgainized turotial and related demos and resources. Still under construction.
+
+> [!NOTE] 
+> **Hardware**: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <960$ cost. 
+
+> [!NOTE] 
+> **Simulation**: **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started in 10 min. 
+
 
 ## 💵 Total Cost 💵
 
