@@ -4,7 +4,7 @@
 [![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
 
 > [!NOTE] 
-> 文档：[**XLeRobot 文档**网站](https://xlerobot.readthedocs.io/en/latest/index.html)正式发布，提供更有组织的教程和相关演示及资源。
+> 文档：[**XLeRobot 文档**网站](https://xlerobot.readthedocs.io/en/latest/index.html)正式发布，提供更有组织的教程和相关演示及资源。网站仍在频繁更新ing。
 
 > [!NOTE] 
 > 硬件：[XLeRobot 0.2.0的硬件配置](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md)正式发布！这是第一个官方硬件版本，完全能够执行自主家务任务，成本低于1000美元。
