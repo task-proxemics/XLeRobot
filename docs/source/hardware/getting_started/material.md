@@ -81,9 +81,9 @@ Skip this section if you already have these tools:
 
 ## 🧑‍🤝‍🧑 Alternative chioces 
 
-- IKEA Cart: You can use a similar cart not from IKEA; however, this may require minor adjustments to the [3D printed part](https://www.notion.so/vectorwang/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl).
-- Batteries: You can use **other batteries**, but ensure the maximum output capacity can adequately power 2 arms, 3 wheels, and a RaspberryPi (~160W).
-- Electronics: You can use any brand of cables (USB-C cable must be fast-charging type), microSD card, and Raspberry Pi 5 as long as they are compatible.
+- **IKEA Cart**: You can use a similar cart not from IKEA; however, this may require minor adjustments to the [3D printed part](https://www.notion.so/vectorwang/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl).
+- **Batteries**: You can use **other batteries**, but ensure the maximum output capacity can adequately power 2 arms, 3 wheels, and a RaspberryPi (~160W).
+- **Electronics**: You can use any brand of cables (USB-C cable must be fast-charging type), microSD card, and Raspberry Pi 5 as long as they are compatible.
 
 ## 🧩 Optional Add-ons 
 
