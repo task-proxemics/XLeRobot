@@ -18,7 +18,7 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 If you already have assembled and motor-configured SO100/SO101 arm and LeKiwi, you can skip the above steps.
 
-## 🦾🦾 Assemble 2x SO101 Arms 🦾🦾
+## 🦾 SO101 Arms
 
 ```{note}
 As of April 28, 2025, the SO101 arm has been released with modifications to the follower arms model. These changes include simplified parts and improved wire management, while maintaining compatibility with XLeRobot. I highly suggest everyone build SO101 instead of SO100 since the assembly is much faster!
@@ -30,11 +30,11 @@ As of April 28, 2025, the SO101 arm has been released with modifications to the 
 
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
 
-```{tip}
-Replace the motor's default cross-head screws with M3 hex screws—they're more durable, easier to install, and the black screws blend better with the black arm.
-```
 
-## 🧑‍🦼‍➡️ Assemble 1x Lekiwi Base 🧑‍🦼‍➡️
+
+## 🦾 Arm Base
+
+## 🧑‍🦼‍➡ Wheel Base
 
 - If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
     - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also stop after mounting motors on the base plate with wheels.
