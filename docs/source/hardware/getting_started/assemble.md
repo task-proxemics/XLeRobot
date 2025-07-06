@@ -10,16 +10,14 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ## 🤔 Conigure Motors
 
+![image](https://github.com/user-attachments/assets/6f740ee9-5be8-4fdf-8937-b245dd7023cb)
 
-- If you don't have assembled SO100/SO101 arms or Lekiwi: Please follow the instruction in [SO101 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md) to
+
+- Please follow the instruction in [SO101 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md) to
     - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#install-lerobot)
 - Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
     - You need two sets of motors for 2 motor control boards: one for the SO101 arm (motors 1-6) and another for Lekiwi (motors 1-9).
     - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L6 and R1-R6).
-
-![image](https://github.com/user-attachments/assets/f3be78fe-0faa-454c-926d-ab1843b31d1f)
-
-If you already have assembled and motor-configured SO100/SO101 arm and LeKiwi, you can skip the above steps.
 
 ## 🦾 SO101 Arms
 
