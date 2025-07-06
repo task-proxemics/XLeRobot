@@ -24,7 +24,8 @@
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
-![X21](https://github.com/user-attachments/assets/b9275e9c-3476-4dc8-81f4-a6255012f4af)
+<img width="890" alt="1751777563236" src="https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9" />
+
 ---
 
 ## 💵 Total Cost 💵
