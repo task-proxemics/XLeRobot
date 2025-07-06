@@ -1,4 +1,4 @@
-# **Bill of Material**
+# 🛒 **Bill of Material**
 
 ## 💵 Total Cost 
 
