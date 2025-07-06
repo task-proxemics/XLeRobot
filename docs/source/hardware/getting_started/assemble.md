@@ -8,18 +8,6 @@
 If you'd rather skip the fun of tightening screws, you can also buy [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms.
 ```
 
-## 🤔 Conigure Motors
-
-![image](https://github.com/user-attachments/assets/6f740ee9-5be8-4fdf-8937-b245dd7023cb)
-
-
-- Please follow the instruction in [SO101 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md) to [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#install-lerobot)
-- Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
-    - You need two sets of motors for 2 motor control boards:
-        - one for **left SO101 arm + head** (motors 1-8)
-        - and the other for **right SO101 arm + wheel base** (motors 1-9).
-    - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
-
 ## 🦾 SO101 Arms
 
 - If you already have 2x SO101 arms, skip.
@@ -28,6 +16,18 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 - If you have [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), now it's time to wrap it on the fingers.
 
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
+
+## 🤔 Conigure Motors
+
+![image](https://github.com/user-attachments/assets/6f740ee9-5be8-4fdf-8937-b245dd7023cb)
+
+
+- Please follow the instruction in [LeRobot](https://huggingface.co/docs/lerobot/so101) to Install Lerobot on your PC
+- Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
+    - You need two sets of motors for 2 motor control boards:
+        - one for **left SO101 arm + head** (motors 1-8)
+        - and the other for **right SO101 arm + wheel base** (motors 1-9).
+    - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
 
 ## 🛒 Install the IKEA RÅSKOG Cart 🛒
 
