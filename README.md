@@ -41,7 +41,6 @@
 For details please see [Bill of Materials](BOM.md).
 
 ---
----
 ## 🚀 Get Started 🚀
 > [!NOTE] 
 > I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
@@ -49,20 +48,10 @@ For details please see [Bill of Materials](BOM.md).
 > [!NOTE] 
 > If you are totally new to programming, please spend at least a day to get yourself familiar with basic Python, Ubuntu and Github (with the help of Google and AI). At least you should know how to set up ubuntu system, git clone, pip install, use intepreters (VS Code, Cursor, Pycharm, etc.) and directly run commands in the terminals.
 
-1. 💵 **Buy your parts**: [Bill of Materials](BOM.md)
-2. 🖨️ **Print your stuff**: [3D printing](3Dprint.md)
-3. 🔨 ~~Avengers~~: [**Assemble**!](Assembly.md)
-4. 💻 **Software**: [Get your robot moving!](Software.md)
----
----
-> [!NOTE] 
-> The content above provides efficient instructions for building the **XLeRobot**. The content below explains the project's purpose and vision in greater detail.
-
-## 🛠️ Hardware Intro 🛠️
-
----
-
-## 💻 Software Intro 💻
+1. 💵 **Buy your parts**: [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html)
+2. 🖨️ **Print your stuff**: [3D printing](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html)
+3. 🔨 ~~Avengers~~: [**Assemble**!](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html)
+4. 💻 **Software**: [Get your robot moving!](https://xlerobot.readthedocs.io/en/latest/software/index.html)
 
 ---
 
