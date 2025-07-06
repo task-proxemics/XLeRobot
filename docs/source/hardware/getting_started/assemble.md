@@ -29,10 +29,14 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 > Since the official lerobot codebase currently doesn't support motor configuring besides the arm, we use [Bambot](https://bambot.org/) instead.
 >
 
-- Navigate to [the motor configuration page of Bambot](https://bambot.org/feetech.js)
-- You need two sets of motors for 2 motor control boards:
-    - one for **left SO101 arm + head** (motors 1-8)
-    - and the other for **right SO101 arm + wheel base** (motors 1-9).
+- Connect the motor you want to configure (one-by-one) to a control board, and directly connect tohe board to your computer. 
+- Navigate to [the motor configuration page of Bambot](https://bambot.org/feetech.js), establish the connection and scan for your servo motor.
+- Rename the motor id following the instruction below.
+  ![image](https://github.com/user-attachments/assets/49d3a1a4-71eb-4d32-9f0a-e8b6026c0b66)
+
+- You need to configure two sets of motors for 2 motor control boards in addition to the SO101 arms:
+    - one for **head** (motor ids: 7, 8)
+    - and the other for **the wheel base** (motors ids: 7, 8, 9).
 - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
 
 ## 🛒 IKEA Cart
