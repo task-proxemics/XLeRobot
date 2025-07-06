@@ -1,13 +1,16 @@
 # ⚒️ Assembly
 
+![image](https://github.com/user-attachments/assets/949a670b-a5a2-459d-ab7f-45c51b93afa2)
+
 > Estimated Assembly time: From scratch: 2-4 hrs; with assembled SO100/SO101 arms: 1-2 hrs
-
-
-## 🤔 Conigure Motors
-
+> 
 ```{tip}
 If you'd rather skip the fun of tightening screws, you can also buy [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms.
 ```
+
+## 🤔 Conigure Motors
+
+
 - If you don't have assembled SO100/SO101 arms or Lekiwi: Please follow the instruction in [SO101 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md) to
     - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#install-lerobot)
 - Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
