@@ -27,9 +27,9 @@
 
 ## Intro
 
-**🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**
+**🚀 Bring Embodied AI to Every Family Around the World! 📱**
 
-**💵 ~$998 cost and ⏰ <4hrs total assembly time!!**
+**💵 ~$960 cost and ⏰ <4hrs total assembly time!**
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
