@@ -13,6 +13,9 @@ Doesn't include cost of 3D printing, tools, shippings and taxes.
 | **Upgrade from 1 Lekiwi** | **~$370** | **~€350** | **~¥1900** |
 | **Upgrade from 1 Lekiwi and 1 SO100 arm** | **~$250** | **~€240** | **~¥1200** |
 
+![f2de220bf49ef4162454f33da08a086](https://github.com/user-attachments/assets/7f9d0835-b32e-46ce-947a-dc884d85b113)
+
+
 ```{tip}
 You can purchase printed parts or pre-assembled kits from [Wowrobo](https://shop.wowrobo.com/products/so-arm101-diy-kit-assembled-version-1) for SO101 arms. The SO101 arms require about 1.5 hours assembly for two arms.
 ```
