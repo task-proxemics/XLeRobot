@@ -16,15 +16,12 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 - Please follow the instruction in [SO101 arm Repo](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md) to
     - [Install Lerobot on your PC](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#install-lerobot)
 - Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
-    - You need two sets of motors for 2 motor control boards: one for the SO101 arm (motors 1-6) and another for Lekiwi (motors 1-9).
+    - You need two sets of motors for 2 motor control boards: one for **left SO101 arm + head** (motors 1-8) and the other for **right SO101 arm + wheel base** (motors 1-9).
     - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L6 and R1-R6).
 
 ## 🦾 SO101 Arms
 
-```{note}
-As of April 28, 2025, the SO101 arm has been released with modifications to the follower arms model. These changes include simplified parts and improved wire management, while maintaining compatibility with XLeRobot. I highly suggest everyone build SO101 instead of SO100 since the assembly is much faster!
-```
-- If you already have 2x SO100/SO101 arms, skip.
+- If you already have 2x SO101 arms, skip.
 - Build 2x SO101 arms by following [SO101 Step-by-Step Assembly Instructions](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#step-by-step-assembly-instructions) to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
 - If you also want to have the **Wrist Camera**, follow this [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_32x32_UVC_Module).
 - If you have [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), now it's time to wrap it on the fingers.
