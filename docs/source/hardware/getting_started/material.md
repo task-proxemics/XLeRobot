@@ -39,15 +39,14 @@ Skip this section if you already have these tools:
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| STS3215 Servo (12V) | 12(Arms)+3(base)+2(head) | $14 | [Wowrobo](https://shop.wowrobo.com/products/feetech-sts3215-servo-12v-30kg-high-torque-servo-for-so-arm100) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
+| STS3215 Servo (12V) | 17 | $14 | [Wowrobo](https://shop.wowrobo.com/products/feetech-sts3215-servo-12v-30kg-high-torque-servo-for-so-arm100) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥108 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) |
 | IKEA RÅSKOG Utility cart | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) | ￥249 | [IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/) |
 | Anker SOLIX C300 Power Station | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) | ￥899 | [Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp) |
 | 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) | ￥135 | [PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw) |
 | Table Clamp 4pcs | 1 | $8.99 | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | ~€8 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ￥9.2 | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649) |
 
-> [!IMPORTANT]
-XLeRobot is designed for maximum power, which is why it only comes in a 12V version.
-> 
+- XLeRobot is designed for maximum power, which is why it only comes in a 12V version.
+- 17 motors = 12 for arms + 3 for base + 2 for head.
 
 ## 💻 Electronics
 

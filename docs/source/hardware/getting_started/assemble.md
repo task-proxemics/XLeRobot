@@ -1,4 +1,4 @@
-# ⚒️ Assemble!
+# ⚒️ Assembly
 
 > Estimated Assembly time: From scratch: 2-4 hrs; with assembled SO100/SO101 arms: 1-2 hrs
 
