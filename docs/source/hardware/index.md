@@ -6,11 +6,11 @@
 
 ##### [🛒 Bill of Material](getting_started/material)
 
-##### [🖨️ 3D printing](getting_started/3d)
+##### [🖨️ 3D Printing](getting_started/3d)
 
 ##### [🔨 Assemble](getting_started/assemble)
 
-##### [Introduction](hardware_intro)
+##### [🛠️ Hardware Intro](hardware_intro)
 
 ---
 
