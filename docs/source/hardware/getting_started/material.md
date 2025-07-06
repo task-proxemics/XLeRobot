@@ -71,7 +71,7 @@ Skip this section if you already have these tools:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Hand camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | ~€10 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ￥99 | [Taobao](https://item.taobao.com/item.htm?ft=t&id=860171734711) |
-| RealSense D415 | 1 | $272 | [Intel](https://store.intelrealsense.com/buy-intel-realsense-depth-camera-d415.html) |  |  |  |[Taobao](https://e.tb.cn/h.hTHju7zCMDMR84q?tk=z0WU4aXOKey)  |
+| RealSense D415 | 1 | $272 | [Intel](https://store.intelrealsense.com/buy-intel-realsense-depth-camera-d415.html) |  |  | ￥1950 |[Taobao](https://e.tb.cn/h.hTHju7zCMDMR84q?tk=z0WU4aXOKey)  |
 
 ## 🧑‍🤝‍🧑 Alternative chioces 
 
