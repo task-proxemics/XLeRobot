@@ -3,7 +3,7 @@
 > Estimated Assembly time: From scratch: 2-4 hrs; with assembled SO100/SO101 arms: 1-2 hrs
 
 
-## 🤔 Before Assembly 🤔
+## 🤔 Conigure Motors
 
 ```{tip}
 If you'd rather skip the fun of tightening screws, you can also buy [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms.
