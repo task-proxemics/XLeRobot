@@ -63,6 +63,10 @@ Skip this section if you already have these tools:
 | Anker USB Hub | 1 | $15.99 | [Amazon](https://a.co/d/6tJW8lN) |  |  |  |  |
 | 4ft 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) | ~€20 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector |
 | Type C to DC wire(12V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | ~€8 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
+
+![image](https://github.com/user-attachments/assets/0a8afb77-30b7-4d5c-a981-9b255269f9ec)
+
+
 - Ready-made long 5264 wires are not available for purchase in the US—only **connector kits** are available that require manual assembly to extend the length (which is straightforward).
 - 2 USB-C to USB-A cables to connect the Motor Control Board to Raspberry Pi/PC
 - USB-C cable to connect Raspberry Pi to the battery
