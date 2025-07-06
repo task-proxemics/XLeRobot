@@ -2,10 +2,7 @@
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
-[![es](https://img.shields.io/badge/lang-es-green.svg)](README_ES.md)
-[![de](https://img.shields.io/badge/lang-de-orange.svg)](README_DE.md)
-[![fr](https://img.shields.io/badge/lang-fr-white.svg)](README_FR.md)
-[![日本語](https://img.shields.io/badge/lang-日本語-yellow.svg)](README_JP.md)
+
 
 > [!NOTE] 
 > Hardware: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <1000$ cost. 
