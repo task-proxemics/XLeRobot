@@ -54,6 +54,8 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ![image](https://github.com/user-attachments/assets/e6e1d7b2-a2dd-4cbd-b53f-23850409a01f)
 
+- Mount the omni-wheels to the plate according to the figure above.
+- Note that the connector of the omni-wheel needs 3x M4 screws.
 
 - Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and leave it hanging (don't pull it out from the top plate just yet).
 
