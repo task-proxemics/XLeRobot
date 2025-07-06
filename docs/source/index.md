@@ -62,7 +62,6 @@ Let's break this down since **XLeRobot = XL + LeRobot**
 World's largest low-cost robotics community featuring
     - Multiple [state-of-the-art pretrained AI models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
     - 7000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
-    ![Description](https://github.com/user-attachments/assets/c685bf62-7c66-4382-a404-002142bb4690)
 
 ![image](https://github.com/user-attachments/assets/b48a0a41-7422-4f10-8dc6-a66a2fd746ad)
 
