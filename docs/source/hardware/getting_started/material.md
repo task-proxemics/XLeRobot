@@ -13,15 +13,13 @@ Doesn't include cost of 3D printing, tools, shippings and taxes.
 | **Upgrade from 1 Lekiwi** | **~$370** | **~€350** | **~¥1900** |
 | **Upgrade from 1 Lekiwi and 1 SO100 arm** | **~$250** | **~€240** | **~¥1200** |
 
-> [!TIP]
-> 
-> 
-> You can purchase [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms. The SO101 arms require the most assembly time—about 1.5 hours for two arms.
-> 
+```{tip}
+You can purchase [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms. The SO101 arms require the most assembly time—about 1.5 hours for two arms.
+```
 
-> [!NOTE]
+```{note}
 If you already have SO101 arms or Lekiwi, refer to this BOM selectively. We recommend checking the other two repos (SO100, Lekiwi) as well for potentially better-priced options.
-> 
+```
 
 ## 🔨 Assembly Tools 🔨
 
@@ -57,8 +55,8 @@ Skip this section if you already have these tools:
 | microSD card | 1 | $11.23 | [Amazon](https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7C7LL1/) | €10.00 | [Amazon](https://www.amazon.fr/Lexar-Carte-Micro-adaptateur-Smartphone/dp/B08XZ2KS1F) | ￥58 | [Taobao](https://e.tb.cn/h.64DMZzLz5h26s12?tk=eImPex96lCQ) |
 | USB-C to USB-A Cable 2 pcs | 1 | $8.99 | [Amazon](https://a.co/d/0mWsmhG) | €7 | [Amazon](https://www.amazon.fr/dp/B07BNF842T/) | ￥17 | [Taobao](https://e.tb.cn/h.64HOv24RLmYC4Yh?tk=AXpgexkDFd4) |
 | USB-C Cable 2 pcs | 1 | $8.99 | [Amazon](https://a.co/d/f8hm4E2) | ~€7 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ￥17 | [Taobao](https://detail.tmall.com/item.htm?abbucket=14&detail_redpacket_pop=true&id=562374737204&ltk2=1745778907089uemkvoxey50xt270pvkfcq&ns=1&priceTId=2100c80417457788995147926e0bd5&query=usbc%E6%95%B0%E6%8D%AE%E7%BA%BF&skuId=5239339491575&spm=a21n57.1.hoverItem.4&utparam=%7B%22aplus_abtest%22%3A%2250461336def889c0b534e9603672d7f7%22%7D&xxc=taobaoSearch) |
-| Anker USB Hub | 1 |  | https://a.co/d/6tJW8lN |  |  |  |  |
-| 4ft 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) Connector Kit | ~€20 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector |
+| Anker USB Hub | 1 | $15.99 | [Amazon](https://a.co/d/6tJW8lN) |  |  |  |  |
+| 4ft 5264 wires | 1 | $21.99 | [Amazon](https://www.amazon.com/dp/B0D2W47V8V) | ~€20 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ¥20 | [Taobao](https://e.tb.cn/h.6ZvsvUU7wlxTIqu?tk=mz7PeJUloea) 3P-1000mm and 5264 connector |
 | Type C to DC wire(12V) | 2 | $8.99 | [Amazon 12V](https://www.amazon.com/dp/B0CDBWHXDZ) | ~€8 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ¥20 | [Taobao 12V](https://e.tb.cn/h.6ZvuOW01EmvvHq1?tk=nzvFeJUnyuB) |
 - Ready-made long 5264 wires are not available for purchase in the US—only **connector kits** are available that require manual assembly to extend the length (which is straightforward).
 - 2 USB-C to USB-A cables to connect the Motor Control Board to Raspberry Pi/PC
