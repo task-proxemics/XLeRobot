@@ -24,7 +24,7 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ## 🤔 Conigure Motors
 
-![image](https://github.com/user-attachments/assets/6f740ee9-5be8-4fdf-8937-b245dd7023cb)
+![image](https://github.com/user-attachments/assets/fc674d38-d703-40bd-87a2-a502af1b52c7)
 
 > Since the official lerobot codebase currently doesn't support motor configuring besides the arm, we use Bambot instead.
 >
