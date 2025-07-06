@@ -8,7 +8,7 @@
 
 ##### [🖨️ 3D Printing](getting_started/3d)
 
-##### [🔨 Assemble](getting_started/assemble)
+##### [🔨 Assembly](getting_started/assemble)
 
 ##### [🛠️ Hardware Intro](hardware_intro/index)
 
