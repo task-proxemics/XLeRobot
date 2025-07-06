@@ -29,12 +29,11 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 > Since the official lerobot codebase currently doesn't support motor configuring besides the arm, we use Bambot instead.
 >
 
-- Please follow the instruction in [LeRobot](https://huggingface.co/docs/lerobot/so101) to Install Lerobot on your PC
-- Configure the motors according to the [SO101](https://github.com/huggingface/lerobot/blob/main/examples/12_use_so101.md#configure-motors) and [LeKiwi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#configure-motors) tutorials.
-    - You need two sets of motors for 2 motor control boards:
-        - one for **left SO101 arm + head** (motors 1-8)
-        - and the other for **right SO101 arm + wheel base** (motors 1-9).
-    - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
+- Navigate to [the motor configuration page of Bambot](https://bambot.org/feetech.js)
+- You need two sets of motors for 2 motor control boards:
+    - one for **left SO101 arm + head** (motors 1-8)
+    - and the other for **right SO101 arm + wheel base** (motors 1-9).
+- Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
 
 ## 🛒 IKEA Cart
 
