@@ -13,7 +13,8 @@ Doesn't include cost of 3D printing, tools, shippings and taxes.
 | **Upgrade from 1 Lekiwi** | **~$370** | **~€350** | **~¥1900** |
 | **Upgrade from 1 Lekiwi and 1 SO100 arm** | **~$250** | **~€240** | **~¥1200** |
 
-![f2de220bf49ef4162454f33da08a086](https://github.com/user-attachments/assets/7f9d0835-b32e-46ce-947a-dc884d85b113)
+![53f133e89048d8538ca8153f668995c](https://github.com/user-attachments/assets/0b34d500-4cb7-46cc-ae8a-e8e191028bf1)
+
 
 
 ```{tip}
