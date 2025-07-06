@@ -24,8 +24,6 @@
 | **Upgrade from 1 Lekiwi (base + arm)** | **~$370** | **~€350** | **~¥1900** |
 | **Upgrade from 1 Lekiwi and 1 SO100 arm** | **~$250** | **~€240** | **~¥1200** |
 
-For details please see [Bill of Materials](getting_started/material).
-
 
 ```{toctree}
 :caption: Get started
