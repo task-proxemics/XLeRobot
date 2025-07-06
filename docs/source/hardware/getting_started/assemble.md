@@ -30,9 +30,21 @@ As of April 28, 2025, the SO101 arm has been released with modifications to the 
 
 ![image](https://github.com/user-attachments/assets/68cba2d4-9777-49bc-ad8a-b2931658c474)
 
+## 🛒 Install the IKEA RÅSKOG Cart 🛒
 
+- Just in case you accidentally throw your manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf).
+
+<img width="925" alt="1745897734515" src="https://github.com/user-attachments/assets/f9f95840-5080-4084-bebb-ea456a097d55" />
 
 ## 🦾 Arm Base
+
+- For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
+- Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
+
+![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
+
+![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
+
 
 ## 🧑‍🦼‍➡ Wheel Base
 
@@ -45,14 +57,6 @@ As of April 28, 2025, the SO101 arm has been released with modifications to the 
 - Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and leave it hanging (don't pull it out from the top plate just yet).
 
 ![image](https://github.com/user-attachments/assets/8d81267b-4b58-4af5-8bb3-e77b01d3df7f)
-
-## 🛒 Install the IKEA RÅSKOG Cart 🛒
-
-- Just in case you accidentally throw your manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf).
-
-<img width="925" alt="1745897734515" src="https://github.com/user-attachments/assets/f9f95840-5080-4084-bebb-ea456a097d55" />
-
-## 🧑‍🦼‍➡️ Install the Lekiwi Base 🛒
 
 - Mount the 3 [connectors](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl) on the top plate, anywhere you think could give a stable support. Or just follow this:
 
@@ -84,20 +88,7 @@ You should also refer to this figure (remade from Lekiwi tutorial) to find your 
 
 ![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
 
-## 🦾🦾 Install the Arms 🛒
 
-- In the current version, for easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
-- Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support.
-
-![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
-
-![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
-
-- A second version will be released soon, featuring an option for bolted connection between the arms and the cart, with standardized spacing between the two arms.
-
-```{note}
-To test the basic single-arm version of XLeRobot directly with the original Lekiwi code before the code for XLeRobot is released, only clamp the SO101 arm that shares the same motor control board with the Lekiwi base. And clamp the other one on your table to act as the leader arm.
-```
 
 ## 🔋 Place the Battery 🛒
 
