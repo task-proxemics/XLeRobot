@@ -1,4 +1,4 @@
-# ManiSkill Documentation
+# XLeRobot Documentation
 
 Install Sphinx and Theme
 
