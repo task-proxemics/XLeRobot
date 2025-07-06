@@ -46,6 +46,8 @@ Skip this section if you already have these tools:
 | 4" Omni wheels | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) | ￥135 | [PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw) |
 | Table Clamp 4pcs | 1 | $8.99 | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | ~€8 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ￥9.2 | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649) |
 
+![image](https://github.com/user-attachments/assets/ee012d47-f2a9-495c-a156-01bf92b2e63b)
+
 - XLeRobot is designed for maximum power, which is why it only comes in a 12V version.
 - 17 motors = 12 for arms + 3 for base + 2 for head.
 
