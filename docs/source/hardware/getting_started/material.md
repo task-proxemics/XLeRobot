@@ -79,6 +79,8 @@ Skip this section if you already have these tools:
 | Hand camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | ~€10 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ￥99 | [Taobao](https://item.taobao.com/item.htm?ft=t&id=860171734711) |
 | RealSense D415 | 1 | $272 | [Intel](https://store.intelrealsense.com/buy-intel-realsense-depth-camera-d415.html) |  |  | ￥1950 |[Taobao](https://e.tb.cn/h.hTHju7zCMDMR84q?tk=z0WU4aXOKey)  |
 
+![image](https://github.com/user-attachments/assets/0f5a10ce-d0e9-4e53-b457-27a9ba057cbf)
+
 ## 🧑‍🤝‍🧑 Alternative chioces 
 
 - **IKEA Cart**: You can use a similar cart not from IKEA; however, this may require minor adjustments to the [3D printed part](https://www.notion.so/vectorwang/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl).
