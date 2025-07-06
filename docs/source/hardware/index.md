@@ -10,7 +10,7 @@
 
 ##### [🔨 Assemble](getting_started/assemble)
 
-##### [🛠️ Hardware Intro](hardware_intro)
+##### [🛠️ Hardware Intro](hardware_intro/index)
 
 ---
 
