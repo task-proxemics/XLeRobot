@@ -49,11 +49,11 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ## 🧑‍🦼‍➡ Wheel Base
 
-- If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
-    - If not, follow the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly) but also stop after mounting motors on the base plate with wheels.
-    - No matter what, the simplified Lekiwi base should look like this:
+> If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
+>
 
-![image](https://github.com/user-attachments/assets/1b0b0600-e666-4825-9233-807ed63e9020)
+![image](https://github.com/user-attachments/assets/e6e1d7b2-a2dd-4cbd-b53f-23850409a01f)
+
 
 - Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the wire to the control board, use the extended wire/connector kit to extend the wire, and leave it hanging (don't pull it out from the top plate just yet).
 
