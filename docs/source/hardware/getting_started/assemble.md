@@ -36,21 +36,11 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
         - and the other for **right SO101 arm + wheel base** (motors 1-9).
     - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
 
-## 🛒 Install the IKEA RÅSKOG Cart 🛒
+## 🛒 IKEA Cart
 
 - Just in case you accidentally throw your manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf).
 
 <img width="925" alt="1745897734515" src="https://github.com/user-attachments/assets/f9f95840-5080-4084-bebb-ea456a097d55" />
-
-## 🦾 Arm Base
-
-- For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
-- Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
-
-![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
-
-![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
-
 
 ## 🧑‍🦼‍➡ Wheel Base
 
@@ -93,6 +83,41 @@ You should also refer to this figure (remade from Lekiwi tutorial) to find your 
 - Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base, removing only the central "x" to maintain structural integrity. This creates openings for cable routing. Then, run the previously extended wire up through the cart from below.
 
 ![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
+## 🦾 Arm Base
+
+#### Top Base Assembly
+
+Follow the assembly sequence shown in the diagram below (easier when filpped over):
+
+![image](https://github.com/user-attachments/assets/1640d830-b7e9-474b-810d-070097fec59e)
+
+![image](https://github.com/user-attachments/assets/885034a4-61f8-4d61-ab43-b88788b6058b)
+
+![image](https://github.com/user-attachments/assets/e8a3c68f-9fe6-47da-9428-920e9658d58f)
+
+![image](https://github.com/user-attachments/assets/14d305cb-c222-4641-81a4-682850ddbf37)
+
+Then it should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
+
+```{note}
+Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart. (Also use 3D printing filament spools if you have one for enhanced structural support)
+```
+
+![image](https://github.com/user-attachments/assets/0fc95a4e-d4aa-48a5-944a-cc1a984c20b2)
+
+Be careful not to break the case when you jam the IKEA cart edge into the case socket.
+
+![image](https://github.com/user-attachments/assets/66818d5e-ae6e-4217-bf45-795109140359)
+
+- For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
+- Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
+
+![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
+
+![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
+
+
+
 
 
 
@@ -141,15 +166,7 @@ You need to install software on Rasberry Pi and setup SSH first before this fina
 Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
 ```
 
-### Finally, let's [🦾 Get Your Robot Moving! 🦿](https://www.notion.so/vectorwang/Software.md)
 
-## XLeRobot Changelog
-
-### Version 0.2.0 - Hardware Update Release
-
-![image](https://github.com/user-attachments/assets/d17127c8-9025-4fab-bf48-c53a1c36e826)
-
-#### 🔧 Hardware Updates
 
 #### Bottom Base
 
@@ -191,29 +208,6 @@ Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as t
 - Bottom base assembly process remains the same as [version 0.1.0](https://github.com/Vector-Wangel/XLeRobot/blob/main/Assembly.md#%EF%B8%8F-install-the-lekiwi-base-)
     - The connectors have been redesigned. You may also need to adjust its height (by changing z axis scale in the 3D slicer software) to find the best size.
 
-#### Top Base Assembly
-
-Follow the assembly sequence shown in the diagram below (easier when filpped over):
-
-![image](https://github.com/user-attachments/assets/1640d830-b7e9-474b-810d-070097fec59e)
-
-![image](https://github.com/user-attachments/assets/885034a4-61f8-4d61-ab43-b88788b6058b)
-
-![image](https://github.com/user-attachments/assets/e8a3c68f-9fe6-47da-9428-920e9658d58f)
-
-![image](https://github.com/user-attachments/assets/14d305cb-c222-4641-81a4-682850ddbf37)
-
-Then it should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
-
-```{note}
-Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart. (Also use 3D printing filament spools if you have one for enhanced structural support)
-```
-
-![image](https://github.com/user-attachments/assets/0fc95a4e-d4aa-48a5-944a-cc1a984c20b2)
-
-Be careful not to break the case when you jam the IKEA cart edge into the case socket.
-
-![image](https://github.com/user-attachments/assets/66818d5e-ae6e-4217-bf45-795109140359)
 
 #### ⚡️ Wiring
 
