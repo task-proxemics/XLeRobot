@@ -71,8 +71,6 @@ World's largest low-cost robotics community featuring
 - ⚡ DIY mobile robots face power supply challenges, leading to complex wiring setups.
 - 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO-100/SO-101 configuration, enabling seamless code and policy transfer.
 
-![Description](https://github.com/user-attachments/assets/38dfbefb-5d1d-41f5-ba3b-ccb5088ff6fc)
-
 ### Overall Advantages/Goals of XLeRobot
 
 - **Cost-effective** 💴: Complete build costs \$660, or upgrade from existing SO100Arm and Lekiwi for \$250.
