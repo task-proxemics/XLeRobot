@@ -1,6 +1,6 @@
 # **Bill of Material**
 
-## 💵 Total Cost 💵
+## 💵 Total Cost 
 
 > [!NOTE]
 Doesn't include cost of 3D printing, tools, shippings and taxes.
@@ -21,7 +21,7 @@ You can purchase printed parts or pre-assembled kits from [Wowrobo](https://shop
 If you already have SO101 arms or Lekiwi, refer to this BOM selectively. We recommend checking the other two repos (SO100, Lekiwi) as well for potentially better-priced options.
 ```
 
-## 🔨 Assembly Tools 🔨
+## 🔨 Assembly Tools 
 
 Skip this section if you already have these tools:
 
@@ -33,7 +33,7 @@ Skip this section if you already have these tools:
 - Use a flush cutter to cut the metal mesh for cable routing.
 - This tool list is just a reference—you can use any tools that will accomplish the task, primarily for driving hex and cross-head screws.
 
-## ⏫ Feature Parts⏫
+## ⏫ Feature Parts
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -63,20 +63,20 @@ Skip this section if you already have these tools:
 - USB-C cable to connect Raspberry Pi to the battery
 - Two Type-C to DC cables (12V) connect the motor control board to the power supply.
 
-## Sensors 📷
+## 📷 Sensors 
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Hand camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | ~€10 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ~￥70 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) |
 | [RealSense D415 depth camera](https://a.co/d/hzuPDe6) | 1 |  | https://a.co/d/hzuPDe6 |  |  |  |  |
 
-## 🧩 Alternative chioces 🧩
+## 🧑‍🤝‍🧑 Alternative chioces 
 
 - IKEA Cart: You can use a similar cart not from IKEA; however, this may require minor adjustments to the [3D printed part](https://www.notion.so/vectorwang/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl).
 - Batteries: You can use **other batteries**, but ensure the maximum output capacity can adequately power 2 arms, 3 wheels, and a RaspberryPi (~160W).
 - Electronics: You can use any brand of cables (USB-C cable must be fast-charging type), microSD card, and Raspberry Pi 5 as long as they are compatible.
 
-## 🧩 Optional Add-ons 🧩
+## 🧩 Optional Add-ons 
 
 - 🙌Dual-arm leader-follower joint control: Additional two [SO100 arm sets](https://github.com/TheRobotStudio/SO-ARM100/tree/main) for dual-arm leader-follower joint control
 - ✊Better grip stability: [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (got it from [UMI gripper specifications](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit?tab=t.0#heading=h.5k5vwx2iqjqg))
