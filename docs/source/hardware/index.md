@@ -4,11 +4,13 @@
 
 > I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
 
-##### [💵 Bill of Material](getting_started/material)
+##### [🛒 Bill of Material](getting_started/material)
 
 ##### [🖨️ 3D printing](getting_started/3d)
 
 ##### [🔨 Assemble](getting_started/assemble)
+
+##### [Introduction](hardware_intro)
 
 ---
 
@@ -37,27 +39,4 @@ getting_started/assemble
 hardware_intro/index
 ```
 
-<!-- 
-```{toctree}
-:maxdepth: 3
-:caption: Resources
 
-demos/index
-tutorials/index
-concepts/index
-datasets/index
-data_collection/index
-reinforcement_learning/index
-learning_from_demos/index
-vision_language_action_models/index
-wrappers/index
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: Additional Resources
-
-additional_resources/performance_benchmarking
-additional_resources/citation
-reference/index.rst
-``` -->
