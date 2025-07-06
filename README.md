@@ -7,7 +7,7 @@
 > Docs: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for a more orgainized turotial and related demos and resources. Still under construction.
 
 > [!NOTE] 
-> Hardware: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <1000$ cost. 
+> Hardware: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <960$ cost. 
 
 > [!NOTE] 
 > Simulation: **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started in 10 min. 
@@ -20,7 +20,7 @@
 ---
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
-**💵 ~$998 cost and ⏰ <4hrs total assembly time!!**
+**💵 ~$960 cost and ⏰ <4hrs total assembly time!!**
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
@@ -35,7 +35,7 @@
 
 | Price| US  | EU  | CN |
 |---------|----:|----:|----:|
-| **Build from Scratch** |  **~$1000**  |  **~€650**  |  **~¥7000**  |
+| **Build from Scratch** |  **~$960**  |  **~€650**  |  **~¥7000**  |
 | **Upgrade from 2 SO100 arms**  |  **~$740**  |  **~€440**  |  **~¥5200**  |
 | **Upgrade from 1 Lekiwi (base + arm)** |  **~$710**  |  **~€350**  |  **~¥5000**  |
 | **Upgrade from 1 Lekiwi and 1 SO100 arm** |  **~$590**  |  **~€240**  |  **~¥4000**  |
