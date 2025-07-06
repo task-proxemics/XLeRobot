@@ -33,12 +33,12 @@
 > [!NOTE] 
 > Cost excludes 3D printing, tools, shipping, and taxes.
 
-| Price| US  | EU  | CN |
-|---------|----:|----:|----:|
-| **Build from Scratch** |  **~$960**  |  **~€650**  |  **~¥7000**  |
-| **Upgrade from 2 SO100 arms**  |  **~$740**  |  **~€440**  |  **~¥5200**  |
-| **Upgrade from 1 Lekiwi (base + arm)** |  **~$710**  |  **~€350**  |  **~¥5000**  |
-| **Upgrade from 1 Lekiwi and 1 SO100 arm** |  **~$590**  |  **~€240**  |  **~¥4000**  |
+| Price | US | EU | CN |
+| --- | --- | --- | --- |
+| **Build from Scratch** | **~$960** | **~€980** | **~¥6000** |
+| **Upgrade from 2 SO100 arms** | **~$700** | **~€740** | **~¥4400** |
+| **Upgrade from 1 Lekiwi** | **~$670** | **~€650** | **~¥3900** |
+| **Upgrade from 1 Lekiwi and 1 SO100 arm** | **~$550** | **~€540** | **~¥3200** |
 
 ---
 ## 🚀 Get Started 🚀
