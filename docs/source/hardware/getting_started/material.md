@@ -2,9 +2,9 @@
 
 ## 💵 Total Cost 
 
-> [!NOTE]
+```{note}
 Doesn't include cost of 3D printing, tools, shippings and taxes.
-> 
+```
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
