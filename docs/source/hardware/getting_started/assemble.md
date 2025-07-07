@@ -153,6 +153,8 @@ Complete all wiring and cable management for the top base and put the Raspberry 
 
 ![image](https://github.com/user-attachments/assets/4efa2b31-627c-4f62-9977-d6a50d8dce0e)
 
+![image](https://github.com/user-attachments/assets/1d553e6a-dad6-4b17-bc82-e4d6d3e2ecc8)
+
 
 ```{important}
 Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
