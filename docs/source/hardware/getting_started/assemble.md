@@ -111,10 +111,11 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 ## 🧵 Wiring
 
 ```{important}
-Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart.
+Complete all wiring and cable management for the top base and put the Raspberry Pi in its case before clamping the top base into the IKEA cart.
 ```
 
-![image](https://github.com/user-attachments/assets/89c8ab81-2c22-4a7b-aa04-9c00f18730c9)
+![Uploading image.png…]()
+
 
 - Prepare the extended 5264 wire with the connector kit if you don't have one already.
 - Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing, similar to the bottom layer previously. Choose the location as needed.
@@ -138,18 +139,16 @@ In order to protect the motor control board, make sure to connect the power cabl
 
 ### Base into the Cart
 
+```{important}
+Complete all wiring and cable management for the top base and put the Raspberry Pi in its case before clamping the top base into the IKEA cart.
+```
+
 ![image](https://github.com/user-attachments/assets/2b568626-77c4-4956-a9ab-22db3638eb50)
 
 
 - Be careful not to break the case when you jam the IKEA cart edge into the case socket.
 - For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
-
-
-
-
-
-
 
 
 
