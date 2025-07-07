@@ -66,26 +66,27 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ![image](https://github.com/user-attachments/assets/651c7e03-6bdd-47de-8ab6-f9157ced06fe)
 
-
 - Mount 3x connectors on the top plate according to the figure above.
 
-[image](https://github.com/user-attachments/assets/c8233b2d-c58a-4ce5-8b25-b0e7832a60f3)
+
+
 
 ```{tip}
 Put the Lekiwi base with the connectors under the cart to see whether it can give enough pressure to the cart, with four wheels of the cart can still touch the ground. If not, try to modify the connectors' 3D model by slightly adjust the z-axis scale directly in the slicer software (keeping the xy-axis scale unchanged) and print them again.
 ```
 
+![image](https://github.com/user-attachments/assets/c6bd27ec-6a2e-42ea-aee4-bb28079ccaf0)
+
+
 ```{tip}
-You might want to filp the cart over to do the assembly below.
-```
-- Now install the Lekiwi base with the connectors onto the bottom of the IKEA cart, with [the duplicated thinner top plate](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/base_plate_layer2_thinner.stl) on the other side.
-
-```{note}
-In the first version of hardware, it may be challenging to align all 3x4=12 screws perfectly. You can try to adjust the position and wiggle a little bit to find a place that can install the most screws distributed evenly. Currently the best I can do is 2 screws for each connector, which can give a very stable support. We will also update a new hardware version compatible with the IKEA cart metal mesh shortly.
+Filp the cart over to do the assembly below.
 ```
 
+- Now install the Lekiwi base with the connectors onto the bottom of the IKEA cart, with the thinner plate on the other side.
+- Refer to the figure to find the desired assembly direction based on the motor index. 
+
 ```{note}
-You should also refer to this figure (remade from Lekiwi tutorial) to find your desired assembly direction based on the motor index. Left and right are filpped becasuse it's down-top view.
+This new hardware version is compatible with the IKEA cart metal mesh, and all the 12 M3 screws should be able to fit in easily.
 ```
 
 ![image](https://github.com/user-attachments/assets/35d4e60a-cf5a-46f1-8367-00e7990c27d3)
