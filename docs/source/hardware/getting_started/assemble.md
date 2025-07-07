@@ -114,7 +114,7 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart.
 ```
 
-![image](https://github.com/user-attachments/assets/3c94c1ee-2d9b-46f2-805b-95631823fbcc)
+![image](https://github.com/user-attachments/assets/89c8ab81-2c22-4a7b-aa04-9c00f18730c9)
 
 - Prepare the extended 5264 wire with the connector kit if you don't have one already.
 - Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing, similar to the bottom layer previously. Choose the location as needed.
@@ -124,6 +124,12 @@ When extending the 5264 wire yourself, be careful with the polarity—reversed c
 - Connect the extended 5264 **motor cable** from **the Lekiwi base** to **one of the SO101 arms** (this makes the base and the arm as Lekiwi).
 - Connect the 2 **USB-C to USB-A** **data cables** from 2 **motor control board** to **Rasberry Pi** (2 USB-A slots left for the cameras).
 - Connect all 3 **power cables**: 2 **USB-C to DC(12V)** from 2 **motor control board** and 1 **USB-C to USB-C** from **Rasberry Pi**, to the fast charging section of the power supply. Each slot provides up to 100W power when charging simultaneously, which is tested sufficient for 12V version operation.
+
+### 🔋 Place the Battery 🛒
+
+- Anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily silde during normal operations.
+- Maintain placed upright for safety.
+- Just in case you also accidentally throw the battery manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manual_Anker_SOLIX_C300_DC_Portable_Power_Station.pdf).
 
 ```{important}
 In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
@@ -140,13 +146,9 @@ In order to protect the motor control board, make sure to connect the power cabl
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
 
 
-### 🔋 Place the Battery 🛒
 
-- You can put it anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily silde during normal operations.
-    - I keep it on the middle level for shorter cable runs and easy access (for my 🥾hiking and 🏕️camping).
-- Just in case you also accidentally throw the battery manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manual_Anker_SOLIX_C300_DC_Portable_Power_Station.pdf).
 
-![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
+
 
 
 
