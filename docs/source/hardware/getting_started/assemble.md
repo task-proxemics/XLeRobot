@@ -86,6 +86,7 @@ Filp the cart over to do the assembly below.
 This new hardware version is compatible with the IKEA cart metal mesh, and all the 12 M3 screws should be able to fit in easily.
 ```
 
+![image](https://github.com/user-attachments/assets/d3dc8614-ee42-4856-bd88-b1e6b3aacb76)
 ![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
 
 - Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base, removing only the central "x" to maintain structural integrity. This creates openings for cable routing.
@@ -210,17 +211,5 @@ Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as t
 - **Modular architecture**: Even if head functionality isn't immediately needed, you can print and assemble everything below the neck first
 <img width="868" alt="1749615226961" src="https://github.com/user-attachments/assets/d5685698-5f49-407e-a12a-5adc6dbc658a" />
 
-#### 🔨 Assembly Instructions
-
-#### Hardware Requirements
-
-- Continue using M3 hex screws as in previous versions
-- Bottom base assembly process remains the same as [version 0.1.0](https://github.com/Vector-Wangel/XLeRobot/blob/main/Assembly.md#%EF%B8%8F-install-the-lekiwi-base-)
-    - The connectors have been redesigned. You may also need to adjust its height (by changing z axis scale in the 3D slicer software) to find the best size.
-
-
-#### ⚡️ Wiring
-
-The head motors wiring are the same as Lekiwi, only with 2 motors instead of three, connected to the other available arm motor control board. But be careful with the joint limits.
 
 #### 📸 Final Assembly
