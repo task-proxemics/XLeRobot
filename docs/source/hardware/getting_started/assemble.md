@@ -95,13 +95,13 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 
 ## 🦾 Arm Base
 
-#### Top Base Assembly
+### Top Base Assembly
 ![image](https://github.com/user-attachments/assets/1ea61764-6e4c-4edf-8d0f-0979430a7921)
 
 
 - Easier assembly when the base is filpped over.
 
-#### Head Assembly
+### Head Assembly
 
 ![image](https://github.com/user-attachments/assets/e24df68f-6140-456e-aeee-9e51f3c8a9f7)
 
@@ -110,16 +110,16 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 
 - It should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
 
+### Base into the Cart
+
 ```{note}
 Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart. (Also use 3D printing filament spools if you have one for enhanced structural support)
 ```
 
-![image](https://github.com/user-attachments/assets/0fc95a4e-d4aa-48a5-944a-cc1a984c20b2)
+![image](https://github.com/user-attachments/assets/2b568626-77c4-4956-a9ab-22db3638eb50)
 
-Be careful not to break the case when you jam the IKEA cart edge into the case socket.
 
-![image](https://github.com/user-attachments/assets/66818d5e-ae6e-4217-bf45-795109140359)
-
+- Be careful not to break the case when you jam the IKEA cart edge into the case socket.
 - For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
 
