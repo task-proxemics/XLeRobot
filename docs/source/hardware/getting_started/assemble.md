@@ -123,12 +123,6 @@ Be careful not to break the case when you jam the IKEA cart edge into the case s
 - For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
 
-![image](https://github.com/user-attachments/assets/daaa6731-8886-4770-8042-77a5a0afdb74)
-
-![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
-
-![image](https://github.com/user-attachments/assets/03560435-1c14-42ac-8186-931a43eee0b5)
-
 
 
 
