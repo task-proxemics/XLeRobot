@@ -68,9 +68,6 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 - Mount 3x connectors on the top plate according to the figure above.
 
-
-
-
 ```{tip}
 Put the Lekiwi base with the connectors under the cart to see whether it can give enough pressure to the cart, with four wheels of the cart can still touch the ground. If not, try to modify the connectors' 3D model by slightly adjust the z-axis scale directly in the slicer software (keeping the xy-axis scale unchanged) and print them again.
 ```
@@ -89,14 +86,12 @@ Filp the cart over to do the assembly below.
 This new hardware version is compatible with the IKEA cart metal mesh, and all the 12 M3 screws should be able to fit in easily.
 ```
 
-![image](https://github.com/user-attachments/assets/35d4e60a-cf5a-46f1-8367-00e7990c27d3)
-
-
-![image](https://github.com/user-attachments/assets/fe28320e-1851-495b-afc3-4e9302f92626)
-
-- Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base, removing only the central "x" to maintain structural integrity. This creates openings for cable routing. Then, run the previously extended wire up through the cart from below.
-
 ![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
+
+- Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base, removing only the central "x" to maintain structural integrity. This creates openings for cable routing.
+- Then, run the previously extended wire up through the cart from below.
+
+
 ## 🦾 Arm Base
 
 #### Top Base Assembly
