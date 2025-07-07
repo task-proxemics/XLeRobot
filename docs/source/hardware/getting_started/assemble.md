@@ -86,8 +86,8 @@ Filp the cart over to do the assembly below.
 This new hardware version is compatible with the IKEA cart metal mesh, and all the 12 M3 screws should be able to fit in easily.
 ```
 
-![image](https://github.com/user-attachments/assets/d3dc8614-ee42-4856-bd88-b1e6b3aacb76)
-![image](https://github.com/user-attachments/assets/b30abce8-a12c-44c8-8e0b-ee720cc1b8fa)
+![image](https://github.com/user-attachments/assets/7792ee8d-7300-449f-b2bb-a78417dbc56b)
+
 
 - Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base, removing only the central "x" to maintain structural integrity. This creates openings for cable routing.
 - Then, run the previously extended wire up through the cart from below.
