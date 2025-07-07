@@ -106,9 +106,23 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 ![image](https://github.com/user-attachments/assets/e24df68f-6140-456e-aeee-9e51f3c8a9f7)
 
 
-
-
 - It should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
+
+## 🧵 Wiring
+
+![image](https://github.com/user-attachments/assets/3c94c1ee-2d9b-46f2-805b-95631823fbcc)
+
+- Prepare the extended 5264 wire with the connector kit if you don't have one already.
+```{note}
+When extending the 5264 wire yourself, be careful with the polarity—reversed connections will cause errors.
+```
+- Connect the extended 5264 **motor cable** from **the Lekiwi base** to **one of the SO101 arms** (this makes the base and the arm as Lekiwi).
+- Connect the 2 **USB-C to USB-A** **data cables** from 2 **motor control board** to **Rasberry Pi** (2 USB-A slots left for the cameras).
+- Connect all 3 **power cables**: 2 **USB-C to DC(12V)** from 2 **motor control board** and 1 **USB-C to USB-C** from **Rasberry Pi**, to the fast charging section of the power supply. Each slot provides up to 100W power when charging simultaneously, which is tested sufficient for 12V version operation.
+
+```{important}
+In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
+```
 
 ### Base into the Cart
 
@@ -118,7 +132,7 @@ Complete all wiring and put the Raspberry Pi in its case before clamping the top
 
 ![image](https://github.com/user-attachments/assets/2b568626-77c4-4956-a9ab-22db3638eb50)
 
-
+- Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing the same way as the bottom layer previously. Choose the location as needed.
 - Be careful not to break the case when you jam the IKEA cart edge into the case socket.
 - For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
@@ -126,7 +140,7 @@ Complete all wiring and put the Raspberry Pi in its case before clamping the top
 
 
 
-## 🔋 Place the Battery 🛒
+### 🔋 Place the Battery 🛒
 
 - You can put it anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily silde during normal operations.
     - I keep it on the middle level for shorter cable runs and easy access (for my 🥾hiking and 🏕️camping).
@@ -134,32 +148,12 @@ Complete all wiring and put the Raspberry Pi in its case before clamping the top
 
 ![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
 
-## 🧵 Wiring
 
-![image](https://github.com/user-attachments/assets/3c94c1ee-2d9b-46f2-805b-95631823fbcc)
-
-- Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing the same way as the bottom layer previously. Choose the location as needed
-    - I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
-
-<img width="843" alt="1745819677076" src="https://github.com/user-attachments/assets/ad081621-1e69-4bc6-a50f-d89cf92f35c3" />
-
-- Prepare the extended 5264 wire with the connector kit if you don't have one already.
-
-```{note}
-When extending the 5264 wire yourself, be careful with the polarity—reversed connections will cause errors.
-```
-- Follow the wiring diagram below and:
-    - Connect the extended 5264 **motor cable** from **the Lekiwi base** to **one of the SO101 arms** (this makes the base and the arm as Lekiwi).
-    - Connect the 2 **USB-C to USB-A** **data cables** from 2 **motor control board** to **Rasberry Pi** (2 USB-A slots left for the cameras).
-    - Connect all 3 **power cables**: 2 **USB-C to DC(12V)** from 2 **motor control board** and 1 **USB-C to USB-C** from **Rasberry Pi**, to the fast charging section of the power supply. Each slot provides up to 100W power when charging simultaneously, which is tested sufficient for 12V version operation.
-
-```{important}
-In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
-```
+## 📸 Final Assembly
 
 ```{important}
 Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
 ```
 
 
-## 📸 Final Assembly
+
