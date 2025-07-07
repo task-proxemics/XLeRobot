@@ -9,9 +9,9 @@
   Your browser does not support the video tag.
 </video>
 
-##### [👋 Get Started](getting_started/material)
+##### [👋 Basic Teleop](getting_started/index)
 
-##### [🔩 More Functions](getting_started/3d)
+##### [🔩 More Functions](getting_started/simdemos)
 
 
 
