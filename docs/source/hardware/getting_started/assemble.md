@@ -110,9 +110,14 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 
 ## 🧵 Wiring
 
+```{important}
+Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart.
+```
+
 ![image](https://github.com/user-attachments/assets/3c94c1ee-2d9b-46f2-805b-95631823fbcc)
 
 - Prepare the extended 5264 wire with the connector kit if you don't have one already.
+- Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing, similar to the bottom layer previously. Choose the location as needed.
 ```{note}
 When extending the 5264 wire yourself, be careful with the polarity—reversed connections will cause errors.
 ```
@@ -123,21 +128,16 @@ When extending the 5264 wire yourself, be careful with the polarity—reversed c
 ```{important}
 In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
 ```
+## 📸 Final Assembly
 
 ### Base into the Cart
 
-```{note}
-Complete all wiring and put the Raspberry Pi in its case before clamping the top base to the IKEA cart. (Also use 3D printing filament spools if you have one for enhanced structural support)
-```
-
 ![image](https://github.com/user-attachments/assets/2b568626-77c4-4956-a9ab-22db3638eb50)
 
-- Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing the same way as the bottom layer previously. Choose the location as needed.
+
 - Be careful not to break the case when you jam the IKEA cart edge into the case socket.
 - For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
-
-
 
 
 ### 🔋 Place the Battery 🛒
@@ -149,7 +149,7 @@ Complete all wiring and put the Raspberry Pi in its case before clamping the top
 ![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
 
 
-## 📸 Final Assembly
+
 
 ```{important}
 Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
