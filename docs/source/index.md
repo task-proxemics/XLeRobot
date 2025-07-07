@@ -23,7 +23,8 @@
 [Chinese content...]
 </div> -->
 
-<img width="890" alt="X3" src="https://github.com/user-attachments/assets/a8d16928-12ab-47f5-9f64-670f99f4e536" />
+![image](https://github.com/user-attachments/assets/7ca4650f-7cea-4c0f-9001-fd6b1349104c)
+
 
 ## Intro
 
