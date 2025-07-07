@@ -169,7 +169,8 @@ You need to install software on Rasberry Pi and setup SSH first before this fina
 
 ![image](https://github.com/user-attachments/assets/5367eb11-377e-4243-a9ff-746266012901)
 
-<img width="725" alt="1745906421978" src="https://github.com/user-attachments/assets/cfaf47d6-b112-4c89-93ce-cb2e21515ee0" />
+![image](https://github.com/user-attachments/assets/3c94c1ee-2d9b-46f2-805b-95631823fbcc)
+
 
 ```{important}
 Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
