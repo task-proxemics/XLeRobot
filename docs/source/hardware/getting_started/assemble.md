@@ -127,7 +127,7 @@ Be careful not to break the case when you jam the IKEA cart edge into the case s
 
 ![image](https://github.com/user-attachments/assets/46239c09-3d37-4115-8dbd-3438ee5b3bac)
 
-
+![image](https://github.com/user-attachments/assets/03560435-1c14-42ac-8186-931a43eee0b5)
 
 
 
@@ -193,7 +193,7 @@ Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as t
     
 - **Clamp mounting system**: Retained clamp-based attachment for easier installation and modular design
     
-    ![image](https://github.com/user-attachments/assets/03560435-1c14-42ac-8186-931a43eee0b5)
+
     
 - **Integrated cable management**: Added protective shell for Raspberry Pi with organized cable routing
     
