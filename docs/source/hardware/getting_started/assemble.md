@@ -52,8 +52,7 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 > If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
 >
 
-![image](https://github.com/user-attachments/assets/bc8784b4-0315-4e30-8817-78fa5a60967c)
-
+![image](https://github.com/user-attachments/assets/4599c9d0-3ce3-40e8-9a8e-d21e1e5feb01)
 
 - Mount the omni-wheels to the plate according to the figure above.
   - The specific motor id should be installed accordingly.
@@ -63,9 +62,11 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 ![image](https://github.com/user-attachments/assets/20c7de27-b826-4c8a-9cfd-51501c627857)
 
 
+- Mount the top plate according to the figure above.
 - Leave the motor cable hanging ,don't pull it out from the top plate just yet.
 
-![image](https://github.com/user-attachments/assets/8d81267b-4b58-4af5-8bb3-e77b01d3df7f)
+![image](https://github.com/user-attachments/assets/ac4ab4b4-6488-4e07-8349-e4167bf417f6)
+
 
 - Mount the 3 [connectors](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl) on the top plate, anywhere you think could give a stable support. Or just follow this:
 
