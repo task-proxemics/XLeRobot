@@ -114,7 +114,8 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 Complete all wiring and cable management for the top base and put the Raspberry Pi in its case before clamping the top base into the IKEA cart.
 ```
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/798eeebf-a64f-4c16-b592-c32c8d9c62df)
+
 
 
 - Prepare the extended 5264 wire with the connector kit if you don't have one already.
