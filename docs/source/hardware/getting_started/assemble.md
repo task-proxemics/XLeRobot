@@ -151,6 +151,7 @@ Complete all wiring and cable management for the top base and put the Raspberry 
 - For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
 
+![image](https://github.com/user-attachments/assets/4efa2b31-627c-4f62-9977-d6a50d8dce0e)
 
 
 ```{important}
