@@ -96,8 +96,13 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 ## 🦾 Arm Base
 
 #### Top Base Assembly
+![image](https://github.com/user-attachments/assets/dbbb3512-5aaf-4b7d-9b82-4918339b7df1)
 
-Follow the assembly sequence shown in the diagram below (easier when filpped over):
+- Easier assembly when the base is filpped over.
+
+#### Head Assembly
+
+
 
 ![image](https://github.com/user-attachments/assets/1640d830-b7e9-474b-810d-070097fec59e)
 
