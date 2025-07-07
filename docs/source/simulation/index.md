@@ -9,6 +9,12 @@
   Your browser does not support the video tag.
 </video>
 
+##### [👋 Get Started](getting_started/material)
+
+##### [🔩 More Functions](getting_started/3d)
+
+
+
 ```{toctree}
 getting_started/index
 getting_started/simdemos
