@@ -103,6 +103,7 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 
 #### Head Assembly
 
+![image](https://github.com/user-attachments/assets/e24df68f-6140-456e-aeee-9e51f3c8a9f7)
 
 
 
