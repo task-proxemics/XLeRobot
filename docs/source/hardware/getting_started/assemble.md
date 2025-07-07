@@ -163,52 +163,9 @@ When extending the 5264 wire yourself, be careful with the polarity—reversed c
 In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
 ```
 
-```{note}
-You need to install software on Rasberry Pi and setup SSH first before this final step.
-```
-
-
-
-
-
-
 ```{important}
 Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
 ```
 
 
-
-#### Bottom Base
-
-- **Improved base plate layout**: All screws can now be installed smoothly without interference
-- **Added branding**: XLeRobot (Zima) watermark and designer name have been added to the base plate
-
-![image](https://github.com/user-attachments/assets/d3dc8614-ee42-4856-bd88-b1e6b3aacb76)
-
-#### Top Base
-
-- **Standardized arm spacing**: Two arm bases are now connected to ensure consistent spacing
-    
-    ![image](https://github.com/user-attachments/assets/4aed916e-5930-451c-ac72-795d2cb22601)
-    
-- **Clamp mounting system**: Retained clamp-based attachment for easier installation and modular design
-    
-
-    
-- **Integrated cable management**: Added protective shell for Raspberry Pi with organized cable routing
-    
-    ![image](https://github.com/user-attachments/assets/fff88e18-08ef-4165-bb0b-32affb557a99)
-    
-- **Hollow neck design**: Space-efficient design that saves filament while accommodating USB hub
-    
-    ![image](https://github.com/user-attachments/assets/95a7e585-e625-440e-90f9-5199c092aff7)
-    
-- **2-DOF head rotation**: Direct modification based on SO101 base design
-    
-    ![image](https://github.com/user-attachments/assets/6de3d78d-392d-4d82-b19d-0e11d1f6bb0f)
-    
-- **Modular architecture**: Even if head functionality isn't immediately needed, you can print and assemble everything below the neck first
-<img width="868" alt="1749615226961" src="https://github.com/user-attachments/assets/d5685698-5f49-407e-a12a-5adc6dbc658a" />
-
-
-#### 📸 Final Assembly
+## 📸 Final Assembly
