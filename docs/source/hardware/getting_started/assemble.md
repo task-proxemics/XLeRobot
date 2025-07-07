@@ -59,16 +59,15 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 - Note that the connector of the omni-wheel needs 3x M4 screws.
 - Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the motor cable to the control board, use the extended wire/connector kit to extend the wire.
 
-![image](https://github.com/user-attachments/assets/20c7de27-b826-4c8a-9cfd-51501c627857)
-
+![image](https://github.com/user-attachments/assets/ac4ab4b4-6488-4e07-8349-e4167bf417f6)
 
 - Mount the top plate according to the figure above.
 - Leave the motor cable hanging ,don't pull it out from the top plate just yet.
 
-![image](https://github.com/user-attachments/assets/ac4ab4b4-6488-4e07-8349-e4167bf417f6)
+![image](https://github.com/user-attachments/assets/651c7e03-6bdd-47de-8ab6-f9157ced06fe)
 
 
-- Mount the 3 [connectors](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl) on the top plate, anywhere you think could give a stable support. Or just follow this:
+- Mount 3x connectors on the top plate according to the figure above.
 
 [image](https://github.com/user-attachments/assets/c8233b2d-c58a-4ce5-8b25-b0e7832a60f3)
 
