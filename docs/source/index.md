@@ -61,10 +61,12 @@ World's largest low-cost robotics community featuring
     - Multiple [state-of-the-art pretrained AI models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
     - 7000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
 
-![image](https://github.com/user-attachments/assets/b48a0a41-7422-4f10-8dc6-a66a2fd746ad)
+
 
 
 ### Why "XL" Enhancement?
+
+![image](https://github.com/user-attachments/assets/b48a0a41-7422-4f10-8dc6-a66a2fd746ad)
 
 - 🏠 The field/market lacks affordable, stable, dual-arm home robots that match LeRobot's ease of assembly.
 - 🖨️ Traditional 3D printed chassis suffer from limited durability, stability, and load capacity—making them impractical for daily use.
@@ -72,6 +74,9 @@ World's largest low-cost robotics community featuring
 - 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO-100/SO-101 configuration, enabling seamless code and policy transfer.
 
 ### Overall Advantages/Goals of XLeRobot
+
+![image](https://github.com/user-attachments/assets/3feb1bc5-8f2b-489e-9dbf-841153ff222e)
+
 
 - **Cost-effective** 💴: Complete build costs \$660, or upgrade from existing SO100Arm and Lekiwi for \$250.
 - **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO-100/SO-101**
