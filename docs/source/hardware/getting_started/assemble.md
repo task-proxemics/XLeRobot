@@ -139,11 +139,9 @@ Be careful not to break the case when you jam the IKEA cart edge into the case s
 
 ![image](https://github.com/user-attachments/assets/c29b14c7-9bd7-45a9-bebd-8a7308a18a2a)
 
-## 🧵 Last, Wiring 🧵
+## 🧵 Wiring
 
-- Up til now, this is what XLeRobot should look like without the battery:
-
-![image](https://github.com/user-attachments/assets/395e00c7-b8cf-4c4e-ac41-4b80c93c81a4)
+![image](https://github.com/user-attachments/assets/3c94c1ee-2d9b-46f2-805b-95631823fbcc)
 
 - Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing the same way as the bottom layer previously. Choose the location as needed
     - I selected the middle of the back edge for minimal cable length and to avoid interfering with cart storage. Alternatively, you can route cables along the sides for a cleaner look.
@@ -168,9 +166,9 @@ In order to protect the motor control board, make sure to connect the power cabl
 You need to install software on Rasberry Pi and setup SSH first before this final step.
 ```
 
-![image](https://github.com/user-attachments/assets/5367eb11-377e-4243-a9ff-746266012901)
 
-![image](https://github.com/user-attachments/assets/3c94c1ee-2d9b-46f2-805b-95631823fbcc)
+
+
 
 
 ```{important}
