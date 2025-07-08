@@ -55,6 +55,12 @@ The hardware setup for XLeRobot 0.2.0 is officially out! This is the 1st officia
 
 ---
 
+<video width="100%" style="max-width: 100%;" controls>
+  <source src="https://github.com/user-attachments/assets/8f3dcf48-5b3e-4e02-a7a2-01ec017a1473" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## 🌟 Why XLeRobot? 🌟
 
 Let's break this down since **XLeRobot = XL + LeRobot**
