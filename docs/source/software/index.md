@@ -4,8 +4,8 @@
 
 
 ```{toctree}
+get_started
 software_intro
-future_plans
 ```
 
 <!-- ```{toctree}
