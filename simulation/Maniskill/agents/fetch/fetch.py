@@ -69,9 +69,9 @@ class Fetch(BaseAgent):
             CameraConfig(
                 uid="fetch_head",
                 pose=Pose.create_from_pq([0, 0, 0], [1, 0, 0, 0]),  # Identity transform
-                width=640,
-                height=480,
-                fov=1.3,  # Wide field of view for workspace monitoring
+                width=256,
+                height=256,
+                fov=1.6,  # Wide field of view for workspace monitoring
                 near=0.01,
                 far=100,
                 entity_uid="head_camera_link",  # Mount to dedicated head camera link
@@ -81,8 +81,8 @@ class Fetch(BaseAgent):
             CameraConfig(
                 uid="fetch_right_arm_camera", 
                 pose=Pose.create_from_pq([0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0]),  # Identity transform
-                width=640,
-                height=480,
+                width=128,
+                height=128,
                 fov=1.3,  # Wide field of view for workspace monitoring
                 near=0.01,
                 far=100,
@@ -93,8 +93,8 @@ class Fetch(BaseAgent):
             CameraConfig(
                 uid="fetch_left_arm_camera",
                 pose=Pose.create_from_pq([0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0]),  # Identity transform
-                width=640,
-                height=480,
+                width=128,
+                height=128,
                 fov=1.3,  # Wide field of view for workspace monitoring
                 near=0.01,
                 far=100,
