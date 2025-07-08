@@ -9,6 +9,12 @@
   Your browser does not support the video tag.
 </video>
 
+<video width="100%" style="max-width: 100%;" controls>
+  <source src="https://github.com/user-attachments/assets/7295ca00-a52b-4032-b132-438aa1e427c8" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ##### [👋 Basic Teleop](getting_started/index)
 
 ##### [🔩 More Functions](getting_started/simdemos)
@@ -33,3 +39,7 @@ digital_twins/index
 drawing/index
 external/index
 ``` -->
+
+
+
+
