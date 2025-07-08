@@ -23,12 +23,14 @@
 # 📰 News 
 
 > [!NOTE] 
+> **Documentation**: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for more orgainized turotials, related demos and resources.
+
+> [!NOTE] 
 > **Simulation**: **XLeRobot 0.2.1** is officially out! Updated the urdf files, control scripts to support the new hardware and cameras that can get you started in 10 min.
 
 https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843
 
-> [!NOTE] 
-> **Documentation**: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for a more orgainized turotial and related demos and resources. Still under construction.
+
 
 > [!NOTE] 
 > **Hardware**: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <960$ cost. 
