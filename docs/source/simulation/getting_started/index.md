@@ -41,7 +41,7 @@ python -m mani_skill.utils.download_asset "ReplicaCAD"
 
 ```
 
-#### 2.1 If the dataset downloading goes wrong, use:
+If the dataset downloading goes wrong, use:
 
 ```bash
 git clone <https://huggingface.co/datasets/haosulab/ReplicaCAD>
@@ -55,7 +55,7 @@ to directly download the dataset from huggingface. And then folder contents shou
 
 ```
 
-#### 2.2 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html). 
+Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html). 
 
 Try this command to test whether you have successfully installed Maniskill:
 ```bash
@@ -85,7 +85,7 @@ cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 
 Replace the fetch robot code and assets with the XLeRobot files:
 
-1. Download the [replacement files for XLeRobot here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
+1. Download the [**replacement files for XLeRobot** here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
 2. Replace the files in /agents and /assets:
     
     ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
