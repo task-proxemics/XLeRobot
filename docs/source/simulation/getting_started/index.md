@@ -76,6 +76,7 @@ pip install pygame
 
 #### 4. Replace Robot Files
 
+
 Navigate to the ManiSkill package folder in your conda environment:
 
 ```bash
@@ -84,7 +85,7 @@ cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 
 Replace the fetch robot code and assets with the XLeRobot files:
 
-1. Download simulation/Maniskill.zip
+1. Download the [replacement files for XLeRobot here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
 2. Replace the files in /agents and /assets:
     
     ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
