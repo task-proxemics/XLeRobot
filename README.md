@@ -22,13 +22,15 @@
 # 📰 News 
 
 > [!NOTE] 
+> **Simulation**: **XLeRobot 0.2.1** is officially out! Updated the urdf files, control scripts to support the new hardware and cameras that can get you started in 10 min. 
+
+> [!NOTE] 
 > **Documentation**: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for a more orgainized turotial and related demos and resources. Still under construction.
 
 > [!NOTE] 
 > **Hardware**: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <960$ cost. 
 
-> [!NOTE] 
-> **Simulation**: **XLeRobot 0.1.5** is officially out! The current version includes [a short technical blog](simulation/sim.md) and a detailed [**Step-by-step Installation Instruction**](simulation/sim_guide.md), along with all the urdf files, control scripts that can get you started in 10 min. 
+
 
 
 ## 💵 Total Cost 💵
