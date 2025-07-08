@@ -675,14 +675,14 @@
 
   <!-- Camera link mounted on right side of Fixed_Jaw for first arm -->
   <joint name="Right_Arm_Camera_joint" type="fixed">
-    <origin rpy="1.5708 0 -1.5708" xyz="0 -0.02 -0.05"/>
+    <origin rpy="1.5708 0 -1.5708" xyz="0 -0.02 0.05"/>
     <parent link="Fixed_Jaw"/>
     <child link="Right_Arm_Camera"/>
   </joint>
   <link name="Right_Arm_Camera">
     <visual name="Right_Arm_Camera_visual">
       <origin
-        xyz="-0.015 0.074 0"
+        xyz="-0.015 -0.026 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -693,7 +693,7 @@
     </visual>
     <visual name="Right_Arm_Camera_visual_2">
       <origin
-        xyz="-0.015 0.074 0"
+        xyz="-0.015 -0.026 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -1192,14 +1192,14 @@
 
   <!-- Camera link mounted on right side of Fixed_Jaw_2 for second arm -->
   <joint name="Left_Arm_Camera_joint" type="fixed">
-    <origin rpy="1.5708 0 -1.5708" xyz="0 -0.02 -0.05"/>
+    <origin rpy="1.5708 0 -1.5708" xyz="0 -0.02 0.05"/>
     <parent link="Fixed_Jaw_2"/>
     <child link="Left_Arm_Camera"/>
   </joint>
   <link name="Left_Arm_Camera">
     <visual name="Left_Arm_Camera_visual">
       <origin
-        xyz="-0.015 0.074 0"
+        xyz="-0.015 -0.026 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -1210,7 +1210,7 @@
     </visual>
     <visual name="Left_Arm_Camera_visual_2">
       <origin
-        xyz="-0.015 0.074 0"
+        xyz="-0.015 -0.026 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
