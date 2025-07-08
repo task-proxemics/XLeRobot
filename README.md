@@ -65,7 +65,7 @@ https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843
 
 ## Main Contributors
 
-- [Gaotian/Vector Wang](https://vector-wangel.github.io/)(me)
+- [Gaotian/Vector Wang] (https://vector-wangel.github.io/)(me)
 - Yuesong Wang: Mujoco simulation
 - Nicole Yue: Documentation website setup
 
