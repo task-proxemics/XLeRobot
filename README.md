@@ -24,7 +24,7 @@
 > [!NOTE] 
 > **Simulation**: **XLeRobot 0.2.1** is officially out! Updated the urdf files, control scripts to support the new hardware and cameras that can get you started in 10 min.
 
-https://github.com/user-attachments/assets/7295ca00-a52b-4032-b132-438aa1e427c8
+https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843
 
 > [!NOTE] 
 > **Documentation**: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for a more orgainized turotial and related demos and resources. Still under construction.
