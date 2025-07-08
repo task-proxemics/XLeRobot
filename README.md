@@ -38,6 +38,10 @@ https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843
 
 
 
+https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
+
+
+
 ## 💵 Total Cost 💵
 
 > [!NOTE] 
