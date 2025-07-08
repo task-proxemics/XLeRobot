@@ -38,13 +38,15 @@
 
 ## News
 
+> Simulation: 
+XLeRobot 0.2.1 is officially out! This version updates the urdf files, control scripts to support the new hardware and cameras, along with tutorials that can get you started in 10 min.
+>
+
 > Hardware: 
 The hardware setup for XLeRobot 0.2.0 is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with <1000$ cost.
 > 
 
-> Simulation: 
-XLeRobot 0.1.5 is officially out! The current version includes a short technical blog and a detailed Step-by-step Installation Instruction, along with all the urdf files, control scripts that can get you started in 10 min.
->
+
 
 ---
 
