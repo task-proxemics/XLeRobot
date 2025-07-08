@@ -54,6 +54,10 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ![image](https://github.com/user-attachments/assets/4599c9d0-3ce3-40e8-9a8e-d21e1e5feb01)
 
+```{note}
+Don't choose the wrong plate, each plate comes in a certain order.
+```
+
 - Mount the omni-wheels to the plate according to the figure above.
   - The specific motor id should be installed accordingly.
 - Note that the connector of the omni-wheel needs 3x M4 screws.
