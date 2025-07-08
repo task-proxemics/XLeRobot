@@ -1,5 +1,1 @@
-It's basically a lekiwi + a so100 arm, the wiring setup is the same
-
-Tips to improve assembling experience:
-
-Use 6 axis nails instead of
+Here stores the .3mf file of XLeRobot 0.2.0 for 3D printing.
