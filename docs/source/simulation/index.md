@@ -2,9 +2,9 @@
 
 The current version of simulation includes:
 
-- [A short technical blog](https://www.notion.so/vectorwang/simulation/sim.md) for introduction.
-- A detailed [**Step-by-step Installation Guide**](https://www.notion.so/vectorwang/simulation/sim_guide.md) that can get you started to replicate this demo in 10 min.
-- Urdf files, maniskill robot agent scripts, joint/EE control scripts, etc.
+- [A short technical blog](https://vectorwang.notion.site/Analytical-IK-for-SO101-20abb280f59380d288bcdd398ffbfab1) for analytical IK introduction.
+- A detailed [**Step-by-step Installation Guide**](getting_started/index) that can get you started to replicate this demo in 10 min.
+- URDF files, maniskill robot agent scripts, joint/EE control scripts, etc.
 
 <video width="100%" style="max-width: 100%;" controls>
   <source src="https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843" type="video/mp4">
