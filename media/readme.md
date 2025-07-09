@@ -1,5 +1,6 @@
 Here stores all the related figures and videos
 
-How I make these figures:
+## Simulation
 
-Front figure: generate the robot logo with GPT4o, and further edit with powerpoints
+https://github.com/user-attachments/assets/69919f7d-657a-47b1-9544-c5f001216991
+
