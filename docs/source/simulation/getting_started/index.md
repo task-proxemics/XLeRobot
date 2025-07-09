@@ -111,16 +111,7 @@ python -m mani_skill.examples.XLeRobot_demo_joint_ctrl -e "ReplicaCAD_SceneManip
 
 ```
 
-##### End Effector Control
-
-Run the end effector control demo with:
-
-```bash
-python -m mani_skill.examples.XLeRobot_demo_ee_ctrl -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
-
-```
-
-#### 5. Rename the links
+#### Debug: Rename the links
 
 If you encounter this error:
 
@@ -133,3 +124,31 @@ Navigate to the corresponding script
 and change "torso_lift_link" to "head_camera_link"
 
 ![image](https://github.com/user-attachments/assets/05b52683-5e50-47fc-9cf7-9c021927db18) 
+
+
+##### End Effector Control
+
+Run the end effector control demo with:
+
+```bash
+python -m mani_skill.examples.demo_ctrl_action_ee -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
+
+```
+![image](https://github.com/user-attachments/assets/11f6d417-9d1b-45d7-84c7-58b9d1611922)
+
+##### End Effector Control with Camera Visualization via Rerun
+
+To have camera visualization in real time, pip install rerun first:
+
+```bash
+pip install rerun-sdk
+
+```
+Then, run:
+
+```bash
+python -m mani_skill.examples.demo_ctrl_action_ee_cam_rerun -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
+
+```
+![image](https://github.com/user-attachments/assets/12129988-e386-4d71-b1b2-79fe8492f419)
+
