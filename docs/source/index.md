@@ -43,7 +43,7 @@ XLeRobot 0.2.1 is officially out! This version updates the urdf files, control s
 > 
 
 <video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843" type="video/mp4">
+  <source src="https://github.com/user-attachments/assets/69919f7d-657a-47b1-9544-c5f001216991" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -55,13 +55,15 @@ The hardware setup for XLeRobot 0.2.0 is officially out! This is the 1st officia
 
 ---
 
+
+
+
+## 🌟 Why XLeRobot? 🌟
+
 <video width="100%" style="max-width: 100%;" controls>
   <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
-
-## 🌟 Why XLeRobot? 🌟
 
 Let's break this down since **XLeRobot = XL + LeRobot**
 
