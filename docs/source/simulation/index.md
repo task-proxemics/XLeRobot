@@ -7,7 +7,7 @@ The current version of simulation includes:
 - URDF files, maniskill robot agent scripts, joint/EE control scripts, etc.
 
 <video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843" type="video/mp4">
+  <source src="https://github.com/user-attachments/assets/69919f7d-657a-47b1-9544-c5f001216991" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
