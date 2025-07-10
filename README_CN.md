@@ -75,7 +75,7 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 
 ## 主要贡献者
 
-- [Gaotian/Vector Wang] (https://vector-wangel.github.io/)(我)
+- [Gaotian/Vector Wang](https://vector-wangel.github.io/) (我)
 - Yuesong Wang: Mujoco仿真
 - Nicole Yue: 文档网站搭建
 
