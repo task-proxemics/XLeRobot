@@ -30,7 +30,7 @@
 > [!NOTE] 
 > **Simulation**: **XLeRobot 0.2.1** is officially out! Updated the urdf files, control scripts to support the new hardware and cameras that can get you started in 10 min.
 
-https://github.com/user-attachments/assets/28b65704-766c-4155-888f-0dd830b59843
+https://github.com/user-attachments/assets/69919f7d-657a-47b1-9544-c5f001216991
 
 
 
