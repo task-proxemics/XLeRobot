@@ -14,7 +14,7 @@
 ---
 
 **🚀 将具身人工智能带给每个人 - 比iPhone还便宜！ 📱**  
-**💵 ~$960 成本和 ⏰ <4小时总装配时间!!**
+**💵 ~￥6000 成本和 ⏰ <4小时总装配时间!!**
 
 *基于巨人的肩膀：[LeRobot](https://github.com/huggingface/lerobot)、[SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100)、[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi)、[Bambot](https://github.com/timqian/bambot)*
 
