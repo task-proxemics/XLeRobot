@@ -40,7 +40,14 @@ Digital Reconstruction and Articulation with Environment Realism
 
 ### Hardware
 
-3D Vitac
+[3D Vitac](https://binghao-huang.github.io/3D-ViTac/)
+
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/ee3e59a8-8727-4cc8-bbd7-a70d0c249146" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 
 #### E-flesh Magnetic Skin
 
