@@ -41,14 +41,7 @@ python -m mani_skill.utils.download_asset "ReplicaCAD"
 
 ```
 
-If the dataset downloading goes wrong, use:
-
-```bash
-git clone <https://huggingface.co/datasets/haosulab/ReplicaCAD>
-
-```
-
-to directly download the dataset from huggingface. And then folder contents should go to
+If the dataset downloading goes wrong, you can directly download the dataset from [this google drive link](https://drive.google.com/file/d/1mqImztNX1LYZFBzt9z895C814RsyGe4N/view?usp=sharing). And then folder contents should go to
 
 ```bash
 ~/.maniskill/data/scene_datasets/replica_cad_dataset
