@@ -43,7 +43,7 @@ XLeRobot 0.2.1 is officially out! This version updates the urdf files, control s
 > 
 
 <video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/69919f7d-657a-47b1-9544-c5f001216991" type="video/mp4">
+  <source src="_static/videos/Sim_demos/XLeRobot_0_2_3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
