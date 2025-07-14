@@ -18,7 +18,7 @@
 ##### [🔩 More Scenes](getting_started/simdemos)
 
 <video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/e66d8cb5-7a02-4445-b6d9-793057996f87" type="video/mp4">
+  <source src="../_static/videos/Sim_demos/XLeRobot_0_1_5.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

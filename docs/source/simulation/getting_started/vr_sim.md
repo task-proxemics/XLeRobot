@@ -1,4 +1,4 @@
-# XLeRobot VR Simulation & Control Tutorial
+# XLeVR Tutorial
 
 This guide explains how to use VR devices (currently Meta Quest3) for interactive control in XLeRobot simulation environments. It covers environment setup, dependencies, VR data flow, running demos, troubleshooting, and advanced usage.
 
