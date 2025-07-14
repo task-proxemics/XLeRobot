@@ -63,8 +63,11 @@ And you should be looking at something like this:
 
 #### 3. Additional Dependencies
 
+We use pygame to read keyboard input and show the control panel in real time, and Rerun to visualize and collect camera data.
+
 ```bash
 pip install pygame
+pip install rerun-sdk
 ```
 
 #### 4. Replace Robot Files
@@ -79,65 +82,32 @@ cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 Replace the fetch robot code and assets with the XLeRobot files:
 
 1. Download the [**replacement files for XLeRobot** here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
-2. Replace the files in /agents and /assets:
+2. Replace the files in /agents, /assets, and /envs/scenes:
     
     ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
     
     ![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
     
-3. Add control code to /examples:
+3. Add control codes to /examples:
     
     ![image](https://github.com/user-attachments/assets/654556ab-473f-44d2-8ff7-107c346882c6)
     
 
-##### Usage
+#### Get Moving
 
-> The name of the files may be slightly different, check and change if you need.
-
+> Note: change --shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
+> 
 
 ##### Joint Control
 
-Run the joint control demo with:
-
 ```bash
-python -m mani_skill.examples.XLeRobot_demo_joint_ctrl -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
-
-```
-
-#### Debug: Rename the links
-
-If you encounter this error:
-
-![image](https://github.com/user-attachments/assets/c81569a3-5c4f-4ba6-99d9-65d84937e767)
-
-Navigate to the corresponding script
-
-![image](https://github.com/user-attachments/assets/afda5567-3dfa-4e04-997f-4b5eff0dd1bc)
-
-and change "torso_lift_link" to "head_camera_link"
-
-![image](https://github.com/user-attachments/assets/05b52683-5e50-47fc-9cf7-9c021927db18) 
-
-
-##### End Effector Control
-
-Run the end effector control demo with:
-
-```bash
-python -m mani_skill.examples.demo_ctrl_action_ee -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
+python -m mani_skill.examples.demo_ctrl_action -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
 
 ```
 ![image](https://github.com/user-attachments/assets/11f6d417-9d1b-45d7-84c7-58b9d1611922)
 
+
 ##### End Effector Control with Camera Visualization via Rerun
-
-To have camera visualization in real time, pip install rerun first:
-
-```bash
-pip install rerun-sdk
-
-```
-Then, run:
 
 ```bash
 python -m mani_skill.examples.demo_ctrl_action_ee_cam_rerun -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
