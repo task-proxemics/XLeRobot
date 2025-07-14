@@ -51,6 +51,11 @@ If the dataset downloading goes wrong, you can directly download the dataset fro
 Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html). 
 
 Try this command to test whether you have successfully installed Maniskill:
+
+```{note}
+Change shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
+```
+
 ```bash
 python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \\
   --render-mode="human" --shader="rt-fast"
@@ -95,8 +100,9 @@ Replace the fetch robot code and assets with the XLeRobot files:
 
 #### Get Moving
 
-> Note: change --shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
-> 
+```{note}
+Change shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
+```
 
 ##### Joint Control
 
