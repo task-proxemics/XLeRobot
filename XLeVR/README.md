@@ -1,4 +1,4 @@
-# XLeVR VR Monitor (Refactored from telegrip)
+# XLeVR VR Monitor
 
 This project is a minimal, refactored version of the original [telegrip](https://github.com/DipFlip/telegrip) VR teleoperation system. It is designed for lightweight VR controller data monitoring and prototyping.
 
