@@ -26,7 +26,7 @@ Digital Reconstruction and Articulation with Environment Realism
 
 ### High-level Task Planning
 
-#### VJEPA-2
+#### VJEPA-2: A Self-supervised Foundation World Model
 
 [Introducing V-JEPA 2](https://ai.meta.com/vjepa/)
 
@@ -42,7 +42,7 @@ Digital Reconstruction and Articulation with Environment Realism
 
 #### 3D Vitac: Low-cost Velostat Tactile Sensor
 
-[3D Vitac](https://binghao-huang.github.io/3D-ViTac/)
+[3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing](https://binghao-huang.github.io/3D-ViTac/)
 
 <video width="100%" controls>
   <source src="../_static/videos/Other_works/3D-Vitac.mp4" type="video/mp4">
