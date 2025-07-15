@@ -40,20 +40,22 @@ Digital Reconstruction and Articulation with Environment Realism
 
 ### Hardware
 
+#### 3D Vitac: Low-cost Velostat Tactile Sensor
+
 [3D Vitac](https://binghao-huang.github.io/3D-ViTac/)
 
 <video width="100%" controls>
-  <source src="https://github.com/user-attachments/assets/ee3e59a8-8727-4cc8-bbd7-a70d0c249146" type="video/mp4">
+  <source src="../_static/videos/Other_works/3D-Vitac.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 
 
-#### E-flesh Magnetic Skin
+#### E-flesh: Low-cost Magnetic Tactile Sensor
 
 [eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures](https://e-flesh.com)
 
-#### BACH hand
+#### BACH hand: Belt-driven Active Surface Finger 
 
 [Belt–Augmented Compliant Hand](https://yuanshenli.com/bach.html)
 
