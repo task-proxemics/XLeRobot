@@ -38,6 +38,11 @@
 
 [Caging in Time: A Framework for Robust Object Manipulation under Uncertainties and Limited Robot Perception](https://journals.sagepub.com/doi/pdf/10.1177/02783649251343926)
 
+<video width="100%" controls>
+  <source src="../_static/videos/Other_works/CIT.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ### 👨‍🔧 Hardware
 
 #### 3D Vitac: Low-cost Velostat Tactile Sensor
