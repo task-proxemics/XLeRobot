@@ -1,9 +1,7 @@
 # Related Works
 
-<aside>
-> 🤗 Here are all the works, both from robotics research and from the LeRobot community, that I found interesting, meaningful, and have potential for future applications on XLeRobot.
+🤗Here are all the works, both from robotics research and from the LeRobot community, that I found interesting, meaningful, and have potential for future applications on XLeRobot.
 
-</aside>
 
 ## Research
 
@@ -14,7 +12,7 @@
 [DRAWER](https://xiahongchi.github.io/DRAWER/)
 
 <video width="100%" controls>
-  <source src="attachment:55595b63-bad8-4deb-bf40-1d8aab5d1fb1:407d47f98b507e202e74ed2d0dbd6fed.mp4" type="video/mp4">
+  <source src="../_static/videos/Other_works/DRAWER.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -28,11 +26,18 @@
 
 [Introducing V-JEPA 2](https://ai.meta.com/vjepa/)
 
+<video width="100%" controls>
+  <source src="../_static/videos/Other_works/VJEPA2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ### 🙌 Low-level Motion Control
 
 #### HIL-SERL: Current SOTA (personal opinion) for RL
 
 [HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning](https://hil-serl.github.io/)
+
+[HIL-SERL LeRobot Training Guide](https://huggingface.co/docs/lerobot/hilserl)
 
 #### Caging in Time: A Planning Framework for Robust Object Manipulation
 
@@ -59,6 +64,11 @@
 #### E-flesh: Low-cost Magnetic Tactile Sensor
 
 [eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures](https://e-flesh.com)
+
+<video width="100%" controls>
+  <source src="../_static/videos/Other_works/eflesh.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 #### BACH hand: Belt-driven Active Surface Finger 
 
@@ -87,11 +97,6 @@ by Hunyuan3D-2
 
 [huggingface.co](https://huggingface.co/spaces/tencent/Hunyuan3D-2)
 
-### Reinforcement Learning
-
-#### HIL-SERL
-
-[HIL-SERL Real Robot Training Workflow Guide](https://huggingface.co/docs/lerobot/hilserl)
 
 #### Maniskill Sim2real
 by Stone Tao
