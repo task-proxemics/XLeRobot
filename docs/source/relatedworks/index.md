@@ -3,8 +3,6 @@
 🤗Here are all the works, both from robotics research and from the LeRobot community, that I found interesting, meaningful, and have potential for future applications on XLeRobot.
 
 
-## Research
-
 ### 👀 Perception 
 
 #### DRAWER: Convenient Real2Sim with Articulations
@@ -87,7 +85,7 @@
 [RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation](https://robotwin-platform.github.io/)
 
 
-## Developing
+### 🧑‍🍳 Developing
 
 #### Bambot: Web-based Control Panel 
 
@@ -95,21 +93,19 @@
 
 [BamBot Feetech Servo Control Panel - feetech.js](http://bambot.org/feetech.js)
 
-### Model Context Protocol (MCP)
+#### Model Context Protocol (MCP)
 
-- [robot_MCP](https://github.com/IliaLarchenko/robot_MCP)
+- [Using MCP on Lerobot SO101 arm](https://github.com/IliaLarchenko/robot_MCP)
+- [The official website of MCP](https://modelcontextprotocol.io/introduction)
 
-### 3D-reconstruction
+#### 3D-reconstruction
 
-by Hunyuan3D-2
-
-[huggingface.co](https://huggingface.co/spaces/tencent/Hunyuan3D-2)
+[Hunyuan3D-2](https://huggingface.co/spaces/tencent/Hunyuan3D-2)
 
 
 #### Maniskill Sim2real RL
-by Stone Tao
 
-[lerobot-sim2real](https://github.com/StoneT2000/lerobot-sim2real)
+[lerobot-sim2real by Stone Tao](https://github.com/StoneT2000/lerobot-sim2real)
 
 
 
