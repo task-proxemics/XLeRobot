@@ -7,9 +7,9 @@
 
 ### 👀 Perception 
 
-#### DRAWER: Digital Reconstruction and Articulation with Environment Realism
+#### DRAWER: Convenient Real2Sim with Articulations
 
-[DRAWER](https://xiahongchi.github.io/DRAWER/)
+[DRAWER: Digital Reconstruction and Articulation with Environment Realism](https://xiahongchi.github.io/DRAWER/)
 
 <video width="100%" controls>
   <source src="../_static/videos/Other_works/DRAWER.mp4" type="video/mp4">
@@ -74,7 +74,7 @@
 
 [Belt–Augmented Compliant Hand](https://yuanshenli.com/bach.html)
 
-### Simulation
+### 💻 Simulation
 
 #### Maniskill: Light-weight GPU-accelerated Manipulation-focused Simulator
 
