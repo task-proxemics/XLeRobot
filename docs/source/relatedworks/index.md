@@ -74,6 +74,8 @@
 
 [Belt–Augmented Compliant Hand](https://yuanshenli.com/bach.html)
 
+<img src="../_static/videos/Other_works/bach.gif" width="100%" style="max-width: 100%;" alt="BACH hand demo"/>
+
 ### 💻 Simulation
 
 #### Maniskill: Light-weight GPU-accelerated Manipulation-focused Simulator
