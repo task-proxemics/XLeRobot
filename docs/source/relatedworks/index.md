@@ -7,11 +7,9 @@
 
 ## Research
 
-### Perception
+### 👀 Perception 
 
-#### **DRAWER**
-
-Digital Reconstruction and Articulation with Environment Realism
+#### DRAWER: Digital Reconstruction and Articulation with Environment Realism
 
 [DRAWER](https://xiahongchi.github.io/DRAWER/)
 
@@ -24,21 +22,23 @@ Digital Reconstruction and Articulation with Environment Realism
 
 [CoTracker3: Simpler and Better Point Tracking by Pseudo-Labelling Real Videos](https://cotracker3.github.io/)
 
-### High-level Task Planning
+### 🧠 High-level Task Planning 
 
 #### VJEPA-2: A Self-supervised Foundation World Model
 
 [Introducing V-JEPA 2](https://ai.meta.com/vjepa/)
 
-### Low-level Motion Control
+### 🙌 Low-level Motion Control
 
-#### HIL-SERL
+#### HIL-SERL: Current SOTA (personal opinion) for RL
 
 [HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning](https://hil-serl.github.io/)
 
-#### Caging in Time
+#### Caging in Time: A Planning Framework for Robust Object Manipulation
 
-### Hardware
+[Caging in Time: A Framework for Robust Object Manipulation under Uncertainties and Limited Robot Perception](https://journals.sagepub.com/doi/pdf/10.1177/02783649251343926)
+
+### 👨‍🔧 Hardware
 
 #### 3D Vitac: Low-cost Velostat Tactile Sensor
 
@@ -61,24 +61,20 @@ Digital Reconstruction and Articulation with Environment Realism
 
 ### Simulation
 
-#### Maniskill
+#### Maniskill: Light-weight GPU-accelerated Manipulation-focused Simulator
 
 [ManiSkill — ManiSkill 3.0.0b21 documentation](https://maniskill.readthedocs.io/en/latest/)
 
-#### RoboTwin
+#### RoboTwin: Large bimanual Manipulation Benchmark based on Maniskill
 
-RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation
+[RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation](https://robotwin-platform.github.io/)
 
-Webpage: https://robotwin-platform.github.io/
-Code: https://github.com/RoboTwin-Platform/RoboTwin
-Document: https://robotwin-platform.github.io/doc/
-Paper: https://robotwin-platform.github.io/paper.pdf
 
 ## Developing
 
-### MCP
+### Model Context Protocol (MCP) related
 
-[robot_MCP](https://github.com/IliaLarchenko/robot_MCP)
+- [robot_MCP](https://github.com/IliaLarchenko/robot_MCP)
 
 ### 3D-reconstruction
 
