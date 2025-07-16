@@ -87,7 +87,13 @@
 
 ## Developing
 
-### Model Context Protocol (MCP) related
+#### Bambot: Web-based Control Panel 
+
+[BamBot by Tim Qian](https://bambot.org/)
+
+[BamBot Feetech Servo Control Panel - feetech.js](http://bambot.org/feetech.js)
+
+### Model Context Protocol (MCP)
 
 - [robot_MCP](https://github.com/IliaLarchenko/robot_MCP)
 
@@ -98,21 +104,11 @@ by Hunyuan3D-2
 [huggingface.co](https://huggingface.co/spaces/tencent/Hunyuan3D-2)
 
 
-#### Maniskill Sim2real
+#### Maniskill Sim2real RL
 by Stone Tao
 
 [lerobot-sim2real](https://github.com/StoneT2000/lerobot-sim2real)
 
-### VR control
 
-[telegrip](https://github.com/DipFlip/telegrip)
 
-### Bambot
 
-Web-based control panel 
-
-By Tim Qian
-
-[BamBot](https://bambot.org/)
-
-[Feetech Servo Control Panel - feetech.js](http://bambot.org/feetech.js)
