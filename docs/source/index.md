@@ -28,9 +28,14 @@
 
 ## Intro
 
-**🚀 Bring Embodied AI to Every Family Around the World! 📱**
+**🚀 Bring Embodied AI to Every Family Around the World! Cheaper than iPhone📱!**
 
-**💵 ~$960 cost and ⏰ <4hrs total assembly time!**
+**⏰ <4hrs total assembly time**
+
+| Price | US | EU | CN |
+| --- | --- | --- | --- |
+| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
+| **Pro** (Realsense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
