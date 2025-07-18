@@ -78,8 +78,8 @@ Skip this section if you already have these tools:
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Hand camera | 2 | $12.98 | [Amazon](https://a.co/d/fXX2odP) | ~€10 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ￥99 | [Taobao](https://item.taobao.com/item.htm?ft=t&id=860171734711) |
-| RealSense D415 | 1 | $272 | [Intel](https://store.intelrealsense.com/buy-intel-realsense-depth-camera-d415.html) |  |  | ￥1950 |[Taobao](https://e.tb.cn/h.hTHju7zCMDMR84q?tk=z0WU4aXOKey)  |
 | Logitech C920 | 1 | $66 | [Amazon](https://a.co/d/gM8vei1) |  |  | ￥309 |[Taobao]( https://e.tb.cn/h.hjpjA9cw3DpgwQi?tk=DRu642dmCo8 )  |
+| RealSense D415 (Optional for Pro) | 1 | $272 | [Intel](https://store.intelrealsense.com/buy-intel-realsense-depth-camera-d415.html) |  |  | ￥1950 |[Taobao](https://e.tb.cn/h.hTHju7zCMDMR84q?tk=z0WU4aXOKey)  |
 
 ![image](https://github.com/user-attachments/assets/0f5a10ce-d0e9-4e53-b457-27a9ba057cbf)
 
