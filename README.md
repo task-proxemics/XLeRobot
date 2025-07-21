@@ -53,8 +53,8 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
 | **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥4000** |
-| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
-| **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
+| **Standard** (RasPi, webcam head camera) | **~$750** | **~€770** | **~¥4500** |
+| **Pro** (RasPi, RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
 ---
 ## 🚀 Get Started 🚀
