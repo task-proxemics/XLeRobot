@@ -34,8 +34,9 @@
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
+| **Basic** (use your own laptop) | **~$660** | **~€680** | **~¥4000** |
 | **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
-| **Pro** (Realsense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
+| **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
