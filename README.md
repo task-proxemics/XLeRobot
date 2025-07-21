@@ -14,7 +14,7 @@
 ---
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
-**💵 ~$750 cost and ⏰ <4hrs total assembly time!!**
+**💵 Starts from $660 cost and ⏰ <4hrs total assembly time!!**
 
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
@@ -52,10 +52,9 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
-| **Build from Scratch** | **~$960** | **~€980** | **~¥6000** |
-| **Upgrade from 2 SO100 arms** | **~$700** | **~€740** | **~¥4400** |
-| **Upgrade from 1 Lekiwi** | **~$670** | **~€650** | **~¥3900** |
-| **Upgrade from 1 Lekiwi and 1 SO100 arm** | **~$550** | **~€540** | **~¥3200** |
+| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥4000** |
+| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
+| **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
 ---
 ## 🚀 Get Started 🚀
