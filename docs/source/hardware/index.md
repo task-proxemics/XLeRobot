@@ -21,10 +21,9 @@
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
-| **Build from Scratch** | **~$960** | **~€980** | **~¥6000** |
-| **Upgrade from 2 SO100 arms** | **~$700** | **~€740** | **~¥4400** |
-| **Upgrade from 1 Lekiwi** | **~$670** | **~€650** | **~¥3900** |
-| **Upgrade from 1 Lekiwi and 1 SO100 arm** | **~$550** | **~€540** | **~¥3200** |
+| **Basic** (use your own laptop) | **~$660** | **~€680** | **~¥4000** |
+| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
+| **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
 ```{toctree}
 :caption: Get started
