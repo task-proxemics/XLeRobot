@@ -1,1 +1,6 @@
-To be updated. Here gives the modified lerobot code (or how to modify the original repo).
+## Updates
+
+- SO100 control codes:
+  - Keyboard Joint control
+  - Keyboard EE control with my own analytical IK
+  - VR control with my own analytical IK
