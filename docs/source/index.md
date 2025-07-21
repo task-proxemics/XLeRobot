@@ -32,9 +32,10 @@
 
 **⏰ <4hrs total assembly time**
 
+
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
-| **Basic** (use your own laptop) | **~$660** | **~€680** | **~¥4000** |
+| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥4000** |
 | **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
 | **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
