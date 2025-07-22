@@ -1,14 +1,44 @@
 ## Demos
 
-### XLeRobot 0.1.0
+### VR control
 
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/XLeVR.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
+### Autonomous RL
 
-https://github.com/user-attachments/assets/eda88ad7-182c-46e7-8549-d1b674af4958
-
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/sim2real_2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Simulation
 
+#### VR Control in Sim
+
+<video width="100%" controls>
+  <source src="../_static/videos/Sim_demos/XLeRobot_0_2_3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+#### Scenes Showcases
+<video width="100%" controls>
+  <source src="../_static/videos/Sim_demos/XLeRobot_0_1_5.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
-### VR control
+
+### Dynamics
+
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/Dynamic.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Demo made by Mitchell Chen
+
+
+### Community
