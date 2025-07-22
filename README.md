@@ -10,8 +10,7 @@
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Docs status](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://xlerobot.readthedocs.io/en/latest/)
-[![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/bjZveEUh6F)
-[![Discord](https://img.shields.io/discord/XLeRobot?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/bjZveEUh6F)
+[![Discord](https://img.shields.io/discord/1397251041140932668?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/bjZveEUh6F)
 ---
 
 **🚀 Bringing Embodied AI to Everyone - Cheaper Than an iPhone! 📱**  
