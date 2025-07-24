@@ -1,6 +1,6 @@
 ## Updates
 
-Still actively 
+Still actively progressing, will update turtorial after all these stuffs is completed.
 
 - SO100/SO101 control codes: These codes should be compatible to both SO100 and SO101, even if you just keep the name in the codes as so100. 
 
