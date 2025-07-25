@@ -31,8 +31,8 @@
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
 | **Basic** (put your laptop in the cart) | **~$660** | **~€680** | **~¥3999** |
-| **Standard** (RasPi, webcam head camera) | **~$750** | **~€770** | **~¥4399** |
-| **Pro** (RasPi, RealSense RGBD head camera) | **~$960** | **~€980** | **~¥5999** |
+| **Standard** (Basic + RasPi) | **~$750** | **~€770** | **~¥4399** |
+| **Pro** (Standard + RealSense depth head cam) | **~$960** | **~€980** | **~¥5999** |
 
 ---
 
