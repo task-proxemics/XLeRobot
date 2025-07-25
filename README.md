@@ -22,6 +22,18 @@
   <img width="890" alt="1751777563236" src="https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9" />
 </a>
 
+
+## 💵 Total Cost 💵
+
+> [!NOTE] 
+> Cost excludes 3D printing, tools, shipping, and taxes.
+
+| Price | US | EU | CN |
+| --- | --- | --- | --- |
+| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥3999** |
+| **Standard** (RasPi, webcam head camera) | **~$750** | **~€770** | **~¥4399** |
+| **Pro** (RasPi, RealSense RGBD head camera) | **~$960** | **~€980** | **~¥5999** |
+
 ---
 
 # 📰 News 
@@ -44,17 +56,6 @@
 https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 
 
-
-## 💵 Total Cost 💵
-
-> [!NOTE] 
-> Cost excludes 3D printing, tools, shipping, and taxes.
-
-| Price | US | EU | CN |
-| --- | --- | --- | --- |
-| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥4000** |
-| **Standard** (RasPi, webcam head camera) | **~$750** | **~€770** | **~¥4500** |
-| **Pro** (RasPi, RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
 ---
 ## 🚀 Get Started 🚀
