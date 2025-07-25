@@ -28,15 +28,15 @@
 
 
 
-- 2025.7.14: XLeRobot 0.2.3 (XLeVR) out! VR Quest 3 whole-body control system. Captures all inputs: poses, joysticks, buttons. Web-based, minimal dependencies. Modular for different robots. Open-source with quick 20min setup.
+- 2025-07-14: XLeRobot 0.2.3 (XLeVR) out! VR Quest 3 whole-body control system. Captures all inputs: poses, joysticks, buttons. Web-based, minimal dependencies. Modular for different robots. Open-source with quick 20min setup.
   ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
   
-- 2025.7.8: **Official Simulation** with updated urdfs, control scripts, support for new hardware and cameras. Get started in 10 min.
+- 2025-07-08: **Official Simulation** with updated urdfs, control scripts, support for new hardware and cameras. Get started in 10 min.
   
-- 2025.7.1: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for more orgainized turotials, related demos and resources.
+- 2025-07-01: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for more orgainized turotials, related demos and resources.
 
 
-- 2025.6.13: The hardware setup for [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, starts from 660$ cost. 
+- 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup, the 1st version fully capable for autonomous household tasks, starts from 660$. 
 
 
 
