@@ -28,7 +28,7 @@
 
 
 
-- 2025-07-14: XLeVR, VR Quest 3 whole-body control system, all VR data captured, web-based, minimal dependencies, Modular for different robots, 20min setup.
+- 2025-07-14: XLeVR, VR Quest 3 whole-body control system, all data captured, web-based, minimal dependencies, modular, 20min setup.
 -  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
   
 - 2025-07-08: **Official Simulation** with updated urdfs, control scripts, support for new hardware and cameras. Get started in 10 min.
