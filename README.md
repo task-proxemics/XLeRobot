@@ -45,7 +45,7 @@
   
 - 2025-07-08: **Official Simulation** with updated urdfs, control scripts, support for new hardware and cameras. Get started in 10 min.
   
-- 2025-07-01: [**XLeRobot Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) is officially out for more orgainized turotials, related demos and resources.
+- 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more orgainized turotials, demos and resources.
 
 
 - 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup, the 1st version fully capable for autonomous household tasks, starts from 660$. 
