@@ -30,7 +30,7 @@
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
-| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥3999** |
+| **Basic** (put your laptop in the cart) | **~$660** | **~€680** | **~¥3999** |
 | **Standard** (RasPi, webcam head camera) | **~$750** | **~€770** | **~¥4399** |
 | **Pro** (RasPi, RealSense RGBD head camera) | **~$960** | **~€980** | **~¥5999** |
 
