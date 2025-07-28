@@ -29,4 +29,19 @@ After these steps you should be able to teleoperate a basic single-arm version o
 
 After installing lerobot, directly put [this script](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/simple_so100_keyboard_ee_control.py) into /example and run. Then you can play with keyboard EE control smoothly:
 
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/keyboard_teleop.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
+
+## Vision-based Object Following
+
+We used YOLO to identify the object (such as a bottle) and track its position. Then we use preivous EE control to make the robot follow the object. This demo need no training at all.
+
+Directly put [this script](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/simple_so100_keyboard_ee_control.py) into /example and run.
+
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/yolo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
