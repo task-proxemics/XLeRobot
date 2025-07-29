@@ -10,41 +10,17 @@
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Docs status](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://xlerobot.readthedocs.io/en/latest/)
-[![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
+[![Discord](https://img.shields.io/badge/Discord-XLeRobot-7289da?style=flat&logo=discord&logoColor=white)](https://discord.gg/bjZveEUh6F)
 ---
 
-**🚀 将具身人工智能带给每个人 - 比iPhone还便宜！ 📱**  
-**💵 ~￥6000 成本和 ⏰ <4小时总装配时间!!**
+**🚀 将具身智能带给每个人 - 比小米还便宜！ 📱**  
+**💵 ￥3999起，⏰ <4小时总装配时间!!**
 
 *基于巨人的肩膀：[LeRobot](https://github.com/huggingface/lerobot)、[SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100)、[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi)、[Bambot](https://github.com/timqian/bambot)*
 
 <a href="https://xlerobot.readthedocs.io/en/latest/index.html">
   <img width="890" alt="1751777563236" src="https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9" />
 </a>
-
----
-
-# 📰 新闻 
-
-> [!NOTE] 
-> **文档**: [**XLeRobot 文档** 网站](https://xlerobot.readthedocs.io/en/latest/index.html) 正式发布，提供更有条理的教程、相关演示和资源。
-
-> [!NOTE] 
-> **仿真**: **XLeRobot 0.2.1** 正式发布！更新了urdf文件、控制脚本以支持新硬件和摄像头，让您在10分钟内开始使用。
-
-https://github.com/user-attachments/assets/69919f7d-657a-47b1-9544-c5f001216991
-
-
-
-> [!NOTE] 
-> **硬件**: [**XLeRobot 0.2.0**](https://github.com/Vector-Wangel/XLeRobot/blob/main/XLeRobot_0_2_0_hardware/README.md) 的硬件设置正式发布！这是第一个正式硬件版本，完全能够处理自主家庭任务，成本不到960美元。
-
-
-
-
-https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
-
-
 
 ## 💵 总成本 💵
 
@@ -53,10 +29,24 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 
 | 价格 | 美国 | 欧盟 | 中国 |
 | --- | --- | --- | --- |
-| **从零开始构建** | **~$960** | **~€980** | **~¥6000** |
-| **从2个SO100机械臂升级** | **~$700** | **~€740** | **~¥4400** |
-| **从1个Lekiwi升级** | **~$670** | **~€650** | **~¥3900** |
-| **从1个Lekiwi和1个SO100机械臂升级** | **~$550** | **~€540** | **~¥3200** |
+| **基础版** (将您的笔记本电脑放入推车) | **~$660** | **~€680** | **~¥3999** |
+| **标准版** (基础版 + RasPi) | **~$750** | **~€770** | **~¥4399** |
+| **专业版** (基础版 + RealSense深度头摄像头) | **~$870** | **~€890** | **~¥5499** |
+
+---
+
+# 📰 新闻 
+
+- 2025-07-14: XLeVR，VR Quest 3全身控制系统，所有数据捕获，基于Wifi，最小依赖，模块化，20分钟设置。
+-  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
+  
+- 2025-07-08: **官方仿真**，更新了urdf文件、控制脚本，支持新硬件和摄像头。10分钟内开始使用。
+  
+- 2025-07-01: [**文档**网站](https://xlerobot.readthedocs.io/en/latest/index.html)发布，提供更有条理的教程、演示和资源。
+
+- 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io)硬件设置，第一个完全能够处理自主家庭任务的版本，从660美元开始。
+
+https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 
 ---
 ## 🚀 开始使用 🚀
@@ -75,9 +65,10 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 
 ## 主要贡献者
 
-- [Gaotian/Vector Wang](https://vector-wangel.github.io/) (我)
-- Yuesong Wang: Mujoco仿真
+- [Gaotian/Vector Wang](https://vector-wangel.github.io/)
+- Zhuoyi Lu: RL sim2real部署，真实机器人VR控制
 - Nicole Yue: 文档网站搭建
+- Yuesong Wang: Mujoco仿真
 
 这只是金字塔中的一小块砖，得益于[LeRobot](https://github.com/huggingface/lerobot)、[SO-100](https://github.com/TheRobotStudio/SO-ARM100)、[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi)和[Bambot](https://github.com/timqian/bambot)。感谢这些详细而专业项目背后的所有才华横溢的贡献者。
 

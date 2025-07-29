@@ -32,7 +32,7 @@
 | --- | --- | --- | --- |
 | **Basic** (put your laptop in the cart) | **~$660** | **~€680** | **~¥3999** |
 | **Standard** (Basic + RasPi) | **~$750** | **~€770** | **~¥4399** |
-| **Pro** (Standard + RealSense depth head cam) | **~$960** | **~€980** | **~¥5999** |
+| **Pro** (Standard + RealSense depth head cam) | **~$870** | **~€890** | **~¥5599** |
 
 ---
 
