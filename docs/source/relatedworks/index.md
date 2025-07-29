@@ -2,6 +2,10 @@
 
 🤗Here are all the works, both from robotics research and from the LeRobot community, that I found interesting, meaningful, and have potential for future applications on XLeRobot.
 
+## Blogs
+
+[Analytical IK for SO101](https://vectorwang.notion.site/Analytical-IK-for-SO101-20abb280f59380d288bcdd398ffbfab1?pvs=25)
+
 
 ### 👀 Perception 
 
