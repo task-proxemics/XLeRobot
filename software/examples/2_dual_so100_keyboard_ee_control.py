@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-双臂键盘控制SO100/SO101机器人
-修复了动作格式转换问题
-使用P控制，键盘只改变目标关节角度
-支持两个机械臂同时控制: /dev/ttyACM0 和 /dev/ttyACM1
-键盘映射: 第一臂(7y8u9i0o-p=[), 第二臂(hbjnkml,;.'/)
+Dual-arm keyboard control for SO100/SO101 robots
+Fixed action format conversion issues
+Uses P control, keyboard only changes target joint angles
+Supports simultaneous control of two robot arms: /dev/ttyACM0 and /dev/ttyACM1
+Keyboard mapping: First arm (7y8u9i0o-p=[), Second arm (hbjnkml,;.'/)
 """
 
 import time
@@ -12,39 +12,39 @@ import logging
 import traceback
 import math
 
-# 设置日志
+# Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# 关节校准系数 - 手动编辑
-# 格式: [关节名称, 零位置偏移(度), 缩放系数]
+# Joint calibration coefficients - manually edit
+# Format: [joint_name, zero_position_offset(degrees), scaling_factor]
 JOINT_CALIBRATION = [
-    ['shoulder_pan', 6.0, 1.0],      # 关节1: 零位置偏移, 缩放系数
-    ['shoulder_lift', 2.0, 0.97],     # 关节2: 零位置偏移, 缩放系数
-    ['elbow_flex', 0.0, 1.05],        # 关节3: 零位置偏移, 缩放系数
-    ['wrist_flex', 0.0, 0.94],        # 关节4: 零位置偏移, 缩放系数
-    ['wrist_roll', 0.0, 0.5],        # 关节5: 零位置偏移, 缩放系数
-    ['gripper', 0.0, 1.0],           # 关节6: 零位置偏移, 缩放系数
+    ['shoulder_pan', 6.0, 1.0],      # Joint1: zero position offset, scaling factor
+    ['shoulder_lift', 2.0, 0.97],     # Joint2: zero position offset, scaling factor
+    ['elbow_flex', 0.0, 1.05],        # Joint3: zero position offset, scaling factor
+    ['wrist_flex', 0.0, 0.94],        # Joint4: zero position offset, scaling factor
+    ['wrist_roll', 0.0, 0.5],        # Joint5: zero position offset, scaling factor
+    ['gripper', 0.0, 1.0],           # Joint6: zero position offset, scaling factor
 ]
 
 def apply_joint_calibration(joint_name, raw_position):
     """
-    应用关节校准系数
+    Apply joint calibration coefficients
     
     Args:
-        joint_name: 关节名称
-        raw_position: 原始位置值
+        joint_name: Joint name
+        raw_position: Raw position value
     
     Returns:
-        calibrated_position: 校准后的位置值
+        calibrated_position: Calibrated position value
     """
     for joint_cal in JOINT_CALIBRATION:
         if joint_cal[0] == joint_name:
-            offset = joint_cal[1]  # 零位置偏移
-            scale = joint_cal[2]   # 缩放系数
+            offset = joint_cal[1]  # Zero position offset
+            scale = joint_cal[2]   # Scaling factor
             calibrated_position = (raw_position - offset) * scale
             return calibrated_position
-    return raw_position  # 如果没找到校准系数，返回原始值
+    return raw_position  # If no calibration coefficient found, return original value
 
 def inverse_kinematics(x, y, l1=0.1159, l2=0.1350):
     """
@@ -112,21 +112,21 @@ def inverse_kinematics(x, y, l1=0.1159, l2=0.1350):
 
 def move_to_zero_position(robots, duration=3.0, kp=0.5):
     """
-    使用P控制缓慢移动所有机器人到零位置
+    Use P control to slowly move all robots to zero position
     
     Args:
-        robots: 机器人实例字典 {'arm1': robot1, 'arm2': robot2}
-        duration: 移动到零位置所需时间(秒)
-        kp: 比例增益
+        robots: Robot instance dictionary {'arm1': robot1, 'arm2': robot2}
+        duration: Time required to move to zero position (seconds)
+        kp: Proportional gain
     """
-    print("正在使用P控制缓慢移动所有机器人到零位置...")
+    print("Using P control to slowly move all robots to zero position...")
     
-    # 获取当前所有机器人状态
+    # Get current states of all robots
     current_obs = {}
     for arm_name, robot in robots.items():
         current_obs[arm_name] = robot.get_observation()
     
-    # 提取当前关节位置
+    # Extract current joint positions
     current_positions = {}
     for arm_name, obs in current_obs.items():
         current_positions[arm_name] = {}
@@ -135,7 +135,7 @@ def move_to_zero_position(robots, duration=3.0, kp=0.5):
                 motor_name = key.removesuffix('.pos')
                 current_positions[arm_name][motor_name] = value
     
-    # 零位置目标
+    # Zero position target
     zero_positions = {
         'shoulder_pan': 0.0,
         'shoulder_lift': 0.0,
@@ -145,15 +145,15 @@ def move_to_zero_position(robots, duration=3.0, kp=0.5):
         'gripper': 0.0
     }
     
-    # 计算控制步数
-    control_freq = 50  # 50Hz控制频率
+    # Calculate control steps
+    control_freq = 50  # 50Hz control frequency
     total_steps = int(duration * control_freq)
     step_time = 1.0 / control_freq
     
-    print(f"将在 {duration} 秒内使用P控制移动到零位置，控制频率: {control_freq}Hz，比例增益: {kp}")
+    print(f"Will move to zero position in {duration} seconds using P control, control frequency: {control_freq}Hz, proportional gain: {kp}")
     
     for step in range(total_steps):
-        # 获取当前所有机器人状态
+        # Get current states of all robots
         current_obs = {}
         current_positions = {}
         for arm_name, robot in robots.items():
@@ -162,11 +162,11 @@ def move_to_zero_position(robots, duration=3.0, kp=0.5):
             for key, value in current_obs[arm_name].items():
                 if key.endswith('.pos'):
                     motor_name = key.removesuffix('.pos')
-                    # 应用校准系数
+                    # Apply calibration coefficients
                     calibrated_value = apply_joint_calibration(motor_name, value)
                     current_positions[arm_name][motor_name] = calibrated_value
         
-        # 对每个机械臂进行P控制计算
+        # Perform P control calculation for each robot arm
         for arm_name, robot in robots.items():
             robot_action = {}
             for joint_name, target_pos in zero_positions.items():
@@ -174,43 +174,43 @@ def move_to_zero_position(robots, duration=3.0, kp=0.5):
                     current_pos = current_positions[arm_name][joint_name]
                     error = target_pos - current_pos
                     
-                    # P控制: 输出 = Kp * 误差
+                    # P control: output = Kp * error
                     control_output = kp * error
                     
-                    # 将控制输出转换为位置命令
+                    # Convert control output to position command
                     new_position = current_pos + control_output
                     robot_action[f"{joint_name}.pos"] = new_position
             
-            # 发送动作到机器人
+            # Send action to robot
             if robot_action:
                 robot.send_action(robot_action)
         
-        # 显示进度
-        if step % (control_freq // 2) == 0:  # 每0.5秒显示一次进度
+        # Display progress
+        if step % (control_freq // 2) == 0:  # Display progress every 0.5 seconds
             progress = (step / total_steps) * 100
-            print(f"移动到零位置进度: {progress:.1f}%")
+            print(f"Move to zero position progress: {progress:.1f}%")
         
         time.sleep(step_time)
     
-    print("所有机器人已移动到零位置")
+    print("All robots have moved to zero position")
 
 def return_to_start_position(robots, start_positions, kp=0.5, control_freq=50):
     """
-    使用P控制返回到起始位置
+    Use P control to return to start position
     
     Args:
-        robots: 机器人实例字典 {'arm1': robot1, 'arm2': robot2}
-        start_positions: 起始关节位置字典 {'arm1': {}, 'arm2': {}}
-        kp: 比例增益
-        control_freq: 控制频率(Hz)
+        robots: Robot instance dictionary {'arm1': robot1, 'arm2': robot2}
+        start_positions: Start joint position dictionary {'arm1': {}, 'arm2': {}}
+        kp: Proportional gain
+        control_freq: Control frequency (Hz)
     """
-    print("正在返回到起始位置...")
+    print("Returning to start position...")
     
     control_period = 1.0 / control_freq
-    max_steps = int(5.0 * control_freq)  # 最多5秒
+    max_steps = int(5.0 * control_freq)  # Maximum 5 seconds
     
     for step in range(max_steps):
-        # 获取当前所有机器人状态
+        # Get current states of all robots
         current_obs = {}
         current_positions = {}
         for arm_name, robot in robots.items():
@@ -219,9 +219,9 @@ def return_to_start_position(robots, start_positions, kp=0.5, control_freq=50):
             for key, value in current_obs[arm_name].items():
                 if key.endswith('.pos'):
                     motor_name = key.removesuffix('.pos')
-                    current_positions[arm_name][motor_name] = value  # 不应用校准系数
+                    current_positions[arm_name][motor_name] = value  # Don't apply calibration coefficients
         
-        # 对每个机械臂进行P控制计算
+        # Perform P control calculation for each robot arm
         total_error = 0
         for arm_name, robot in robots.items():
             robot_action = {}
@@ -231,182 +231,182 @@ def return_to_start_position(robots, start_positions, kp=0.5, control_freq=50):
                     error = target_pos - current_pos
                     total_error += abs(error)
                     
-                    # P控制: 输出 = Kp * 误差
+                    # P control: output = Kp * error
                     control_output = kp * error
                     
-                    # 将控制输出转换为位置命令
+                    # Convert control output to position command
                     new_position = current_pos + control_output
                     robot_action[f"{joint_name}.pos"] = new_position
             
-            # 发送动作到机器人
+            # Send action to robot
             if robot_action:
                 robot.send_action(robot_action)
         
-        # 检查是否到达起始位置
-        if total_error < 4.0:  # 如果总误差小于4度（双臂），认为已到达
-            print("已返回到起始位置")
+        # Check if start position is reached
+        if total_error < 4.0:  # If total error is less than 4 degrees (dual arms), consider reached
+            print("Returned to start position")
             break
         
         time.sleep(control_period)
     
-    print("返回起始位置完成")
+    print("Return to start position completed")
 
 def p_control_loop(robots, keyboard, target_positions, start_positions, current_positions, kp=0.5, control_freq=50):
     """
-    P控制循环
+    P control loop
     
     Args:
-        robots: 机器人实例字典 {'arm1': robot1, 'arm2': robot2}
-        keyboard: 键盘实例
-        target_positions: 目标关节位置字典
-        start_positions: 起始关节位置字典
-        current_positions: 当前关节位置字典
-        kp: 比例增益
-        control_freq: 控制频率(Hz)
+        robots: Robot instance dictionary {'arm1': robot1, 'arm2': robot2}
+        keyboard: Keyboard instance
+        target_positions: Target joint position dictionary
+        start_positions: Start joint position dictionary
+        current_positions: Current joint position dictionary
+        kp: Proportional gain
+        control_freq: Control frequency (Hz)
     """
     control_period = 1.0 / control_freq
     
-    # 初始化双臂pitch控制变量
-    pitch = {'arm1': 0.0, 'arm2': 0.0}  # 初始pitch调整
-    pitch_step = 1  # pitch调整步长
+    # Initialize dual-arm pitch control variables
+    pitch = {'arm1': 0.0, 'arm2': 0.0}  # Initial pitch adjustment
+    pitch_step = 1  # Pitch adjustment step size
     
-    print(f"开始P控制循环，控制频率: {control_freq}Hz，比例增益: {kp}")
+    print(f"Starting P control loop, control frequency: {control_freq}Hz, proportional gain: {kp}")
     
     while True:
         try:
-            # 获取键盘输入
+            # Get keyboard input
             keyboard_action = keyboard.get_action()
             
             if keyboard_action:
-                # 处理键盘输入，更新目标位置
+                # Process keyboard input, update target positions
                 for key, value in keyboard_action.items():
                     if key == 'x':
-                        # 退出程序，先回到起始位置
-                        print("检测到退出命令，正在回到起始位置...")
+                        # Exit program, return to start position first
+                        print("Exit command detected, returning to start position...")
                         return_to_start_position(robots, start_positions, 0.2, control_freq)
                         return
                     
-                    # 第一臂控制映射: 7y8u9i0o-p=[
+                    # First arm control mapping: 7y8u9i0o-p=[
                     arm1_joint_controls = {
-                        '7': ('shoulder_pan', -1),    # 关节1减少
-                        'y': ('shoulder_pan', 1),     # 关节1增加
-                        '0': ('wrist_roll', -1),      # 关节5减少
-                        'o': ('wrist_roll', 1),       # 关节5增加
-                        '-': ('gripper', -1),         # 关节6减少
-                        'p': ('gripper', 1),          # 关节6增加
+                        '7': ('shoulder_pan', -1),    # Joint1 decrease
+                        'y': ('shoulder_pan', 1),     # Joint1 increase
+                        '0': ('wrist_roll', -1),      # Joint5 decrease
+                        'o': ('wrist_roll', 1),       # Joint5 increase
+                        '-': ('gripper', -1),         # Joint6 decrease
+                        'p': ('gripper', 1),          # Joint6 increase
                     }
                     
-                    # 第一臂x,y坐标控制
+                    # First arm x,y coordinate control
                     arm1_xy_controls = {
-                        '8': ('x', -0.004),  # x减少
-                        'u': ('x', 0.004),   # x增加
-                        '9': ('y', -0.004),  # y减少
-                        'i': ('y', 0.004),   # y增加
+                        '8': ('x', -0.004),  # x decrease
+                        'u': ('x', 0.004),   # x increase
+                        '9': ('y', -0.004),  # y decrease
+                        'i': ('y', 0.004),   # y increase
                     }
                     
-                    # 第二臂控制映射: hbjnkml,;.'/
+                    # Second arm control mapping: hbjnkml,;.'/
                     arm2_joint_controls = {
-                        'h': ('shoulder_pan', -1),    # 关节1减少
-                        'b': ('shoulder_pan', 1),     # 关节1增加
-                        ';': ('wrist_roll', -1),      # 关节5减少
-                        'l': ('wrist_roll', 1),       # 关节5增加
-                        "'": ('gripper', -1),         # 关节6减少
-                        '/': ('gripper', 1),          # 关节6增加
+                        'h': ('shoulder_pan', -1),    # Joint1 decrease
+                        'b': ('shoulder_pan', 1),     # Joint1 increase
+                        ';': ('wrist_roll', -1),      # Joint5 decrease
+                        'l': ('wrist_roll', 1),       # Joint5 increase
+                        "'": ('gripper', -1),         # Joint6 decrease
+                        '/': ('gripper', 1),          # Joint6 increase
                     }
                     
-                    # 第二臂x,y坐标控制
+                    # Second arm x,y coordinate control
                     arm2_xy_controls = {
-                        'j': ('x', -0.004),  # x减少
-                        'n': ('x', 0.004),   # x增加
-                        'k': ('y', -0.004),  # y减少
-                        'm': ('y', 0.004),   # y增加
+                        'j': ('x', -0.004),  # x decrease
+                        'n': ('x', 0.004),   # x increase
+                        'k': ('y', -0.004),  # y decrease
+                        'm': ('y', 0.004),   # y increase
                     }
                     
-                    # 第一臂pitch控制
+                    # First arm pitch control
                     if key == '=':
                         pitch['arm1'] += pitch_step
-                        print(f"第一臂增加pitch调整: {pitch['arm1']:.3f}")
+                        print(f"First arm increase pitch adjustment: {pitch['arm1']:.3f}")
                     elif key == '[':
                         pitch['arm1'] -= pitch_step
-                        print(f"第一臂减少pitch调整: {pitch['arm1']:.3f}")
+                        print(f"First arm decrease pitch adjustment: {pitch['arm1']:.3f}")
                     
-                    # 第二臂pitch控制
+                    # Second arm pitch control
                     elif key == ',':
                         pitch['arm2'] += pitch_step
-                        print(f"第二臂增加pitch调整: {pitch['arm2']:.3f}")
+                        print(f"Second arm increase pitch adjustment: {pitch['arm2']:.3f}")
                     elif key == '.':
                         pitch['arm2'] -= pitch_step
-                        print(f"第二臂减少pitch调整: {pitch['arm2']:.3f}")
+                        print(f"Second arm decrease pitch adjustment: {pitch['arm2']:.3f}")
                     
-                    # 第一臂关节控制
+                    # First arm joint control
                     if key in arm1_joint_controls:
                         joint_name, delta = arm1_joint_controls[key]
                         if joint_name in target_positions['arm1']:
                             current_target = target_positions['arm1'][joint_name]
                             new_target = int(current_target + delta)
                             target_positions['arm1'][joint_name] = new_target
-                            print(f"第一臂更新目标位置 {joint_name}: {current_target} -> {new_target}")
+                            print(f"First arm update target position {joint_name}: {current_target} -> {new_target}")
                     
-                    # 第二臂关节控制
+                    # Second arm joint control
                     elif key in arm2_joint_controls:
                         joint_name, delta = arm2_joint_controls[key]
                         if joint_name in target_positions['arm2']:
                             current_target = target_positions['arm2'][joint_name]
                             new_target = int(current_target + delta)
                             target_positions['arm2'][joint_name] = new_target
-                            print(f"第二臂更新目标位置 {joint_name}: {current_target} -> {new_target}")
+                            print(f"Second arm update target position {joint_name}: {current_target} -> {new_target}")
                     
-                    # 第一臂xy控制
+                    # First arm xy control
                     elif key in arm1_xy_controls:
                         coord, delta = arm1_xy_controls[key]
                         if coord == 'x':
                             current_positions['arm1']['x'] += delta
-                            # 计算joint2和joint3的目标角度
+                            # Calculate target angles for joint2 and joint3
                             joint2_target, joint3_target = inverse_kinematics(current_positions['arm1']['x'], current_positions['arm1']['y'])
                             target_positions['arm1']['shoulder_lift'] = joint2_target
                             target_positions['arm1']['elbow_flex'] = joint3_target
-                            print(f"第一臂更新x坐标: {current_positions['arm1']['x']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
+                            print(f"First arm update x coordinate: {current_positions['arm1']['x']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
                         elif coord == 'y':
                             current_positions['arm1']['y'] += delta
-                            # 计算joint2和joint3的目标角度
+                            # Calculate target angles for joint2 and joint3
                             joint2_target, joint3_target = inverse_kinematics(current_positions['arm1']['x'], current_positions['arm1']['y'])
                             target_positions['arm1']['shoulder_lift'] = joint2_target
                             target_positions['arm1']['elbow_flex'] = joint3_target
-                            print(f"第一臂更新y坐标: {current_positions['arm1']['y']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
+                            print(f"First arm update y coordinate: {current_positions['arm1']['y']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
                     
-                    # 第二臂xy控制
+                    # Second arm xy control
                     elif key in arm2_xy_controls:
                         coord, delta = arm2_xy_controls[key]
                         if coord == 'x':
                             current_positions['arm2']['x'] += delta
-                            # 计算joint2和joint3的目标角度
+                            # Calculate target angles for joint2 and joint3
                             joint2_target, joint3_target = inverse_kinematics(current_positions['arm2']['x'], current_positions['arm2']['y'])
                             target_positions['arm2']['shoulder_lift'] = joint2_target
                             target_positions['arm2']['elbow_flex'] = joint3_target
-                            print(f"第二臂更新x坐标: {current_positions['arm2']['x']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
+                            print(f"Second arm update x coordinate: {current_positions['arm2']['x']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
                         elif coord == 'y':
                             current_positions['arm2']['y'] += delta
-                            # 计算joint2和joint3的目标角度
+                            # Calculate target angles for joint2 and joint3
                             joint2_target, joint3_target = inverse_kinematics(current_positions['arm2']['x'], current_positions['arm2']['y'])
                             target_positions['arm2']['shoulder_lift'] = joint2_target
                             target_positions['arm2']['elbow_flex'] = joint3_target
-                            print(f"第二臂更新y坐标: {current_positions['arm2']['y']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
+                            print(f"Second arm update y coordinate: {current_positions['arm2']['y']:.4f}, joint2={joint2_target:.3f}, joint3={joint3_target:.3f}")
             
-            # 对每个机械臂应用pitch调整到wrist_flex
+            # Apply pitch adjustment to wrist_flex for each robot arm
             for arm_name in ['arm1', 'arm2']:
                 if 'shoulder_lift' in target_positions[arm_name] and 'elbow_flex' in target_positions[arm_name]:
                     target_positions[arm_name]['wrist_flex'] = - target_positions[arm_name]['shoulder_lift'] - target_positions[arm_name]['elbow_flex'] + pitch[arm_name]
             
-            # 显示当前pitch值（每100步显示一次，避免刷屏）
+            # Display current pitch values (every 100 steps to avoid spam)
             if hasattr(p_control_loop, 'step_counter'):
                 p_control_loop.step_counter += 1
             else:
                 p_control_loop.step_counter = 0
             
             if p_control_loop.step_counter % 100 == 0:
-                print(f"当前pitch调整: arm1={pitch['arm1']:.3f}, arm2={pitch['arm2']:.3f}")
+                print(f"Current pitch adjustment: arm1={pitch['arm1']:.3f}, arm2={pitch['arm2']:.3f}")
             
-            # 获取当前所有机器人状态
+            # Get current states of all robots
             current_obs = {}
             current_joint_positions = {}
             for arm_name, robot in robots.items():
@@ -415,11 +415,11 @@ def p_control_loop(robots, keyboard, target_positions, start_positions, current_
                 for key, value in current_obs[arm_name].items():
                     if key.endswith('.pos'):
                         motor_name = key.removesuffix('.pos')
-                        # 应用校准系数
+                        # Apply calibration coefficients
                         calibrated_value = apply_joint_calibration(motor_name, value)
                         current_joint_positions[arm_name][motor_name] = calibrated_value
             
-            # 对每个机械臂进行P控制计算
+            # Perform P control calculation for each robot arm
             for arm_name, robot in robots.items():
                 robot_action = {}
                 for joint_name, target_pos in target_positions[arm_name].items():
@@ -427,45 +427,45 @@ def p_control_loop(robots, keyboard, target_positions, start_positions, current_
                         current_pos = current_joint_positions[arm_name][joint_name]
                         error = target_pos - current_pos
                         
-                        # P控制: 输出 = Kp * 误差
+                        # P control: output = Kp * error
                         control_output = kp * error
                         
-                        # 将控制输出转换为位置命令
+                        # Convert control output to position command
                         new_position = current_pos + control_output
                         robot_action[f"{joint_name}.pos"] = new_position
                 
-                # 发送动作到机器人
+                # Send action to robot
                 if robot_action:
                     robot.send_action(robot_action)
             
             time.sleep(control_period)
             
         except KeyboardInterrupt:
-            print("用户中断程序")
+            print("User interrupted program")
             break
         except Exception as e:
-            print(f"P控制循环出错: {e}")
+            print(f"P control loop error: {e}")
             traceback.print_exc()
             break
 
 def main():
-    """主函数"""
-    print("LeRobot 双臂键盘控制示例 (P控制)")
+    """Main function"""
+    print("LeRobot Dual-arm Keyboard Control Example (P Control)")
     print("="*50)
     
     try:
-        # 导入必要的模块
+        # Import necessary modules
         from lerobot.robots.so100_follower import SO100Follower, SO100FollowerConfig
         from lerobot.teleoperators.keyboard import KeyboardTeleop, KeyboardTeleopConfig
         
-        # 配置双臂机器人
+        # Configure dual-arm robots
         arm1_port = "/dev/ttyACM0"
         arm2_port = "/dev/ttyACM1"
         
-        print(f"配置第一臂: {arm1_port}")  
-        print(f"配置第二臂: {arm2_port}")
+        print(f"Configuring first arm: {arm1_port}")  
+        print(f"Configuring second arm: {arm2_port}")
         
-        # 创建双臂机器人实例
+        # Create dual-arm robot instances
         arm1_config = SO100FollowerConfig(port=arm1_port)
         arm2_config = SO100FollowerConfig(port=arm2_port)
         
@@ -477,38 +477,38 @@ def main():
             'arm2': arm2_robot
         }
         
-        # 配置键盘
+        # Configure keyboard
         keyboard_config = KeyboardTeleopConfig()
         keyboard = KeyboardTeleop(keyboard_config)
         
-        # 连接设备
-        print("正在连接第一臂...")
+        # Connect devices
+        print("Connecting first arm...")
         arm1_robot.connect()
-        print("正在连接第二臂...")
+        print("Connecting second arm...")
         arm2_robot.connect()
-        print("正在连接键盘...")
+        print("Connecting keyboard...")
         keyboard.connect()
         
-        print("所有设备连接成功！")
+        print("All devices connected successfully!")
         
-        # 询问是否重新校准
+        # Ask whether to recalibrate
         while True:
-            calibrate_choice = input("是否重新校准机器人? (y/n): ").strip().lower()
-            if calibrate_choice in ['y', 'yes', '是']:
-                print("开始重新校准双臂...")
+            calibrate_choice = input("Do you want to recalibrate the robots? (y/n): ").strip().lower()
+            if calibrate_choice in ['y', 'yes']:
+                print("Starting recalibration of dual arms...")
                 for arm_name, robot in robots.items():
-                    print(f"正在校准{arm_name}...")
+                    print(f"Calibrating {arm_name}...")
                     robot.calibrate()
-                print("双臂校准完成！")
+                print("Dual arm calibration completed!")
                 break
-            elif calibrate_choice in ['n', 'no', '否']:
-                print("使用之前的校准文件")
+            elif calibrate_choice in ['n', 'no']:
+                print("Using previous calibration files")
                 break
             else:
-                print("请输入 y 或 n")
+                print("Please enter y or n")
         
-        # 读取起始关节角度
-        print("读取双臂起始关节角度...")
+        # Read starting joint angles
+        print("Reading dual arm starting joint angles...")
         start_positions = {}
         for arm_name, robot in robots.items():
             start_obs = robot.get_observation()
@@ -516,18 +516,18 @@ def main():
             for key, value in start_obs.items():
                 if key.endswith('.pos'):
                     motor_name = key.removesuffix('.pos')
-                    start_positions[arm_name][motor_name] = int(value)  # 不应用校准系数
+                    start_positions[arm_name][motor_name] = int(value)  # Don't apply calibration coefficients
         
-        print("双臂起始关节角度:")
+        print("Dual arm starting joint angles:")
         for arm_name, positions in start_positions.items():
             print(f"{arm_name}:")
             for joint_name, position in positions.items():
                 print(f"  {joint_name}: {position}°")
         
-        # 移动到零位置
+        # Move to zero position
         move_to_zero_position(robots, duration=3.0)
         
-        # 初始化双臂目标位置为当前位置（整数）
+        # Initialize dual arm target positions to current position (integer)
         target_positions = {
             'arm1': {
                 'shoulder_pan': 0.0,
@@ -547,55 +547,55 @@ def main():
             }
         }
         
-        # 初始化双臂x,y坐标控制
+        # Initialize dual arm x,y coordinate control
         x0, y0 = 0.1629, 0.1131
         current_positions = {
             'arm1': {'x': x0, 'y': y0},
             'arm2': {'x': x0, 'y': y0}
         }
-        print(f"初始化双臂末端执行器位置: arm1=({x0:.4f}, {y0:.4f}), arm2=({x0:.4f}, {y0:.4f})")
+        print(f"Initialize dual arm end effector positions: arm1=({x0:.4f}, {y0:.4f}), arm2=({x0:.4f}, {y0:.4f})")
         
         
-        print("双臂键盘控制说明:")
-        print("第一臂控制 (7y8u9i0o-p=[):")
-        print("- 7/y: 关节1 (shoulder_pan) 减少/增加")
-        print("- 8/u: 控制末端执行器x坐标 (joint2+3)")
-        print("- 9/i: 控制末端执行器y坐标 (joint2+3)")
-        print("- =/[: pitch调整 增加/减少 (影响wrist_flex)")
-        print("- 0/o: 关节5 (wrist_roll) 减少/增加")
-        print("- -/p: 关节6 (gripper) 减少/增加")
+        print("Dual arm keyboard control instructions:")
+        print("First arm control (7y8u9i0o-p=[):")
+        print("- 7/y: Joint1 (shoulder_pan) decrease/increase")
+        print("- 8/u: Control end effector x coordinate (joint2+3)")
+        print("- 9/i: Control end effector y coordinate (joint2+3)")
+        print("- =/[: Pitch adjustment increase/decrease (affects wrist_flex)")
+        print("- 0/o: Joint5 (wrist_roll) decrease/increase")
+        print("- -/p: Joint6 (gripper) decrease/increase")
         print("")
-        print("第二臂控制 (hbjnkml,;.'/):")
-        print("- h/b: 关节1 (shoulder_pan) 减少/增加")
-        print("- j/n: 控制末端执行器x坐标 (joint2+3)")
-        print("- k/m: 控制末端执行器y坐标 (joint2+3)")
-        print("- ,/.: pitch调整 增加/减少 (影响wrist_flex)")
-        print("- ;/l: 关节5 (wrist_roll) 减少/增加")
-        print("- '/: 关节6 (gripper) 减少/增加")
+        print("Second arm control (hbjnkml,;.'/):")
+        print("- h/b: Joint1 (shoulder_pan) decrease/increase")
+        print("- j/n: Control end effector x coordinate (joint2+3)")
+        print("- k/m: Control end effector y coordinate (joint2+3)")
+        print("- ,/.: Pitch adjustment increase/decrease (affects wrist_flex)")
+        print("- ;/l: Joint5 (wrist_roll) decrease/increase")
+        print("- '/: Joint6 (gripper) decrease/increase")
         print("")
-        print("- X: 退出程序（先回到起始位置）")
-        print("- ESC: 退出程序")
+        print("- X: Exit program (return to start position first)")
+        print("- ESC: Exit program")
         print("="*50)
-        print("注意: 双臂机器人会持续移动到目标位置")
+        print("Note: Dual arm robots will continuously move to target positions")
         
-        # 开始P控制循环
+        # Start P control loop
         p_control_loop(robots, keyboard, target_positions, start_positions, current_positions, kp=0.5, control_freq=50)
         
-        # 断开连接
+        # Disconnect
         for arm_name, robot in robots.items():
-            print(f"正在断开{arm_name}...")
+            print(f"Disconnecting {arm_name}...")
             robot.disconnect()
         keyboard.disconnect()
-        print("程序结束")
+        print("Program ended")
         
     except Exception as e:
-        print(f"程序执行失败: {e}")
+        print(f"Program execution failed: {e}")
         traceback.print_exc()
-        print("请检查:")
-        print("1. 机器人是否正确连接")
-        print("2. USB端口是否正确")
-        print("3. 是否有足够的权限访问USB设备")
-        print("4. 机器人是否已正确配置")
+        print("Please check:")
+        print("1. Are the robots properly connected")
+        print("2. Are the USB ports correct")
+        print("3. Do you have sufficient permissions to access USB devices")
+        print("4. Are the robots properly configured")
 
 if __name__ == "__main__":
     main() 
