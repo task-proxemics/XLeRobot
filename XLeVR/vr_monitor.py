@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-VR Monitor - 独立的VR控制信息监控脚本
-可以在其他文件夹中调用xlevr的VR功能并读取打印VR控制信息
+VR Monitor - Independent VR control information monitoring script
+Can call XLeVR's VR functionality from other folders and read/print VR control information
 """
 
 import os
@@ -16,19 +16,19 @@ import socket
 from pathlib import Path
 from typing import Optional
 
-# 设置xlevr文件夹的绝对路径
+# Set the absolute path to the xlevr folder
 XLEVR_PATH = "/home/vec/lerobot/new/XLeVR"
 
 def setup_xlevr_environment():
-    """设置xlevr环境"""
-    # 添加xlevr路径到Python路径
+    """Setup xlevr environment"""
+    # Add xlevr path to Python path
     if XLEVR_PATH not in sys.path:
         sys.path.insert(0, XLEVR_PATH)
     
-    # 设置工作目录
+    # Set working directory
     os.chdir(XLEVR_PATH)
     
-    # 设置环境变量
+    # Set environment variables
     os.environ['PYTHONPATH'] = f"{XLEVR_PATH}:{os.environ.get('PYTHONPATH', '')}"
 
 def get_local_ip():
@@ -47,7 +47,7 @@ def get_local_ip():
             return "localhost"
 
 def import_xlevr_modules():
-    """导入xlevr模块"""
+    """Import xlevr modules"""
     try:
         from xlevr.config import XLeVRConfig
         from xlevr.inputs.vr_ws_server import VRWebSocketServer
@@ -59,7 +59,7 @@ def import_xlevr_modules():
         return None, None, None, None
 
 class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
-    """简化的HTTP请求处理器，只提供基本的网页服务"""
+    """Simplified HTTP request handler, only provides basic web services"""
     
     def end_headers(self):
         """Add CORS headers to all responses."""
@@ -122,7 +122,7 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
             self.send_error(500, "Internal server error")
 
 class SimpleHTTPSServer:
-    """简化的HTTPS服务器，用于提供网页界面"""
+    """Simplified HTTPS server for providing web interface"""
     
     def __init__(self, config):
         self.config = config
@@ -163,7 +163,7 @@ class SimpleHTTPSServer:
             print("🌐 HTTPS server stopped")
 
 class VRMonitor:
-    """VR控制信息监控器"""
+    """VR control information monitor"""
     
     def __init__(self):
         self.config = None
@@ -171,45 +171,45 @@ class VRMonitor:
         self.https_server = None
         self.is_running = False
         self.latest_goal = None  # Store the latest goal
-        self.left_goal = None    # 分别保存左右控制器的goal
+        self.left_goal = None    # Store left and right controller goals separately
         self.right_goal = None
-        self.headset_goal = None  # 添加头部goal
-        self._goal_lock = threading.Lock()  # 添加线程锁
+        self.headset_goal = None  # Add headset goal
+        self._goal_lock = threading.Lock()  # Add thread lock
     
     def initialize(self):
-        """初始化VR监控器"""
+        """Initialize VR monitor"""
         print("🔧 Initializing XLeVR Monitor...")
         
-        # 设置环境
+        # Setup environment
         setup_xlevr_environment()
         
-        # 导入模块
+        # Import modules
         XLeVRConfig, VRWebSocketServer, ControlGoal, ControlMode = import_xlevr_modules()
         if XLeVRConfig is None:
             print("❌ Failed to import xlevr modules")
             return False
         
-        # 创建配置
+        # Create configuration
         self.config = XLeVRConfig()
         self.config.enable_vr = True
         self.config.enable_keyboard = False
-        self.config.enable_https = True  # 启用HTTPS服务器，VR需要网页界面
+        self.config.enable_https = True  # Enable HTTPS server, VR requires web interface
         
-        # 创建命令队列
+        # Create command queue
         self.command_queue = asyncio.Queue()
         
-        # 创建VR服务器（print-only模式）
+        # Create VR server (print-only mode)
         try:
             self.vr_server = VRWebSocketServer(
                 command_queue=self.command_queue,
                 config=self.config,
-                print_only=False  # 改为False，让数据发送到队列
+                print_only=False  # Changed to False to send data to queue
             )
         except Exception as e:
             print(f"❌ Failed to create VR WebSocket server: {e}")
             return False
         
-        # 创建HTTPS服务器
+        # Create HTTPS server
         try:
             self.https_server = SimpleHTTPSServer(self.config)
         except Exception as e:
@@ -221,7 +221,7 @@ class VRMonitor:
         return True
     
     async def start_monitoring(self):
-        """开始监控VR控制信息"""
+        """Start monitoring VR control information"""
         print("🚀 Starting VR Monitor...")
         
         if not self.initialize():
@@ -229,23 +229,23 @@ class VRMonitor:
             return
         
         try:
-            # 启动HTTPS服务器
+            # Start HTTPS server
             await self.https_server.start()
             
-            # 启动VR服务器
+            # Start VR server
             await self.vr_server.start()
             
             self.is_running = True
             print("✅ VR Monitor is now running")
             
-            # 显示连接信息
+            # Display connection information
             host_display = get_local_ip() if self.config.host_ip == "0.0.0.0" else self.config.host_ip
             print(f"📱 Open your VR headset browser and navigate to:")
             print(f"   https://{host_display}:{self.config.https_port}")
             print("🎯 Press Ctrl+C to stop monitoring")
             print()
             
-            # 监控命令队列
+            # Monitor command queue
             await self.monitor_commands()
             
         except KeyboardInterrupt:
@@ -258,28 +258,28 @@ class VRMonitor:
             await self.stop_monitoring()
     
     async def monitor_commands(self):
-        """监控来自VR控制器的命令"""
+        """Monitor commands from VR controllers"""
         print("📊 Monitoring VR control commands...")
         
         while self.is_running:
             try:
-                # 等待命令，超时1秒
+                # Wait for command with 1-second timeout
                 goal = await asyncio.wait_for(self.command_queue.get(), timeout=1.0)
                 
-                # 根据arm分别保存goal
+                # Save goal by arm type
                 with self._goal_lock:
                     if goal.arm == "left":
                         self.left_goal = goal
                     elif goal.arm == "right":
                         self.right_goal = goal
-                    elif goal.arm == "headset":  # 添加头部数据处理
+                    elif goal.arm == "headset":  # Add headset data processing
                         self.headset_goal = goal
                     
-                    # 保持向后兼容，保存最新的goal
+                    # Maintain backward compatibility, save latest goal
                     self.latest_goal = goal
                 
             except asyncio.TimeoutError:
-                # 超时，继续循环
+                # Timeout, continue loop
                 continue
             except Exception as e:
                 print(f"❌ Error processing command: {e}")
@@ -287,7 +287,7 @@ class VRMonitor:
                 print(f"Traceback: {traceback.format_exc()}")
     
     def print_control_goal(self, goal):
-        """打印控制目标信息"""
+        """Print control goal information"""
         print(f"\n🎮 Control Goal Received:")
         print(f"   Timestamp: {asyncio.get_event_loop().time():.3f}")
         print(f"   Arm: {goal.arm}")
@@ -326,17 +326,17 @@ class VRMonitor:
                 return self.left_goal
             elif arm == "right":
                 return self.right_goal
-            elif arm == "headset":  # 添加头部数据获取
+            elif arm == "headset":  # Add headset data retrieval
                 return self.headset_goal
             else:
-                # 返回包含左右两个控制器的字典
+                # Return dictionary containing both left and right controllers
                 dual_goals = {
                     "left": self.left_goal,
                     "right": self.right_goal,
-                    "headset": self.headset_goal,  # 添加头部数据
+                    "headset": self.headset_goal,  # Add headset data
                     "has_left": self.left_goal is not None,
                     "has_right": self.right_goal is not None,
-                    "has_headset": self.headset_goal is not None  # 添加头部状态
+                    "has_headset": self.headset_goal is not None  # Add headset status
                 }
                 
                 return dual_goals
@@ -350,7 +350,7 @@ class VRMonitor:
         return self.get_latest_goal_nowait("right")
     
     async def stop_monitoring(self):
-        """停止监控"""
+        """Stop monitoring"""
         self.is_running = False
         
         if self.vr_server:
@@ -362,20 +362,20 @@ class VRMonitor:
         print("✅ VR Monitor stopped")
 
 def main():
-    """主函数"""
+    """Main function"""
     print("🎮 XLeVR Monitor - XLeVR VR Control Information Monitor")
     print("=" * 60)
     
-    # 检查telegrip路径
+    # Check XLeVR path
     if not os.path.exists(XLEVR_PATH):
         print(f"❌ XLeVR path does not exist: {XLEVR_PATH}")
         print("Please update XLEVR_PATH in the script")
         return
     
-    # 创建监控器
+    # Create monitor
     monitor = VRMonitor()
     
-    # 运行监控
+    # Run monitoring
     try:
         asyncio.run(monitor.start_monitoring())
     except KeyboardInterrupt:
