@@ -43,18 +43,22 @@
 
 ---
 
-<video width="100%" style="max-width: 100%;" controls>
-  <source src="_static/videos/Sim_demos/XLeRobot_0_2_3.mp4" type="video/mp4">
+
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ## Updates
 
-- **2025.7.14**: XLeRobot 0.2.3 (**XLeVR**) out! **VR Quest 3 whole-body control system**. Captures all inputs: poses, joysticks, buttons. Web-based, minimal dependencies. Modular for different robots. Open-source with quick 20min setup.
 
-- **2025.7.8**: **Complete simulation** with full support for the new XLeRobot hardware and 3 cameras (2 hand RGB + 1 head RGBD), along with urdf files, keyboard EE control scripts, and tutorials that can get you started in 10 min.
+- **2025.07.30**: XLeRobot 0.2.5 out! [Control XLeRobot](https://xlerobot.readthedocs.io/en/latest/software/index.html) in real life with an Xbox controller in the wild anywhere. No wifi needed and zero latency.
 
-- **2025.6.14**: The hardware setup for XLeRobot 0.2.0 is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with 960$ cost.
+- **2025.07.14**: XLeRobot 0.2.3 (**XLeVR**) out! **VR Quest 3 whole-body control system**. Captures all inputs: poses, joysticks, buttons. Web-based, minimal dependencies. Modular for different robots. Open-source with quick 20min setup.
+
+- **2025.07.08**: **Complete simulation** with full support for the new XLeRobot hardware and 3 cameras (2 hand RGB + 1 head RGBD), along with urdf files, keyboard EE control scripts, and tutorials that can get you started in 10 min.
+
+- **2025.06.14**: The hardware setup for XLeRobot 0.2.0 is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with 960$ cost.
 
 ---
 
