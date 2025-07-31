@@ -25,7 +25,7 @@
 
 ![image](https://github.com/user-attachments/assets/7ca4650f-7cea-4c0f-9001-fd6b1349104c)
 
-
+中文版测试测试
 ## Intro
 
 **🚀 Bring Embodied AI to Every Family Around the World! Cheaper than iPhone📱!**
