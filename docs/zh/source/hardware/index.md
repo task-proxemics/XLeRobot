@@ -1,39 +1,39 @@
-# Hardware
+# 硬件
 
-## 🚀 Get Started 🚀
+## 🚀 开始使用 🚀
 
-> I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
+> 我自己也是硬件新手，所以我想让这个教程对所有同为初学者的朋友友好。
 
-##### [🛒 Bill of Material](getting_started/material)
+##### [🛒 材料清单](getting_started/material)
 
-##### [🖨️ 3D Printing](getting_started/3d)
+##### [🖨️ 3D打印](getting_started/3d)
 
-##### [🔨 Assembly](getting_started/assemble)
+##### [🔨 组装](getting_started/assemble)
 
-##### [🛠️ Hardware Intro](hardware_intro/index)
+##### [🛠️ 硬件介绍](hardware_intro/index)
 
 ---
 
-## 💵 Total Cost 💵
+## 💵 总成本 💵
 
-> Cost excludes 3D printing, tools, shipping, and taxes.
+> 成本不包括3D打印、工具、运输和税费。
 > 
 
-| Price | US | EU | CN |
+| 价格 | 美国 | 欧盟 | 中国 |
 | --- | --- | --- | --- |
-| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥4000** |
-| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
-| **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
+| **基础版** (无树莓派，使用自己的笔记本电脑) | **~$660** | **~€680** | **~¥4000** |
+| **标准版** (网络摄像头RGB头部相机) | **~$750** | **~€770** | **~¥4500** |
+| **专业版** (RealSense RGB-D头部相机) | **~$960** | **~€980** | **~¥6000** |
 
 ```{toctree}
-:caption: Get started
+:caption: 开始使用
 getting_started/material
 getting_started/3d
 getting_started/assemble
 ```
 
 ```{toctree}
-:caption: Hardware Intro
+:caption: 硬件介绍
 hardware_intro/index
 ```
 

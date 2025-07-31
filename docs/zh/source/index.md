@@ -25,137 +25,132 @@
 
 ![image](https://github.com/user-attachments/assets/7ca4650f-7cea-4c0f-9001-fd6b1349104c)
 
-中文版测试测试
-## Intro
+## 介绍
 
-**🚀 Bring Embodied AI to Every Family Around the World! Cheaper than iPhone📱!**
+**🚀 让具身AI走向全世界每个家庭！比iPhone还便宜📱！**
 
-**⏰ <4hrs total assembly time**
+**⏰ <4小时总组装时间**
 
 
-| Price | US | EU | CN |
+| 价格 | 美国 | 欧盟 | 中国 |
 | --- | --- | --- | --- |
-| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥4000** |
-| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
-| **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
+| **基础版** (无树莓派，使用自己的笔记本电脑) | **~$660** | **~€680** | **~¥4000** |
+| **标准版** (网络摄像头RGB头部相机) | **~$750** | **~€770** | **~¥4500** |
+| **专业版** (RealSense RGB-D头部相机) | **~$960** | **~€980** | **~¥6000** |
 
-*Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
+*站在巨人的肩膀上: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
-
 
 <video width="100%" controls>
   <source src="./_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## Updates
+## 更新
 
 
-- **2025.07.30**: XLeRobot 0.2.5 out! [Control XLeRobot](https://xlerobot.readthedocs.io/en/latest/software/index.html) in real life with an Xbox controller in the wild anywhere. No wifi needed and zero latency.
+- **2025.07.30**: XLeRobot 0.2.5 发布！[控制XLeRobot](https://xlerobot.readthedocs.io/en/latest/software/index.html) 在野外的真实环境中使用Xbox控制器。无需wifi，零延迟。
 
-- **2025.07.14**: XLeRobot 0.2.3 (**XLeVR**) out! **VR Quest 3 whole-body control system**. Captures all inputs: poses, joysticks, buttons. Web-based, minimal dependencies. Modular for different robots. Open-source with quick 20min setup.
+- **2025.07.14**: XLeRobot 0.2.3 (**XLeVR**) 发布！**VR Quest 3 全身控制系统**。捕获所有输入：姿态、摇杆、按钮。基于网页，最少依赖。模块化设计适配不同机器人。开源，20分钟快速设置。
 
-- **2025.07.08**: **Complete simulation** with full support for the new XLeRobot hardware and 3 cameras (2 hand RGB + 1 head RGBD), along with urdf files, keyboard EE control scripts, and tutorials that can get you started in 10 min.
+- **2025.07.08**: **完整仿真**，全面支持新的XLeRobot硬件和3个摄像头（2个手部RGB + 1个头部RGB-D），配有urdf文件、键盘末端控制脚本和教程，让您能在10分钟内开始使用。
 
-- **2025.06.14**: The hardware setup for XLeRobot 0.2.0 is officially out! This is the 1st official hardware version that is fully capable for autonomous household tasks, with 960$ cost.
+- **2025.06.14**: XLeRobot 0.2.0的硬件设置正式发布！这是第一个官方硬件版本，完全具备自主家务任务能力，成本为960美元。
 
 ---
 
-## 🌟 Why XLeRobot? 🌟
+## 🌟 为什么选择XLeRobot？ 🌟
 
 <video width="100%" style="max-width: 100%;" controls>
   <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-Let's break this down since **XLeRobot = XL + LeRobot**
+让我们来分解一下，因为 **XLeRobot = XL + LeRobot**
 
-### Why "LeRobot" Core?
+### 为什么选择"LeRobot"核心？
 
-- **Cheap Materials** 💴: 90% 3D printed components with affordable motors and electronics.
-- **Easy Assembly** 🔨: 67 minutes to assemble 2 SO101 arms and configure motors.
-- **Plug-&-Play** 🧩: Get robots running with simple pip install and a few lines of code.
-- **Thriving LeRobot Community** 🌍:
-World's largest low-cost robotics community featuring
-    - Multiple [state-of-the-art pretrained AI models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
-    - 7000+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
+- **廉价材料** 💴: 90%的3D打印组件，配合经济实惠的电机和电子元件。
+- **简易组装** 🔨: 67分钟即可组装2个SO101手臂并配置电机。
+- **即插即用** 🧩: 通过简单的pip安装和几行代码让机器人运行起来。
+- **蓬勃发展的LeRobot社区** 🌍:
+世界上最大的低成本机器人社区，特色包括
+    - 多个[最先进的预训练AI模型🧠](https://huggingface.co/lerobot)、数据集📊和工具🔨，随时可以部署。
+    - 7000+聪明才智的头脑进行头脑风暴和讨论🧑‍🤝‍🧑。
 
-
-
-
-### Why "XL" Enhancement?
+### 为什么需要"XL"增强？
 
 ![image](https://github.com/user-attachments/assets/b48a0a41-7422-4f10-8dc6-a66a2fd746ad)
 
-- 🏠 The field/market lacks affordable, stable, dual-arm home robots that match LeRobot's ease of assembly.
-- 🖨️ Traditional 3D printed chassis suffer from limited durability, stability, and load capacity—making them impractical for daily use.
-- ⚡ DIY mobile robots face power supply challenges, leading to complex wiring setups.
-- 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO-100/SO-101 configuration, enabling seamless code and policy transfer.
+- 🏠 该领域/市场缺乏价格合理、稳定的双臂家用机器人，能够与LeRobot的简易组装相匹配。
+- 🖨️ 传统3D打印底盘耐久性、稳定性和负载能力有限——使其不适合日常使用。
+- ⚡ DIY移动机器人面临电源供应挑战，导致复杂的接线设置。
+- 🤖 **XLeRobot**保持与LeRobot社区的桌面双臂SO-100/SO-101配置的兼容性，实现代码和策略的无缝转移。
 
-### Overall Advantages/Goals of XLeRobot
+### XLeRobot的整体优势/目标
 
 ![image](https://github.com/user-attachments/assets/3feb1bc5-8f2b-489e-9dbf-841153ff222e)
 
 
-- **Cost-effective** 💴: Complete build costs \$660, or upgrade from existing SO100Arm and Lekiwi for \$250.
-- **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO-100/SO-101**
-    - Hardware: No motor ID changes or hardware modifications needed
-    - Software: Identical tabletop single-arm/dual-arm setup—transfer your trained policies directly from SO-100/SO-101 arm
-- **Practical and reliable** 💪: Performs many daily tasks comparable to $20,000 market alternatives.
-    - More tasks demonstrated in the LeRobot hackathon in [Shenzhen](https://www.youtube.com/watch?v=_r9v04Rc3xA&ab_channel=SeeedStudio), [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [San Jose](https://www.youtube.com/watch?v=QvzhsDliGII&ab_channel=SeeedStudio)([Winners](https://www.hackster.io/contests/embodiedAI#winners)), and the [first one](https://www.youtube.com/watch?v=i3D94400vq0&ab_channel=HuggingFace).
-    - **Note**: Not currently designed for in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements 🏃
-- **Rich open-source resources** 📕
-    - LeRobot's plug-and-play code🧩 and extensive AI model library🧠
-    - Backed by an active, growing community of contributors🧑‍🤝‍🧑
-- **⚠️Safety always matters⚠️**: XLeRobot has inherent physical hardware limitations (low-torque motors, short arm length, wheel-based) that make it physically almost incapable of harming humans, while still maintaining its ability to perform many household tasks.
-    - **Low-torque motors**🦾: Even in the case of accidental contact, the robot is highly unlikely to cause injury. Additionally, its torque limitations prevent it from performing high-speed, dynamic movements.
-    - **Short arm length**🦵: In the unlikely event that it's holding a sharp object, the robot can be quickly disabled by tipping over the IKEA cart.
-    - **Wheel-based**🧑‍🦼‍➡️: It cannot climb over obstacles higher than 10cm, so you can easily restrict its movement using blocks or stairs in case of unauthorized access attempts.
+- **经济实惠** 💴: 完整构建成本$660，或者从现有SO100Arm和Lekiwi升级仅需$250。
+- **轻松升级** ⏫ (物理和电气)对于**Lekiwi**和**SO-100/SO-101**
+    - 硬件：无需更改电机ID或硬件修改
+    - 软件：与桌面单臂/双臂设置相同——直接从SO-100/SO-101手臂转移您训练好的策略
+- **实用可靠** 💪: 执行许多日常任务，可与市场上$20,000的替代品相媲美。
+    - 更多任务在LeRobot黑客马拉松中展示，包括[深圳](https://www.youtube.com/watch?v=_r9v04Rc3xA&ab_channel=SeeedStudio)、[上海](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio)和[圣何塞](https://www.youtube.com/watch?v=QvzhsDliGII&ab_channel=SeeedStudio)([获奖者](https://www.hackster.io/contests/embodiedAI#winners))，以及[第一个](https://www.youtube.com/watch?v=i3D94400vq0&ab_channel=HuggingFace)。
+    - **注意**：目前不适用于手内灵巧操作🤹、重物提升(每臂超过1kg)🏋️或高度动态运动🏃
+- **丰富的开源资源** 📕
+    - LeRobot的即插即用代码🧩和广泛的AI模型库🧠
+    - 由活跃、不断增长的贡献者社区支持🧑‍🤝‍🧑
+- **⚠️安全始终重要⚠️**: XLeRobot具有固有的物理硬件限制(低扭矩电机、短臂长、轮式基础)，使其几乎不可能伤害人类，同时仍然保持执行许多家庭任务的能力。
+    - **低扭矩电机**🦾: 即使在意外接触的情况下，机器人也极不可能造成伤害。此外，其扭矩限制防止其执行高速、动态运动。
+    - **短臂长**🦵: 在不太可能的情况下，如果它持有尖锐物体，可以通过翻倒宜家推车快速禁用机器人。
+    - **轮式基础**🧑‍🦼‍➡️: 它无法爬过高于10cm的障碍物，所以在未授权访问尝试的情况下，您可以使用障碍物或楼梯轻松限制其移动。
 
-These👆 are staged photos, but they demonstrate what the XLeRobot platform can achieve within its hardware limitations. (The scenes are a bit messy, but hey, that's life!)
-
----
-
-## 🎯 Who is XLeRobot For?
-
-- 🚀 **Startups & Labs**: Build prototypes faster with the world's cheapest modular platform
-- 👩🔬 **Self Researchers**: Experiment with embodied AI without breaking the bank 💸
-- 🎓 **Education Heroes**:
-    - High School Teachers: Bring cutting-edge robotics to STEM classes 🧪
-    - University Professors: Affordable platform for robotics/AI courses 📚
-    - Students: From beginners to researchers 🎒→🎓
-- 🤖 **DIY Enthusiasts**: Perfect for indoor projects - plant care, delivery bots, home automation 🌱📦
+这些👆是摆拍照片，但它们展示了XLeRobot平台在其硬件限制内可以实现的功能。(场景有点凌乱，但嘿，这就是生活！)
 
 ---
 
-## Limitations
+## 🎯 XLeRobot适合谁？
 
-(Hey, for this price, what more could you ask for?)
-
-- 🔒 Fixed height—adding a stable lifting platform would significantly increase costs and assembly difficulty
-- 📏 Smaller workspace compared to Aloha—while we maximize the SO100 workspace, the arm has size limitations, though XLeRobot still handles most tasks effectively
-- ⚖️ Limited payload capacity for a single arm—that's why we use the IKEA cart
-- 🛒 Base movement precision may be affected by the IKEA cart wheels—this can be addressed through closed-loop feedback control
-
-All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as one of the most compelling low-cost robot for indoor application!
-
----
-
-## Main Contributors
-
-- [Me](https://vector-wangel.github.io/).
-- Yuesong Wang: Mujoco simulation
-
-This is just a small brick in the pyramid, made possible by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks to all the talented contributors behind these detailed and professional projects.
-
-Looking forward to collaborating with anyone interested in contributing to this project!
+- 🚀 **初创公司和实验室**: 使用世界上最便宜的模块化平台更快地构建原型
+- 👩🔬 **自研人员**: 在不破产的情况下实验具身AI 💸
+- 🎓 **教育英雄**:
+    - 高中教师: 将前沿机器人技术带入STEM课堂 🧪
+    - 大学教授: 机器人/AI课程的经济实惠平台 📚
+    - 学生: 从初学者到研究人员 🎒→🎓
+- 🤖 **DIY爱好者**: 完美适合室内项目 - 植物护理、递送机器人、家庭自动化 🌱📦
 
 ---
 
-## Citation
+## 局限性
 
-If you want, you can cite this work with:
+(嘿，这个价格，还要什么自行车？)
+
+- 🔒 固定高度——添加稳定的升降平台将显著增加成本和组装难度
+- 📏 与Aloha相比工作空间较小——虽然我们最大化了SO100的工作空间，但手臂有尺寸限制，不过XLeRobot仍能有效处理大多数任务
+- ⚖️ 单臂负载能力有限——这就是为什么我们使用宜家推车
+- 🛒 底座移动精度可能受到宜家推车轮子的影响——这可以通过闭环反馈控制解决
+
+综合考虑——成本、社区支持、组装便捷性和实用性——XLeRobot脱颖而出，成为室内应用最具吸引力的低成本机器人之一！
+
+---
+
+## 主要贡献者
+
+- [我](https://vector-wangel.github.io/)。
+- 王跃嵩: Mujoco仿真
+
+这只是金字塔中的一小块砖，由[LeRobot](https://github.com/huggingface/lerobot)、[SO-100](https://github.com/TheRobotStudio/SO-ARM100)、[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi)和[Bambot](https://github.com/timqian/bambot)共同实现。感谢这些详细且专业项目背后所有才华横溢的贡献者。
+
+期待与任何有兴趣为该项目做出贡献的人合作！
+
+---
+
+## 引用
+
+如果您愿意，可以使用以下方式引用本工作：
 
 ```
 @misc{wang2025xlerobot,
@@ -169,9 +164,9 @@ If you want, you can cite this work with:
 
 ---
 
-## 🪧 Disclaimer 🪧
+## 🪧 免责声明 🪧
 
-> If you build, buy, or develop a XLeRobot based on this repo, you will be fully responsible for all the physical and mental damages it does to you or others.
+> 如果您基于此仓库构建、购买或开发XLeRobot，您将对其对您或他人造成的所有物理和精神损害负全部责任。
 >
 
 ---

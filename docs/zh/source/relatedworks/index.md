@@ -1,17 +1,16 @@
-# Related Works
+# 相关工作
 
-🤗Here are all the works, both from robotics research and from the LeRobot community, that I found interesting, meaningful, and have potential for future applications on XLeRobot.
+🤗这里收录了所有我发现有趣、有意义且对XLeRobot未来应用有潜力的工作，包括机器人研究和LeRobot社区的作品。
 
-## Blogs
+## 博客
 
-[Analytical IK for SO101](https://vectorwang.notion.site/Analytical-IK-for-SO101-20abb280f59380d288bcdd398ffbfab1?pvs=25)
+[SO101解析逆运动学](https://vectorwang.notion.site/Analytical-IK-for-SO101-20abb280f59380d288bcdd398ffbfab1?pvs=25)
 
+### 👀 感知 
 
-### 👀 Perception 
+#### DRAWER: 便捷的关节式Real2Sim
 
-#### DRAWER: Convenient Real2Sim with Articulations
-
-[DRAWER: Digital Reconstruction and Articulation with Environment Realism](https://xiahongchi.github.io/DRAWER/)
+[DRAWER: 具有环境真实感的数字重建和关节运动](https://xiahongchi.github.io/DRAWER/)
 
 <video width="100%" controls>
   <source src="../_static/videos/Other_works/DRAWER.mp4" type="video/mp4">
@@ -20,96 +19,92 @@
 
 #### CoTracker
 
-[CoTracker3: Simpler and Better Point Tracking by Pseudo-Labelling Real Videos](https://cotracker3.github.io/)
+[CoTracker3: 通过伪标记真实视频实现更简单更好的点跟踪](https://cotracker3.github.io/)
 
-### 🧠 High-level Task Planning 
+### 🧠 高级任务规划 
 
-#### VJEPA-2: A Self-supervised Foundation World Model
+#### VJEPA-2: 自监督基础世界模型
 
-[Introducing V-JEPA 2](https://ai.meta.com/vjepa/)
+[介绍V-JEPA 2](https://ai.meta.com/vjepa/)
 
 <video width="100%" controls>
   <source src="../_static/videos/Other_works/VJEPA2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### 🙌 Low-level Motion Control
+### 🙌 低级运动控制
 
-#### HIL-SERL: Current SOTA (personal opinion) for RL
+#### HIL-SERL: 当前强化学习SOTA(个人观点)
 
-[HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning](https://hil-serl.github.io/)
+[HIL-SERL: 通过人在环强化学习实现精确灵巧的机器人操作](https://hil-serl.github.io/)
 
-[HIL-SERL LeRobot Training Guide](https://huggingface.co/docs/lerobot/hilserl)
+[HIL-SERL LeRobot训练指南](https://huggingface.co/docs/lerobot/hilserl)
 
-#### Caging in Time: A Planning Framework for Robust Object Manipulation
+#### 时间中的笼罩: 鲁棒物体操作的规划框架
 
-[Caging in Time: A Framework for Robust Object Manipulation under Uncertainties and Limited Robot Perception](https://journals.sagepub.com/doi/pdf/10.1177/02783649251343926)
+[时间中的笼罩: 不确定性和有限机器人感知下的鲁棒物体操作框架](https://journals.sagepub.com/doi/pdf/10.1177/02783649251343926)
 
 <video width="100%" controls>
   <source src="../_static/videos/Other_works/CIT.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### 👨‍🔧 Hardware
+### 👨‍🔧 硬件
 
-#### 3D Vitac: Low-cost Velostat Tactile Sensor
+#### 3D Vitac: 低成本Velostat触觉传感器
 
-[3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing](https://binghao-huang.github.io/3D-ViTac/)
+[3D-ViTac: 通过视觉-触觉感知学习精细操作](https://binghao-huang.github.io/3D-ViTac/)
 
 <video width="100%" controls>
   <source src="../_static/videos/Other_works/3D-Vitac.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
+#### E-flesh: 低成本磁性触觉传感器
 
-
-#### E-flesh: Low-cost Magnetic Tactile Sensor
-
-[eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures](https://e-flesh.com)
+[eFlesh: 使用切割单元微结构的高度可定制磁性触觉感知](https://e-flesh.com)
 
 <video width="100%" controls>
   <source src="../_static/videos/Other_works/eflesh.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-#### BACH hand: Belt-driven Active Surface Finger 
+#### BACH手: 带驱动主动表面手指 
 
-[Belt–Augmented Compliant Hand](https://yuanshenli.com/bach.html)
+[带式增强柔顺手](https://yuanshenli.com/bach.html)
 
 <img src="../_static/videos/Other_works/bach.gif" width="100%" style="max-width: 100%;" alt="BACH hand demo"/>
 
-### 💻 Simulation
+### 💻 仿真
 
-#### Maniskill: Light-weight GPU-accelerated Manipulation-focused Simulator
+#### Maniskill: 轻量级GPU加速操作专用仿真器
 
-[ManiSkill — ManiSkill 3.0.0b21 documentation](https://maniskill.readthedocs.io/en/latest/)
+[ManiSkill — ManiSkill 3.0.0b21 文档](https://maniskill.readthedocs.io/en/latest/)
 
-#### RoboTwin: Large bimanual Manipulation Benchmark based on Maniskill
+#### RoboTwin: 基于Maniskill的大型双臂操作基准
 
-[RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation](https://robotwin-platform.github.io/)
+[RoboTwin 2.0: 用于鲁棒双臂机器人操作的具有强域随机化的可扩展数据生成器和基准](https://robotwin-platform.github.io/)
 
+### 🧑‍🍳 开发中
 
-### 🧑‍🍳 Developing
+#### Bambot: 基于网页的控制面板 
 
-#### Bambot: Web-based Control Panel 
+[Tim Qian的BamBot](https://bambot.org/)
 
-[BamBot by Tim Qian](https://bambot.org/)
+[BamBot Feetech舵机控制面板 - feetech.js](http://bambot.org/feetech.js)
 
-[BamBot Feetech Servo Control Panel - feetech.js](http://bambot.org/feetech.js)
+#### 模型上下文协议 (MCP)
 
-#### Model Context Protocol (MCP)
+- [在Lerobot SO101手臂上使用MCP](https://github.com/IliaLarchenko/robot_MCP)
+- [MCP官方网站](https://modelcontextprotocol.io/introduction)
 
-- [Using MCP on Lerobot SO101 arm](https://github.com/IliaLarchenko/robot_MCP)
-- [The official website of MCP](https://modelcontextprotocol.io/introduction)
-
-#### 3D-reconstruction
+#### 3D重建
 
 [Hunyuan3D-2](https://huggingface.co/spaces/tencent/Hunyuan3D-2)
 
+#### Maniskill Sim2real强化学习
 
-#### Maniskill Sim2real RL
-
-[lerobot-sim2real by Stone Tao](https://github.com/StoneT2000/lerobot-sim2real)
+[Stone Tao的lerobot-sim2real](https://github.com/StoneT2000/lerobot-sim2real)
 
 
 

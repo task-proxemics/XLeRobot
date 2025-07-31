@@ -1,43 +1,43 @@
-## 🛠️ Hardware Intro 🛠️
+## 🛠️ 硬件介绍 🛠️
 
-**XLeRobot** = Lekiwi + 1x SO-100/SO-101 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
+**XLeRobot** = Lekiwi + 1x SO-100/SO-101 手臂 + **宜家RÅSKOG推车** + **Anker电池**
 
-= 2x SO-100/SO-101 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
+= 2x SO-100/SO-101 手臂 + 3x 全向轮 + 树莓派 + **宜家RÅSKOG推车** + **Anker电池**
 
-#### 📜Basic Specs
+#### 📜基本规格
 
-- **Weight**📏: ~12kg. Easily lifted by an adult.
-- **Workspace**🦾:
-    - Height range: ~0.5m-1.25m from the ground
-    - Width range: ~0.36m from the cart edge.
-    - Capable of many household tasks.
-- **Battery**🔋:
-    - 300W max out: sufficient for powering 12V version dual arm + lekiwi base + RasberryPi (~180W max)
-    - 288Wh capacity: can normally operate for 10hrs+
-    - 280W max in: 1hr to get fully charged
-    - Optional solar panels☀: for endless recharging
+- **重量**📏: ~12kg。成人可轻松抬起。
+- **工作空间**🦾:
+    - 高度范围: 距地面~0.5m-1.25m
+    - 宽度范围: 距推车边缘~0.36m。
+    - 能够完成许多家庭任务。
+- **电池**🔋:
+    - 300W最大输出: 足以为12V版本双臂 + lekiwi底座 + 树莓派(~180W最大)供电
+    - 288Wh容量: 通常可运行10小时以上
+    - 280W最大输入: 1小时即可充满
+    - 可选太阳能板☀: 用于无限充电
 
-> All computing is handled by your PC—Raspberry Pi only manages data communication via WiFi
+> 所有计算都由你的PC处理——树莓派仅通过WiFi管理数据通信
 >
 
-#### Why IKEA RÅSKOG Cart?
+#### 为什么选择宜家RÅSKOG推车？
 
-- 🌎 Global availability with standardized design
-- 💰 Cost-effective
-- 🏗️ Simple yet sturdy construction
-- 🔧 Metal mesh bottom enables easy component mounting
-- 📦 Perfect for storage and transportation
-- 📏 Ideal height for common household surfaces—from stovetop to coffee table
-- 📏 Compact footprint fits in nearly any room (thanks to IKEA's thoughtful design)
+- 🌎 全球可用，设计标准化
+- 💰 经济实惠
+- 🏗️ 结构简单但坚固
+- 🔧 金属网格底部便于组件安装
+- 📦 完美适合存储和运输
+- 📏 理想高度适合常见家庭表面——从炉灶到咖啡桌
+- 📏 紧凑的占地面积几乎适合任何房间(感谢宜家的周到设计)
 
-#### Why Anker SOLIX C300 Power Station?
+#### 为什么选择Anker SOLIX C300电源站？
 
-- 🌍 Global availability
-- ⚡ 288Wh capacity, 300W maximum output power, 280W maximum charging power
-- 🔌 Powers both 12V arms, base, and Raspberry Pi at full capacity through three USB-C charging cables—eliminating complex wiring
-- 🔋 Exceptional battery life: 12+ hours normal use, 8 hours intensive operation, 1-hour full charge
-- 💡 Integrated lighting for nighttime operation
-- ☀️ Optional solar panel mounting for continuous power supply
-- 🎒 Versatile and detachable—doubles as emergency backup power or camping power source
+- 🌍 全球可用
+- ⚡ 288Wh容量，300W最大输出功率，280W最大充电功率
+- 🔌 通过三条USB-C充电线为12V双臂、底座和树莓派提供全容量电力——消除复杂接线
+- 🔋 卓越的电池寿命: 正常使用12+小时，密集操作8小时，1小时完全充电
+- 💡 集成照明用于夜间操作
+- ☀️ 可选太阳能板安装，提供持续电力
+- 🎒 多功能且可拆卸——可兼作紧急备用电源或露营电源
 
-Even when you're not actively using the robot, these two products remain valuable for everyday use.
+即使你不积极使用机器人，这两种产品在日常使用中仍然很有价值。

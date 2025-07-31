@@ -1,27 +1,26 @@
-# Simulation
+# 仿真
 
-##### [👋 Get Started](getting_started/index)
+##### [👋 开始使用](getting_started/index)
 
-- [A short technical blog](https://vectorwang.notion.site/Analytical-IK-for-SO101-20abb280f59380d288bcdd398ffbfab1) for analytical IK introduction.
+- [解析逆运动学介绍的简短技术博客](https://vectorwang.notion.site/Analytical-IK-for-SO101-20abb280f59380d288bcdd398ffbfab1)。
 
-- A detailed [**Step-by-step Installation Guide**](getting_started/index) that can get you started to replicate this demo in 10 min.
+- 详细的[**逐步安装指南**](getting_started/index)，让您能在10分钟内开始复制这个演示。
 
-- URDF files, maniskill robot agent scripts, joint/EE control scripts.
+- URDF文件、maniskill机器人代理脚本、关节/末端执行器控制脚本。
 
-##### [👀 VR Control](getting_started/vr_sim)
+##### [👀 VR控制](getting_started/vr_sim)
 
 <video width="100%" style="max-width: 100%;" controls>
   <source src="../_static/videos/Sim_demos/XLeRobot_0_2_3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-##### [🔩 More Scenes](getting_started/simdemos)
+##### [🔩 更多场景](getting_started/simdemos)
 
 <video width="100%" style="max-width: 100%;" controls>
   <source src="../_static/videos/Sim_demos/XLeRobot_0_1_5.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
 
 ```{toctree}
 getting_started/index

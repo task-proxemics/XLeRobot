@@ -1,167 +1,157 @@
-# ⚒️ Assembly
+# ⚒️ 组装
 
 ![image](https://github.com/user-attachments/assets/949a670b-a5a2-459d-ab7f-45c51b93afa2)
 
-> Estimated Assembly time: From scratch: 2-4 hrs; with assembled SO100/SO101 arms: 1-2 hrs
+> 预计组装时间：从零开始：2-4小时；有已组装的SO100/SO101手臂：1-2小时
 > 
 ```{tip}
-If you'd rather skip the fun of tightening screws, you can also buy [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms.
+如果你宁愿跳过拧螺丝的乐趣，你也可以购买SO101手臂的[预组装套件](https://github.com/TheRobotStudio/SO-ARM100#kits)。
 ```
 
-## 🦾 SO101 Arms
+## 🦾 SO101手臂
 
 ![IMG_0264](https://github.com/user-attachments/assets/072d1e5b-f0c3-4bc6-a7cc-5ff38d42565c)
 
-
-> If you already have 2x SO101 arms assembled with motors configured, skip.
+> 如果你已经有2个配置了电机的组装好的SO101手臂，请跳过。
 >
 
-- Build 2x SO101 arms by following [SO101 Step-by-Step Assembly Instructions](https://huggingface.co/docs/lerobot/so101) to build 2 identical follower arms with 2 sets of motors (both preivous indexed as 1-6) for 2 control boards.
-- Then continue to [configure the motors](https://huggingface.co/docs/lerobot/so101#configure-the-motors) for the SO101 arms. 
-- Follow this [installation guide](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module) to add wrist cameras.
-- If you have [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), now it's time to wrap it on the fingers.
+- 按照[SO101逐步组装说明](https://huggingface.co/docs/lerobot/so101)构建2个SO101手臂，制作2个相同的跟随手臂，配备2套电机(之前都索引为1-6)用于2个控制板。
+- 然后继续为SO101手臂[配置电机](https://huggingface.co/docs/lerobot/so101#configure-the-motors)。
+- 按照这个[安装指南](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module)添加手腕相机。
+- 如果你有[3M抓握胶带](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)，现在是时候将其包裹在手指上了。
 
-
-## 🤔 Conigure Motors
+## 🤔 配置电机
 
 ![image](https://github.com/user-attachments/assets/fc674d38-d703-40bd-87a2-a502af1b52c7)
 
-> Since the official lerobot codebase currently doesn't support motor configuring besides the arm, we use [Bambot](https://bambot.org/) instead.
+> 由于官方lerobot代码库目前不支持除手臂外的电机配置，我们使用[Bambot](https://bambot.org/)代替。
 >
 
-- Connect the motor you want to configure (one-by-one) to a control board, and directly connect tohe board to your computer. 
-- Navigate to [the motor configuration page of Bambot](https://bambot.org/feetech.js), establish the connection and scan for your servo motor.
+- 将你想要配置的电机(逐个)连接到控制板，并直接将板子连接到你的计算机。
+- 导航到[Bambot的电机配置页面](https://bambot.org/feetech.js)，建立连接并扫描你的舵机电机。
   ![image](https://github.com/user-attachments/assets/89eb4674-e26e-4edc-9943-ad5c0d4516ec)
 
-- Rename the motor id following the instruction below.
+- 按照下面的说明重命名电机id。
   ![image](https://github.com/user-attachments/assets/49d3a1a4-71eb-4d32-9f0a-e8b6026c0b66)
 
-- You need to configure two sets of motors for 2 motor control boards in addition to the SO101 arms:
-    - one for **head** (motor ids: 7, 8)
-    - and the other for **the wheel base** (motors ids: 7, 8, 9).
-- Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
+- 除了SO101手臂外，你还需要为2个电机控制板配置两套电机：
+    - 一套用于**头部**(电机id：7, 8)
+    - 另一套用于**轮式底座**(电机id：7, 8, 9)。
+- 提示：用记号笔在电机上写数字，并区分不同板子的电机(如L1-L8和R1-R9)。
 
-## 🛒 IKEA Cart
+## 🛒 宜家推车
 
-- Just in case you accidentally throw your manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf).
+- 万一你意外扔掉了手册，[这里有一份](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf)。
 
 <img width="925" alt="1745897734515" src="https://github.com/user-attachments/assets/f9f95840-5080-4084-bebb-ea456a097d55" />
 
-## 🧑‍🦼‍➡ Wheel Base
+## 🧑‍🦼‍➡ 轮式底座
 
-> If you already have a Lekiwi base, distach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
+> 如果你已经有一个Lekiwi底座，请拆下电池、舵机支架等。底板只需安装3个带轮子的电机(保留接线)。
 >
 
 ![image](https://github.com/user-attachments/assets/4599c9d0-3ce3-40e8-9a8e-d21e1e5feb01)
 
 ```{note}
-Don't choose the wrong plate, each plate comes in a certain order.
+不要选错板子，每个板子都有特定的顺序。
 ```
 
-- Mount the omni-wheels to the plate according to the figure above.
-  - The specific motor id should be installed accordingly.
-- Note that the connector of the omni-wheel needs 3x M4 screws.
-- Wiring the motors regularly as the [tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly), after that instead of connecting the motor cable to the control board, use the extended wire/connector kit to extend the wire.
+- 根据上图将全向轮安装到板子上。
+  - 应相应安装特定的电机id。
+- 注意全向轮的连接器需要3个M4螺丝。
+- 按照[教程](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/Assembly.md#2-bottom-plate-assembly)正常接线电机，之后不要将电机线缆连接到控制板，而是使用延长线/连接器套件来延长线缆。
 
 ![image](https://github.com/user-attachments/assets/ac4ab4b4-6488-4e07-8349-e4167bf417f6)
 
-- Mount the top plate according to the figure above.
-- Leave the motor cable hanging ,don't pull it out from the top plate just yet.
+- 根据上图安装顶板。
+- 让电机线缆悬挂，暂时不要从顶板拉出来。
 
 ![image](https://github.com/user-attachments/assets/651c7e03-6bdd-47de-8ab6-f9157ced06fe)
 
-- Mount 3x connectors on the top plate according to the figure above.
+- 根据上图在顶板上安装3个连接器。
 
 ```{tip}
-Put the Lekiwi base with the connectors under the cart to see whether it can give enough pressure to the cart, with four wheels of the cart can still touch the ground. If not, try to modify the connectors' 3D model by slightly adjust the z-axis scale directly in the slicer software (keeping the xy-axis scale unchanged) and print them again.
+将带连接器的Lekiwi底座放在推车下方，看看是否能给推车足够的压力，推车的四个轮子仍能接触地面。如果不能，尝试通过在切片软件中直接稍微调整z轴比例(保持xy轴比例不变)来修改连接器的3D模型并重新打印。
 ```
 
 ![image](https://github.com/user-attachments/assets/c6bd27ec-6a2e-42ea-aee4-bb28079ccaf0)
 
-
 ```{tip}
-Filp the cart over to do the assembly below.
+翻转推车进行下面的组装。
 ```
 
-- Now install the Lekiwi base with the connectors onto the bottom of the IKEA cart, with the thinner plate on the other side.
-- Refer to the figure to find the desired assembly direction based on the motor index. 
+- 现在将带连接器的Lekiwi底座安装到宜家推车的底部，较薄的板子在另一侧。
+- 参考图片根据电机索引找到所需的组装方向。
 
 ```{note}
-This new hardware version is compatible with the IKEA cart metal mesh, and all the 12 M3 screws should be able to fit in easily.
+这个新硬件版本与宜家推车金属网格兼容，所有12个M3螺丝都应该能够轻松装入。
 ```
 
 ![image](https://github.com/user-attachments/assets/7792ee8d-7300-449f-b2bb-a78417dbc56b)
 
+- 使用尖嘴钳在顶部底座的相应孔位切割金属网格，只移除中央的"x"以保持结构完整性。这为线缆布线创建开口。
+- 然后，将之前延长的线缆从下方穿过推车向上布线。
 
-- Use needle-nose pliers to cut out the metal mesh at the corresponding holes in the top base, removing only the central "x" to maintain structural integrity. This creates openings for cable routing.
-- Then, run the previously extended wire up through the cart from below.
+## 🦾 手臂底座
 
-
-## 🦾 Arm Base
-
-### Top Base Assembly
+### 顶部底座组装
 ![image](https://github.com/user-attachments/assets/1ea61764-6e4c-4edf-8d0f-0979430a7921)
 
+- 当底座翻转过来时组装更容易。
 
-- Easier assembly when the base is filpped over.
-
-### Head Assembly
+### 头部组装
 
 ![image](https://github.com/user-attachments/assets/e24df68f-6140-456e-aeee-9e51f3c8a9f7)
 
+- 这应该与[SO101手臂组装](https://huggingface.co/docs/lerobot/so101#joint-1)的前两个步骤相同。
 
-- It should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
-
-## 🧵 Wiring
+## 🧵 接线
 
 ```{important}
-Complete all wiring and cable management for the top base and put the Raspberry Pi in its case before clamping the top base into the IKEA cart.
+在将顶部底座夹到宜家推车之前，完成顶部底座的所有接线和线缆管理，并将树莓派放入其外壳中。
 ```
 
 ![image](https://github.com/user-attachments/assets/798eeebf-a64f-4c16-b592-c32c8d9c62df)
 
-
-
-- Prepare the extended 5264 wire with the connector kit if you don't have one already.
-- Use needle-nose pliers to cut out the metal mesh at for the upper two layers for cable routing, similar to the bottom layer previously. Choose the location as needed.
+- 如果你还没有，请准备带连接器套件的延长5264线缆。
+- 使用尖嘴钳为上层两层切割金属网格进行线缆布线，类似于之前的底层。根据需要选择位置。
 ```{note}
-When extending the 5264 wire yourself, be careful with the polarity—reversed connections will cause errors.
+当你自己延长5264线缆时，要小心极性——反向连接会导致错误。
 ```
-- Connect the extended 5264 **motor cable** from **the Lekiwi base** to **one of the SO101 arms** (this makes the base and the arm as Lekiwi).
-- Connect the 2 **USB-C to USB-A** **data cables** from 2 **motor control board** to **Rasberry Pi** (2 USB-A slots left for the cameras).
-- Connect all 3 **power cables**: 2 **USB-C to DC(12V)** from 2 **motor control board** and 1 **USB-C to USB-C** from **Rasberry Pi**, to the fast charging section of the power supply. Each slot provides up to 100W power when charging simultaneously, which is tested sufficient for 12V version operation.
+- 将来自**Lekiwi底座**的延长5264**电机线缆**连接到**一个SO101手臂**(这使底座和手臂成为Lekiwi)。
+- 将2根**USB-C转USB-A****数据线缆**从2个**电机控制板**连接到**树莓派**(剩下2个USB-A插槽用于相机)。
+- 连接所有3根**电源线缆**：2根**USB-C转DC(12V)**从2个**电机控制板**和1根**USB-C转USB-C**从**树莓派**，连接到电源的快充部分。每个插槽在同时充电时提供高达100W功率，经测试足以支持12V版本运行。
 
-### 🔋 Place the Battery 🛒
+### 🔋 放置电池 🛒
 
-- Anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily silde during normal operations.
-- Maintain placed upright for safety.
-- Just in case you also accidentally throw the battery manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manual_Anker_SOLIX_C300_DC_Portable_Power_Station.pdf).
+- 放在推车中层或下层的任何位置以保持低重心。电池有防滑底部，在正常操作中不易滑动。
+- 为了安全保持直立放置。
+- 万一你也意外扔掉了电池手册，[这里有一份](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manual_Anker_SOLIX_C300_DC_Portable_Power_Station.pdf)。
 
 ```{important}
-In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
+为了保护电机控制板，确保最后连接电源线缆。在插拔其他线缆时始终断开电源线缆。
 ```
-## 📸 Final Assembly
 
-### Base into the Cart
+## 📸 最终组装
+
+### 底座装入推车
 
 ```{important}
-Complete all wiring and cable management for the top base and put the Raspberry Pi in its case before clamping the top base into the IKEA cart.
+在将顶部底座夹到宜家推车之前，完成顶部底座的所有接线和线缆管理，并将树莓派放入其外壳中。
 ```
 
 ![image](https://github.com/user-attachments/assets/2b568626-77c4-4956-a9ab-22db3638eb50)
 
-
-- Be careful not to break the case when you jam the IKEA cart edge into the case socket.
-- For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
-- Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
+- 当你将宜家推车边缘塞入外壳插座时要小心不要弄坏外壳。
+- 为了更容易测试，SO101手臂直接夹在推车上。将[手臂底座](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl)定位在推车顶层的两个角落，然后用夹子固定。
+- 如果你有bambulab耗材纸质线轴，不要忘记将其放在里面以提供稳定的结构支撑。
 
 ![image](https://github.com/user-attachments/assets/4efa2b31-627c-4f62-9977-d6a50d8dce0e)
 
 ![image](https://github.com/user-attachments/assets/1d553e6a-dad6-4b17-bc82-e4d6d3e2ecc8)
 
-
 ```{important}
-Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
+XLeRobot完全组装后，不要像宜家推车那样推着它到处走，因为这可能损坏电机齿轮。相反，当你需要手动移动时，请抬起机器人(~12kg)。
 ```
 
 

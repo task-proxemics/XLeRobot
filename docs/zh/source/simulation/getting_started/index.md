@@ -1,23 +1,23 @@
-# Get Started
+# 开始使用
 
-Here's the full video for keyboard EE control
+这是键盘末端执行器控制的完整视频
 
 <video width="100%" style="max-width: 100%;" controls>
   <source src="https://github.com/user-attachments/assets/b8e630bd-1133-4941-acd1-d974f60098ff" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-### Prerequisites
+### 前提条件
 
-- Ubuntu operating system
-- Basic familiarity with terminal commands
-- [Miniconda](https://docs.anaconda.com/free/miniconda/index.html) (recommended)
+- Ubuntu操作系统
+- 基本熟悉终端命令
+- [Miniconda](https://docs.anaconda.com/free/miniconda/index.html) (推荐)
 
-### Installation
+### 安装
 
-#### 1. Create a Conda Environment
+#### 1. 创建Conda环境
 
-If you already have a `lerobot` conda environment, you can use that. Otherwise, create a new environment:
+如果您已经有一个`lerobot` conda环境，可以使用该环境。否则，创建一个新环境：
 
 ```bash
 conda create -y -n lerobot python=3.10
@@ -25,35 +25,35 @@ conda activate lerobot
 
 ```
 
-> Note: It's recommended to have ManiSkill and lerobot code in the same environment for future sim2real deployment.
+> 注意：建议将ManiSkill和lerobot代码放在同一个环境中，以便未来的sim2real部署。
 > 
 
-#### 2. Install ManiSkill
+#### 2. 安装ManiSkill
 
-Follow the [official installation instructions](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html) for ManiSkill.
+按照ManiSkill的[官方安装说明](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/installation.html)进行安装。
 
 ```bash
-# Basic installation
+# 基本安装
 pip install mani-skill
 
-# Download scene dataset
+# 下载场景数据集
 python -m mani_skill.utils.download_asset "ReplicaCAD"
 
 ```
 
-If the dataset downloading goes wrong, you can directly download the dataset from [this google drive link](https://drive.google.com/file/d/1mqImztNX1LYZFBzt9z895C814RsyGe4N/view?usp=sharing). And then folder contents should go to
+如果数据集下载出现问题，您可以直接从[这个Google Drive链接](https://drive.google.com/file/d/1mqImztNX1LYZFBzt9z895C814RsyGe4N/view?usp=sharing)下载数据集。然后文件夹内容应该放到
 
 ```bash
 ~/.maniskill/data/scene_datasets/replica_cad_dataset
 
 ```
 
-Familiarize yourself with ManiSkill using the [quickstart guide](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html) and [demo scripts](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html). 
+使用[快速入门指南](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)和[演示脚本](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)来熟悉ManiSkill。
 
-Try this command to test whether you have successfully installed Maniskill:
+尝试运行此命令来测试您是否成功安装了Maniskill：
 
 ```{note}
-Change shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
+如果您的计算机不支持光线追踪渲染，请将shader="rt-fast"改为"default"。
 ```
 
 ```bash
@@ -62,49 +62,48 @@ python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulatio
 
 ```
 
-And you should be looking at something like this:
+您应该看到类似这样的内容：
 
 ![image](https://github.com/user-attachments/assets/c7509843-f037-4f37-9b1c-e7cad939037c)
 
-#### 3. Additional Dependencies
+#### 3. 额外依赖
 
-We use pygame to read keyboard input and show the control panel in real time, and Rerun to visualize and collect camera data.
+我们使用pygame来读取键盘输入并实时显示控制面板，使用Rerun来可视化和收集相机数据。
 
 ```bash
 pip install pygame
 pip install rerun-sdk
 ```
 
-#### 4. Replace Robot Files
+#### 4. 替换机器人文件
 
-
-Navigate to the ManiSkill package folder in your conda environment:
+导航到您conda环境中的ManiSkill包文件夹：
 
 ```bash
 cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 ```
 
-Replace the fetch robot code and assets with the XLeRobot files:
+用XLeRobot文件替换fetch机器人代码和资源：
 
-1. Download the [**replacement files for XLeRobot** here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
-2. Replace the files in /agents, /assets, and /envs/scenes:
+1. 在[这里下载**XLeRobot的替换文件**](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill)：
+2. 替换/agents、/assets和/envs/scenes中的文件：
     
     ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
     
     ![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
     
-3. Add control codes to /examples:
+3. 将控制代码添加到/examples：
     
     ![image](https://github.com/user-attachments/assets/654556ab-473f-44d2-8ff7-107c346882c6)
     
 
-#### Get Moving
+#### 开始运行
 
 ```{note}
-Change shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
+如果您的计算机不支持光线追踪渲染，请将shader="rt-fast"改为"default"。
 ```
 
-##### Joint Control
+##### 关节控制
 
 ```bash
 python -m mani_skill.examples.demo_ctrl_action -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
@@ -112,8 +111,7 @@ python -m mani_skill.examples.demo_ctrl_action -e "ReplicaCAD_SceneManipulation-
 ```
 ![image](https://github.com/user-attachments/assets/11f6d417-9d1b-45d7-84c7-58b9d1611922)
 
-
-##### End Effector Control with Camera Visualization via Rerun
+##### 通过Rerun进行末端执行器控制和相机可视化
 
 ```bash
 python -m mani_skill.examples.demo_ctrl_action_ee_cam_rerun -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"

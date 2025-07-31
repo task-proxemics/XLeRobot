@@ -1,63 +1,63 @@
-# XLeVR Tutorial
+# XLeVR教程
 
-This guide explains how to use VR devices (currently Meta Quest3) for interactive control in XLeRobot simulation environments. It covers environment setup, dependencies, VR data flow, running demos, troubleshooting, and advanced usage.
+本指南说明如何使用VR设备(目前支持Meta Quest3)在XLeRobot仿真环境中进行交互式控制。涵盖环境设置、依赖项、VR数据流、运行演示、故障排除和高级用法。
 
 ---
 
-## 1. Environment Setup
+## 1. 环境设置
 
-### 1.1 Dependencies
+### 1.1 依赖项
 
-Ensure you have the following installed:
+确保您已安装以下内容：
 
 - Python 3.7+
 - [ManiSkill](https://github.com/haosulab/ManiSkill)
-- [XLeVR](../../../XLeVR/README.md) (included in this repo)
+- [XLeVR](../../../XLeVR/README.md) (包含在此仓库中)
 
-Example installation:
+安装示例：
 
 ```bash
-# Install ManiSkill and dependencies
+# 安装ManiSkill和依赖项
 pip install mani-skill
-# Install XLeVR dependencies
+# 安装XLeVR依赖项
 cd XLeVR
 pip install -r requirements.txt
 ```
 
 ---
 
-## 2. VR Integration & Data Flow
+## 2. VR集成和数据流
 
-### 2.1 VR Data Flow Overview
+### 2.1 VR数据流概述
 
-XLeVR uses a WebSocket server to stream real-time data from VR headsets and controllers, and provides a web UI via HTTPS for monitoring. The core data structure is `ControlGoal`, which includes position, orientation, button states, and more.
+XLeVR使用WebSocket服务器从VR头显和控制器流式传输实时数据，并通过HTTPS提供网页UI进行监控。核心数据结构是`ControlGoal`，包括位置、方向、按钮状态等信息。
 
-#### ControlGoal Main Fields
+#### ControlGoal主要字段
 
-- `arm`: Device type ("left", "right", "headset")
-- `target_position`: 3D coordinates (numpy array)
-- `wrist_roll_deg`/`wrist_flex_deg`: Wrist roll/pitch angles
-- `gripper_closed`: Whether the gripper is closed
-- `metadata`: Extra info (trigger, thumbstick, etc)
+- `arm`: 设备类型 ("left", "right", "headset")
+- `target_position`: 3D坐标 (numpy数组)
+- `wrist_roll_deg`/`wrist_flex_deg`: 手腕翻滚/俯仰角度
+- `gripper_closed`: 夹爪是否闭合
+- `metadata`: 额外信息 (扳机、摇杆等)
 
-### 2.2 Start the VR Monitor Service
+### 2.2 启动VR监控服务
 
-From the `XLeVR` directory, run:
+从`XLeVR`目录运行：
 
 ```bash
 python vr_monitor.py
 ```
 
-- The terminal will show an HTTPS address (e.g., `https://<your-ip>:8443`). Open this in your VR headset browser to see real-time control data.
-- You can also copy `vr_monitor.py` to another project folder and edit the `XLEVR_PATH` variable at the top of the script.
+- 终端将显示一个HTTPS地址 (例如, `https://<your-ip>:8443`)。在您的VR头显浏览器中打开此地址以查看实时控制数据。
+- 您也可以将`vr_monitor.py`复制到另一个项目文件夹，并编辑脚本顶部的`XLEVR_PATH`变量。
 
 ---
 
-## 3. Using VR Control in Simulation
+## 3. 在仿真中使用VR控制
 
-### 3.1 Run the VR Control Demo
+### 3.1 运行VR控制演示
 
-For ManiSkill environments, run:
+对于ManiSkill环境，运行：
 
 ```bash
 python -m mani_skill.examples.XLeRobot_demo_VR_ee_ctrl \
@@ -67,45 +67,44 @@ python -m mani_skill.examples.XLeRobot_demo_VR_ee_ctrl \
     -c "pd_joint_delta_pos_dual_arm"
 ```
 
-- `-e` sets the environment (e.g., `ReplicaCAD_SceneManipulation-v1`, AI2THOR, Robocasa, etc.)
-- `--render-mode` should be `human` for real-time visualization
-- `-c` sets the control mode
+- `-e` 设置环境 (例如, `ReplicaCAD_SceneManipulation-v1`, AI2THOR, Robocasa等)
+- `--render-mode` 应该设为 `human` 以进行实时可视化
+- `-c` 设置控制模式
 
-### 3.2 Control Instructions
+### 3.2 控制说明
 
-- **Move controllers**: Control the end-effector positions of both arms
-- **Trigger**: Open/close the gripper
-- **Thumbstick**: Move/rotate the robot base
-- **Headset**: Used for viewpoint/pose data
-- **Web UI**: Shows real-time device status and data
-
----
-
-
-## 5. Troubleshooting
-
-### 5.1 Startup Errors
-
-- Check that `XLEVR_PATH` is set correctly
-- If certificates (`cert.pem`/`key.pem`) are missing, generate them or disable HTTPS
-
-### 5.2 No VR Data
-
-- Make sure the VR headset is connected and accessing the correct HTTPS address
-- Check firewall/port settings
-
-### 5.3 Control Issues
-
-- Check VR device drivers and firmware
-- Ensure `vr_monitor.py` is running
+- **移动控制器**: 控制双臂的末端执行器位置
+- **扳机**: 打开/关闭夹爪
+- **摇杆**: 移动/旋转机器人底座
+- **头显**: 用于视点/姿态数据
+- **网页UI**: 显示实时设备状态和数据
 
 ---
 
-## 6. Advanced Usage
+## 5. 故障排除
 
-### 6.1 Access VR Data in Code
+### 5.1 启动错误
 
-You can access VR control goals directly in Python:
+- 检查`XLEVR_PATH`是否设置正确
+- 如果证书(`cert.pem`/`key.pem`)缺失，生成它们或禁用HTTPS
+
+### 5.2 无VR数据
+
+- 确保VR头显已连接并访问正确的HTTPS地址
+- 检查防火墙/端口设置
+
+### 5.3 控制问题
+
+- 检查VR设备驱动程序和固件
+- 确保`vr_monitor.py`正在运行
+
+---
+
+## 6. 高级用法
+
+### 6.1 在代码中访问VR数据
+
+您可以在Python中直接访问VR控制目标：
 
 ```python
 from mani_skill.examples.vr_monitor import VRMonitor
@@ -114,21 +113,21 @@ monitor = VRMonitor()
 monitor.initialize()
 left_goal = monitor.get_left_goal_nowait()
 right_goal = monitor.get_right_goal_nowait()
-# left_goal/right_goal are ControlGoal objects
+# left_goal/right_goal是ControlGoal对象
 ```
 
-### 6.2 Data Structure Reference
+### 6.2 数据结构参考
 
-See [XLeVR/README.md](../../../XLeVR/README.md) or the `vr_monitor.py` code for details.
+详情请参见[XLeVR/README.md](../../../XLeVR/README.md)或`vr_monitor.py`代码。
 
 ---
 
-## 7. References
+## 7. 参考资料
 
-- [ManiSkill Documentation](https://maniskill.readthedocs.io/en/latest/user_guide/datasets/scenes.html)
-- [Oculus Reader Documentation](https://github.com/rail-berkeley/oculus_reader)
+- [ManiSkill文档](https://maniskill.readthedocs.io/en/latest/user_guide/datasets/scenes.html)
+- [Oculus Reader文档](https://github.com/rail-berkeley/oculus_reader)
 - [XLeVR/telegrip](https://github.com/DipFlip/telegrip)
 
 ---
 
-For further questions, please open an issue or check the code comments.
+如有其他问题，请提交issue或查看代码注释。
