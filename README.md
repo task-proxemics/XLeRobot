@@ -38,7 +38,7 @@
 
 # 📰 News 
 
-
+- 2025-07-30: XLeRobot 0.2.5 out! [Control XLeRobot](https://xlerobot.readthedocs.io/en/latest/software/index.html) in real life with an Xbox controller in the wild anywhere. No wifi needed and zero latency.
 
 - 2025-07-14: XLeVR, VR Quest 3 whole-body control system, all data captured, web-based, minimal dependencies, modular, 20min setup.
 -  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
