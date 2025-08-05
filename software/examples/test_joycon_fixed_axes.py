@@ -103,12 +103,12 @@ joyconrobotics_left = FixedAxesJoyconRobotics(
     joycon_stick_h_0=2000,  # 水平摇杆中心值
     dof_speed=[2, 2, 2, 1, 1, 1]
 )
-joyconrobotics_right = FixedAxesJoyconRobotics(
-    device="right",
-    joycon_stick_v_0=1900,  # 垂直摇杆中心值
-    joycon_stick_h_0=2100,  # 水平摇杆中心值
-    dof_speed=[2, 2, 2, 1, 1, 1]
-)
+# joyconrobotics_right = FixedAxesJoyconRobotics(
+#     device="right",
+#     joycon_stick_v_0=1900,  # 垂直摇杆中心值
+#     joycon_stick_h_0=2100,  # 水平摇杆中心值
+#     dof_speed=[2, 2, 2, 1, 1, 1]
+# )
 
 print("固定轴向控制测试:")
 print("垂直摇杆: 只控制X轴（前后）")  
@@ -122,11 +122,11 @@ print()
 
 for i in range(10000):
     pose_left, gripper_left, control_button_left = joyconrobotics_left.get_control()  # 改变量名
-    pose_right, gripper_right, control_button_right = joyconrobotics_right.get_control()  # 改变量名
+    # pose_right, gripper_right, control_button_right = joyconrobotics_right.get_control()  # 改变量名
     x_left, y_left, z_left, roll_left, pitch_left, yaw_left = pose_left
-    x_right, y_right, z_right, roll_right, pitch_right, yaw_right = pose_right
+    # x_right, y_right, z_right, roll_right, pitch_right, yaw_right = pose_right
     print(f'pos_left={x_left:.3f}, {y_left:.3f}, {z_left:.3f}, Rot_left={roll_left:.3f}, {pitch_left:.3f}, {yaw_left:.3f}, gripper_left={gripper_left}, control_button_left={control_button_left}')
-    print(f'pos_right={x_right:.3f}, {y_right:.3f}, {z_right:.3f}, Rot_right={roll_right:.3f}, {pitch_right:.3f}, {yaw_right:.3f}, gripper_right={gripper_right}, control_button_right={control_button_right}')
+    # print(f'pos_right={x_right:.3f}, {y_right:.3f}, {z_right:.3f}, Rot_right={roll_right:.3f}, {pitch_right:.3f}, {yaw_right:.3f}, gripper_right={gripper_right}, control_button_right={control_button_right}')
     time.sleep(0.02)
 
-joyconrobotics_right.disconnect()  # 改变量名 
+joyconrobotics_left.disconnect()  # 改变量名 
