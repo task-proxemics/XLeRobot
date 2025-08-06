@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """
-Simplified keyboard control for SO100/SO101 robot with independent YOLO streaming display
+Simplified keyboard control for SO100/SO101 robot with independent YOLOE segmentation display
 Fixed action format conversion issues
 Uses P control, keyboard only changes target joint angles
 Keyboard control is identical to 5_so100_keyboard_ee_control.py
 
-YOLO stream displays object detection but does NOT control the robot
+Video stream displays segmentation masks with configurable color scheme:
+- Default object = Blue - always detected by default (see DEFAULT_OBJECT setting)
+- Target objects = Red - user-specified objects  
+- Background = Gray
+- All colors and thresholds can be modified in the DEFAULT SETTINGS section
+
 Video stream and robot control are completely independent
 """
 
@@ -21,6 +26,26 @@ from ultralytics import YOLOE
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+# ============================================================================
+# DEFAULT OBJECT DETECTION SETTINGS - Easy to modify
+# ============================================================================
+DEFAULT_OBJECT = "black robot"                # Default object to always detect
+DEFAULT_OBJECT_COLOR = (244, 133, 66)            # Blue color for default object
+DEFAULT_OBJECT_CONFIDENCE = 0.1                # Lower confidence threshold for default object
+
+TARGET_OBJECT_COLOR = (55, 68, 219)              # Red color for target objects  
+TARGET_OBJECT_CONFIDENCE = 0.4                   # Normal confidence threshold for target objects
+
+BACKGROUND_COLOR = (168, 168, 168)               # Gray background color
+
+# Example alternatives you can easily switch to:
+# DEFAULT_OBJECT = "robot"                       # Generic robot
+# DEFAULT_OBJECT = "mechanical arm"              # Alternative description
+# DEFAULT_OBJECT = "robotic arm"                 # Another alternative
+# DEFAULT_OBJECT_CONFIDENCE = 0.2               # Even lower threshold
+# DEFAULT_OBJECT_CONFIDENCE = 0.3               # Higher threshold
+# ============================================================================
 
 # Joint calibration coefficients - manually edit
 # Format: [joint_name, zero_position_offset(degrees), scale_factor]
@@ -247,11 +272,18 @@ def return_to_start_position(robot, start_positions, kp=0.5, control_freq=50):
 
 # Independent video streaming function (no robot control)
 def video_stream_loop(model, cap, target_objects=None):
+    if target_objects is None:
+        target_objects = [DEFAULT_OBJECT]
     """
-    Independent video streaming loop that only displays object detection
+    Independent video streaming loop that only displays segmentation masks
     Does not control the robot - purely for visual feedback
+    
+    Color scheme (configurable at top of file):
+    - Default object: Blue - confidence threshold: DEFAULT_OBJECT_CONFIDENCE
+    - Other target objects: Red - confidence threshold: TARGET_OBJECT_CONFIDENCE
+    - Background: Gray
     """
-    print("Starting YOLO video stream...")
+    print("Starting video stream...")
     
     while True:
         try:
@@ -261,15 +293,43 @@ def video_stream_loop(model, cap, target_objects=None):
                 continue
 
             results = model(frame)
-            if not results or not hasattr(results[0], 'boxes') or not results[0].boxes:
-                # No objects detected - show original frame
-                annotated_frame = frame
-            else:
-                # Show detection results
-                annotated_frame = results[0].plot()
+            h, w = frame.shape[:2]
             
-            # Show detection results in a window
-            cv2.imshow("YOLO Live Detection", annotated_frame)
+            # Create gray background
+            annotated_frame = cv2.cvtColor(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), cv2.COLOR_GRAY2BGR)
+            annotated_frame[:] = BACKGROUND_COLOR  # Set all pixels to gray
+            
+            if not results or not hasattr(results[0], 'masks') or not results[0].masks:
+                # No objects detected - just show gray background
+                pass
+            else:
+                # Process segmentation masks
+                masks = results[0].masks.data.cpu().numpy()  # Get mask data
+                boxes = results[0].boxes
+                
+                for i, (mask, box) in enumerate(zip(masks, boxes)):
+                    cls = int(box.cls[0])
+                    label = results[0].names[cls]
+                    
+                    if label in target_objects:
+                        # Resize mask to frame size if needed
+                        if mask.shape != (h, w):
+                            mask = cv2.resize(mask, (w, h))
+                        
+                        # Assign color based on object type and set confidence threshold
+                        if label == DEFAULT_OBJECT:
+                            color = DEFAULT_OBJECT_COLOR          # Color for default object
+                            confidence_threshold = DEFAULT_OBJECT_CONFIDENCE  # Lower threshold for default object
+                        else:
+                            color = TARGET_OBJECT_COLOR           # Color for target objects
+                            confidence_threshold = TARGET_OBJECT_CONFIDENCE   # Normal threshold for other objects
+                        
+                        # Apply color to mask area
+                        mask_bool = mask > confidence_threshold  # Convert to boolean mask
+                        annotated_frame[mask_bool] = color
+            
+            # Show segmentation mask in a window
+            cv2.imshow("YOLOE Segmentation", annotated_frame)
             
             # Allow quitting vision mode with 'q' or ESC
             key = cv2.waitKey(1) & 0xFF
@@ -435,7 +495,8 @@ def p_control_loop(
 
 def main():
     """Main function"""
-    print("LeRobot Keyboard Control + Independent YOLO Display")
+    print("LeRobot Keyboard Control + Configurable Segmentation Display")
+    print(f"Default Object: '{DEFAULT_OBJECT}'")
     print("="*60)
     
     try:
@@ -512,27 +573,32 @@ def main():
         current_x, current_y = x0, y0
         print(f"Initialize end effector position: x={current_x:.4f}, y={current_y:.4f}")
         
-        # Initialize YOLO and camera
+        # Initialize YOLOE and camera
         model = YOLOE("yoloe-11l-seg.pt")  # or select yoloe-11s/m-seg.pt for different sizes
         
         # Get detection targets from user input
         print("\n" + "="*60)
-        print("YOLO Detection Target Setup")
+        print("YOLOE Detection Target Setup")
         print("="*60)
-        target_input = input("Enter objects to detect (separate multiple objects with commas, e.g., bottle,cup,mouse): ").strip()
+        print(f"Default: '{DEFAULT_OBJECT}' will always be detected (Blue color)")
+        target_input = input("Enter additional objects to detect (separate multiple objects with commas, e.g., bottle,cup,mouse): ").strip()
         
-        # If Enter is pressed directly, use default targets
-        if not target_input:
-            target_objects = ["bottle"]
-            print(f"Using default targets: {target_objects}")
-        else:
+        # Always include default object as the first target
+        target_objects = [DEFAULT_OBJECT]
+        
+        # Add user-specified targets
+        if target_input:
             # Parse multiple objects separated by commas
-            target_objects = [obj.strip() for obj in target_input.split(',') if obj.strip()]
+            additional_objects = [obj.strip() for obj in target_input.split(',') if obj.strip()]
+            target_objects.extend(additional_objects)
             print(f"Detection targets: {target_objects}")
+            print(f"Colors: '{DEFAULT_OBJECT}'=Blue, Others=Red")
+        else:
+            print(f"Detection targets: {target_objects} (only default object)")
+            print(f"Colors: '{DEFAULT_OBJECT}'=Blue")
         
         # Set text prompt to detect the specified objects
         model.set_classes(target_objects, model.get_text_pe(target_objects))
-        
         # List available cameras and prompt user
         def list_cameras(max_index=5):
             available = []
@@ -565,8 +631,11 @@ def main():
         print("- ESC: Exit program")
         print("")
         print("Video stream:")
-        print("- Independent YOLO detection display (no robot control)")
-        print("- Q (in YOLO window): Exit video stream")
+        print("- Independent segmentation display:")
+        print(f"  * '{DEFAULT_OBJECT}' = Blue {DEFAULT_OBJECT_COLOR} [confidence ≥ {DEFAULT_OBJECT_CONFIDENCE}]")  
+        print(f"  * Target objects = Red {TARGET_OBJECT_COLOR} [confidence ≥ {TARGET_OBJECT_CONFIDENCE}]")
+        print(f"  * Background = Gray {BACKGROUND_COLOR}")
+        print("- Q (in segmentation window): Exit video stream")
         print("="*60)
         print("Note: Video stream and keyboard control are completely independent")
         
