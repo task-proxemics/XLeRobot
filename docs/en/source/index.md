@@ -144,7 +144,9 @@ All things considered—cost, community support, ease of assembly, and practical
 
 ## Main Contributors
 
-- [Me](https://vector-wangel.github.io/).
+- [Gaotian/Vector Wang](https://vector-wangel.github.io/)
+- Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
+- Nicole Yue: Documentation website setup
 - Yuesong Wang: Mujoco simulation
 
 This is just a small brick in the pyramid, made possible by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks to all the talented contributors behind these detailed and professional projects.
