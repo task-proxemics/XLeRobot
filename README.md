@@ -80,7 +80,7 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 ## Main Contributors
 
 - [Gaotian/Vector Wang](https://vector-wangel.github.io/)
-- Zhuoyi Lu: RL sim2real deploy, VR control on real robot
+- Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
 - Nicole Yue: Documentation website setup
 - Yuesong Wang: Mujoco simulation
 
