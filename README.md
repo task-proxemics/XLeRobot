@@ -19,8 +19,10 @@
 *Built upon the giants: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 <a href="https://xlerobot.readthedocs.io/en/latest/index.html">
-  <img width="890" alt="1751777563236" src="https://github.com/user-attachments/assets/c99fbd5f-af4a-48ba-a8fd-d667beec22c9" />
+  <img width="1725" height="1140" alt="front" src="https://github.com/user-attachments/assets/f9c454ee-2c46-42b4-a5d7-88834a1c95ab" />
 </a>
+
+
 
 
 https://github.com/user-attachments/assets/f2f0dca8-cfd9-4ed6-becc-3fd894bedaad
