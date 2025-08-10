@@ -23,8 +23,8 @@
 [Chinese content...]
 </div> -->
 
-![image](https://github.com/user-attachments/assets/7ca4650f-7cea-4c0f-9001-fd6b1349104c)
 
+![image](https://github.com/user-attachments/assets/f9c454ee-2c46-42b4-a5d7-88834a1c95ab)
 
 ## Intro
 
