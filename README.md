@@ -36,9 +36,9 @@ https://github.com/user-attachments/assets/f2f0dca8-cfd9-4ed6-becc-3fd894bedaad
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
 | **Basic** (use your laptop) | **~$660** | **~€680** | **~¥3999** |
-| ↑ Stereo dual-eye head cam | +$30 | +€30 | +¥200 |
+| ↑ Stereo dual-eye head cam | +$30 | +€30 | +¥199 |
 | + RasberryPi | +$79 | +€79 | +¥399 |
-| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1500 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
 
 ---
 
