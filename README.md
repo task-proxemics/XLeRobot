@@ -35,9 +35,10 @@ https://github.com/user-attachments/assets/f2f0dca8-cfd9-4ed6-becc-3fd894bedaad
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
-| **Basic** (put your laptop in the cart) | **~$660** | **~€680** | **~¥3999** |
-| **Standard** (Basic + RasPi) | **~$750** | **~€770** | **~¥4399** |
-| **Pro** (Standard + RealSense depth head cam) | **~$870** | **~€890** | **~¥5599** |
+| **Basic** (use your laptop) | **~$660** | **~€680** | **~¥3999** |
+| ↑ Stereo dual-eye head cam | +$30 | +€30 | +¥200 |
+| + RasberryPi | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1500 |
 
 ---
 
