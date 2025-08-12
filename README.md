@@ -50,12 +50,6 @@
 - 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup, the 1st version fully capable for autonomous household tasks, starts from 660$. 
 
 
-
-
-https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
-
-
-
 ---
 ## 🚀 Get Started 🚀
 > [!NOTE] 
