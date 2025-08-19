@@ -63,10 +63,16 @@
 4. 💻 **Software**: [Get your robot moving!](https://xlerobot.readthedocs.io/en/latest/software/index.html)
 
 ---
+### About me
+
+[Gaotian/Vector Wang](https://vector-wangel.github.io/)
+
+I am a graduate student at Rice University, focusing on robust object manipulation, where we propse virtual cages and funnels and physics-aware world models to close the Sim2real gap and achieve robust manipulation under uncertainties. One of my papers, Caging in Time, has recently been accepted by International Journal of Robotics Research (IJRR).
+
+I built XLeRobot as a personal hobby to instantiate my research theory, also to provide a low-cost platform for people who are interested in robotics and embodied AI to work with. 
 
 ## Main Contributors
 
-- [Gaotian/Vector Wang](https://vector-wangel.github.io/)
 - Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
 - Nicole Yue: Documentation website setup
 - Yuesong Wang: Mujoco simulation
@@ -86,7 +92,7 @@ If you want, you can cite this work with:
 
 ```bibtex
 @misc{wang2025xlerobot,
-    author = {Wang, Gaotian}, {Lu, Zhuoyi}
+    author = {Wang, Gaotian and Lu, Zhuoyi},
     title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
     howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
     year = {2025}

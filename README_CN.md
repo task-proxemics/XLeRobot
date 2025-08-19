@@ -8,7 +8,7 @@
 # XLeRobot 🤖
 
 [![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Twitter/X](https://img.shields.io/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
+[![Twitter/X](https://img.shields.io/badge/twitter/follow/VectorWang?style=social)](https://twitter.com/VectorWang2)
 [![Docs status](https://img.shields.io/badge/docs-passing-brightgreen.svg)](https://xlerobot.readthedocs.io/en/latest/)
 [![Discord](https://img.shields.io/badge/Discord-XLeRobot-7289da?style=flat&logo=discord&logoColor=white)](https://discord.gg/bjZveEUh6F)
 ---
@@ -28,28 +28,30 @@
 > 成本不包括3D打印、工具、运费和税费。
 
 > [!NOTE] 
-> 目前我没有授权任何个体或组织售卖此产品，虽然开源项目法律上无限制。目前正在筹备合作售卖kit中，大家敬请期待支持正版！
+> 目前我没有授权任何个体或组织售卖此产品（虽然开源项目法律上无限制）。目前正在筹备售卖kit中，大家敬请期待支持正版！
 
 | 价格 | 美国 | 欧盟 | 中国 |
 | --- | --- | --- | --- |
-| **基础版** (将您的笔记本电脑放入推车) | **~$660** | **~€680** | **~¥3999** |
-| **标准版** (基础版 + RasPi) | **~$750** | **~€770** | **~¥4399** |
-| **专业版** (基础版 + RealSense深度头摄像头) | **~$870** | **~€890** | **~¥5499** |
+| **基础版** (使用您的笔记本电脑，单目RGB头摄像头) | **~$660** | **~€680** | **~¥3999** |
+| ↑ 双目双眼RGB头摄像头 | +$30 | +€30 | +¥199 |
+| + 树莓派 | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD头摄像头 | +$220 | +€230 | +¥1499 |
 
 ---
 
 # 📰 新闻 
 
-- 2025-07-14: XLeVR，VR Quest 3全身控制系统，所有数据捕获，基于Wifi，最小依赖，模块化，20分钟设置。
--  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
-  
-- 2025-07-08: **官方仿真**，更新了urdf文件、控制脚本，支持新硬件和摄像头。10分钟内开始使用。
-  
+- 2025-07-30: [在现实生活中控制XLeRobot](https://xlerobot.readthedocs.io/en/latest/software/index.html)，使用**键盘/Xbox控制器/Switch joycon**在任何地方。全蓝牙连接，无需WiFi，零延迟。
+- ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
+
+- 2025-07-08: [**仿真**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html)，更新了urdf文件、控制脚本（支持Quest3 VR、键盘、Xbox控制器、switch joycon），支持新硬件和摄像头，RL环境。15分钟内开始使用。
+- ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
+
 - 2025-07-01: [**文档**网站](https://xlerobot.readthedocs.io/en/latest/index.html)发布，提供更有条理的教程、演示和资源。
 
 - 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io)硬件设置，第一个完全能够处理自主家庭任务的版本，从660美元开始。
 
-https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
+https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a5ce-ef163c3abfd5
 
 ---
 ## 🚀 开始使用 🚀
@@ -65,11 +67,17 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 4. 💻 **软件**: [让您的机器人动起来！](https://xlerobot.readthedocs.io/en/latest/software/index.html)
 
 ---
+### 关于我
+
+[Gaotian/Vector Wang](https://vector-wangel.github.io/)
+
+我目前是莱斯大学的博士生，专注于鲁棒物体操作，我们提出虚拟笼子和漏斗以及物理感知世界模型来缩小Sim2real差距，在不确定性下实现鲁棒操作。我的一篇论文《Caging in Time》最近被《国际机器人研究杂志》(IJRR)接受。
+
+我构建XLeRobot作为个人爱好来实例化我的研究理论，同时也为对机器人和具身AI感兴趣的人提供一个低成本平台。
 
 ## 主要贡献者
 
-- [Gaotian/Vector Wang](https://vector-wangel.github.io/)
-- Zhuoyi Lu: RL sim2real部署，真实机器人VR控制
+- Zhuoyi Lu: RL sim2real部署，真实机器人远程操作（Xbox、VR、Joycon）
 - Nicole Yue: 文档网站搭建
 - Yuesong Wang: Mujoco仿真
 
@@ -87,7 +95,7 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5
 
 ```bibtex
 @misc{wang2025xlerobot,
-    author = {Wang, Gaotian},
+    author = {Wang, Gaotian and Lu, Zhuoyi},
     title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
     howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
     year = {2025}
