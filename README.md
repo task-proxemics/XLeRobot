@@ -51,8 +51,6 @@
 
 ---
 ## 🚀 Get Started 🚀
-> [!NOTE] 
-> I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
 
 > [!NOTE] 
 > If you are totally new to programming, please spend at least a day to get yourself familiar with basic Python, Ubuntu and Github (with the help of Google and AI). At least you should know how to set up ubuntu system, git clone, pip install, use intepreters (VS Code, Cursor, Pycharm, etc.) and directly run commands in the terminals.
