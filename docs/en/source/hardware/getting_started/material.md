@@ -8,8 +8,10 @@ Doesn't include cost of 3D printing, tools, shippings and taxes.
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
-| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
-| **Pro** (Realsense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
+| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
+| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
+| + RasberryPi | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
 
 
 
