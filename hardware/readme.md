@@ -1,6 +1,7 @@
 Here stores the .3mf file of XLeRobot 0.3.0 for 3D printing.
 
-<img width="1557" height="894" alt="image" src="https://github.com/user-attachments/assets/8e266159-4922-4f1e-9180-b12e929733d5" />
+<img width="1338" height="855" alt="image" src="https://github.com/user-attachments/assets/293de41b-8f79-49eb-af0a-822879e9b5a0" />
+
 
 
 
