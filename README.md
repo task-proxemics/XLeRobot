@@ -62,11 +62,13 @@
 
 ---
 
-## Main Contributors
+## Contribute
 
 
 **👋 Want to contribute to XLeRobot?**
 Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on how to get involved!
+
+**Main Contributors**
 
 - Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
 - Nicole Yue: Documentation website setup
