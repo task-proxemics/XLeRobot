@@ -5,6 +5,7 @@
 If you have a bug or an idea, read the guidelines below before opening an issue.
 
 If you're ready to tackle some open issues, we've collected some [good first issues](https://github.com/Vector-Wangel/XLeRobot/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for you.
+You can also create an issue yourself to tackle the tasks below, following the template.
 
 ## 🚀 What We're Looking For
 
