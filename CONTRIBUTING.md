@@ -19,6 +19,13 @@ If you're ready to tackle some open issues, we've collected some [good first iss
 - **VLM/LLM/MCP**: Inference pipelines, task planning, multimodal reasoning, MCP tool integration
 - **Your Own Research Ideas**: Novel robotics research, embodied AI algorithms, innovative applications
 
+### Advocacy & Community Building
+- **Share Your Experiences**: Document your XLeRobot journey, challenges, and successes
+- **Educational Use Cases**: Robotics courses, workshops, student projects, and learning materials
+- **Community Events**: Organize hackathons, meetups, and collaborative projects
+- **Real-world Applications**: Industrial pilots, research projects, and practical deployments
+- **Content Creation**: Blog posts, videos, tutorials, and social media showcasing XLeRobot capabilities
+
 ### Documentation & Examples
 - Tutorials and guides update (especially video)
 - Code examples
