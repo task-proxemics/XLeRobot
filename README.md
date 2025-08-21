@@ -61,15 +61,12 @@
 4. 💻 **Software**: [Get your robot moving!](https://xlerobot.readthedocs.io/en/latest/software/index.html)
 
 ---
-### About me
-
-[Gaotian/Vector Wang](https://vector-wangel.github.io/)
-
-I am a CS graduate student at Rice University, focusing on robust object manipulation, where we propse virtual cages and funnels and physics-aware world models to close the Sim2real gap and achieve robust manipulation under uncertainties. One of my papers, Caging in Time, has recently been accepted by International Journal of Robotics Research (IJRR).
-
-I built XLeRobot as a personal hobby to instantiate my research theory, also to provide a low-cost platform for people who are interested in robotics and embodied AI to work with. 
 
 ## Main Contributors
+
+
+**👋 Want to contribute to XLeRobot?**
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on how to get involved!
 
 - Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
 - Nicole Yue: Documentation website setup
@@ -80,6 +77,13 @@ This is just a small brick in the pyramid, made possible by [LeRobot](https://g
 
 Looking forward to collaborating with anyone interested in contributing to this project!
 
+## About me
+
+[Gaotian/Vector Wang](https://vector-wangel.github.io/)
+
+I am a CS graduate student at Rice University, focusing on robust object manipulation, where we propse virtual cages and funnels and physics-aware world models to close the Sim2real gap and achieve robust manipulation under uncertainties. One of my papers, Caging in Time, has recently been accepted by International Journal of Robotics Research (IJRR).
+
+I built XLeRobot as a personal hobby to instantiate my research theory, also to provide a low-cost platform for people who are interested in robotics and embodied AI to work with. 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Vector-Wangel/XLeRobot&type=Timeline)](https://star-history.com/#Vector-Wangel/XLeRobot&Timeline)
 ---
