@@ -155,16 +155,15 @@ Complete all wiring and cable management for the top base and put the Raspberry 
 - For easier testing, the SO101 arms clamp directly onto the cart. Position the [arm bases](https://github.com/Vector-Wangel/XLeRobot/blob/main/3D_Models/3D_models_for_printing/XLeRobot_special/SO_5DOF_ARM100_Assemblybases.stl) at the two corners of the cart's top layer, then secure with clamps.
 - Don't forget to put the bambulab filament cardboard spool inside to provide stable structural support if you have one.
 
-![image](https://github.com/user-attachments/assets/91491f62-a466-4421-ac9b-db3492849a89)
 
-- **Optional parts**: Shells for the Control board and the first joint for better protection and visual.
-  - You may need to take off the hand camera first before wearing the 2nd shell onto the arm.
-    
-### Finally:
+After these steps, the XLeRobot should be physically well-built and ready to do some chores.
+
 
 ![image](https://github.com/user-attachments/assets/4efa2b31-627c-4f62-9977-d6a50d8dce0e)
 
 ![image](https://github.com/user-attachments/assets/1d553e6a-dad6-4b17-bc82-e4d6d3e2ecc8)
+
+
 
 
 ```{important}
@@ -173,5 +172,14 @@ Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as t
 ```{note}
 Current form of the wheel connector is not strong, occasionally rescrewing the center screw may be needed.
 ```
+### Optional Visual Upgrades
 
+For better visual outlook, you can wear these parts to XLeRobot if you like. 
 
+![image](https://github.com/user-attachments/assets/91491f62-a466-4421-ac9b-db3492849a89)
+
+- **Shells** for the Control board and the first joint for better protection and visual.
+  - You may need to take off the hand camera first before wearing the 2nd shell onto the arm.
+- Sports sleeves to hide the cables and make XLeRobot more sleek.
+  
+![image](https://github.com/user-attachments/assets/9847f2a6-f79a-4899-bd20-64a25c709660)
