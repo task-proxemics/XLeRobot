@@ -159,6 +159,8 @@ Complete all wiring and cable management for the top base and put the Raspberry 
 
 - **Optional parts**: Shells for the Control board and the first joint for better protection and visual.
   - You may need to take off the hand camera first before wearing the 2nd shell onto the arm.
+    
+### Finally:
 
 ![image](https://github.com/user-attachments/assets/4efa2b31-627c-4f62-9977-d6a50d8dce0e)
 
@@ -168,6 +170,8 @@ Complete all wiring and cable management for the top base and put the Raspberry 
 ```{important}
 Once XLeRobot is fully assembled, do not push it around like the IKEA cart, as this can damage the motor gears. Instead, lift the robot (~12kg) whenever you need to move it manually.
 ```
-
+```{note}
+Current form of the wheel connector is not strong, occasionally rescrewing the center screw may be needed.
+```
 
 
