@@ -88,13 +88,15 @@ Skip this section if you already have these tools:
 ## 🧑‍🤝‍🧑 Alternative chioces 
 
 - **IKEA Cart**: You can use a similar cart not from IKEA; however, this may require minor adjustments to the [3D printed part](https://www.notion.so/vectorwang/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl).
-- **Batteries**: You can use **other batteries**, but ensure the maximum output capacity can adequately power 2 arms, 3 wheels, and a RaspberryPi (~160W).
+- **Batteries**: You can use **other batteries**, but ensure the maximum output capacity can adequately power 2 arms and 3 wheels(~120W=60W*2 ports) (and a RaspberryPi (40W) if you have one).
 - **Electronics**: You can use any brand of cables (USB-C cable must be fast-charging type), microSD card, and Raspberry Pi 5 as long as they are compatible.
 
 ## 🧩 Optional Add-ons 
 
-- 🙌Dual-arm leader-follower joint control: Additional two [SO100 arm sets](https://github.com/TheRobotStudio/SO-ARM100/tree/main) for dual-arm leader-follower joint control
+- 🫱Soft Gripper Design: The .3mf file contains soft finray fingers that need to be printed with TPU95A. If you want original SO101 finger, just download the original SO101 .stl file.
+- ![d2e57534a9e55a3d4dc0d644242cd044](https://github.com/user-attachments/assets/8d095541-d98f-4af8-a43c-028baae0d375)
 - ✊Better grip stability: [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (got it from [UMI gripper specifications](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit?tab=t.0#heading=h.5k5vwx2iqjqg))
+- 🙌Dual-arm leader-follower joint control: Additional two [SO100 arm sets](https://github.com/TheRobotStudio/SO-ARM100/tree/main) for dual-arm leader-follower joint control
+
 - 👀VR control: Meta Quest 3 (or 3S)
-- Tactile sensors: E-flesh
 - For more add-ons and accessories, check out the [SO100 arm repository](https://github.com/TheRobotStudio/SO-ARM100/tree/main?tab=readme-ov-file#optional-hardware)

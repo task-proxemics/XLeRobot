@@ -1,8 +1,19 @@
 # Hardware
 
-## 🚀 Get Started 🚀
+## 💵 Total Cost 💵
 
-> I'm a hardware rookie myself, so I want to make this tutorial friendly for all fellow beginners.
+> Cost excludes 3D printing, tools, shipping, and taxes.
+> 
+
+| Price | US | EU | CN |
+| --- | --- | --- | --- |
+| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
+| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
+| + RasberryPi | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
+
+
+## 🚀 Get Started 🚀
 
 ##### [🛒 Bill of Material](getting_started/material)
 
@@ -14,16 +25,6 @@
 
 ---
 
-## 💵 Total Cost 💵
-
-> Cost excludes 3D printing, tools, shipping, and taxes.
-> 
-
-| Price | US | EU | CN |
-| --- | --- | --- | --- |
-| **Basic** (no RasPi, use your own laptop) | **~$660** | **~€680** | **~¥4000** |
-| **Standard** (webcam RGB head camera) | **~$750** | **~€770** | **~¥4500** |
-| **Pro** (RealSense RGBD head camera) | **~$960** | **~€980** | **~¥6000** |
 
 ```{toctree}
 :caption: Get started
