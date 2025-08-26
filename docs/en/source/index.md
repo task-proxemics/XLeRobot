@@ -63,11 +63,6 @@
 
 ## 🌟 Why XLeRobot? 🌟
 
-<video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 Let's break this down since **XLeRobot = XL + LeRobot**
 
 ### Why "LeRobot" Core?
@@ -92,10 +87,7 @@ World's largest low-cost robotics community featuring
 - ⚡ DIY mobile robots face power supply challenges, leading to complex wiring setups.
 - 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO-100/SO-101 configuration, enabling seamless code and policy transfer.
 
-### Overall Advantages/Goals of XLeRobot
-
-![image](https://github.com/user-attachments/assets/3feb1bc5-8f2b-489e-9dbf-841153ff222e)
-
+### Overall Advantages of XLeRobot
 
 - **Cost-effective** 💴: Complete build costs \$660, or upgrade from existing SO100Arm and Lekiwi for \$250.
 - **Easy upgrade** ⏫ (physical and electrical) for **Lekiwi** and **SO-100/SO-101**
@@ -156,7 +148,7 @@ If you want, you can cite this work with:
 
 ```
 @misc{wang2025xlerobot,
-    author = {Wang, Gaotian},
+    author = {Wang, Gaotian and Lu, Zhuoyi},
     title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
     howpublished = "\\url{<https://github.com/Vector-Wangel/XLeRobot>}",
     year = {2025}

@@ -47,5 +47,11 @@
 
 Demo made by Mitchell Chen
 
+### First Demo 0.1.0 (where XLeRobot started)
+
+<video width="100%" style="max-width: 100%;" controls>
+  <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Community
