@@ -10,6 +10,8 @@ As well as the agent/robots/init.py
 
 ## Run the examples
 
+for the newer version, you need to add the robot id in the command. For example, if you want to run a single-arm version of XLeRobot:
+
 ```
 python -m mani_skill.examples.demo_ctrl_action_ee_keyboard_single -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot_single"  --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos"
 ```
