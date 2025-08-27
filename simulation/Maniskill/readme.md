@@ -2,7 +2,7 @@ Here's the urdf files, assets, and EE control codes in Maniskill.
 
 ## Update
 
-XLeRobot files are exclusively listed instead of borrowing fetch's name. So there are a few more modifications need to be done to run XLeRobot in the ReplicaCAD scene.
+XLeRobot files are exclusively listed instead of borrowing fetch's name. So there are a few more modifications need to be done to run XLeRobot in the ReplicaCAD scene, in addtion to the [previous tutorial](https://xlerobot.readthedocs.io/en/latest/simulation/getting_started/index.html) 
 
 For new robot ids, you need to add them to ReplicaCAD scene first.
 <img width="798" height="583" alt="image" src="https://github.com/user-attachments/assets/b5a6832b-73bf-489e-9a71-fd0fb13146a3" />
