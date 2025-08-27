@@ -160,11 +160,11 @@ class SceneManipulationEnv(BaseEnv):
 
     @property
     def _default_human_render_camera_configs(self):
-        if self.robot_uids == "fetch":
-            # 只保留机器人视角相机，移除房间视角相机
+        if self.robot_uids == "fetch" or self.robot_uids == "xlerobot_single" or self.robot_uids == "xlerobot":
+
             robot_camera_pose = sapien_utils.look_at([1, 0, 0.6], [0, 0, 0.3])
             robot_camera_config = CameraConfig(
-                "render_camera",  # 改为render_camera，这样render_main就会显示这个视角
+                "render_camera",  
                 robot_camera_pose,
                 640,
                 480,

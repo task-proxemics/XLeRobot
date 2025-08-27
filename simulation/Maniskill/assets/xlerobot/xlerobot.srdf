@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="fetch">
+<robot name="xlerobot">
     <!-- for motion planner libs that read srdfs disable adjacent collisions -->
     <disable_collisions link1="Base" link2="Rotation_Pitch" reason="Adjacent"/>
     <disable_collisions link1="Rotation_Pitch" link2="Upper_Arm" reason="Adjacent"/>
