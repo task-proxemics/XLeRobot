@@ -42,7 +42,7 @@
 > [!NOTE] 
 > Cost excludes 3D printing, tools, shipping, and taxes.
 
-| Price | US | EU | CN |
+| Price (Buy all the parts yourself) | US | EU | CN |
 | --- | --- | --- | --- |
 | **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
 | ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
