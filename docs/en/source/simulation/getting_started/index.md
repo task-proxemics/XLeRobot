@@ -1,12 +1,5 @@
 # Get Started
 
-Here's the full video for keyboard EE control
-
-<video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/b8e630bd-1133-4941-acd1-d974f60098ff" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 ### Prerequisites
 
 - Ubuntu operating system
@@ -20,7 +13,7 @@ Here's the full video for keyboard EE control
 If you already have a `lerobot` conda environment, you can use that. Otherwise, create a new environment:
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.11
 conda activate lerobot
 
 ```
@@ -53,7 +46,7 @@ Familiarize yourself with ManiSkill using the [quickstart guide](https://maniski
 Try this command to test whether you have successfully installed Maniskill:
 
 ```{note}
-Change shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
+Change shader="rt-fast" to "default" for faster rendering or if your computer doesn't support ray-tracing rendering.
 ```
 
 ```bash
@@ -68,15 +61,18 @@ And you should be looking at something like this:
 
 #### 3. Additional Dependencies
 
-We use pygame to read keyboard input and show the control panel in real time, and Rerun to visualize and collect camera data.
+We use **pygame** to read keyboard input and show the control panel in real time, and **Rerun** to visualize and collect camera data.
 
 ```bash
 pip install pygame
 pip install rerun-sdk
 ```
 
-#### 4. Replace Robot Files
+#### 4. Put XLeRobot Files to Maniskill
 
+```{note}
+We are expecting Maniskill to offer official support for XLeRobot soon, after that this step can be skipped.
+```
 
 Navigate to the ManiSkill package folder in your conda environment:
 
@@ -84,40 +80,66 @@ Navigate to the ManiSkill package folder in your conda environment:
 cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 ```
 
-Replace the fetch robot code and assets with the XLeRobot files:
+Put the XLeRobot files into Maniskill folders:
 
 1. Download the [**replacement files for XLeRobot** here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
-2. Replace the files in /agents, /assets, and /envs/scenes:
+2. Put the files in /agents, /assets, and /envs/scenes:
     
     ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
     
     ![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
+
+   After putting XLeRobot description files to /agents, add this line to init.py in /agents
+   ![image](https://github.com/user-attachments/assets/89c8fd71-2306-4963-8717-257795d8f8f1")
     
-3. Add control codes to /examples:
+4. Add the control codes to /examples:
     
     ![image](https://github.com/user-attachments/assets/654556ab-473f-44d2-8ff7-107c346882c6)
     
+5. Modify scenebulider.py: For new robot ids, you need to add them to ReplicaCAD scene first.
+
+   ![image](https://github.com/user-attachments/assets/b5a6832b-73bf-489e-9a71-fd0fb13146a3)
+
 
 #### Get Moving
 
 ```{note}
-Change shader="rt-fast" to "default" if your computer doesn't support ray-tracing rendering.
+Change shader="rt-fast" from "default" for photo-realisitic ray-tracing rendering (but slower).
 ```
 
 ##### Joint Control
 
 ```bash
-python -m mani_skill.examples.demo_ctrl_action -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
+python -m mani_skill.examples.demo_ctrl_action -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos_dual_arm"
 
 ```
 ![image](https://github.com/user-attachments/assets/11f6d417-9d1b-45d7-84c7-58b9d1611922)
 
 
-##### End Effector Control with Camera Visualization via Rerun
+
+##### End Effector Control 
+
+Original dual-arm version:
 
 ```bash
-python -m mani_skill.examples.demo_ctrl_action_ee_cam_rerun -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
+python -m mani_skill.examples.demo_ctrl_action_ee_keyboard -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos_dual_arm"
 
 ```
+
+Single-arm version:
+
+```
+python -m mani_skill.examples.demo_ctrl_action_ee_keyboard_single -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot_single"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos"
+```
+
+With Camera Visualization via Rerun:
+
+```bash
+python -m mani_skill.examples.demo_ctrl_action_ee_cam_rerun -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos_dual_arm"
+
+```
+
+
+
 ![image](https://github.com/user-attachments/assets/12129988-e386-4d71-b1b2-79fe8492f419)
 
