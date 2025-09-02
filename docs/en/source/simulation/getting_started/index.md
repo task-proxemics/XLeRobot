@@ -90,7 +90,7 @@ Put the XLeRobot files into Maniskill folders:
     ![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
 
    After putting XLeRobot description files to /agents, add this line to init.py in /agents
-   ![image](https://github.com/user-attachments/assets/89c8fd71-2306-4963-8717-257795d8f8f1")
+   ![image](https://github.com/user-attachments/assets/89c8fd71-2306-4963-8717-257795d8f8f1)
     
 4. Add the control codes to /examples:
     
