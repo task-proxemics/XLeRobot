@@ -53,7 +53,10 @@ Skip this section if you already have these tools:
 
 - XLeRobot is designed for maximum power, which is why it only comes in a 12V version.
 - 17 motors = 12 for arms + 3 for base + 2 for head.
-
+- Any battery/power bank/power station that supports two 60W+ USB-C fast charging should work. Here are some other options (not tested), these brands should be available both in US and China.
+  - [UGREEN 300W 48000mAh Power Bank](https://www.ugreen.com/products/ugreen-300w-48000mah-portable-charger-power-bank?gad_source=1&gad_campaignid=22334559506&gbraid=0AAAAAokPG3uYEJ4xHLZ1A5FoS_1cCYYRO&gclid=CjwKCAjwq9rFBhAIEiwAGVAZP_WRyKyLoZsEkLylqFw3KlfsLzoJ5NMiHtnRrRCAHs69uGl3R8McnBoCL-gQAvD_BwE)
+  - [Anker Laptop Power Bank (25K, 165W)](https://www.anker.com/products/a1695-anker-power-bank-25000mah-165w?variant=44320657997974&utm_source=google&utm_medium=pmax&utm_campaign=us_anker_charger_conversion_pmax_seasonal_purchase_ost&utm_content=seasonal&utm_term=%7B20274825774%7D_%7B%7D_%7B%7D&gad_source=1&gad_campaignid=20284126303&gbraid=0AAAAADbnO27MKKh2JRMESwKW-MVxtoKEL&gclid=CjwKCAjwq9rFBhAIEiwAGVAZPyQRpShyzLVCZCrWArnCPk8fVGbShtkYDsQmfMCKwbmLKyY12u9N_xoCKC0QAvD_BwE)
+  - [AOHI 240W Laptop Power Bank 27600mAh](https://a.co/d/aW8lNc2)
 ## 💻 Electronics
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) |
