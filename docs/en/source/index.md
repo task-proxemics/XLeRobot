@@ -48,12 +48,11 @@
 - 2025-08-30: XLeRobot 0.3.0 Release with final touchup and household chores showcases. 
 Assembly kit ready for purchase soon, stay tuned!
 
-- 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox controller/Switch joycon** in the wild. 
-All bluetooth, no wifi needed and zero latency.
+- 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox/Switch joycon** in the wild (bluetooth, no wifi, 0 latency).
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
 
 
-- 2025-07-08: [**Maniskill Simulation**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) with URDFs, control scripts (support Quest3 VR, keyboard, Xbox controller, Switch Joycon). 
+- 2025-07-08: [**Maniskill Simulation**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) with URDFs, control scripts (support Quest3 VR, keyboard, Xbox, Switch Joycon). 
 Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA environments. Get started in 15 min.
 -  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
 
@@ -143,7 +142,7 @@ However, with all considered — cost, community support, ease of assembly, and 
 **👋 Want to contribute?**
 Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on how to get involved!
 
-** Main Contributors
+** Main Contributors **
 
 - [Gaotian/Vector Wang](https://vector-wangel.github.io/)(myself)
 - Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
