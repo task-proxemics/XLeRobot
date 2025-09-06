@@ -45,18 +45,21 @@
 
 ## 📰 News 
 
-- 2025-08-30: XLeRobot 0.3.0 Release with final outfit touch up and household chores showcase demos. Assembly kit ready for purchase soon, stay tuned!
+- 2025-08-30: XLeRobot 0.3.0 Release with final touchup and household chores showcases. 
+Assembly kit ready for purchase soon, stay tuned!
 
-- 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox controller/Switch joycon** in the wild anywhere. All bluetooth, no wifi needed and zero latency.
+- 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox controller/Switch joycon** in the wild. 
+All bluetooth, no wifi needed and zero latency.
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
 
 
-- 2025-07-08: [**Simulation**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) with updated urdfs, control scripts (support Quest3 VR, keyboard, Xbox controller, switch joycon), support for new hardware and cameras, RL environment. Get started in 15 min.
+- 2025-07-08: [**Maniskill Simulation**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) with URDFs, control scripts (support Quest3 VR, keyboard, Xbox controller, Switch Joycon). 
+Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA environments. Get started in 15 min.
 -  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
 
 - 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more orgainized turotials, demos and resources.
 
-- 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup, the 1st version fully capable for autonomous household tasks, starts from 660$. 
+- 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup fully capable for household tasks, with 660$ cost. 
 
 ---
 ## Cost
@@ -82,10 +85,8 @@ Assembly kit ready for purchase soon, stay tuned!
 - **Plug-&-Play** 🧩: Get robots running with simple pip install and a few lines of code.
 - **Thriving LeRobot Community** 🌍:
 World's largest low-cost robotics community featuring
-    - Multiple [State-Of-The-Art pretrained AI VLA models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
-    - 10k+ brilliant minds for brainstorming and discussions🧑‍🤝‍🧑.
-
-
+    - Multiple [SOTA VLA models🧠](https://huggingface.co/lerobot), datasets📊, and tools🔨 ready for deployment.
+    - 10k+ members for brainstorming and discussions🧑‍🤝‍🧑.
 
 
 ### Why "XL" Enhancement?
@@ -93,23 +94,22 @@ World's largest low-cost robotics community featuring
 ![image](https://github.com/user-attachments/assets/b48a0a41-7422-4f10-8dc6-a66a2fd746ad)
 
 - 🏠 The field/market lacks affordable, stable, dual-arm home robots that match LeRobot's ease of assembly.
-- 🖨️ Traditional 3D printed chassis suffer from limited durability, stability, and load capacity—making them impractical for daily use.
+- 🖨️ Traditional 3D printed chassis suffer from limited durability, stability, and load capacity — impractical for daily use.
 - ⚡ DIY mobile robots face power supply challenges, leading to complex wiring setups.
-- 🤖 **XLeRobot** maintains compatibility with the LeRobot community's tabletop dual-arm SO-101 configuration, enabling seamless code and policy transfer.
 
-### Overall Advantages of XLeRobot
+### Overall Advantages
 
-- **Cost-effective** 💴: Complete build costs \$660, or upgrade from existing SO100Arm and Lekiwi for \$250.
+- **Cost-effective** 💴: Complete build costs \$660, or directly upgrade from your SO101 Arm and Lekiwi for \$250.
 - **Easy upgrade** ⏫ from **Lekiwi** and **SO-100/SO-101**
-    - Hardware: No motor ID changes or hardware mods needed
-    - Software: Identical tabletop single/dual-arm setup—transfer your policies directly from SO-101 arm
-- **Practical and reliable** 💪: Performs many daily tasks comparable to $30,000 market alternatives.
-    - More tasks demonstrated in the LeRobot hackathon in [Shenzhen](https://www.youtube.com/watch?v=_r9v04Rc3xA&ab_channel=SeeedStudio), [Shanghai](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio) and [San Jose](https://www.youtube.com/watch?v=QvzhsDliGII&ab_channel=SeeedStudio)([Winners](https://www.hackster.io/contests/embodiedAI#winners)), and the [first one](https://www.youtube.com/watch?v=i3D94400vq0&ab_channel=HuggingFace).
+    - Hardware: No motor ID changes or mods needed
+    - Software: Same tabletop single/dual-arm setup—transfer your policies directly from SO101 arm
+- **Practical and reliable** 💪: Performs many daily tasks comparable to $30,000 closed-source robots.
+    - More tasks demonstrated in the [**Huggingface LeRobot World-wide Hackathon**](https://huggingface.co/spaces/LeRobot-worldwide-hackathon/all-winners).
     - **Note**: Not currently designed for in-hand dexterity 🤹, heavy lifting (over 1kg per arm) 🏋️, or highly dynamic movements (catch ball) 🏃
 - **Rich open-source resources** 📕
     - LeRobot's plug-and-play code🧩 and extensive AI model library🧠
     - Backed by an active, growing community of contributors🧑‍🤝‍🧑
-- **⚠️Safety always matters⚠️**: XLeRobot has inherent physical hardware limitations (low-torque motors, short arm length, wheel-based) that make it physically almost incapable of harming humans, while still maintaining its ability to perform many household tasks.
+- **⚠️Safety always matters⚠️**: XLeRobot has inherent physical hardware limitations (low-torque motors, short arm length, wheel-based), making it **physically** almost incapable of harming humans, while still maintaining its ability to perform many household tasks.
   
 
 ---
@@ -130,12 +130,11 @@ World's largest low-cost robotics community featuring
 
 (Hey, for this price, what more could you ask for?)
 
-- 🔒 Fixed height—adding a stable lifting platform would significantly increase costs and assembly difficulty
+- 🔒 Fixed height—adding a stable lifting platform would significantly increase cost and assembly difficulty
 - 📏 Smaller workspace compared to Aloha—while we try to maximize the SO101 workspace, the arm has size limitations (~40cm reach), though XLeRobot still handles most tasks effectively
-- ⚖️ Limited payload capacity for a single arm
-- 🛒 Base movement precision may be affected by the IKEA cart wheels—this can be addressed through closed-loop feedback control
+- ⚖️ Limited payload capacity (600~1000g) for a single arm
 
-All things considered—cost, community support, ease of assembly, and practical utility—XLeRobot stands out as one of the most compelling low-cost robot for indoor application!
+However, with all considered — cost, community support, ease of assembly, and practical utility — XLeRobot stands out as one of the most compelling low-cost robot for indoor application!
 
 ---
 
@@ -149,7 +148,7 @@ Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on how to get in
 - [Gaotian/Vector Wang](https://vector-wangel.github.io/)(myself)
 - Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
 - Nicole Yue: Documentation website setup
-- Yuesong Wang: Mujoco simulation
+- Yuesong Wang: Mujoco simulation assets
 
 This is just a small brick in the pyramid, made possible by [LeRobot](https://github.com/huggingface/lerobot), [SO-100](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), and [Bambot](https://github.com/timqian/bambot). Thanks to all the talented contributors behind these detailed and professional projects.
 
