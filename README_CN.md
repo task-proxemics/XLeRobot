@@ -22,24 +22,44 @@
   <img width="1725" height="1140" alt="front" src="https://github.com/user-attachments/assets/f9c454ee-2c46-42b4-a5d7-88834a1c95ab" />
 </a>
 
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/17e31979-bd5e-4790-be70-566ea8bb181e" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/96ff4a3e-3402-47a2-bc6b-b45137ee3fdd" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/f6d52acc-bc8d-46f6-b3cd-8821f0306a7f" width="250"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/59086300-3e6f-4a3c-b5e0-db893eeabc0c" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/4ddbc0ff-ca42-4ad0-94c6-4e0f4047fd01" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/7abc890e-9c9c-4983-8b25-122573028de5" width="250"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/e74a602b-0146-49c4-953d-3fa3b038a7f7" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/d8090b15-97f3-4abc-98c8-208ae79894d5" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/8b54adc3-d61b-42a0-8985-ea28f2e8f64c" width="250"/></td>
+  </tr>
+</table>
+
 ## 💵 总成本 💵
 
 > [!NOTE] 
 > 成本不包括3D打印、工具、运费和税费。
 
-> [!NOTE] 
-> 目前我没有授权任何个体或组织售卖此产品（虽然开源项目法律上无限制）。目前正在筹备售卖kit中，大家敬请期待支持正版！
-
-| 价格 | 美国 | 欧盟 | 中国 |
+| 价格（自己购买所有零件） | 美国 | 欧盟 | 中国 |
 | --- | --- | --- | --- |
 | **基础版** (使用您的笔记本电脑，单目RGB头摄像头) | **~$660** | **~€680** | **~¥3999** |
 | ↑ 双目双眼RGB头摄像头 | +$30 | +€30 | +¥199 |
 | + 树莓派 | +$79 | +€79 | +¥399 |
 | ↑ RealSense RGBD头摄像头 | +$220 | +€230 | +¥1499 |
 
+> [!NOTE] 
+> 预计下周正式在淘宝京东售卖官方面向开发者的组装套件，大家敬请期待支持正版！
+
 ---
 
 # 📰 新闻 
+
+- 2025-08-30: XLeRobot 0.3.0 发布，最终外观完善和家庭杂务展示演示。组装套件即将开售，敬请期待！
 
 - 2025-07-30: [在现实生活中控制XLeRobot](https://xlerobot.readthedocs.io/en/latest/software/index.html)，使用**键盘/Xbox控制器/Switch joycon**在任何地方。全蓝牙连接，无需WiFi，零延迟。
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
@@ -67,15 +87,13 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a5ce-ef163c3abfd5
 4. 💻 **软件**: [让您的机器人动起来！](https://xlerobot.readthedocs.io/en/latest/software/index.html)
 
 ---
-### 关于我
 
-[Gaotian/Vector Wang](https://vector-wangel.github.io/)
+## 贡献
 
-我目前是莱斯大学的博士生，专注于鲁棒物体操作，我们提出虚拟笼子和漏斗以及物理感知世界模型来缩小Sim2real差距，在不确定性下实现鲁棒操作。我的一篇论文《Caging in Time》最近被《国际机器人研究杂志》(IJRR)接受。
+**👋 想要为XLeRobot做贡献？**
+请参考 [CONTRIBUTING.md](CONTRIBUTING.md) 了解如何参与！
 
-我构建XLeRobot作为个人爱好来实例化我的研究理论，同时也为对机器人和具身AI感兴趣的人提供一个低成本平台。
-
-## 主要贡献者
+**主要贡献者**
 
 - Zhuoyi Lu: RL sim2real部署，真实机器人远程操作（Xbox、VR、Joycon）
 - Nicole Yue: 文档网站搭建
@@ -84,6 +102,15 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a5ce-ef163c3abfd5
 这只是金字塔中的一小块砖，得益于[LeRobot](https://github.com/huggingface/lerobot)、[SO-100](https://github.com/TheRobotStudio/SO-ARM100)、[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi)和[Bambot](https://github.com/timqian/bambot)。感谢这些详细而专业项目背后的所有才华横溢的贡献者。
 
 期待与任何有兴趣为这个项目做贡献的人合作！
+
+---
+## 关于我
+
+[Gaotian/Vector Wang](https://vector-wangel.github.io/)
+
+我是莱斯大学的CS博士生，专注于鲁棒物体操作，我们提出虚拟笼子和漏斗以及物理感知世界模型来缩小Sim2real差距，在不确定性下实现鲁棒操作。我的一篇论文《Caging in Time》最近被《国际机器人研究杂志》(IJRR)接受。
+
+我构建XLeRobot作为个人爱好来实例化我的研究理论，同时也为对机器人和具身AI感兴趣的人提供一个低成本平台。
 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Vector-Wangel/XLeRobot&type=Timeline)](https://star-history.com/#Vector-Wangel/XLeRobot&Timeline)
@@ -107,3 +134,5 @@ https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a5ce-ef163c3abfd5
 
 > [!NOTE]
 > 如果您基于此仓库构建、购买或开发XLeRobot，您将对其对您或他人造成的所有身体和精神损害承担全部责任。
+
+---![Generated Image August 27, 2025 - 4_58PM](https://github.com/user-attachments/assets/682ef049-bb42-4b50-bf98-74d6311e774d)
