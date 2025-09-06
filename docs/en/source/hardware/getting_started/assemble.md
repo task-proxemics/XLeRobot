@@ -26,7 +26,7 @@ If you'd rather skip the fun of tightening screws, you can also buy [pre-assembl
 
 ![image](https://github.com/user-attachments/assets/fc674d38-d703-40bd-87a2-a502af1b52c7)
 
-> Since the official lerobot codebase currently doesn't support motor configuring besides the arm, we use [Bambot](https://bambot.org/) instead.
+> Since the official lerobot codebase currently doesn't support motor configuring besides the arm, we use [Bambot](https://bambot.org/) instead (works on Windows and Mac, Linux needs 'sudo chmod 666 /dev/ttyACM0' first).
 >
 
 - Connect the motor you want to configure (one-by-one) to a control board, and directly connect tohe board to your computer. 
