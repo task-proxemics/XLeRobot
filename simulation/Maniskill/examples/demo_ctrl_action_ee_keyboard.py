@@ -106,9 +106,12 @@ def get_mapped_joints(robot):
         mapped_joints[9] = full_joints[10]
         mapped_joints[10] = full_joints[12]
         mapped_joints[11] = full_joints[14]
+
+        # Grippers
         mapped_joints[12] = full_joints[15]
         mapped_joints[13] = full_joints[16]
 
+        # Head
         mapped_joints[14] = full_joints[5]
         mapped_joints[15] = full_joints[8]
     
