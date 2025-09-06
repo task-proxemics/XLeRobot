@@ -84,19 +84,24 @@ Put the XLeRobot files into Maniskill folders:
 
 1. Download the [**XLeRobot Robot files** here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
 2. Put the files in /agents/robots, /assets/robots, and /envs/scenes:
-    
+   ![image](https://github.com/user-attachments/assets/59ae0104-7b9b-441a-a526-e9d0e2f99278)
+   
+   ![image](https://github.com/user-attachments/assets/a9107171-193b-485c-9620-f453e03f8f56)
 
+   ![image](https://github.com/user-attachments/assets/f3d6072e-225e-4fe8-8b58-4f99e63b0e22)
 
-   After putting XLeRobot description files to /agents, add this line to init.py in /agents
+   After putting XLeRobot robot description files to /agents/robots, add this line in /agents/robots/init.py
    ![image](https://github.com/user-attachments/assets/89c8fd71-2306-4963-8717-257795d8f8f1)
     
 4. Add the control codes to /examples:
     
-    ![image](https://github.com/user-attachments/assets/654556ab-473f-44d2-8ff7-107c346882c6)
-    
-5. Modify scenebulider.py: For new robot ids, you need to add them to ReplicaCAD scene first.
+    ![image](https://github.com/user-attachments/assets/7b3c955e-bfa2-403e-9eb5-a3b3f9b52117)
 
-   ![image](https://github.com/user-attachments/assets/b5a6832b-73bf-489e-9a71-fd0fb13146a3)
+    
+5. Modify utils/scene_builder/replicacad/scenebulider.py: For new robot ids, you need to add them to ReplicaCAD scene first.
+
+   ![image](https://github.com/user-attachments/assets/2beda6c3-71aa-4574-851b-e4e989fd4b6a)
+
 
 
 #### Get Moving
