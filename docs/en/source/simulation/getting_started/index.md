@@ -82,12 +82,10 @@ cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 
 Put the XLeRobot files into Maniskill folders:
 
-1. Download the [**replacement files for XLeRobot** here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
-2. Put the files in /agents, /assets, and /envs/scenes:
+1. Download the [**XLeRobot Robot files** here](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill):
+2. Put the files in /agents/robots, /assets/robots, and /envs/scenes:
     
-    ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
-    
-    ![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
+
 
    After putting XLeRobot description files to /agents, add this line to init.py in /agents
    ![image](https://github.com/user-attachments/assets/89c8fd71-2306-4963-8717-257795d8f8f1)
@@ -104,7 +102,7 @@ Put the XLeRobot files into Maniskill folders:
 #### Get Moving
 
 ```{note}
-Change shader="rt-fast" from "default" for photo-realisitic ray-tracing rendering (but slower).
+Change shader="default" to "rt-fast" for photo-realisitic ray-tracing rendering (but slower).
 ```
 
 ##### Joint Control
