@@ -2,7 +2,9 @@
 
 # Software
 
+## Prepare LeRobot with XLeRobot files
 
+Before getting started, copy all the codes of [XLeRobot config files](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src) to the corresponding place of lerobot.  
 
 ## Getting Started
 
@@ -15,6 +17,22 @@ All example scripts are located in the [`software/examples/`](https://github.com
 ```{note}
 For basic version of XLeRobot, you don't need a RasberryPi. Just use your laptop, and put it in the IKEA cart if you want to use the full system.
 ```
+
+## XLeRobot Full System Control
+
+### 5. Keyboard Teleoperation
+
+Complete system control including dual arms, mobile base, and head motors. Run [4_xlerobot_teleop_keyboard.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/4_xlerobot_teleop_keyboard.py) for comprehensive keyboard-based teleoperation of the entire XLeRobot system with separate key mappings for left arm, right arm, base movement, and head control.
+
+### 6. Xbox Controller Teleoperation  
+
+Intuitive gamepad control for the full XLeRobot system. Run [5_xlerobot_teleop_xbox.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/5_xlerobot_teleop_xbox.py) for Xbox controller-based teleoperation with ergonomic stick and trigger mappings for natural human-robot interaction.
+
+
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## SO100/SO101 Arm Control Examples
 
@@ -44,25 +62,7 @@ YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.
   Your browser does not support the video tag.
 </video>
 
-## XLeRobot Full System Control
-
-Before getting started, copy all the codes of [XLeRobot config files](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src) to the corresponding place of lerobot.  
-
-### 5. Keyboard Teleoperation
-
-Complete system control including dual arms, mobile base, and head motors. Run [4_xlerobot_teleop_keyboard.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/4_xlerobot_teleop_keyboard.py) for comprehensive keyboard-based teleoperation of the entire XLeRobot system with separate key mappings for left arm, right arm, base movement, and head control.
-
-### 6. Xbox Controller Teleoperation  
-
-Intuitive gamepad control for the full XLeRobot system. Run [5_xlerobot_teleop_xbox.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/5_xlerobot_teleop_xbox.py) for Xbox controller-based teleoperation with ergonomic stick and trigger mappings for natural human-robot interaction.
-
-
-<video width="100%" controls>
-  <source src="../_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-## Leader-follower Control Based-on Lekiwi
+## (Optional, not fully tested) Leader-follower Control Based-on Lekiwi
 
 ```{note}
 To test the single-arm version of XLeRobot with Lekiwi codes, you should detach the SO101 arm that doesn't share the same motor control board with the base, clamp it on your table and connect it to your PC to act as the leader arm.
