@@ -36,13 +36,13 @@ All example scripts are located in the [`software/examples/`](https://github.com
 For basic version of XLeRobot, you don't need a RaspberryPi. Just use your laptop, and put it in the IKEA cart if you want to use the full system.
 ```
 
-## SO100/SO101 Arm Control Examples
+## SO100/SO101 Arm Examples
 
-### 1. Keyboard Joint Control
+### Keyboard Joint Control
 
 The most basic control method using direct joint angle manipulation. Run `0_so100_keyboard_joint_control.py` for manual control of individual joint positions using keyboard inputs. This provides direct access to each joint's movement without inverse kinematics calculations.
 
-### 2. Keyboard End-Effector Control
+### Keyboard End-Effector Control
 
 Advanced control using inverse kinematics to move the end-effector in Cartesian space. Run `1_so100_keyboard_ee_control.py` for intuitive control where keyboard inputs control the end-effector position (X, Y coordinates) rather than individual joints.
 
@@ -51,11 +51,11 @@ Advanced control using inverse kinematics to move the end-effector in Cartesian 
   Your browser does not support the video tag.
 </video>
 
-### 3. Dual-Arm Keyboard Control
+### Dual-Arm Keyboard Control
 
 Simultaneous control of two SO100 arms connected via different serial ports (/dev/ttyACM0 and /dev/ttyACM1). Run `2_dual_so100_keyboard_ee_control.py` for coordinated dual-arm manipulation with separate keyboard mappings for each arm.
 
-### 4. Vision-based Object Following
+### Vision-based Object Following
 
 YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.py` to enable the robot to automatically follow detected objects (such as bottles) using computer vision. This demo requires no training and combines real-time object detection with end-effector control.
 
