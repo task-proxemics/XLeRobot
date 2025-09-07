@@ -102,7 +102,7 @@ Looking forward to collaborating with anyone interested in contributing to this 
 
 [Gaotian/Vector Wang](https://vector-wangel.github.io/)
 
-I am a CS graduate student at Rice University, focusing on robust object manipulation, where we propse virtual cages and funnels and physics-aware world models to close the Sim2real gap and achieve robust manipulation under uncertainties. One of my papers, Caging in Time, has recently been accepted by International Journal of Robotics Research (IJRR).
+I am a CS graduate student at Rice University [RobotPi Lab](https://robotpilab.github.io/), focusing on robust object manipulation, where we propse virtual cages and funnels and physics-aware world models to close the Sim2real gap and achieve robust manipulation under uncertainties. One of my papers, Caging in Time, has recently been accepted by International Journal of Robotics Research (IJRR).
 
 I built XLeRobot as a personal hobby to instantiate my research theory, also to provide a low-cost platform for people who are interested in robotics and embodied AI to work with. 
 
