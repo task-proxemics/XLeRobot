@@ -23,7 +23,7 @@ Suggested to test single arm teleop first
 All example scripts are located in the [`software/examples/`](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/examples) directory and can be run directly after proper setup and calibration.
 
 ```{note}
-For basic version of XLeRobot, you don't need a RasberryPi. Just use your laptop, and put it in the IKEA cart if you want to use the full system.
+For basic version of XLeRobot, you don't need a RaspberryPi. Just use your laptop, and put it in the IKEA cart if you want to use the full system.
 ```
 
 ## XLeRobot Full System Control
@@ -76,11 +76,11 @@ YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.
 To test the single-arm version of XLeRobot with Lekiwi codes, you should detach the SO101 arm that doesn't share the same motor control board with the base, clamp it on your table and connect it to your PC to act as the leader arm.
 ```
 ```{note}
-For mobile base version, you need a RasberryPi in advance.
+For mobile base version, you need a RaspberryPi in advance.
 ```
 
 Follow all of their [software instructions](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#b-install-software-on-pi) so you can:
--  [Install software on RasberryPi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#b-install-software-on-pi) and setup SSH 
+-  [Install software on RaspberryPi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#b-install-software-on-pi) and setup SSH 
 -  [Install LeRobot on PC](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#c-install-lerobot-on-laptop)
 -  [Update config](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#update-config)
 -  [Calibrate](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#e-calibration)
