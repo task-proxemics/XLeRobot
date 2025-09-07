@@ -15,10 +15,19 @@ Configure the motors for [SO101 arms](https://huggingface.co/docs/lerobot/so101#
 
 ## Prepare LeRobot with XLeRobot files
 
-Open the installed lerobot folder (if you directly pip install )
+Open the installed lerobot folder and:
 
+Move my analytical IK solver for SO101 robot to the /model folder
+![image](https://github.com/user-attachments/assets/87248f48-b118-470d-8e57-2b7111f054ed)
 
-Before getting started, copy all the codes of [XLeRobot config files](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src) to the corresponding place of lerobot.  
+Move xlerobot robot folder the /robots folder.
+![image](https://github.com/user-attachments/assets/335d571a-a14d-4466-b439-8384517f607b)
+
+```{note}
+If you want to build based on RaspberryPi, uncomment xlerobot_host and xlerobot_client in __init__.py.
+```
+Move all the example codes to /example folder.
+![image](https://github.com/user-attachments/assets/f6e89ff4-7361-408a-83c6-d320bb23da98)
 
 ## Getting Started
 
