@@ -1,4 +1,4 @@
-# XLeRobot 🤖
+# [XLeRobot 🤖](https://xlerobot.readthedocs.io/en/latest/index.html)
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
