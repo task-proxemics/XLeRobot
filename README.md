@@ -1,4 +1,4 @@
-# XLeRobot 🤖
+# [XLeRobot 🤖](https://xlerobot.readthedocs.io/en/latest/index.html)
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![中文](https://img.shields.io/badge/lang-中文-brown.svg)](README_CN.md)
@@ -62,7 +62,7 @@
 - 2025-07-08: [**Simulation**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) with updated urdfs, control scripts (support Quest3 VR, keyboard, Xbox controller, switch joycon), support for new hardware and cameras, RL environment. Get started in 15 min.
 -  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
 
-- 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more orgainized turotials, demos and resources.
+- 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more orgainized tutorials, demos and resources.
 
 - 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup, the 1st version fully capable for autonomous household tasks, starts from 660$. 
 
@@ -71,7 +71,7 @@
 ## 🚀 Get Started 🚀
 
 > [!NOTE] 
-> If you are totally new to programming, please spend at least a day to get yourself familiar with basic Python, Ubuntu and Github (with the help of Google and AI). At least you should know how to set up ubuntu system, git clone, pip install, use intepreters (VS Code, Cursor, Pycharm, etc.) and directly run commands in the terminals.
+> If you are totally new to programming, please spend at least a day to get yourself familiar with basic Python, Ubuntu and Github (with the help of Google and AI). At least you should know how to setup ubuntu system, git clone, pip install, use intepreters (VS Code, Cursor, Pycharm, etc.) and directly run commands in the terminals.
 
 1. 💵 **Buy your parts**: [Bill of Materials](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/material.html)
 2. 🖨️ **Print your stuff**: [3D printing](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/3d.html)
@@ -88,7 +88,8 @@ Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on how to get in
 
 **Main Contributors**
 
-- Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
+- [Gaotian/Vector Wang](https://vector-wangel.github.io/)
+- [Zhuoyi Lu](https://lzhuoyi.github.io/Zhuoyi_Lu.github.io/): RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
 - Nicole Yue: Documentation website setup
 - Yuesong Wang: Mujoco simulation
 
