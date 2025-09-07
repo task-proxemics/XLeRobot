@@ -2,11 +2,19 @@
 
 # Software
 
+## Prerequisites
+
+- Ubuntu(recommended, for future AI integration) or MacOS
+
+
 ## Prepare LeRobot with XLeRobot files
+
+pip install lerobot if you don't have one 
 
 Before getting started, copy all the codes of [XLeRobot config files](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src) to the corresponding place of lerobot.  
 
 ## Getting Started
+Suggested to test single arm teleop first 
 
 1. **Choose Control Method**: Start with joint control (example 0) for basic testing, then progress to end-effector control (example 1)
 2. **Advanced Features**: Try dual-arm control (example 2) or vision-based control (example 3) for more complex tasks
