@@ -79,11 +79,12 @@ To test the single-arm version of XLeRobot with Lekiwi codes, you should detach 
 For mobile base version, you need a RasberryPi in advance.
 ```
 
-Follow all of their [software instructions](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#b-install-software-on-pi) so you can:
--  [Install software on RasberryPi](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#b-install-software-on-pi) and setup SSH 
--  [Install LeRobot on PC](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#c-install-lerobot-on-laptop)
+Follow all of their [software instructions](https://huggingface.co/docs/lerobot/lekiwi) so you can:
+-  [Setup VNCviewer for RasberryPi](raspberry_pi_setup.md)
+-  [Install software on RasberryPi](https://huggingface.co/docs/lerobot/lekiwi#install-software-on-pi) and setup SSH 
+-  [Install LeRobot on PC](https://huggingface.co/docs/lerobot/installation)
 -  [Update config](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#update-config)
--  [Calibrate](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#e-calibration)
+-  [Calibrate](https://huggingface.co/docs/lerobot/il_robots#set-up-and-calibrate)
 
 
 
