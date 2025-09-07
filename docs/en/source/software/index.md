@@ -2,14 +2,23 @@
 
 # Software
 
-## Prerequisites
+## Install LeRobot 🤗
 
-- Ubuntu(recommended, for future AI integration) or MacOS
+To install LeRobot, follow the [official Installation Guide](https://huggingface.co/docs/lerobot/installation)
+
+pip install -e .
+
+```{note}
+It's recommended to use `pip install -e .` for a more convenient file transfer.
+```
+
+Configure the motors for [SO101 arms](https://huggingface.co/docs/lerobot/so101#configure-the-motors) and [other motors](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html#configure-motors) if you haven't done so.
 
 
 ## Prepare LeRobot with XLeRobot files
 
-pip install lerobot if you don't have one 
+Open the installed lerobot folder (if you directly pip install )
+
 
 Before getting started, copy all the codes of [XLeRobot config files](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src) to the corresponding place of lerobot.  
 
@@ -76,7 +85,7 @@ YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.
 To test the single-arm version of XLeRobot with Lekiwi codes, you should detach the SO101 arm that doesn't share the same motor control board with the base, clamp it on your table and connect it to your PC to act as the leader arm.
 ```
 ```{note}
-For mobile base version, you need a RaspberryPi in advance.
+To run mobile base version of Lekiwi, you need a RaspberryPi in advance.
 ```
 
 Follow all of their [software instructions](https://huggingface.co/docs/lerobot/lekiwi) so you can:
