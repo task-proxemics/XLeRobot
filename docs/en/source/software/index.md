@@ -6,8 +6,6 @@
 
 To install LeRobot, follow the [official Installation Guide](https://huggingface.co/docs/lerobot/installation)
 
-pip install -e .
-
 ```{note}
 It's recommended to use `pip install -e .` for a more convenient file transfer.
 ```
@@ -23,7 +21,10 @@ Open the installed lerobot folder (if you directly pip install )
 Before getting started, copy all the codes of [XLeRobot config files](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src) to the corresponding place of lerobot.  
 
 ## Getting Started
-Suggested to test single arm teleop first 
+
+```{note}
+If you haven't played with lerobot SO101 Arm before, it's recommended to test single arm setup teleop and play with it for a while first.
+```
 
 1. **Choose Control Method**: Start with joint control (example 0) for basic testing, then progress to end-effector control (example 1)
 2. **Advanced Features**: Try dual-arm control (example 2) or vision-based control (example 3) for more complex tasks
@@ -34,22 +35,6 @@ All example scripts are located in the [`software/examples/`](https://github.com
 ```{note}
 For basic version of XLeRobot, you don't need a RaspberryPi. Just use your laptop, and put it in the IKEA cart if you want to use the full system.
 ```
-
-## XLeRobot Full System Control
-
-### 5. Keyboard Teleoperation
-
-Complete system control including dual arms, mobile base, and head motors. Run [4_xlerobot_teleop_keyboard.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/4_xlerobot_teleop_keyboard.py) for comprehensive keyboard-based teleoperation of the entire XLeRobot system with separate key mappings for left arm, right arm, base movement, and head control.
-
-### 6. Xbox Controller Teleoperation  
-
-Intuitive gamepad control for the full XLeRobot system. Run [5_xlerobot_teleop_xbox.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/5_xlerobot_teleop_xbox.py) for Xbox controller-based teleoperation with ergonomic stick and trigger mappings for natural human-robot interaction.
-
-
-<video width="100%" controls>
-  <source src="../_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## SO100/SO101 Arm Control Examples
 
@@ -78,6 +63,36 @@ YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.
   <source src="../_static/videos/Real_demos/yolo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+## XLeRobot Teleop
+
+### Keyboard Teleop
+
+Complete system control including dual arms, mobile base, and head motors. Run [4_xlerobot_teleop_keyboard.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/4_xlerobot_teleop_keyboard.py) for comprehensive keyboard-based teleoperation of the entire XLeRobot system with separate key mappings for left arm, right arm, base movement, and head control.
+
+### Xbox Controller Teleop
+
+Intuitive gamepad control for the full XLeRobot system. Run [5_xlerobot_teleop_xbox.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/5_xlerobot_teleop_xbox.py) for Xbox controller-based teleoperation with ergonomic stick and trigger mappings for natural human-robot interaction.
+
+
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Switch Joycon Teleop
+
+### VR Teleop
+
+You can try [controlling XLeRobot with VR in simulation](https://xlerobot.readthedocs.io/en/latest/simulation/getting_started/vr_sim.html) first. The offical code for VR teleop the real robot is coming soon. 
+
+## Reinforcenment Learning (RL)
+
+You can try [lerobot-sim2real (by Stone Tao)](https://github.com/StoneT2000/lerobot-sim2real) with Maniskill, or [huggingface official tutorial on HIL-SERL](https://huggingface.co/docs/lerobot/hilserl) on single SO101 arm first. The offcial code for complete XLeRobot RL is coming soon.
+
+## VLA
+
+You can follow [huggingface official VLA tutorial](https://huggingface.co/docs/lerobot/smolvla) on single SO101 arm first.  The offcial code for the complete XLeRobot VLA is coming soon.
 
 ## (Optional, not fully tested) Leader-follower Control Based-on Lekiwi
 
