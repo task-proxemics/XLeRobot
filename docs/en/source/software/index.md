@@ -79,7 +79,6 @@ You can check [Ultralytics official website](https://docs.ultralytics.com/models
 
 ### FAQ
 
-- Run 
 - If you are using Ubuntu, be sure to run `sudo chmod 666 /dev/ttyACM0` and `sudo chmod 666 /dev/ttyACM1` after plugging in the motor control board.
 - Then run `python lerobot/find_port.py` to check the control board ID. Then change the names correspondingly in
 - ![image](https://github.com/user-attachments/assets/19264425-8a67-465f-86ba-3c54ec13793e)
