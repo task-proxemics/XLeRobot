@@ -13,7 +13,7 @@ It's recommended to use `pip install -e .` for a more convenient file transfer.
 Configure the motors for [SO101 arms](https://huggingface.co/docs/lerobot/so101#configure-the-motors) and [other motors](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html#configure-motors) if you haven't done so.
 
 
-## Prepare LeRobot with XLeRobot files
+## Move XLeRobot files 
 
 Open the installed lerobot folder and:
 
@@ -29,20 +29,20 @@ If you want to build based on RaspberryPi, uncomment xlerobot_host and xlerobot_
 Move all the example codes to /example folder.
 ![image](https://github.com/user-attachments/assets/f6e89ff4-7361-408a-83c6-d320bb23da98)
 
-## Getting Started
+## Quick Guide
 
 ```{note}
 If you haven't played with lerobot SO101 Arm before, it's recommended to test single arm setup teleop and play with it for a while first.
 ```
 
-1. **Choose Control Method**: Start with joint control (example 0) for basic testing, then progress to end-effector control (example 1)
+1. **Choose Control Method**: Joint control (example 0) for basic motor testing, end-effector control for teleop (example 1 & 6)
 2. **Advanced Features**: Try dual-arm control (example 2) or vision-based control (example 3) for more complex tasks
-3. **Full System**: Use keyboard (example 4) or Xbox controller (example 5) teleoperation for complete robot control
+3. **Full System**: Use keyboard (example 4), Xbox controller (example 5), or Switch Joycon (example 7) for complete XLeRobot teleop
 
-All example scripts are located in the [`software/examples/`](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/examples) directory and can be run directly after proper setup and calibration.
+All example scripts are located in the [`software/examples/`](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/examples) directory and can be run directly after proper setup and calibration. Some examples needs additional calibration to ensure performance.
 
 ```{note}
-For basic version of XLeRobot, you don't need a RaspberryPi. Just use your laptop, and put it in the IKEA cart if you want to use the full system.
+For basic version of XLeRobot, you don't need a RaspberryPi. Just use your laptop and put it in the IKEA cart if you want to use the full system.
 ```
 
 ## SO100/SO101 Arm Examples
@@ -66,7 +66,9 @@ Simultaneous control of two SO100 arms connected via different serial ports (/de
 
 ### Vision-based Object Following
 
-YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.py` to enable the robot to automatically follow detected objects (such as bottles) using computer vision. This demo requires no training and combines real-time object detection with end-effector control.
+YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.py` to enable the robot to automatically follow detected objects (such as bottles) using computer vision. This demo requires no training and combines real-time object detection with end-effector control. 
+
+You can check [Ultralytics official website](https://docs.ultralytics.com/models/) to try all kinds of different Vision-related models and applications in an extremely easy way.
 
 <video width="100%" controls>
   <source src="../_static/videos/Real_demos/yolo.mp4" type="video/mp4">
@@ -74,6 +76,15 @@ YOLO-powered object detection and tracking system. Run `3_so100_yolo_ee_control.
 </video>
 
 ## XLeRobot Teleop
+
+### FAQ
+
+- Run 
+- If you are using Ubuntu, be sure to run `sudo chmod 666 /dev/ttyACM0` and `sudo chmod 666 /dev/ttyACM1` after plugging in the motor control board.
+- Then run `python lerobot/find_port.py` to check the control board ID. Then change the names correspondingly in
+- ![image](https://github.com/user-attachments/assets/19264425-8a67-465f-86ba-3c54ec13793e)
+- If you are having error of not detecting any motor after `sudo chmod ...`, try replugging the power cable.
+- If you are having error of `need 9 motors, but 8 detected`, you need to change the 
 
 ### Keyboard Teleop
 
@@ -91,13 +102,32 @@ Intuitive gamepad control for the full XLeRobot system. Run [5_xlerobot_teleop_x
 
 ### Switch Joycon Teleop
 
+- The Joycon teleop is built based the repo [joycon-robotics (by box2ai)](https://github.com/box2ai-robotics/joycon-robotics). So first you need to git clone that repo and install it following its guide (including installing external packages and make install). Then directly replace all the codes with [my modified version](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/joyconrobotics).
+
+- Based on my own experience, it's recommended to also run `sudo apt install joycond` and `sudo systemctl enable --now joycond` to ensure better bluetooth connection. 
+
+- Put your Joy-Con(s) in pairing mode: Hold down the small sync button on the side of the Joy-Con (between SR and SL buttons) until the lights (single dot) start flashing
+- Open Bluetooth settings: Go to Settings → Bluetooth (or use bluetoothctl from terminal).
+  - Look for "Joy-Con (L)" or "Joy-Con (R)" in the device list
+  - Click to pair each one, then you should see the lights (multiple dots) flashing
+  - Then press: Left: L (upper trigger) + Right: R (upper trigger) together, and you should see only the first light dot on both joycons is on, meaning the connection is successful.
+- You can run the test file `joycon_test_read.py` first to ensure successful connection.
+- Then you can run `6_so100_joycon_ee_control.py` for single SO101 arm control (only one joycon needed) as shown below, and `7_xlerobot_teleop_joycon.py` for the complete XLeRobot teleop (this is what I used for most of the teleoping home tasks in the 0.3.0 demo).
+
+
 ### VR Teleop
 
 You can try [controlling XLeRobot with VR in simulation](https://xlerobot.readthedocs.io/en/latest/simulation/getting_started/vr_sim.html) first. The offical code for VR teleop the real robot is coming soon. 
 
 ## Reinforcenment Learning (RL)
 
-You can try [lerobot-sim2real (by Stone Tao)](https://github.com/StoneT2000/lerobot-sim2real) with Maniskill, or [huggingface official tutorial on HIL-SERL](https://huggingface.co/docs/lerobot/hilserl) on single SO101 arm first. The offcial code for complete XLeRobot RL is coming soon.
+You can try [lerobot-sim2real (by Stone Tao)](https://github.com/StoneT2000/lerobot-sim2real) with Maniskill, or [huggingface official tutorial on HIL-SERL](https://huggingface.co/docs/lerobot/hilserl) on single SO101 arm first. The offcial code for complete XLeRobot RL is coming soon. The demo below shows the implementation of [lerobot-sim2real](https://github.com/StoneT2000/lerobot-sim2real), with minor changes to the camera direction and sim-object distribution. 
+
+
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/sim2real_2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## VLA
 
