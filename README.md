@@ -37,18 +37,6 @@
   </tr>
 </table>
 
-## 💵 Total Cost 💵
-
-> [!NOTE] 
-> Cost excludes 3D printing, tools, shipping, and taxes.
-
-| Price (Buy all the parts yourself) | US | EU | CN |
-| --- | --- | --- | --- |
-| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
-| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
-| + RasberryPi | +$79 | +€79 | +¥399 |
-| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
-
 ---
 
 # 📰 News 
@@ -70,6 +58,20 @@
 - 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more orgainized tutorials, demos and resources.
 
 - 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup, the 1st version fully capable for autonomous household tasks, starts from 660$. 
+
+---
+
+## 💵 Total Cost 💵
+
+> [!NOTE] 
+> Cost excludes 3D printing, tools, shipping, and taxes.
+
+| Price (Buy all the parts yourself) | US | EU | CN |
+| --- | --- | --- | --- |
+| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
+| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
+| + RasberryPi | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
 
 
 ---
