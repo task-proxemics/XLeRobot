@@ -54,7 +54,7 @@
 # 📰 News 
 
 - 2025-08-30: XLeRobot 0.3.0 Release with final outfit touch up and household chores showcase demos. Assembly kit ready for purchase in China (International link available tomorrow)!
-- ![0d3f4644af4d584747d32be107b61d19](https://github.com/user-attachments/assets/1ba9b140-1c9c-418d-be41-954cd9d1fa89)
+- <img src="https://github.com/user-attachments/assets/1ba9b140-1c9c-418d-be41-954cd9d1fa89" width="250"/>
 
 
 - 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox controller/Switch joycon** in the wild anywhere. All bluetooth, no wifi needed and zero latency.
