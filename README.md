@@ -53,6 +53,9 @@
 
 # 📰 News 
 
+- 2025-09-09: Joined [Embodied AI Home Robot Hackathon](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html)(Oct 25–26, Bay Area) held by **SEEED x Nvidia x Huggingface** as mentor! 
+- <img width="2400" height="1256" alt="image" src="https://github.com/user-attachments/assets/4132c23b-5c86-4bb9-94b4-a6b12059685b" />
+
 - 2025-08-30: XLeRobot 0.3.0 Release with final outfit touch up and household chores showcase demos. Assembly kit ready for purchase in China (International link available tomorrow)!
 - <img src="https://github.com/user-attachments/assets/1ba9b140-1c9c-418d-be41-954cd9d1fa89" width="250"/>
 
