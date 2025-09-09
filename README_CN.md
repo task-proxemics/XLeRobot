@@ -56,7 +56,8 @@
 
 # 📰 新闻 
 
-- 2025-08-30: XLeRobot 0.3.0 发布，最终外观完善和家庭杂务展示演示。组装套件即将开售，敬请期待！
+- 2025-08-30: XLeRobot 0.3.0 发布，最终外观完善和家庭杂务展示演示。组装套件已开售（中国区，海外明日上线）！
+-  <img src="https://github.com/user-attachments/assets/1ba9b140-1c9c-418d-be41-954cd9d1fa89" width="250"/>
 
 - 2025-07-30: [在现实生活中控制XLeRobot](https://xlerobot.readthedocs.io/zh-cn/latest/software/index.html) 使用**键盘/Xbox控制器/Switch joycon**在任何地方。全蓝牙连接，无需WiFi，零延迟。
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
