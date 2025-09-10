@@ -43,7 +43,7 @@
 </video>
 
 ## 📰 新闻 
-
+- 2025-09-09: [中国区淘宝开发者组装套件](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ)已开售（仅为方便开发者搭建，我个人不在售卖过程中获利）。
 - 2025-08-30: XLeRobot 0.3.0 发布，包含最终完善和家务展示。组装套件即将开售，敬请期待！
 
 - 2025-07-30: [控制XLeRobot在真实环境中](https://xlerobot.readthedocs.io/en/latest/software/index.html) 使用**键盘/Xbox/Switch joycon**（蓝牙，无需wifi，0延迟）。
