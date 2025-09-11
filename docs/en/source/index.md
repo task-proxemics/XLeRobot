@@ -45,8 +45,12 @@
 
 ## 📰 News 
 
-- 2025-08-30: XLeRobot 0.3.0 Release with final touchup and household chores showcases. 
-Assembly kit ready for purchase soon, stay tuned!
+- 2025-09-09: **Developer Assembly kit ready for purchase** [in China](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ). World-wide purchase link out in 2 days.
+  - Non-profit, only for more convenient accessiblity. I personally don't earn any from this.
+- 2025-09-09: Joined [Embodied AI Home Robot Hackathon](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (Oct 25–26, Bay Area) held by **SEEED x Nvidia x Huggingface** as mentor! [Register HERE](https://docs.google.com/forms/d/e/1FAIpQLSdYYDegdgIypxuGJNLcoc8kbdmU4jKgl49zg4X-107LAmBN4g/viewform).
+- <img width="2400" height="1256" alt="image" src="https://github.com/user-attachments/assets/4132c23b-5c86-4bb9-94b4-a6b12059685b" />
+
+- 2025-08-30: XLeRobot 0.3.0 Release with final outfit touch up and household chores showcase demos. 
 
 - 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox/Switch joycon** in the wild (bluetooth, no wifi, 0 latency).
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
