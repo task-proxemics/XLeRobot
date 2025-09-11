@@ -44,7 +44,10 @@
 
 ## 📰 新闻 
 - 2025-09-09: [中国区淘宝开发者组装套件](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ)已开售（仅为方便开发者搭建，我个人不在售卖过程中获利）。
-- 2025-08-30: XLeRobot 0.3.0 发布，包含最终完善和家务展示。组装套件即将开售，敬请期待！
+- 2025-09-09: 作为导师团队之一参与由英伟达，Huggingface，SEEED联合举办的[具身智能家庭机器人黑客松](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (10.18-19深圳，10.25–26, 湾区)!.
+- <img width="1650" height="1101" alt="image" src="https://github.com/user-attachments/assets/89039122-e758-406b-b64b-72016e00285b" />
+
+- 2025-08-30: XLeRobot 0.3.0 发布，最终外观完善和家庭杂务展示演示。
 
 - 2025-07-30: [控制XLeRobot在真实环境中](https://xlerobot.readthedocs.io/en/latest/software/index.html) 使用**键盘/Xbox/Switch joycon**（蓝牙，无需wifi，0延迟）。
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
