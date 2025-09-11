@@ -40,7 +40,7 @@
 ---
 
 # 📰 News 
-- 2025-09-09: **Developer Assembly kit (excluding battery and IKEA cart) ready for purchase** in [China (Taobao) for **3699￥**](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ) and [world-wide for **579\$**](https://shop.wowrobo.com/products/xlerobot-dual-arm-mobile-household-robot-kit?variant=47297659961561)
+- 2025-09-09: **Developer Assembly kit (excluding battery and IKEA cart) ready for purchase** in [China (Taobao) for **3699￥**](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ) and [world-wide for **579\$**](https://shop.wowrobo.com/products/xlerobot-dual-arm-mobile-household-robot-kit?variant=47297659961561). (In collaboration with **Wowrobo**, one of the official collaborators with Huggingface SO101 arm, they have sold 5k+ SO101 arm worldwide with great customer feedbacks.)
   - Non-profit, only for more convenient accessiblity. I personally don't earn any from this.
   - This is only the assembly kit for developers, please check documentation website and this repo for available codes and tutorials.
 - 2025-09-09: Joined [Embodied AI Home Robot Hackathon](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (Oct 25–26, Bay Area) held by **SEEED x Nvidia x Huggingface** as mentor! [Register HERE](https://docs.google.com/forms/d/e/1FAIpQLSdYYDegdgIypxuGJNLcoc8kbdmU4jKgl49zg4X-107LAmBN4g/viewform).
