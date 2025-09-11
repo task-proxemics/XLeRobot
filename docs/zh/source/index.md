@@ -43,7 +43,10 @@
 </video>
 
 ## 📰 新闻 
-- 2025-09-09: [中国区淘宝开发者组装套件](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ)已开售（仅为方便开发者搭建，我个人不在售卖过程中获利）。
+- 2025-09-09: **面向开发者的组装套件 (不包括电池和宜家推车) 正式上架** [中国 (淘宝) **3699￥**](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ) 和 [全球 **579\$**](https://shop.wowrobo.com/products/xlerobot-dual-arm-mobile-household-robot-kit?variant=47297659961561). _(与**Wowrobo**合作, Huggingface SO101 手臂官方合作商之一, 已在全球范围卖出 5千+ SO101 手臂，用户反馈好)_
+  <img width="1482" height="485" alt="image" src="https://github.com/user-attachments/assets/788836c1-966a-4d11-a911-5c37befc0b85" />
+  - 售卖套件仅为项目推广，我本人不从中获利，并要求wowrobo以尽可能低价售卖.
+  - 组装套件仅面向开发者，非消费级产品，请详细阅读文档和repo，确认目前可用的代码和教程后再购买.
 - 2025-09-09: 作为导师团队之一参与由英伟达，Huggingface，SEEED联合举办的[具身智能家庭机器人黑客松](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (10.18-19深圳，10.25–26, 湾区)!.
 - <img width="1650" height="1101" alt="image" src="https://github.com/user-attachments/assets/89039122-e758-406b-b64b-72016e00285b" />
 
