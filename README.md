@@ -40,7 +40,7 @@
 ---
 
 # 📰 News 
-- 2025-09-09: **Developer Assembly kit ready for purchase** [in China](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ). World-wide purchase link out in 2 days.
+- 2025-09-09: **Developer Assembly kit (excluding battery and IKEA cart) ready for purchase** [in China](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ). World-wide purchase link out in 2 days.
   - Non-profit, only for more convenient accessiblity. I personally don't earn any from this.
 - 2025-09-09: Joined [Embodied AI Home Robot Hackathon](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (Oct 25–26, Bay Area) held by **SEEED x Nvidia x Huggingface** as mentor! [Register HERE](https://docs.google.com/forms/d/e/1FAIpQLSdYYDegdgIypxuGJNLcoc8kbdmU4jKgl49zg4X-107LAmBN4g/viewform).
 - <img width="2400" height="1256" alt="image" src="https://github.com/user-attachments/assets/4132c23b-5c86-4bb9-94b4-a6b12059685b" />
