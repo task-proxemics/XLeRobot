@@ -98,6 +98,8 @@ Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on how to get in
 
 - [Gaotian/Vector Wang](https://vector-wangel.github.io/)
 - [Zhuoyi Lu](https://lzhuoyi.github.io/Zhuoyi_Lu.github.io/): RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
+- Yiyang Huang: RL & VLA implementation (ongoing)
+- YCP: WebUI for remote control (ongoing)
 - Nicole Yue: Documentation website setup
 - Yuesong Wang: Mujoco simulation
 
