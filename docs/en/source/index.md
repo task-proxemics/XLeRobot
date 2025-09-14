@@ -69,12 +69,12 @@ Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA env
 ---
 ## Cost
 
-| Price (Buy Parts Yourself) | US | EU | CN |
-| --- | --- | --- | --- |
-| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
-| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
-| + RaspberryPi | +$79 | +€79 | +¥399 |
-| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
+| Price (Buy Parts Yourself) | US | EU | CN | IN |
+| --- | --- | --- | --- | --- |
+| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** | **~₹87000** |
+| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 | +₹6550 |
+| + RaspberryPi | +$79 | +€79 | +¥399 | +₹7999 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 | +₹35726 |
 
 Assembly kit ready for purchase soon, stay tuned!
 
