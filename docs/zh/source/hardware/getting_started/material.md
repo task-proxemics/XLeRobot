@@ -37,13 +37,15 @@
 
 ## ⏫ 主要零件
 
+
 | 零件 | 数量 | 单价 (美国) | 购买 (美国) | 单价 (欧盟) | 购买 (欧盟) | 单价 (中国) | 购买 (中国) | 单价 (印度) | 购买 (印度) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| STS3215舵机 (12V) | 17 | $14 | [Wowrobo](https://shop.wowrobo.com/products/feetech-sts3215-servo-12v-30kg-high-torque-servo-for-so-arm100) | €13 | [Alibaba](https://www.alibaba.com/product-detail/6PCS-7-4V-STS3215-Servos-for_1600523509006.html) | ￥97 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) | ₹2097 | [Robu.in](https://robu.in/product/waveshare-30kg-serial-bus-servo/) |
+| STS3215舵机 (12V) | 17 | $14 | [Wowrobo](https://shop.wowrobo.com/products/feetech-sts3215-servo-12v-30kg-high-torque-servo-for-so-arm100) | €16 | [Aliexpress](https://www.aliexpress.com/item/1005009271910382.html) | ￥97 | [TaoBao](https://item.taobao.com/item.htm?id=712179366565&skuId=5268252241438) | ₹2097 | [Robu.in](https://robu.in/product/waveshare-30kg-serial-bus-servo/) |
 | 宜家RÅSKOG推车 | 1 | $39.99 | [IKEA](https://www.ikea.com/us/en/p/raskog-utility-cart-black-40582181/#content) | €39.99 | [IKEA](https://www.ikea.com/nl/en/p/raskog-trolley-white-30586783/) | ￥249 | [IKEA](https://www.ikea.cn/cn/zh/p/raskog-la-si-ke-shou-tui-che-bai-se-70376721/) | ₹2600 | [Amazon India](https://www.amazon.in/Ikea-R%C3%85SKOG-Trolley-0-35x0-45-Cotton/dp/B07SGJ2RSM) |
 | Anker SOLIX C300电源站 | 1 | $179.99 | [Anker](https://www.ankersolix.com/products/c300-dc?variant=49702163972426&ref=naviMenu_pps) | €169.99 | [Anker](https://www.anker.com/eu-en/products/a17260z1?variant=44598991323326&ref=naviMenu_pps) | ￥899 | [Taobao](https://e.tb.cn/h.6PQRiymMOteAgrb?tk=m6L3V3frrfp) | ₹27899 | [Ubuy India](https://www.ubuy.co.in/product/M62UNA548-solix-c300-portable-power-station-outdoor-288wh-lifepo4-battery-300w-600w-surge-solar-generator-140w-two-way-fast-charging-for-camping) |
 | 4英寸全向轮 | 3 | $9.99 | [VEX Robotics](https://www.vexrobotics.com/omni-wheels.html?srsltid=AfmBOorWdWT-FIiWSAbicYWSxqYr-d5X3CJSGxMkO33WO0thwlTn4DQu) | €24.5 | [RobotShop](https://eu.robotshop.com/products/100mm-omnidirectional-wheel-brass-bearing-rollers) | ￥135 | [PDD](https://mobile.yangkeduo.com/goods.html?ps=kKWPC7xuzw) | ₹4380 | [Robu.in](https://robu.in/product/100mm-double-aluminium-omni-wheel-bush-type-roller/) |
 | 桌夹 4个 | 1 | $8.99 | [Amazon](https://www.amazon.com/TAODAN-Trigger-Ratchet-Woodworking-Processes/dp/B0DJNXF8WH?rps=1&sr=1-18) | ~€8 | [TODO](https://www.notion.so/Bill-of-Material-21abb280f59380f48e49e5c51df2b37f?pvs=21) | ￥9.2 | [TaoBao](https://detail.tmall.com/item.htm?id=801399113134&skuId=5633627126649) | ₹772 | [Amazon India](https://www.amazon.in/HASTHIP%C2%AE-Two-Way-Woodworking-Trigger-Jigsaw/dp/B0BDDHN238/) |
+
 
 ![image](https://github.com/user-attachments/assets/ee012d47-f2a9-495c-a156-01bf92b2e63b)
 
