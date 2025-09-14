@@ -69,12 +69,12 @@
 > [!NOTE] 
 > Cost excludes 3D printing, tools, shipping, and taxes.
 
-| Price (Buy all the parts yourself) | US | EU | CN |
-| --- | --- | --- | --- |
-| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
-| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
-| + RasberryPi | +$79 | +€79 | +¥399 |
-| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
+| Price (Buy all the parts yourself) | US | EU | CN | IN |
+| --- | --- | --- | --- | --- |
+| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** | **~₹87000** |
+| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 | +₹6550 |
+| + RasberryPi | +$79 | +€79 | +¥399 | +₹7999 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 | +₹35726 |
 
 
 ---
