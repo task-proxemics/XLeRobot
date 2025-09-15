@@ -50,7 +50,7 @@ python -m mani_skill.utils.download_asset "ReplicaCAD"
 ```
 
 ```bash
-python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \\
+python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
   --render-mode="human" --shader="rt-fast"
 
 ```

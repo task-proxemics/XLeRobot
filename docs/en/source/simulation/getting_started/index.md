@@ -50,7 +50,7 @@ Change shader="rt-fast" to "default" for faster rendering or if your computer do
 ```
 
 ```bash
-python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \\
+python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulation-v1" \
   --render-mode="human" --shader="rt-fast"
 
 ```
