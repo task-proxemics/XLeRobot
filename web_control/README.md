@@ -6,7 +6,7 @@ XLeRobot Web Control provides a unified interface for controlling different type
 - **Simulator**: Support video streaming from robots in simulators (ManiSkill / MuJoCo)
 - **Real Hardware (On Progress)**: Direct control of physical robots via network/serial communication
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.11
