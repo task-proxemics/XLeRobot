@@ -26,7 +26,8 @@ XLEROBOT_SINGLE_BASE_COLLISION_BIT = 31
 @register_agent()
 class XlerobotSingle(BaseAgent):
     uid = "xlerobot_single"
-    urdf_path = f"{PACKAGE_ASSET_DIR}/robots/xlerobot/xlerobot_single.urdf"
+    # Use absolute path to local URDF file
+    urdf_path = "/home/maestry/PycharmProjects/XLeRobotWebControl/simulation/Maniskill/assets/xlerobot/xlerobot_single.urdf"
     urdf_config = dict(
         _materials=dict(
             gripper=dict(static_friction=2.0, dynamic_friction=2.0, restitution=0.0)
