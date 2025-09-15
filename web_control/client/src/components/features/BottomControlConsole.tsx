@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { 
-  ChevronUp, 
-  ChevronDown, 
-  ChevronLeft, 
-  ChevronRight, 
-  Square, 
-  AlertTriangle 
+import {
+  ChevronUp,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Square,
+  AlertTriangle,
+  RotateCcw
 } from 'lucide-react';
 
 interface BottomControlConsoleProps {
@@ -13,6 +14,7 @@ interface BottomControlConsoleProps {
   onSpeedChange: (speed: 'low' | 'medium' | 'high') => void;
   onQuickMove: (direction: string) => void;
   onEmergencyStop: () => void;
+  onResetCamera: () => void;
   telemetrySpeed: string;
   theme: 'light' | 'dark';
   connected: boolean;
@@ -23,96 +25,159 @@ interface JoystickPosition {
   y: number;
 }
 
+interface MovementState {
+  isActive: boolean;
+  direction: string | null;
+  intensity: number;
+}
+
 export function BottomControlConsole({
   speedLevel,
   onSpeedChange,
   onQuickMove,
   onEmergencyStop,
+  onResetCamera,
   telemetrySpeed,
   theme,
   connected
 }: BottomControlConsoleProps) {
   const [joystickActive, setJoystickActive] = useState(false);
   const [joystickPosition, setJoystickPosition] = useState<JoystickPosition>({ x: 0, y: 0 });
+  const [movementState, setMovementState] = useState<MovementState>({
+    isActive: false,
+    direction: null,
+    intensity: 0
+  });
+
   const joystickRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
+  const movementIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const buttonPressRef = useRef<string | null>(null);
 
-  // Virtual joystick functionality
-  const handleJoystickStart = useCallback((event: React.MouseEvent | React.TouchEvent) => {
+  // Continuous movement control
+  const startContinuousMovement = useCallback((direction: string, intensity: number = 1.0) => {
     if (!connected) return;
-    
-    setJoystickActive(true);
-    isDraggingRef.current = true;
-    
+
+    // Stop any existing movement
+    if (movementIntervalRef.current) {
+      clearInterval(movementIntervalRef.current);
+    }
+
+    setMovementState({
+      isActive: true,
+      direction,
+      intensity
+    });
+
+    // Send initial command immediately
+    onQuickMove(direction);
+
+    // Start interval for continuous commands (10Hz = 100ms interval)
+    movementIntervalRef.current = setInterval(() => {
+      onQuickMove(direction);
+    }, 100);
+  }, [connected, onQuickMove]);
+
+  const stopContinuousMovement = useCallback(() => {
+    if (movementIntervalRef.current) {
+      clearInterval(movementIntervalRef.current);
+      movementIntervalRef.current = null;
+    }
+
+    setMovementState({
+      isActive: false,
+      direction: null,
+      intensity: 0
+    });
+
+    // Send stop command
+    onQuickMove('stop');
+  }, [onQuickMove]);
+
+  // Virtual joystick functionality with continuous control
+  const updateJoystickPosition = useCallback((event: React.MouseEvent | React.TouchEvent | MouseEvent | TouchEvent) => {
     const rect = joystickRef.current?.getBoundingClientRect();
     if (!rect) return;
-    
+
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    
-    const clientX = 'touches' in event ? event.touches[0].clientX : event.clientX;
-    const clientY = 'touches' in event ? event.touches[0].clientY : event.clientY;
-    
+
+    const clientX = 'touches' in event ? event.touches[0].clientX : (event as MouseEvent).clientX;
+    const clientY = 'touches' in event ? event.touches[0].clientY : (event as MouseEvent).clientY;
+
     const deltaX = clientX - centerX;
     const deltaY = clientY - centerY;
-    
+
     const maxDistance = rect.width / 2 - 20;
     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    
-    if (distance <= maxDistance) {
-      setJoystickPosition({ x: deltaX, y: deltaY });
-      
-      // Send movement command based on joystick position
-      const normalizedX = deltaX / maxDistance;
-      const normalizedY = -deltaY / maxDistance; // Invert Y for intuitive control
-      
-      if (Math.abs(normalizedX) > 0.3 || Math.abs(normalizedY) > 0.3) {
-        let direction = 'stop';
-        if (Math.abs(normalizedY) > Math.abs(normalizedX)) {
-          direction = normalizedY > 0 ? 'forward' : 'backward';
-        } else {
-          direction = normalizedX > 0 ? 'right' : 'left';
-        }
-        onQuickMove(direction);
+
+    let finalX = deltaX;
+    let finalY = deltaY;
+
+    if (distance > maxDistance) {
+      const angle = Math.atan2(deltaY, deltaX);
+      finalX = Math.cos(angle) * maxDistance;
+      finalY = Math.sin(angle) * maxDistance;
+    }
+
+    setJoystickPosition({ x: finalX, y: finalY });
+
+    // Calculate direction and intensity
+    const normalizedX = finalX / maxDistance;
+    const normalizedY = -finalY / maxDistance; // Invert Y for intuitive control
+    const intensity = Math.min(distance / maxDistance, 1.0);
+
+    if (intensity > 0.3) { // Dead zone threshold
+      let direction = 'stop';
+      if (Math.abs(normalizedY) > Math.abs(normalizedX)) {
+        direction = normalizedY > 0 ? 'forward' : 'backward';
+      } else {
+        direction = normalizedX > 0 ? 'right' : 'left';
+      }
+
+      // Start or update continuous movement
+      if (!movementState.isActive || movementState.direction !== direction) {
+        startContinuousMovement(direction, intensity);
+      }
+    } else {
+      // In dead zone, stop movement
+      if (movementState.isActive) {
+        stopContinuousMovement();
       }
     }
-  }, [connected, onQuickMove]);
+  }, [startContinuousMovement, stopContinuousMovement, movementState]);
+
+  const handleJoystickStart = useCallback((event: React.MouseEvent | React.TouchEvent) => {
+    if (!connected) return;
+
+    setJoystickActive(true);
+    isDraggingRef.current = true;
+    updateJoystickPosition(event);
+  }, [connected, updateJoystickPosition]);
 
   const handleJoystickMove = useCallback((event: MouseEvent | TouchEvent) => {
     if (!isDraggingRef.current || !connected) return;
-    
-    const rect = joystickRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    
-    const clientX = 'touches' in event ? event.touches[0].clientX : event.clientX;
-    const clientY = 'touches' in event ? event.touches[0].clientY : event.clientY;
-    
-    const deltaX = clientX - centerX;
-    const deltaY = clientY - centerY;
-    
-    const maxDistance = rect.width / 2 - 20;
-    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    
-    if (distance <= maxDistance) {
-      setJoystickPosition({ x: deltaX, y: deltaY });
-    } else {
-      const angle = Math.atan2(deltaY, deltaX);
-      setJoystickPosition({
-        x: Math.cos(angle) * maxDistance,
-        y: Math.sin(angle) * maxDistance
-      });
-    }
-  }, [connected]);
+    updateJoystickPosition(event);
+  }, [connected, updateJoystickPosition]);
 
   const handleJoystickEnd = useCallback(() => {
     isDraggingRef.current = false;
     setJoystickActive(false);
     setJoystickPosition({ x: 0, y: 0 });
-    onQuickMove('stop');
-  }, [onQuickMove]);
+    stopContinuousMovement();
+  }, [stopContinuousMovement]);
+
+  // Direction button handlers with continuous control
+  const handleButtonPress = useCallback((direction: string) => {
+    if (!connected) return;
+    buttonPressRef.current = direction;
+    startContinuousMovement(direction, 1.0);
+  }, [connected, startContinuousMovement]);
+
+  const handleButtonRelease = useCallback(() => {
+    buttonPressRef.current = null;
+    stopContinuousMovement();
+  }, [stopContinuousMovement]);
 
   useEffect(() => {
     if (isDraggingRef.current) {
@@ -129,6 +194,22 @@ export function BottomControlConsole({
       document.removeEventListener('touchend', handleJoystickEnd);
     };
   }, [handleJoystickMove, handleJoystickEnd]);
+
+  // Cleanup movement intervals on unmount
+  useEffect(() => {
+    return () => {
+      if (movementIntervalRef.current) {
+        clearInterval(movementIntervalRef.current);
+      }
+    };
+  }, []);
+
+  // Auto-stop movement on disconnection
+  useEffect(() => {
+    if (!connected && movementState.isActive) {
+      stopContinuousMovement();
+    }
+  }, [connected, movementState.isActive, stopContinuousMovement]);
 
   const speedColors = {
     low: 'bg-green-500',
@@ -177,22 +258,34 @@ export function BottomControlConsole({
             <div className="grid grid-cols-3 gap-1">
               <div></div>
               <button
-                onClick={() => onQuickMove('forward')}
+                onMouseDown={() => handleButtonPress('forward')}
+                onMouseUp={handleButtonRelease}
+                onMouseLeave={handleButtonRelease}
+                onTouchStart={() => handleButtonPress('forward')}
+                onTouchEnd={handleButtonRelease}
                 disabled={!connected}
                 className={`w-8 h-8 rounded-md transition-all ${
                   theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
-                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''}`}
+                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''} ${
+                  movementState.isActive && movementState.direction === 'forward' ? 'ring-2 ring-blue-500 bg-blue-600 text-white' : ''
+                }`}
               >
                 <ChevronUp size={16} />
               </button>
               <div></div>
-              
+
               <button
-                onClick={() => onQuickMove('left')}
+                onMouseDown={() => handleButtonPress('left')}
+                onMouseUp={handleButtonRelease}
+                onMouseLeave={handleButtonRelease}
+                onTouchStart={() => handleButtonPress('left')}
+                onTouchEnd={handleButtonRelease}
                 disabled={!connected}
                 className={`w-8 h-8 rounded-md transition-all ${
                   theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
-                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''}`}
+                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''} ${
+                  movementState.isActive && movementState.direction === 'left' ? 'ring-2 ring-blue-500 bg-blue-600 text-white' : ''
+                }`}
               >
                 <ChevronLeft size={16} />
               </button>
@@ -206,22 +299,34 @@ export function BottomControlConsole({
                 <Square size={12} />
               </button>
               <button
-                onClick={() => onQuickMove('right')}
+                onMouseDown={() => handleButtonPress('right')}
+                onMouseUp={handleButtonRelease}
+                onMouseLeave={handleButtonRelease}
+                onTouchStart={() => handleButtonPress('right')}
+                onTouchEnd={handleButtonRelease}
                 disabled={!connected}
                 className={`w-8 h-8 rounded-md transition-all ${
                   theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
-                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''}`}
+                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''} ${
+                  movementState.isActive && movementState.direction === 'right' ? 'ring-2 ring-blue-500 bg-blue-600 text-white' : ''
+                }`}
               >
                 <ChevronRight size={16} />
               </button>
-              
+
               <div></div>
               <button
-                onClick={() => onQuickMove('backward')}
+                onMouseDown={() => handleButtonPress('backward')}
+                onMouseUp={handleButtonRelease}
+                onMouseLeave={handleButtonRelease}
+                onTouchStart={() => handleButtonPress('backward')}
+                onTouchEnd={handleButtonRelease}
                 disabled={!connected}
                 className={`w-8 h-8 rounded-md transition-all ${
                   theme === 'dark' ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
-                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''}`}
+                } flex items-center justify-center ${!connected ? 'opacity-50 cursor-not-allowed' : ''} ${
+                  movementState.isActive && movementState.direction === 'backward' ? 'ring-2 ring-blue-500 bg-blue-600 text-white' : ''
+                }`}
               >
                 <ChevronDown size={16} />
               </button>
@@ -267,8 +372,21 @@ export function BottomControlConsole({
             </div>
           </div>
 
-          {/* Right Section - Emergency Stop */}
+          {/* Right Section - Camera Reset & Emergency Stop */}
           <div className="flex items-center gap-4">
+            <button
+              onClick={onResetCamera}
+              disabled={!connected}
+              className={`flex items-center px-4 py-2 rounded-lg text-sm shadow-md transition-all transform hover:scale-105 active:scale-95 border-2 ${
+                connected
+                  ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-800'
+                  : 'bg-gray-400 text-gray-600 border-gray-500 cursor-not-allowed opacity-50'
+              }`}
+            >
+              <RotateCcw size={16} className="mr-2" />
+              Reset Camera
+            </button>
+
             <button
               onClick={onEmergencyStop}
               className="flex items-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-bold text-lg shadow-lg transition-all transform hover:scale-105 active:scale-95 border-2 border-red-800"

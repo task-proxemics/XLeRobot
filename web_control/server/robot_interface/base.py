@@ -67,6 +67,21 @@ class RobotController(ABC):
     async def set_arm_joint(self, arm: str, joint_index: int, angle: float) -> Dict[str, Any]:
         # Set arm joint angle
         pass
+
+    @abstractmethod
+    async def reset_camera(self) -> Dict[str, Any]:
+        # Reset camera to default view position
+        pass
+
+    @abstractmethod
+    async def set_camera_position(self, position: Tuple[float, float, float], target: Tuple[float, float, float] = None) -> Dict[str, Any]:
+        # Set camera position and target
+        pass
+
+    @abstractmethod
+    async def get_camera_info(self) -> Dict[str, Any]:
+        # Get current camera information (position, target, etc.)
+        pass
     
     # Common utility methods that can be overridden if needed
     
@@ -83,6 +98,7 @@ class RobotController(ABC):
         return {
             'movement': True,
             'camera': True,
+            'camera_control': True,
             'arm_control': True,
             'telemetry': True,
             'simulation': False,  # Override in simulation controllers

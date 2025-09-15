@@ -36,23 +36,23 @@ export const VideoStream: React.FC<VideoStreamProps> = ({
             img.onload = () => {
               ctx.drawImage(img, 0, 0, 640, 480);
               
-              // 显示帧信息
+              // Display frame info
               ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
               ctx.fillRect(0, 0, 200, 30);
               ctx.fillStyle = '#0f0';
               ctx.font = '14px monospace';
-              ctx.fillText(`帧: ${frameCount} | ${new Date().toLocaleTimeString()}`, 10, 20);
+              ctx.fillText(`Frame: ${frameCount} | ${new Date().toLocaleTimeString()}`, 10, 20);
             };
             img.src = `data:image/jpeg;base64,${data.frame}`;
           } else {
-            // 显示占位内容
+            // Display placeholder
             ctx.fillStyle = '#1f2937';
             ctx.fillRect(0, 0, 640, 480);
             ctx.fillStyle = '#fff';
             ctx.font = '20px system-ui';
-            ctx.fillText('等待视频流...', 240, 240);
+            ctx.fillText('Waiting for video stream...', 200, 240);
             
-            // 显示相机图标
+            // Display camera icon
             ctx.strokeStyle = '#4b5563';
             ctx.lineWidth = 2;
             ctx.strokeRect(280, 200, 80, 60);
@@ -83,7 +83,7 @@ export const VideoStream: React.FC<VideoStreamProps> = ({
   };
 
   return (
-    <Card title="视频流" className="h-fit">
+    <Card title="Video Stream" className="h-fit">
       <div className="flex items-center justify-between mb-4">
         <div className="flex space-x-2">
           <Button
@@ -93,7 +93,7 @@ export const VideoStream: React.FC<VideoStreamProps> = ({
             size="sm"
           >
             <Play className="w-4 h-4 mr-1" />
-            开始视频流
+            Start Video Stream
           </Button>
           <Button
             onClick={handleStopStream}
@@ -102,13 +102,13 @@ export const VideoStream: React.FC<VideoStreamProps> = ({
             size="sm"
           >
             <Square className="w-4 h-4 mr-1" />
-            停止视频流
+            Stop Video Stream
           </Button>
         </div>
         
         <StatusBadge
           status={isStreaming ? 'connected' : 'disconnected'}
-          text={isStreaming ? '正在传输' : '已停止'}
+          text={isStreaming ? 'Streaming' : 'Stopped'}
           pulse={isStreaming}
         />
       </div>
@@ -125,11 +125,11 @@ export const VideoStream: React.FC<VideoStreamProps> = ({
       <div className="mt-4 grid grid-cols-2 gap-4 text-sm text-gray-600">
         <div className="flex items-center">
           <Camera className="w-4 h-4 mr-2" />
-          <span className="font-medium">传输模式:</span>
+          <span className="font-medium">Transmission Mode:</span>
           <span className="ml-2">Socket.IO</span>
         </div>
         <div>
-          <span className="font-medium">已接收帧数:</span>
+          <span className="font-medium">Frames Received:</span>
           <span className="ml-2 font-mono text-blue-600">{frameCount}</span>
         </div>
       </div>

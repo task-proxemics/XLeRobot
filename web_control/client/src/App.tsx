@@ -23,24 +23,20 @@ export default function App() {
     telemetry: realTelemetry,
     networkMetrics,
     armPositions,
-    // Continuous movement
     pressedKeys,
     currentSpeed,
     setMovementSpeed,
     stopContinuousMovement
   } = useSocket();
-  
-  // UI State
+
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [speedLevel, setSpeedLevel] = useState<'low' | 'medium' | 'high'>('medium');
   const [recording, setRecording] = useState(false);
-  
-  // Helper function to display "N/A" for null data
+
   const formatValue = (value: string | number | null, fallback = 'N/A') => {
     return value === null ? fallback : value.toString();
   };
-  
-  // Use real data with fallbacks
+
   const displayTelemetry = {
     battery: formatValue(realTelemetry.battery),
     speed: formatValue(realTelemetry.speed),
@@ -52,9 +48,6 @@ export default function App() {
   const displayFps = networkMetrics.fps || 'N/A';
   const displayArmAngles = armPositions.angles || [null, null, null, null];
 
-  // No more mock data - all data comes from real socket events
-
-  // Theme effect
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     if (theme === 'dark') {
@@ -77,8 +70,20 @@ export default function App() {
     console.warn('EMERGENCY STOP ACTIVATED - Continuous movement stopped');
   };
 
+  const handleResetCamera = () => {
+    if (socket) {
+      socket.emit('reset_camera');
+      console.log('Camera reset requested');
+
+      const resetMessage: SystemMessage = {
+        timestamp: nowTime(),
+        severity: 'info',
+        message: 'Camera reset requested'
+      };
+    }
+  };
+
   const handleSnapshot = () => {
-    // This would be implemented with actual canvas capture
     const timestamp = Date.now();
     const link = document.createElement('a');
     link.download = `xlerobot-snapshot-${timestamp}.png`;
@@ -227,6 +232,7 @@ export default function App() {
         onSpeedChange={setSpeedLevel}
         onQuickMove={handleQuickMove}
         onEmergencyStop={handleEmergencyStop}
+        onResetCamera={handleResetCamera}
         telemetrySpeed={displayTelemetry.speed}
         theme={theme}
         connected={status.socket === 'connected'}

@@ -7,7 +7,6 @@ from .base import RobotController
 
 
 class RealRobotController(RobotController):
-    # Real robot controller (placeholder)
     
     def __init__(self, config: Optional[Dict[str, Any]] = None):
         """
@@ -29,56 +28,41 @@ class RealRobotController(RobotController):
         self.robot_type = config.get('robot_type', 'xlerobot') if config else 'xlerobot'
         
         self.controller_name = f"Real Robot Controller ({self.robot_type})"
-        print(f"⚠️ {self.controller_name} initialized (placeholder implementation)")
+        print(f"{self.controller_name} initialized (placeholder implementation)")
         print(f"   Configuration: IP={self.robot_ip}, Port={self.robot_port}")
     
     async def connect(self) -> bool:
         """
         Connect to real robot.
-        连接到真实机器人。
         """
-        print(f"ℹ️ {self.controller_name}: Attempting to connect...")
+        print(f"{self.controller_name}: Attempting to connect...")
         print(f"   Target: {self.robot_ip}:{self.robot_port}")
-        
-        # Simulate connection delay
+
         await self._simulate_network_delay()
-        
-        # In real implementation, this would:
-        # 1. Establish network/serial connection
-        # 2. Perform handshake
-        # 3. Query robot capabilities
-        # 4. Initialize communication protocol
-        
+
         self.connected = True
         self.robot_state['status'] = 'connected'
         self.robot_state['battery'] = 85.0  # Simulate battery level
         self.robot_state['temperature'] = 32.5  # Simulate temperature
         
-        print(f"✅ {self.controller_name}: Connected (simulated)")
+        print(f"{self.controller_name}: Connected (simulated)")
         return True
     
     async def disconnect(self) -> bool:
         """
         Disconnect from real robot.
-        断开真实机器人连接。
         """
-        print(f"ℹ️ {self.controller_name}: Disconnecting...")
-        
-        # In real implementation, this would:
-        # 1. Send shutdown command
-        # 2. Close communication channels
-        # 3. Release resources
-        
+        print(f"{self.controller_name}: Disconnecting...")
+
         self.connected = False
         self.robot_state['status'] = 'disconnected'
         
-        print(f"✅ {self.controller_name}: Disconnected")
+        print(f"{self.controller_name}: Disconnected")
         return True
     
     async def move(self, direction: str, speed: float = 1.0) -> Dict[str, Any]:
         """
         Control robot movement.
-        控制机器人移动。
         """
         if not self.connected:
             return {'status': 'error', 'message': 'Not connected to robot'}
@@ -88,7 +72,7 @@ class RealRobotController(RobotController):
         
         speed = self.validate_speed(speed)
         
-        print(f"ℹ️ {self.controller_name}: Sending move command...")
+        print(f"{self.controller_name}: Sending move command...")
         print(f"   Direction: {direction}, Speed: {speed}")
         
         # Simulate command transmission delay
@@ -114,9 +98,8 @@ class RealRobotController(RobotController):
     async def stop(self) -> Dict[str, Any]:
         """
         Emergency stop.
-        紧急停止。
         """
-        print(f"🛑 {self.controller_name}: EMERGENCY STOP")
+        print(f"{self.controller_name}: EMERGENCY STOP")
         result = await self.move('stop', 0)
         result['message'] = 'Emergency stop executed'
         return result
@@ -124,7 +107,6 @@ class RealRobotController(RobotController):
     async def get_state(self) -> Dict[str, Any]:
         """
         Get current robot state.
-        获取机器人当前状态。
         """
         # In real implementation, this would query the robot for:
         # - Position (from encoders/IMU)
@@ -154,7 +136,6 @@ class RealRobotController(RobotController):
     async def get_camera_frame(self) -> Optional[np.ndarray]:
         """
         Get camera frame from real robot.
-        从真实机器人获取摄像头画面。
         """
         if not self.connected:
             return None
@@ -195,7 +176,6 @@ class RealRobotController(RobotController):
     async def get_camera_frame_base64(self) -> Optional[str]:
         """
         Get base64 encoded camera frame.
-        获取Base64编码的摄像头画面。
         """
         frame = await self.get_camera_frame()
         if frame is not None:
@@ -208,13 +188,12 @@ class RealRobotController(RobotController):
                 if success:
                     return base64.b64encode(buffer).decode('utf-8')
             except ImportError:
-                print(f"⚠️ {self.controller_name}: cv2 not available for encoding")
+                print(f"{self.controller_name}: cv2 not available for encoding")
         return None
     
     async def set_arm_joint(self, arm: str, joint_index: int, angle: float) -> Dict[str, Any]:
         """
         Set arm joint angle on real robot.
-        在真实机器人上设置机械臂关节角度。
         """
         if not self.connected:
             return {'status': 'error', 'message': 'Not connected to robot'}
@@ -222,16 +201,10 @@ class RealRobotController(RobotController):
         if not self.validate_arm_parameters(arm, joint_index):
             return {'status': 'error', 'message': 'Invalid arm parameters'}
         
-        print(f"ℹ️ {self.controller_name}: Setting {arm} arm joint {joint_index} to {angle:.2f} rad")
+        print(f"{self.controller_name}: Setting {arm} arm joint {joint_index} to {angle:.2f} rad")
         
         # Simulate command transmission
         await self._simulate_network_delay(0.1)
-        
-        # In real implementation, this would:
-        # 1. Convert angle to robot's format
-        # 2. Send joint command
-        # 3. Wait for position feedback
-        # 4. Verify movement completed
         
         # Update mock state
         self.robot_state['arm_joints'][arm][joint_index] = angle
@@ -248,7 +221,6 @@ class RealRobotController(RobotController):
     def get_capabilities(self) -> Dict[str, bool]:
         """
         Get controller capabilities.
-        获取控制器能力。
         """
         capabilities = super().get_capabilities()
         capabilities.update({
@@ -265,7 +237,6 @@ class RealRobotController(RobotController):
     async def get_diagnostics(self) -> Dict[str, Any]:
         """
         Get robot diagnostics information.
-        获取机器人诊断信息。
         
         Returns:
             dict: Diagnostic information
@@ -291,7 +262,6 @@ class RealRobotController(RobotController):
     async def calibrate(self) -> Dict[str, Any]:
         """
         Calibrate robot sensors and actuators.
-        校准机器人传感器和执行器。
         
         Returns:
             dict: Calibration result
@@ -299,7 +269,7 @@ class RealRobotController(RobotController):
         if not self.connected:
             return {'status': 'error', 'message': 'Not connected to robot'}
         
-        print(f"ℹ️ {self.controller_name}: Starting calibration...")
+        print(f"{self.controller_name}: Starting calibration...")
         
         # Simulate calibration process
         await self._simulate_network_delay(2.0)
@@ -318,7 +288,6 @@ class RealRobotController(RobotController):
     def _update_mock_position(self, direction: str, speed: float):
         """
         Update mock robot position based on movement.
-        根据移动更新模拟机器人位置。
         """
         delta = 0.05 * speed  # Smaller increments for real robot
         
@@ -340,7 +309,6 @@ class RealRobotController(RobotController):
     async def _simulate_network_delay(self, delay: float = 0.1):
         """
         Simulate network communication delay.
-        模拟网络通信延迟。
         """
         import asyncio
         await asyncio.sleep(delay)

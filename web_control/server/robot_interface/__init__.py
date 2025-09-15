@@ -1,9 +1,7 @@
 """
 Robot Interface Module
-机器人接口模块
 
 This module provides a unified interface for controlling different types of robots.
-本模块提供控制不同类型机器人的统一接口。
 """
 
 from .base import RobotController
@@ -32,4 +30,4 @@ __all__ = [
     'cleanup_controller'
 ]
 
-print("✅ Robot interface module loaded with new architecture")
+print("Robot interface module loaded with new architecture")

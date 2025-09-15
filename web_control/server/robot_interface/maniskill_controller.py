@@ -23,17 +23,15 @@ try:
     # Import XLeRobot agent to register it
     from agents.xlerobot import xlerobot_single
     MANISKILL_AVAILABLE = True
-    print("✅ ManiSkill imported successfully")
+    print("ManiSkill imported successfully")
 except ImportError as e:
-    print(f"⚠️ ManiSkill import error: {e}")
+    print(f"ManiSkill import error: {e}")
     MANISKILL_AVAILABLE = False
 
 
 class ManiSkillController(RobotController):
-    # ManiSkill simulation robot controller
 
     def __init__(self, config: Optional[Dict[str, Any]] = None):
-        # Initialize ManiSkill controller
         super().__init__(config)
         self.controller_name = "ManiSkill Controller"
         self.env: Optional[BaseEnv] = None
@@ -47,18 +45,29 @@ class ManiSkillController(RobotController):
         self.render_mode = config.get('render_mode', 'rgb_array') if config else 'rgb_array'
         self.enable_viewer = config.get('enable_viewer', False) if config else False
 
-        print(f"🤖 {self.controller_name} initialized")
+        # Continuous control state for persistent movement
+        self.continuous_control = {
+            'enabled': False,
+            'direction': None,
+            'speed': 0.0,
+            'accumulator': None,  # Will be initialized after action space is known
+            'last_update': 0.0,
+            'decay_factor': 0.85,  # Action decay for smooth control
+            'update_strength': 0.3  # Strength of new action updates
+        }
+
+        print(f"{self.controller_name} initialized")
         print(f"   Environment: {self.env_id}")
         print(f"   Observation mode: {self.obs_mode}")
+        print(f"   Continuous control: enabled")
 
     async def connect(self) -> bool:
-        # Connect to ManiSkill simulation
         if not MANISKILL_AVAILABLE:
-            print(f"❌ {self.controller_name}: ManiSkill not available")
+            print(f"{self.controller_name}: ManiSkill not available")
             return False
 
         try:
-            print(f"🔄 {self.controller_name}: Creating ManiSkill environment...")
+            print(f"{self.controller_name}: Creating ManiSkill environment...")
 
             # Create environment with XLeRobot
             env_kwargs = {
@@ -84,11 +93,14 @@ class ManiSkillController(RobotController):
             else:
                 self.current_action = np.zeros(10)  # Default action size for XLeRobot
 
+            # Initialize continuous control accumulator
+            self.continuous_control['accumulator'] = np.zeros_like(self.current_action)
+
             self.connected = True
             self.robot_state['status'] = 'connected'
             self.episode_step = 0
 
-            print(f"✅ {self.controller_name}: Connected to ManiSkill")
+            print(f"{self.controller_name}: Connected to ManiSkill")
             print(f"   Action space: {self.env.action_space}")
             print(f"   Observation space: {self.env.observation_space}")
 
@@ -100,7 +112,7 @@ class ManiSkillController(RobotController):
             return True
 
         except Exception as e:
-            print(f"❌ {self.controller_name}: Connection failed - {e}")
+            print(f"{self.controller_name}: Connection failed - {e}")
             import traceback
             traceback.print_exc()
             self.connected = False
@@ -115,15 +127,15 @@ class ManiSkillController(RobotController):
 
             self.connected = False
             self.robot_state['status'] = 'disconnected'
-            print(f"✅ {self.controller_name}: Disconnected")
+            print(f"{self.controller_name}: Disconnected")
             return True
 
         except Exception as e:
-            print(f"⚠️ {self.controller_name}: Disconnect error - {e}")
+            print(f"{self.controller_name}: Disconnect error - {e}")
             return False
 
     async def move(self, direction: str, speed: float = 1.0) -> Dict[str, Any]:
-        # Control robot movement
+        # Control robot movement with continuous control support
         if not self.connected or self.env is None:
             return {'status': 'error', 'message': 'Not connected to ManiSkill'}
 
@@ -132,23 +144,29 @@ class ManiSkillController(RobotController):
 
         speed = self.validate_speed(speed)
 
-        # Map direction to action
-        # For XLeRobot: action[0] is base forward/backward, action[1] is base rotation
-        if direction == 'forward':
-            self.current_action[0] = 0.1 * speed
-        elif direction == 'backward':
-            self.current_action[0] = -0.1 * speed
-        elif direction == 'left':
-            self.current_action[1] = 0.1 * speed
-        elif direction == 'right':
-            self.current_action[1] = -0.1 * speed
-        elif direction == 'rotate_left':
-            self.current_action[1] = 0.1 * speed
-        elif direction == 'rotate_right':
-            self.current_action[1] = -0.1 * speed
-        elif direction == 'stop':
-            self.current_action[0] = 0.0
-            self.current_action[1] = 0.0
+        import time
+        current_time = time.time()
+
+        # Handle continuous control state
+        if direction == 'stop':
+            # Stop continuous control
+            self.continuous_control['enabled'] = False
+            self.continuous_control['direction'] = None
+            self.continuous_control['speed'] = 0.0
+            # Gradually decay to zero
+            self.continuous_control['accumulator'] *= 0.5
+        else:
+            # Enable/update continuous control
+            self.continuous_control['enabled'] = True
+            self.continuous_control['direction'] = direction
+            self.continuous_control['speed'] = speed
+            self.continuous_control['last_update'] = current_time
+
+        # Update action accumulator for smooth continuous control
+        self._update_action_accumulator(direction, speed)
+
+        # Use accumulator as the action instead of direct mapping
+        self.current_action = self.continuous_control['accumulator'].copy()
 
         # Execute action in simulation
         try:
@@ -157,10 +175,8 @@ class ManiSkillController(RobotController):
 
             # Reset if episode ends
             if terminated or truncated or self.episode_step >= self.max_episode_steps:
-                print(f"🔄 {self.controller_name}: Episode ended, resetting...")
-                self.obs, _ = self.env.reset()
-                self.episode_step = 0
-                self.current_action = np.zeros_like(self.current_action)
+                print(f"{self.controller_name}: Episode ended, resetting...")
+                await self._reset_environment()
 
             # Update robot state from observation
             self._update_state_from_obs()
@@ -169,12 +185,14 @@ class ManiSkillController(RobotController):
                 'status': 'success',
                 'direction': direction,
                 'speed': speed,
+                'continuous_mode': self.continuous_control['enabled'],
                 'episode_step': self.episode_step,
-                'reward': float(reward) if reward is not None else 0.0
+                'reward': float(reward) if reward is not None else 0.0,
+                'action_magnitude': float(np.linalg.norm(self.current_action))
             }
 
         except Exception as e:
-            print(f"⚠️ {self.controller_name}: Move error - {e}")
+            print(f"{self.controller_name}: Move error - {e}")
             return {'status': 'error', 'message': str(e)}
 
     async def stop(self) -> Dict[str, Any]:
@@ -244,7 +262,7 @@ class ManiSkillController(RobotController):
                 else:
                     # List available cameras for debugging
                     available_cameras = list(self.obs["sensor_data"].keys())
-                    print(f"⚠️ fetch_head not found. Available cameras: {available_cameras}")
+                    print(f"fetch_head not found. Available cameras: {available_cameras}")
 
                     # Try to use first available camera as fallback
                     if available_cameras:
@@ -307,7 +325,7 @@ class ManiSkillController(RobotController):
             return None
 
         except Exception as e:
-            print(f"⚠️ {self.controller_name}: Camera frame error - {e}")
+            print(f"{self.controller_name}: Camera frame error - {e}")
             return None
 
     async def get_camera_frame_base64(self) -> Optional[str]:
@@ -320,7 +338,7 @@ class ManiSkillController(RobotController):
                 if success:
                     return base64.b64encode(buffer).decode('utf-8')
             except Exception as e:
-                print(f"⚠️ {self.controller_name}: Encoding error - {e}")
+                print(f"{self.controller_name}: Encoding error - {e}")
         return None
 
     async def set_arm_joint(self, arm: str, joint_index: int, angle: float) -> Dict[str, Any]:
@@ -353,6 +371,45 @@ class ManiSkillController(RobotController):
             'arm': arm,
             'joint': joint_index,
             'angle': angle
+        }
+
+    async def reset_camera(self) -> Dict[str, Any]:
+        """
+        Reset camera to default view position.
+        Reset camera to default view position.
+        """
+        return {
+            'status': 'success',
+            'message': 'Camera reset not implemented in ManiSkill controller',
+            'position': [2.0, 2.0, 2.0],
+            'target': [0.0, 0.0, 0.0]
+        }
+
+    async def set_camera_position(self, position: tuple, target: tuple = None) -> Dict[str, Any]:
+        """
+        Set camera position and target.
+        Set camera position and target.
+        """
+        return {
+            'status': 'success',
+            'message': 'Camera control not implemented in ManiSkill controller',
+            'position': list(position),
+            'target': list(target) if target else [0.0, 0.0, 0.0]
+        }
+
+    async def get_camera_info(self) -> Dict[str, Any]:
+        """
+        Get current camera information.
+        Get current camera information.
+        """
+        return {
+            'position': [2.0, 2.0, 2.0],
+            'target': [0.0, 0.0, 0.0],
+            'camera_id': 0,
+            'frame_size': {'width': 640, 'height': 480},
+            'default_position': [2.0, 2.0, 2.0],
+            'default_target': [0.0, 0.0, 0.0],
+            'message': 'Camera info from ManiSkill controller (limited support)'
         }
 
     def get_capabilities(self) -> Dict[str, bool]:
@@ -405,12 +462,55 @@ class ManiSkillController(RobotController):
                         self.robot_state['velocity']['linear']['y'] = float(qvel[1])
                         self.robot_state['velocity']['angular']['z'] = float(qvel[2])
 
+    def _update_action_accumulator(self, direction: str, speed: float):
+        """Update action accumulator for smooth continuous control"""
+        if self.continuous_control['accumulator'] is None:
+            return
+
+        # Apply decay to existing actions
+        self.continuous_control['accumulator'] *= self.continuous_control['decay_factor']
+
+        # Add new action component
+        update_strength = self.continuous_control['update_strength'] * speed
+
+        if direction == 'forward':
+            self.continuous_control['accumulator'][0] += update_strength
+        elif direction == 'backward':
+            self.continuous_control['accumulator'][0] -= update_strength
+        elif direction == 'left':
+            self.continuous_control['accumulator'][1] += update_strength
+        elif direction == 'right':
+            self.continuous_control['accumulator'][1] -= update_strength
+        elif direction == 'rotate_left':
+            self.continuous_control['accumulator'][1] += update_strength
+        elif direction == 'rotate_right':
+            self.continuous_control['accumulator'][1] -= update_strength
+        elif direction == 'stop':
+            # More aggressive decay for stop
+            self.continuous_control['accumulator'] *= 0.3
+
+        # Clamp actions to valid range
+        self.continuous_control['accumulator'] = np.clip(
+            self.continuous_control['accumulator'], -1.0, 1.0
+        )
+
+    async def _reset_environment(self):
+        """Reset environment and clear continuous control state"""
+        self.obs, _ = self.env.reset()
+        self.episode_step = 0
+        self.current_action = np.zeros_like(self.current_action)
+
+        # Reset continuous control state
+        self.continuous_control['enabled'] = False
+        self.continuous_control['direction'] = None
+        self.continuous_control['speed'] = 0.0
+        if self.continuous_control['accumulator'] is not None:
+            self.continuous_control['accumulator'] = np.zeros_like(self.continuous_control['accumulator'])
+
     async def reset(self) -> Dict[str, Any]:
         # Reset robot to initial state
         if self.env is not None:
-            self.obs, _ = self.env.reset()
-            self.episode_step = 0
-            self.current_action = np.zeros_like(self.current_action)
+            await self._reset_environment()
             self._update_state_from_obs()
-            return {'status': 'reset', 'message': 'Environment reset'}
+            return {'status': 'reset', 'message': 'Environment reset, continuous control disabled'}
         return {'status': 'error', 'message': 'No environment to reset'}

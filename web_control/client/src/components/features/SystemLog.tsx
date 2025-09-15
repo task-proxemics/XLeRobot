@@ -43,14 +43,14 @@ export const SystemLog: React.FC<SystemLogProps> = ({ messages }) => {
   };
 
   return (
-    <Card title="系统日志" className="h-[500px] flex flex-col">
+    <Card title="System Log" className="h-[500px] flex flex-col">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center text-gray-500">
           <Terminal className="w-4 h-4 mr-2" />
-          <span className="text-xs">显示最近50条消息</span>
+          <span className="text-xs">Show last 50 messages</span>
         </div>
         <span className="text-xs text-gray-400">
-          {messages.length} 条记录
+          {messages.length} records
         </span>
       </div>
       
@@ -60,7 +60,7 @@ export const SystemLog: React.FC<SystemLogProps> = ({ messages }) => {
       >
         {messages.length === 0 ? (
           <div className="text-center text-gray-400 text-sm py-8">
-            暂无消息
+            No messages
           </div>
         ) : (
           messages.map((msg) => (

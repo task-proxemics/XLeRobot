@@ -177,6 +177,18 @@ export const useSocket = () => {
       });
     });
 
+    // Camera action events
+    newSocket.on('camera_action_result', (data) => {
+      console.log('Camera action result:', data);
+      if (data.action === 'reset') {
+        if (data.status === 'success') {
+          addMessage('Camera reset successful', 'success');
+        } else {
+          addMessage(`Camera reset failed: ${data.message || 'Unknown error'}`, 'error');
+        }
+      }
+    });
+
     setSocket(newSocket);
 
     return () => {

@@ -8,7 +8,7 @@ try:
     from .maniskill_controller import ManiSkillController
     MANISKILL_CONTROLLER_AVAILABLE = True
 except ImportError as e:
-    print(f"⚠️ ManiSkill controller not available: {e}")
+    print(f"ManiSkill controller not available: {e}")
     MANISKILL_CONTROLLER_AVAILABLE = False
     ManiSkillController = None
 
@@ -16,7 +16,7 @@ try:
     from .mujoco_controller import MuJoCoController
     MUJOCO_CONTROLLER_AVAILABLE = True
 except ImportError as e:
-    print(f"⚠️ MuJoCo controller not available: {e}")
+    print(f"MuJoCo controller not available: {e}")
     MUJOCO_CONTROLLER_AVAILABLE = False
     MuJoCoController = None
 
@@ -24,7 +24,7 @@ try:
     from .real_controller import RealRobotController
     REAL_CONTROLLER_AVAILABLE = True
 except ImportError as e:
-    print(f"⚠️ Real robot controller not available: {e}")
+    print(f"Real robot controller not available: {e}")
     REAL_CONTROLLER_AVAILABLE = False
     RealRobotController = None
 
@@ -67,12 +67,12 @@ class RobotControllerFactory:
 
         controller_class = controller_types[controller_type]
         
-        print(f"🏭 Creating {controller_type} controller...")
+        print(f"Creating {controller_type} controller...")
         
         # Create and return controller instance
         controller = controller_class(config)
         
-        print(f"✅ {controller_type} controller created successfully")
+        print(f"{controller_type} controller created successfully")
         
         return controller
     
@@ -178,4 +178,4 @@ def cleanup_controller():
             pass
         finally:
             _global_controller = None
-            print("✅ Global controller cleaned up")
+            print("Global controller cleaned up")

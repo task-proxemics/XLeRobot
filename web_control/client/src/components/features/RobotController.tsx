@@ -15,10 +15,9 @@ export const RobotController: React.FC<RobotControllerProps> = ({
   onMoveCommand
 }) => {
   return (
-    <Card title="机器人控制" className="h-fit">
-      {/* 连接测试 */}
+    <Card title="Robot Control" className="h-fit">
       <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-700 mb-3">连接测试</h4>
+        <h4 className="text-sm font-medium text-gray-700 mb-3">Connection Test</h4>
         <Button
           onClick={onSendPing}
           disabled={!connected}
@@ -26,13 +25,12 @@ export const RobotController: React.FC<RobotControllerProps> = ({
           className="w-full"
         >
           <Wifi className="w-4 h-4 mr-2" />
-          发送 Ping
+          Send Ping
         </Button>
       </div>
 
-      {/* 移动控制 */}
       <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-700 mb-3">移动控制</h4>
+        <h4 className="text-sm font-medium text-gray-700 mb-3">Movement Control</h4>
         <div className="space-y-3">
           <div className="flex space-x-2">
             <Button
@@ -41,7 +39,7 @@ export const RobotController: React.FC<RobotControllerProps> = ({
               className="flex-1"
             >
               <ArrowUp className="w-4 h-4 mr-1" />
-              前进
+              Forward
             </Button>
             <Button
               onClick={() => onMoveCommand('backward')}
@@ -49,7 +47,7 @@ export const RobotController: React.FC<RobotControllerProps> = ({
               className="flex-1"
             >
               <ArrowDown className="w-4 h-4 mr-1" />
-              后退
+              Backward
             </Button>
           </div>
           
@@ -60,7 +58,7 @@ export const RobotController: React.FC<RobotControllerProps> = ({
               className="flex-1"
             >
               <ArrowLeft className="w-4 h-4 mr-1" />
-              左转
+              Left
             </Button>
             <Button
               onClick={() => onMoveCommand('right')}
@@ -68,7 +66,7 @@ export const RobotController: React.FC<RobotControllerProps> = ({
               className="flex-1"
             >
               <ArrowRight className="w-4 h-4 mr-1" />
-              右转
+              Right
             </Button>
           </div>
 
@@ -80,13 +78,13 @@ export const RobotController: React.FC<RobotControllerProps> = ({
             className="w-full"
           >
             <StopCircle className="w-5 h-5 mr-2" />
-            紧急停止
+            Emergency Stop
           </Button>
         </div>
       </div>
 
       <div className="text-xs text-gray-500 text-center">
-        使用方向按钮控制机器人移动
+        Use direction buttons to control robot movement
       </div>
     </Card>
   );
