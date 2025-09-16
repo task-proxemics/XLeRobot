@@ -60,12 +60,12 @@ python vr_monitor.py
 For ManiSkill environments, run:
 
 ```bash
-python -m mani_skill.examples.demo_ctrl_action \
- -e "ReplicaCAD_SceneManipulation-v1" \
- --render-mode="human" \
- --shader="rt-fast" \
- -c "pd_joint_delta_pos_dual_arm" \
- -r "xlerobot"
+python -m mani_skill.examples.demo_ctrl_action_ee_VR \
+    -e "ReplicaCAD_SceneManipulation-v1" \
+    --render-mode="human" \
+    --shader="rt-fast" \
+    -c "pd_joint_delta_pos_dual_arm" \
+    -r "xlerobot"
 ```
 
 - `-e` sets the environment (e.g., `ReplicaCAD_SceneManipulation-v1`, AI2THOR, Robocasa, etc.)
