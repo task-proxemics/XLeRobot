@@ -51,6 +51,10 @@
 
 - XLeRobot为最大功率而设计，这就是为什么它只有12V版本。
 - 17个电机 = 12个用于手臂 + 3个用于底座 + 2个用于头部。
+- 任何支持两个 60W+ USB-C 快充的电池/充电宝/充电站都应该可以使用。以下是一些其他潜在选择（未经测试），这些品牌在美国和中国都应该可以买到。
+  - [绿联 300W 48000mAh 充电宝](https://www.ugreen.com/products/ugreen-300w-48000mah-portable-charger-power-bank?gad_source=1&gad_campaignid=22334559506&gbraid=0AAAAAokPG3uYEJ4xHLZ1A5FoS_1cCYYRO&gclid=CjwKCAjwq9rFBhAIEiwAGVAZP_WRyKyLoZsEkLylqFw3KlfsLzoJ5NMiHtnRrRCAHs69uGl3R8McnBoCL-gQAvD_BwE)
+  - [Anker 笔记本电脑充电宝 (25K, 165W)](https://www.anker.com/products/a1695-anker-power-bank-25000mah-165w?variant=44320657997974&utm_source=google&utm_medium=pmax&utm_campaign=us_anker_charger_conversion_pmax_seasonal_purchase_ost&utm_content=seasonal&utm_term=%7B20274825774%7D_%7B%7D_%7B%7D&gad_source=1&gad_campaignid=20284126303&gbraid=0AAAAADbnO27MKKh2JRMESwKW-MVxtoKEL&gclid=CjwKCAjwq9rFBhAIEiwAGVAZPyQRpShyzLVCZCrWArnCPk8fVGbShtkYDsQmfMCKwbmLKyY12u9N_xoCKC0QAvD_BwE)
+  - [AOHI 240W 笔记本电脑充电宝 27600mAh](https://a.co/d/aW8lNc2)
 
 ## 💻 电子元件
 
