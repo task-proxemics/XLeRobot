@@ -61,11 +61,12 @@ python vr_monitor.py
 
 ```bash
 python -m mani_skill.examples.demo_ctrl_action_ee_VR \
-    -e "ReplicaCAD_SceneManipulation-v1" \
-    --render-mode="human" \
-    --shader="rt-fast" \
-    -c "pd_joint_delta_pos_dual_arm" \
-    -r "xlerobot"
+ -e "ReplicaCAD_SceneManipulation-v1" \
+ --render-mode="human" \
+ --shader="rt-fast" \
+ -c "pd_joint_delta_pos_dual_arm" \
+ -r "xlerobot" \
+
 ```
 
 - `-e` 设置环境 (例如, `ReplicaCAD_SceneManipulation-v1`, AI2THOR, Robocasa等)
