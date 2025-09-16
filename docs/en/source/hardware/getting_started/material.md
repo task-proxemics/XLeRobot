@@ -38,6 +38,7 @@ Skip this section if you already have these tools:
 | Screwdriver Set | 1 | $6 | [Amazon](https://www.amazon.com/Precision-Phillips-Screwdriver-Electronics-Computer/dp/B0DB227RTH) | €10 | [Amazon](https://www.amazon.fr/dp/B08ZXVMVYD/) | ￥20 | [Taobao](https://e.tb.cn/h.6ReL0wwgtPuSmNV?tk=3rLDV10AVtr) | ₹448 | [Amazon India](https://www.amazon.in/Zaptec-Magnetic-Screwdriver-Suitable-Electronics/dp/B0CN3GTCT6/) |
 - Use a flush cutter to cut the metal mesh for cable routing.
 - This tool list is just a reference—you can use any tools that will accomplish the task, primarily for driving hex and cross-head screws.
+- 9x M4x10 screws are also needed for wheels assembly. 
 
 ## ⏫ Feature Parts
 
