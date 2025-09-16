@@ -50,7 +50,24 @@ class Xlerobot(BaseAgent):
     keyframes = dict(
         rest=Keyframe(
             pose=sapien.Pose(),
-            qpos=np.array([0, 0, 0, 0, 0, 0.0, 0.303, 0.303, 0, 0.556, 0.556, 0, 0, 0, 0, 0, 0]),  # Updated DOFs for Fetch with two SO100 arms
+            # qpos with the actual mapping used in gen_spawn_positions_xlerobot.py:
+            # Index:  0  1  2  3   4   5    6     7     8    9     10    11   12   13    14   15  16
+            # Joint: [x, y, r, arm1, arm2, head, arm1, arm2, head, arm1, arm2, arm1, arm2, arm1, arm2, g1, g2]
+            # Where arm indices are:
+            # - First arm: [3,6,9,11,13] (5 joints: Rotation, Pitch, Elbow, Wrist_Pitch, Wrist_Roll)
+            # - Second arm: [4,7,10,12,14] (5 joints: Rotation_2, Pitch_2, Elbow_2, Wrist_Pitch_2, Wrist_Roll_2)
+            # - Base: [0,1,2] (x, y, rotation)
+            # - Head: [5,8] (pan, tilt)
+            # - Grippers: [15,16] (Jaw, Jaw_2)
+            qpos=np.array([0, 0, 0,           # [0,1,2] base: x, y, rotation
+                          0, 0,              # [3,4] first values for arm1, arm2
+                          0,                 # [5] head pan
+                          0.303, 0.556,      # [6,7] second values for arm1, arm2  
+                          0,                 # [8] head tilt
+                          0.303, 0.556,      # [9,10] third values for arm1, arm2
+                          0, 0,              # [11,12] fourth values for arm1, arm2
+                          0.556, 0,          # [13,14] fifth values for arm1, arm2
+                          0, 0]),            # [15,16] grippers: Jaw, Jaw_2
         )
     )
 
@@ -549,26 +566,161 @@ class Xlerobot(BaseAgent):
             str, Tuple[physx.PhysxGpuContactPairImpulseQuery, Tuple[int]]
         ] = dict()
 
-    def is_grasping(self, object: Actor, min_force=0.5, max_angle=110):
+    def get_arm_joint_indices(self):
+        """
+        Get the joint indices for each arm according to the current qpos mapping.
+        
+        Returns:
+            dict: Dictionary with keys 'arm1', 'arm2', 'base', 'head', 'grippers'
+        """
+        return {
+            'base': [0, 1, 2],              # x, y, rotation
+            'arm1': [3, 6, 9, 11, 13],      # Rotation, Pitch, Elbow, Wrist_Pitch, Wrist_Roll
+            'arm2': [4, 7, 10, 12, 14],     # Rotation_2, Pitch_2, Elbow_2, Wrist_Pitch_2, Wrist_Roll_2
+            'head': [5, 8],                 # pan, tilt
+            'grippers': [15, 16]            # Jaw, Jaw_2
+        }
+
+    def map_full_joints_to_current(self, full_joints):
+        """
+        Map from full_joints (17 elements) to current joint ordering.
+        
+        Mapping according to specification:
+        - full_joints[0,2] → current_joints[0,1] (base x position and base rotation)
+        - full_joints[3,6,9,11,13] → current_joints[2,3,4,5,6] (first arm joints)
+        - full_joints[4,7,10,12,14] → current_joints[7,8,9,10,11] (second arm joints)
+        - full_joints[15] → current_joints[15] (first arm gripper)
+        - full_joints[16] → current_joints[16] (second arm gripper)
+        - full_joints[1] → current_joints[1] (base y - assuming continuous)
+        - full_joints[5,8] → current_joints[3,4] (head joints)
+        
+        Args:
+            full_joints: Array of shape (..., 17) with the original joint ordering
+            
+        Returns:
+            current_joints: Array of shape (..., 17) with the current joint ordering
+        """
+        if torch.is_tensor(full_joints):
+            current_joints = torch.zeros_like(full_joints)
+        else:
+            current_joints = np.zeros_like(full_joints)
+            
+        # Base joints: x, y, rotation
+        current_joints[..., 0] = full_joints[..., 0]  # base x
+        current_joints[..., 1] = full_joints[..., 1]  # base y  
+        current_joints[..., 2] = full_joints[..., 2]  # base rotation
+        
+        # Head joints
+        current_joints[..., 3] = full_joints[..., 5]  # head pan
+        current_joints[..., 4] = full_joints[..., 8]  # head tilt
+        
+        # First arm joints: [3,6,9,11,13] → [5,6,7,8,9]
+        current_joints[..., 5] = full_joints[..., 3]   # Rotation
+        current_joints[..., 6] = full_joints[..., 6]   # Pitch
+        current_joints[..., 7] = full_joints[..., 9]   # Elbow
+        current_joints[..., 8] = full_joints[..., 11]  # Wrist_Pitch
+        current_joints[..., 9] = full_joints[..., 13]  # Wrist_Roll
+        
+        # Second arm joints: [4,7,10,12,14] → [10,11,12,13,14]
+        current_joints[..., 10] = full_joints[..., 4]   # Rotation_2
+        current_joints[..., 11] = full_joints[..., 7]   # Pitch_2
+        current_joints[..., 12] = full_joints[..., 10]  # Elbow_2
+        current_joints[..., 13] = full_joints[..., 12]  # Wrist_Pitch_2
+        current_joints[..., 14] = full_joints[..., 14]  # Wrist_Roll_2
+        
+        # Gripper joints
+        current_joints[..., 15] = full_joints[..., 15]  # Jaw
+        current_joints[..., 16] = full_joints[..., 16]  # Jaw_2
+        
+        return current_joints
+
+    def map_current_joints_to_full(self, current_joints):
+        """
+        Map from current joint ordering back to full_joints ordering.
+        This is the inverse of map_full_joints_to_current.
+        
+        Args:
+            current_joints: Array of shape (..., 17) with the current joint ordering
+            
+        Returns:
+            full_joints: Array of shape (..., 17) with the original joint ordering
+        """
+        if torch.is_tensor(current_joints):
+            full_joints = torch.zeros_like(current_joints)
+        else:
+            full_joints = np.zeros_like(current_joints)
+            
+        # Base joints
+        full_joints[..., 0] = current_joints[..., 0]   # base x
+        full_joints[..., 1] = current_joints[..., 1]   # base y
+        full_joints[..., 2] = current_joints[..., 2]   # base rotation
+        
+        # First arm joints: [5,6,7,8,9] → [3,6,9,11,13]
+        full_joints[..., 3] = current_joints[..., 5]   # Rotation
+        full_joints[..., 6] = current_joints[..., 6]   # Pitch
+        full_joints[..., 9] = current_joints[..., 7]   # Elbow
+        full_joints[..., 11] = current_joints[..., 8]  # Wrist_Pitch
+        full_joints[..., 13] = current_joints[..., 9]  # Wrist_Roll
+        
+        # Second arm joints: [10,11,12,13,14] → [4,7,10,12,14]
+        full_joints[..., 4] = current_joints[..., 10]  # Rotation_2
+        full_joints[..., 7] = current_joints[..., 11]  # Pitch_2
+        full_joints[..., 10] = current_joints[..., 12] # Elbow_2
+        full_joints[..., 12] = current_joints[..., 13] # Wrist_Pitch_2
+        full_joints[..., 14] = current_joints[..., 14] # Wrist_Roll_2
+        
+        # Head joints
+        full_joints[..., 5] = current_joints[..., 3]   # head pan
+        full_joints[..., 8] = current_joints[..., 4]   # head tilt
+        
+        # Gripper joints
+        full_joints[..., 15] = current_joints[..., 15] # Jaw
+        full_joints[..., 16] = current_joints[..., 16] # Jaw_2
+        
+        return full_joints
+
+    def is_grasping(self, object: Actor, min_force=0.5, max_angle=110, arm_id=None):
         """Check if the robot is grasping an object
 
         Args:
             object (Actor): The object to check if the robot is grasping
             min_force (float, optional): Minimum force before the robot is considered to be grasping the object in Newtons. Defaults to 0.5.
-            max_angle (int, optional): Maximum angle of contact to consider grasping. Defaults to 85.
+            max_angle (int, optional): Maximum angle of contact to consider grasping. Defaults to 110.
+            arm_id (int, optional): Which arm to check (1 for first arm, 2 for second arm). 
+                                   If None (default), check both arms and return True if either is grasping.
         """
+        if arm_id is None:
+            # Check both arms, return True if either is grasping
+            arm1_grasping = self._check_single_arm_grasping(object, min_force, max_angle, arm_id=1)
+            arm2_grasping = self._check_single_arm_grasping(object, min_force, max_angle, arm_id=2)
+            return torch.logical_or(arm1_grasping, arm2_grasping)
+        else:
+            # Check specific arm
+            return self._check_single_arm_grasping(object, min_force, max_angle, arm_id)
+
+    def _check_single_arm_grasping(self, object: Actor, min_force=0.5, max_angle=110, arm_id=1):
+        """Internal method to check grasping for a specific arm"""
+        if arm_id == 1:
+            finger1_link = self.finger1_link
+            finger2_link = self.finger2_link
+        elif arm_id == 2:
+            finger1_link = self.finger1_link_2
+            finger2_link = self.finger2_link_2
+        else:
+            raise ValueError(f"Invalid arm_id: {arm_id}. Must be 1 or 2.")
+            
         l_contact_forces = self.scene.get_pairwise_contact_forces(
-            self.finger1_link, object
+            finger1_link, object
         )
         r_contact_forces = self.scene.get_pairwise_contact_forces(
-            self.finger2_link, object
+            finger2_link, object
         )
         lforce = torch.linalg.norm(l_contact_forces, axis=1)
         rforce = torch.linalg.norm(r_contact_forces, axis=1)
 
         # direction to open the gripper
-        ldirection = self.finger1_link.pose.to_transformation_matrix()[..., :3, 1]
-        rdirection = -self.finger2_link.pose.to_transformation_matrix()[..., :3, 1]
+        ldirection = finger1_link.pose.to_transformation_matrix()[..., :3, 1]
+        rdirection = -finger2_link.pose.to_transformation_matrix()[..., :3, 1]
         langle = common.compute_angle_between(ldirection, l_contact_forces)
         rangle = common.compute_angle_between(rdirection, r_contact_forces)
         lflag = torch.logical_and(
@@ -579,9 +731,9 @@ class Xlerobot(BaseAgent):
         )
         return torch.logical_and(lflag, rflag)
 
-    def is_static(self, threshold=0.2):
+    def is_static(self, threshold=0.2, base_threshold: float = 0.05):
         qvel = self.robot.get_qvel()[
-            :, 3:-1
+            :, 3:-2
         ]  # exclude the base joints
         return torch.max(torch.abs(qvel), 1)[0] <= threshold
 
