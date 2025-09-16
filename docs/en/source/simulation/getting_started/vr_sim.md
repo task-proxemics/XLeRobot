@@ -60,7 +60,7 @@ python vr_monitor.py
 For ManiSkill environments, run:
 
 ```bash
-python -m mani_skill.examples.demo_ctrl_action \
+python -m mani_skill.examples.demo_ctrl_action_ee_VR \
  -e "ReplicaCAD_SceneManipulation-v1" \
  --render-mode="human" \
  --shader="rt-fast" \
