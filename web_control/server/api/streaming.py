@@ -1,7 +1,3 @@
-"""
-Video streaming module
-"""
-
 from typing import Optional
 import asyncio
 import json
@@ -9,22 +5,19 @@ import base64
 import numpy as np
 
 class VideoStreamManager:
-    """Video stream manager"""
     
     def __init__(self):
         self.streaming = False
-        self.frame_rate = 30  # FPS
+        self.frame_rate = 30
         self.frame_interval = 1.0 / self.frame_rate
         self.stream_tasks = {}
         
     async def start_stream(self):
-        """Start video stream"""
         self.streaming = True
         print("Video stream started")
         return {'status': 'streaming_started'}
     
     async def stop_stream(self, sid: str = None):
-        """Stop video stream"""
         self.streaming = False
         
         if sid and sid in self.stream_tasks:
@@ -45,9 +38,6 @@ class VideoStreamManager:
         return {'status': 'streaming_stopped'}
     
     async def get_test_frame(self) -> dict:
-        """
-        Get video frame from robot controller or test data
-        """
         from robot_interface.factory import get_current_controller
         
         controller = get_current_controller()
@@ -80,9 +70,6 @@ class VideoStreamManager:
             }
     
     async def stream_frames(self, socket_io, sid: str):
-        """
-        Stream video frames to client continuously
-        """
         try:
             while self.streaming:
                 try:
@@ -107,26 +94,20 @@ class VideoStreamManager:
 video_manager = VideoStreamManager()
 
 class WebRTCManager:
-    """WebRTC manager (placeholder)"""
-    
+
     def __init__(self):
         self.peer_connections = {}
         
     async def handle_offer(self, offer: dict, sid: str) -> dict:
-        """
-        Handle WebRTC offer
-        """
         return {
             'type': 'answer',
             'sdp': 'placeholder_answer_sdp'
         }
     
     async def handle_ice_candidate(self, candidate: dict, sid: str):
-        """Handle ICE candidate"""
         pass
     
     async def close_connection(self, sid: str):
-        """Close WebRTC connection"""
         if sid in self.peer_connections:
             del self.peer_connections[sid]
 

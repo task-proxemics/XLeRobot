@@ -1,5 +1,3 @@
-# XLeRobot Web Control Server
-
 import os
 import time
 from collections import defaultdict
@@ -12,17 +10,14 @@ from api.streaming import video_manager, webrtc_manager
 from robot_interface.factory import get_or_create_controller, cleanup_controller
 from config import load_config, get_robot_controller_config, print_config
 
-# Load application configuration
 app_config = load_config()
 print_config()
 
-# Create robot controller using factory with configuration
 robot_controller = get_or_create_controller(
     controller_type=app_config.robot.controller_type,
     config=get_robot_controller_config()
 )
 
-# Client state tracking for rate limiting and throttling
 client_states = defaultdict(lambda: {
     'last_command_time': 0,
     'is_moving': False,
@@ -34,17 +29,15 @@ client_states = defaultdict(lambda: {
     'last_throttle_time': 0
 })
 
-# Rate limiting and throttling configuration
 RATE_LIMIT_CONFIG = {
-    'max_commands_per_second': 20,  # Maximum 20 commands per second
-    'min_command_interval': 0.05,  # Minimum 50ms between commands (throttling)
-    'rate_limit_window': 1.0,      # 1 second window for rate limiting
-    'throttle_penalty_duration': 2.0,  # 2 second penalty for throttle violations
-    'max_throttle_violations': 3,   # Maximum violations before temporary ban
+    'max_commands_per_second': 20,
+    'min_command_interval': 0.05,
+    'rate_limit_window': 1.0,
+    'throttle_penalty_duration': 2.0,
+    'max_throttle_violations': 3,
 }
 
 async def startup_event():
-    # Initialize robot controller on startup
     print("Initializing robot controller...")
     if robot_controller:
         await robot_controller.connect()

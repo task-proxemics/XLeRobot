@@ -1,5 +1,3 @@
-# ManiSkill Robot Controller Implementation
-
 import asyncio
 import sys
 import os
@@ -11,7 +9,6 @@ from typing import Optional, Dict, Any
 from pathlib import Path
 from .base import RobotController
 
-# Add simulation path to sys.path for importing XLeRobot agent
 sim_path = Path(__file__).parent.parent.parent.parent / "simulation" / "Maniskill"
 if sim_path.exists():
     sys.path.insert(0, str(sim_path))
@@ -20,7 +17,6 @@ try:
     import gymnasium as gym
     import mani_skill.envs
     from mani_skill.envs.sapien_env import BaseEnv
-    # Import XLeRobot agent to register it
     from agents.xlerobot import xlerobot_single
     MANISKILL_AVAILABLE = True
     print("ManiSkill imported successfully")
@@ -39,21 +35,19 @@ class ManiSkillController(RobotController):
         self.episode_step = 0
         self.max_episode_steps = 200
 
-        # Configuration
         self.env_id = config.get('env_id', 'PushCube-v1') if config else 'PushCube-v1'
         self.obs_mode = config.get('obs_mode', 'sensor_data') if config else 'sensor_data'
         self.render_mode = config.get('render_mode', 'rgb_array') if config else 'rgb_array'
         self.enable_viewer = config.get('enable_viewer', False) if config else False
 
-        # Continuous control state for persistent movement
         self.continuous_control = {
             'enabled': False,
             'direction': None,
             'speed': 0.0,
-            'accumulator': None,  # Will be initialized after action space is known
+            'accumulator': None,
             'last_update': 0.0,
-            'decay_factor': 0.85,  # Action decay for smooth control
-            'update_strength': 0.3  # Strength of new action updates
+            'decay_factor': 0.85,
+            'update_strength': 0.3
         }
 
         print(f"{self.controller_name} initialized")
@@ -69,7 +63,6 @@ class ManiSkillController(RobotController):
         try:
             print(f"{self.controller_name}: Creating ManiSkill environment...")
 
-            # Create environment with XLeRobot
             env_kwargs = {
                 'obs_mode': self.obs_mode,
                 'robot_uids': 'xlerobot_single',
@@ -78,22 +71,19 @@ class ManiSkillController(RobotController):
                 'sim_backend': 'auto',
             }
 
-            # Add viewer if requested
             if self.enable_viewer:
                 env_kwargs['render_mode'] = 'human'
 
             self.env = gym.make(self.env_id, **env_kwargs)
 
-            # Reset environment
             self.obs, _ = self.env.reset(seed=2024)
 
-            # Initialize action space
+
             if self.env.action_space is not None:
                 self.current_action = np.zeros(self.env.action_space.shape[0])
             else:
-                self.current_action = np.zeros(10)  # Default action size for XLeRobot
+                self.current_action = np.zeros(10)
 
-            # Initialize continuous control accumulator
             self.continuous_control['accumulator'] = np.zeros_like(self.current_action)
 
             self.connected = True
@@ -104,7 +94,6 @@ class ManiSkillController(RobotController):
             print(f"   Action space: {self.env.action_space}")
             print(f"   Observation space: {self.env.observation_space}")
 
-            # List available cameras
             if "sensor_data" in self.obs:
                 cameras = list(self.obs["sensor_data"].keys())
                 print(f"   Available cameras: {cameras}")
@@ -119,7 +108,6 @@ class ManiSkillController(RobotController):
             return False
 
     async def disconnect(self) -> bool:
-        # Disconnect from ManiSkill simulation
         try:
             if self.env is not None:
                 self.env.close()
@@ -135,7 +123,6 @@ class ManiSkillController(RobotController):
             return False
 
     async def move(self, direction: str, speed: float = 1.0) -> Dict[str, Any]:
-        # Control robot movement with continuous control support
         if not self.connected or self.env is None:
             return {'status': 'error', 'message': 'Not connected to ManiSkill'}
 
@@ -147,38 +134,29 @@ class ManiSkillController(RobotController):
         import time
         current_time = time.time()
 
-        # Handle continuous control state
         if direction == 'stop':
-            # Stop continuous control
             self.continuous_control['enabled'] = False
             self.continuous_control['direction'] = None
             self.continuous_control['speed'] = 0.0
-            # Gradually decay to zero
             self.continuous_control['accumulator'] *= 0.5
         else:
-            # Enable/update continuous control
             self.continuous_control['enabled'] = True
             self.continuous_control['direction'] = direction
             self.continuous_control['speed'] = speed
             self.continuous_control['last_update'] = current_time
 
-        # Update action accumulator for smooth continuous control
         self._update_action_accumulator(direction, speed)
 
-        # Use accumulator as the action instead of direct mapping
         self.current_action = self.continuous_control['accumulator'].copy()
 
-        # Execute action in simulation
         try:
             self.obs, reward, terminated, truncated, info = self.env.step(self.current_action)
             self.episode_step += 1
 
-            # Reset if episode ends
             if terminated or truncated or self.episode_step >= self.max_episode_steps:
                 print(f"{self.controller_name}: Episode ended, resetting...")
                 await self._reset_environment()
 
-            # Update robot state from observation
             self._update_state_from_obs()
 
             return {
@@ -200,7 +178,6 @@ class ManiSkillController(RobotController):
         return await self.move('stop', 0)
 
     async def get_state(self) -> Dict[str, Any]:
-        # Get current robot state
         state = self.robot_state.copy()
         state['controller'] = self.controller_name
         state['simulation_engine'] = 'ManiSkill3'
@@ -209,21 +186,17 @@ class ManiSkillController(RobotController):
         state['episode_step'] = self.episode_step
         state['max_episode_steps'] = self.max_episode_steps
 
-        # Add current action
         if self.current_action is not None:
             state['current_action'] = self.current_action.tolist()
 
         return state
 
     async def get_camera_frame(self) -> Optional[np.ndarray]:
-        # Get camera frame from fetch_head camera
         if not self.connected or self.env is None or self.obs is None:
             return None
 
         try:
-            # Get sensor data from observation
             if "sensor_data" in self.obs:
-                # Try to get fetch_head camera data
                 if "fetch_head" in self.obs["sensor_data"]:
                     camera_data = self.obs["sensor_data"]["fetch_head"]
 
@@ -463,7 +436,6 @@ class ManiSkillController(RobotController):
                         self.robot_state['velocity']['angular']['z'] = float(qvel[2])
 
     def _update_action_accumulator(self, direction: str, speed: float):
-        """Update action accumulator for smooth continuous control"""
         if self.continuous_control['accumulator'] is None:
             return
 

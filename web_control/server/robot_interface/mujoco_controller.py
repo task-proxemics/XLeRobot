@@ -269,10 +269,8 @@ class MuJoCoController(RobotController):
         if not self.validate_arm_parameters(arm, joint_index):
             return {'status': 'error', 'message': 'Invalid arm parameters'}
         
-        # Update internal state
         self.robot_state['arm_joints'][arm][joint_index] = angle
-        
-        # TODO: Implement actual joint control when arm model is available
+
         return {
             'status': 'success',
             'arm': arm,
