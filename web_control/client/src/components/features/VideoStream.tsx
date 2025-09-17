@@ -35,8 +35,7 @@ export const VideoStream: React.FC<VideoStreamProps> = ({
             const img = new Image();
             img.onload = () => {
               ctx.drawImage(img, 0, 0, 640, 480);
-              
-              // Display frame info
+
               ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
               ctx.fillRect(0, 0, 200, 30);
               ctx.fillStyle = '#0f0';
@@ -45,14 +44,12 @@ export const VideoStream: React.FC<VideoStreamProps> = ({
             };
             img.src = `data:image/jpeg;base64,${data.frame}`;
           } else {
-            // Display placeholder
             ctx.fillStyle = '#1f2937';
             ctx.fillRect(0, 0, 640, 480);
             ctx.fillStyle = '#fff';
             ctx.font = '20px system-ui';
             ctx.fillText('Waiting for video stream...', 200, 240);
-            
-            // Display camera icon
+
             ctx.strokeStyle = '#4b5563';
             ctx.lineWidth = 2;
             ctx.strokeRect(280, 200, 80, 60);

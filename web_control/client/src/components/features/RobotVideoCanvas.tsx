@@ -124,31 +124,51 @@ export function RobotVideoCanvas({
     const handleVideoFrame = (data: any) => {
       const canvas = canvasRef.current;
       if (!canvas) return;
-      
+
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
+
+      // Get the logical dimensions (CSS pixels) for correct drawing
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+
+      // Calculate logical dimensions
+      const logicalWidth = canvas.width / dpr;
+      const logicalHeight = canvas.height / dpr;
 
       try {
         if (data.frame) {
           // If server sends base64 image data
           const img = new Image();
+
           img.onload = () => {
-            // Clear canvas and draw the real video frame
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            
-            // Draw overlays on top of real video
-            drawVideoOverlays(ctx, canvas.width, canvas.height);
+            // Clear canvas and draw using logical dimensions
+            ctx.clearRect(0, 0, logicalWidth, logicalHeight);
+            ctx.drawImage(img, 0, 0, logicalWidth, logicalHeight);
+
+            // Draw overlays on top of real video using logical dimensions
+            drawVideoOverlays(ctx, logicalWidth, logicalHeight);
           };
+
+          img.onerror = (error) => {
+            console.error('Error processing video frame:', error);
+          };
+
           img.src = `data:image/jpeg;base64,${data.frame}`;
         } else if (data.url) {
           // If server sends image URL
           const img = new Image();
+
           img.onload = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            drawVideoOverlays(ctx, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, logicalWidth, logicalHeight);
+            ctx.drawImage(img, 0, 0, logicalWidth, logicalHeight);
+            drawVideoOverlays(ctx, logicalWidth, logicalHeight);
           };
+
+          img.onerror = (error) => {
+            console.error('Error loading image from URL:', error);
+          };
+
           img.src = data.url;
         }
       } catch (error) {

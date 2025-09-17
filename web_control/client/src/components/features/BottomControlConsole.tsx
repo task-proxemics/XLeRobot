@@ -54,11 +54,9 @@ export function BottomControlConsole({
   const movementIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const buttonPressRef = useRef<string | null>(null);
 
-  // Continuous movement control
   const startContinuousMovement = useCallback((direction: string, intensity: number = 1.0) => {
     if (!connected) return;
 
-    // Stop any existing movement
     if (movementIntervalRef.current) {
       clearInterval(movementIntervalRef.current);
     }
@@ -69,10 +67,8 @@ export function BottomControlConsole({
       intensity
     });
 
-    // Send initial command immediately
     onQuickMove(direction);
 
-    // Start interval for continuous commands (10Hz = 100ms interval)
     movementIntervalRef.current = setInterval(() => {
       onQuickMove(direction);
     }, 100);

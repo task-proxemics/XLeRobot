@@ -130,7 +130,6 @@ export function MultiTabPanel({
   );
 }
 
-// Tab Component
 interface TabProps {
   label: string;
   active: boolean;
@@ -157,7 +156,6 @@ function Tab({ label, active, onClick, theme, icon }: TabProps) {
   );
 }
 
-// Telemetry Panel Component
 interface TelemetryPanelProps {
   telemetry: any;
   armAngles: number[];
@@ -278,7 +276,6 @@ function TelemetryPanel({ telemetry, armAngles, latency, fps, theme }: Telemetry
   );
 }
 
-// Metric Card Component
 interface MetricCardProps {
   label: string;
   value: string;
@@ -303,7 +300,6 @@ function MetricCard({ label, value, icon, color, theme }: MetricCardProps) {
   );
 }
 
-// Map Panel Component
 function MapPanel({ theme }: { theme: 'light' | 'dark' }) {
   return (
     <div className={`w-full h-full rounded-lg flex flex-col items-center justify-center ${
@@ -334,7 +330,6 @@ function MapPanel({ theme }: { theme: 'light' | 'dark' }) {
   );
 }
 
-// Log Panel Component
 interface LogPanelProps {
   messages: SystemMessage[];
   theme: 'light' | 'dark';
@@ -412,7 +407,6 @@ function LogPanel({ messages, theme }: LogPanelProps) {
   );
 }
 
-// Diagnostic Panel Component
 interface DiagPanelProps {
   latency: number;
   fps: number;

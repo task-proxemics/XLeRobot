@@ -63,17 +63,13 @@ export default function App() {
   };
 
   const handleEmergencyStop = () => {
-    // Use the new continuous movement stop function
     stopContinuousMovement();
-    // Also send traditional stop command as backup
     sendMoveCommand('stop', 0);
-    console.warn('EMERGENCY STOP ACTIVATED - Continuous movement stopped');
   };
 
   const handleResetCamera = () => {
     if (socket) {
       socket.emit('reset_camera');
-      console.log('Camera reset requested');
 
       const resetMessage: SystemMessage = {
         timestamp: nowTime(),
@@ -87,13 +83,10 @@ export default function App() {
     const timestamp = Date.now();
     const link = document.createElement('a');
     link.download = `xlerobot-snapshot-${timestamp}.png`;
-    // In real implementation, this would capture the video canvas
-    console.log('Snapshot captured');
   };
 
   const toggleRecording = () => {
     setRecording(prev => !prev);
-    console.log(recording ? 'Recording stopped' : 'Recording started');
   };
 
   const toggleVideoStream = () => {
