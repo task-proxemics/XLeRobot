@@ -1,154 +1,244 @@
 # XLeRobot Web Control
 
-## Overview
-
-XLeRobot Web Control provides a unified interface for controlling different types of robots:
-- **Simulator**: Support video streaming from robots in simulators (ManiSkill / MuJoCo)
-- **Real Hardware (On Progress)**: Direct control of physical robots via network/serial communication
+A web-based control interface for XLeRobot supporting multiple simulation and real robot environments.
 
 ## Quick Start
 
-### Prerequisites
-- Python 3.11
-- Node 22
+1. **Choose your controller type and configure environment:**
+   ```bash
+   cd web_control/server
+   cp .env.example .env
+   # Edit .env file with your controller settings
+   ```
 
+2. **Install dependencies and start server:**
+   ```bash
+   pip install -r requirements.txt
+   python main.py
+   ```
 
-### 1. Server Setup
+3. **Start client interface:**
+   ```bash
+   cd ../client
+   npm install
+   npm run dev
+   ```
 
+4. **Access the interface:** http://localhost:5173
+
+## Controller Types
+
+### 1. MuJoCo Simulation Controller
+
+**Best for:** Physics simulation, algorithm development, safe testing
+
+**Configuration (.env):**
 ```bash
-cd server
-pip install -r requirements.txt
-```
-
-Create a `.env` file with your configuration:
-```env
-# Example
-
-ROBOT_CONTROLLER=mujoco
-SERVER_HOST=0.0.0.0
-SERVER_PORT=8000
-VIDEO_WIDTH=640
-VIDEO_HEIGHT=480
-```
-
-Start the server:
-```bash
-python main.py
-```
-
-### 2. Client Setup
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-### 3. Access the Interface
-
-Open your browser to `http://localhost:5173` and start controlling your robot.
-
-## Configuration
-
-### Robot Controller Selection
-
-Configure your robot type in `.env`:
-
-```env
-# For MuJoCo Simulation
 ROBOT_CONTROLLER=mujoco
 USE_MUJOCO_SIMULATOR=true
-MJCF_PATH=/path/to/your/model.xml
+ENABLE_VIEWER=false
+MJCF_PATH=
+```
 
-# For Real Robot
+**Dependencies:**
+```bash
+pip install mujoco
+```
+
+**Features:**
+- Physics-based simulation
+- Fast iteration and testing
+- No hardware required
+- 3D visualization optional
+- Custom model support
+
+**Usage:**
+- Ideal for developing control algorithms
+- Safe environment for testing dangerous movements
+- Physics accuracy for dynamics research
+
+---
+
+### 2. ManiSkill Environment Controller
+
+**Best for:** AI training, reinforcement learning, skill development
+
+**Configuration (.env):**
+```bash
+ROBOT_CONTROLLER=maniskill
+```
+
+**Dependencies:**
+```bash
+pip install mani-skill gymnasium torch
+```
+
+**Features:**
+- AI training environments
+- Task-specific scenarios
+- GPU acceleration support
+- Standardized observation/action spaces
+- Integration with ML frameworks
+
+**Usage:**
+- Train RL agents on robot tasks
+- Evaluate learned policies
+- Benchmark robot learning algorithms
+- Sim-to-real transfer research
+
+---
+
+### 3. Real Robot Controller (XLeRobot)
+
+**Best for:** Real-world deployment, physical robot control
+
+**Configuration (.env):**
+
+*Option A - Control Remote Robot:*
+```bash
 ROBOT_CONTROLLER=real
 ROBOT_IP=192.168.1.100
-ROBOT_PORT=8080
-
-# For ManiSkill Environment
-ROBOT_CONTROLLER=maniskill
-MANISKILL_ENV=PickCube-v1
+PORT_ZMQ_CMD=5555
+PORT_ZMQ_OBSERVATIONS=5556
+SERVER_HOST=localhost
 ```
 
-### Advanced Settings
-
-```env
-# Server Configuration
-LOG_LEVEL=info
-ENABLE_CORS=true
-MAX_CONNECTIONS=10
-
-# Video Settings
-VIDEO_FPS=30
-VIDEO_QUALITY=80
-ENABLE_RECORDING=true
-
-# Safety Settings
-MOVEMENT_TIMEOUT=5.0
-MAX_SPEED=2.0
-ENABLE_SAFETY_LIMITS=true
+*Option B - Run on Robot:*
+```bash
+ROBOT_CONTROLLER=real
+ROBOT_IP=localhost
+PORT_ZMQ_CMD=5555
+PORT_ZMQ_OBSERVATIONS=5556
+SERVER_HOST=0.0.0.0
 ```
 
-### Adding New Robot Controllers
-
-1. Create a new controller class in `server/robot_interface/`:
-
-```python
-from .base import RobotController
-
-class YourRobotController(RobotController):
-    async def connect(self) -> bool:
-        # Implement connection logic
-        pass
-
-    async def move(self, direction: str, speed: float):
-        # Implement movement commands
-        pass
-
-    async def get_camera_frame(self):
-        # Implement camera access
-        pass
+**Dependencies:**
+```bash
+pip install pyzmq
 ```
 
-2. Register it in the factory (`factory.py`):
+**Prerequisites:**
+- XLeRobot hardware with xlerobot_host.py running
+- Network connection (local or Tailscale)
+- ZeroMQ communication ports available
 
-```python
-AVAILABLE_CONTROLLERS['your_robot'] = YourRobotController
+**Features:**
+- Real-time robot control
+- Dual-arm manipulation (12 DoF)
+- Mobile base control (3 DoF)
+- Head control (2 DoF)
+- Multi-camera video streams
+- Real-time telemetry
+- Emergency stop functionality
+
+**Deployment Architectures:**
+
+1. **Remote Control Setup:**
+   ```
+   [Your PC] → web_control → [Robot] xlerobot_host.py
+   ```
+   - Run web_control on your computer
+   - Control robot over network/Tailscale
+   - Good for development and remote operation
+
+2. **On-Robot Setup:**
+   ```
+   [Robot] xlerobot_host.py + web_control ← [Your PC] browser
+   ```
+   - Run web_control directly on robot
+   - Access via web browser from any device
+   - Good for production deployment
+
+**Usage:**
+- Physical task execution
+- Real-world testing
+- Human-robot interaction
+- Production deployments
+
+## Network Configuration
+
+### Local Network
+- Ensure all devices on same network
+- Use device IP addresses in configuration
+
+### Tailscale (Recommended for remote access)
+
+1. **Install Tailscale on both devices:**
+   ```bash
+   curl -fsSL https://tailscale.com/install.sh | sh
+   sudo tailscale up
+   ```
+
+2. **Get device IPs:**
+   ```bash
+   tailscale ip -4
+   ```
+
+3. **Configure firewall:**
+   ```bash
+   sudo ufw allow 8000  # Web interface
+   sudo ufw allow 5555  # Robot commands
+   sudo ufw allow 5556  # Robot data
+   ```
+
+## Client Configuration
+
+Create `web_control/client/.env`:
+```bash
+VITE_SERVER_HOST=localhost
+VITE_SERVER_PORT=8000
+VITE_SERVER_PROTOCOL=http
 ```
 
-3. Update configuration options in `config.py`
-
-### API Extension
-
-Add new WebSocket events in `main.py`:
-
-```python
-@sio.event
-async def your_custom_command(sid, data):
-    # Handle custom robot commands
-    result = await controller.your_method(data)
-    await sio.emit('response', result, to=sid)
+For remote access, use server's IP:
+```bash
+VITE_SERVER_HOST=192.168.1.100
 ```
 
-### WebSocket Events & API References
+## Troubleshooting
 
-**Robot Control**:
-- `move_command`: Send movement commands
-- `stop_command`: Emergency stop
-- `get_robot_state`: Request current status
+### Controller-Specific Issues
 
-**Video Streaming**:
-- `start_video_stream`: Begin video feed
-- `stop_video_stream`: End video feed
-- `video_frame`: Receive video frames
+**MuJoCo:**
+- Verify installation: `python -c "import mujoco"`
+- Check OpenGL support for rendering
+- Validate MJCF model files
 
-**Camera Control**:
-- `reset_camera`: Reset to default position
-- `set_camera_position`: Adjust camera angle
+**ManiSkill:**
+- Install gymnasium: `pip install gymnasium`
+- Check CUDA for GPU acceleration
+- Verify environment IDs
 
-### REST Endpoints
+**Real Robot:**
+- Ensure xlerobot_host.py is running on robot
+- Test ZeroMQ connectivity: `telnet robot-ip 5555`
+- Check robot calibration and hardware status
+- Verify network connectivity and ports
 
-- `GET /health`: System status check
-- `GET /robot/info`: Robot controller information
-- `GET /robot/controllers`: Available controller types
-- `POST /robot/camera/reset`: Reset camera position
+### General Issues
+
+**Connection Problems:**
+- Check firewall settings
+- Verify IP addresses and ports
+- Test network connectivity with ping
+
+**Performance Issues:**
+- Reduce VIDEO_QUALITY for better network performance
+- Lower VIDEO_FPS on slow connections
+- Use production build for client
+
+**Video Stream Issues:**
+- Verify OpenCV installation: `python -c "import cv2"`
+- Check browser WebSocket support
+- Test with different browsers
+
+## Development
+
+### Adding New Controllers
+1. Create controller class in `robot_interface/`
+2. Implement base controller interface
+3. Add configuration options to `config.py`
+4. Update factory pattern in `factory.py`
+
+### Configuration Options
+All settings can be configured via environment variables or `.env` files. See `.env.example` for complete options list.

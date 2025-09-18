@@ -8,6 +8,9 @@ import {
   AlertTriangle,
   RotateCcw
 } from 'lucide-react';
+import { ENV } from '../../config/environment';
+import { SPEED_LEVELS } from '../../config/constants';
+import { formatTime } from '../../utils/format';
 
 interface BottomControlConsoleProps {
   speedLevel: 'low' | 'medium' | 'high';
@@ -71,7 +74,7 @@ export function BottomControlConsole({
 
     movementIntervalRef.current = setInterval(() => {
       onQuickMove(direction);
-    }, 100);
+    }, ENV.MOVEMENT_INTERVAL_MS);
   }, [connected, onQuickMove]);
 
   const stopContinuousMovement = useCallback(() => {
@@ -87,7 +90,9 @@ export function BottomControlConsole({
     });
 
     // Send stop command
-    onQuickMove('stop');
+    if (connected) {
+      onQuickMove('stop');
+    }
   }, [onQuickMove]);
 
   // Virtual joystick functionality with continuous control
@@ -123,7 +128,7 @@ export function BottomControlConsole({
     const normalizedY = -finalY / maxDistance; // Invert Y for intuitive control
     const intensity = Math.min(distance / maxDistance, 1.0);
 
-    if (intensity > 0.3) { // Dead zone threshold
+    if (intensity > ENV.JOYSTICK_DEAD_ZONE) {
       let direction = 'stop';
       if (Math.abs(normalizedY) > Math.abs(normalizedX)) {
         direction = normalizedY > 0 ? 'forward' : 'backward';
@@ -207,11 +212,6 @@ export function BottomControlConsole({
     }
   }, [connected, movementState.isActive, stopContinuousMovement]);
 
-  const speedColors = {
-    low: 'bg-green-500',
-    medium: 'bg-yellow-500', 
-    high: 'bg-red-500'
-  };
 
   return (
     <div className={`fixed bottom-0 left-0 right-0 z-50 ${
@@ -232,11 +232,11 @@ export function BottomControlConsole({
                     disabled={!connected}
                     className={`px-3 py-1 text-xs rounded-md transition-all ${
                       speedLevel === speed
-                        ? `${speedColors[speed]} text-white shadow-sm`
+                        ? `${SPEED_LEVELS[speed.toUpperCase() as keyof typeof SPEED_LEVELS].color} text-white shadow-sm`
                         : 'text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-gray-600'
                     } ${!connected ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
-                    {speed === 'low' ? 'Low' : speed === 'medium' ? 'Med' : 'High'}
+                    {SPEED_LEVELS[speed.toUpperCase() as keyof typeof SPEED_LEVELS].label}
                   </button>
                 ))}
               </div>
@@ -417,7 +417,7 @@ export function BottomControlConsole({
             <div className="flex items-center gap-4">
               <span>Movement Control: {connected ? 'Available' : 'Unavailable'}</span>
               <span>•</span>
-              <span>Current Time: {new Date().toLocaleTimeString()}</span>
+              <span>Current Time: {formatTime()}</span>
             </div>
           </div>
         </div>

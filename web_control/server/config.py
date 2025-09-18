@@ -27,6 +27,13 @@ class RobotConfig:
     use_mujoco_simulator: bool = True
     enable_viewer: bool = False
     mjcf_path: Optional[str] = None
+    # Real robot (XLeRobot) configuration
+    robot_ip: str = "localhost"
+    port_zmq_cmd: int = 5555
+    port_zmq_observations: int = 5556
+    polling_timeout_ms: int = 100
+    connect_timeout_s: int = 5
+    robot_type: str = "xlerobot"
 
 @dataclass
 class ServerConfig:
@@ -54,7 +61,14 @@ def load_config() -> AppConfig:
         controller_type=os.environ.get('ROBOT_CONTROLLER', 'mujoco'),
         use_mujoco_simulator=os.environ.get('USE_MUJOCO_SIMULATOR', 'true').lower() == 'true',
         enable_viewer=os.environ.get('ENABLE_VIEWER', 'false').lower() == 'true',
-        mjcf_path=os.environ.get('MJCF_PATH', None)
+        mjcf_path=os.environ.get('MJCF_PATH', None),
+        # XLeRobot configuration
+        robot_ip=os.environ.get('ROBOT_IP', 'localhost'),
+        port_zmq_cmd=int(os.environ.get('PORT_ZMQ_CMD', '5555')),
+        port_zmq_observations=int(os.environ.get('PORT_ZMQ_OBSERVATIONS', '5556')),
+        polling_timeout_ms=int(os.environ.get('POLLING_TIMEOUT_MS', '100')),
+        connect_timeout_s=int(os.environ.get('CONNECT_TIMEOUT_S', '5')),
+        robot_type=os.environ.get('ROBOT_TYPE', 'xlerobot')
     )
 
     server_config = ServerConfig(
@@ -80,7 +94,7 @@ def load_config() -> AppConfig:
 def get_robot_controller_config() -> Dict[str, Any]:
     config = load_config()
 
-    return {
+    base_config = {
         'enable_viewer': config.robot.enable_viewer,
         'use_mujoco_simulator': config.robot.use_mujoco_simulator,
         'mjcf_path': config.robot.mjcf_path,
@@ -90,15 +104,37 @@ def get_robot_controller_config() -> Dict[str, Any]:
         'quality': config.video.quality
     }
 
+    # Add real robot configuration for XLeRobot
+    if config.robot.controller_type == 'real':
+        base_config.update({
+            'robot_ip': config.robot.robot_ip,
+            'port_zmq_cmd': config.robot.port_zmq_cmd,
+            'port_zmq_observations': config.robot.port_zmq_observations,
+            'polling_timeout_ms': config.robot.polling_timeout_ms,
+            'connect_timeout_s': config.robot.connect_timeout_s,
+            'robot_type': config.robot.robot_type
+        })
+
+    return base_config
+
 app_config = load_config()
 
 def print_config():
     config = load_config()
     print("XLeRobot Web Control Configuration:")
     print(f"Controller: {config.robot.controller_type}")
-    print(f"MuJoCo Simulator: {'Enabled' if config.robot.use_mujoco_simulator else 'Disabled'}")
-    print(f"Viewer: {'Enabled' if config.robot.enable_viewer else 'Disabled'}")
-    print(f"Model Path: {config.robot.mjcf_path or 'Default (scene.xml)'}")
+
+    if config.robot.controller_type == 'real':
+        print(f"XLeRobot IP: {config.robot.robot_ip}")
+        print(f"Command Port: {config.robot.port_zmq_cmd}")
+        print(f"Observation Port: {config.robot.port_zmq_observations}")
+        print(f"Connection Timeout: {config.robot.connect_timeout_s}s")
+        print(f"Robot Type: {config.robot.robot_type}")
+    else:
+        print(f"MuJoCo Simulator: {'Enabled' if config.robot.use_mujoco_simulator else 'Disabled'}")
+        print(f"Viewer: {'Enabled' if config.robot.enable_viewer else 'Disabled'}")
+        print(f"Model Path: {config.robot.mjcf_path or 'Default (scene.xml)'}")
+
     print(f"Server: {config.server.host}:{config.server.port}")
     print(f"Video: {config.video.frame_width}x{config.video.frame_height} @ {config.video.fps}fps")
 

@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import type { SystemMessage } from '../../types';
-import { 
-  BarChart3, 
-  Map, 
-  FileText, 
-  Settings, 
-  TrendingUp, 
-  Battery, 
-  Rocket, 
-  Thermometer, 
-  Zap, 
-  Wifi, 
-  Monitor, 
+import {
+  BarChart3,
+  Map,
+  FileText,
+  Settings,
+  TrendingUp,
+  Battery,
+  Rocket,
+  Thermometer,
+  Zap,
+  Wifi,
+  Monitor,
   Activity,
   CheckCircle,
   XCircle,
   AlertTriangle,
   Info,
   Circle,
-  MapPin,
-  Compass,
   Lightbulb,
-  Inbox,
-  User
+  Inbox
 } from 'lucide-react';
+import { formatTime, formatTimestamp, formatLatency, formatFPS } from '../../utils/format';
+import { MESSAGE_TYPES } from '../../config/constants';
 
 interface MultiTabPanelProps {
   telemetry: {
@@ -57,7 +56,6 @@ export function MultiTabPanel({
 }: MultiTabPanelProps) {
   const [activeTab, setActiveTab] = useState<TabType>('telemetry');
 
-  const nowTime = () => new Date().toLocaleTimeString();
 
   return (
     <div className={`rounded-2xl p-4 shadow-sm flex flex-col gap-4 ${
@@ -165,7 +163,6 @@ interface TelemetryPanelProps {
 }
 
 function TelemetryPanel({ telemetry, armAngles, latency, fps, theme }: TelemetryPanelProps) {
-  const nowTime = () => new Date().toLocaleTimeString();
 
   return (
     <div className="space-y-4">
@@ -179,7 +176,7 @@ function TelemetryPanel({ telemetry, armAngles, latency, fps, theme }: Telemetry
             System Overview
           </div>
           <div className="text-xs text-gray-400 font-mono">
-            {nowTime()}
+            {formatTime()}
           </div>
         </div>
         
@@ -227,14 +224,14 @@ function TelemetryPanel({ telemetry, armAngles, latency, fps, theme }: Telemetry
         <div className="grid grid-cols-2 gap-3">
           <MetricCard 
             label="Latency" 
-            value={`${latency}ms`}
+            value={formatLatency(latency)}
             icon={<Wifi size={16} />}
             color="text-yellow-600"
             theme={theme}
           />
           <MetricCard 
             label="Frame Rate" 
-            value={`${fps} FPS`}
+            value={formatFPS(fps)}
             icon={<Monitor size={16} />}
             color="text-green-600"
             theme={theme}
@@ -310,7 +307,7 @@ function MapPanel({ theme }: { theme: 'light' | 'dark' }) {
       </div>
       <div className="text-lg font-semibold mb-2">Map View</div>
       <div className="text-gray-400 text-center max-w-xs">
-        Robot environment map will be displayed here. Including path planning, obstacle detection, and location markers.
+        Robot environment map will be displayed here.
       </div>
       <div className="mt-4 grid grid-cols-2 gap-2 w-full max-w-xs">
         <div className={`p-3 rounded-lg text-center ${
@@ -338,24 +335,22 @@ interface LogPanelProps {
 function LogPanel({ messages, theme }: LogPanelProps) {
   const getLogIcon = (type: SystemMessage['type']) => {
     switch (type) {
-      case 'error': return <XCircle size={16} className="text-red-500" />;
-      case 'warning': return <AlertTriangle size={16} className="text-yellow-500" />;
-      case 'success': return <CheckCircle size={16} className="text-green-500" />;
-      case 'info': 
+      case MESSAGE_TYPES.ERROR: return <XCircle size={16} className="text-red-500" />;
+      case MESSAGE_TYPES.WARNING: return <AlertTriangle size={16} className="text-yellow-500" />;
+      case MESSAGE_TYPES.SUCCESS: return <CheckCircle size={16} className="text-green-500" />;
       default: return <Info size={16} className="text-blue-500" />;
     }
   };
 
   const getLogStyle = (type: SystemMessage['type']) => {
     switch (type) {
-      case 'error': 
+      case MESSAGE_TYPES.ERROR:
         return 'bg-red-50 border-red-200 text-red-900';
-      case 'warning': 
+      case MESSAGE_TYPES.WARNING:
         return 'bg-yellow-50 border-yellow-200 text-yellow-900';
-      case 'success': 
+      case MESSAGE_TYPES.SUCCESS:
         return 'bg-green-50 border-green-200 text-green-900';
-      case 'info': 
-      default: 
+      default:
         return theme === 'dark' ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200';
     }
   };
@@ -392,7 +387,7 @@ function LogPanel({ messages, theme }: LogPanelProps) {
                 {getLogIcon(message.type)}
                 <div className="flex-1 min-w-0">
                   <div className="text-xs text-gray-500 mb-1">
-                    {new Date(message.timestamp).toLocaleTimeString()}
+                    {formatTimestamp(message.timestamp)}
                   </div>
                   <div className="text-sm font-mono break-words">
                     {message.content}
@@ -490,11 +485,11 @@ function DiagPanel({ latency, fps, socketStatus, videoStatus, frameCount, theme 
         <div className="text-sm font-medium mb-3">Performance Metrics</div>
         <div className="grid grid-cols-2 gap-3">
           <div className="text-center">
-            <div className="text-2xl font-mono font-bold text-purple-600">{latency}ms</div>
+            <div className="text-2xl font-mono font-bold text-purple-600">{formatLatency(latency)}</div>
             <div className="text-xs text-gray-400">Network Latency</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-mono font-bold text-green-600">{fps}</div>
+            <div className="text-2xl font-mono font-bold text-green-600">{formatFPS(fps)}</div>
             <div className="text-xs text-gray-400">Frame Rate (FPS)</div>
           </div>
           <div className="text-center">
@@ -503,7 +498,7 @@ function DiagPanel({ latency, fps, socketStatus, videoStatus, frameCount, theme 
           </div>
           <div className="text-center">
             <div className="text-2xl font-mono font-bold text-orange-600">
-              {new Date().toLocaleTimeString().split(':')[2]}
+              {formatTime().split(':')[2]}
             </div>
             <div className="text-xs text-gray-400">Runtime (seconds)</div>
           </div>

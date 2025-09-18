@@ -1,15 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Radio } from 'lucide-react';
 import { useSocket } from './hooks/useSocket';
 import { RobotVideoCanvas } from './components/features/RobotVideoCanvas';
 import { MultiTabPanel } from './components/features/MultiTabPanel';
 import { BottomControlConsole } from './components/features/BottomControlConsole';
-import type { SystemMessage } from './types';
-
-function nowTime() {
-  return new Date().toLocaleTimeString();
-}
+import { formatValue, formatLatency } from './utils/format';
+import { STATUS_COLORS, SPEED_LEVELS } from './config/constants';
 
 export default function App() {
   const {
@@ -33,19 +29,15 @@ export default function App() {
   const [speedLevel, setSpeedLevel] = useState<'low' | 'medium' | 'high'>('medium');
   const [recording, setRecording] = useState(false);
 
-  const formatValue = (value: string | number | null, fallback = 'N/A') => {
-    return value === null ? fallback : value.toString();
-  };
-
   const displayTelemetry = {
     battery: formatValue(realTelemetry.battery),
     speed: formatValue(realTelemetry.speed),
     temp: formatValue(realTelemetry.temp),
     voltage: formatValue(realTelemetry.voltage)
   };
-  
-  const displayLatency = networkMetrics.latency || 'N/A';
-  const displayFps = networkMetrics.fps || 'N/A';
+
+  const displayLatency = formatValue(networkMetrics.latency);
+  const displayFps = formatValue(networkMetrics.fps);
   const displayArmAngles = armPositions.angles || [null, null, null, null];
 
   useEffect(() => {
@@ -58,7 +50,7 @@ export default function App() {
   }, [theme]);
 
   const handleQuickMove = (direction: string) => {
-    const speedMultiplier = speedLevel === 'low' ? 0.5 : speedLevel === 'high' ? 1.5 : 1.0;
+    const speedMultiplier = SPEED_LEVELS[speedLevel.toUpperCase() as keyof typeof SPEED_LEVELS].value;
     sendMoveCommand(direction, speedMultiplier);
   };
 
@@ -70,20 +62,10 @@ export default function App() {
   const handleResetCamera = () => {
     if (socket) {
       socket.emit('reset_camera');
-
-      const resetMessage: SystemMessage = {
-        timestamp: nowTime(),
-        severity: 'info',
-        message: 'Camera reset requested'
-      };
     }
   };
 
-  const handleSnapshot = () => {
-    const timestamp = Date.now();
-    const link = document.createElement('a');
-    link.download = `xlerobot-snapshot-${timestamp}.png`;
-  };
+  const handleSnapshot = () => {};
 
   const toggleRecording = () => {
     setRecording(prev => !prev);
@@ -116,10 +98,7 @@ export default function App() {
             <div className={`flex items-center gap-3 p-3 rounded-lg shadow-sm ${
               theme === 'dark' ? 'bg-gray-800' : 'bg-white/80'
             }`}>
-              <div className={`w-3 h-3 rounded-full ${
-                status.socket === 'connected' ? 'bg-green-400' : 
-                status.socket === 'error' ? 'bg-red-500' : 'bg-yellow-400'
-              }`} />
+              <div className={`w-3 h-3 rounded-full ${STATUS_COLORS[status.socket] || 'bg-gray-400'}`} />
               <div className="text-xs">
                 Socket: <span className="font-medium">{status.socket}</span>
               </div>
@@ -127,9 +106,8 @@ export default function App() {
                 Video: <span className="font-medium">{status.video}</span>
               </div>
               <div className="text-xs pl-4 border-l border-gray-200">
-                Latency: <span className="font-mono">{displayLatency === 'N/A' ? displayLatency : `${displayLatency}ms`}</span>
+                Latency: <span className="font-mono">{formatLatency(displayLatency)}</span>
               </div>
-              {/* Continuous Movement Status */}
               {pressedKeys.size > 0 && (
                 <div className="text-xs pl-4 border-l border-green-300">
                   <div className="flex items-center gap-1">
@@ -142,7 +120,6 @@ export default function App() {
               )}
             </div>
 
-            {/* Controls */}
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
@@ -183,22 +160,16 @@ export default function App() {
               socket={socket}
               videoStatus={status.video}
               telemetry={displayTelemetry}
-              latency={displayLatency === 'N/A' ? 'N/A' : Number(displayLatency)}
-              fps={displayFps === 'N/A' ? 'N/A' : Number(displayFps)}
+              latency={displayLatency}
+              fps={displayFps}
               recording={recording}
               onSnapshot={handleSnapshot}
               onToggleRecording={toggleRecording}
               onToggleVideoStream={toggleVideoStream}
               theme={theme}
             />
-            <div className="mt-3 text-sm text-gray-500">
-              <div className="mb-2">
-                Main camera view. Video stream from ManiSkill simulation with XLeRobot.
-              </div>
-              <div className="text-xs">
-                <strong>Keyboard Controls:</strong> WASD or Arrow Keys for movement, Q/E for rotation.
-                Press and hold keys for continuous movement - release to stop immediately.
-              </div>
+            <div className="mt-3 text-xs text-gray-500">
+              <strong>Keyboard:</strong> WASD/Arrow Keys for movement, Q/E for rotation. Hold for continuous movement.
             </div>
           </div>
 
@@ -207,8 +178,8 @@ export default function App() {
             <MultiTabPanel
               telemetry={displayTelemetry}
               armAngles={displayArmAngles}
-              latency={displayLatency === 'N/A' ? 'N/A' : Number(displayLatency)}
-              fps={displayFps === 'N/A' ? 'N/A' : Number(displayFps)}
+              latency={displayLatency}
+              fps={displayFps}
               messages={messages}
               socketStatus={status.socket}
               videoStatus={status.video}
@@ -219,7 +190,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Bottom Control Console - Fixed positioned */}
       <BottomControlConsole
         speedLevel={speedLevel}
         onSpeedChange={setSpeedLevel}
