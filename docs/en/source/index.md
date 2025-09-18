@@ -45,8 +45,14 @@
 
 ## 📰 News 
 
-- 2025-08-30: XLeRobot 0.3.0 Release with final touchup and household chores showcases. 
-Assembly kit ready for purchase soon, stay tuned!
+- 2025-09-09: **Developer Assembly kit (excluding battery and IKEA cart) ready for purchase** in [China (Taobao) for **3699￥**](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ) and [world-wide for **579\$**](https://shop.wowrobo.com/products/xlerobot-dual-arm-mobile-household-robot-kit?variant=47297659961561). _(In collaboration with **Wowrobo**, one of the official collaborators with Huggingface SO101 arm, they have sold 5k+ SO101 arm worldwide with great customer feedbacks.)_
+  ![image](https://github.com/user-attachments/assets/788836c1-966a-4d11-a911-5c37befc0b85)
+  - Non-profit, I personally don't earn any from this. I also asked Wowrobo to set the price as low as possible.
+  - This is only the assembly kit for developers, please check documentation website and this repo for available codes and tutorials before you purchase.
+- 2025-09-09: Joined [Embodied AI Home Robot Hackathon](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (Oct 25–26, Bay Area) held by **SEEED x Nvidia x Huggingface** as mentor! [Register HERE](https://docs.google.com/forms/d/e/1FAIpQLSdYYDegdgIypxuGJNLcoc8kbdmU4jKgl49zg4X-107LAmBN4g/viewform).
+- ![image](https://github.com/user-attachments/assets/4132c23b-5c86-4bb9-94b4-a6b12059685b)
+
+- 2025-08-30: XLeRobot 0.3.0 Release with final outfit touch up and household chores showcase demos. 
 
 - 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox/Switch joycon** in the wild (bluetooth, no wifi, 0 latency).
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
@@ -63,12 +69,12 @@ Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA env
 ---
 ## Cost
 
-| Price (Buy Parts Yourself) | US | EU | CN |
-| --- | --- | --- | --- |
-| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
-| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
-| + RaspberryPi | +$79 | +€79 | +¥399 |
-| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
+| Price (Buy Parts Yourself) | US | EU | CN | IN |
+| --- | --- | --- | --- | --- |
+| **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** | **~₹87000** |
+| ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 | +₹6550 |
+| + RaspberryPi | +$79 | +€79 | +¥399 | +₹7999 |
+| ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 | +₹35726 |
 
 Assembly kit ready for purchase soon, stay tuned!
 
