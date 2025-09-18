@@ -55,7 +55,7 @@ async def shutdown_event():
 
 sio = socketio.AsyncServer(
     async_mode='asgi',
-    cors_allowed_origins='*'
+    cors_allowed_origins='*',
     logger=True,
     engineio_logger=True
 )
@@ -67,7 +67,7 @@ app.add_event_handler("shutdown", shutdown_event)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"]
+    allow_origins=["http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -471,7 +471,7 @@ async def get_camera_info(sid):
 
 if __name__ == "__main__":
     uvicorn.run(
-        "main:socket_app"
+        "main:socket_app",
         host=app_config.server.host,
         port=app_config.server.port,
         reload=app_config.server.reload,
