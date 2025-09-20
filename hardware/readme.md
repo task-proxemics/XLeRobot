@@ -15,6 +15,5 @@ Note that the 3D Printing files are only to store the models. It’s suggested t
 - No need to adjust the base connector this time, just print the washers and insert them into the IKEA cart for the best base support.
 - <img width="1242" height="696" alt="image" src="https://github.com/user-attachments/assets/e603a529-0690-4ce0-8d3b-381af0c86155" />
 
-
-
-
+---
+ Updated ---
