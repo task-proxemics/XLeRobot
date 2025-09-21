@@ -1,0 +1,947 @@
+<?xml version="1.0" ?>
+<robot name="converted_robot">
+   <!--generated with mjcf_urdf_simple_converter (https://github.com/Yasu31/mjcf_urdf_simple_converter)-->
+   <link name="world">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="chassis">
+      <inertial>
+         <origin xyz="-0.03 0.0 0.44" rpy="0.0 0.0 0.0"/>
+         <mass value="121.60000000000002"/>
+         <inertia ixx="7.474346666666668" iyy="7.474346666666668" izz="3.242666666666668" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="slide_joint_x_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="slide_joint_x">
+      <parent link="world"/>
+      <child link="slide_joint_x_jointbody"/>
+      <origin xyz="0.0 0.0 0.035" rpy="0.0 0.0 1.5707963267948963"/>
+   </joint>
+   <link name="slide_joint_y_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="slide_joint_y">
+      <parent link="slide_joint_x_jointbody"/>
+      <child link="slide_joint_y_jointbody"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="hinge_joint_z_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="hinge_joint_z">
+      <parent link="slide_joint_y_jointbody"/>
+      <child link="hinge_joint_z_jointbody"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="0.0" upper="0.0" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="hinge_joint_z_offset">
+      <parent link="hinge_joint_z_jointbody"/>
+      <child link="chassis"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="base_plate_layer1-v5-1">
+      <inertial>
+         <origin xyz="-4.730687660675253e-15 -2.7155537377808555e-05 -0.0035000000000000005" rpy="1.5707963267948966 -1.5707963267948966 0.0"/>
+         <mass value="1.9468624348344596"/>
+         <inertia ixx="0.0112496514690387" iyy="0.005637109888809055" izz="0.005628440956780792" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="base_plate_layer1-v5-1">
+         <origin xyz="1.6547356910896818e-18 0.0003708838643271301 -0.0035000000000000434" rpy="3.141592653589793 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_base_plate_layer1-v5-1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="chassis2base_plate_layer1-v5-1_fixed">
+      <parent link="chassis"/>
+      <child link="base_plate_layer1-v5-1"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -1.5707999999999993"/>
+   </joint>
+   <link name="drive_motor_mount-v4-3">
+      <inertial>
+         <origin xyz="0.00017900181977195112 -0.0006914486154622601 0.0004348187449640745" rpy="1.3326788530607252 -1.533188470457113 1.8286854094213272"/>
+         <mass value="0.035884017191401885"/>
+         <inertia ixx="6.895012244323654e-06" iyy="3.897590469217182e-06" izz="3.2229576175696904e-06" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="drive_motor_mount-v4-3">
+         <origin xyz="0.0006880539295430664 -0.0025756555856569115 0.001979233474666263" rpy="1.3672248714922477 -1.4830259761528417 1.8282641372384638"/>
+         <geometry>
+            <mesh filename="meshes/converted_drive_motor_mount-v4-3_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="base_plate_layer1-v5-12drive_motor_mount-v4-3_fixed">
+      <parent link="base_plate_layer1-v5-1"/>
+      <child link="drive_motor_mount-v4-3"/>
+      <origin xyz="-0.020610000007450578 -0.09 0.0020000000000000018" rpy="0.0 0.0 -1.5707963267948963"/>
+   </joint>
+   <link name="ST3215_Servo_Motor-v1-2">
+      <inertial>
+         <origin xyz="-0.014664257020729004 -0.008722816656342332 1.2191853053420506e-06" rpy="0.6957375816405541 -1.5704955441732595 2.4128218254215477"/>
+         <mass value="0.0658962961901927"/>
+         <inertia ixx="1.8215749563864646e-05" iyy="1.3917640925369588e-05" izz="1.0296958536422064e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="ST3215_Servo_Motor-v1-2">
+         <origin xyz="-0.012685069814093846 -0.009246147385842583 7.93229148671097e-06" rpy="1.1168843627729075e-13 -1.5701888467550913 3.0843844425769635"/>
+         <geometry>
+            <mesh filename="meshes/converted_ST3215_Servo_Motor-v1-2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="drive_motor_mount-v4-32ST3215_Servo_Motor-v1-2_fixed">
+      <parent link="drive_motor_mount-v4-3"/>
+      <child link="ST3215_Servo_Motor-v1-2"/>
+      <origin xyz="0.00959999999999999 -0.004889999992549421 0.01436" rpy="0.0 0.0 -1.5707963267948966"/>
+   </joint>
+   <link name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-2">
+      <inertial>
+         <origin xyz="8.50877658112488e-09 7.358945011137765e-09 0.0023811166424899887" rpy="1.3775846542408896 -1.5707963267948966 0.0"/>
+         <mass value="0.08665496109754897"/>
+         <inertia ixx="2.2911778015411222e-05" iyy="1.2296292386099882e-05" izz="1.2296275448662767e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-2">
+         <origin xyz="-2.31740751855449e-07 4.3490670360543145e-11 0.002156353199442062" rpy="1.5707963267948966 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="ST3215_Servo_Motor-v1-2_Hub---Servo_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="ST3215_Servo_Motor-v1-2_Hub---Servo">
+      <parent link="ST3215_Servo_Motor-v1-2"/>
+      <child link="ST3215_Servo_Motor-v1-2_Hub---Servo_jointbody"/>
+      <origin xyz="-0.0255 0.009600000000000011 -1.6014967130217864e-18" rpy="1.5707963267948963 0.0 3.141592653589793"/>
+      <axis xyz="6.887535064975403e-49 -3.749399456654644e-33 1.0"/>
+      <limit lower="0.0" upper="0.0" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="ST3215_Servo_Motor-v1-2_Hub---Servo_offset">
+      <parent link="ST3215_Servo_Motor-v1-2_Hub---Servo_jointbody"/>
+      <child link="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-2"/>
+      <origin xyz="4.4408920985006255e-18 3.469446951953615e-18 0.0015874999999999917" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="4-Omni-Directional-Wheel_Single_Body-v1-2">
+      <inertial>
+         <origin xyz="-7.105207895657716e-08 -1.1369917947312704e-07 -1.2090586078983279e-08" rpy="1.1450942699554405 -1.5707963267948966 0.0"/>
+         <mass value="1.3542854082324305"/>
+         <inertia ixx="0.0018798127501507855" iyy="0.0010936224157465258" izz="0.001093608469727632" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="4-Omni-Directional-Wheel_Single_Body-v1-2">
+         <origin xyz="-4.3761463834788893e-07 -2.2167493676611812e-07 -6.051796797618865e-07" rpy="-2.8016263573762226 -1.5707588802687238 -1.7315038292053941e-12"/>
+         <geometry>
+            <mesh filename="meshes/converted_4-Omni-Directional-Wheel_Single_Body-v1-2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-224-Omni-Directional-Wheel_Single_Body-v1-2_fixed">
+      <parent link="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-2"/>
+      <child link="4-Omni-Directional-Wheel_Single_Body-v1-2"/>
+      <origin xyz="-2.453269466693399e-18 0.0 0.0174625" rpy="3.141592653589793 0.0 0.26179938779914935"/>
+   </joint>
+   <link name="drive_motor_mount-v4-2">
+      <inertial>
+         <origin xyz="0.00017900181977194513 -0.0006914486154622601 0.00043481874496407525" rpy="1.3326788530607043 -1.5331884704571133 1.8286854094213254"/>
+         <mass value="0.035884017191401885"/>
+         <inertia ixx="6.895012244323669e-06" iyy="3.897590469217222e-06" izz="3.222957617569707e-06" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="drive_motor_mount-v4-2">
+         <origin xyz="0.0006880539295430664 -0.0025756555856569115 0.001979233474666263" rpy="1.3672248714922477 -1.4830259761528417 1.8282641372384638"/>
+         <geometry>
+            <mesh filename="meshes/converted_drive_motor_mount-v4-2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="base_plate_layer1-v5-12drive_motor_mount-v4-2_fixed">
+      <parent link="base_plate_layer1-v5-1"/>
+      <child link="drive_motor_mount-v4-2"/>
+      <origin xyz="0.08824728634432479 0.027151216421550314 0.001999999999999993" rpy="0.0 0.0 0.5235987755982998"/>
+   </joint>
+   <link name="ST3215_Servo_Motor-v1-1">
+      <inertial>
+         <origin xyz="-0.014664257020728995 -0.008722816656342374 1.2191853053600496e-06" rpy="0.6957375816405406 -1.5704955441732595 2.4128218254215343"/>
+         <mass value="0.0658962961901927"/>
+         <inertia ixx="1.821574956386424e-05" iyy="1.3917640925369832e-05" izz="1.0296958536421656e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="ST3215_Servo_Motor-v1-1">
+         <origin xyz="-0.012685069814093846 -0.009246147385842583 7.93229148671097e-06" rpy="1.1168843627729075e-13 -1.5701888467550913 3.0843844425769635"/>
+         <geometry>
+            <mesh filename="meshes/converted_ST3215_Servo_Motor-v1-1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="drive_motor_mount-v4-22ST3215_Servo_Motor-v1-1_fixed">
+      <parent link="drive_motor_mount-v4-2"/>
+      <child link="ST3215_Servo_Motor-v1-1"/>
+      <origin xyz="0.010400000000000081 -0.004889999992549394 0.014359999999999984" rpy="8.881784197001252e-16 0.0 -1.5707963267948966"/>
+   </joint>
+   <link name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-1">
+      <inertial>
+         <origin xyz="8.508776579152501e-09 7.358945011269938e-09 0.0023811166424899787" rpy="1.3775846494379476 -1.5707963267948963 0.0"/>
+         <mass value="0.08665496109754897"/>
+         <inertia ixx="2.2911778015411093e-05" iyy="1.2296292386099982e-05" izz="1.2296275448663169e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-1">
+         <origin xyz="-2.31740751855449e-07 4.3490670360543145e-11 0.002156353199442062" rpy="1.5707963267948966 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="ST3215_Servo_Motor-v1-1_Hub-2---Servo_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="ST3215_Servo_Motor-v1-1_Hub-2---Servo">
+      <parent link="ST3215_Servo_Motor-v1-1"/>
+      <child link="ST3215_Servo_Motor-v1-1_Hub-2---Servo_jointbody"/>
+      <origin xyz="-0.025499897208144117 0.009600178040716863 -7.203242697645478e-18" rpy="-1.5707963267948961 0.0 -1.1102230246251565e-16"/>
+      <axis xyz="-2.0189229004166797e-07 5.55111706428237e-17 0.9999999999999796"/>
+      <limit lower="0.0" upper="0.0" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="ST3215_Servo_Motor-v1-1_Hub-2---Servo_offset">
+      <parent link="ST3215_Servo_Motor-v1-1_Hub-2---Servo_jointbody"/>
+      <child link="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-1"/>
+      <origin xyz="-1.0279185592260934e-07 -6.850769951327593e-18 0.0015873219592831226" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="4-Omni-Directional-Wheel_Single_Body-v1-1">
+      <inertial>
+         <origin xyz="-7.105207896524954e-08 -1.1369917948959942e-07 -1.2090586104095832e-08" rpy="1.1450942698954654 -1.5707963267948963 0.0"/>
+         <mass value="1.3542854082324305"/>
+         <inertia ixx="0.0018798127501507892" iyy="0.0010936224157465115" izz="0.0010936084697276175" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="4-Omni-Directional-Wheel_Single_Body-v1-1">
+         <origin xyz="-4.3761463834788893e-07 -2.2167493676611812e-07 -6.051796797618865e-07" rpy="-2.8016263573762226 -1.5707588802687238 -1.7315038292053941e-12"/>
+         <geometry>
+            <mesh filename="meshes/converted_4-Omni-Directional-Wheel_Single_Body-v1-1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-124-Omni-Directional-Wheel_Single_Body-v1-1_fixed">
+      <parent link="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2-1"/>
+      <child link="4-Omni-Directional-Wheel_Single_Body-v1-1"/>
+      <origin xyz="-8.88178419700111e-18 3.3306690738754695e-17 0.01746250000000007" rpy="-3.141592653589793 0.0 -1.832595714594046"/>
+   </joint>
+   <link name="drive_motor_mount-v4-1">
+      <inertial>
+         <origin xyz="0.0001790018197719455 -0.0006914486154622614 0.0004348187449640748" rpy="1.3326788530606926 -1.533188470457107 1.8286854094212919"/>
+         <mass value="0.035884017191401885"/>
+         <inertia ixx="6.895012244323559e-06" iyy="3.897590469217194e-06" izz="3.222957617569697e-06" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="drive_motor_mount-v4-1">
+         <origin xyz="0.0006880539295430664 -0.0025756555856569115 0.001979233474666263" rpy="1.3672248714922477 -1.4830259761528417 1.8282641372384638"/>
+         <geometry>
+            <mesh filename="meshes/converted_drive_motor_mount-v4-1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="base_plate_layer1-v5-12drive_motor_mount-v4-1_fixed">
+      <parent link="base_plate_layer1-v5-1"/>
+      <child link="drive_motor_mount-v4-1"/>
+      <origin xyz="-0.06763728633687423 0.06284878357844971 0.0020000000000000018" rpy="0.0 2.220446049250313e-16 2.617993877991494"/>
+   </joint>
+   <link name="ST3215_Servo_Motor-v1">
+      <inertial>
+         <origin xyz="-0.014664257020729005 -0.00872281665634233 1.2191853053530741e-06" rpy="0.6957375816406348 -1.5704955441732595 2.4128218254214806"/>
+         <mass value="0.0658962961901927"/>
+         <inertia ixx="1.8215749563864435e-05" iyy="1.3917640925369552e-05" izz="1.0296958536421981e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="ST3215_Servo_Motor-v1">
+         <origin xyz="-0.012685069814093846 -0.009246147385842583 7.93229148671097e-06" rpy="1.1168843627729075e-13 -1.5701888467550913 3.0843844425769635"/>
+         <geometry>
+            <mesh filename="meshes/converted_ST3215_Servo_Motor-v1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="drive_motor_mount-v4-12ST3215_Servo_Motor-v1_fixed">
+      <parent link="drive_motor_mount-v4-1"/>
+      <child link="ST3215_Servo_Motor-v1"/>
+      <origin xyz="0.00959999999999999 -0.004889999992549434 0.014360000000000013" rpy="2.220446049250313e-16 0.0 -1.5707963267948963"/>
+   </joint>
+   <link name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2">
+      <inertial>
+         <origin xyz="8.508776583007207e-09 7.358945014555165e-09 0.0023811166424899874" rpy="1.3775846476317293 -1.5707963267948966 0.0"/>
+         <mass value="0.08665496109754897"/>
+         <inertia ixx="2.291177801541124e-05" iyy="1.2296292386099675e-05" izz="1.2296275448663121e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2">
+         <origin xyz="-2.31740751855449e-07 4.3490670360543145e-11 0.002156353199442062" rpy="1.5707963267948966 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="ST3215_Servo_Motor-v1_Revolute-40_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="ST3215_Servo_Motor-v1_Revolute-40">
+      <parent link="ST3215_Servo_Motor-v1"/>
+      <child link="ST3215_Servo_Motor-v1_Revolute-40_jointbody"/>
+      <origin xyz="-0.025500012953369677 0.009600022435894327 -3.693124347611029e-17" rpy="-1.5707963267948966 1.5707963267948961 0.0"/>
+      <axis xyz="-1.2961511400282816e-16 -2.0189228959757866e-07 0.9999999999999796"/>
+      <limit lower="0.0" upper="0.0" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="ST3215_Servo_Motor-v1_Revolute-40_offset">
+      <parent link="ST3215_Servo_Motor-v1_Revolute-40_jointbody"/>
+      <child link="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2"/>
+      <origin xyz="-2.796134304347991e-17 -1.2953369686987196e-08 0.0015874775641056748" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="4-Omni-Directional-Wheel_Single_Body-v1">
+      <inertial>
+         <origin xyz="-7.105207895771595e-08 -1.1369917947234093e-07 -1.2090586101420118e-08" rpy="1.1450942700486673 -1.5707963267948966 0.0"/>
+         <mass value="1.3542854082324305"/>
+         <inertia ixx="0.0018798127501507824" iyy="0.0010936224157465143" izz="0.0010936084697276197" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="4-Omni-Directional-Wheel_Single_Body-v1">
+         <origin xyz="-4.3761463834788893e-07 -2.2167493676611812e-07 -6.051796797618865e-07" rpy="-2.8016263573762226 -1.5707588802687238 -1.7315038292053941e-12"/>
+         <geometry>
+            <mesh filename="meshes/converted_4-Omni-Directional-Wheel_Single_Body-v1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v224-Omni-Directional-Wheel_Single_Body-v1_fixed">
+      <parent link="3_8-Hex-Bore-Plastic-VersaHub-217-5828-v2"/>
+      <child link="4-Omni-Directional-Wheel_Single_Body-v1"/>
+      <origin xyz="-2.220446049250313e-18 -7.105427357601001e-17 0.017462499999999947" rpy="3.141592653589793 0.0 0.26179938779914935"/>
+   </joint>
+   <link name="servo_controller_mount-v1">
+      <inertial>
+         <origin xyz="-3.6769132064861433e-14 0.0 -0.0012090515491760903" rpy="3.141592653589793 -1.5707963267948966 0.0"/>
+         <mass value="0.06175589411431898"/>
+         <inertia ixx="2.9413765100515303e-05" iyy="1.8890192778258753e-05" izz="1.0761471541836937e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="servo_controller_mount-v1">
+         <origin xyz="1.8001921238730876e-18 1.7808763150656085e-19 -0.0004584749655837147" rpy="3.141592653589793 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_servo_controller_mount-v1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="base_plate_layer1-v5-12servo_controller_mount-v1_fixed">
+      <parent link="base_plate_layer1-v5-1"/>
+      <child link="servo_controller_mount-v1"/>
+      <origin xyz="0.0 0.06 0.0029999999999999983" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="lipo_battery_mount-v1">
+      <inertial>
+         <origin xyz="-4.0023770071114873e-16 -0.003034408758946965 0.003481111705280585" rpy="4.6629367034256575e-15 -1.5469505106715349 1.570796326794892"/>
+         <mass value="0.1653518573066047"/>
+         <inertia ixx="0.00016969258948396697" iyy="9.882008372625315e-05" izz="7.473752062209069e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="lipo_battery_mount-v1">
+         <origin xyz="-1.7724144909809344e-19 -0.006258736850756178 0.005673291513390855" rpy="0.0 -1.5470757814152625 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_lipo_battery_mount-v1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="base_plate_layer1-v5-12lipo_battery_mount-v1_fixed">
+      <parent link="base_plate_layer1-v5-1"/>
+      <child link="lipo_battery_mount-v1"/>
+      <origin xyz="-0.05 -0.02 0.0" rpy="0.0 0.0 1.570796326794897"/>
+   </joint>
+   <link name="Battery---Battery-5.2-Ah-DC5521-Plug-v2">
+      <inertial>
+         <origin xyz="0.020000000000000018 -8.300646300726007e-05 -0.03492202423172039" rpy="0.017053813401158514 0.0 0.0"/>
+         <mass value="1.2215469988184764"/>
+         <inertia ixx="0.0008162228074590442" iyy="0.0006598124478702281" izz="0.00047592473683502807" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Battery---Battery-5.2-Ah-DC5521-Plug-v2">
+         <origin xyz="0.02000000002877551 -0.0003731902127269514 -0.03466677934525622" rpy="0.06238168195333217 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Battery---Battery-5.2-Ah-DC5521-Plug-v2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="lipo_battery_mount-v12Battery---Battery-5.2-Ah-DC5521-Plug-v2_fixed">
+      <parent link="lipo_battery_mount-v1"/>
+      <child link="Battery---Battery-5.2-Ah-DC5521-Plug-v2"/>
+      <origin xyz="2.220446049250313e-18 0.036499999999999984 0.003000000000000007" rpy="-1.5707963267948966 -1.5707963267948963 0.0"/>
+   </joint>
+   <link name="94868A713_NO-THREADS_Female-Threaded-Hex-Standoff">
+      <inertial>
+         <origin xyz="2.1864399078485972e-14 -1.2010287423717232e-09 -6.6970201384464195e-09" rpy="0.0 0.0 0.0"/>
+         <mass value="0.006150070863406618"/>
+         <inertia ixx="1.0965196650850464e-06" iyy="1.096519654894581e-06" izz="1.837396493115053e-08" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="94868A713_NO-THREADS_Female-Threaded-Hex-Standoff">
+         <origin xyz="-2.5031626759400404e-11 1.7003118303545867e-10 1.7880459541001243e-06" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_94868A713_NO-THREADS_Female-Threaded-Hex-Standoff_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="base_plate_layer1-v5-1294868A713_NO-THREADS_Female-Threaded-Hex-Standoff_fixed">
+      <parent link="base_plate_layer1-v5-1"/>
+      <child link="94868A713_NO-THREADS_Female-Threaded-Hex-Standoff"/>
+      <origin xyz="0.0 1.3010426069826053e-18 0.025" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="base_plate_layer2-v1">
+      <inertial>
+         <origin xyz="-4.730687660675253e-15 -2.7155537377808555e-05 -0.0034999999999999966" rpy="1.5707963267948966 -1.5707963267948966 0.0"/>
+         <mass value="1.9468624348344596"/>
+         <inertia ixx="0.0112496514690387" iyy="0.0056371098888090545" izz="0.005628440956780792" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="base_plate_layer2-v1">
+         <origin xyz="1.6547356910896818e-18 0.0003708838643271301 -0.0035000000000000434" rpy="3.141592653589793 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_base_plate_layer2-v1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <joint type="fixed" name="base_plate_layer1-v5-12base_plate_layer2-v1_fixed">
+      <parent link="base_plate_layer1-v5-1"/>
+      <child link="base_plate_layer2-v1"/>
+      <origin xyz="0.0 -6.430841866638185e-19 0.056999999999999995" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Rotation_Pitch">
+      <inertial>
+         <origin xyz="-9.07886e-05 0.0590972 0.031089" rpy="-2.02022175562436 -1.1792653163053113 -2.704822025216412"/>
+         <mass value="0.119226"/>
+         <inertia ixx="5.94278e-05" iyy="5.89975e-05" izz="3.13712e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Rotation_Pitch">
+         <origin xyz="-9.71396013674607e-05 0.048394104000293064 0.02798073799987563" rpy="1.9340105108729455 0.047665955232872204 0.022761796817159285"/>
+         <geometry>
+            <mesh filename="meshes/converted_Rotation_Pitch_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Rotation_Pitch_Motor">
+         <origin xyz="0.0002821294283076582 0.0910662575655134 0.030599999595982006" rpy="1.5956447371527482 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Rotation_Pitch_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Rotation_L_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Rotation_L">
+      <parent link="chassis"/>
+      <child link="Rotation_L_jointbody"/>
+      <origin xyz="0.1352 -0.15 0.7865" rpy="1.5708003267948967 -8.000045070843953e-12 1.5708003267948967"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="-2.1" upper="2.1" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Rotation_L_offset">
+      <parent link="Rotation_L_jointbody"/>
+      <child link="Rotation_Pitch"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Upper_Arm">
+      <inertial>
+         <origin xyz="-1.72052e-05 0.0701802 0.00310545" rpy="0.01562330823009428 -1.5559914074562653 1.565885366045783"/>
+         <mass value="0.162409"/>
+         <inertia ixx="0.000213312" iyy="0.000167164" izz="7.01522e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Upper_Arm">
+         <origin xyz="-0.00011865634011972692 0.05832568141506618 -0.0005516072185066316" rpy="-0.20055377531252383 -1.5542347087967863 1.7634399711846078"/>
+         <geometry>
+            <mesh filename="meshes/converted_Upper_Arm_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Upper_Arm_Motor">
+         <origin xyz="0.0002824080236501592 0.11256958071662684 0.01656578439675917" rpy="-0.02495120011051255 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Upper_Arm_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Pitch_L_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Pitch_L">
+      <parent link="Rotation_Pitch"/>
+      <child link="Pitch_L_jointbody"/>
+      <origin xyz="0.0 0.1025 0.0306" rpy="1.5708005694372709 0.0 0.0"/>
+      <axis xyz="-1.0 0.0 0.0"/>
+      <limit lower="-0.1" upper="3.45" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Pitch_L_offset">
+      <parent link="Pitch_L_jointbody"/>
+      <child link="Upper_Arm"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Lower_Arm">
+      <inertial>
+         <origin xyz="-0.00339604 0.00137796 0.0768007" rpy="0.20308395840613425 -0.02044137496185705 1.5727849239911165"/>
+         <mass value="0.147968"/>
+         <inertia ixx="0.000138803" iyy="0.000107748" izz="4.84242e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Lower_Arm">
+         <origin xyz="-0.003342960129966465 0.0006631925498791134 0.06445247050319962" rpy="0.1342575042053914 0.01251196087919082 1.5777756799308937"/>
+         <geometry>
+            <mesh filename="meshes/converted_Lower_Arm_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Lower_Arm_Motor">
+         <origin xyz="0.00028232823794038526 0.005199999409811129 0.12346637773743836" rpy="-0.024916692845763144 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Lower_Arm_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Elbow_L_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Elbow_L">
+      <parent link="Upper_Arm"/>
+      <child link="Elbow_L_jointbody"/>
+      <origin xyz="0.0 0.11257 0.028" rpy="-1.5708005694372709 0.0 0.0"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="-0.2" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Elbow_L_offset">
+      <parent link="Elbow_L_jointbody"/>
+      <child link="Lower_Arm"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Wrist_Pitch_Roll">
+      <inertial>
+         <origin xyz="-0.00852653 -0.0352279 -2.34622e-05" rpy="1.769584329819999 -1.5669891177302473 1.5238046200474322"/>
+         <mass value="0.0661321"/>
+         <inertia ixx="3.45403e-05" iyy="2.39041e-05" izz="1.94704e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Wrist_Pitch_Roll">
+         <origin xyz="-0.006684628764382254 -0.02753016370096717 2.7278930108091446e-05" rpy="2.692099912871597 -1.568603642439537 -1.672760013668218"/>
+         <geometry>
+            <mesh filename="meshes/converted_Wrist_Pitch_Roll_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Wrist_Pitch_Roll_Motor">
+         <origin xyz="-0.012298905250543843 -0.043588838749783344 8.634577517040281e-08" rpy="2.960861846183543 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Wrist_Pitch_Roll_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Wrist_Pitch_L_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Wrist_Pitch_L">
+      <parent link="Lower_Arm"/>
+      <child link="Wrist_Pitch_L_jointbody"/>
+      <origin xyz="0.0 0.0052 0.1349" rpy="-1.5708005694372709 0.0 0.0"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="-1.8" upper="1.8" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Wrist_Pitch_L_offset">
+      <parent link="Wrist_Pitch_L_jointbody"/>
+      <child link="Wrist_Pitch_Roll"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Fixed_Jaw">
+      <inertial>
+         <origin xyz="0.00552377 -0.0280167 0.000483583" rpy="1.7053264699642203 -1.4443521692125436 0.28382999813639964"/>
+         <mass value="0.0929859"/>
+         <inertia ixx="5.03136e-05" iyy="4.64098e-05" izz="2.72961e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Fixed_Jaw_part1">
+         <origin xyz="0.002370830625295638 -0.02259375434368848 9.352991370092149e-20" rpy="1.5707963267948966 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Fixed_Jaw_part1_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Fixed_Jaw_part2">
+         <origin xyz="0.02072306865830847 -0.06056148912160309 -2.989134148987697e-05" rpy="1.5699131300500286 0.0 -0.25989517792548344"/>
+         <geometry>
+            <mesh filename="meshes/converted_Fixed_Jaw_part2_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Wrist_Roll_L_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Wrist_Roll_L">
+      <parent link="Wrist_Pitch_Roll"/>
+      <child link="Wrist_Roll_L_jointbody"/>
+      <origin xyz="0.0 -0.0601 0.0" rpy="3.141592653589793 1.5707920841525227 3.141592653589793"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="-3.14159" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Wrist_Roll_L_offset">
+      <parent link="Wrist_Roll_L_jointbody"/>
+      <child link="Fixed_Jaw"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Moving_Jaw">
+      <inertial>
+         <origin xyz="-0.00161745 -0.0303473 0.000449646" rpy="1.5993733432394677 -0.000869655493578092 -0.06605652478637691"/>
+         <mass value="0.0202444"/>
+         <inertia ixx="1.11265e-05" iyy="8.99651e-06" izz="2.99548e-06" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Moving_Jaw_part1">
+         <origin xyz="-0.000891446135938168 -0.005684315226972102 3.5394351057425176e-20" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Moving_Jaw_part1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Moving_Jaw_part2">
+         <origin xyz="-0.0009820987070827286 -0.03622216970663146 -1.7316727853332697e-05" rpy="1.563751479169175 -0.011936849368613167 -0.03760638216005585"/>
+         <geometry>
+            <mesh filename="meshes/converted_Moving_Jaw_part2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Moving_Jaw_part3">
+         <origin xyz="-0.005920968594094594 -0.06541126295518045 0.00015843005340199895" rpy="1.5707963267948966 0.0 -0.23361822681618516"/>
+         <geometry>
+            <mesh filename="meshes/converted_Moving_Jaw_part3_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Jaw_L_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Jaw_L">
+      <parent link="Fixed_Jaw"/>
+      <child link="Jaw_L_jointbody"/>
+      <origin xyz="-0.0202 -0.0244 0.0" rpy="-3.141585307175796 -2.4868995751603507e-14 -2.953185290772602"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.14159" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Jaw_L_offset">
+      <parent link="Jaw_L_jointbody"/>
+      <child link="Moving_Jaw"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Rotation_Pitch_R">
+      <inertial>
+         <origin xyz="-9.07886e-05 0.0590972 0.031089" rpy="-2.02022175562436 -1.1792653163053113 -2.704822025216412"/>
+         <mass value="0.119226"/>
+         <inertia ixx="5.94278e-05" iyy="5.89975e-05" izz="3.13712e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Rotation_Pitch">
+         <origin xyz="-9.71396013674607e-05 0.048394104000293064 0.02798073799987563" rpy="1.9340105108729455 0.047665955232872204 0.022761796817159285"/>
+         <geometry>
+            <mesh filename="meshes/converted_Rotation_Pitch_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Rotation_Pitch_Motor">
+         <origin xyz="0.0002821294283076582 0.0910662575655134 0.030599999595982006" rpy="1.5956447371527482 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Rotation_Pitch_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Rotation_R_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Rotation_R">
+      <parent link="chassis"/>
+      <child link="Rotation_R_jointbody"/>
+      <origin xyz="0.1352 0.15 0.7865" rpy="1.5708003267948967 -8.000045070843953e-12 1.5708003267948967"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="-2.1" upper="2.1" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Rotation_R_offset">
+      <parent link="Rotation_R_jointbody"/>
+      <child link="Rotation_Pitch_R"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Upper_Arm_2">
+      <inertial>
+         <origin xyz="-1.72052e-05 0.0701802 0.00310545" rpy="0.01562330823009428 -1.5559914074562653 1.565885366045783"/>
+         <mass value="0.162409"/>
+         <inertia ixx="0.000213312" iyy="0.000167164" izz="7.01522e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Upper_Arm">
+         <origin xyz="-0.00011865634011972692 0.05832568141506618 -0.0005516072185066316" rpy="-0.20055377531252383 -1.5542347087967863 1.7634399711846078"/>
+         <geometry>
+            <mesh filename="meshes/converted_Upper_Arm_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Upper_Arm_Motor">
+         <origin xyz="0.0002824080236501592 0.11256958071662684 0.01656578439675917" rpy="-0.02495120011051255 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Upper_Arm_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Pitch_R_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Pitch_R">
+      <parent link="Rotation_Pitch_R"/>
+      <child link="Pitch_R_jointbody"/>
+      <origin xyz="0.0 0.1025 0.0306" rpy="1.5708005694372709 0.0 0.0"/>
+      <axis xyz="-1.0 0.0 0.0"/>
+      <limit lower="-0.1" upper="3.45" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Pitch_R_offset">
+      <parent link="Pitch_R_jointbody"/>
+      <child link="Upper_Arm_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Lower_Arm_2">
+      <inertial>
+         <origin xyz="-0.00339604 0.00137796 0.0768007" rpy="0.20308395840613425 -0.02044137496185705 1.5727849239911165"/>
+         <mass value="0.147968"/>
+         <inertia ixx="0.000138803" iyy="0.000107748" izz="4.84242e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Lower_Arm">
+         <origin xyz="-0.003342960129966465 0.0006631925498791134 0.06445247050319962" rpy="0.1342575042053914 0.01251196087919082 1.5777756799308937"/>
+         <geometry>
+            <mesh filename="meshes/converted_Lower_Arm_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Lower_Arm_Motor">
+         <origin xyz="0.00028232823794038526 0.005199999409811129 0.12346637773743836" rpy="-0.024916692845763144 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Lower_Arm_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Elbow_R_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Elbow_R">
+      <parent link="Upper_Arm_2"/>
+      <child link="Elbow_R_jointbody"/>
+      <origin xyz="0.0 0.11257 0.028" rpy="-1.5708005694372709 0.0 0.0"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="-0.2" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Elbow_R_offset">
+      <parent link="Elbow_R_jointbody"/>
+      <child link="Lower_Arm_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Wrist_Pitch_Roll_2">
+      <inertial>
+         <origin xyz="-0.00852653 -0.0352279 -2.34622e-05" rpy="1.769584329819999 -1.5669891177302473 1.5238046200474322"/>
+         <mass value="0.0661321"/>
+         <inertia ixx="3.45403e-05" iyy="2.39041e-05" izz="1.94704e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Wrist_Pitch_Roll">
+         <origin xyz="-0.006684628764382254 -0.02753016370096717 2.7278930108091446e-05" rpy="2.692099912871597 -1.568603642439537 -1.672760013668218"/>
+         <geometry>
+            <mesh filename="meshes/converted_Wrist_Pitch_Roll_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Wrist_Pitch_Roll_Motor">
+         <origin xyz="-0.012298905250543843 -0.043588838749783344 8.634577517040281e-08" rpy="2.960861846183543 -1.5707963267948966 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Wrist_Pitch_Roll_Motor_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Wrist_Pitch_R_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Wrist_Pitch_R">
+      <parent link="Lower_Arm_2"/>
+      <child link="Wrist_Pitch_R_jointbody"/>
+      <origin xyz="0.0 0.0052 0.1349" rpy="-1.5708005694372709 0.0 0.0"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="-1.8" upper="1.8" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Wrist_Pitch_R_offset">
+      <parent link="Wrist_Pitch_R_jointbody"/>
+      <child link="Wrist_Pitch_Roll_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Fixed_Jaw_2">
+      <inertial>
+         <origin xyz="0.00552377 -0.0280167 0.000483583" rpy="1.7053264699642203 -1.4443521692125436 0.28382999813639964"/>
+         <mass value="0.0929859"/>
+         <inertia ixx="5.03136e-05" iyy="4.64098e-05" izz="2.72961e-05" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Fixed_Jaw_part1">
+         <origin xyz="0.002370830625295638 -0.02259375434368848 9.352991370092149e-20" rpy="1.5707963267948966 0.0 1.5707963267948966"/>
+         <geometry>
+            <mesh filename="meshes/converted_Fixed_Jaw_part1_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Fixed_Jaw_part2">
+         <origin xyz="0.02072306865830847 -0.06056148912160309 -2.989134148987697e-05" rpy="1.5699131300500286 0.0 -0.25989517792548344"/>
+         <geometry>
+            <mesh filename="meshes/converted_Fixed_Jaw_part2_4c4c4cff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Wrist_Roll_R_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Wrist_Roll_R">
+      <parent link="Wrist_Pitch_Roll_2"/>
+      <child link="Wrist_Roll_R_jointbody"/>
+      <origin xyz="0.0 -0.0601 0.0" rpy="3.141592653589793 1.5707920841525227 3.141592653589793"/>
+      <axis xyz="0.0 -1.0 0.0"/>
+      <limit lower="-3.14159" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Wrist_Roll_R_offset">
+      <parent link="Wrist_Roll_R_jointbody"/>
+      <child link="Fixed_Jaw_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="Moving_Jaw_2">
+      <inertial>
+         <origin xyz="-0.00161745 -0.0303473 0.000449646" rpy="1.5993733432394677 -0.000869655493578092 -0.06605652478637691"/>
+         <mass value="0.0202444"/>
+         <inertia ixx="1.11265e-05" iyy="8.99651e-06" izz="2.99548e-06" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="Moving_Jaw_part1">
+         <origin xyz="-0.000891446135938168 -0.005684315226972102 3.5394351057425176e-20" rpy="0.0 0.0 0.0"/>
+         <geometry>
+            <mesh filename="meshes/converted_Moving_Jaw_part1_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Moving_Jaw_part2">
+         <origin xyz="-0.0009820987070827286 -0.03622216970663146 -1.7316727853332697e-05" rpy="1.563751479169175 -0.011936849368613167 -0.03760638216005585"/>
+         <geometry>
+            <mesh filename="meshes/converted_Moving_Jaw_part2_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+      <visual name="Moving_Jaw_part3">
+         <origin xyz="-0.005920968594094594 -0.06541126295518045 0.00015843005340199895" rpy="1.5707963267948966 0.0 -0.23361822681618516"/>
+         <geometry>
+            <mesh filename="meshes/converted_Moving_Jaw_part3_1a1a1aff.obj"/>
+         </geometry>
+      </visual>
+   </link>
+   <link name="Jaw_R_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="Jaw_R">
+      <parent link="Fixed_Jaw_2"/>
+      <child link="Jaw_R_jointbody"/>
+      <origin xyz="-0.0202 -0.0244 0.0" rpy="-3.141585307175796 -2.4868995751603507e-14 -2.953185290772602"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.14159" upper="3.14159" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="Jaw_R_offset">
+      <parent link="Jaw_R_jointbody"/>
+      <child link="Moving_Jaw_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="head_pan_link">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="1.6083491016293086 -1.4460437807444741 0.022248424412690926"/>
+         <mass value="2.2556"/>
+         <inertia ixx="0.0184878" iyy="0.0128242" izz="0.00948808" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="head_pan_joint_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="head_pan_joint">
+      <parent link="chassis"/>
+      <child link="head_pan_joint_jointbody"/>
+      <origin xyz="-0.125 0.0 0.91" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-1.57" upper="1.57" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="head_pan_joint_offset">
+      <parent link="head_pan_joint_jointbody"/>
+      <child link="head_pan_link"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="head_tilt_link">
+      <inertial>
+         <origin xyz="0.0081 0.0025 0.0113" rpy="1.6009995041998226 -0.7878434428432667 -0.020505481168879958"/>
+         <mass value="0.9087"/>
+         <inertia ixx="0.00630102" iyy="0.00590111" izz="0.00139787" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="head_tilt_joint_jointbody">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="head_tilt_joint">
+      <parent link="head_pan_link"/>
+      <child link="head_tilt_joint_jointbody"/>
+      <origin xyz="0.05 0.0 0.18" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 1.0 0.0"/>
+      <limit lower="-0.76" upper="1.45" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="head_tilt_joint_offset">
+      <parent link="head_tilt_joint_jointbody"/>
+      <child link="head_tilt_link"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+</robot>
