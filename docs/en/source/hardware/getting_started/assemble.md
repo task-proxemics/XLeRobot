@@ -9,7 +9,7 @@ You can also buy [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM10
 
 ```
 <iframe width="800" height="600" 
-    src="https://www.youtube.com/watch?v=upB1CEFeOlk" 
+    src="https://www.youtube.com/embed/upB1CEFeOlk" 
     frameborder="0" 
     allowfullscreen>
 </iframe>
