@@ -1,33 +1,38 @@
-import os
 import time
-from collections import defaultdict
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+import asyncio
+
 import socketio
 import uvicorn
-import asyncio
-from api.streaming import video_manager, webrtc_manager
-from robot_interface.factory import get_or_create_controller, cleanup_controller
-from config import load_config, get_robot_controller_config, print_config
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from api.streaming import video_manager
+from core.config import ServerConfig
+from core.remote_core import RemoteCore
 
-app_config = load_config()
-print_config()
+# Load simplified configuration
+config = ServerConfig.from_env('.env')
+config.validate()
 
-robot_controller = get_or_create_controller(
-    controller_type=app_config.robot.controller_type,
-    config=get_robot_controller_config()
-)
+print(f"Server Configuration:")
+print(config)
 
-client_states = defaultdict(lambda: {
-    'last_command_time': 0,
-    'is_moving': False,
-    'current_direction': None,
-    'movement_start_time': 0,
-    'command_count': 0,
-    'rate_limit_window': time.time(),
-    'throttle_violations': 0,
-    'last_throttle_time': 0
-})
+# Create unified remote control core
+remote_core = RemoteCore(config)
+video_manager.attach_remote_core(remote_core)
+
+
+def _init_client_state() -> dict:
+    now = time.time()
+    return {
+        'last_command_time': 0.0,
+        'command_count': 0,
+        'window_start': now,
+        'throttle_violations': 0,
+        'last_throttle_time': 0.0
+    }
+
+
+client_states: dict[str, dict] = {}
 
 RATE_LIMIT_CONFIG = {
     'max_commands_per_second': 20,
@@ -38,20 +43,18 @@ RATE_LIMIT_CONFIG = {
 }
 
 async def startup_event():
-    print("Initializing robot controller...")
-    if robot_controller:
-        await robot_controller.connect()
-        print(f"{robot_controller.get_controller_type()} initialized successfully")
+    print("Initializing remote control core...")
+    success = await remote_core.connect()
+    if success:
+        print(f"Remote core connected to {config.robot_type} host successfully")
     else:
-        print("Robot controller initialization failed")
+        print("Remote core connection failed")
 
 async def shutdown_event():
     # Cleanup resources on shutdown
-    print("Shutting down robot controller...")
-    if robot_controller:
-        await robot_controller.disconnect()
-    cleanup_controller()
-    print("Robot controller shut down")
+    print("Shutting down remote control core...")
+    await remote_core.disconnect()
+    print("Remote core shut down")
 
 sio = socketio.AsyncServer(
     async_mode='asgi',
@@ -67,8 +70,8 @@ app.add_event_handler("shutdown", shutdown_event)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -83,16 +86,14 @@ async def root():
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""
-    controller_info = {}
-    if robot_controller:
-        controller_info = {
-            'type': robot_controller.get_controller_type(),
-            'connected': robot_controller.is_connected(),
-            'capabilities': robot_controller.get_capabilities()
-        }
-    
+    controller_info = {
+        'type': config.robot_type,
+        'connected': remote_core.connected,
+        'capabilities': remote_core.get_capabilities()
+    }
+
     return {
-        "status": "healthy", 
+        "status": "healthy",
         "service": "XLeRobot Web Control",
         "controller": controller_info
     }
@@ -100,30 +101,27 @@ async def health_check():
 @app.get("/robot/info")
 async def robot_info():
     """Robot controller info endpoint"""
-    if not robot_controller:
-        return {"error": "No robot controller available"}
-    
     return {
-        'controller_type': robot_controller.get_controller_type(),
-        'connected': robot_controller.is_connected(),
-        'capabilities': robot_controller.get_capabilities(),
-        'state': await robot_controller.get_state() if robot_controller.is_connected() else None
+        'controller_type': config.robot_type,
+        'connected': remote_core.connected,
+        'capabilities': remote_core.get_capabilities(),
+        'state': await remote_core.get_state() if remote_core.connected else None
     }
 
 @app.get("/robot/controllers")
 async def available_controllers():
     """Get available controllers"""
-    from robot_interface.factory import RobotControllerFactory
-    return RobotControllerFactory.get_available_controllers()
+    return {
+        'available': ['maniskill', 'mujoco', 'xlerobot'],
+        'current': config.robot_type,
+        'description': 'Unified remote control supports all robot types via host programs'
+    }
 
 @app.post("/robot/camera/reset")
 async def reset_camera():
     """Reset camera to default position"""
-    if not robot_controller:
-        return {"error": "No robot controller available"}
-
     try:
-        result = await robot_controller.reset_camera()
+        result = await remote_core.reset_camera()
         return result
     except Exception as e:
         return {"error": f"Camera reset failed: {str(e)}"}
@@ -131,9 +129,6 @@ async def reset_camera():
 @app.post("/robot/camera/position")
 async def set_camera_position(request: dict):
     """Set camera position"""
-    if not robot_controller:
-        return {"error": "No robot controller available"}
-
     position = request.get('position')
     target = request.get('target')
 
@@ -141,7 +136,7 @@ async def set_camera_position(request: dict):
         return {"error": "Position is required"}
 
     try:
-        result = await robot_controller.set_camera_position(tuple(position), tuple(target) if target else None)
+        result = await remote_core.set_camera_position(position, target)
         return result
     except Exception as e:
         return {"error": f"Set camera position failed: {str(e)}"}
@@ -149,12 +144,16 @@ async def set_camera_position(request: dict):
 @app.get("/robot/camera/info")
 async def get_camera_info():
     """Get camera info"""
-    if not robot_controller:
-        return {"error": "No robot controller available"}
-
     try:
-        result = await robot_controller.get_camera_info()
-        return result
+        # For simplified architecture, return basic camera info
+        return {
+            'camera_id': 0,
+            'position': [2.0, 2.0, 2.0],
+            'target': [0.0, 0.0, 0.0],
+            'frame_size': {'width': config.video_width, 'height': config.video_height},
+            'fps': config.video_fps,
+            'quality': config.video_quality
+        }
     except Exception as e:
         return {"error": f"Get camera info failed: {str(e)}"}
 
@@ -162,23 +161,25 @@ async def get_camera_info():
 def check_rate_limit(sid: str) -> bool:
     """Check if client is within rate limits"""
     current_time = time.time()
-    client_state = client_states[sid]
+    client_state = client_states.get(sid)
+
+    if not client_state:
+        return True
 
     # Reset command count if window has passed
-    if current_time - client_state['rate_limit_window'] >= RATE_LIMIT_CONFIG['rate_limit_window']:
+    if current_time - client_state['window_start'] >= RATE_LIMIT_CONFIG['rate_limit_window']:
         client_state['command_count'] = 0
-        client_state['rate_limit_window'] = current_time
+        client_state['window_start'] = current_time
 
-    # Check if client exceeds max commands per second
-    if client_state['command_count'] >= RATE_LIMIT_CONFIG['max_commands_per_second']:
-        return False
-
-    return True
+    return client_state['command_count'] < RATE_LIMIT_CONFIG['max_commands_per_second']
 
 def check_throttle(sid: str) -> bool:
     """Check if client is throttling commands too fast"""
     current_time = time.time()
-    client_state = client_states[sid]
+    client_state = client_states.get(sid)
+
+    if not client_state:
+        return True
 
     # Check if client is in penalty period
     if (client_state['throttle_violations'] >= RATE_LIMIT_CONFIG['max_throttle_violations'] and
@@ -197,38 +198,18 @@ def check_throttle(sid: str) -> bool:
 
     return True
 
-def update_client_state(sid: str, direction: str, continuous: bool = False):
+def update_client_state(sid: str, *, timestamp: float) -> None:
     """Update client state after successful command"""
-    current_time = time.time()
-    client_state = client_states[sid]
-
-    client_state['last_command_time'] = current_time
+    client_state = client_states.setdefault(sid, _init_client_state())
+    client_state['last_command_time'] = timestamp
     client_state['command_count'] += 1
-
-    if direction == 'stop':
-        client_state['is_moving'] = False
-        client_state['current_direction'] = None
-    else:
-        if not client_state['is_moving']:
-            client_state['movement_start_time'] = current_time
-        client_state['is_moving'] = True
-        client_state['current_direction'] = direction
 
 @sio.event
 async def connect(sid, environ, auth):
     """Client connection event"""
     print(f"Client connected: {sid}")
     # Initialize client state
-    client_states[sid] = {
-        'last_command_time': 0,
-        'is_moving': False,
-        'current_direction': None,
-        'movement_start_time': 0,
-        'command_count': 0,
-        'rate_limit_window': time.time(),
-        'throttle_violations': 0,
-        'last_throttle_time': 0
-    }
+    client_states[sid] = _init_client_state()
     await sio.emit('connection_established', {'message': 'Connected to XLeRobot control server'}, to=sid)
 
 @sio.event
@@ -243,8 +224,7 @@ async def disconnect(sid):
             print(f"Cancelled video stream task for disconnected client {sid}")
         del video_manager.stream_tasks[sid]
 
-    if sid in client_states:
-        del client_states[sid]
+    if client_states.pop(sid, None) is not None:
         print(f"Cleaned up state for client {sid}")
 
 @sio.event
@@ -258,7 +238,6 @@ async def move_command(sid, data):
     """Movement command handler with rate limiting and throttling"""
     direction = data.get('direction')
     speed = data.get('speed', 1.0)
-    continuous = data.get('continuous', False)
     timestamp = data.get('timestamp', time.time() * 1000)
 
     current_time = time.time()
@@ -277,7 +256,7 @@ async def move_command(sid, data):
 
     # Check throttling
     if not check_throttle(sid):
-        client_state = client_states[sid]
+        client_state = client_states.setdefault(sid, _init_client_state())
         await sio.emit('command_received', {
             'type': 'move',
             'status': 'throttled',
@@ -290,29 +269,29 @@ async def move_command(sid, data):
         }, to=sid)
         return
 
-    if not robot_controller:
+    if not remote_core.connected:
         await sio.emit('command_received', {
             'type': 'move',
             'status': 'error',
-            'message': 'Robot controller not available',
+            'message': 'Remote core not connected to robot host',
             'client_timestamp': timestamp,
             'server_timestamp': current_time * 1000
         }, to=sid)
         return
 
     # Log command with rate limiting info
-    client_state = client_states[sid]
-    print(f"[{sid[:8]}] Move command: {direction} (speed={speed:.1f}) - continuous={continuous} - count={client_state['command_count']+1}/{RATE_LIMIT_CONFIG['max_commands_per_second']}")
+    client_state = client_states.setdefault(sid, _init_client_state())
+    print(f"[{sid[:8]}] Move command: {direction} (speed={speed:.1f}) - count={client_state['command_count'] + 1}/{RATE_LIMIT_CONFIG['max_commands_per_second']}")
 
     # Execute robot command
     try:
-        result = await robot_controller.move(direction, speed)
+        result = await remote_core.move(direction, speed)
 
         # Update client state after successful command
-        update_client_state(sid, direction, continuous)
+        update_client_state(sid, timestamp=current_time)
 
         # Get current robot state
-        robot_state = await robot_controller.get_state()
+        robot_state = await remote_core.get_state()
 
         # Calculate latency
         latency = (current_time * 1000) - timestamp if timestamp else 0
@@ -322,7 +301,6 @@ async def move_command(sid, data):
             'type': 'move',
             'direction': direction,
             'speed': speed,
-            'continuous': continuous,
             'status': result.get('status', 'executed'),
             'robot_state': robot_state,
             'metrics': {
@@ -368,33 +346,14 @@ async def stop_video_stream(sid):
     result = await video_manager.stop_stream(sid)
     await sio.emit('stream_status', result, to=sid)
 
-@sio.event
-async def webrtc_offer(sid, data):
-    """Handle WebRTC offer"""
-    print(f"Received WebRTC offer from {sid}")
-    answer = await webrtc_manager.handle_offer(data, sid)
-    await sio.emit('webrtc_answer', answer, to=sid)
-
-@sio.event
-async def webrtc_ice_candidate(sid, data):
-    """Handle ICE candidate"""
-    await webrtc_manager.handle_ice_candidate(data, sid)
 
 @sio.event
 async def reset_camera(sid):
     """Reset camera event handler"""
     print(f"Client {sid} requested camera reset")
 
-    if not robot_controller:
-        await sio.emit('camera_action_result', {
-            'action': 'reset',
-            'status': 'error',
-            'message': 'Robot controller not available'
-        }, to=sid)
-        return
-
     try:
-        result = await robot_controller.reset_camera()
+        result = await remote_core.reset_camera()
         await sio.emit('camera_action_result', {
             'action': 'reset',
             **result
@@ -412,14 +371,6 @@ async def set_camera_position(sid, data):
     """Set camera position event handler"""
     print(f"Client {sid} requested set camera position")
 
-    if not robot_controller:
-        await sio.emit('camera_action_result', {
-            'action': 'set_position',
-            'status': 'error',
-            'message': 'Robot controller not available'
-        }, to=sid)
-        return
-
     position = data.get('position')
     target = data.get('target')
 
@@ -432,7 +383,7 @@ async def set_camera_position(sid, data):
         return
 
     try:
-        result = await robot_controller.set_camera_position(tuple(position), tuple(target) if target else None)
+        result = await remote_core.set_camera_position(position, target)
         await sio.emit('camera_action_result', {
             'action': 'set_position',
             **result
@@ -450,18 +401,19 @@ async def get_camera_info(sid):
     """Get camera info event handler"""
     print(f"Client {sid} requested camera info")
 
-    if not robot_controller:
-        await sio.emit('camera_info_result', {
-            'status': 'error',
-            'message': 'Robot controller not available'
-        }, to=sid)
-        return
-
     try:
-        result = await robot_controller.get_camera_info()
+        # Return basic camera info for simplified architecture
+        camera_info = {
+            'camera_id': 0,
+            'position': [2.0, 2.0, 2.0],
+            'target': [0.0, 0.0, 0.0],
+            'frame_size': {'width': config.video_width, 'height': config.video_height},
+            'fps': config.video_fps,
+            'quality': config.video_quality
+        }
         await sio.emit('camera_info_result', {
             'status': 'success',
-            'camera_info': result
+            'camera_info': camera_info
         }, to=sid)
     except Exception as e:
         await sio.emit('camera_info_result', {
@@ -472,8 +424,8 @@ async def get_camera_info(sid):
 if __name__ == "__main__":
     uvicorn.run(
         "main:socket_app",
-        host=app_config.server.host,
-        port=app_config.server.port,
-        reload=app_config.server.reload,
-        log_level=app_config.server.log_level
+        host=config.ui_host,
+        port=config.ui_port,
+        reload=False,  # Disable reload for simplified architecture
+        log_level="info"
     )

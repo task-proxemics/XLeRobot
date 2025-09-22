@@ -1,4 +1,11 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import {
+  useState,
+  useRef,
+  useEffect,
+  useCallback,
+  type MouseEvent as ReactMouseEvent,
+  type TouchEvent as ReactTouchEvent
+} from 'react';
 import {
   ChevronUp,
   ChevronDown,
@@ -31,7 +38,6 @@ interface JoystickPosition {
 interface MovementState {
   isActive: boolean;
   direction: string | null;
-  intensity: number;
 }
 
 export function BottomControlConsole({
@@ -48,16 +54,14 @@ export function BottomControlConsole({
   const [joystickPosition, setJoystickPosition] = useState<JoystickPosition>({ x: 0, y: 0 });
   const [movementState, setMovementState] = useState<MovementState>({
     isActive: false,
-    direction: null,
-    intensity: 0
+    direction: null
   });
 
   const joystickRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
   const movementIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const buttonPressRef = useRef<string | null>(null);
 
-  const startContinuousMovement = useCallback((direction: string, intensity: number = 1.0) => {
+  const startContinuousMovement = useCallback((direction: string) => {
     if (!connected) return;
 
     if (movementIntervalRef.current) {
@@ -66,8 +70,7 @@ export function BottomControlConsole({
 
     setMovementState({
       isActive: true,
-      direction,
-      intensity
+      direction
     });
 
     onQuickMove(direction);
@@ -85,18 +88,17 @@ export function BottomControlConsole({
 
     setMovementState({
       isActive: false,
-      direction: null,
-      intensity: 0
+      direction: null
     });
 
     // Send stop command
     if (connected) {
       onQuickMove('stop');
     }
-  }, [onQuickMove]);
+  }, [connected, onQuickMove]);
 
   // Virtual joystick functionality with continuous control
-  const updateJoystickPosition = useCallback((event: React.MouseEvent | React.TouchEvent | MouseEvent | TouchEvent) => {
+  const updateJoystickPosition = useCallback((event: ReactMouseEvent | ReactTouchEvent | MouseEvent | TouchEvent) => {
     const rect = joystickRef.current?.getBoundingClientRect();
     if (!rect) return;
 
@@ -123,12 +125,12 @@ export function BottomControlConsole({
 
     setJoystickPosition({ x: finalX, y: finalY });
 
-    // Calculate direction and intensity
+    // Calculate direction based on joystick offset
     const normalizedX = finalX / maxDistance;
     const normalizedY = -finalY / maxDistance; // Invert Y for intuitive control
-    const intensity = Math.min(distance / maxDistance, 1.0);
+    const distanceRatio = Math.min(distance / maxDistance, 1.0);
 
-    if (intensity > ENV.JOYSTICK_DEAD_ZONE) {
+    if (distanceRatio > ENV.JOYSTICK_DEAD_ZONE) {
       let direction = 'stop';
       if (Math.abs(normalizedY) > Math.abs(normalizedX)) {
         direction = normalizedY > 0 ? 'forward' : 'backward';
@@ -138,7 +140,7 @@ export function BottomControlConsole({
 
       // Start or update continuous movement
       if (!movementState.isActive || movementState.direction !== direction) {
-        startContinuousMovement(direction, intensity);
+        startContinuousMovement(direction);
       }
     } else {
       // In dead zone, stop movement
@@ -148,7 +150,7 @@ export function BottomControlConsole({
     }
   }, [startContinuousMovement, stopContinuousMovement, movementState]);
 
-  const handleJoystickStart = useCallback((event: React.MouseEvent | React.TouchEvent) => {
+  const handleJoystickStart = useCallback((event: ReactMouseEvent | ReactTouchEvent) => {
     if (!connected) return;
 
     setJoystickActive(true);
@@ -171,12 +173,10 @@ export function BottomControlConsole({
   // Direction button handlers with continuous control
   const handleButtonPress = useCallback((direction: string) => {
     if (!connected) return;
-    buttonPressRef.current = direction;
-    startContinuousMovement(direction, 1.0);
+    startContinuousMovement(direction);
   }, [connected, startContinuousMovement]);
 
   const handleButtonRelease = useCallback(() => {
-    buttonPressRef.current = null;
     stopContinuousMovement();
   }, [stopContinuousMovement]);
 

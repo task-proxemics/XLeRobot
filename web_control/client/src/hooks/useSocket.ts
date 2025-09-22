@@ -14,12 +14,10 @@ interface RobotTelemetry {
 interface NetworkMetrics {
   latency: number | null;
   fps: number | null;
-  packetLoss: number | null;
 }
 
 interface ArmPositions {
   angles: number[] | null;
-  positions: string[] | null;
 }
 
 export const useSocket = () => {
@@ -39,17 +37,14 @@ export const useSocket = () => {
   
   const [networkMetrics, setNetworkMetrics] = useState<NetworkMetrics>({
     latency: null,
-    fps: null,
-    packetLoss: null
+    fps: null
   });
   
   const [armPositions, setArmPositions] = useState<ArmPositions>({
-    angles: null,
-    positions: null
+    angles: null
   });
 
   const [pressedKeys, setPressedKeys] = useState<Set<string>>(new Set());
-  const [currentSpeed, setCurrentSpeed] = useState<number>(1.0);
   const continuousIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const pressedKeysRef = useRef<Set<string>>(new Set());
 
@@ -121,15 +116,13 @@ export const useSocket = () => {
     newSocket.on('network_metrics', (data) => {
       setNetworkMetrics({
         latency: data.latency || null,
-        fps: data.fps || null,
-        packetLoss: data.packetLoss || null
+        fps: data.fps || null
       });
     });
 
     newSocket.on('arm_position_update', (data) => {
       setArmPositions({
-        angles: data.angles || null,
-        positions: data.positions || null
+        angles: data.angles || null
       });
     });
 
@@ -163,10 +156,10 @@ export const useSocket = () => {
       const direction = KEY_TO_DIRECTION[primaryKey];
 
       if (direction && socket && status.socket === 'connected') {
-        socket.emit('move_command', { direction, speed: currentSpeed });
+        socket.emit('move_command', { direction, speed: ENV.DEFAULT_SPEED });
       }
     }, ENV.MOVEMENT_INTERVAL_MS);
-  }, [socket, status.socket, currentSpeed]);
+  }, [socket, status.socket]);
 
   const stopContinuousMovement = useCallback(() => {
     if (continuousIntervalRef.current) {
@@ -261,10 +254,6 @@ export const useSocket = () => {
     }
   }, [socket, status.socket]);
 
-  const setMovementSpeed = useCallback((speed: number) => {
-    setCurrentSpeed(Math.max(ENV.MIN_SPEED, Math.min(ENV.MAX_SPEED, speed)));
-  }, []);
-
   return {
     socket,
     status,
@@ -277,8 +266,6 @@ export const useSocket = () => {
     networkMetrics,
     armPositions,
     pressedKeys,
-    currentSpeed,
-    setMovementSpeed,
     stopContinuousMovement,
   };
 };

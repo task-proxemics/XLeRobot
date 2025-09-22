@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Moon, Sun, Radio } from 'lucide-react';
 import { useSocket } from './hooks/useSocket';
 import { RobotVideoCanvas } from './components/features/RobotVideoCanvas';
@@ -20,8 +20,6 @@ export default function App() {
     networkMetrics,
     armPositions,
     pressedKeys,
-    currentSpeed,
-    setMovementSpeed,
     stopContinuousMovement
   } = useSocket();
 
@@ -38,7 +36,7 @@ export default function App() {
 
   const displayLatency = formatValue(networkMetrics.latency);
   const displayFps = formatValue(networkMetrics.fps);
-  const displayArmAngles = armPositions.angles || [null, null, null, null];
+  const displayArmAngles = Array.isArray(armPositions.angles) ? armPositions.angles : [];
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -50,7 +48,10 @@ export default function App() {
   }, [theme]);
 
   const handleQuickMove = (direction: string) => {
-    const speedMultiplier = SPEED_LEVELS[speedLevel.toUpperCase() as keyof typeof SPEED_LEVELS].value;
+    const speedMultiplier = direction === 'stop'
+      ? 0
+      : SPEED_LEVELS[speedLevel.toUpperCase() as keyof typeof SPEED_LEVELS].value;
+
     sendMoveCommand(direction, speedMultiplier);
   };
 
@@ -65,7 +66,6 @@ export default function App() {
     }
   };
 
-  const handleSnapshot = () => {};
 
   const toggleRecording = () => {
     setRecording(prev => !prev);
@@ -163,10 +163,8 @@ export default function App() {
               latency={displayLatency}
               fps={displayFps}
               recording={recording}
-              onSnapshot={handleSnapshot}
               onToggleRecording={toggleRecording}
               onToggleVideoStream={toggleVideoStream}
-              theme={theme}
             />
             <div className="mt-3 text-xs text-gray-500">
               <strong>Keyboard:</strong> WASD/Arrow Keys for movement, Q/E for rotation. Hold for continuous movement.
@@ -183,7 +181,6 @@ export default function App() {
               messages={messages}
               socketStatus={status.socket}
               videoStatus={status.video}
-              frameCount={0}
               theme={theme}
             />
           </div>

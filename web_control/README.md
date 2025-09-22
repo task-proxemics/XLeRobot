@@ -1,244 +1,36 @@
-# XLeRobot Web Control
+# Setup Instructions
 
-A web-based control interface for XLeRobot supporting multiple simulation and real robot environments.
+## Prerequisites
+- Install Python 3.11 or newer — required for the server runtime.
+- Install Node.js 22 or newer with npm — required for the client build tooling.
+- Install Git and make sure `pip` and `npm` are on your PATH — needed for dependency management.
 
-## Quick Start
+## Prepare Server Environment
+1. `cd web_control/server` — switch to the server workspace.
+2. `python -m venv .venv` — create an isolated Python environment.
+3. `source .venv/bin/activate` (Linux/macOS) or `.venv\Scripts\activate` (Windows) — activate the environment.
+4. `pip install -r requirements.txt` — install server dependencies.
+5. `cp .env.example .env` — create the server environment file.
+6. Edit `.env` and set at minimum:
+   - `UI_HOST=0.0.0.0` — choose the bind address.
+   - `UI_PORT=8000` — choose the HTTP port.
+   - `ROBOT_HOST=localhost` — point to the robot or simulator host.
+   - `ROBOT_PORT_CMD=5555` and `ROBOT_PORT_DATA=5556` — configure ZeroMQ ports.
+7. `python main.py` — start the FastAPI and Socket.IO server.
 
-1. **Choose your controller type and configure environment:**
-   ```bash
-   cd web_control/server
-   cp .env.example .env
-   # Edit .env file with your controller settings
-   ```
+## Prepare Client Environment
+1. `cd web_control/client` — switch to the client workspace.
+2. `npm install` — install client dependencies.
+3. `cp .env.example .env` (create if absent) — define client environment variables.
+4. Edit `.env` and set at minimum:
+   - `VITE_SERVER_PROTOCOL=http` — protocol used to reach the server.
+   - `VITE_SERVER_HOST=localhost` — hostname or IP of the server.
+   - `VITE_SERVER_PORT=8000` — port that matches the server.
+5. `npm run dev` — launch the Vite dev server.
+6. `npm run build` — produce a production build when needed.
 
-2. **Install dependencies and start server:**
-   ```bash
-   pip install -r requirements.txt
-   python main.py
-   ```
-
-3. **Start client interface:**
-   ```bash
-   cd ../client
-   npm install
-   npm run dev
-   ```
-
-4. **Access the interface:** http://localhost:5173
-
-## Controller Types
-
-### 1. MuJoCo Simulation Controller
-
-**Best for:** Physics simulation, algorithm development, safe testing
-
-**Configuration (.env):**
-```bash
-ROBOT_CONTROLLER=mujoco
-USE_MUJOCO_SIMULATOR=true
-ENABLE_VIEWER=false
-MJCF_PATH=
-```
-
-**Dependencies:**
-```bash
-pip install mujoco
-```
-
-**Features:**
-- Physics-based simulation
-- Fast iteration and testing
-- No hardware required
-- 3D visualization optional
-- Custom model support
-
-**Usage:**
-- Ideal for developing control algorithms
-- Safe environment for testing dangerous movements
-- Physics accuracy for dynamics research
-
----
-
-### 2. ManiSkill Environment Controller
-
-**Best for:** AI training, reinforcement learning, skill development
-
-**Configuration (.env):**
-```bash
-ROBOT_CONTROLLER=maniskill
-```
-
-**Dependencies:**
-```bash
-pip install mani-skill gymnasium torch
-```
-
-**Features:**
-- AI training environments
-- Task-specific scenarios
-- GPU acceleration support
-- Standardized observation/action spaces
-- Integration with ML frameworks
-
-**Usage:**
-- Train RL agents on robot tasks
-- Evaluate learned policies
-- Benchmark robot learning algorithms
-- Sim-to-real transfer research
-
----
-
-### 3. Real Robot Controller (XLeRobot)
-
-**Best for:** Real-world deployment, physical robot control
-
-**Configuration (.env):**
-
-*Option A - Control Remote Robot:*
-```bash
-ROBOT_CONTROLLER=real
-ROBOT_IP=192.168.1.100
-PORT_ZMQ_CMD=5555
-PORT_ZMQ_OBSERVATIONS=5556
-SERVER_HOST=localhost
-```
-
-*Option B - Run on Robot:*
-```bash
-ROBOT_CONTROLLER=real
-ROBOT_IP=localhost
-PORT_ZMQ_CMD=5555
-PORT_ZMQ_OBSERVATIONS=5556
-SERVER_HOST=0.0.0.0
-```
-
-**Dependencies:**
-```bash
-pip install pyzmq
-```
-
-**Prerequisites:**
-- XLeRobot hardware with xlerobot_host.py running
-- Network connection (local or Tailscale)
-- ZeroMQ communication ports available
-
-**Features:**
-- Real-time robot control
-- Dual-arm manipulation (12 DoF)
-- Mobile base control (3 DoF)
-- Head control (2 DoF)
-- Multi-camera video streams
-- Real-time telemetry
-- Emergency stop functionality
-
-**Deployment Architectures:**
-
-1. **Remote Control Setup:**
-   ```
-   [Your PC] → web_control → [Robot] xlerobot_host.py
-   ```
-   - Run web_control on your computer
-   - Control robot over network/Tailscale
-   - Good for development and remote operation
-
-2. **On-Robot Setup:**
-   ```
-   [Robot] xlerobot_host.py + web_control ← [Your PC] browser
-   ```
-   - Run web_control directly on robot
-   - Access via web browser from any device
-   - Good for production deployment
-
-**Usage:**
-- Physical task execution
-- Real-world testing
-- Human-robot interaction
-- Production deployments
-
-## Network Configuration
-
-### Local Network
-- Ensure all devices on same network
-- Use device IP addresses in configuration
-
-### Tailscale (Recommended for remote access)
-
-1. **Install Tailscale on both devices:**
-   ```bash
-   curl -fsSL https://tailscale.com/install.sh | sh
-   sudo tailscale up
-   ```
-
-2. **Get device IPs:**
-   ```bash
-   tailscale ip -4
-   ```
-
-3. **Configure firewall:**
-   ```bash
-   sudo ufw allow 8000  # Web interface
-   sudo ufw allow 5555  # Robot commands
-   sudo ufw allow 5556  # Robot data
-   ```
-
-## Client Configuration
-
-Create `web_control/client/.env`:
-```bash
-VITE_SERVER_HOST=localhost
-VITE_SERVER_PORT=8000
-VITE_SERVER_PROTOCOL=http
-```
-
-For remote access, use server's IP:
-```bash
-VITE_SERVER_HOST=192.168.1.100
-```
-
-## Troubleshooting
-
-### Controller-Specific Issues
-
-**MuJoCo:**
-- Verify installation: `python -c "import mujoco"`
-- Check OpenGL support for rendering
-- Validate MJCF model files
-
-**ManiSkill:**
-- Install gymnasium: `pip install gymnasium`
-- Check CUDA for GPU acceleration
-- Verify environment IDs
-
-**Real Robot:**
-- Ensure xlerobot_host.py is running on robot
-- Test ZeroMQ connectivity: `telnet robot-ip 5555`
-- Check robot calibration and hardware status
-- Verify network connectivity and ports
-
-### General Issues
-
-**Connection Problems:**
-- Check firewall settings
-- Verify IP addresses and ports
-- Test network connectivity with ping
-
-**Performance Issues:**
-- Reduce VIDEO_QUALITY for better network performance
-- Lower VIDEO_FPS on slow connections
-- Use production build for client
-
-**Video Stream Issues:**
-- Verify OpenCV installation: `python -c "import cv2"`
-- Check browser WebSocket support
-- Test with different browsers
-
-## Development
-
-### Adding New Controllers
-1. Create controller class in `robot_interface/`
-2. Implement base controller interface
-3. Add configuration options to `config.py`
-4. Update factory pattern in `factory.py`
-
-### Configuration Options
-All settings can be configured via environment variables or `.env` files. See `.env.example` for complete options list.
+## Operate the Stack
+1. Ensure the server is running and reachable — required before opening the UI.
+2. Ensure the client dev server or production build is served — needed for browser access.
+3. Open `http://localhost:5173` (default dev URL) — verify the dashboard loads.
+4. Monitor terminal logs for telemetry, errors, or reconnect issues — helps with troubleshooting.

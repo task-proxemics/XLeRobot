@@ -25,6 +25,7 @@ export const SPEED_LEVELS = {
 
 export const STATUS_COLORS = {
   connected: 'bg-green-400',
+  connecting: 'bg-yellow-300',
   error: 'bg-red-500',
   disconnected: 'bg-yellow-400',
   streaming: 'bg-green-400'

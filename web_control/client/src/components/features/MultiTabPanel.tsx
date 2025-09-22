@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import type { SystemMessage } from '../../types';
 import {
   BarChart3,
-  Map,
   FileText,
   Settings,
   TrendingUp,
@@ -18,7 +17,6 @@ import {
   AlertTriangle,
   Info,
   Circle,
-  Lightbulb,
   Inbox
 } from 'lucide-react';
 import { formatTime, formatTimestamp, formatLatency, formatFPS } from '../../utils/format';
@@ -31,17 +29,16 @@ interface MultiTabPanelProps {
     temp: string;
     voltage: string;
   };
-  armAngles: number[];
-  latency: number;
-  fps: number;
+  armAngles: Array<number | null>;
+  latency: number | string | null;
+  fps: number | string | null;
   messages: SystemMessage[];
   socketStatus: string;
   videoStatus: string;
-  frameCount: number;
   theme: 'light' | 'dark';
 }
 
-type TabType = 'telemetry' | 'map' | 'logs' | 'diag';
+type TabType = 'telemetry' | 'logs' | 'diag';
 
 export function MultiTabPanel({
   telemetry,
@@ -51,7 +48,6 @@ export function MultiTabPanel({
   messages,
   socketStatus,
   videoStatus,
-  frameCount,
   theme
 }: MultiTabPanelProps) {
   const [activeTab, setActiveTab] = useState<TabType>('telemetry');
@@ -69,13 +65,6 @@ export function MultiTabPanel({
           onClick={() => setActiveTab('telemetry')}
           theme={theme}
           icon={<BarChart3 size={16} />}
-        />
-        <Tab 
-          label="Map" 
-          active={activeTab === 'map'} 
-          onClick={() => setActiveTab('map')}
-          theme={theme}
-          icon={<Map size={16} />}
         />
         <Tab 
           label="Logs" 
@@ -107,9 +96,6 @@ export function MultiTabPanel({
             theme={theme}
           />
         )}
-        {activeTab === 'map' && (
-          <MapPanel theme={theme} />
-        )}
         {activeTab === 'logs' && (
           <LogPanel messages={messages} theme={theme} />
         )}
@@ -119,7 +105,6 @@ export function MultiTabPanel({
             fps={fps}
             socketStatus={socketStatus} 
             videoStatus={videoStatus}
-            frameCount={frameCount}
             theme={theme}
           />
         )}
@@ -133,7 +118,7 @@ interface TabProps {
   active: boolean;
   onClick: () => void;
   theme: 'light' | 'dark';
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 function Tab({ label, active, onClick, theme, icon }: TabProps) {
@@ -156,9 +141,9 @@ function Tab({ label, active, onClick, theme, icon }: TabProps) {
 
 interface TelemetryPanelProps {
   telemetry: any;
-  armAngles: number[];
-  latency: number;
-  fps: number;
+  armAngles: Array<number | null>;
+  latency: number | string | null;
+  fps: number | string | null;
   theme: 'light' | 'dark';
 }
 
@@ -248,26 +233,41 @@ function TelemetryPanel({ telemetry, armAngles, latency, fps, theme }: Telemetry
           Robot Arm Joint Angles
         </div>
         
-        <div className="grid grid-cols-2 gap-3">
-          {armAngles.map((angle, index) => (
-            <div key={index} className={`p-3 border rounded-lg text-center ${
-              theme === 'dark' ? 'border-gray-600 bg-gray-800' : 'border-gray-200 bg-white'
-            }`}>
-              <div className="text-xs text-gray-400 mb-1">Joint {index + 1}</div>
-              <div className="font-mono text-lg font-bold">{angle}°</div>
-              <div className="mt-1">
-                <div className={`h-2 rounded-full overflow-hidden ${
-                  theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'
+        {armAngles.length > 0 ? (
+          <div className="grid grid-cols-2 gap-3">
+            {armAngles.map((angle, index) => {
+              const isNumber = typeof angle === 'number' && Number.isFinite(angle);
+              const normalizedWidth = isNumber ? Math.min(Math.abs(angle) / 180 * 100, 100) : 0;
+
+              return (
+                <div key={index} className={`p-3 border rounded-lg text-center ${
+                  theme === 'dark' ? 'border-gray-600 bg-gray-800' : 'border-gray-200 bg-white'
                 }`}>
-                  <div 
-                    className="h-full bg-blue-500 transition-all duration-300"
-                    style={{ width: `${Math.min(Math.abs(angle) / 180 * 100, 100)}%` }}
-                  ></div>
+                  <div className="text-xs text-gray-400 mb-1">Joint {index + 1}</div>
+                  <div className="font-mono text-lg font-bold">
+                    {isNumber ? `${angle} deg` : 'N/A'}
+                  </div>
+                  <div className="mt-1">
+                    <div className={`h-2 rounded-full overflow-hidden ${
+                      theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'
+                    }`}>
+                      <div 
+                        className="h-full bg-blue-500 transition-all duration-300"
+                        style={{ width: `${normalizedWidth}%` }}
+                      ></div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className={`p-3 rounded-lg text-center text-sm text-gray-400 ${
+            theme === 'dark' ? 'bg-gray-800 border border-gray-600' : 'bg-gray-100 border border-gray-200'
+          }`}>
+            Arm telemetry not available
+          </div>
+        )}
       </div>
     </div>
   );
@@ -292,36 +292,6 @@ function MetricCard({ label, value, icon, color, theme }: MetricCardProps) {
       </div>
       <div className={`font-mono font-bold text-lg ${color}`}>
         {value}
-      </div>
-    </div>
-  );
-}
-
-function MapPanel({ theme }: { theme: 'light' | 'dark' }) {
-  return (
-    <div className={`w-full h-full rounded-lg flex flex-col items-center justify-center ${
-      theme === 'dark' ? 'bg-gray-700' : 'bg-gray-100'
-    }`}>
-      <div className="mb-4">
-        <Map size={64} className="text-gray-400" />
-      </div>
-      <div className="text-lg font-semibold mb-2">Map View</div>
-      <div className="text-gray-400 text-center max-w-xs">
-        Robot environment map will be displayed here.
-      </div>
-      <div className="mt-4 grid grid-cols-2 gap-2 w-full max-w-xs">
-        <div className={`p-3 rounded-lg text-center ${
-          theme === 'dark' ? 'bg-gray-800' : 'bg-white'
-        }`}>
-          <div className="text-xs text-gray-400">Current Position</div>
-          <div className="font-mono text-sm">(0.0, 0.0)</div>
-        </div>
-        <div className={`p-3 rounded-lg text-center ${
-          theme === 'dark' ? 'bg-gray-800' : 'bg-white'
-        }`}>
-          <div className="text-xs text-gray-400">Orientation</div>
-          <div className="font-mono text-sm">0°</div>
-        </div>
       </div>
     </div>
   );
@@ -403,15 +373,14 @@ function LogPanel({ messages, theme }: LogPanelProps) {
 }
 
 interface DiagPanelProps {
-  latency: number;
-  fps: number;
+  latency: number | string | null;
+  fps: number | string | null;
   socketStatus: string;
   videoStatus: string;
-  frameCount: number;
   theme: 'light' | 'dark';
 }
 
-function DiagPanel({ latency, fps, socketStatus, videoStatus, frameCount, theme }: DiagPanelProps) {
+function DiagPanel({ latency, fps, socketStatus, videoStatus, theme }: DiagPanelProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'connected': 
@@ -478,7 +447,6 @@ function DiagPanel({ latency, fps, socketStatus, videoStatus, frameCount, theme 
         </div>
       </div>
 
-      {/* Performance Metrics */}
       <div className={`p-4 rounded-lg ${
         theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
       }`}>
@@ -492,50 +460,6 @@ function DiagPanel({ latency, fps, socketStatus, videoStatus, frameCount, theme 
             <div className="text-2xl font-mono font-bold text-green-600">{formatFPS(fps)}</div>
             <div className="text-xs text-gray-400">Frame Rate (FPS)</div>
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-mono font-bold text-blue-600">{frameCount}</div>
-            <div className="text-xs text-gray-400">Received Frames</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-mono font-bold text-orange-600">
-              {formatTime().split(':')[2]}
-            </div>
-            <div className="text-xs text-gray-400">Runtime (seconds)</div>
-          </div>
-        </div>
-      </div>
-
-      {/* System Info */}
-      <div className={`p-4 rounded-lg ${
-        theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
-      }`}>
-        <div className="text-sm font-medium mb-3">System Information</div>
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between">
-            <span className="text-gray-400">User Agent</span>
-            <span className="font-mono">Chrome/Safari</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">WebRTC Support</span>
-            <span className="font-mono text-green-600">✓ Available</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">WebSocket Support</span>
-            <span className="font-mono text-green-600">✓ Available</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">Canvas Support</span>
-            <span className="font-mono text-green-600">✓ Available</span>
-          </div>
-        </div>
-      </div>
-
-      <div className={`p-3 rounded-lg text-xs text-gray-400 ${
-        theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
-      }`}>
-        <div className="flex items-center gap-2">
-          <Lightbulb size={14} />
-          Diagnostic information updates automatically every second. If you experience connection issues, please check server status and network connectivity.
         </div>
       </div>
     </div>

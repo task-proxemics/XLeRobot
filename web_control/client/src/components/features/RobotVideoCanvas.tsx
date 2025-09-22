@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import type { Socket } from 'socket.io-client';
 import {
   Battery,
@@ -6,7 +6,6 @@ import {
   Zap,
   Square,
   Play,
-  Camera,
   Circle,
   Gauge,
   Monitor,
@@ -32,10 +31,8 @@ interface RobotVideoCanvasProps {
   latency: number | string;
   fps: number | string;
   recording: boolean;
-  onSnapshot: () => void;
   onToggleRecording: () => void;
   onToggleVideoStream: () => void;
-  theme: 'light' | 'dark';
 }
 
 export function RobotVideoCanvas({
@@ -45,10 +42,8 @@ export function RobotVideoCanvas({
   latency,
   fps,
   recording,
-  onSnapshot,
   onToggleRecording,
-  onToggleVideoStream,
-  theme
+  onToggleVideoStream
 }: RobotVideoCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -63,6 +58,7 @@ export function RobotVideoCanvas({
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * devicePixelRatio;
       canvas.height = rect.height * devicePixelRatio;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(devicePixelRatio, devicePixelRatio);
       canvas.style.width = rect.width + 'px';
       canvas.style.height = rect.height + 'px';
@@ -86,7 +82,6 @@ export function RobotVideoCanvas({
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
 
-      const rect = canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
       const logicalWidth = canvas.width / dpr;
       const logicalHeight = canvas.height / dpr;
@@ -174,13 +169,6 @@ export function RobotVideoCanvas({
           >
             {videoStatus === 'streaming' ? <Square size={14} /> : <Play size={14} />}
             {videoStatus === 'streaming' ? 'Stop' : 'Start'}
-          </button>
-          <button
-            onClick={onSnapshot}
-            className="flex items-center gap-2 px-3 py-2 bg-white/90 hover:bg-white rounded-md text-sm shadow transition-all text-gray-900"
-          >
-            <Camera size={14} />
-            Snapshot
           </button>
           <button
             onClick={onToggleRecording}
