@@ -5,8 +5,14 @@
 > Estimated Assembly time: From scratch: 2-4 hrs; with assembled SO100/SO101 arms: 1-2 hrs
 > 
 ```{tip}
-If you'd rather skip the fun of tightening screws, you can also buy [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms.
+You can also buy [pre-assembled kits](https://github.com/TheRobotStudio/SO-ARM100#kits) for SO101 arms.
+
 ```
+<iframe width="800" height="600" 
+    src="https://www.youtube.com/embed/upB1CEFeOlk" 
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
 
 ## 🦾 SO101 Arms
 

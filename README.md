@@ -40,6 +40,7 @@
 ---
 
 # 📰 News 
+- 2025-09-22: **Hardware Assembly Video Tutorial** availabe at [Youtube](https://www.youtube.com/watch?v=upB1CEFeOlk) and [Bilibili](https://www.bilibili.com/video/BV1AGWFzUEJf/). Thanks WOWROBO for making this video!
 - 2025-09-09: **Developer Assembly kit (excluding battery and IKEA cart) ready for purchase** in [China (Taobao) for **3699￥**](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ) and [world-wide for **579\$**](https://shop.wowrobo.com/products/xlerobot-dual-arm-mobile-household-robot-kit?variant=47297659961561). _(In collaboration with **Wowrobo**, one of the official collaborators with Huggingface SO101 arm, they have sold 5k+ SO101 arm worldwide with great customer feedback.)_
   <img width="1482" height="485" alt="image" src="https://github.com/user-attachments/assets/788836c1-966a-4d11-a911-5c37befc0b85" />
   - Non-profit, I personally don't earn any from this. I also asked Wowrobo to set the price as low as possible.

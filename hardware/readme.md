@@ -15,6 +15,10 @@ Note that the 3D Printing files are only to store the models. It’s suggested t
 - No need to adjust the base connector this time, just print the washers and insert them into the IKEA cart for the best base support.
 - <img width="1242" height="696" alt="image" src="https://github.com/user-attachments/assets/e603a529-0690-4ce0-8d3b-381af0c86155" />
 
+---
 
-
-
+- Update 20.09.2025 by Lix: New gimbal designs can be found in the two mesh files:
+    - Gimbal_Pitch_Holder_d435.stl: For Intel Realsense D435 or similar RGBD camera.
+    ![d435](./Screenshot_Gimbal_mesh_all_d435.png)
+    - Gimbal_Pitch_Holder_d455.stl: For Intel Realsense D455 or similar RGBD camera.
+    ![d455](./Screenshot_Gimbal_mesh_all_d455.png)
