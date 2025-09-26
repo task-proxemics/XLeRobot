@@ -19,13 +19,13 @@ from typing import List, Optional, Annotated, Union
 
 @dataclass
 class Args:
-    env_id: Annotated[str, tyro.conf.arg(aliases=["-e"])] = "PushCube-v1"
+    env_id: Annotated[str, tyro.conf.arg(aliases=["-e"])] = "ReplicaCAD_SceneManipulation-v1"
     """The environment ID of the task you want to simulate"""
 
     obs_mode: Annotated[str, tyro.conf.arg(aliases=["-o"])] = "sensor_data"
     """Observation mode - changed to sensor_data to get camera images"""
 
-    robot_uids: Annotated[Optional[str], tyro.conf.arg(aliases=["-r"])] = None
+    robot_uids: Annotated[Optional[str], tyro.conf.arg(aliases=["-r"])] = "xlerobot"
     """Robot UID(s) to use. Can be a comma separated list of UIDs or empty string to have no agents. If not given then defaults to the environments default robot"""
 
     sim_backend: Annotated[str, tyro.conf.arg(aliases=["-b"])] = "auto"
@@ -37,11 +37,11 @@ class Args:
     num_envs: Annotated[int, tyro.conf.arg(aliases=["-n"])] = 1
     """Number of environments to run."""
 
-    control_mode: Annotated[Optional[str], tyro.conf.arg(aliases=["-c"])] = None
+    control_mode: Annotated[Optional[str], tyro.conf.arg(aliases=["-c"])] = "pd_joint_delta_pos_dual_arm"
     """Control mode"""
 
-    render_mode: str = "rgb_array"
-    """Render mode - using rgb_array to get camera images"""
+    render_mode: str = "human"
+    """Render mode - using human to get interactive rendering"""
 
     shader: str = "default"
     """Change shader used for all cameras in the environment for rendering. Default is 'minimal' which is very fast. Can also be 'rt' for ray tracing and generating photo-realistic renders. Can also be 'rt-fast' for a faster but lower quality ray-traced renderer"""
@@ -106,12 +106,10 @@ def get_mapped_joints(robot):
         mapped_joints[9] = full_joints[10]
         mapped_joints[10] = full_joints[12]
         mapped_joints[11] = full_joints[14]
-
-        # Grippers
+        
         mapped_joints[12] = full_joints[15]
         mapped_joints[13] = full_joints[16]
 
-        # Head
         mapped_joints[14] = full_joints[5]
         mapped_joints[15] = full_joints[8]
     
@@ -285,8 +283,8 @@ def main(args: Args):
     target_joints[11] = 1.57  # Set joint 5 for second arm to 1.57
 
     # Initialize end effector positions for both arms
-    initial_ee_pos_arm1 = np.array([0.247, -0.023])  # Initial position for first arm
-    initial_ee_pos_arm2 = np.array([0.247, -0.023])  # Initial position for second arm
+    initial_ee_pos_arm1 = np.array([0.162, 0.118])  # Initial position for first arm
+    initial_ee_pos_arm2 = np.array([0.162, 0.118])  # Initial position for second arm
     ee_pos_arm1 = initial_ee_pos_arm1.copy()
     ee_pos_arm2 = initial_ee_pos_arm2.copy()
     

@@ -62,11 +62,11 @@ class Xlerobot(BaseAgent):
             qpos=np.array([0, 0, 0,           # [0,1,2] base: x, y, rotation
                           0, 0,              # [3,4] first values for arm1, arm2
                           0,                 # [5] head pan
-                          0.303, 0.556,      # [6,7] second values for arm1, arm2  
+                          3.14, 3.14,      # [6,7] second values for arm1, arm2  
                           0,                 # [8] head tilt
-                          0.303, 0.556,      # [9,10] third values for arm1, arm2
+                          3.14, 3.14,      # [9,10] third values for arm1, arm2
                           0, 0,              # [11,12] fourth values for arm1, arm2
-                          0.556, 0,          # [13,14] fifth values for arm1, arm2
+                          1.57, 1.57,          # [13,14] fifth values for arm1, arm2
                           0, 0]),            # [15,16] grippers: Jaw, Jaw_2
         )
     )
@@ -358,39 +358,9 @@ class Xlerobot(BaseAgent):
                 body=body_pd_joint_delta_pos,
                 base=base_pd_joint_vel,
             ),
-            pd_ee_delta_pos=dict(
-                arm=arm_pd_ee_delta_pos,
-                gripper=gripper_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_delta_pose=dict(
-                arm=arm_pd_ee_delta_pose,
-                gripper=gripper_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_delta_pose_align=dict(
-                arm=arm_pd_ee_delta_pose_align,
-                gripper=gripper_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
             # TODO(jigu): how to add boundaries for the following controllers
             pd_joint_target_delta_pos=dict(
                 arm=arm_pd_joint_target_delta_pos,
-                gripper=gripper_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_target_delta_pos=dict(
-                arm=arm_pd_ee_target_delta_pos,
-                gripper=gripper_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_target_delta_pose=dict(
-                arm=arm_pd_ee_target_delta_pose,
                 gripper=gripper_pd_joint_pos,
                 body=body_pd_joint_delta_pos,
                 base=base_pd_joint_vel,
@@ -420,6 +390,7 @@ class Xlerobot(BaseAgent):
                 body=stiff_body_pd_joint_pos,
                 base=base_pd_joint_vel,
             ),
+            # Default single-arm controller configs
             pd_joint_delta_pos_arm2=dict(
                 arm=arm2_pd_joint_delta_pos,
                 gripper=gripper2_pd_joint_pos,
@@ -432,38 +403,8 @@ class Xlerobot(BaseAgent):
                 body=body_pd_joint_delta_pos,
                 base=base_pd_joint_vel,
             ),
-            pd_ee_delta_pos_arm2=dict(
-                arm=arm_pd_ee_delta_pos,
-                gripper=gripper2_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_delta_pose_arm2=dict(
-                arm=arm_pd_ee_delta_pose,
-                gripper=gripper2_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_delta_pose_align_arm2=dict(
-                arm=arm_pd_ee_delta_pose_align,
-                gripper=gripper2_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
             pd_joint_target_delta_pos_arm2=dict(
                 arm=arm_pd_joint_target_delta_pos,
-                gripper=gripper2_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_target_delta_pos_arm2=dict(
-                arm=arm_pd_ee_target_delta_pos,
-                gripper=gripper2_pd_joint_pos,
-                body=body_pd_joint_delta_pos,
-                base=base_pd_joint_vel,
-            ),
-            pd_ee_target_delta_pose_arm2=dict(
-                arm=arm_pd_ee_target_delta_pose,
                 gripper=gripper2_pd_joint_pos,
                 body=body_pd_joint_delta_pos,
                 base=base_pd_joint_vel,
@@ -492,6 +433,7 @@ class Xlerobot(BaseAgent):
                 body=stiff_body_pd_joint_pos,
                 base=base_pd_joint_vel,
             ),
+            # Default dual-arm controller configs
             pd_joint_delta_pos_dual_arm=dict(
                 base=base_pd_joint_vel,
                 arm1=arm_pd_joint_delta_pos,

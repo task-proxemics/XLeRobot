@@ -9,7 +9,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # Import the XLeRobot agents to register them
-from agents.xlerobot import xlerobot_single
+from agents.xlerobot import xlerobot
 
 # Now import and run the demo
 import gymnasium as gym

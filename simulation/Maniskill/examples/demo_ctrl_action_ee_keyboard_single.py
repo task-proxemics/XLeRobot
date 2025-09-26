@@ -19,13 +19,13 @@ from typing import List, Optional, Annotated, Union
 
 @dataclass
 class Args:
-    env_id: Annotated[str, tyro.conf.arg(aliases=["-e"])] = "PushCube-v1"
+    env_id: Annotated[str, tyro.conf.arg(aliases=["-e"])] = "ReplicaCAD_SceneManipulation-v1"
     """The environment ID of the task you want to simulate"""
 
     obs_mode: Annotated[str, tyro.conf.arg(aliases=["-o"])] = "sensor_data"
     """Observation mode - changed to sensor_data to get camera images"""
 
-    robot_uids: Annotated[Optional[str], tyro.conf.arg(aliases=["-r"])] = None
+    robot_uids: Annotated[Optional[str], tyro.conf.arg(aliases=["-r"])] = "xlerobot"
     """Robot UID(s) to use. Can be a comma separated list of UIDs or empty string to have no agents. If not given then defaults to the environments default robot"""
 
     sim_backend: Annotated[str, tyro.conf.arg(aliases=["-b"])] = "auto"
@@ -37,11 +37,11 @@ class Args:
     num_envs: Annotated[int, tyro.conf.arg(aliases=["-n"])] = 1
     """Number of environments to run."""
 
-    control_mode: Annotated[Optional[str], tyro.conf.arg(aliases=["-c"])] = None
+    control_mode: Annotated[Optional[str], tyro.conf.arg(aliases=["-c"])] = "pd_joint_delta_pos"
     """Control mode"""
 
-    render_mode: str = "rgb_array"
-    """Render mode - using rgb_array to get camera images"""
+    render_mode: str = "human"
+    """Render mode - using human to get interactive rendering"""
 
     shader: str = "default"
     """Change shader used for all cameras in the environment for rendering. Default is 'minimal' which is very fast. Can also be 'rt' for ray tracing and generating photo-realistic renders. Can also be 'rt-fast' for a faster but lower quality ray-traced renderer"""
@@ -62,10 +62,11 @@ def get_mapped_joints(robot):
     """
     Get the current joint positions from the robot and map them correctly to the target joints.
     
-    The mapping is:
+    The mapping for single arm control (10 joints):
     - full_joints[0,2] → current_joints[0,1] (base x position and base rotation)
-    - full_joints[3,6,9,11,13] → current_joints[2,3,4,5,6] (first arm joints)
-    - full_joints[4,7,10,12,14] → current_joints[7,8,9,10,11] (second arm joints)
+    - full_joints[3,5,7,8,9] → current_joints[2,3,4,5,6] (arm joints)
+    - full_joints[10] → current_joints[7] (gripper)
+    - full_joints[4,6] → current_joints[8,9] (head joints)
     
     Returns:
         np.ndarray: Mapped joint positions with shape matching the target_joints
@@ -87,25 +88,23 @@ def get_mapped_joints(robot):
     # Create the mapped joints array with correct size
     mapped_joints = np.zeros(10)
     
-    # Map the joints according to the specified mapping
-    if len(full_joints) >= 9:
-        # Base joints: [0,2] → [0,1]
-        mapped_joints[0] = full_joints[0]  # Base X position
-        mapped_joints[1] = full_joints[2]  # Base rotation
-        
-        # First arm: [3,6,9,11,13] → [2,3,4,5,6]
-        mapped_joints[2] = full_joints[3]
-        mapped_joints[3] = full_joints[5]
-        mapped_joints[4] = full_joints[7]
-        mapped_joints[5] = full_joints[8]
-        mapped_joints[6] = full_joints[9]
-        
-        
-        mapped_joints[7] = full_joints[10]
 
 
-        mapped_joints[8] = full_joints[4]
-        mapped_joints[9] = full_joints[6]
+    # Base joints: [0,2] → [0,1]
+    mapped_joints[8] = full_joints[0]  # Base X position
+    mapped_joints[9] = full_joints[2]  # Base rotation
+    
+    # First arm: [3,6,9,11,13] → [2,3,4,5,6]
+    mapped_joints[0] = full_joints[3]
+    mapped_joints[1] = full_joints[6]
+    mapped_joints[2] = full_joints[9]
+    mapped_joints[3] = full_joints[11]
+    mapped_joints[4] = full_joints[13]
+    
+    mapped_joints[5] = full_joints[15]
+
+    mapped_joints[6] = full_joints[5]
+    mapped_joints[7] = full_joints[8]
     
     return mapped_joints
 
@@ -271,20 +270,17 @@ def main(args: Args):
     target_joints = np.zeros_like(action)
     target_joints[3] = 0.303
     target_joints[4] = 0.556
-    target_joints[6] = 1.57  # Set joint 5 for first arm to 1.57
-
+    target_joints[6] = 1.57  # Set wrist roll joint
 
     # Initialize end effector positions for both arms
-    initial_ee_pos_arm1 = np.array([0.247, -0.023])  # Initial position for first arm
+    initial_ee_pos_arm1 = np.array([0.162, 0.118])  # Initial position for first arm
 
     ee_pos_arm1 = initial_ee_pos_arm1.copy()
 
     
-    # Initialize pitch adjustments for end effector orientation
-    initial_pitch_1 = 0.0  # Initial pitch adjustment for first arm
-
+    # Initialize pitch adjustment for end effector orientation
+    initial_pitch_1 = 0.0  # Initial pitch adjustment for arm
     pitch_1 = initial_pitch_1
-
     pitch_step = 0.02  # Step size for pitch adjustment
     
     # Define tip length for vertical position compensation
@@ -297,13 +293,12 @@ def main(args: Args):
     # Define the gain for the proportional controller as a list for each joint
     p_gain = np.ones_like(action)  # Default all gains to 1.0
     # Specific gains can be adjusted here
-    p_gain[0] = 2     # Base forward/backward
-    p_gain[1] = 0.5     # Base rotation - lower gain for smoother turning
-    p_gain[2:7] = 1.0   # First arm joints
-    p_gain[7] = 0.05  # Gripper joints
-    p_gain[8] = 2  # Gripper joints
-    p_gain[9] = 2  # Head motor joints
-
+    p_gain[9] = 2     # Base forward/backward
+    p_gain[0] = 0.5     # Base rotation - lower gain for smoother turning
+    p_gain[1:5] = 1.0   # Arm joints
+    p_gain[5] = 0.05  # Gripper joint
+    p_gain[6] = 2  # Head pan
+    p_gain[7] = 2  # Head tilt
     
     # Get initial joint positions if available
     current_joints = np.zeros_like(action)
@@ -323,13 +318,36 @@ def main(args: Args):
     
     # Ensure target_joints is a numpy array with the same shape as current_joints
     target_joints = np.zeros_like(current_joints)
-    target_joints[6] = 1.57 
+    target_joints[4] = 1.57  # Set wrist roll
     
-    # Set initial joint positions based on inverse kinematics from initial end effector positions
+    # Set initial joint positions based on inverse kinematics from initial end effector position
     try:
-        target_joints[3], target_joints[4] = inverse_kinematics(ee_pos_arm1[0], ee_pos_arm1[1])
+        target_joints[1], target_joints[2] = inverse_kinematics(ee_pos_arm1[0], ee_pos_arm1[1])
     except Exception as e:
         print(f"Error calculating initial inverse kinematics: {e}")
+    
+    # Force second arm to fixed position in qpos immediately
+    if robot is not None:
+        current_qpos = robot.get_qpos()
+        if hasattr(current_qpos, 'clone'):
+            new_qpos = current_qpos.clone()
+        else:
+            new_qpos = current_qpos.copy()
+        
+        if len(new_qpos.shape) > 1:
+            new_qpos = new_qpos.squeeze()
+        
+        if len(new_qpos) >= 17:
+            # Set second arm to folded/safe position
+            new_qpos[4] = 0.0    # Rotation_2 
+            new_qpos[7] = 3.14   # Pitch_2 (folded back)
+            new_qpos[10] = 3.14  # Elbow_2 (folded)
+            new_qpos[12] = 0.0   # Wrist_Pitch_2
+            new_qpos[14] = 1.57  # Wrist_Roll_2
+            new_qpos[16] = 0.0   # Jaw_2 (gripper closed)
+            
+            robot.set_qpos(new_qpos)
+            print("Second arm set to fixed position")
     
     # Add step counter for warmup phase
     step_counter = 0
@@ -346,11 +364,9 @@ def main(args: Args):
                 if event.key == pygame.K_x:
                     # Reset end effector positions
                     ee_pos_arm1 = initial_ee_pos_arm1.copy()
-
                     
                     # Reset pitch adjustments
                     pitch_1 = initial_pitch_1
-
                     
                     # Reset target joints
                     target_joints = np.zeros_like(target_joints)
@@ -358,12 +374,11 @@ def main(args: Args):
                     # Calculate initial joint positions based on inverse kinematics
                     try:
                         compensated_y1 = ee_pos_arm1[1] - tip_length * math.sin(pitch_1)
-                        target_joints[3], target_joints[4] = inverse_kinematics(ee_pos_arm1[0], compensated_y1)
+                        target_joints[1], target_joints[2] = inverse_kinematics(ee_pos_arm1[0], compensated_y1)
                         
-                        
+                                               
                         # Apply pitch adjustment to joint 5 and 10
-                        target_joints[5] = target_joints[3] - target_joints[4] + pitch_1
-                        
+                        target_joints[3] = target_joints[1] - target_joints[2] + pitch_1
                     except Exception as e:
                         print(f"Error calculating inverse kinematics during reset: {e}")
                     
@@ -375,17 +390,17 @@ def main(args: Args):
         if step_counter >= warmup_steps:
             # Base forward/backward - direct control
             if keys[pygame.K_w]:
-                action[0] = 0.1  # Forward
+                action[8] = 0.1  # Forward
             elif keys[pygame.K_s]:
-                action[0] = -0.1  # Backward
+                action[8] = -0.1  # Backward
             else:
-                action[0] = 0.0  # Stop forward/backward movement
+                action[8] = 0.0  # Stop forward/backward movement
                 
             # Base turning - using target_joints and P control
             if keys[pygame.K_a]:
-                target_joints[1] += joint_step*2  # Turn left
+                target_joints[9] += joint_step*2  # Turn left
             elif keys[pygame.K_d]:
-                target_joints[1] -= joint_step*2  # Turn right
+                target_joints[9] -= joint_step*2  # Turn right
             
             # # Handle base rotation wraparound - if rotation falls below -π, add 2π
             # if target_joints[1] < -math.pi*1.01:
@@ -411,14 +426,14 @@ def main(args: Args):
                 
             # Calculate inverse kinematics for first arm if end effector position changed
             compensated_y = ee_pos_arm1[1] + tip_length * math.sin(pitch_1)
-            target_joints[3], target_joints[4] = inverse_kinematics(ee_pos_arm1[0], compensated_y)
+            target_joints[1], target_joints[2] = inverse_kinematics(ee_pos_arm1[0], compensated_y)
 
             
             # Direct joint control for remaining joints of first arm
             if keys[pygame.K_7]:
-                target_joints[2] += joint_step
+                target_joints[0] += joint_step
             if keys[pygame.K_y]:
-                target_joints[2] -= joint_step
+                target_joints[0] -= joint_step
                 
             # Pitch control for first arm
             if keys[pygame.K_0]:
@@ -427,23 +442,22 @@ def main(args: Args):
                 pitch_1 -= pitch_step
                 
             # Apply pitch adjustment to joint 5 based on joints 3 and 4
-            target_joints[5] = target_joints[3] - target_joints[4] + pitch_1
+            target_joints[3] = target_joints[1] - target_joints[2] + pitch_1
             
             # Wrist control for first arm
             if keys[pygame.K_MINUS]:
-                target_joints[6] += joint_step*3
+                target_joints[4] += joint_step*3
             if keys[pygame.K_p]:
-                target_joints[6] -= joint_step*3
-            
+                target_joints[4] -= joint_step*3
             
             
             # Gripper control - toggle between open and closed
             if keys[pygame.K_v]:
-                # Toggle first gripper (index 12)
-                if target_joints[7] < 0.4:  # If closed or partially closed
-                    target_joints[7] = 2.5  # Open
+                # Toggle gripper (index 7)
+                if target_joints[5] < 0.4:  # If closed or partially closed
+                    target_joints[5] = 2.5  # Open
                 else:
-                    target_joints[7] = 0.1  # Close
+                    target_joints[5] = 0.1  # Close
                 # Add a small delay to prevent multiple toggles
                 pygame.time.delay(200)
                 
@@ -451,17 +465,17 @@ def main(args: Args):
             
             # Head motor control - set target positions
             if keys[pygame.K_r]:
-                # Control first head motor (index 14) - increase target position
-                target_joints[8] += joint_step*2
+                # Control head pan (index 8) - increase target position
+                target_joints[6] += joint_step*2
             if keys[pygame.K_t]:
-                # Control first head motor (index 14) - decrease target position
-                target_joints[8] -= joint_step*2
+                # Control head pan (index 8) - decrease target position
+                target_joints[6] -= joint_step*2
             if keys[pygame.K_f]:
-                # Control second head motor (index 15) - increase target position
-                target_joints[9] += joint_step*2
+                # Control head tilt (index 9) - increase target position
+                target_joints[7] += joint_step*2
             if keys[pygame.K_g]:
-                # Control second head motor (index 15) - decrease target position
-                target_joints[9] -= joint_step*2
+                # Control head tilt (index 9) - decrease target position
+                target_joints[7] -= joint_step*2
         
         # Get current joint positions using our mapping function
         current_joints = get_mapped_joints(robot)
@@ -472,17 +486,19 @@ def main(args: Args):
         # elif current_joints[1] > math.pi:
         #     current_joints[1] -= 2 * math.pi
         
-        # Simple P controller for joints (excluding base X,Y which are directly controlled)
+        # Simple P controller for joints (excluding base X which is directly controlled)
         if step_counter < warmup_steps:
             # During warmup, zero all actions except base movements which are handled above
             if len(action) >= 10:
-                for i in range(1, 10):  # Skip base X,Y (indices 0,1)
+                for i in range(0, 10):  # Skip base X (index 0)
                     action[i] = 0.0
         else:
-            # Apply P control to joints 2-10 (base rotation, arm, gripper, head)
-            # Base X,Y (indices 0,1) are controlled directly above
+            # Apply P control to joints 1-9 (base rotation, arm, gripper, head)
+            # Base X (index 0) is controlled directly above
             if len(action) >= 10:
-                for i in range(1, 10):
+                for i in range(0, 10):
+                    if i == 8:
+                        continue
                     action[i] = p_gain[i] * (target_joints[i] - current_joints[i])
         
         # Clip actions to be within reasonable bound
@@ -501,7 +517,6 @@ def main(args: Args):
         
         control_texts = [
             "W/S: Base Forward/Back",
-            "Q/E: Base Left/Right", 
             "A/D: Base Rotation (+/-)",
             "Y/7: Arm Rotation (+/-)",
             "8/U: End Effector Up/Down",
@@ -521,7 +536,7 @@ def main(args: Args):
             ctrl_text = font.render(txt, True, (255, 255, 255))
             screen.blit(ctrl_text, (control_panel_x + 10 + col * 200, 40 + row * 25))
         
-        # Display full joints for single arm
+        # Display full joints (before mapping)
         y_pos = 40 + col_height * 30 + 10
         
         # Get full joint positions
@@ -535,7 +550,7 @@ def main(args: Args):
         if full_joints.ndim > 1:
             full_joints = full_joints.squeeze()
             
-        # Display full joints in one row
+        # Display full joints in one row (for single arm)
         full_joints_text = font.render(
             f"Full Joints (0-10): {np.round(full_joints[:11], 2)}", 
             True, (255, 150, 0)
@@ -544,28 +559,28 @@ def main(args: Args):
         y_pos += 30
         
         # Display current joint positions in logical groups
-        # Group 1: Base control [0,1,2]
-        base_joints = current_joints[0:3]
+        # Group 1: Base control [0,1]
+        base_joints = current_joints[0:2]
         base_text = font.render(
-            f"Base [0,1,2]: {np.round(base_joints, 2)}", 
+            f"Base [0,1]: {np.round(base_joints, 2)}", 
             True, (255, 255, 0)
         )
         screen.blit(base_text, (control_panel_x + 10, y_pos))
         
-        # Group 2: Arm [3,4,5,6,7]
+        # Group 2: Arm [2,3,4,5,6]
         y_pos += 25
-        arm_joints = current_joints[3:8]
+        arm_joints = current_joints[2:7]
         arm_text = font.render(
-            f"Arm [3,4,5,6,7]: {np.round(arm_joints, 2)}", 
+            f"Arm [2,3,4,5,6]: {np.round(arm_joints, 2)}", 
             True, (255, 255, 0)
         )
         screen.blit(arm_text, (control_panel_x + 10, y_pos))
         
-        # Group 3: Gripper and Head [8,9,10]
+        # Group 3: Gripper and Head [7,8,9]
         y_pos += 25
-        other_joints = current_joints[8:11]
+        other_joints = current_joints[7:10]
         other_text = font.render(
-            f"Gripper+Head [8,9,10]: {np.round(other_joints, 2)}", 
+            f"Gripper+Head [7,8,9]: {np.round(other_joints, 2)}", 
             True, (255, 255, 0)
         )
         screen.blit(other_text, (control_panel_x + 10, y_pos))
@@ -573,28 +588,28 @@ def main(args: Args):
         # Display target joint positions in logical groups
         y_pos += 35
         
-        # Group 1: Base control [0,1,2]
-        base_targets = target_joints[0:3]
+        # Group 1: Base control [0,1]
+        base_targets = target_joints[0:2]
         base_target_text = font.render(
-            f"Base Target [0,1,2]: {np.round(base_targets, 2)}", 
+            f"Base Target [0,1]: {np.round(base_targets, 2)}", 
             True, (0, 255, 0)
         )
         screen.blit(base_target_text, (control_panel_x + 10, y_pos))
         
-        # Group 2: Arm [3,4,5,6,7]
+        # Group 2: Arm [2,3,4,5,6]
         y_pos += 25
-        arm_targets = target_joints[3:8]
+        arm_targets = target_joints[2:7]
         arm_target_text = font.render(
-            f"Arm Target [3,4,5,6,7]: {np.round(arm_targets, 2)}", 
+            f"Arm Target [2,3,4,5,6]: {np.round(arm_targets, 2)}", 
             True, (0, 255, 0)
         )
         screen.blit(arm_target_text, (control_panel_x + 10, y_pos))
         
-        # Group 3: Gripper and Head [8,9,10]
+        # Group 3: Gripper and Head [7,8,9]
         y_pos += 25
-        other_targets = target_joints[8:11]
+        other_targets = target_joints[7:10]
         other_target_text = font.render(
-            f"Gripper+Head Target [8,9,10]: {np.round(other_targets, 2)}", 
+            f"Gripper+Head Target [7,8,9]: {np.round(other_targets, 2)}", 
             True, (0, 255, 0)
         )
         screen.blit(other_target_text, (control_panel_x + 10, y_pos))
@@ -610,31 +625,31 @@ def main(args: Args):
         # Display current action values (velocities) in logical groups
         y_pos += 35
         
-        # Group 1: Base control [0,1,2]
-        if len(action) >= 3:
-            base_actions = action[0:3]
+        # Group 1: Base control [0,1]
+        if len(action) >= 2:
+            base_actions = action[0:2]
             base_action_text = font.render(
-                f"Base Velocity [0,1,2]: {np.round(base_actions, 2)}", 
+                f"Base Velocity [0,1]: {np.round(base_actions, 2)}", 
                 True, (255, 255, 255)
             )
             screen.blit(base_action_text, (control_panel_x + 10, y_pos))
         
-        # Group 2: Arm [3,4,5,6,7]
+        # Group 2: Arm [2,3,4,5,6]
         y_pos += 25
-        if len(action) >= 8:
-            arm_actions = action[3:8]
+        if len(action) >= 7:
+            arm_actions = action[2:7]
             arm_action_text = font.render(
-                f"Arm Velocity [3,4,5,6,7]: {np.round(arm_actions, 2)}", 
+                f"Arm Velocity [2,3,4,5,6]: {np.round(arm_actions, 2)}", 
                 True, (255, 255, 255)
             )
             screen.blit(arm_action_text, (control_panel_x + 10, y_pos))
         
-        # Group 3: Gripper and Head [8,9,10]
+        # Group 3: Gripper and Head [7,8,9]
         y_pos += 25
-        if len(action) >= 11:
-            other_actions = action[8:11]
+        if len(action) >= 10:
+            other_actions = action[7:10]
             other_action_text = font.render(
-                f"Gripper+Head Velocity [8,9,10]: {np.round(other_actions, 2)}", 
+                f"Gripper+Head Velocity [7,8,9]: {np.round(other_actions, 2)}", 
                 True, (255, 255, 255)
             )
             screen.blit(other_action_text, (control_panel_x + 10, y_pos))
@@ -648,9 +663,36 @@ def main(args: Args):
         screen.blit(pitch_text, (control_panel_x + 10, y_pos))
         
         pygame.display.flip()
+
+
         
         obs, reward, terminated, truncated, info = env.step(action)
         step_counter += 1
+        
+        # Force second arm to stay in fixed position after each step
+        if robot is not None and step_counter > warmup_steps:
+            # Set fixed positions for second arm joints based on xlerobot keyframe
+            current_qpos = robot.get_qpos()
+            if hasattr(current_qpos, 'clone'):
+                new_qpos = current_qpos.clone()
+            else:
+                new_qpos = current_qpos.copy()
+            
+            # Force second arm to fixed positions (from xlerobot keyframe rest position)
+            # Second arm joints: [4,7,10,12,14] (Rotation_2, Pitch_2, Elbow_2, Wrist_Pitch_2, Wrist_Roll_2)
+            if len(new_qpos.shape) > 1:
+                new_qpos = new_qpos.squeeze()
+            
+            if len(new_qpos) >= 17:
+                new_qpos[4] = 0.0    # Rotation_2 
+                new_qpos[7] = 3.14   # Pitch_2
+                new_qpos[10] = 3.14  # Elbow_2
+                new_qpos[12] = 0.0   # Wrist_Pitch_2
+                new_qpos[14] = 1.57  # Wrist_Roll_2
+                new_qpos[16] = 0.0   # Jaw_2 (gripper)
+                
+                # Set the new joint positions
+                robot.set_qpos(new_qpos)
         
         if args.render_mode is not None:
             env.render()
