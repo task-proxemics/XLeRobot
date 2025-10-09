@@ -83,7 +83,7 @@ YOLO驱动的物体检测和跟踪系统。运行`3_so100_yolo_ee_control.py`使
 - 然后运行`python lerobot/find_port.py`检查控制板ID。然后在以下位置相应更改名称：
 - ![image](https://github.com/user-attachments/assets/19264425-8a67-465f-86ba-3c54ec13793e)
 - 如果您在`sudo chmod ...`后遇到未检测到任何电机的错误，请尝试重新插入电源线。
-- 如果您遇到`需要9个电机，但检测到8个`的错误，您需要更改
+- 如果您遇到`需要9个电机，但检测到8个`的错误，您需要交换上图两个控制板的ID。
 
 ### 5. 键盘遥操作
 
