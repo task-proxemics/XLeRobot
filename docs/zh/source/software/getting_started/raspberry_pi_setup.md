@@ -120,3 +120,25 @@ ssh pi@<your-pi-ip-address>
 - [官方树莓派文档](https://www.raspberrypi.org/documentation/)
 - [RealVNC设置指南](https://pidoc.cn/docs/computers/getting-started)
 - [XLeRobot GitHub仓库](https://xlerobot.readthedocs.io/en/latest/index.html)
+
+## Lekiwi
+
+```{note}
+要使用Lekiwi代码测试XLeRobot的单臂版本，您应该拆下与底座不共享同一电机控制板的SO101手臂，将其夹在桌子上并连接到PC作为主导手臂。
+```
+```{note}
+对于移动底座版本，您需要提前准备一个树莓派。
+```
+
+按照他们的所有[软件说明](https://huggingface.co/docs/lerobot/lekiwi)，这样您就可以：
+-  [在树莓派上安装软件](https://huggingface.co/docs/lerobot/lekiwi#install-software-on-pi)并设置SSH 
+-  [在PC上安装LeRobot](https://huggingface.co/docs/lerobot/installation)
+-  [更新配置](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#update-config)
+-  [校准](https://huggingface.co/docs/lerobot/il_robots#set-up-and-calibrate)
+
+完成这些步骤后，您应该能够[像Lekiwi一样](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#f-teleoperate)遥操作XLeRobot的基础单臂版本，以复制此演示视频：
+
+<video width="100%" style="max-width: 100%;" controls>
+  <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

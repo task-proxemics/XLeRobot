@@ -1,5 +1,6 @@
 # RaspberryPi Setup Guide for XLeRobot
 
+
 This guide provides comprehensive instructions for setting up a RaspberryPi for use with XLeRobot mobile base version.
 
 ## Prerequisites
@@ -120,3 +121,29 @@ After completing this setup, you can run the code in the same way as the laptop:
 - [Official Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/)
 - [RealVNC Setup Guide](https://pidoc.cn/docs/computers/getting-started)
 - [XLeRobot GitHub Repository](https://xlerobot.readthedocs.io/en/latest/index.html)
+
+## Lekiwi
+
+```{note}
+To test the single-arm version of XLeRobot with Lekiwi codes, you should detach the SO101 arm that doesn't share the same motor control board with the base, clamp it on your table and connect it to your PC to act as the leader arm.
+```
+```{note}
+To run mobile base version of Lekiwi, you need a RaspberryPi in advance.
+```
+
+Follow all of their [software instructions](https://huggingface.co/docs/lerobot/lekiwi) so you can:
+-  [Setup VNCviewer for RasberryPi](getting_started/raspberry_pi_setup.md)
+-  [Install software on RasberryPi](https://huggingface.co/docs/lerobot/lekiwi#install-software-on-pi) and setup SSH 
+-  [Install LeRobot on PC](https://huggingface.co/docs/lerobot/installation)
+-  [Update config](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#update-config)
+-  [Calibrate](https://huggingface.co/docs/lerobot/il_robots#set-up-and-calibrate)
+
+
+
+After these steps you should be able to teleoperate a basic single-arm version of XLeRobot [the same way Lekiwi does](https://github.com/huggingface/lerobot/blob/main/examples/11_use_lekiwi.md#f-teleoperate), to replicate this demo video:
+
+
+<video width="100%" style="max-width: 100%;" controls>
+  <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
