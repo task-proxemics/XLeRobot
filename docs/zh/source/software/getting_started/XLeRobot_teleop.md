@@ -17,7 +17,7 @@
 完整XLeRobot系统的直观游戏手柄控制。运行[5_xlerobot_teleop_xbox.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/5_xlerobot_teleop_xbox.py)进行基于Xbox控制器的遥操作，具有人体工学摇杆和扳机映射，实现自然的人机交互。
 
 <video width="100%" controls>
-  <source src="../_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
+  <source src="https://vector-wangel.github.io/XLeRobot-assets/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

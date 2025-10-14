@@ -4,7 +4,7 @@ You can try [lerobot-sim2real (by Stone Tao)](https://github.com/StoneT2000/lero
 
 
 <video width="100%" controls>
-  <source src="../_static/videos/Real_demos/sim2real_2.mp4" type="video/mp4">
+  <source src="https://vector-wangel.github.io/XLeRobot-assets/videos/Real_demos/sim2real_2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

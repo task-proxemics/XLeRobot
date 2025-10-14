@@ -18,7 +18,7 @@ Intuitive gamepad control for the full XLeRobot system. Run [5_xlerobot_teleop_x
 
 
 <video width="100%" controls>
-  <source src="../_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
+  <source src="https://vector-wangel.github.io/XLeRobot-assets/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
