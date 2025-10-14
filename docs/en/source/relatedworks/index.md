@@ -14,7 +14,7 @@
 [DRAWER: Digital Reconstruction and Articulation with Environment Realism](https://xiahongchi.github.io/DRAWER/)
 
 <video width="100%" controls>
-  <source src="../_static/videos/Other_works/DRAWER.mp4" type="video/mp4">
+  <source src="https://vector-wangel.github.io/XLeRobot-assets/videos/Other_works/DRAWER.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
