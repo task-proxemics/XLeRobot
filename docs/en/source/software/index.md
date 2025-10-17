@@ -26,15 +26,18 @@ For basic version of XLeRobot, you don't need a RaspberryPi. Just use your lapto
 
 ### [XLeRobot Teleop](getting_started/XLeRobot_teleop.md)
 
+### [Autonomous LLM Agent](getting_started/LLM_agent.md)
+
 ### [Reinforcenment Learning (RL) & VLA](getting_started/RL_VLA.md)
 
-## [Raspberri Pi Setup](getting_started/raspberry_pi_setup.md)
+### [Raspberri Pi Setup](getting_started/raspberry_pi_setup.md)
 
 
 ```{toctree}
 getting_started/install
 getting_started/SO101
 getting_started/XLeRobot_teleop
+getting_started/LLM_agent
 getting_started/RL_VLA
 getting_started/raspberry_pi_setup.md
 ```
