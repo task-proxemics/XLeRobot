@@ -55,7 +55,7 @@ In the code above we initialized our agent with the maneuver tools we created ea
 
 Before going to LLM, camera image is specially augmented to make it easier for robot predict his angle of rotation. Special scale of angles is added to the camera, plus right/left markers - LLM likes to mismatch directions. That's why we specifing `camera_fov` parameter - provide here your main camera horizontal angle of view, to make drawn scale precise.
 
-![Augmented_image](url_here)
+![Augmented_image](https://github.com/user-attachments/assets/31f063b9-2463-4ba5-b5da-311f16788576)
 *That's how your robot sees the world*
 
 Also, create the `.env` file with parameter `GOOGLE_API_KEY=<your gemini api key here>` inside to connect to your model.
