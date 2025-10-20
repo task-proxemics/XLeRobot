@@ -14,7 +14,7 @@ import math
 
 from lerobot.robots.xlerobot_2wheels import XLerobot2WheelsClient, XLerobot2WheelsClientConfig, XLerobot2WheelsConfig, XLerobot2Wheels
 from lerobot.utils.robot_utils import busy_wait
-from lerobot.utils.visualization_utils import _init_rerun, log_rerun_data
+from lerobot.utils.visualization_utils import init_rerun, log_rerun_data
 from lerobot.model.SO101Robot import SO101Kinematics
 from lerobot.teleoperators.keyboard.teleop_keyboard import KeyboardTeleop, KeyboardTeleopConfig
 
@@ -391,7 +391,7 @@ def main():
     # robot = XLerobot2WheelsClient(robot_config)    
 
     # For local/wired connection
-    robot_config = XLerobot2WheelsConfig()
+    robot_config = XLerobot2WheelsConfig(id=robot_name)
     robot = XLerobot2Wheels(robot_config)
     
     try:
@@ -403,7 +403,7 @@ def main():
         print(robot)
         return
         
-    _init_rerun(session_name="xlerobot_2wheels_teleop")
+    init_rerun(session_name="xlerobot_2wheels_teleop")
 
     #Init the keyboard instance
     keyboard_config = KeyboardTeleopConfig()
@@ -421,6 +421,62 @@ def main():
     # Move both arms and head to zero position at start
     left_arm.move_to_zero_position(robot)
     right_arm.move_to_zero_position(robot)
+
+    # Print comprehensive keymap information based on robot config
+    print("\n" + "="*80)
+    print("🤖 XLeRobot 2Wheels 键盘控制键位说明 / Keyboard Control Keymap")
+    print("="*80)
+    
+    print("\n📱 底盘控制 / Base Control (Differential Drive):")
+    print(f"    {robot.teleop_keys['forward']}: 前进 / Forward")
+    print(f"    {robot.teleop_keys['backward']}: 后退 / Backward") 
+    print(f"    {robot.teleop_keys['rotate_left']}: 左转 / Rotate Left")
+    print(f"    {robot.teleop_keys['rotate_right']}: 右转 / Rotate Right")
+    print(f"    {robot.teleop_keys['speed_up']}: 加速 / Speed Up")
+    print(f"    {robot.teleop_keys['speed_down']}: 减速 / Speed Down")
+    print(f"    {robot.teleop_keys['quit']}: 退出 / Quit")
+    
+    print("\n🦾 左臂控制 / Left Arm Control:")
+    print("   关节控制 / Joint Control:")
+    print(f"    Q/E: 肩部旋转 +/- (shoulder_pan)")
+    print(f"    R/F: 腕部旋转 +/- (wrist_roll)")
+    print(f"    T/G: 夹爪 +/- (gripper)")
+    print(f"    Z/X: 俯仰 +/- (pitch)")
+    print("   位置控制 / Position Control:")
+    print(f"    W/S: X轴 +/- (x movement)")
+    print(f"    A/D: Y轴 +/- (y movement)")
+    print("   特殊功能 / Special Functions:")
+    print(f"    C: 重置到零位 (reset to zero)")
+    print(f"    Y: 执行矩形轨迹 (rectangular trajectory)")
+    
+    print("\n🦾 右臂控制 / Right Arm Control:")
+    print("   关节控制 / Joint Control:")
+    print(f"    7/9: 肩部旋转 +/- (shoulder_pan)")
+    print(f"    /*: 腕部旋转 +/- (wrist_roll)")
+    print(f"    +/-: 夹爪 +/- (gripper)")
+    print(f"    1/3: 俯仰 +/- (pitch)")
+    print("   位置控制 / Position Control:")
+    print(f"    8/2: X轴 +/- (x movement)")
+    print(f"    4/6: Y轴 +/- (y movement)")
+    print("   特殊功能 / Special Functions:")
+    print(f"    0: 重置到零位 (reset to zero)")
+    print(f"    Y: 执行矩形轨迹 (rectangular trajectory)")
+    
+    print("\n👁️ 头部控制 / Head Control:")
+    print(f"    </>: 头部电机1 +/- (head_motor_1)")
+    print(f"    ,/.: 头部电机2 +/- (head_motor_2)")
+    print(f"    ?: 头部重置到零位 (head reset to zero)")
+    
+    print(f"\n⚙️ 机器人配置 / Robot Configuration:")
+    print(f"   轮子半径 / Wheel Radius: {robot.config.wheel_radius:.3f}m")
+    print(f"   轮距 / Wheelbase: {robot.config.wheelbase:.3f}m")
+    print(f"   速度等级 / Speed Levels: {len(robot.speed_levels)} levels")
+    for i, level in enumerate(robot.speed_levels):
+        print(f"      Level {i+1}: 线速度 {level['linear']:.1f}m/s, 角速度 {level['angular']:.0f}°/s")
+    
+    print("\n" + "="*80)
+    print("🎮 控制已开始！使用上述键位进行机器人控制 / Control started! Use above keys to control robot")
+    print("="*80 + "\n")
 
     try:
         while True:
