@@ -18,6 +18,12 @@ from lerobot.utils.visualization_utils import init_rerun, log_rerun_data
 from lerobot.model.SO101Robot import SO101Kinematics
 from lerobot.teleoperators.keyboard.teleop_keyboard import KeyboardTeleop, KeyboardTeleopConfig
 
+# Base speed control parameters - adjustable slopes
+BASE_ACCELERATION_RATE = 10.0  # acceleration slope (speed/second)
+BASE_DECELERATION_RATE = 10  # deceleration slope (speed/second) - very slow for noticeable deceleration
+BASE_MAX_SPEED = 6.0          # maximum speed multiplier
+MIN_VELOCITY_THRESHOLD = 0.02 # minimum velocity to send to motors during deceleration
+
 # Keymaps (semantic action: key) - Updated for differential drive
 LEFT_KEYMAP = {
     'shoulder_pan+': 'q', 'shoulder_pan-': 'e',
@@ -377,14 +383,111 @@ class SimpleTeleopArm:
             control = self.kp * error
             action[f"{self.joint_map[j]}.pos"] = current[j] + control
         return action
+
+
+class SmoothBaseController:
+    """Simplified smooth base controller with acceleration/deceleration"""
     
+    def __init__(self):
+        self.current_speed = 0.0
+        self.last_time = time.time()
+        self.last_direction = {"x.vel": 0.0, "theta.vel": 0.0}
+        self.is_moving = False
+    
+    def update(self, pressed_keys, robot):
+        """Update smooth control and return base action"""
+        current_time = time.time()
+        dt = current_time - self.last_time
+        self.last_time = current_time
+        
+        # Check if any base keys are pressed
+        base_keys = [
+            robot.teleop_keys['forward'],
+            robot.teleop_keys['backward'], 
+            robot.teleop_keys['rotate_left'],
+            robot.teleop_keys['rotate_right']
+        ]
+        any_key_pressed = any(key in pressed_keys for key in base_keys)
+        
+        # Calculate base action directly (bypass robot's built-in speed control)
+        base_action = {"x.vel": 0.0, "theta.vel": 0.0}
+        
+        if any_key_pressed:
+            # Keys pressed - calculate direction and accelerate
+            if not self.is_moving:
+                self.is_moving = True
+                print("[BASE] Starting acceleration")
+            
+            # Get current speed level from robot
+            speed_setting = robot.speed_levels[robot.speed_index]
+            linear_speed = speed_setting["linear"]  # e.g. 0.1, 0.2, or 0.3
+            angular_speed = speed_setting["angular"]  # e.g. 30, 60, or 90
+            
+            # Calculate direction based on pressed keys
+            if robot.teleop_keys["forward"] in pressed_keys:
+                base_action["x.vel"] += linear_speed
+            if robot.teleop_keys["backward"] in pressed_keys:
+                base_action["x.vel"] -= linear_speed
+            if robot.teleop_keys["rotate_left"] in pressed_keys:
+                base_action["theta.vel"] += angular_speed
+            if robot.teleop_keys["rotate_right"] in pressed_keys:
+                base_action["theta.vel"] -= angular_speed
+            
+            # Store current direction for deceleration
+            self.last_direction = base_action.copy()
+            
+            # Accelerate
+            self.current_speed += BASE_ACCELERATION_RATE * dt
+            self.current_speed = min(self.current_speed, BASE_MAX_SPEED)
+                
+        else:
+            # No keys pressed - decelerate
+            if self.is_moving:
+                self.is_moving = False
+                print("[BASE] Starting deceleration")
+            
+            # Use last direction for deceleration
+            if self.current_speed > 0.01 and self.last_direction:
+                base_action = self.last_direction.copy()
+            
+            # Decelerate
+            self.current_speed -= BASE_DECELERATION_RATE * dt
+            self.current_speed = max(self.current_speed, 0.0)
+        
+        # Apply speed multiplier
+        if base_action:
+            for key in base_action:
+                if 'vel' in key:
+                    original_value = base_action[key]
+                    base_action[key] *= self.current_speed
+                    
+                    # Ensure minimum velocity during deceleration to prevent motor cutoff
+                    if self.current_speed > 0.01 and abs(base_action[key]) < MIN_VELOCITY_THRESHOLD:
+                        # During deceleration, maintain minimum velocity to keep motors moving
+                        base_action[key] = MIN_VELOCITY_THRESHOLD if original_value > 0 else -MIN_VELOCITY_THRESHOLD
+        
+        # Debug output
+        if any_key_pressed:
+            print(f"[BASE] ACCEL: Speed={self.current_speed:.2f}, Action={base_action}")
+        elif self.current_speed > 0.01:
+            print(f"[BASE] DECEL: Speed={self.current_speed:.2f}, Action={base_action}")
+        elif self.current_speed <= 0.01:
+            print(f"[BASE] STOPPED: Speed={self.current_speed:.2f}")
+        
+        return base_action
+
+
+# Global smooth controller instance
+smooth_controller = SmoothBaseController()
+
 
 def main():
     # Teleop parameters
     FPS = 50
     # ip = "192.168.1.123"  # This is for zmq connection
     ip = "localhost"  # This is for local/wired connection
-    robot_name = "my_xlerobot_2wheels_pc"
+    # robot_name = "my_xlerobot_2wheels_pc"
+    robot_name = "my_xlerobot_2wheels_lab"
 
     # For zmq connection
     # robot_config = XLerobot2WheelsClientConfig(remote_ip=ip, id=robot_name)
@@ -424,58 +527,64 @@ def main():
 
     # Print comprehensive keymap information based on robot config
     print("\n" + "="*80)
-    print("🤖 XLeRobot 2Wheels 键盘控制键位说明 / Keyboard Control Keymap")
+    print("🤖 XLeRobot 2Wheels Keyboard Control Keymap")
     print("="*80)
     
-    print("\n📱 底盘控制 / Base Control (Differential Drive):")
-    print(f"    {robot.teleop_keys['forward']}: 前进 / Forward")
-    print(f"    {robot.teleop_keys['backward']}: 后退 / Backward") 
-    print(f"    {robot.teleop_keys['rotate_left']}: 左转 / Rotate Left")
-    print(f"    {robot.teleop_keys['rotate_right']}: 右转 / Rotate Right")
-    print(f"    {robot.teleop_keys['speed_up']}: 加速 / Speed Up")
-    print(f"    {robot.teleop_keys['speed_down']}: 减速 / Speed Down")
-    print(f"    {robot.teleop_keys['quit']}: 退出 / Quit")
+    print("\n📱 Base Control (Differential Drive):")
+    print(f"    {robot.teleop_keys['forward']}: Forward")
+    print(f"    {robot.teleop_keys['backward']}: Backward") 
+    print(f"    {robot.teleop_keys['rotate_left']}: Rotate Left")
+    print(f"    {robot.teleop_keys['rotate_right']}: Rotate Right")
+    print(f"    {robot.teleop_keys['speed_up']}: Speed Up")
+    print(f"    {robot.teleop_keys['speed_down']}: Speed Down")
+    print(f"    {robot.teleop_keys['quit']}: Quit")
+    print("    🚀 Smooth Control: Linear acceleration when holding, linear deceleration when released")
     
-    print("\n🦾 左臂控制 / Left Arm Control:")
-    print("   关节控制 / Joint Control:")
-    print(f"    Q/E: 肩部旋转 +/- (shoulder_pan)")
-    print(f"    R/F: 腕部旋转 +/- (wrist_roll)")
-    print(f"    T/G: 夹爪 +/- (gripper)")
-    print(f"    Z/X: 俯仰 +/- (pitch)")
-    print("   位置控制 / Position Control:")
-    print(f"    W/S: X轴 +/- (x movement)")
-    print(f"    A/D: Y轴 +/- (y movement)")
-    print("   特殊功能 / Special Functions:")
-    print(f"    C: 重置到零位 (reset to zero)")
-    print(f"    Y: 执行矩形轨迹 (rectangular trajectory)")
+    print("\n🦾 Left Arm Control:")
+    print("   Joint Control:")
+    print(f"    Q/E: Shoulder Pan +/- (shoulder_pan)")
+    print(f"    R/F: Wrist Roll +/- (wrist_roll)")
+    print(f"    T/G: Gripper +/- (gripper)")
+    print(f"    Z/X: Pitch +/- (pitch)")
+    print("   Position Control:")
+    print(f"    W/S: X-axis +/- (x movement)")
+    print(f"    A/D: Y-axis +/- (y movement)")
+    print("   Special Functions:")
+    print(f"    C: Reset to zero position")
+    print(f"    Y: Execute rectangular trajectory")
     
-    print("\n🦾 右臂控制 / Right Arm Control:")
-    print("   关节控制 / Joint Control:")
-    print(f"    7/9: 肩部旋转 +/- (shoulder_pan)")
-    print(f"    /*: 腕部旋转 +/- (wrist_roll)")
-    print(f"    +/-: 夹爪 +/- (gripper)")
-    print(f"    1/3: 俯仰 +/- (pitch)")
-    print("   位置控制 / Position Control:")
-    print(f"    8/2: X轴 +/- (x movement)")
-    print(f"    4/6: Y轴 +/- (y movement)")
-    print("   特殊功能 / Special Functions:")
-    print(f"    0: 重置到零位 (reset to zero)")
-    print(f"    Y: 执行矩形轨迹 (rectangular trajectory)")
+    print("\n🦾 Right Arm Control:")
+    print("   Joint Control:")
+    print(f"    7/9: Shoulder Pan +/- (shoulder_pan)")
+    print(f"    /*: Wrist Roll +/- (wrist_roll)")
+    print(f"    +/-: Gripper +/- (gripper)")
+    print(f"    1/3: Pitch +/- (pitch)")
+    print("   Position Control:")
+    print(f"    8/2: X-axis +/- (x movement)")
+    print(f"    4/6: Y-axis +/- (y movement)")
+    print("   Special Functions:")
+    print(f"    0: Reset to zero position")
+    print(f"    Y: Execute rectangular trajectory")
     
-    print("\n👁️ 头部控制 / Head Control:")
-    print(f"    </>: 头部电机1 +/- (head_motor_1)")
-    print(f"    ,/.: 头部电机2 +/- (head_motor_2)")
-    print(f"    ?: 头部重置到零位 (head reset to zero)")
+    print("\n👁️ Head Control:")
+    print(f"    </>: Head Motor 1 +/- (head_motor_1)")
+    print(f"    ,/.: Head Motor 2 +/- (head_motor_2)")
+    print(f"    ?: Head reset to zero position")
     
-    print(f"\n⚙️ 机器人配置 / Robot Configuration:")
-    print(f"   轮子半径 / Wheel Radius: {robot.config.wheel_radius:.3f}m")
-    print(f"   轮距 / Wheelbase: {robot.config.wheelbase:.3f}m")
-    print(f"   速度等级 / Speed Levels: {len(robot.speed_levels)} levels")
+    print(f"\n⚙️ Robot Configuration:")
+    print(f"   Wheel Radius: {robot.config.wheel_radius:.3f}m")
+    print(f"   Wheelbase: {robot.config.wheelbase:.3f}m")
+    print(f"   Speed Levels: {len(robot.speed_levels)} levels")
     for i, level in enumerate(robot.speed_levels):
-        print(f"      Level {i+1}: 线速度 {level['linear']:.1f}m/s, 角速度 {level['angular']:.0f}°/s")
+        print(f"      Level {i+1}: Linear {level['linear']:.1f}m/s, Angular {level['angular']:.0f}°/s")
+    
+    print(f"\n🚀 Smooth Control Parameters:")
+    print(f"   Acceleration Rate: {BASE_ACCELERATION_RATE:.1f} speed/second")
+    print(f"   Deceleration Rate: {BASE_DECELERATION_RATE:.1f} speed/second")
+    print(f"   Max Speed Multiplier: {BASE_MAX_SPEED:.1f}x")
     
     print("\n" + "="*80)
-    print("🎮 控制已开始！使用上述键位进行机器人控制 / Control started! Use above keys to control robot")
+    print("🎮 Control started! Use above keys to control robot")
     print("="*80 + "\n")
 
     try:
@@ -519,9 +628,8 @@ def main():
             right_action = right_arm.p_control_action(robot)
             head_action = head_control.p_control_action(robot)
 
-            # Base action - differential drive only supports x and theta
-            keyboard_keys = np.array(list(pressed_keys))
-            base_action = robot._from_keyboard_to_base_action(keyboard_keys) or {}
+            # Get smooth base action with linear acceleration/deceleration
+            base_action = smooth_controller.update(pressed_keys, robot)
 
             action = {**left_action, **right_action, **head_action, **base_action}
             robot.send_action(action)
